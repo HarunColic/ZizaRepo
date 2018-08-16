@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from account.models import Company, Employee
+from account.models import Company, Employee, UserProfile
 from location.models import City
 from post.models import Industry, Category
 from django.contrib.auth import logout, login
@@ -43,10 +43,11 @@ def register(request):
                 user.clean()
                 user.save()
 
-                emp = Employee()
-
-                emp.userID = user
+                emp = Employee(userID=user)
                 emp.save()
+
+                userP = UserProfile(userID=user)
+                userP.save()
 
             return redirect('home')
 
@@ -81,7 +82,6 @@ def register(request):
             user.email = request.POST['mail']
             user.set_password(request.POST['pswd'])
             user.username = user.last_name + "." + user.email
-            user.CityID = city
 
             if User.objects.filter(email=user.email).exists():
                 redirect('home')
@@ -95,6 +95,9 @@ def register(request):
 
                 comp.clean()
                 comp.save()
+
+                userP = UserProfile(userID=user, location=city.name)
+                userP.save()
 
             return redirect('home')
 

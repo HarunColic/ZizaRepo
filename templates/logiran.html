@@ -7,8 +7,9 @@
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../static/style.css">
-	<link rel="stylesheet" type="text/css" href="../static/style-logiran.css">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "style-logiran.css" %}">
 
     <style>
 a{ text-decoration:none;}
@@ -60,7 +61,7 @@ a{ text-decoration:none;}
 	</style>
 	<div class="header">
 		<div class="header__language">
-			<p>BHS</p><img src="../static/images/arrow.png" width="10px" height="5px">
+			<p>BHS</p><img src="{% static "images/arrow.png" %}" width="10px" height="5px">
 		</div>
 		<div class="header__navigation--undefined"></div>
 		<div class="header__navigation">
