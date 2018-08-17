@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/account/migrations/0002_auto_20180816_2302.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0003_auto_20180816_2306.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0004_auto_20180816_2307.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/location/migrations/0002_auto_20180816_2302.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/location/migrations/0003_auto_20180816_2306.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/location/migrations/0004_auto_20180816_2307.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/migrations/0002_auto_20180816_2302.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/migrations/0003_auto_20180816_2306.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/migrations/0004_auto_20180816_2307.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/migrations/0011_auto_20180816_2302.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ziza/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/logiran.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/logiran.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/auth/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/oglas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/oglas.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,9 +47,9 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="10" />
-          <entry key="html" value="3101" />
+          <entry key="html" value="3333" />
           <entry key="js" value="69" />
-          <entry key="py" value="6569" />
+          <entry key="py" value="6668" />
           <entry key="py@Ziza" value="120" />
         </counts>
       </usages-collector>
@@ -69,26 +57,26 @@
         <counts>
           <entry key="CSS" value="10" />
           <entry key="CommandLine" value="117" />
-          <entry key="HTML" value="3101" />
+          <entry key="HTML" value="3333" />
           <entry key="JavaScript" value="69" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="6569" />
+          <entry key="Python" value="6668" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="9" />
-          <entry key="html" value="27" />
+          <entry key="html" value="29" />
           <entry key="js" value="3" />
-          <entry key="py" value="41" />
+          <entry key="py" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="9" />
-          <entry key="HTML" value="27" />
+          <entry key="HTML" value="29" />
           <entry key="JavaScript" value="3" />
-          <entry key="Python" value="41" />
+          <entry key="Python" value="43" />
         </counts>
       </usages-collector>
     </session>
@@ -98,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+            <state relative-caret-position="335">
+              <caret line="91" column="72" lean-forward="true" selection-start-line="91" selection-start-column="72" selection-end-line="91" selection-end-column="72" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -110,13 +98,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="-1196">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
-                <marker date="1534461931595" expanded="true" signature="3155:3156" ph="..." />
-                <marker date="1534461931595" expanded="true" signature="3439:3440" ph="..." />
+                <marker date="1534464177593" expanded="true" signature="3213:3214" ph="..." />
+                <marker date="1534464177593" expanded="true" signature="3497:3498" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/oglas.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/logiran.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
             </state>
           </provider>
         </entry>
@@ -147,7 +153,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -213,12 +219,12 @@
         <option value="$PROJECT_DIR$/templates/newpost.html" />
         <option value="$PROJECT_DIR$/static/skripta.js" />
         <option value="$PROJECT_DIR$/Ziza/urls.py" />
-        <option value="$PROJECT_DIR$/templates/oglas.html" />
-        <option value="$PROJECT_DIR$/post/views.py" />
-        <option value="$PROJECT_DIR$/templates/logiran.html" />
         <option value="$PROJECT_DIR$/account/models.py" />
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/logiran.html" />
+        <option value="$PROJECT_DIR$/post/views.py" />
+        <option value="$PROJECT_DIR$/templates/oglas.html" />
       </list>
     </option>
   </component>
@@ -372,8 +378,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@Ziza" order="11" visible="true" weight="0.30179444" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32952693" />
+      <window_info anchor="bottom" id="manage.py@Ziza" order="11" weight="0.30179444" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.1990212" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32626426" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -514,13 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -538,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/logiran.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -552,24 +544,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post/views.py">
+    <entry file="file://$PROJECT_DIR$/account/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+        <state relative-caret-position="165">
+          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <marker date="1534461931595" expanded="true" signature="3155:3156" ph="..." />
-            <marker date="1534461931595" expanded="true" signature="3439:3440" ph="..." />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -598,13 +578,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/models.py">
+    <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+        <state relative-caret-position="335">
+          <caret line="91" column="72" lean-forward="true" selection-start-line="91" selection-start-column="72" selection-end-line="91" selection-end-column="72" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1196">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1534464177593" expanded="true" signature="3213:3214" ph="..." />
+            <marker date="1534464177593" expanded="true" signature="3497:3498" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/logiran.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
         </state>
       </provider>
     </entry>

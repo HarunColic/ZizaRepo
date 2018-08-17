@@ -14,12 +14,13 @@ def home(request):
     if request.user.is_authenticated:
 
         user = request.user
+        userP = UserProfile.objects.all()
         posts = Post.objects.all().filter(type=1)
         data = posts
         gradovi = City.objects.all()
         cat = Category.objects.all()
         counter = posts.count()
-        return render(request, 'logiran.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat})
+        return render(request, 'logiran.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
     else:
         return render(request, 'index.html')
 

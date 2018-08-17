@@ -18,15 +18,20 @@
 				<a href="#">Početna</a>
 				<img src="{% static "images/arrowDesnoZuto.png" %}">
 				<a href="#">Oglasi</a>
-				<img src="../static/images/arrowDesnoZuto.png">
+				<img src="{% static "images/arrowDesnoZuto.png" %}">
 				<a href="#">Industrija</a>
 			</div>
 			<div class="linijaD"></div>
 		</div>
 		<div class="tvrtka">
 			<div class="avatarKucica">
-				<img src="{% static "images/preventLogo.png" %}">
-			</div>
+                {% for user in users %}
+                {% if user.userID == post.userID %}
+				    <img src="{{ user.image }}">
+			    {% endif %}
+                {% endfor %}
+
+            </div>
 			<div class="podaciT">
 				<div>TVRTKA</div>
 				<div>{{ post.userID.first_name }}</div>

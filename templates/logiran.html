@@ -118,9 +118,15 @@ a{ text-decoration:none;}
 
             {% if forloop.counter == 0 or forloop.counter0|divisibleby:3 %}
                 <a href={% url 'showpost' id=d.pk %}>
+
+
 			<div class="single-kucica">
-				<div class="logotipFirme">{{ d.userID.image }}</div>
-				<div class="jobInfo">
+				{% for usr in userP %}
+                    {% if usr.userID == d.userID %}
+                    <div class="logotipFirme">{{ usr.image}}</div>
+                    {% endif %}
+				{% endfor %}
+                <div class="jobInfo">
 					<span class="struka">{{ d.industryID.name }}</span>
 					<span class="pozicija">{{ d.position }}</span>
 					<span class="vrijeme">{{ d.created_at }}</span>
@@ -180,7 +186,11 @@ a{ text-decoration:none;}
             {% if forloop.counter0 == 1 or forloop.revcounter0|divisibleby:3 %}
 			<a href={% url 'showpost' id=d.pk %}>
                 <div class="single-kucica">
-				<div class="logotipFirme">{{ d.userID.image }}</div>
+				{% for usr in userP %}
+                    {% if usr.userID == d.userID %}
+                    <div class="logotipFirme">{{ usr.image}}</div>
+                    {% endif %}
+				{% endfor %}
 				<div class="jobInfo">
 					<span class="struka">{{ d.industryID.name }}</span>
 					<span class="pozicija">{{ d.position }}</span>
@@ -232,7 +242,11 @@ a{ text-decoration:none;}
             {% if forloop.counter|divisibleby:3 %}
             <a href={% url 'showpost' id=d.pk %}>
 			<div class="single-kucica">
-				<div class="logotipFirme">{{ d.userID.image }}</div>
+				{% for usr in userP %}
+                    {% if usr.userID == d.userID %}
+                    <div class="logotipFirme">{{ usr.image}}</div>
+                    {% endif %}
+				{% endfor %}
 				<div class="jobInfo">
 					<span class="struka">{{ d.industryID.name }}</span>
 					<span class="pozicija">{{ d.position }}</span>

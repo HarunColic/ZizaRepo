@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from post.models import Post, Industry, Category, PostCategories
 from datetime import datetime, timedelta
 from django.contrib.auth.models import User
-from account.models import Company, Employee
+from account.models import Company, Employee, UserProfile
 
 
 def newpost(request):
@@ -87,5 +87,6 @@ def createpost(request):
 
 def showpost(request, id):
     post = Post.objects.get(pk=id)
+    userP = UserProfile.objects.all()
 
-    return render(request, 'oglas.html', {'post': post})
+    return render(request, 'oglas.html', {'post': post, 'users': userP})
