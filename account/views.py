@@ -7,15 +7,33 @@ from django.contrib.auth import logout, login
 from django.contrib.auth import authenticate
 from post.models import Post
 from post.models import UserCategories, PostCategories
+from django.db.models import Q
 
 
 def home(request):
 
     if request.user.is_authenticated:
 
+        if request.POST.get('pretragaTrigger', "False") == "True":
+            grad = request.POST.get('gradovi', None)
+            kategorija = request.POST.get('kategorije', None)
+            kljucnaRijec = request.POST.get('kljucnaRijec', None)
+
+            posts = Post.objects.all().filter(type=1)
+
+            if grad is not None:
+                posts = posts.all().filter(location=grad)
+            if kategorija is not None:
+                ind = Industry.objects.get(name=kategorija)
+                posts = posts.all().filter(industryID=ind)
+            if kljucnaRijec is not None:
+                posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+
+        else:
+            posts = Post.objects.all().filter(type=1)
+
         user = request.user
         userP = UserProfile.objects.all()
-        posts = Post.objects.all().filter(type=1)
         data = posts
         gradovi = City.objects.all()
         cat = Category.objects.all()
@@ -55,13 +73,11 @@ def register(request):
         else:
 
             user = User()
-            city = City()
+            city = City(name=request.POST['City'])
             industry = Industry()
 
-            city.name = request.POST['City']
-            city.clean()
-            city.name.lower()
-            city.name.capitalize()
+            city.name = city.name.lower()
+            city.name = city.name.title()
 
             if City.objects.filter(name=city.name).exists():
                 city = City.objects.get(name=city.name)
@@ -69,9 +85,9 @@ def register(request):
                 city.save()
 
             industry.name = request.POST['Industry']
-            industry.clean()
-            industry.name.lower()
-            industry.name.capitalize()
+
+            industry.name = industry.name.lower()
+            industry.name = industry.name.title()
 
             if Industry.objects.filter(name=industry.name):
                 industry = Industry.objects.get(name=industry.name)

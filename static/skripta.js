@@ -11,6 +11,13 @@ $(document).ready(function(){
 })
 
 $(document).ready(function(){
+   $('#pretragaBTN').click(function(){
+      $('#pretraga').submit()
+   })
+})
+
+
+$(document).ready(function(){
    $('#myBtn').click(function(){
       $('#logoutForm').submit()
    })
