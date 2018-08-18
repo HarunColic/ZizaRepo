@@ -78,6 +78,19 @@ WSGI_APPLICATION = 'Ziza.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+#ONLINE DB
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dpswllhm',
+        'USER': 'dpswllhm',
+        'PASSWORD': 'INNeGggbTkmqk_zValpRFXdINOMS2HVW',
+        'HOST': 'horton.elephantsql.com',
+        'PORT': '',
+    }
+}
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -88,7 +101,6 @@ DATABASES = {
         'PORT': '',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
@@ -130,3 +142,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'testingziza@gmail.com'
+EMAIL_HOST_PASSWORD = 'Verification1'
+EMAIL_PORT = 587

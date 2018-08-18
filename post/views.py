@@ -8,6 +8,8 @@ from location.models import City
 
 def newpost(request):
 
+
+
     if Company.objects.filter(userID=request.user):
 
         data = Industry.objects.all()

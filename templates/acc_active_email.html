@@ -1,0 +1,9 @@
+{% autoescape off %}
+Pozdrav {{ user.first_name }},
+Molimo vas kliknite na link kako biste verifikovali svoju email adresu i aktivirali svoj račun
+
+(U slučaju da ne znate o čemu se radi, zanemarite poruku)
+
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}

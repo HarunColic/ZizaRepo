@@ -29,5 +29,6 @@ urlpatterns = [
     url('createpost/', P_Views.createpost, name='createpost'),
     url('newpotraznja/', P_Views.newpotraznja, name='newpotraznja'),
     url(r'^showpost/(?P<id>[0-9]+)/', P_Views.showpost, name='showpost'),
-
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        AC_Views.activate, name='activate'),
 ]
