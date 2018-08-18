@@ -3,6 +3,7 @@ from post.models import Post, Industry, Category, PostCategories
 from datetime import datetime, timedelta
 from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
+from location.models import City
 
 
 def newpost(request):
@@ -49,7 +50,13 @@ def createpost(request):
             indust = Industry.objects.get(name=industry)
             cat = Category.objects.get(name=category)
 
-            post = Post(userID=request.user, title=title, industryID=indust, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
+            if City.objects.all().filter(name=lokacija).exists():
+                city = City.objects.get(name=lokacija)
+            else:
+                city = City(name=lokacija)
+                city.save()
+
+            post = Post(userID=request.user, title=title, industryID=indust, region="BiH", location=city.name, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
             post.save()
 
             postcat = PostCategories(postID=post, categoryID=cat)

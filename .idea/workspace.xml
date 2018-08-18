@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/images/Trazi.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/skripta.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/skripta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/logiran.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/logiran.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,23 +34,23 @@
     <session id="364218502">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="10" />
-          <entry key="html" value="3737" />
+          <entry key="html" value="3771" />
           <entry key="js" value="71" />
-          <entry key="py" value="7700" />
+          <entry key="py" value="7859" />
           <entry key="py@Ziza" value="120" />
         </counts>
       </usages-collector>
@@ -58,16 +58,16 @@
         <counts>
           <entry key="CSS" value="10" />
           <entry key="CommandLine" value="117" />
-          <entry key="HTML" value="3737" />
+          <entry key="HTML" value="3771" />
           <entry key="JavaScript" value="71" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="7700" />
+          <entry key="Python" value="7859" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="9" />
-          <entry key="html" value="30" />
+          <entry key="html" value="31" />
           <entry key="js" value="4" />
           <entry key="py" value="44" />
         </counts>
@@ -75,7 +75,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="9" />
-          <entry key="HTML" value="30" />
+          <entry key="HTML" value="31" />
           <entry key="JavaScript" value="4" />
           <entry key="Python" value="44" />
         </counts>
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="91" column="72" selection-start-line="91" selection-start-column="72" selection-end-line="91" selection-end-column="72" />
+            <state relative-caret-position="690">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -96,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="89" column="49" lean-forward="true" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
+            <state relative-caret-position="1065">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
                 <marker date="1534525666016" expanded="true" signature="3943:3944" ph="..." />
@@ -111,19 +111,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/handlers/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="184" selection-start-line="184" selection-end-line="184" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/skripta.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -131,8 +122,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/logiran.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+            <state relative-caret-position="3645">
+              <caret line="243" column="4" selection-start-line="243" selection-start-column="4" selection-end-line="243" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/oglas.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-795">
+              <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -140,7 +140,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="930">
               <caret line="62" column="43" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="43" />
             </state>
           </provider>
@@ -184,11 +184,11 @@
         <option value="$PROJECT_DIR$/Ziza/urls.py" />
         <option value="$PROJECT_DIR$/account/models.py" />
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
-        <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/templates/oglas.html" />
         <option value="$PROJECT_DIR$/static/skripta.js" />
-        <option value="$PROJECT_DIR$/templates/logiran.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/post/views.py" />
+        <option value="$PROJECT_DIR$/templates/logiran.html" />
       </list>
     </option>
   </component>
@@ -199,10 +199,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1299" />
-    <option name="height" value="743" />
+    <option name="x" value="77" />
+    <option name="y" value="177" />
+    <option name="width" value="1289" />
+    <option name="height" value="555" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -210,6 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,7 +247,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,11 +257,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/Ziza/static" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/account/static" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -328,12 +328,12 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13088587" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13328013" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31484503" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2512235" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.6166395" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -342,8 +342,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@Ziza" order="11" weight="0.30179444" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.19837399" />
+      <window_info anchor="bottom" id="manage.py@Ziza" order="11" weight="0.30016312" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.19738989" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32626426" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -387,11 +387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1533594496956" expanded="true" signature="86:87" ph="..." />
-            <marker date="1533594496956" expanded="true" signature="86:92" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -539,19 +534,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        <state relative-caret-position="249">
+          <caret line="196" column="74" lean-forward="true" selection-start-line="196" selection-start-column="74" selection-end-line="196" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="91" column="72" selection-start-line="91" selection-start-column="72" selection-end-line="91" selection-end-column="72" />
+        <state relative-caret-position="690">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1534525666016" expanded="true" signature="3943:3944" ph="..." />
+            <marker date="1534525666016" expanded="true" signature="4227:4228" ph="..." />
           </folding>
         </state>
       </provider>
@@ -559,40 +566,28 @@
     <entry file="file://$PROJECT_DIR$/static/skripta.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/logiran.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="930">
           <caret line="62" column="43" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/handlers/base.py">
+    <entry file="file://$PROJECT_DIR$/templates/logiran.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
+        <state relative-caret-position="3645">
+          <caret line="243" column="4" selection-start-line="243" selection-start-column="4" selection-end-line="243" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="89" column="49" lean-forward="true" selection-start-line="89" selection-start-column="49" selection-end-line="89" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <marker date="1534525666016" expanded="true" signature="3943:3944" ph="..." />
-            <marker date="1534525666016" expanded="true" signature="4227:4228" ph="..." />
-          </folding>
+        <state relative-caret-position="-795">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
         </state>
       </provider>
     </entry>

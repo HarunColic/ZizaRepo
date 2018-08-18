@@ -107,7 +107,7 @@ a{ text-decoration:none;}
 		    {% endfor %}
         </select>
 
-		<img id="pretragaBTN" src="https://i.imgur.com/Tgks9dF.png">
+		<img id="pretragaBTN" src="{% static 'images/Trazi.png' %}">
 		</div>
 		<div class="napomene">
 			<p>* Traži po ključnoj riječi npr. konobar</p>
@@ -136,7 +136,7 @@ a{ text-decoration:none;}
 					<span class="pozicija">{{ d.position }}</span>
 					<span class="vrijeme">{{ d.created_at }}</span>
 					<span class="lokacijarada">{{ d.location }} {{ d.region }}</span>
-					<div class="srce"><img src="../static/images/srce.png"></div>
+					<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
 				</div>
 			</div>
                 </a>
