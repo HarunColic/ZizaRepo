@@ -27,11 +27,11 @@
 		</div>
 		<div class="tvrtka">
 			<div class="avatarKucica">
-				<img src="../static/images/preventLogo.png">
+				<img src="{{ userP.image.url }}">
 			</div>
 			<div class="podaciT">
 				<div>TVRTKA</div>
-				<div>PREVENT grupacija</div>
+				<div>{{ user.first_name }}</div>
 				<div>
 					<div>
 						<span class="navNap navNap1 navAct" id="napraviOglas">Napravi oglas</span>
@@ -59,7 +59,7 @@
 					<select name="category">
 						<option value="" disabled selected>Izaberi kategoriju</option>
                         {% for c in cat %}
-			    		<option value={{ c.name }}>{{ c.name }}</option>
+			    		<option value="{{ c.name }}">{{ c.name }}</option>
                         {% endfor %}
 					</select>
 				</div>
@@ -69,7 +69,7 @@
 						<option value="" disabled selected>Izaberi djelatnost</option>
 			    		{% for opt in data %}
 
-                        <option value={{ opt.name }}>{{ opt.name }}</option>
+                        <option value="{{ opt.name }}">{{ opt.name }}</option>
 
                         {% endfor %}
 					</select>
@@ -192,7 +192,8 @@
 		</div>
 	</div> <!-- glavniDio END -->
 	<div class="pregledTraka"><div style="margin-left: 50px">Ovako će Vaš oglas izgledati nakon objave!</div><div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;"><img src="../static/images/desnoPregled.png" style="margin-right: 11px; transform: rotate(180deg);"><span id="goBack" style="margin-right: 20px">NAZAD</span> <span id="objaviOglas">OBJAVI</span><img src="../static/images/desnoPregled.png" style="margin-left: 11px"></div></div>
-
+{% load sweetify %}
+{% sweetify %}
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+	<title>ŽIŽA.ba | O nama</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+    <meta charset="utf-8">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body style="margin-bottom: 100px">
+	<div id="myModal" class="modal" style="z-index: 9999999">
+	 	<div class="regBox">
+		  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+			<div class="regBox__lijevo">
+				<div class="regBox__lijevo--box active" id="osobaSector">
+					<img src="{% static 'images/pcelaobicna.png' %}">
+					<p>Prijava<br>kao osoba</p>
+				</div>
+				<div class="regBox__lijevo--box" id="firmaSector">
+					<img src="{% static 'images/pcelafirma.png' %}" style="margin-top: 5px">
+					<p style="margin-top: 4px">Prijava<br>kao firma</p>
+				</div>
+			</div> 
+			<div class="regBox__desno">
+				<div class="linijaActive" style="position: absolute; left: 0; top: 70px;"></div>
+				<div>
+					<h1 id="naslovTekst">REGISTRACIJA OSOBE</h1>
+					<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
+				</div>
+				<div class="regBox__desno--input" style="display: flex; flex-direction: column;">
+					<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+						<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 33px">
+							<div class="form-group">
+						      <label class="form-label" for="first" id="prviInput">Vaše ime</label>
+						      <input id="first" class="form-input neaktivan" type="text" spellcheck="false">
+						    </div>
+						    <div class="form-group" style="margin-left: 40px">
+						      <label class="form-label" for="last" id="drugiInput">Prezime</label>
+						      <input id="last" class="form-input neaktivan" type="text" spellcheck="false">
+						    </div>
+						</div>
+						<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" id="srednjiElement">
+							<div class="form-group">
+						      <label class="form-label" for="djel" id="Djelatnost">Djelatnost</label>
+						      <input id="djel" class="form-input neaktivan" type="text" spellcheck="false">
+						    </div>
+						    <div class="form-group" style="margin-left: 40px">
+						      <label class="form-label" for="last" id="sjed">Sjedište</label>
+						      <input id="sjed" class="form-input neaktivan" type="text" spellcheck="false">
+						    </div>
+						</div>
+						<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
+							<div class="form-group">
+						      <label class="form-label" for="ema">e-mail adresa</label>
+						      <input id="ema" class="form-input neaktivan" type="email" spellcheck="false">
+						    </div>
+						    <div class="form-group" style="margin-left: 40px">
+						      <label class="form-label" for="pas">Lozinka</label>
+						      <input id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+						    </div>
+						</div>
+					</div>
+					<img src="{% static 'images/send.png' %}" style="margin-top: 60px; cursor: pointer;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="myModal2" class="modal" style="z-index: 9999999">
+	 	<div class="regBox" style="height: 461px">
+		  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+			<div class="regBox__desno" style="width: 100%">
+				<div>
+					<h1 id="naslovTekst">PRIJAVA ZA KORISNIKE</h1>
+					<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
+				</div>
+				<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
+					<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+						<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
+							<div class="form-group">
+						      <label class="form-label" for="ema">e-mail adresa</label>
+						      <input id="ema" class="form-input neaktivan" type="email" spellcheck="false">
+						    </div>
+						    <div class="form-group" style="margin-left: 40px">
+						      <label class="form-label" for="pas">Lozinka</label>
+						      <input id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+						    </div>
+						</div>
+					</div>
+					<img src="{% static 'images/send.png' %}" style="margin-top: 60px; cursor: pointer;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style type="text/css">
+	.konsaltingBottom{
+		background-color: #262626;
+		width: 250px;
+		height: 170px;
+		position: absolute;
+		top: 70px;
+		color: white;
+		z-index: 999999999999999;
+		text-align: left;
+		font-family: 'Galano Regular';
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		box-shadow:0px 2px 2px black;
+		display: none;
+	}
+	.header__navigation--linkovi span{
+		cursor: pointer;
+	}
+	body{
+		background: white;
+		/* background-image: url(images/background.png); */
+	}
+	.oNama{
+		font-family: 'Galano Regular';
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.oNama p:nth-child(1){
+		text-align: left;
+		font-size: 16px;
+		width: 920px;
+		margin: 0 auto;
+	}
+	.oNama p:nth-child(1) span{
+		font-family: 'Galano Bold';
+		font-size: 16px;
+		color: #333;
+	}
+	.oNama p:nth-child(2){
+		width: 920px;
+		margin: 0 auto;
+		margin-top: 80px;
+	}
+	.oNama p:nth-child(2) strong{
+		font-family: 'Galano Bold';
+	}
+	.oNama p:nth-child(2) i{
+		font-family: 'Galano Italic';
+	}
+	h1 {
+	    font-size: 46px;
+	    font-family: 'Galano Black';
+	    text-align: center;
+	    margin-top: 100px;
+	}
+</style>
+<style type="text/css">
+	body{
+		background-color: #f9f5e5;
+	}
+	p{
+		margin: 0;
+	}
+	.video{
+		max-width: 1160px;
+ 		height: 620px;
+  		background-image: linear-gradient(236deg, #fee552, #f7ba1d);
+  		margin: 0 auto;
+  		margin-top: 50px;
+  		border-top-left-radius: 10px;
+  		border-top-right-radius: 10px;
+  		position: relative;
+	}
+	.video h1{
+		font-size: 80.5px;
+		font-family: 'Galano Black';
+		padding-left: 66px;
+		padding-top: 58px;
+		margin-bottom: 0;
+	}
+	.video p{
+		padding: 0; margin: 0;
+		font-family: 'Galano Regular';
+		font-size: 24px;
+		padding-left: 66px;
+	}
+	.video__circle{
+		width: 70px;
+  		height: 70px;
+  		background-color: #f9f5e5;
+ 		box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.5);
+ 		border-radius: 50%;
+ 		position: absolute;
+ 		left: 545px;
+ 		top: 310px;
+ 		display: flex;
+ 		justify-content: center;
+ 		align-items: center;
+	}
+	.tekst{
+		max-width: 1160px;
+		height: auto;
+		background: #fff;
+		margin: 0 auto;
+		margin-top: 0;
+		position: relative;
+	}
+	.tekst p{
+		max-width: 959px;
+		margin-left: 99px;
+		line-height: 1.88;
+		font-family: 'Galano Regular';
+		word-wrap: break-word; 
+		color: #7c7a71;
+	}
+	.tekst strong{
+		color: #000;
+	}
+	.tekst p:nth-child(1){
+		font-family: 'Galano Bold';
+		padding-top: 96px;
+	}
+	.tekst h3{
+		font-size: 28px;
+		font-family: 'Galano Black';
+		text-transform: uppercase;
+		font-weight: 900;
+		padding-left: 99px;
+		padding-top: 54px;
+		padding-bottom: 63px;
+		margin: 0;
+	}
+	.tekst h3 > span{
+		font-family: 'Galano Regular';
+		font-weight: normal;
+	}
+	.tekst p:nth-child(3){
+		font-family: 'Galano Regular';
+		font-size: 16px;
+		width: 959px;
+		color: #7c7a71;
+	}
+	.tekst p:nth-child(5){
+		font-family: 'Galano Regular';
+		font-size: 16px;
+		color: #7c7a71;
+		padding-top: 93px;
+		width: 603px;
+		margin: 0;
+		padding-left: 469px;
+		padding-bottom: 105px;
+		z-index: 1;
+		position: relative;
+	}
+	.tekst__skakacica{
+		position: absolute;
+		z-index: 0;
+		left: 60px;
+		margin-top: 67px;
+	}
+
+	ol{
+		width: 717px;
+		margin: 0 auto;
+		font-family: 'Galano Medium';
+		color: #000000;
+		line-height: 1.88;
+		font-size: 16px;
+		font-weight: 500;
+	}
+	ol {list-style: none}
+	li::before {
+		content: "✔"; 
+		font-size: 20px;
+		color: #fecd35;
+  		display: inline-block; 
+  		width: 1em;
+  		margin-left: -1em;
+  		padding-right: 26px;
+  	}
+  	h1{
+  		text-align: left;
+  	}
+  	.header__language{
+  		background: #f9f5e5;
+  	}
+</style>
+	<div class="header">
+		<div class="header__language">
+			<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
+		</div>
+		<div class="header__navigation--undefined"></div>
+		<div class="header__navigation">
+			<div class="header__navigation--linkovi">
+				<span>Početna</span>
+				<span>Poslovni sektor</span>
+				<span>Konkursi</span>
+				<span class="konsalting">Konsalting
+					<div class="konsaltingBottom">
+					    <ul>
+					    	<li>IT usluge</li>
+					    	<li>Financijske usluge</li>
+					    	<li>(Internacionalne) <br> pravne usluge</li>
+					    	<li>Interni menadžment</li>
+					    	<li>Trening i edukacija</li>
+					    </ul>
+					</div>
+				</span>
+				<span>Banke i osiguranja</span>
+				<span style="width: 80px" class="selected">O nama</span>
+			</div>
+			<div class="header__navigation--dugmad">
+				<span id="myBtn2">Prijava</span>
+				<span id="myBtn" style="cursor: pointer;">Registracija</span>
+			</div>
+			<div class="header__navigation--call">
+				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
+				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
+			</div>
+		</div> <!-- header__navigation -->
+	</div> <!-- header -->
+
+	<div class="video">
+		<h1>ŽIŽA</h1>
+		<p>CONNECT AND IMPROVE YOUR BUSINESS</p>
+		<div class="video__circle"><img src="{% static 'images/play.png' %}" width="20px" height="20px"></div>
+	</div>
+	<div class="tekst" style="padding-bottom: 187px">
+		<p>Uzet ćemo sebi za pravo reći kako niste pronašli odgovarajuću stanicu. Nadamo se da ne zamjerate. Naime, u potrazi za odgovorima na Vaša pitanja, gotovo smo sigurni da niste došli do središta traženih rješenja. U ŽIŽU svega. Do nas.</p>
+
+		<h3>Kako je sve <span>počelo</span></h3>
+
+		<p>
+			<strong>Sigurno se pitate ko smo mi i kako je sve počelo</strong>. Prije nego li nam date Vaše povjerenje, utrošite vrijeme u čitanje sljedećih redova, dajemo vlastitu riječ kako neće biti uzaludno. I ne, nećemo Vam naplatiti neisporučeno. Niti obećati nemoguće. <br><br>
+
+			Još uvijek sumnjate? OK. <strong>Razumijemo</strong>. Bili smo tu gdje jeste Vi danas. Hodali smo u Vašim cipelama. Žuljale su nas iste stvari. Spoticali smo se o ista kamenja. Lutali tražeći odgovarajuće putokaze. Odustajali nismo. Kao ni Vi sami. <br><br>
+
+			<strong>Ne nastupamo incognito</strong>. Mi smo fuzija inozemnog iskustva koje je otišlo "trbuhom za kruhom" van svoje domovine tražeći odgovore na bezbroj pitanja koje je su nam nametnule stvari van našeg utjecaja i pritom diktirale životne okolnosti. Rat. Nedostatak prilika. Nemilosrdna sudbina. To nas je sustizalo. Profesionalizacija i održive radne vrijednosti. Strateško promišljanje. Europski koncepti održivog poslovanja. Vjerovanje u neostvarivo. To nas je kovalo. <br><br>
+
+			Ako ste možda čitajući prethodno pomislili kako su s druge strane penzionisani brokeri u emigraciji s istrošenim setom grafičkih olovka ubačenih u prednji džep bijele košulje koju drže karirani tregeri, u krivu ste. <strong>Mi smo i mladi</strong>. Trendsetteri. Ne oni modni. Trendovi koje postavljamo nisu prolazne prirode. S tehnologijom liježemo i budimo se. Čitamo toliko da podižemo tiraž tiskarskoj industriji. Energetski konkurišemo nuklearnoj energiji.Testiramo vlastite mogućnosti pomicanjem i stvaranjem novih granica. Istih onih koje želimo nadići. S Vama.
+		</p>
+
+		<img src="{% static 'images/skakacica.png' %}" class="tekst__skakacica">
+
+		<p>
+			Generacijski jaz nam je mlađi od rekorda Štefke Kostadinove. Oslanjamo se na <strong>domaće snage</strong>. Upravljali smo velikim <strong>inostranim projektima</strong> i davali savjete dokazanim evropskim menadžerima. Vjerujući u autohtono, <strong>educirali</strong> smo se na našim fakultetima i posezali za prekograničnim usavršavanjima i obrnuto. Znamo što znači biti pod pritiskom osigurati novac za nama najbliže. <strong>Padali smo</strong>. Učili na vlastitim greškama. Izgradili se u toj mjeri u kojoj se drugi mogu osloniti na nas. <strong>Vi</strong>.
+		</p>
+
+		<h3 style="padding-top: 0; margin-top: -18px; z-index: 1; position: relative;">Što Vam <span>nudimo</span></h3>
+
+		<p>
+			Idemo ovako. Krenućemo s onim što <strong>ne možemo ponuditi</strong>. Gledanje u karte pri odluci o ulasku u novi business roller coaster. Polovična rješenja. Garantni list ispisan na lakmus papiru. Nismo Avengersi i ne možemo spasiti svijet. <strong>Nudimo</strong> Vam razumijevanje. Znanje. Podršku. Adekvatne odgovore na Vaše potrebe. Iskustvo. Rezervirano mjesto za put ka konkurentnijoj i tržišno orijentisanoj Bosni i Hercegovini.
+		</p>
+
+		<h3>Što nas je <span>potaklo</span></h3>
+
+		<p>
+			<strong>Aleksa Šantić</strong>. Tako je, dobro ste pročitali. Istini na volju ne osobno on, ali njegova "za bukvara" jeste. <i>Sunce tuđeg neba, neće vas grijat kô što ovo grije</i>. Vratili smo se i odlučili kreirati nešto što do sada pod našim nebom nije bilo. <strong>Jedinstvenu platformu</strong> koja nudi poslovna, konsultantska, finansijska i ostala business rješenja. Dali smo si za pravo Šantićevom suncu pridružiti prekogranični solarni backup. Umrežavamo Vas sa inostranim partnerima i investitorima. Odgovaramo na međunarodna pravna pitanja. Rješavamo papire. Ne one vizne. Administrativne za ostati ovdje čineći Vas vidljivijima na međunarodnim poslovnim radarima.
+		</p>
+
+		<div style="padding-left: 221px; padding-top: 94px; padding-bottom: 60px;">
+			<div style="font-family: 'Galano Black'; font-size: 200px; color: #f0ede2; position: absolute; left: 168px; margin-top: -115px; z-index: 0">“</div>
+			<div style="font-family: 'Galano Regular'; color: #010101; font-size: 26px; font-weight: normal; z-index: 1; position: relative;">Sunce tuđeg neba, neće vas grijat kô što ovo grije. </div>
+			<div style="color: #fecd35; font-family: 'Galano Black'; font-size: 16px; padding-top: 20px">Aleksa Šantić</div>
+			<div style="color: #b5b4af; font-family: 'Galano Regular'; font-size: 12px; padding-top: 5px">Pjesnik</div>
+		</div>
+
+		<p>
+			<strong>Vi</strong>. Nije samo Aleksa. Gledajući Vašu volju za radom, imamo dugoročni motiv. Upornost i predanost koja prkosi beznađu. Mladi ljudi koji ne žele robovati ranije usvojenim principima koji ne donose rezultate. <strong>Sudbina</strong> koju dijelimo. Vaša ambicija i znanje koju ne čuvate samo za sebe. <strong>Potencijal koji nosite</strong>. Radna snaga koja zaslužuje dostojan tretman i svijetla pozornosti.
+		</p>
+
+		<h3>Naš <span>cilj</span></h3>
+
+		<ol>
+			<li>Podignuti konkuretnost bosanskohercegovačkog tržišta koristeći raspoložive resurse i &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vodeći se dokazanim studijama</li>
+			<li style="margin-top: 30px; margin-bottom: 30px">Raditi na izgradnji Vašeg karijernog puta</li>
+			<li>Biti Vaš "joker iz rukava" ukoliko Vam trebaju odgovori na pitanja legislativne i bankarske &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prirode.</li>
+			<li>Slijediti put onih koji su ga utabali za nas - Connecting people. Business people.</li>
+		</ol>
+
+		<p style="padding-top: 70px">
+			Dvije su stvari koje trebate napraviti. Vjerovati i postati članom naše familije u osnutku. Nije potrebno ispunjavati komplicirane formulare. Jedan "klik" Vas dijeli od mnogobrojnih mogućnosti: članstva, bliskog susreta s prilikama koje je teško propustiti, novog poslovnog i životnog partnerstva i ostvarenja Vaših poslovnih ciljeva.
+		</p>
+
+		<p style="padding-top: 40px; padding-bottom: 70px">
+			Tu smo za Vas.  Nudimo. Tražimo. Realiziramo. Gradimo.  Imamo na umu prepreke koje trebamo prevazići, a koje su sinonim za birokratske barijere, nejasne poslovne smjernice te disbalans između ponude i potražnje. Svjesni smo prilika koje nam se pružaju. Horizonata koji se otvaraju. Misije koju možemo ispuniti. Vjerujemo u vlastite kapacitete. Vašu ideju. Zajedničku sinergiju. Čak kao što ste primijetili razumijemo se na sva tri jezika. Može četiri ili pet (crnski ili gorski). Znamo zbog čega smo tu gdje jesmo. U žiži zbivanja. U središtu pronalaska rješenja. 
+		</p>
+
+		<p style="color: #010101; font-weight: 600; padding-bottom: 117px">Dobro nam došli. Hvala na povjerenju</p>
+
+		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto"></div>
+	</div>
+	<div class="footer">
+		<div class="footer__traka">
+			<div class="footer__traka--logo">
+				<img src="{% static 'images/logoNew.png' %}">
+			</div>
+			<div class="header__navigation--call" style="margin-top: 20px; margin-left: 266px">
+				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
+				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
+			</div>
+			<div class="header__navigation--call" style="margin-top: 20px; margin-left: 49px;">
+				<img src="{% static 'images/mejl.png' %}" draggable="false" width="16px" height="16px">
+				<p style="margin-bottom: 15px; color: #f89101; margin-left: -3px">support@ziza.ba</p>
+			</div>
+			<div style="margin-top: 37px; margin-left: 100px">
+				<img src="{% static 'images/fbg.png' %}" style="margin-right: 14px">
+				<img src="{% static 'images/tg.png' %}" style="margin-right: 14px">
+				<img src="{% static 'images/lg.png' %}" style="margin-right: 14px">
+				<img src="{% static 'images/rg.png' %}">
+				<img src="{% static 'images/amerika.png' %}" style="margin-left: 69px;">
+				<img src="{% static 'images/strldl.png' %}" style="margin-bottom: 7px; margin-left: 8px">
+			</div>
+		</div>
+		<div class="footer__content">
+			<div class="footer__content--opis">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+				<a href="#">Read More <img src="{% static 'images/arrowDesno.png' %}" style="margin-left: 10px"></a>
+			</div>
+			<div class="footer__content--navigacija">
+				<h3>For Candidates</h3>
+				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Browse Jobs</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Browse Companies</div>
+					<div class="footer__content--navigacija--item" style="color: #f89101"><img src="{% static 'images/malaDesno.png' %}">Categories</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Submit Resume</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Dashboard</div>
+				</div>
+			</div>
+			<div class="footer__content--navigacija">
+				<h3>For Employers</h3>
+				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Browse Candidates</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Post a Job</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Dashboard</div>
+				</div>
+			</div>
+			<div class="footer__content--navigacija">
+				<h3>Sign Up for Weekly Newsletter</h3>
+				<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+				<div style="display: flex;">
+					<input type="text" name="" placeholder="Email Address">
+					<div class="sendInput">
+						<img src="{% static 'images/sanduce.png' %}">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__copyright">
+			<p>Copyright © 2018 <span>ŽIŽA</span>. Designed by <span>META5</span>.</p>
+			<div class="goToTop">
+				<span>Go to top<img src="{% static 'images/vrati.png' %}"></span>
+			</div>
+		</div>
+	</div> <!-- footer -->
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script type="text/javascript" src="skripta.js"></script>
+<script>
+		        $(document).ready(function (){
+		            $(".dugme").click(function (){
+		                $('html, body').animate({
+		                    scrollTop: $(".testmoniali").offset().top
+		                }, 2000);
+		            });
+		        });
+
+
+		        $( ".konsalting" ).mouseover(function() {
+				    $('.konsaltingBottom').css('display', 'block');
+				  }).mouseout(function() {
+				    $('.konsaltingBottom').css('display', 'none');
+				});
+
+				$( ".sektor" ).mouseover(function() {
+				  	$('.sektorBottom').css('display', 'block');
+				  }).mouseout(function() {
+				    $('.sektorBottom').css('display', 'none');
+				});
+
+				$( ".konkurs" ).mouseover(function() {
+				  	$('.konkursBottom').css('display', 'block');
+				  }).mouseout(function() {
+				    $('.konkursBottom').css('display', 'none');
+				});
+
+				$( ".postavke" ).mouseover(function() {
+				  	$('.postavkeBottom').css('display', 'block');
+				  }).mouseout(function() {
+				    $('.postavkeBottom').css('display', 'none');
+				});
+		    </script>
+</html>

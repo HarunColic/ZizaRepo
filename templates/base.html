@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ba">
+	<title>ŽIŽA.ba | {% block title %} O nama {% endblock %} </title>
+
+{% block head %}
+<head>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+	<meta charset="utf-8">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+{% endblock %}
+<body>
+<div class="header">
+		<div class="header__language">
+			<p>BHS</p><img src="../static/images/arrow.png" width="10px" height="5px">
+		</div>
+		<div class="header__navigation--undefined"></div>
+		<div class="header__navigation">
+			<div class="header__navigation--linkovi">
+				<span class="selected">Početna</span>
+				<span>Poslovni sektor</span>
+				<span>Konkursi</span>
+				<span class="konsalting">Konsalting
+					<div class="konsaltingBottom">
+					    <ul>
+					    	<li>IT usluge</li>
+					    	<li>Financijske usluge</li>
+					    	<li>(Internacionalne) <br> pravne usluge</li>
+					    	<li>Interni menadžment</li>
+					    	<li>Trening i edukacija</li>
+					    </ul>
+					</div>
+				</span>
+				<span>Banke i osiguranja</span>
+				<span style="width: 80px">O nama</span>
+			</div>
+			<div class="header__navigation--dugmad">
+				<span id="myBtn2">Prijava</span>
+				<span id="myBtn" style="cursor: pointer;">Registracija</span>
+			</div>
+			<div class="header__navigation--call">
+				<img src="images/optimised/dial-min.png" draggable="false" width="11px" height="16px">
+				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
+			</div>
+		</div> <!-- header__navigation -->
+	</div> <!-- header -->
+{% block body %}
+{% endblock %}
+
+	<div class="footer">
+		<div class="footer__traka">
+			<div class="footer__traka--logo">
+				<img src="images/logoNew.png">
+			</div>
+			<div class="header__navigation--call" style="margin-top: 20px; margin-left: 266px">
+				<img src="images/optimised/dial-min.png" draggable="false" width="11px" height="16px">
+				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
+			</div>
+			<div class="header__navigation--call" style="margin-top: 20px; margin-left: 49px;">
+				<img src="images/mejl.png" draggable="false" width="16px" height="16px">
+				<p style="margin-bottom: 15px; color: #f89101; margin-left: -3px">support@ziza.ba</p>
+			</div>
+			<div style="margin-top: 37px; margin-left: 100px">
+				<img src="images/fbg.png" style="margin-right: 14px">
+				<img src="images/tg.png" style="margin-right: 14px">
+				<img src="images/lg.png" style="margin-right: 14px">
+				<img src="images/rg.png">
+				<img src="images/amerika.png" style="margin-left: 69px;">
+				<img src="images/strldl.png" style="margin-bottom: 7px; margin-left: 8px">
+			</div>
+		</div>
+		<div class="footer__content">
+			<div class="footer__content--opis">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+				<a href="#">Read More <img src="images/arrowDesno.png" style="margin-left: 10px"></a>
+			</div>
+			<div class="footer__content--navigacija">
+				<h3>For Candidates</h3>
+				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Browse Jobs</div>
+					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Browse Companies</div>
+					<div class="footer__content--navigacija--item" style="color: #f89101"><img src="images/malaDesno.png">Categories</div>
+					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Submit Resume</div>
+					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Dashboard</div>
+				</div>
+			</div>
+			<div class="footer__content--navigacija">
+				<h3>For Employers</h3>
+				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Browse Candidates</div>
+					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Post a Job</div>
+					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Dashboard</div>
+				</div>
+			</div>
+			<div class="footer__content--navigacija">
+				<h3>Sign Up for Weekly Newsletter</h3>
+				<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+				<div style="display: flex;">
+					<input type="text" name="" placeholder="Email Address">
+					<div class="sendInput">
+						<img src="images/sanduce.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__copyright">
+			<p>Copyright © 2018 <span>ŽIŽA</span>. Designed by <span>META5</span>.</p>
+			<div class="goToTop">
+				<span>Go to top<img src="images/vrati.png"></span>
+			</div>
+		</div>
+	</div> <!-- footer -->
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script type="text/javascript" src="skripta.js"></script>
+<script>
+$('.konsalting').mouseover(function() {
+	$('.konsaltingBottom').css('display', 'block');
+}).mouseout(function() {
+	$('.konsaltingBottom').css('display', 'none');
+});
+</script>
+</html>

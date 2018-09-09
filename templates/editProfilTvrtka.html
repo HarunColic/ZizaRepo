@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+	<title>ŽIŽA.ba | Uredi profil</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+	<meta charset="utf-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}">
+    <link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.css">
+	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'style-dodajOglas.css' %}">
+</head>
+<style type="text/css">
+	.formaBody{
+		height: 1200px;
+	}
+	.avatar-edit input {
+	  display: none;
+	}
+	.avatar-edit input + label:hover {
+	  background: #f1f1f1;
+	  border-color: #d6d6d6;
+	}
+	.avatar-edit input + label:after {
+	  color: #757575;
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  bottom: 0px;
+	  text-align: center;
+	  margin: auto;
+	  content: 'Promijeni';
+	  font-family: 'Galano Regular';
+	  color: white;
+	  background-color: #a6a397;
+	  cursor: pointer;
+	  opacity: 0.8;
+	  text-transform: uppercase;
+	}
+	@media only screen and (max-width: 1150px){
+		.formaBody {
+		    height: 1300px;
+		}
+		.sadrzaj h1{
+			margin-left: -30px;
+		}
+	}
+	@media only screen and (max-width: 445px){
+		.formaBody {
+		    height: 1350px;
+		}
+	}
+</style>
+<body>
+	<div class="coverSlika" style="position: relative;">
+		<div class="navigacija">
+			<div class="breadcrumb">
+				<a href="#">Profil</a>
+				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
+				<a href="#" style="display: none;">Oglasi</a>
+				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
+				<a href="#">Uredi profil</a>
+			</div>
+			<div class="linijaD"></div>
+		</div>
+<form id="editProfil" style="margin-top: 70px" method="post" action="{% url 'submitchange' %}" enctype="multipart/form-data">
+{% csrf_token %}
+
+		<div class="tvrtka">
+			<div class="avatarKucica" style="position: relative;">
+				<div style="width: 90%; height: 100%; background: url({% if userP.image %}{{ userP.image.url }} {% endif %}); background-size: contain; background-position: center; background-repeat: no-repeat;" id="imagePreview"></div>
+
+			<div class="avatar-edit">
+	            <input name="profilePicture" type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+	            <label for="imageUpload"></label>
+	        </div>
+
+
+			</div>
+			<div class="podaciT">
+				<div>TVRTKA</div>
+				<div>{{ user.first_name }}</div>
+				<div>
+					<div>
+						<span class="navNap navNap1 navAct" id="napraviOglas" style="margin-left: 10px">Uredi profil</span>
+						<div class="navNapCr"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- coverSlika END -->
+
+	<div class="formaBody" style="position: relative;">
+		<div class="sadrzaj">
+			<h1>O <span>NAMA</span></h1>
+                <div>
+					<label>Naslov kompanije</label><br>
+					<input value="{{ user.first_name }}" type="text" id='naslovInput' name="naslov" placeholder="Puni naziv Vaše kompanije" style="width: 100%">
+				</div>
+				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
+					<div style="width: 53.22%; margin-right: 25px">
+						<label>Kontakt e-mail adresa</label><br>
+						<input value="{{ user.email }}" type="email" name="email" style="width: 100%">
+					</div>
+					<div style="width: 43.75%">
+						<label>Kontakt broj</label><br>
+						<input value="{{ userP.brojtelefona }}" type="text" name="brojTel" style="width: 100%">
+					</div>
+				</div>
+				<div style="margin-top: 20px">
+					<label>Sjedište</label><br>
+					<select name="city">
+						<option value="{{ userP.location }}" >{{ userP.location }}</option>
+                        {% for g in gradovi %}
+                            {% if g.name != userP.location %}
+			    		<option value="{{ g.name }}">{{ g.name }}</option>
+                            {% endif %}
+					    {% endfor %}
+                    </select>
+				</div>
+				<div style="margin-top: 20px">
+					<label>Djelatnost</label><br>
+					<select name="industry">
+						<option value="{{ comp.industryID.name }}" >{{ comp.industryID.name }}</option>
+                        {% for i in ind %}
+                            {% if i.name != comp.industryID.name %}
+			    		<option value="{{ i.name }}">{{ i.name }}</option>
+                            {% endif %}
+					    {% endfor %}
+                    </select>
+				</div>
+				<div style="margin-top: 20px">
+					<label>Broj uposlenih</label><br>
+					<input value="{{ comp.brojuposlenih }}" type="number" id='brojUposlenihInput' name="brojuposlenih" style="width: 100%">
+				</div>
+				<div  style="margin-top: 30px;">
+					<label style="margin-bottom: 8px;" class="specLab">O nama</label>
+					<!-- TEXTEDITOR zapocinje -->
+					<input name="opis" type="hidden">
+      				<div id="editor-container"></div>
+					<!-- TEXTEDITOR zavrsava -->
+				</div>
+				<button id="aktivirajPregled">SPREMI<img src="{%  static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+			</form>
+		</div>
+	</div> <!-- formaBody END -->
+	
+
+{% load sweetify %}
+{% sweetify %}
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+
+	<script type="text/javascript">
+		$("#aktivirajPregled").click(function(){
+		  form.submit();
+		});
+	</script>
+<script>
+var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: [
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+    ]
+  },
+  placeholder: 'Unesite detaljan opis Vaše tvrtke...',
+  theme: 'snow'
+});
+var form = document.querySelector('form');
+form.onsubmit = function() {
+  var about = document.querySelector('input[name=opis]');
+  about.value = $('.ql-editor').html();//JSON.parse(quill.getContents());
+  console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+  return false;
+};
+
+$(document).ready( function() {
+    $(".ql-editor").attr('spellcheck',false);
+});
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+            $('#imagePreview').hide();
+            $('#imagePreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imageUpload").change(function() {
+    readURL(this);
+});
+
+
+    $(document).ready(function(){
+   $('#aktivirajPregled').click(function(){
+      $('#editProfil').submit()
+   })
+})
+
+</script>
+</html>

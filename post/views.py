@@ -4,17 +4,17 @@ from datetime import datetime, timedelta
 from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
 from location.models import City
+import sweetify
 
 
 def newpost(request):
-
-
 
     if Company.objects.filter(userID=request.user):
 
         data = Industry.objects.all()
         categories = Category.objects.all()
-        return render(request, 'newpost.html', {'data': data, 'cat': categories})
+        userP = UserProfile.objects.get(userID=request.user)
+        return render(request, 'newpost.html', {'data': data, 'cat': categories, 'userP': userP, 'user': request.user})
     else:
         return redirect('home')
 
@@ -25,7 +25,10 @@ def newpotraznja(request):
 
         categories = Category.objects.all()
         industries = Industry.objects.all()
-        return render(request, 'dodajPotraznju.html', {'ind': industries, 'cat': categories})
+        comp = Company.objects.get(userID=request.user)
+        userP = UserProfile.objects.get(userID=request.user)
+
+        return render(request, 'dodajPotraznju.html', {'ind': industries, 'cat': categories, 'comp': comp, 'user': request.user, 'userP': userP})
     else:
         return redirect('home')
 
@@ -65,6 +68,8 @@ def createpost(request):
 
             postcat.save()
 
+            sweetify.success(request, title="Uspješno kreiran oglas", text="", icon="success", timer=8000)
+
             return redirect('newpost')
         else:
 
@@ -88,6 +93,8 @@ def createpost(request):
 
             postCategories = PostCategories(postID=post, categoryID=cat)
             postCategories.save()
+
+            sweetify.success(request, title="Uspješno kreiran oglas", icon="success", timer=8000)
 
             return redirect('newpotraznja')
 

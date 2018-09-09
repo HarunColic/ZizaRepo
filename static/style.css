@@ -125,7 +125,8 @@ img {
 	font-size: 14px;
 	font-style: normal;
 	font-stretch: normal;
-	line-height: 2.86;
+	/* line-height: 2.86; */
+	text-align: center;
 	letter-spacing: normal;
 	color: #e3e0d7;
 	padding: 0 9px 0 9px;
@@ -138,7 +139,7 @@ img {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	margin-right: 57px;
+	margin-right: 40px;
 }
 .header__navigation--linkovi span.selected{
 	color: #f6b81b;

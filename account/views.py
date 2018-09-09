@@ -4,9 +4,7 @@ from account.models import Company, Employee, UserProfile
 from location.models import City
 from post.models import Industry, Category
 from django.contrib.auth import logout, login
-from django.contrib.auth import authenticate
 from post.models import Post
-from post.models import UserCategories, PostCategories
 from django.db.models import Q
 import re
 from django.core.mail import EmailMessage
@@ -15,6 +13,8 @@ from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
+import sweetify
+from django.http import HttpResponseRedirect
 
 
 def home(request):
@@ -40,12 +40,18 @@ def home(request):
             posts = Post.objects.all().filter(type=1)
 
         user = request.user
-        userP = UserProfile.objects.all()
+        userP = UserProfile.objects.get(userID=user)
         data = posts
         gradovi = City.objects.all()
         cat = Category.objects.all()
         counter = posts.count()
-        return render(request, 'logiran.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
+        company = Company.objects.get(userID=user)
+
+        if Company.objects.filter(userID=user).exists():
+            posts = Post.objects.all().filter(userID=user)
+            return render(request, 'profilTvrtka.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
+        elif Employee.objects.filter(userID=user).exists():
+            return render(request, 'logiran.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
     else:
         return render(request, 'index.html')
 
@@ -88,9 +94,18 @@ def register(request):
             user.email = request.POST['mail']
             user.set_password(request.POST['pswd'])
             user.username = user.last_name + "." + user.email
+            lozinka = request.POST['pswd']
+
+            if len(lozinka) < 6:
+                sweetify.sweetalert(request, title="Lozinka mora biti 6 ili više karaktera", icon="error", timer=10000)
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            elif not validateMail(user.email):
+                    sweetify.sweetalert(request, title="Unesite validnu email adresu", icon="error", timer=10000)
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
             if User.objects.filter(email=user.email).exists():
-                redirect('home')
+                sweetify.sweetalert(request, title="Email adresa već postoji", text="Već postoji korisnik sa ovom email adresom, ako ste zaboravili loyinku molimo kliknite na 'Forgot password'", icon="error", timer=10000)
+                return redirect('home')
             else:
 
                 if validateMail(user.email):
@@ -105,6 +120,8 @@ def register(request):
                     userP.save()
 
                     sendmail(request, user, user.email)
+
+                    sweetify.success(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success", timer=10000)
 
             return redirect('home')
 
@@ -139,7 +156,7 @@ def register(request):
             user.username = user.last_name + "." + user.email
 
             if User.objects.filter(email=user.email).exists():
-                redirect('home')
+               return redirect('home')
             else:
                 user.clean()
                 user.save()
@@ -147,7 +164,7 @@ def register(request):
                 comp = Company()
                 comp.userID = user
                 comp.ID_Number = user.last_name
-
+                comp.industryID = industry
                 comp.clean()
                 comp.save()
 
@@ -155,6 +172,8 @@ def register(request):
                 userP.save()
 
                 sendmail(request, user, user.email)
+
+                sweetify.success(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success",timer=10000)
 
             return redirect('home')
 
@@ -182,11 +201,17 @@ def signin(request):
         mail = request.POST['mail']
         password = request.POST['pswd']
 
-        user = User.objects.get(email=mail)
+        if User.objects.filter(email=mail).exists():
+            user = User.objects.get(email=mail)
+        else:
+            sweetify.sweetalert(request, title="Korisnik ne postoji", text="Korisnik sa unesenom email adresom ne postoji", icon="error", timer=10000)
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
         if user.check_password(password):
             if UserProfile.objects.get(userID=user).verified:
                 login(request, user)
+            else:
+                sweetify.error(request, 'Mail nije verifikovan', text='Molimo potvrdite svoju registraciju klikom na link u mailu', icon="error", timer=10000)
 
     return redirect('home')
 
@@ -195,3 +220,85 @@ def signout(request):
 
     logout(request)
     return redirect('home')
+
+
+def editprofil(request):
+
+#edit profil kompanije
+
+    if request.user.is_authenticated:
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
+        gradovi = City.objects.all()
+        ind = Industry.objects.all()
+        comp = Company.objects.get(userID=user)
+
+        return render(request, 'editProfilTvrtka.html', {'user': user, 'gradovi': gradovi, 'ind': ind, 'userP': userP, 'comp': comp})
+    else:
+        redirect('home')
+
+#potrebno dodati edit profil osobe
+
+def submitchange(request):
+
+    if request.user.is_authenticated:
+
+        if request.method == "POST":
+            name = request.POST['naslov']
+            mail = request.POST['email']
+            brojtel = request.POST['brojTel']
+            grad = request.POST['city']
+            indust = request.POST['industry']
+            brojuposlenika = request.POST['brojuposlenih']
+            opis = request.POST['opis']
+            slika = request.FILES['profilePicture']
+
+            user = request.user
+            userP = UserProfile.objects.get(userID=user)
+            comp = Company.objects.get(userID=user)
+            djelatnost = Industry.objects.get(name=indust)
+
+            if validateMail(mail):
+
+                usermail = True
+
+                if mail != user.email:
+                    usermail = False
+
+                    if User.objects.filter(email=mail).exists():
+                        sweetify.error(request, 'Mail već postoji',
+                                       text='molimo izaberite novi mail', icon="error",
+                                         timer=10000)
+                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+                user.first_name = name
+                user.email = mail
+                userP.location = grad
+                userP.brojtelefona = brojtel
+                userP.image = slika
+                comp.industryID = djelatnost
+                comp.brojuposlenih = brojuposlenika
+                comp.opis = opis
+
+                user.save()
+                userP.save()
+                comp.save()
+
+                if usermail is False:
+
+                    sweetify.success(request, 'Molimo verifikujte svoj mail', icon="success", timer=10000)
+                    sendmail(request, user, mail)
+                    logout(request)
+
+            else:
+                sweetify.error(request, 'Mail nije validan',
+                               text='molimo unesite validnu email adresu', icon="error",
+                               timer=10000)
+
+    return redirect('home')
+
+def onama(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
+        return render(request, 'onamanew.html')

@@ -27,7 +27,7 @@
 			<div class="avatarKucica">
                 {% for user in users %}
                 {% if user.userID == post.userID %}
-				    <img src="{{ user.image }}">
+				    <img src="{{ userP.image.url }}">
 			    {% endif %}
                 {% endfor %}
 

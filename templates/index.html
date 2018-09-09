@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 <form method="post" action="{% url 'register' %}" id="formaReg">
@@ -113,6 +114,20 @@
 	</div>
 </form>
 
+<style type="text/css">
+ul {list-style: none}
+	li::before {content: "•"; color: #f6b81b;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+  .konsaltingBottom{
+  	background-color: #262626; width: 250px; height: 170px; position: absolute;
+    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano Regular'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none;
+  }
+  .header__navigation--linkovi span{
+  	cursor: pointer;
+  }
+
+</style>
 
 	<div class="header">
 		<div class="header__language">
@@ -122,10 +137,21 @@
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
 				<span class="selected">Početna</span>
-				<span>Poslovi</span>
-				<span>Biznis</span>
-				<span>Novosti</span>
-				<span>O nama</span>
+				<span>Poslovni sektor</span>
+				<span>Konkursi</span>
+				<span class="konsalting">Konsalting
+				<div class="konsaltingBottom">
+    <ul>
+    	<li>IT usluge</li>
+    	<li>Financijske usluge</li>
+    	<li>(Internacionalne) <br> pravne usluge</li>
+    	<li>Interni menadžment</li>
+    	<li>Trening i edukacija</li>
+    </ul>
+	</div>
+</span>
+				<span>Banke i osiguranja</span>
+				<span style="width: 80px">O nama</span>
 			</div>
 			<div class="header__navigation--dugmad">
 				<span id="myBtn2">Prijava</span>
@@ -147,8 +173,8 @@
 		</div>
 		<div class="uvod__tekst">
 			<h1>ŽIŽA</h1>
-			<p>Žiža je platforma za poslovne ponude,<br> B2B suradnju i pronalazak ljudskih resursa.</p>
-			<div class="dugme">Kako radi?</div>
+			<p>Za povezivanje i poboljšanje <br> Vašeg poslovanja!</p>
+			<div class="dugme" style="cursor: pointer;">Zašto Žiža?</div>
 			<img src="../static/images/optimised/arrowBig-min.png" draggable="false" width="64px" height="32px">
 		</div>
 		<div class="uvod__slike">
@@ -305,68 +331,52 @@
 	</div> <!-- oglasi -->
 	<div class="testmoniali">
 		<div class="callToRegister"><img src="../static/images/registrirajse.png"></div>
-		<h1>PAR RIJEČI NAŠIH KORISNIKA</h1>
+		<h1>ZAŠTO ŽIŽA?</h1>
 		<div class="testmoniali__kucice">
 			<div class="testmoniali__kucice--single">
-				<img src="../static/images/teat1.png">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				<p style="word-break: normal;">Idealno mjesto za povećanje poslovne ponude i potražnje. Olakšava poslovnu komunikaciju (vidljivost) sa potencijalnim (inostranim) partnerima i investitorima. Jednostavno dobar alat za povećanje konkurentnosti bosansko-hercegovačkih kompanija.</p>
 				<div>
-					<h4>Jennifer Smith</h4>
-					<h5>Professional Copywriter</h5>
+					<h4>Redah</h4>
+					<h5>Regionalna razvojna agencija za <br> ekonomski razvoj</h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
-				<img src="../static/images/lik2.png">
-				<p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta.</p>
+				<p style="word-break: normal;">Fenomenalno, pored svih mogućnosti da vidite i budete viđeni, Žiža svojim članicama omogućava gratis postavljanje oglasa za posao. Naša kompanija je 57. kompanija po rastu u Evropi, te samim tim imamo veliku potrebu za zapošljavanjem novog kadra. Do sada smo naše konkurse objavljivali preko različitih portala i to nas je koštalo veoma mnogo novaca. Ovo je jednostavno rješenje za smanjenje ovih troškova.</p>
 				<div>
-					<h4>Kevin Parker</h4>
-					<h5>UX/UI Graphic Designer</h5>
+					<h4>NSoft</h4>
+					<h5>IT kompanija</h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
-				<img src="../static/images/lik3.png">
-				<p>Cudipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				<p style="word-break: normal;">Mogućnost da Vas neka kompanija pronađe na osnovu vašeg CV-a i ponudi Vam posao je fantastična. Žiža omogućava upravo to da su stručnjaci konkurentni na tržištu rada. Nešto kao i transferi u fudbalu, dobar radnik je u "izlogu", a dobiće ga kompanija koja će najbolje cijeniti njegove usluge. Mi u "Novom Travniku" smo spremni za taj izazov!</p>
 				<div>
-					<h4>Sandy Miranda</h4>
-					<h5>Marketing Director</h5>
+					<h4></h4>
+					<h5></h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
-				<img src="../static/images/teat1.png">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				<p style="word-break: normal;">Žižini IT eskperti Vam mogu ponuditi moderna IT rješenja te Vam na taj način umanjiti troškove organizacije i najma skupih stranih IT rješenja.</p>
 				<div>
-					<h4>Jennifer Smith</h4>
-					<h5>Professional Copywriter</h5>
+					<h4>META5</h4>
+					<h5>Kompanija za razvoj softvera</h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
-				<img src="../static/images/lik2.png">
-				<p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta.</p>
+				<p style="word-break: normal;">"Sve banke i osiguranja na jednom mjestu. Postavite Vaše finansijske ili osiguravajuće potrebe i vrlo brzo dobijete ponudu većine banaka i osiguravajućih društava. Na vama je da izaberete najbolje." Ovo je odlična zamisao, štedi vrijeme i povećava konkurenciju a Vama nudi najbolje na tržištu!</p>
 				<div>
-					<h4>Kevin Parker</h4>
-					<h5>UX/UI Graphic Designer</h5>
+					<h4>Nedim Šuta</h4>
+					<h5>FINLAB d.o.o.</h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
-				<img src="../static/images/lik3.png">
-				<p>Cudipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+				<p style="word-break: normal;">Skup eksperata Vam omogućava obuku, edukaciju Vašeg kadra te interim (privremeni) menadžment koji angažuje uključivanje privremenih (iskusnih) menadžera s kojima možete prevazići period bez adekvatnog kadra. U periodu rada interim menadžeri su u stanju obučiti Vaše talentovane uposlenike kako bi preuzeli te funkcije a vi dobili pouzdanog budućeg menadžera. Pored ovoga Žiža nudi finanskijska i (internacionalna) pravna savjetovanja.</p>
 				<div>
-					<h4>Sandy Miranda</h4>
-					<h5>Marketing Director</h5>
-					<div class="navodnici">“</div>
-				</div>
-			</div>
-			<div class="testmoniali__kucice--single">
-				<img src="../static/images/lik3.png">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-				<div>
-					<h4>Jennifer Smith</h4>
-					<h5>Professional Copywriter</h5>
+					<h4>Doc. dr. sc. Affan Ćehajić</h4>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
@@ -435,9 +445,29 @@
 			</div>
 		</div>
 	</div> <!-- footer -->
+{% load sweetify %}
+{% sweetify %}
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
 <script type="text/javascript" src="../static/skripta.js"></script>
+<script>
+		        $(document).ready(function (){
+		            $(".dugme").click(function (){
+		                $('html, body').animate({
+		                    scrollTop: $(".testmoniali").offset().top
+		                }, 2000);
+		            });
+		        });
+
+
+		        $( ".konsalting" )
+  .mouseover(function() {
+    $('.konsaltingBottom').css('display', 'block');
+  })
+  .mouseout(function() {
+    $('.konsaltingBottom').css('display', 'none');
+  });
+		    </script>
 </html>

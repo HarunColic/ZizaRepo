@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import sweetify
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'account',
     'location',
     'post',
+    'sweetify',
 ]
 
 MIDDLEWARE = [
@@ -94,13 +96,14 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'zizatest',
+        'NAME': 'zizadb',
         'USER': 'postgres',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
@@ -143,8 +146,22 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'media')
+MEDIA_URL = '/media/'
+
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'testingziza@gmail.com'
 EMAIL_HOST_PASSWORD = 'Verification1'
 EMAIL_PORT = 587
+
+sweetify.DEFAULT_OPTS = {
+    'showConfirmButton': False,
+    'timer': 10000,
+    'allowOutsideClick': True,
+    'confirmButtonText': 'OK',
+}

@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.conf.urls import url
 from account import views as AC_Views
 from post import views as P_Views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     url('admin/', admin.site.urls),
@@ -31,4 +34,9 @@ urlpatterns = [
     url(r'^showpost/(?P<id>[0-9]+)/', P_Views.showpost, name='showpost'),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         AC_Views.activate, name='activate'),
-]
+    url('onama/', AC_Views.onama, name='onama'),
+    url('^profil/', AC_Views.home, name='profil'),
+    url('^editprofil/', AC_Views.editprofil, name='editprofil'),
+    url('^submitchange/', AC_Views.submitchange, name='submitchange'),
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
