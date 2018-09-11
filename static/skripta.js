@@ -2,13 +2,13 @@ $(document).ready(function(){
    $('#submitSlika').click(function(){
       $('#formaReg').submit()
    })
-})
+});
 
 $(document).ready(function(){
    $('#submitLog').click(function(){
       $('#formaLog').submit()
    })
-})
+});
 
 $(document).ready(function(){
    $('#pretragaBTN').click(function(){
@@ -16,13 +16,13 @@ $(document).ready(function(){
    })
 })
 
-
+/*
 $(document).ready(function(){
    $('#myBtn').click(function(){
       $('#logoutForm').submit()
    })
 })
-
+*/
 
 $("#biznisButton").click(function(){
 	if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '140px')

@@ -12,7 +12,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
@@ -136,7 +136,7 @@ ul {list-style: none}
 		<div class="header__navigation--undefined"></div>
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
-				<span class="selected">Početna</span>
+				<span onclick="location.href='{% url 'home' %}'" class="selected">Početna</span>
 				<span>Poslovni sektor</span>
 				<span>Konkursi</span>
 				<span class="konsalting">Konsalting
@@ -151,7 +151,7 @@ ul {list-style: none}
 	</div>
 </span>
 				<span>Banke i osiguranja</span>
-				<span style="width: 80px">O nama</span>
+				<span onclick="location.href='/onama'" style="width: 80px">O nama</span>
 			</div>
 			<div class="header__navigation--dugmad">
 				<span id="myBtn2">Prijava</span>

@@ -1,0 +1,343 @@
+{% load static %}
+<form method="post" action="{% url 'register' %}" id="formaReg">
+    {% csrf_token %}
+    <input id="vrsta" type="hidden" value="radnik" name="vrsta">
+
+	<div id="myModal" class="modal" style="z-index: 9999999">
+
+	  <div class="regBox">
+	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+		<div class="regBox__lijevo">
+			<div class="regBox__lijevo--box active" id="osobaSector">
+				<img src="../static/images/pcelaobicna.png">
+				<p>Prijava<br>kao osoba</p>
+			</div>
+			<div class="regBox__lijevo--box" id="firmaSector">
+				<img src="../static/images/pcelafirma.png" style="margin-top: 5px">
+				<p style="margin-top: 4px">Prijava<br>kao firma</p>
+			</div>
+		</div>
+		<div class="regBox__desno">
+			<div class="linijaActive" style="position: absolute; left: 0; top: 70px;"></div>
+			<div>
+				<h1 id="naslovTekst">REGISTRACIJA OSOBE</h1>
+				<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
+			</div>
+			<div class="regBox__desno--input" style="display: flex; flex-direction: column;" >
+
+				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 33px">
+						<div class="form-group">
+					      <label class="form-label" for="first" id="prviInput">Vaše ime</label>
+					      <input name="FirstName" id="first" class="form-input neaktivan" type="text" spellcheck="false">
+					    </div>
+					    <div class="form-group" style="margin-left: 40px">
+					      <label class="form-label" for="last" id="drugiInput">Prezime</label>
+					      <input name="LastName" id="last" class="form-input neaktivan" type="text" spellcheck="false">
+					    </div>
+					</div>
+					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" id="srednjiElement">
+						<div class="form-group">
+					      <label class="form-label" for="djel" id="Djelatnost">Djelatnost</label>
+					      <input name="Industry" id="djel" class="form-input neaktivan" type="text" spellcheck="false">
+					    </div>
+					    <div class="form-group" style="margin-left: 40px">
+					      <label class="form-label" for="last" id="sjed">Sjedište</label>
+					      <input name="City" id="sjed" class="form-input neaktivan" type="text" spellcheck="false">
+					    </div>
+					</div>
+					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
+						<div class="form-group">
+					      <label class="form-label" for="ema">e-mail adresa</label>
+					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
+					    </div>
+					    <div class="form-group" style="margin-left: 40px">
+					      <label class="form-label" for="pas">Lozinka</label>
+					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+					    </div>
+					</div>
+				</div>
+				<img src="../static/images/send.png" style="margin-top: 60px; cursor: pointer;" id="submitSlika">
+			</div>
+		</div>
+	</div>
+        </div>
+</form>
+
+<form id="formaLog" method="post" action="{% url 'signin' %}">
+     {% csrf_token %}
+
+		<div id="myModal2" class="modal" style="z-index: 9999999">
+
+	  <div class="regBox" style="height: 461px">
+	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+		<div class="regBox__desno" style="width: 100%">
+			<div>
+				<h1 id="naslovTekst">PRIJAVA ZA KORISNIKE</h1>
+				<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
+			</div>
+			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
+				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
+						<div class="form-group">
+					      <label class="form-label" for="ema">e-mail adresa</label>
+					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
+					    </div>
+					    <div class="form-group" style="margin-left: 40px">
+					      <label class="form-label" for="pas">Lozinka</label>
+					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+					    </div>
+					</div>
+				</div>
+				<img src="../static/images/send.png" style="margin-top: 60px; cursor: pointer;" id="submitLog">
+			</div>
+		</div>
+	</div>
+	</div>
+</form>
+
+<style type="text/css">
+ul {list-style: none}
+	li::before {content: "•"; color: #f6b81b;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+  .konsaltingBottom{
+  	background-color: #262626; width: 250px; height: 170px; position: absolute;
+    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano Regular'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none;
+  }
+  .header__navigation--linkovi span{
+  	cursor: pointer;
+  }
+
+</style>
+
+{% if not var2  %}
+<!-- NOVA NAVIGACIJA CSS START -->
+<style type="text/css">
+ul {list-style: none}
+	li::before {content: ""; color: #f6b81b;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+  li:nth-child(1){
+  	margin-top: 20px;
+  }
+  li{
+  	margin-bottom: 20px;
+  }
+  ul{
+  	position: relative;
+  }
+  .saStrane{
+  	position: absolute; height: 40px; width: 4px; background: #f89101; left: 0px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; top:-6px; visibility: hidden;
+  }
+  ul .saStrane:nth-child(2){
+  	top: 33px !important;
+  }
+  ul .saStrane:nth-child(3){
+  	top: 73px !important;
+  }
+  li:hover{
+  	color: #f89101;
+  }
+  li:hover .saStrane{
+  	visibility: visible !important;
+  }
+  .konsaltingBottom, .sektorBottom, .konkursBottom{
+  	background-color: #181818; width: 250px; height: auto; position: absolute;
+    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano SemiBold'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none; margin-left: 90px; font-size: 14px; color: #7c7a71;
+  }
+  .header__navigation--linkovi span{
+  	cursor: pointer;
+  }
+</style>
+<!-- NOVA NAVIGACIJA CSS END-->
+
+<!-- NOVA NAVIGACIJA START -->
+	<div class="header">
+		<div class="header__language">
+				<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
+			</div>
+		<div class="header__navigation--undefined"></div>
+		<div class="header__navigation">
+			<div class="header__navigation--linkovi">
+				<span onclick="location.href='{% url 'home' %}'" class="selected">Početna</span>
+				<span class="sektor">Poslovni sektor
+					<div class="sektorBottom">
+					    <ul style="position: relative;">
+					    	<li><div class="saStrane"></div>Pretraga firmi</li>
+					    	<li><div class="saStrane" style="top: 33px !important;"></div>Banke</li>
+					    	<li><div class="saStrane" style="top: 73px !important;"></div>Osiguranja</li>
+					    </ul>
+					</div>
+				</span>
+				<span class="konkurs">Konkursi i oglasi
+					<div class="konkursBottom">
+					    <ul>
+					    	<li><div class="saStrane"></div> Objavi oglas</li>
+					    	<li><div class="saStrane" style="top: 33px !important;"></div> Pregled oglasa</li>
+					    </ul>
+					</div>
+				</span>
+				<span class="konsalting">Konsalting
+					<div class="konsaltingBottom">
+					    <ul>
+					    	<li><div class="saStrane"></div>IT usluge</li>
+					    	<li><div class="saStrane" style="top: 33px !important;"></div>Financijske usluge</li>
+					    	<li><div class="saStrane" style="top: 85px !important;"></div>(Internacionalne) <br> pravne usluge</li>
+					    	<li><div class="saStrane" style="top: 138px !important;"></div>Interni menadžment</li>
+					    	<li><div class="saStrane" style="top: 185px !important;"></div>Trening i edukacija</li>
+					    </ul>
+					</div>
+				</span>
+				<span onclick="location.href='/onama'" style="width: 80px">O nama</span>
+			</div>
+			<div class="header__navigation--dugmad">
+				<span id="myBtn2" style="cursor: pointer;">Prijava</span>
+				<span id="myBtn" style="cursor: pointer;">Registracija</span>
+			</div>
+			<div class="header__navigation--call">
+				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
+				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
+			</div>
+		</div> <!-- header__navigation -->
+	</div>
+
+<!-- NOVA NAVIGACIJA END -->
+{% endif %}
+
+{% if var2 %}
+<!-- NAVIGACIJA KADA JE KORISNIK LOGIRAN TJ. FIRMA -->
+
+<style type="text/css">
+ul {list-style: none}
+	li::before {content: ""; color: #f6b81b;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
+  li:nth-child(1){
+  	margin-top: 20px;
+  }
+  li{
+  	margin-bottom: 20px;
+  }
+  ul{
+  	position: relative;
+  }
+  .saStrane{
+  	position: absolute; height: 40px; width: 4px; background: #f89101; left: 0px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; top:-6px; visibility: hidden;
+  }
+  ul .saStrane:nth-child(2){
+  	top: 33px !important;
+  }
+  ul .saStrane:nth-child(3){
+  	top: 73px !important;
+  }
+  li:hover{
+  	color: #f89101;
+  }
+  li:hover .saStrane{
+  	visibility: visible !important;
+  }
+  .konsaltingBottom, .sektorBottom, .konkursBottom, .postavkeBottom{
+  	background-color: #181818; width: 250px; height: auto; position: absolute;
+    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano SemiBold'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none; margin-left: 90px; font-size: 14px; color: #7c7a71;
+  }
+  .postavkeBottom{
+  	margin-left: -65px !important;
+  }
+  .header__navigation--linkovi span{
+  	cursor: pointer;
+  }
+
+</style>
+
+	<div class="header">
+		<div class="header__language">
+			<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
+		</div>
+		<div class="header__navigation--undefined"></div>
+		<div class="header__navigation">
+			<div class="header__navigation--linkovi">
+				<span onclick="location.href='/home'" class="selected">Početna</span>
+				<span class="sektor">Poslovni sektor
+					<div class="sektorBottom">
+					    <ul style="position: relative;">
+					    	<li onclick="location.href='{% url 'pretraga' %}'"><div class="saStrane"></div>Pretraga firmi</li>
+					    	<li><div class="saStrane" style="top: 33px !important;"></div>Banke</li>
+					    	<li><div class="saStrane" style="top: 73px !important;"></div>Osiguranja</li>
+					    </ul>
+					</div>
+				</span>
+				<span class="konkurs">Konkursi i oglasi
+					<div class="konkursBottom">
+					    <ul>
+					    	<li onclick="location.href='{% url 'newpost' %}'"><div class="saStrane"></div> Objavi oglas</li>
+					    	<li onclick="location.href='{% url 'newpotraznja' %}'"><div class="saStrane"></div> Objavi potražnju</li>
+					    	<li onclick="location.href='{% url 'pretraga' %}'"><div class="saStrane" style="top: 33px !important;"></div> Pregled oglasa</li>
+					    </ul>
+					</div>
+				</span>
+				<span class="konsalting">Konsalting
+					<div class="konsaltingBottom">
+					    <ul>
+					    	<li><div class="saStrane"></div>IT usluge</li>
+					    	<li><div class="saStrane" style="top: 33px !important;"></div>Financijske usluge</li>
+					    	<li><div class="saStrane" style="top: 85px !important;"></div>(Internacionalne) <br> pravne usluge</li>
+					    	<li><div class="saStrane" style="top: 138px !important;"></div>Interni menadžment</li>
+					    	<li><div class="saStrane" style="top: 185px !important;"></div>Trening i edukacija</li>
+					    </ul>
+					</div>
+				</span>
+				<span onclick="location.href='{% url 'onama' %}'" style="width: 80px">O nama</span>
+			</div>
+			<div class="header__navigation--dugmad">
+				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
+					<div style="width: 42px; height: 42px; border-radius: 50%; background: url({% if var3.image %}{{ var3.image.url }} {% endif %}); background-position: center; background-size: cover"></div>
+					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 50px; padding-top: 50px; font-size: 12px; margin-left: 16px; margin-right: 150px" class="postavke">{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px"></i>
+					<div class="postavkeBottom">
+					    <ul style="position: relative;">
+					    	<li onclick="location.href='{% url 'profil' %}'"><div onclick="location.href = {% url 'profil' %}" class="saStrane"></div>Profil firme</li>
+					    	<li onclick="location.href='{% url 'editprofil' %}'"><div class="saStrane" style="top: 33px !important;"></div>Postavke</li>
+					    	<li class="logoutBtn" onclick="location.href='{% url 'signout' %}'"><div class="saStrane" style="top: 73px !important;"></div>Odjava</li>
+					    </ul>
+					</div></div>
+				</div>
+			</div>
+			<div class="header__navigation--call">
+				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
+				<p><a href="tel:+387603158565">+387 60 315 8565</a> <br> <span class="gray">Pon-Pet 9h-18h</span></p>
+			</div>
+		</div> <!-- header__navigation -->
+	</div> <!-- header -->
+{% endif %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script type="text/javascript" src="{% static 'skripta.js' %}"></script>
+<script type="text/javascript" src="../static/skripta.js"></script>
+
+<script>
+
+	$( ".konsalting" ).mouseover(function() {
+		$('.konsaltingBottom').css('display', 'block');
+	}).mouseout(function() {
+		$('.konsaltingBottom').css('display', 'none');
+	});
+
+	$( ".sektor" ).mouseover(function() {
+		$('.sektorBottom').css('display', 'block');
+	}).mouseout(function() {
+		$('.sektorBottom').css('display', 'none');
+	});
+
+	$( ".konkurs" ).mouseover(function() {
+		$('.konkursBottom').css('display', 'block');
+	}).mouseout(function() {
+		$('.konkursBottom').css('display', 'none');
+	});
+
+	$( ".postavke" ).mouseover(function() {
+		$('.postavkeBottom').css('display', 'block');
+	}).mouseout(function() {
+		$('.postavkeBottom').css('display', 'none');
+	});
+</script>

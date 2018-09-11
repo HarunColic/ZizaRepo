@@ -1,24 +1,133 @@
 <!DOCTYPE html>
 <html lang="ba">
-	<title>ŽIŽA.ba | {% block title %} O nama {% endblock %} </title>
-
-{% block head %}
 <head>
+	<title>ŽIŽA.ba | O nama</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
 	<meta charset="utf-8">
-    {% load static %}
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
-	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-{% endblock %}
 <body>
-<div class="header">
+	<div id="myModal" class="modal" style="z-index: 9999999">
+	 	<div class="regBox">
+		  	<img src="images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+			<div class="regBox__lijevo">
+				<div class="regBox__lijevo--box active" id="osobaSector">
+					<img src="images/pcelaobicna.png">
+					<p>Prijava<br>kao osoba</p>
+				</div>
+				<div class="regBox__lijevo--box" id="firmaSector">
+					<img src="images/pcelafirma.png" style="margin-top: 5px">
+					<p style="margin-top: 4px">Prijava<br>kao firma</p>
+				</div>
+			</div> 
+			<div class="regBox__desno">
+				<div class="linijaActive" style="position: absolute; left: 0; top: 70px;"></div>
+				<div>
+					<h1 id="naslovTekst">REGISTRACIJA OSOBE</h1>
+					<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
+				</div>
+				<div class="regBox__desno--input" style="display: flex; flex-direction: column;">
+					<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+						<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 33px">
+							<div class="form-group">
+						      <label class="form-label" for="first" id="prviInput">Vaše ime</label>
+						      <input id="first" class="form-input neaktivan" type="text" spellcheck="false">
+						    </div>
+						    <div class="form-group" style="margin-left: 40px">
+						      <label class="form-label" for="last" id="drugiInput">Prezime</label>
+						      <input id="last" class="form-input neaktivan" type="text" spellcheck="false">
+						    </div>
+						</div>
+						<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" id="srednjiElement">
+							<div class="form-group">
+						      <label class="form-label" for="djel" id="Djelatnost">Djelatnost</label>
+						      <input id="djel" class="form-input neaktivan" type="text" spellcheck="false">
+						    </div>
+						    <div class="form-group" style="margin-left: 40px">
+						      <label class="form-label" for="last" id="sjed">Sjedište</label>
+						      <input id="sjed" class="form-input neaktivan" type="text" spellcheck="false">
+						    </div>
+						</div>
+						<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
+							<div class="form-group">
+						      <label class="form-label" for="ema">e-mail adresa</label>
+						      <input id="ema" class="form-input neaktivan" type="email" spellcheck="false">
+						    </div>
+						    <div class="form-group" style="margin-left: 40px">
+						      <label class="form-label" for="pas">Lozinka</label>
+						      <input id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+						    </div>
+						</div>
+					</div>
+					<img src="images/send.png" style="margin-top: 60px; cursor: pointer;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="myModal2" class="modal" style="z-index: 9999999">
+	 	<div class="regBox" style="height: 461px">
+		  	<img src="images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+			<div class="regBox__desno" style="width: 100%">
+				<div>
+					<h1 id="naslovTekst">PRIJAVA ZA KORISNIKE</h1>
+					<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
+				</div>
+				<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
+					<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+						<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
+							<div class="form-group">
+						      <label class="form-label" for="ema">e-mail adresa</label>
+						      <input id="ema" class="form-input neaktivan" type="email" spellcheck="false">
+						    </div>
+						    <div class="form-group" style="margin-left: 40px">
+						      <label class="form-label" for="pas">Lozinka</label>
+						      <input id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+						    </div>
+						</div>
+					</div>
+					<img src="images/send.png" style="margin-top: 60px; cursor: pointer;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+<style type="text/css">
+	ul { list-style: none }
+	li::before {
+		content: "•";
+		color: #f6b81b;
+  		display: inline-block; 
+  		width: 1em;
+  		margin-left: -1em
+  	}
+	.konsaltingBottom{
+		background-color: #262626;
+		width: 250px;
+		height: 170px;
+		position: absolute;
+		top: 70px;
+		color: white;
+		z-index: 999999999999999;
+		text-align: left;
+		font-family: 'Galano Regular';
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		box-shadow:0px 2px 2px black;
+		display: none;
+	}
+	.header__navigation--linkovi span{
+		cursor: pointer;
+	}
+</style>
+	<div class="header">
 		<div class="header__language">
-			<p>BHS</p><img src="../static/images/arrow.png" width="10px" height="5px">
+			<p>BHS</p><img src="images/arrow.png" width="10px" height="5px">
 		</div>
 		<div class="header__navigation--undefined"></div>
 		<div class="header__navigation">
@@ -50,9 +159,8 @@
 			</div>
 		</div> <!-- header__navigation -->
 	</div> <!-- header -->
-{% block body %}
-{% endblock %}
 
+	
 	<div class="footer">
 		<div class="footer__traka">
 			<div class="footer__traka--logo">

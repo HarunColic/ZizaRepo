@@ -19,7 +19,7 @@
 	<div class="coverSlika">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="#">Početna</a>
+				<a href="{% url 'home' %}">Početna</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
 				<a href="#">Tvrtka</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
@@ -68,7 +68,7 @@
 		</div>
 		<div class="detaljniOpis">
             {% if company.opis is not None %}
-		        {{ company.opis }}
+		         {{ company.opis | safe }}
             {% endif %}
         </div>
 		<div class="uvodniDio tabelarniUvodniDio" style="margin-top: -100px">

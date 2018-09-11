@@ -59,34 +59,16 @@
                 }
             }
         </style>
-        <div class="header">
-            <div class="header__language">
-                <p>BHS</p><img src="{% static "images/arrow.png" %}" width="10px" height="5px">
-            </div>
-            <div class="header__navigation--undefined"></div>
-            <div class="header__navigation">
-                <div class="header__navigation--linkovi">
-                    <span id="homespan" class="selected">Početna</span> <!-- redirecta na 'home' url -->
-                    <span>Poslovi</span>
-                    <span>Biznis</span>
-                    <span>Novosti</span>
-                    <span>O nama</span>
-                </div>
-                <div class="header__navigation--dugmad">
-                    <span id="myBtn2" style="color: #e6b634; background-color: #131313">Prijavljen kao {{ user.first_name }}</span>
-                    <span id="myBtn" style="cursor: pointer;">Odjava</span>
-                </div>
-                <div class="header__navigation--call">
-                    <img src="../static/images/optimised/dial-min.png" draggable="false" width="11px" height="16px">
-                    <p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
-                </div>
-            </div> <!-- header__navigation -->
-        </div><!-- header -->
+
+    {% with var1=user var2=auth var3=userP %}
+    {% include 'header.html' %}
+    {% endwith %}
+
         <div class="searchTop">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" width="50px" style="position: absolute; top: 90px; right: 30px" class="burgerMenu">
             <h1>IMAMO <u>{{ counter }}</u> PONUDA ZA VAS!</h1>
         </div><!-- searchTop -->
-    <form id="pretraga" method="post" action="{% url 'home' %}">
+    <form id="pretraga" method="post" action="{% url 'pretraga' %}">
 
     {% csrf_token %}
     <input id="pretrazi" type="hidden" value="True" name="pretragaTrigger">

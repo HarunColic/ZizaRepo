@@ -23,8 +23,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('home/', AC_Views.home, name='home'),
     url('^$', AC_Views.home, name='home'),
+    url('^home$', AC_Views.home, name='home'),
     url('register/', AC_Views.register, name='register'),
     url('signin/', AC_Views.signin, name='signin'),
     url('signout/', AC_Views.signout, name='signout'),
@@ -35,8 +35,9 @@ urlpatterns = [
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         AC_Views.activate, name='activate'),
     url('onama/', AC_Views.onama, name='onama'),
-    url('^profil/', AC_Views.home, name='profil'),
-    url('^editprofil/', AC_Views.editprofil, name='editprofil'),
+    url('^profil/', AC_Views.profil, name='profil'),
+    url('editprofil/', AC_Views.editprofil, name='editprofil'),
     url('^submitchange/', AC_Views.submitchange, name='submitchange'),
+    url('^pretraga/', AC_Views.pretraga, name='pretraga'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

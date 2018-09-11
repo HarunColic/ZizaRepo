@@ -20,6 +20,15 @@ from django.http import HttpResponseRedirect
 def home(request):
 
     if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+        return render(request, 'home.html', {'user': request.user, 'auth': True, 'userP': userP})
+    else:
+        return render(request, 'index.html')
+
+
+def profil(request):
+
+    if request.user.is_authenticated:
 
         if request.POST.get('pretragaTrigger', "False") == "True":
             grad = request.POST.get('gradovi', None)
@@ -51,7 +60,7 @@ def home(request):
             posts = Post.objects.all().filter(userID=user)
             return render(request, 'profilTvrtka.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
         elif Employee.objects.filter(userID=user).exists():
-            return render(request, 'logiran.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
+            return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
     else:
         return render(request, 'index.html')
 
@@ -213,7 +222,7 @@ def signin(request):
             else:
                 sweetify.error(request, 'Mail nije verifikovan', text='Molimo potvrdite svoju registraciju klikom na link u mailu', icon="error", timer=10000)
 
-    return redirect('home')
+    return redirect('profil')
 
 
 def signout(request):
@@ -239,6 +248,7 @@ def editprofil(request):
 
 #potrebno dodati edit profil osobe
 
+
 def submitchange(request):
 
     if request.user.is_authenticated:
@@ -251,7 +261,7 @@ def submitchange(request):
             indust = request.POST['industry']
             brojuposlenika = request.POST['brojuposlenih']
             opis = request.POST['opis']
-            slika = request.FILES['profilePicture']
+            slika = request.FILES.get('profilePicture', default=None)
 
             user = request.user
             userP = UserProfile.objects.get(userID=user)
@@ -275,7 +285,8 @@ def submitchange(request):
                 user.email = mail
                 userP.location = grad
                 userP.brojtelefona = brojtel
-                userP.image = slika
+                if slika:
+                    userP.image = slika
                 comp.industryID = djelatnost
                 comp.brojuposlenih = brojuposlenika
                 comp.opis = opis
@@ -297,8 +308,57 @@ def submitchange(request):
 
     return redirect('home')
 
+
 def onama(request):
+
+
     if request.user.is_authenticated:
-        return redirect('home')
+        userP = UserProfile.objects.get(userID=request.user)
+        auth = True
+        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'userP': userP})
     else:
-        return render(request, 'onamanew.html')
+        auth = False
+        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth})
+
+
+def pretraga(request):
+
+    auth = False
+
+    if request.user.is_authenticated:
+
+        auth = True
+
+        user = request.user
+
+        if request.POST.get('pretragaTrigger', "False") == "True":
+            grad = request.POST.get('gradovi', None)
+            kategorija = request.POST.get('kategorije', None)
+            kljucnaRijec = request.POST.get('kljucnaRijec', None)
+
+            posts = Post.objects.all().filter(type=1)
+
+            if grad is not None:
+                posts = posts.all().filter(location=grad)
+            if kategorija is not None:
+                ind = Industry.objects.get(name=kategorija)
+                posts = posts.all().filter(industryID=ind)
+            if kljucnaRijec is not None:
+                posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+
+        else:
+            if Company.objects.filter(userID=user).exists():
+                posts = Post.objects.all().filter(type=2)
+            else:
+                posts = Post.objects.all().filter(type=1)
+
+        data = posts
+
+        userP = UserProfile.objects.get(userID=user)
+        gradovi = City.objects.all()
+        cat = Category.objects.all()
+        counter = posts.count()
+        return render(request, 'pretrazi.html',
+                      {'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter})
+    else:
+        return redirect('home')

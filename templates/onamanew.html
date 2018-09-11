@@ -284,40 +284,9 @@
   		background: #f9f5e5;
   	}
 </style>
-	<div class="header">
-		<div class="header__language">
-			<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
-		</div>
-		<div class="header__navigation--undefined"></div>
-		<div class="header__navigation">
-			<div class="header__navigation--linkovi">
-				<span>Početna</span>
-				<span>Poslovni sektor</span>
-				<span>Konkursi</span>
-				<span class="konsalting">Konsalting
-					<div class="konsaltingBottom">
-					    <ul>
-					    	<li>IT usluge</li>
-					    	<li>Financijske usluge</li>
-					    	<li>(Internacionalne) <br> pravne usluge</li>
-					    	<li>Interni menadžment</li>
-					    	<li>Trening i edukacija</li>
-					    </ul>
-					</div>
-				</span>
-				<span>Banke i osiguranja</span>
-				<span style="width: 80px" class="selected">O nama</span>
-			</div>
-			<div class="header__navigation--dugmad">
-				<span id="myBtn2">Prijava</span>
-				<span id="myBtn" style="cursor: pointer;">Registracija</span>
-			</div>
-			<div class="header__navigation--call">
-				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
-				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
-			</div>
-		</div> <!-- header__navigation -->
-	</div> <!-- header -->
+    {% with var1=user var2=auth var3=userP %}
+    {% include 'header.html' %}
+    {% endwith %}
 
 	<div class="video">
 		<h1>ŽIŽA</h1>

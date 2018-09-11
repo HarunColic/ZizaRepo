@@ -158,9 +158,13 @@
 <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
 
 	<script type="text/javascript">
+
 		$("#aktivirajPregled").click(function(){
+		     var about = document.querySelector('input[name=opis]');
+  about.value = $('.ql-editor').html();//JSON.parse(quill.getContents());
 		  form.submit();
 		});
+
 	</script>
 <script>
 var quill = new Quill('#editor-container', {
@@ -172,8 +176,9 @@ var quill = new Quill('#editor-container', {
     ]
   },
   placeholder: 'Unesite detaljan opis Vaše tvrtke...',
-  theme: 'snow'
+  theme: 'snow',
 });
+
 var form = document.querySelector('form');
 form.onsubmit = function() {
   var about = document.querySelector('input[name=opis]');
@@ -185,6 +190,7 @@ form.onsubmit = function() {
 $(document).ready( function() {
     $(".ql-editor").attr('spellcheck',false);
 });
+
 
 function readURL(input) {
     if (input.files && input.files[0]) {
