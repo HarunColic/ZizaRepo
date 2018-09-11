@@ -23,7 +23,7 @@ def home(request):
         userP = UserProfile.objects.get(userID=request.user)
         return render(request, 'home.html', {'user': request.user, 'auth': True, 'userP': userP})
     else:
-        return render(request, 'index.html')
+        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False})
 
 
 def profil(request):
@@ -306,7 +306,7 @@ def submitchange(request):
                                text='molimo unesite validnu email adresu', icon="error",
                                timer=10000)
 
-    return redirect('home')
+    return redirect('profil')
 
 
 def onama(request):
