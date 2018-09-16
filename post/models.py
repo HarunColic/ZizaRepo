@@ -5,15 +5,16 @@ from django.utils import timezone
 import pytz
 
 
-class Industry(models.Model):
+class Category(models.Model):
 
-    name = models.CharField(max_length=200)
-    created_at = models.DateTimeField(default=timezone.now)
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=255, null=True)
+    created_at = models.DateTimeField(default=datetime.now)
 
 
 class Post(models.Model):
 
-    industryID = models.ForeignKey(Industry, on_delete=models.CASCADE, null=True)
+    categoryID = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     userID = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     region = models.CharField(max_length=200)
@@ -39,13 +40,6 @@ class Post(models.Model):
         exp = self.expires_at
 
         return today > exp
-
-
-class Category(models.Model):
-
-    name = models.CharField(max_length=100)
-    description = models.CharField(max_length=255, null=True)
-    created_at = models.DateTimeField(default=datetime.now)
 
 
 class Tag(models.Model):

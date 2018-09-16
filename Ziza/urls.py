@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('^$', AC_Views.home, name='home'),
+    url('^$', AC_Views.comingsoon, name='comingsoon'),
     url('^home$', AC_Views.home, name='home'),
     url('register/', AC_Views.register, name='register'),
     url('signin/', AC_Views.signin, name='signin'),
@@ -40,5 +40,7 @@ urlpatterns = [
     url('^submitchange/', AC_Views.submitchange, name='submitchange'),
     url('^pretraga/', AC_Views.pretraga, name='pretraga'),
     url('^konsalting/', AC_Views.konsalting, name='konsalting'),
+    url('^test/', AC_Views.test, name='test'),
+    url('^pristup/', AC_Views.pristup, name='pristup'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

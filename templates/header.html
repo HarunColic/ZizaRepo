@@ -40,7 +40,7 @@
 						<div class="form-group">
 					      <label class="form-label" for="djel" id="Djelatnost"></label>
 
-                    <select name="Industry" id="djel">
+                    <select name="Category" id="djel">
 						<option value="" disabled selected>Izaberite Djelatnost</option>
                         {% for i in ind %}
 			    		<option value="{{ i.name }}">{{ i.name }}</option>
@@ -281,7 +281,7 @@ ul {list-style: none}
 			<div class="header__navigation--linkovi">
 				<span onclick="location.href='/home'" class="selected">Početna</span>
 				<span class="sektor" >Biznis
-					<div class="sektorBottom" style="padding-bottom: 30px; padding-top: 30px;" >
+					<div class="sektorBottom" style="padding-bottom: 10px; padding-top: 10px;" >
 					    <ul style="position: relative;">
 					    	<li onclick="location.href='{% url 'pretraga' %}'"><div class="saStrane"></div>Pretraga firmi</li>
 					    	<li><div class="saStrane" style="top: 33px !important;"></div>Bankarske Usluge</li>

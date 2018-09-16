@@ -42,7 +42,7 @@
 	<div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-				<h2><span>OGLAS /</span> {{ post.title }}</h2>
+				<h2><span>OGLAS /</span> {% if post.type == 1 %} {{ post.title }} {% else %} {{ b2b }} : {{ post.categoryID.name }} {% endif %}</h2>
 				<p>Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
 			</div>
 			<div class="downloadPDF">
@@ -51,24 +51,27 @@
 		</div>
 		<div class="tabelarni">
 			<div>
-				<h3>{{ post.location }}</h3>
+				<h3>{% if post.type == 1 %}{{ post.location}} {% else %}{{ post.region }}{% endif %}</h3>
 				<p>LOKACIJA</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3>{{ post.position }}</h3>
+				<h3>{% if post.type == 1 %}{{ post.position }} {% else %}{{ post.categoryID.name }}{% endif %}</h3>
 				<p>POZICIJA</p>
 			</div>
+            {% if post.type == 1 %}
 			<div class="malaLinija"></div>
 			<div>
 				<h3>{{ post.experience }}</h3>
 				<p>GODINE ISKUSTVA</p>
 			</div>
+
 			<div class="malaLinija"></div>
 			<div>
 				<h3>{{ post.specialty }}</h3>
 				<p>STRUČNA SPREMA</p>
 			</div>
+        {% endif %}
 		</div>
 		<div class="detaljniOpis">
 

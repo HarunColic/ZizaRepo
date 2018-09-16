@@ -1,8 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
-from post.models import Industry
 from django.utils import timezone
+from post.models import Category
 
 
 class UserProfile(models.Model):
@@ -16,6 +16,7 @@ class UserProfile(models.Model):
     deleted = models.BooleanField(default=False)
     brojtelefona = models.CharField(max_length=20, null=True)
 
+
 class Employee(models.Model):
 
     userID = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -25,7 +26,7 @@ class Employee(models.Model):
 class Company(models.Model):
 
     userID = models.OneToOneField(User, on_delete=models.CASCADE)
-    industryID = models.ForeignKey(Industry, on_delete=models.CASCADE)
+    categoryID = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     company_number = models.CharField(max_length=50)
     brojuposlenih = models.IntegerField(null=True)
     opis = models.TextField(null=True)

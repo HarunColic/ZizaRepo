@@ -36,7 +36,7 @@
 		<div class="tvrtka">
 			<div class="avatarKucica">
                 {% if userP.image  %}
-				<img src="{{ userP.image.url }}">
+				<img style="width: 300px; height: 200px;" src="{{ userP.image.url }}">
 	            {% endif %}
 			</div>
 			<div class="podaciT">
@@ -58,7 +58,7 @@
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3>{{ company.industryID.name }}</h3>
+				<h3>{{ company.categoryID.name }}</h3>
 				<p>DJELATNOST</p>
 			</div>
 			<div class="malaLinija"></div>
@@ -91,9 +91,9 @@
 				<div>
 					<div>
 
-						<div>{{ p.title }}</div>
+						<div>{% if p.type == 1 %}{{ p.title }} {% else %} {% if p.b2b_type == 1 %} Ponuda {% elif p.b2b_type == 2 %} Potražnja {% else %} Partnerstvo {% endif %} {% endif %}</div>
 						<div>
-							<span>{{ p.industryID.name }}</span>
+							<span>{{ p.categoryID.name }}</span>
 							<span>
 								<span>{{ p.created_at }}</span>
 								{{ p.location }}, {{ p.region }}

@@ -123,12 +123,12 @@
                     </select>
 				</div>
 				<div style="margin-top: 20px">
-					<label>Djelatnost</label><br>
-					<select name="industry">
-						<option value="{{ comp.industryID.name }}" >{{ comp.industryID.name }}</option>
-                        {% for i in ind %}
-                            {% if i.name != comp.industryID.name %}
-			    		<option value="{{ i.name }}">{{ i.name }}</option>
+					<label>Kategorija</label><br>
+					<select name="category">
+						<option value="{{ comp.categoryID.name }}" >{{ comp.categoryID.name }}</option>
+                        {% for c in cat %}
+                            {% if c.name != comp.categoryID.name %}
+			    		<option value="{{ c.name }}">{{ c.name }}</option>
                             {% endif %}
 					    {% endfor %}
                     </select>

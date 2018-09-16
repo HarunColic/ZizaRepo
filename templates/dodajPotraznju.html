@@ -52,7 +52,7 @@
 
 
             <!-- FORMA -->
-			<form style="margin-top: 70px" id="newpotraznjaForm" method="post" action="{% url  'createpost' %}">
+			<form style="margin-top: 70px" id="newpotraznjaForm" method="post" action="{% url 'createpost' %}">
 				{% csrf_token %}
                 <input type="hidden" name="type" value="2">
                 <div style="display: flex;">
@@ -67,26 +67,17 @@
 					</div>
 					<div style="width: 49%">
 						<label>za Kategoriju</label><br>
-						<select name="Industry">
-							<option value="" disabled selected>Izaberi Kategoriju</option>
-                            {% for i in ind %}
-			    			<option value={{ i.name }}>{{ i.name }}</option>
-						    {% endfor %}
-                        </select>
+						<select id="pozicijaInput" name="category">
+						<option value="" disabled selected>Izaberi kategoriju</option>
+                        {% for c in cat %}
+			    		<option value="{{ c.name }}">{{ c.name }}</option>
+                        {% endfor %}
+					</select>
 					</div>
 				</div>
 				<div style="margin-top: 20px">
-					<label>Kategorija oglasa</label><br>
-					<select name="category">
-						<option value="" disabled selected>Izaberi kategoriju</option>
-			    		{% for c in cat %}
-                        <option value={{ c.name }}>{{ c.name }}</option>
-					    {% endfor %}
-                    </select>
-				</div>
-				<div style="margin-top: 20px">
 					<label>Kanton/regija <span>(na kojoj želite poslovati)</span></label><br>
-					<select name="kanton">
+					<select name="kanton" id="lokacijaInput">
 						<option value="" disabled selected>Izaberi kanton/regiju</option>
 						<option value="" disabled selected>Entiteti i distrikti</option>
 			    		<option value="Federacija BiH">Federacija BiH</option>

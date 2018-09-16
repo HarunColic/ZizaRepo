@@ -27,7 +27,9 @@
 		</div>
 		<div class="tvrtka">
 			<div class="avatarKucica">
-				<img src="{{ userP.image.url }}">
+                {% if userP.image %}
+				<img style="width: 300px; height: 200px;" src="{{ userP.image.url }}">
+                {% endif %}
 			</div>
 			<div class="podaciT">
 				<div>TVRTKA</div>
@@ -55,9 +57,9 @@
 					<input type="text" id='naslovInput' name="naslov" placeholder="npr. Tražimo menadžera za" style="width: 100%">
 				</div>
 				<div>
-					<label>Kategorija oglasa</label><br>
+					<label>Djelatnost oglasa</label><br>
 					<select name="category">
-						<option value="" disabled selected>Izaberi kategoriju</option>
+						<option value="" disabled selected>Izaberi Djelatnost</option>
                         {% for c in cat %}
 			    		<option value="{{ c.name }}">{{ c.name }}</option>
                         {% endfor %}
