@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
 from location.models import City
 import sweetify
+from django.http import HttpResponseRedirect
 
 
 def newpost(request):
@@ -41,7 +42,6 @@ def createpost(request):
 
             title = request.POST['naslov']
             category = request.POST['category']
-            industry = request.POST['industry']
             expiration = request.POST['expiration']
             lokacija = request.POST['lokacija']
             pozicija = request.POST['pozicija']
@@ -52,7 +52,6 @@ def createpost(request):
             opis = request.POST['opis']
             type = request.POST['type']
 
-            indust = Industry.objects.get(name=industry)
             cat = Category.objects.get(name=category)
 
             if City.objects.all().filter(name=lokacija).exists():
@@ -61,7 +60,7 @@ def createpost(request):
                 city = City(name=lokacija)
                 city.save()
 
-            post = Post(userID=request.user, title=title, industryID=indust, region="BiH", location=city.name, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
+            post = Post(userID=request.user, title=title, region="BiH", location=city.name, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
             post.save()
 
             postcat = PostCategories(postID=post, categoryID=cat)
@@ -75,7 +74,6 @@ def createpost(request):
 
             type = request.POST['type']
             btobtype = request.POST['b2btype']
-            industry = request.POST['Industry']
             category = request.POST['category']
             kanton = request.POST['kanton']
             trajanje = request.POST['expiration']
@@ -83,9 +81,8 @@ def createpost(request):
             brojTel = request.POST['brojTel']
             opis = request.POST['opis']
 
-            ind = Industry.objects.get(name=industry)
 
-            post = Post(userID=request.user, type=int(type), b2b_type=int(btobtype), industryID=ind, region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
+            post = Post(userID=request.user, type=int(type), b2b_type=int(btobtype), region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
 
             post.save()
 
@@ -103,6 +100,16 @@ def createpost(request):
 
 def showpost(request, id):
     post = Post.objects.get(pk=id)
-    userP = UserProfile.objects.all()
+    userP = UserProfile.objects.get(userID=post.userID)
 
-    return render(request, 'oglas.html', {'post': post, 'users': userP})
+    if post.soft_delete:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    elif post.is_past_due:
+        post.soft_delete = True
+        post.save()
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    else:
+        return render(request, 'oglas.html', {'post': post, 'userP': userP})
+
+
+

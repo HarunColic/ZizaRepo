@@ -42,7 +42,19 @@ INSTALLED_APPS = [
     'location',
     'post',
     'sweetify',
+    'celery',
+    'djcelery',
+
 ]
+
+import djcelery
+djcelery.setup_loader()
+
+BROKET_HOST = "localhost"
+BROKER_PORT = "5672"
+BROKER_USER = "guest"
+BROKER_PASSWORD = "guest"
+BROKER_VHOST = "/"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -128,7 +140,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Sarajevo'
 
 USE_I18N = True
 
@@ -165,3 +177,5 @@ sweetify.DEFAULT_OPTS = {
     'allowOutsideClick': True,
     'confirmButtonText': 'OK',
 }
+
+

@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
 from django.utils import timezone
+import pytz
 
 
 class Industry(models.Model):
@@ -12,7 +13,7 @@ class Industry(models.Model):
 
 class Post(models.Model):
 
-    industryID = models.ForeignKey(Industry, on_delete=models.CASCADE)
+    industryID = models.ForeignKey(Industry, on_delete=models.CASCADE, null=True)
     userID = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     region = models.CharField(max_length=200)
@@ -29,6 +30,15 @@ class Post(models.Model):
     content = models.TextField()
     expires_at = models.DateTimeField(db_index=True)
     created_at = models.DateTimeField(default=timezone.now)
+    soft_delete = models.BooleanField(default=False)
+
+    @property
+    def is_past_due(self):
+        utc = pytz.UTC
+        today = timezone.now()
+        exp = self.expires_at
+
+        return today > exp
 
 
 class Category(models.Model):

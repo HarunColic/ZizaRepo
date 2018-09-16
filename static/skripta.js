@@ -160,3 +160,4 @@ $('.single-kucica').mouseout(function(){
 		$(this).find('.struka').css('text-shadow', '0px 5px 10px rgba(22, 22, 22, 0.25)');
 		$(this).css('background-image', 'url(images/aktivna.png)');
 });
+

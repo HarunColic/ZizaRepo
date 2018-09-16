@@ -13,122 +13,74 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</head>
-<body>
-<form method="post" action="{% url 'register' %}" id="formaReg">
-    {% csrf_token %}
-    <input id="vrsta" type="hidden" value="radnik" name="vrsta">
-
-	<div id="myModal" class="modal" style="z-index: 9999999">
-
-	  <div class="regBox">
-	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
-		<div class="regBox__lijevo">
-			<div class="regBox__lijevo--box active" id="osobaSector">
-				<img src="../static/images/pcelaobicna.png">
-				<p>Prijava<br>kao osoba</p>
-			</div>
-			<div class="regBox__lijevo--box" id="firmaSector">
-				<img src="../static/images/pcelafirma.png" style="margin-top: 5px">
-				<p style="margin-top: 4px">Prijava<br>kao firma</p>
-			</div>
-		</div>
-		<div class="regBox__desno">
-			<div class="linijaActive" style="position: absolute; left: 0; top: 70px;"></div>
-			<div>
-				<h1 id="naslovTekst">REGISTRACIJA OSOBE</h1>
-				<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
-			</div>
-			<div class="regBox__desno--input" style="display: flex; flex-direction: column;" >
-
-				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 33px">
-						<div class="form-group">
-					      <label class="form-label" for="first" id="prviInput">Vaše ime</label>
-					      <input name="FirstName" id="first" class="form-input neaktivan" type="text" spellcheck="false">
-					    </div>
-					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="last" id="drugiInput">Prezime</label>
-					      <input name="LastName" id="last" class="form-input neaktivan" type="text" spellcheck="false">
-					    </div>
-					</div>
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" id="srednjiElement">
-						<div class="form-group">
-					      <label class="form-label" for="djel" id="Djelatnost">Djelatnost</label>
-					      <input name="Industry" id="djel" class="form-input neaktivan" type="text" spellcheck="false">
-					    </div>
-					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="last" id="sjed">Sjedište</label>
-					      <input name="City" id="sjed" class="form-input neaktivan" type="text" spellcheck="false">
-					    </div>
-					</div>
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
-						<div class="form-group">
-					      <label class="form-label" for="ema">e-mail adresa</label>
-					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
-					    </div>
-					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="pas">Lozinka</label>
-					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
-					    </div>
-					</div>
-				</div>
-				<img src="../static/images/send.png" style="margin-top: 60px; cursor: pointer;" id="submitSlika">
-			</div>
-		</div>
-	</div>
-        </div>
-</form>
-
-<form id="formaLog" method="post" action="{% url 'signin' %}">
-     {% csrf_token %}
-
-		<div id="myModal2" class="modal" style="z-index: 9999999">
-
-	  <div class="regBox" style="height: 461px">
-	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
-		<div class="regBox__desno" style="width: 100%">
-			<div>
-				<h1 id="naslovTekst">PRIJAVA ZA KORISNIKE</h1>
-				<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
-			</div>
-			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
-				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
-						<div class="form-group">
-					      <label class="form-label" for="ema">e-mail adresa</label>
-					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
-					    </div>
-					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="pas">Lozinka</label>
-					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
-					    </div>
-					</div>
-				</div>
-				<img src="../static/images/send.png" style="margin-top: 60px; cursor: pointer;" id="submitLog">
-			</div>
-		</div>
-	</div>
-	</div>
-</form>
 
 <style type="text/css">
 ul {list-style: none}
-	li::before {content: "•"; color: #f6b81b;
+	li::before {content: ""; color: #f6b81b;
   display: inline-block; width: 1em;
   margin-left: -1em}
-  .konsaltingBottom{
-  	background-color: #262626; width: 250px; height: 170px; position: absolute;
-    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano Regular'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none;
+  li:nth-child(1){
+  	margin-top: 20px;
+  }
+  li{
+  	margin-bottom: 20px;
+  }
+  ul{
+  	position: relative;
+  }
+  .saStrane{
+  	position: absolute; height: 40px; width: 4px; background: #f89101; left: 0px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; top:-6px; visibility: hidden;
+  }
+  ul .saStrane:nth-child(2){
+  	top: 33px !important;
+  }
+  ul .saStrane:nth-child(3){
+  	top: 73px !important;
+  }
+  li:hover{
+  	color: #f89101;
+  }
+  li:hover .saStrane{
+  	visibility: visible !important;
+  }
+  .konsaltingBottom, .sektorBottom, .konkursBottom, .postavkeBottom{
+  	background-color: #181818; width: 250px; height: auto; position: absolute;
+    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano SemiBold'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none; margin-left: 90px; font-size: 14px; color: #7c7a71;
+  }
+  .postavkeBottom{
+  	margin-left: -65px !important;
   }
   .header__navigation--linkovi span{
   	cursor: pointer;
   }
 
 </style>
-    {% with var1=user var2=auth var3=userP %}
+<style>
+    .bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+
+    {% with var1=user var2=auth var3=userP ind=industries %}
     {% include 'header.html' %}
     {% endwith %}
 
@@ -144,7 +96,7 @@ ul {list-style: none}
 			<h1>ŽIŽA</h1>
 			<p>Za povezivanje i poboljšanje <br> Vašeg poslovanja!</p>
 			<div class="dugme" style="cursor: pointer;">Zašto Žiža?</div>
-			<img src="../static/images/optimised/arrowBig-min.png" draggable="false" width="64px" height="32px">
+			<img src="../static/images/optimised/arrowBig-min.png" class="bounce" draggable="false" width="64px" height="32px">
 		</div>
 		<div class="uvod__slike">
 			<div class="uvod__slike--prijava"></div>
@@ -152,7 +104,7 @@ ul {list-style: none}
 			<div class="uvod__slike--registracija"></div>
 			<div class="uvod__slike--pcelaRegistracija"></div>
 			<div class="uvod__slike--baloncic">
-				<p>Tražite posao?</p>
+				<p class="animirajKucanje"></p>
 			</div>
 		</div> <!-- uvod__slike -->
 	</div> <!-- uvod -->
@@ -373,47 +325,9 @@ ul {list-style: none}
 				<img src="../static/images/strldl.png" style="margin-bottom: 7px; margin-left: 8px">
 			</div>
 		</div>
-		<div class="footer__content">
-			<div class="footer__content--opis">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-				<a href="#">Read More <img src="../static/images/arrowDesno.png" style="margin-left: 10px"></a>
-			</div>
-			<div class="footer__content--navigacija">
-				<h3>For Candidates</h3>
-				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
-					<div class="footer__content--navigacija--item"><img src="../static/images/malaDesno.png">Browse Jobs</div>
-					<div class="footer__content--navigacija--item"><img src="../static/images/malaDesno.png">Browse Companies</div>
-					<div class="footer__content--navigacija--item" style="color: #f89101"><img src="../static/images/malaDesno.png">Categories</div>
-					<div class="footer__content--navigacija--item"><img src="../static/images/malaDesno.png">Submit Resume</div>
-					<div class="footer__content--navigacija--item"><img src="../static/images/malaDesno.png">Dashboard</div>
-				</div>
-			</div>
-			<div class="footer__content--navigacija">
-				<h3>For Employers</h3>
-				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
-					<div class="footer__content--navigacija--item"><img src="../static/images/malaDesno.png">Browse Candidates</div>
-					<div class="footer__content--navigacija--item"><img src="../static/images/malaDesno.png">Post a Job</div>
-					<div class="footer__content--navigacija--item"><img src="../static/images/malaDesno.png">Dashboard</div>
-				</div>
-			</div>
-			<div class="footer__content--navigacija">
-				<h3>Sign Up for Weekly Newsletter</h3>
-				<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
-				<div style="display: flex;">
-					<input type="text" name="" placeholder="Email Address">
-					<div class="sendInput">
-						<img src="../static/images/sanduce.png">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer__copyright">
-			<p>Copyright © 2018 <span>ŽIŽA</span>. Designed by <span>META5</span>.</p>
-			<div class="goToTop">
-				<span>Go to top<img src="../static/images/vrati.png"></span>
-			</div>
-		</div>
-	</div> <!-- footer -->
+
+        {% include 'footer.html' %}
+
 {% load sweetify %}
 {% sweetify %}
 </body>
@@ -421,6 +335,17 @@ ul {list-style: none}
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
 <script type="text/javascript" src="../static/skripta.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script>
+	var typed = new Typed('.animirajKucanje', {
+				  strings: ["Tražite posao?", "želite suradnju?", "Potreban Vam<br> je kredit?"],
+				  typeSpeed: 100,
+				  loop: true,
+				  showCursor: false,
+				  loopCount: Infinity,
+				});
+</script>
+
 <script>
 		        $(document).ready(function (){
 		            $(".dugme").click(function (){
@@ -439,4 +364,19 @@ ul {list-style: none}
     $('.konsaltingBottom').css('display', 'none');
   });
 		    </script>
+
+<script type="text/javascript">
+	$('.regBox__lijevo--box').click(function(){
+		$('.registracija.regBox').css('width', '1160px');
+		$('.regBox__desno').css('display', 'block');
+		 setTimeout(function(){
+		 	$('.registracija.regBox__desno').css('opacity', '1');
+		}, 300);
+		 $('.regBox__lijevo--box.active p').css('color', '#f89101');
+	});
+	$('.close').click(function(){
+		$('.registracija.regBox').css('width', '200px');
+		$('regBox__desno').css('display', 'none');
+	});
+</script>
 </html>

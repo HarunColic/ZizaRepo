@@ -166,6 +166,7 @@
 		});
 
 	</script>
+<p2 style="visibility: hidden; display: none" id="daresina">{{ comp.opis | safe }} </p2>
 <script>
 var quill = new Quill('#editor-container', {
   modules: {
@@ -178,6 +179,18 @@ var quill = new Quill('#editor-container', {
   placeholder: 'Unesite detaljan opis Vaše tvrtke...',
   theme: 'snow',
 });
+/*
+quill.setContents({
+    "ops":[
+        {"insert":"{{ comp.opis | safe}}"}
+    ]
+});
+*/
+
+var opis = $('#daresina').text();
+
+quill.setText(opis);
+
 
 var form = document.querySelector('form');
 form.onsubmit = function() {

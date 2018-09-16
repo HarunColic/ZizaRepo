@@ -15,7 +15,7 @@
 	<div class="coverSlika">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="#">Početna</a>
+				<a href="{% url 'home' %}">Početna</a>
 				<img src="{% static "images/arrowDesnoZuto.png" %}">
 				<a href="#">Oglasi</a>
 				<img src="{% static "images/arrowDesnoZuto.png" %}">
@@ -25,12 +25,9 @@
 		</div>
 		<div class="tvrtka">
 			<div class="avatarKucica">
-                {% for user in users %}
-                {% if user.userID == post.userID %}
-				    <img src="{{ userP.image.url }}">
-			    {% endif %}
-                {% endfor %}
-
+                {% if userP.image %}
+                <img src="{{ userP.image.url }}">
+                {% endif %}
             </div>
 			<div class="podaciT">
 				<div>TVRTKA</div>

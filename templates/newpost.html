@@ -63,17 +63,7 @@
                         {% endfor %}
 					</select>
 				</div>
-				<div style="margin-top: 20px">
-					<label>Djelatnost <span>(na koju se oglas odnosi)</span></label><br>
-					<select name="industry">
-						<option value="" disabled selected>Izaberi djelatnost</option>
-			    		{% for opt in data %}
 
-                        <option value="{{ opt.name }}">{{ opt.name }}</option>
-
-                        {% endfor %}
-					</select>
-				</div>
 				<div style="margin-top: 20px">
 					<label>Trajanje oglasa</label><br>
 					<select name="expiration">

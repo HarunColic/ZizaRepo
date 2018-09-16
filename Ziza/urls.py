@@ -39,5 +39,6 @@ urlpatterns = [
     url('editprofil/', AC_Views.editprofil, name='editprofil'),
     url('^submitchange/', AC_Views.submitchange, name='submitchange'),
     url('^pretraga/', AC_Views.pretraga, name='pretraga'),
+    url('^konsalting/', AC_Views.konsalting, name='konsalting'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

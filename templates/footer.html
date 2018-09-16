@@ -1,64 +1,58 @@
+{% load static %}
 
-	<div class="footer">
+<div class="footer">
 		<div class="footer__traka">
 			<div class="footer__traka--logo">
-				<img src="images/logoNew.png">
+				<img src="{% static 'images/logoNew.png' %}">
 			</div>
 			<div class="header__navigation--call" style="margin-top: 20px; margin-left: 266px">
-				<img src="images/optimised/dial-min.png" draggable="false" width="11px" height="16px">
-				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
+				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
+				<p><a href="tel:+387603158565" style="margin-right: 5px">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
 			</div>
 			<div class="header__navigation--call" style="margin-top: 20px; margin-left: 49px;">
-				<img src="images/mejl.png" draggable="false" width="16px" height="16px">
-				<p style="margin-bottom: 15px; color: #f89101; margin-left: -3px">support@ziza.ba</p>
+				<img src="{% static 'images/mejl.png' %}" draggable="false" width="16px" height="16px">
+				<p style="margin-bottom: 15px; color: #f89101; margin-left: -3px">info@ziza.ba</p>
 			</div>
 			<div style="margin-top: 37px; margin-left: 100px">
-				<img src="images/fbg.png" style="margin-right: 14px">
-				<img src="images/tg.png" style="margin-right: 14px">
-				<img src="images/lg.png" style="margin-right: 14px">
-				<img src="images/rg.png">
-				<img src="images/amerika.png" style="margin-left: 69px;">
-				<img src="images/strldl.png" style="margin-bottom: 7px; margin-left: 8px">
+				<img src="{% static 'images/fbg.png' %}" style="margin-right: 14px">
+				<img src="{% static 'images/tg.png' %}" style="margin-right: 14px">
+				<img src="{% static 'images/lg.png' %}" style="margin-right: 14px">
+				<img src="{% static 'images/rg.png' %}">
+				<img src="{% static 'images/amerika.png' %}" style="margin-left: 69px;">
+				<img src="{% static 'images/strldl.png' %}" style="margin-bottom: 7px; margin-left: 8px">
 			</div>
 		</div>
 		<div class="footer__content">
 			<div class="footer__content--opis">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
-				<a href="#">Read More <img src="images/arrowDesno.png" style="margin-left: 10px"></a>
+				<p>Žiža če Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršiti potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, (privremeno) nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje. <br><br>Biti u ŽIŽI znači: <em>"Vidjeti i biti viđen!"</em></p>
+				<a href="{% url 'onama' %}">Više o nama... <img src="{% static 'images/arrowDesno.png' %}" style="margin-left: 10px"></a>
 			</div>
 			<div class="footer__content--navigacija">
-				<h3>For Candidates</h3>
+				<h3>Za poslovni sektor</h3>
 				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
-					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Browse Jobs</div>
-					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Browse Companies</div>
-					<div class="footer__content--navigacija--item" style="color: #f89101"><img src="images/malaDesno.png">Categories</div>
-					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Submit Resume</div>
-					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Dashboard</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Povećajte ponudu i potražnju</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Povećajte proizvodne kapacitete</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Zaposlite adekvatno osoblje</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Poslovno se vežite</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Edukujte kadrove</div>
 				</div>
 			</div>
 			<div class="footer__content--navigacija">
-				<h3>For Employers</h3>
+				<h3>Za ljudski potencijal</h3>
 				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
-					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Browse Candidates</div>
-					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Post a Job</div>
-					<div class="footer__content--navigacija--item"><img src="images/malaDesno.png">Dashboard</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Pronađite posao</div>
+					<div class="footer__content--navigacija--item"><img src="{%  static 'images/malaDesno.png' %}">Dopustite a poslodavac<br> pronađe Vas</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Edukujte se</div>
+					<div class="footer__content--navigacija--item"><img src="{%  static 'images/malaDesno.png' %}">Prekvalifikujte se</div>
 				</div>
 			</div>
 			<div class="footer__content--navigacija">
-				<h3>Sign Up for Weekly Newsletter</h3>
-				<p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+				<h3>Kontakt</h3>
+				<p>Ulica XX 29<br>88104 Mostar<br>Bosna i Hercegovina</p>
 				<div style="display: flex;">
-					<input type="text" name="" placeholder="Email Address">
-					<div class="sendInput">
-						<img src="images/sanduce.png">
+					<div class="sendInput" style="width: 180px; border-radius: 20px; font-family: Galano Bold; color: white; font-size: 13px; background-color: #f89101; margin-left: 50px;">
+						PRIDRUŽI SE
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="footer__copyright">
-			<p>Copyright © 2018 <span>ŽIŽA</span>. Designed by <span>META5</span>.</p>
-			<div class="goToTop">
-				<span>Go to top<img src="images/vrati.png"></span>
-			</div>
-		</div>
-	</div> <!-- footer -->

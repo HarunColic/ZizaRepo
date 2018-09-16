@@ -14,6 +14,12 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'style-tvrtkaProfil.css' %}">
  </head>
+
+  <style>
+    a{ text-decoration:none;}
+    </style>
+
+
 {% block body %}
 
 	<div class="coverSlika">
@@ -66,7 +72,7 @@
 				<p>KONTAKT</p>
 			</div>
 		</div>
-		<div class="detaljniOpis">
+		<div id="opisProfila" class="detaljniOpis">
             {% if company.opis is not None %}
 		         {{ company.opis | safe }}
             {% endif %}
@@ -79,9 +85,12 @@
 
         <div class="uvodniDio tabelarniDio">
             {% for p in posts %}
+
+                <a href={% url 'showpost' id=p.pk %}>
             <div class="tabelaRasa">
 				<div>
 					<div>
+
 						<div>{{ p.title }}</div>
 						<div>
 							<span>{{ p.industryID.name }}</span>
@@ -92,8 +101,9 @@
 						</div>
 					</div>
 					<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-				</div>
+                </div>
 			</div>
+                </a>
             {% endfor %}
         <!--
 			<div class="tabelaRasa">
@@ -194,7 +204,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
-<script type="text/javascript" src="skripta.js"></script>
+<script type="text/javascript" src="../static/skripta.js"></script>
 <script src="/node_modules/readmore-js/readmore.min.js"></script>
 <script type="text/javascript">
 	$('.detaljniOpis').readmore({

@@ -38,8 +38,15 @@
 					</div>
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" id="srednjiElement">
 						<div class="form-group">
-					      <label class="form-label" for="djel" id="Djelatnost">Djelatnost</label>
-					      <input name="Industry" id="djel" class="form-input neaktivan" type="text" spellcheck="false">
+					      <label class="form-label" for="djel" id="Djelatnost"></label>
+
+                    <select name="Industry" id="djel">
+						<option value="" disabled selected>Izaberite Djelatnost</option>
+                        {% for i in ind %}
+			    		<option value="{{ i.name }}">{{ i.name }}</option>
+                        {% endfor %}
+					</select>
+
 					    </div>
 					    <div class="form-group" style="margin-left: 40px">
 					      <label class="form-label" for="last" id="sjed">Sjedište</label>
@@ -114,6 +121,29 @@ ul {list-style: none}
 {% if not var2  %}
 <!-- NOVA NAVIGACIJA CSS START -->
 <style type="text/css">
+
+regBox input, .regBox select{
+			width: 331px;
+			height: 50px;
+			mix-blend-mode: undefined;
+			border-radius: 5px;
+			background-color: #ffffff;
+			box-shadow: 0px 10px 40px 0 rgba(34, 34, 34, 0.1);
+			padding: 0;
+			margin: 0;
+			border: 0;
+			padding-left: 29px;
+			font-size: 18px;
+			line-height: 2.22;
+			color: #7c7a71;
+			font-family: 'Galano Regular';
+			background-color: #eeede7;
+		}
+
+.regBox select{
+    width: 360px!important;}
+
+
 ul {list-style: none}
 	li::before {content: ""; color: #f6b81b;
   display: inline-block; width: 1em;
@@ -161,7 +191,7 @@ ul {list-style: none}
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
 				<span onclick="location.href='{% url 'home' %}'" class="selected">Početna</span>
-				<span class="sektor">Poslovni sektor
+                <span class="sektor">Biznis</span>
 					<div class="sektorBottom">
 					    <ul style="position: relative;">
 					    	<li><div class="saStrane"></div>Pretraga firmi</li>
@@ -170,7 +200,7 @@ ul {list-style: none}
 					    </ul>
 					</div>
 				</span>
-				<span class="konkurs">Konkursi i oglasi
+				<span class="konkurs">Oglasi
 					<div class="konkursBottom">
 					    <ul>
 					    	<li><div class="saStrane"></div> Objavi oglas</li>
@@ -178,16 +208,8 @@ ul {list-style: none}
 					    </ul>
 					</div>
 				</span>
-				<span class="konsalting">Konsalting
-					<div class="konsaltingBottom">
-					    <ul>
-					    	<li><div class="saStrane"></div>IT usluge</li>
-					    	<li><div class="saStrane" style="top: 33px !important;"></div>Financijske usluge</li>
-					    	<li><div class="saStrane" style="top: 85px !important;"></div>(Internacionalne) <br> pravne usluge</li>
-					    	<li><div class="saStrane" style="top: 138px !important;"></div>Interni menadžment</li>
-					    	<li><div class="saStrane" style="top: 185px !important;"></div>Trening i edukacija</li>
-					    </ul>
-					</div>
+				<span class="konsalting" onclick=" location.href='{% url 'konsalting' %}'" >Konsalting
+
 				</span>
 				<span onclick="location.href='/onama'" style="width: 80px">O nama</span>
 			</div>
@@ -249,7 +271,7 @@ ul {list-style: none}
   }
 
 </style>
-
+<!-- HEADER -->
 	<div class="header">
 		<div class="header__language">
 			<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
@@ -258,41 +280,33 @@ ul {list-style: none}
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
 				<span onclick="location.href='/home'" class="selected">Početna</span>
-				<span class="sektor">Poslovni sektor
-					<div class="sektorBottom">
+				<span class="sektor" >Biznis
+					<div class="sektorBottom" style="padding-bottom: 30px; padding-top: 30px;" >
 					    <ul style="position: relative;">
 					    	<li onclick="location.href='{% url 'pretraga' %}'"><div class="saStrane"></div>Pretraga firmi</li>
-					    	<li><div class="saStrane" style="top: 33px !important;"></div>Banke</li>
-					    	<li><div class="saStrane" style="top: 73px !important;"></div>Osiguranja</li>
+					    	<li><div class="saStrane" style="top: 33px !important;"></div>Bankarske Usluge</li>
+					    	<li><div class="saStrane" style="top: 73px !important;"></div>Usluge Osiguranja</li>
 					    </ul>
 					</div>
 				</span>
-				<span class="konkurs">Konkursi i oglasi
+				<span class="konkurs">Oglasi
 					<div class="konkursBottom">
 					    <ul>
-					    	<li onclick="location.href='{% url 'newpost' %}'"><div class="saStrane"></div> Objavi oglas</li>
-					    	<li onclick="location.href='{% url 'newpotraznja' %}'"><div class="saStrane"></div> Objavi potražnju</li>
+					    	<li onclick="location.href='{% url 'newpost' %}'"><div class="saStrane"></div>Kadrovska Potraznja</li>
+					    	<li onclick="location.href='{% url 'newpotraznja' %}'"><div class="saStrane"></div> Poslovni Oglas</li>
 					    	<li onclick="location.href='{% url 'pretraga' %}'"><div class="saStrane" style="top: 33px !important;"></div> Pregled oglasa</li>
 					    </ul>
 					</div>
 				</span>
-				<span class="konsalting">Konsalting
-					<div class="konsaltingBottom">
-					    <ul>
-					    	<li><div class="saStrane"></div>IT usluge</li>
-					    	<li><div class="saStrane" style="top: 33px !important;"></div>Financijske usluge</li>
-					    	<li><div class="saStrane" style="top: 85px !important;"></div>(Internacionalne) <br> pravne usluge</li>
-					    	<li><div class="saStrane" style="top: 138px !important;"></div>Interni menadžment</li>
-					    	<li><div class="saStrane" style="top: 185px !important;"></div>Trening i edukacija</li>
-					    </ul>
-					</div>
+				<span class="konsalting" onclick="location.href='{% url 'konsalting' %}'" >Konsalting
+
 				</span>
 				<span onclick="location.href='{% url 'onama' %}'" style="width: 80px">O nama</span>
 			</div>
 			<div class="header__navigation--dugmad">
 				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
 					<div style="width: 42px; height: 42px; border-radius: 50%; background: url({% if var3.image %}{{ var3.image.url }} {% endif %}); background-position: center; background-size: cover"></div>
-					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 50px; padding-top: 50px; font-size: 12px; margin-left: 16px; margin-right: 150px" class="postavke">{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px"></i>
+					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px; margin-right: 150px" class="postavke">{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px"></i>
 					<div class="postavkeBottom">
 					    <ul style="position: relative;">
 					    	<li onclick="location.href='{% url 'profil' %}'"><div onclick="location.href = {% url 'profil' %}" class="saStrane"></div>Profil firme</li>

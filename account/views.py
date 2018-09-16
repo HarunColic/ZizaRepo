@@ -15,15 +15,18 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
 import sweetify
 from django.http import HttpResponseRedirect
+from datetime import datetime
+import pytz
 
 
 def home(request):
 
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
-        return render(request, 'home.html', {'user': request.user, 'auth': True, 'userP': userP})
+        return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None})
     else:
-        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False})
+        industries = Industry.objects.all()
+        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries})
 
 
 def profil(request):
@@ -57,7 +60,7 @@ def profil(request):
         company = Company.objects.get(userID=user)
 
         if Company.objects.filter(userID=user).exists():
-            posts = Post.objects.all().filter(userID=user)
+            posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now())
             return render(request, 'profilTvrtka.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
         elif Employee.objects.filter(userID=user).exists():
             return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
@@ -311,14 +314,25 @@ def submitchange(request):
 
 def onama(request):
 
-
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
         auth = True
-        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'userP': userP})
+        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'userP': userP, 'industries': None})
     else:
         auth = False
-        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth})
+        industries = Industry.objects.all()
+        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'industries': industries})
+
+
+def konsalting(request):
+
+    if request.user.is_authenticated:
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
+        return render(request, 'konsalting.html', {'user': user, 'userP':userP, 'auth': True, 'industries': None})
+    else:
+        industries = Industry.objects.all()
+        return render(request, 'konsalting.html', {'user': None, 'userP':None, 'auth': False, 'industries': industries})
 
 
 def pretraga(request):
@@ -352,13 +366,15 @@ def pretraga(request):
             else:
                 posts = Post.objects.all().filter(type=1)
 
-        data = posts
+        data = posts.exclude(expires_at__lte= datetime.now())
 
         userP = UserProfile.objects.get(userID=user)
         gradovi = City.objects.all()
         cat = Category.objects.all()
-        counter = posts.count()
+        counter = data.count()
+        users = User.objects.all()
+        userPs = UserProfile.objects.all()
         return render(request, 'pretrazi.html',
-                      {'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter})
+                      {'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs})
     else:
         return redirect('home')

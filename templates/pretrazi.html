@@ -77,7 +77,7 @@
             <div class="prviRedTrake">
             <input type="text" name="kljucnaRijec" placeholder="Ključna riječ">
             <select name="kategorije">
-                <option value="" disabled selected>Kategorija</option>
+                <option value="" disabled selected>Djelatnost</option>
                 {% for c in cat %}
                 <option value="{{ c.name }}">{{ c.name }}</option>
                 {% endfor %}
@@ -98,21 +98,31 @@
         </div><!-- searchBox -->
     </form>
     <div class="kucice">
-
+                                            <!-- KUCICE -->
             <div class="kolona firstKol">
 
-                        {% for d in data %}
+        {% for d in data %}
 
                 {% if forloop.counter == 0 or forloop.counter0|divisibleby:3 %}
                     <a href={% url 'showpost' id=d.pk %}>
 
 
                 <div class="single-kucica">
-                    {% for usr in userP %}
-                        {% if usr.userID == d.userID %}
-                        <div class="logotipFirme">{{ usr.image}}</div>
+
+                    {% for u in users %}
+                        {% if d.userID == u %}
+                            {% for up in userPs %}
+                                 {% if up.userID == u %}
+                                     {% if up.image %}
+                        <div class="logotipFirme" ><img src="{{ up.image.url }}" ></div>
+                                         {% else %}
+                        <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
+                                         {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
                     {% endfor %}
+
                     <div class="jobInfo">
                         <span class="struka">{{ d.industryID.name }}</span>
                         <span class="pozicija">{{ d.position }}</span>
@@ -169,15 +179,27 @@
             </div>
 
             <div class="kolona srednjaKol">
-            {% for d in data %}
-                {% if forloop.counter0 == 1 or forloop.revcounter0|divisibleby:3 %}
+{% for d in data %}
+                {% if forloop.counter|divisibleby:3 %}
+
                 <a href={% url 'showpost' id=d.pk %}>
                     <div class="single-kucica">
-                    {% for usr in userP %}
-                        {% if usr.userID == d.userID %}
-                        <div class="logotipFirme">{{ usr.image}}</div>
+
+
+                    {% for u in users %}
+                        {% if d.userID == u %}
+                            {% for up in userPs %}
+                                 {% if up.userID == u %}
+                                     {% if up.image %}
+                        <div class="logotipFirme" ><img src="{{ up.image.url }}" ></div>
+                                         {% else %}
+                        <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
+                                         {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
                     {% endfor %}
+
                     <div class="jobInfo">
                         <span class="struka">{{ d.industryID.name }}</span>
                         <span class="pozicija">{{ d.position }}</span>
@@ -190,6 +212,7 @@
 
                     {% endif %}
             {% endfor %}
+
             <!--
                 <div class="single-kucica" style="margin-top: -87px">
                     <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
@@ -223,15 +246,25 @@
                 </div>
             -->
             </div>
-    <!--
+
+
             <div class="kolona respKol">
             {% for d in data %}
-                {% if forloop.counter|divisibleby:3 %}
+                {% if forloop.counter0 == 1 or forloop.revcounter0|divisibleby:3 %}
                 <a href={% url 'showpost' id=d.pk %}>
                 <div class="single-kucica">
-                    {% for usr in userP %}
-                        {% if usr.userID == d.userID %}
-                        <div class="logotipFirme">{{ usr.image}}</div>
+
+                    {% for u in users %}
+                        {% if d.userID == u %}
+                            {% for up in userPs %}
+                                 {% if up.userID == u %}
+                                     {% if up.image %}
+                        <div class="logotipFirme" ><img src="{{ up.image.url }}" ></div>
+                                         {% else %}
+                        <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
+                                         {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
                     {% endfor %}
                     <div class="jobInfo">
@@ -245,7 +278,7 @@
                 </a>
                 {% endif %}
             {% endfor %}
-
+<!--
                 <div class="single-kucica" style="margin-top: -87px">
                     <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
                     <div class="jobInfo">
@@ -267,7 +300,7 @@
                     </div>
                 </div>
             </div>
-            -->
+
         </div>
 
         <!-- kucice -->

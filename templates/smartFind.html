@@ -1,0 +1,16 @@
+{% autoescape off %}
+Pozdrav {{ user.first_name }},
+
+
+Nakon isteka vašeg oglasa (danas) pronašli smo nekoliko korisnika koji se nisu prijavili na vaš oglas a koji mogu biti
+potencijalni kandidat.
+
+    pronašli smo sljedeće korisnike:
+
+    {% for u in users %}
+
+        {{ u.first_name }} {{ u.last_name }} : {{ u.email }}
+
+    {% endfor %}
+
+{% endautoescape %}
