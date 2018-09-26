@@ -1,5 +1,4 @@
 
-
 var current_perc = 0,
 	times = menu_item = $('#main_menu').find('li').length,
 	active_part;

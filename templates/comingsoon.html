@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
+{% load static %}
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ŽIŽA.ba | USKORO!</title>
-	<link href="/static/css/icons/css/animation.css" rel='stylesheet' type='text/css'>
-	<link href="/static/css/icons/css/fontello.css" rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/static/bootstrap.css" type='text/css'>
-	<link rel="stylesheet" href="/static/jquery.mCustomScrollbar.css" type='text/css'>
-	<link rel="stylesheet" href="/static/style.css" type='text/css'>
-	<link rel="stylesheet" href="/static/responsive.css" type='text/css'>
+	<link href="{% static 'animation.css' %}" rel='stylesheet' type='text/css'>
+	<link href="{% static 'fontello.css' %}" rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{%  static 'bootstrap.css' %}" type='text/css'>
+	<link rel="stylesheet" href="{%  static 'jquery.mCustomScrollbar.css' %}" type='text/css'>
+	<link rel="stylesheet" href="{% static 'style.css' %}" type='text/css'>
+	<link rel="stylesheet" href="{%  static 'responsive.css' %}" type='text/css'>
 </head>
 <style type="text/css">
 	@font-face{
 	font-family: 'Galano Semi';
-	src: url("fonts/GalanoClassic-SemiBold.ttf");
+	src: url({% static 'fonts/GalanoClassic-SemiBold.ttf' %});
 }
 
 @font-face{
 	font-family: 'Galano R';
-	src: url("fonts/GalanoClassic-Regular.ttf");
+	src: url({% static 'fonts/GalanoClassic-Regular.ttf' %});
 }
 
 @font-face{
 	font-family: 'Galano T';
-	src: url("fonts/GalanoClassic-Thin.ttf");
+	src: url({% static 'fonts/GalanoClassic-Thin.ttf' %});
 }
 
 
@@ -36,7 +37,7 @@
 
 @font-face{
 	font-family: 'Galano Bold';
-	src: url("fonts/GalanoClassic-ExtraBold.ttf");
+	src: url({% static 'fonts/GalanoClassic-ExtraBold.ttf' %});
 }
 body{
 	font-family: 'Galano Semi';
@@ -53,6 +54,38 @@ body{
     align-content: center;
     margin: 0 auto;
 }
+
+
+    #single_img_bg {
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	background: url({% static 'images/single_img_bg_4.png' %}) center 0 no-repeat; /* Here you can override background image */
+	background-attachment: fixed;
+	background-size: cover;
+}
+.style_2 #single_img_bg {
+	background-image: url({% static 'images/single_img_bg_4.png' %});
+}
+.style_3 #single_img_bg {
+	background-image: url({% static 'images/single_img_bg_4.png' %});
+}
+.style_4 #single_img_bg {
+	background-image: url({% static 'images/single_img_bg_4.png' %});
+}
+.style_5 #single_img_bg {
+	background-image: url({% static 'images/single_img_bg_4.png' %});
+}
+#single_img_bg.image6 {
+	background-image: url({% static 'images/single_img_bg_4.png' %});
+}
+
+
 </style>
 <body class="style_4">
 
@@ -63,7 +96,7 @@ body{
 			<div id="site_logo">
 				<h1>
 					<a href="#" class="footer__traka--logo">
-					<img src="/static/images/logo.png" title='ZIZA logotip' alt="">
+					<img src="{% static 'images/logo.png' %}" title='ZIZA logotip' alt="">
 				</a></h1>
 			</div>
 		</header>
@@ -77,19 +110,18 @@ body{
 			</h1>
 		</section>
 
-
-
 	</div>
 
 
 	<div id="single_img_bg" class=""></div>
 
-	<script src="/static/jquery-1.11.2.min.js"></script>
-	<script src="/static/jquery.mCustomScrollbar.min.js"></script>
-	<script src="/static/jquery.plugin.min.js"></script>
-	<script src="/static/jquery.countdown.min.js"></script>
-	<script src="/static/jquery.knob.js"></script>
-	<script src="/static/_config.js"></script>
-	<script src="/static/_front.js"></script>
+	<script src="{% static 'jquery-1.11.2.min.js' %}"></script>
+	<script src="{% static 'jquery.mCustomScrollbar.min.js' %}"></script>
+	<script src="{% static 'jquery.plugin.min.js' %}"></script>
+	<script src="{%  static 'jquery.countdown.min.js' %}"></script>
+	<script src="{% static 'jquery.knob.js' %}"></script>
+	<script src="{% static '_config.js' %}"></script>
+	<script src="{% static '_front.js' %}"></script>
+
 </body>
 </html>
