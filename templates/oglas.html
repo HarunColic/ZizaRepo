@@ -42,7 +42,7 @@
 	<div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-				<h2><span>OGLAS /</span> {% if post.type == 1 %} {{ post.title }} {% else %} {{ b2b }} : {{ post.categoryID.name }} {% endif %}</h2>
+				<h2><span>OGLAS /</span> {% if post.type == 1 %} {{ post.title }} {% else %} {{ post.title }} : {{ post.categoryID.name }} {% endif %}</h2>
 				<p>Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
 			</div>
 			<div class="downloadPDF">

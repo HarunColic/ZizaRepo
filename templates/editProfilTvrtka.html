@@ -108,7 +108,7 @@
 					</div>
 					<div style="width: 43.75%">
 						<label>Kontakt broj</label><br>
-						<input value="{{ userP.brojtelefona }}" type="text" name="brojTel" style="width: 100%">
+						<input  {% if userP.brojtelefona %} value="{{ userP.brojtelefona }}" {% endif %}type="text" name="brojTel" style="width: 100%">
 					</div>
 				</div>
 				<div style="margin-top: 20px">

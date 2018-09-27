@@ -124,7 +124,7 @@
                     {% endfor %}
 
                     <div class="jobInfo">
-                        <span class="struka">{% if d.type == 2 %} {% if d.b2b_type == 1 %} Ponuda {% elif d.b2b_type == 2 %} Potražnja {% else %} Partnerstvo {% endif %}: {{ d.categoryID.name }}{% endif %}</span>
+                        <span class="struka">{% if d.type == 2 %} {{ d.title }}: {{ d.categoryID.name }}{% endif %}</span>
                        {% if d.type == 1 %} <span class="pozicija">{{ d.position }}</span>{% endif %}
                         <span class="vrijeme">{{ d.created_at }}</span>
                         <span class="lokacijarada">{{ d.location }} {{ d.region }}</span>
@@ -201,7 +201,7 @@
                     {% endfor %}
 
                    <div class="jobInfo">
-                        <span class="struka">{% if d.type == 2 %} {% if d.b2b_type == 1 %} Ponuda {% elif d.b2b_type == 2 %} Potražnja {% else %} Partnerstvo {% endif %} : {{ d.categoryID.name }}{% endif %}</span>
+                        <span class="struka">{% if d.type == 2 %} {{ d.title }}: {{ d.categoryID.name }}{% endif %}</span>
                        {% if d.type == 1 %} <span class="pozicija">{{ d.position }}</span>{% endif %}
                         <span class="vrijeme">{{ d.created_at }}</span>
                         <span class="lokacijarada">{{ d.location }} {{ d.region }}</span>
@@ -268,7 +268,7 @@
                         {% endif %}
                     {% endfor %}
                    <div class="jobInfo">
-                        <span class="struka">{% if d.type == 2 %}{% if d.b2b_type == 1 %} Ponuda {% elif d.b2b_type == 2 %} Potražnja {% else %} Partnerstvo {% endif %}: {{ d.categoryID.name }}{% endif %}</span>
+                        <span class="struka">{% if d.type == 2 %} {{ d.title }}: {{ d.categoryID.name }}{% endif %}</span>
                        {% if d.type == 1 %} <span class="pozicija">{{ d.position }}</span>{% endif %}
                         <span class="vrijeme">{{ d.created_at }}</span>
                         <span class="lokacijarada">{{ d.location }} {{ d.region }}</span>

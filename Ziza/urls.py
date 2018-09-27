@@ -40,7 +40,9 @@ urlpatterns = [
     url('^submitchange/', AC_Views.submitchange, name='submitchange'),
     url('^pretraga/', AC_Views.pretraga, name='pretraga'),
     url('^konsalting/', AC_Views.konsalting, name='konsalting'),
-    url('^test/', AC_Views.test, name='test'),
+    url('^prijava/', AC_Views.test, name='test'),
     url('^pristup/', AC_Views.pristup, name='pristup'),
+    url('bankUsluge', P_Views.bankUsluge, name='bankUsluge'),
+    url('osiguranjeUsluge', P_Views.osiguranjeUsluge, name='osiguranjeUsluge'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -87,7 +87,22 @@ def createpost(request):
 
                 cat = Category.objects.get(name=category)
 
-                post = Post(userID=request.user, categoryID=cat, type=int(type), b2b_type=int(btobtype), region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
+                if category == 'Financijske usluge':
+                    title = request.POST['naslov']
+                else:
+                    if btobtype == 1:
+                        title = "Ponuda"
+                    elif btobtype == 2:
+                        title = "Potražnja"
+                    else:
+                        title = "Partnerstvo"
+
+                if category == 'Financijske usluge':
+                    position = request.POST['position']
+                else:
+                    position = ""
+
+                post = Post(position=position, title=title, userID=request.user, categoryID=cat, type=int(type), b2b_type=int(btobtype), region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
 
                 post.save()
 
@@ -123,3 +138,24 @@ def showpost(request, id):
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         else:
             return render(request, 'oglas.html', {'post': post, 'userP': userP, 'b2b': b2b})
+
+def bankUsluge(request):
+
+    if views.soon.soon:
+        return redirect('/')
+    else:
+        if Company.objects.filter(userID=request.user).exists():
+            user = request.user
+            financije = Category.objects.get(name="Financijske usluge")
+            userP = UserProfile.objects.get(userID=request.user)
+            return render(request, 'bankarskeUsluge.html', {'user': user, 'userP': userP, 'financije': financije})
+        else:
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+def osiguranjeUsluge(request):
+
+    user = request.user
+    userP = UserProfile.objects.get(userID=user)
+    cat = Category.objects.get(name="Usluge osiguranja")
+
+    return render(request, 'OsiguranjeUsluge.html', {'user': user, 'userP': userP, 'cat': cat})

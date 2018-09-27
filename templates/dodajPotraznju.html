@@ -29,7 +29,9 @@
 		</div>
 		<div class="tvrtka">
 			<div class="avatarKucica">
+                {% if userP.image %}
 				<img src="{{ userP.image.url }}">
+                {% endif %}
 			</div>
 			<div class="podaciT">
 				<div>TVRTKA</div>

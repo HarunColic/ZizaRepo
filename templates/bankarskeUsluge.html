@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+    {% load static %}
+	<title>ŽIŽA.ba | Kreiraj oglas</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}">
+	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'style-dodajOglas.css' %}">
+</head>
+<body>
+	<style type="text/css">
+	.formaBody{
+		height: 1250px;
+	}
+	</style>
+		<style type="text/css">
+		@media screen and (max-width: 1450px){
+			.tvrtka{
+				max-width: 700px;
+			}
+			.navigacija{
+				max-width: 800px;
+			}
+		}
+		@media screen and (max-width: 1180px){
+			.sadrzaj{
+				width: 760px;
+				margin: 0 auto;
+			}
+			.formaBody{
+				max-width: 960px;
+			}
+			#aktivirajPregled{
+				left: 40%;
+			}
+		}
+		@media screen and (max-width: 1024px){
+			.tvrtka{
+				max-width: 550px;
+			}
+			.navigacija{
+				max-width: 650px;
+			}
+			.footer{
+				display: none;
+			}
+		}
+		@media screen and (max-width: 960px){
+			.sadrzaj{
+				width: 560px;
+				margin: 0 auto;
+			}
+			.formaBody{
+				max-width: 760px;
+			}
+			#aktivirajPregled{
+				left: 35%;
+			}
+			.lokacije{
+				flex-wrap: wrap;
+			}
+			.lokacije div{
+				width: 100% !important;
+				margin-top: 15px;
+			}
+			.lokacije div input{
+				width: 104% !important;
+			}
+			.lokacije div:nth-child(1){
+				margin-top: 0px;
+			}
+			#spremaInput{
+				width: 100% !important;
+			}
+			.formaBody{
+				height: 1250px;
+			}
+		}
+		@media screen and (max-width: 755px){
+			.sadrzaj{
+				width: 360px;
+				margin: 0 auto;
+			}
+			.formaBody{
+				max-width: 560px;
+			}
+			.kontaktiagain{
+				flex-wrap: wrap;
+			}
+			.kontaktiagain div{
+				width: 100% !important;
+			}
+			.kontaktiagain div input{
+				width: 108% !important;
+			}
+			.kontaktiagain div:nth-child(2) input{
+				width: 100% !important;
+				margin-top: 15px;
+			}
+			.lokacije div input{
+				width: 106% !important;
+			}
+			.formaBody{
+				height: 2000px;
+			}
+			#aktivirajPregled{
+				left: 30%;
+			}
+			.podaciT div:nth-child(3){
+				display: none;
+			}
+			.formaBody {
+			    height: 1450px;
+			}
+		}
+		@media screen and (max-width: 400px){
+			.formaBody{
+				border-radius: 5px;
+			}
+			.sadrzaj h1{
+				display: none;
+			}
+			.sadrzaj{
+				padding-top: 3px;
+			}
+			#postForm{
+				margin-top: 30px !important;
+			}
+			.sadrzaj{
+				width: 300px;
+				margin: 0 auto;
+			}
+			.formaBody{
+				max-width: 350px;
+			}
+			.avatarKucica{
+				margin-left: 45px;
+			}
+			.navigacija{
+				max-width: 190px;
+			}
+			.uploadStuff{
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-top: 50px;
+			}
+			.formaBody{
+				height: 1930px;
+			}
+			#aktivirajPregled{
+				left: 23%;
+			}
+			.uploadStuff p{
+				margin-left: 0 !important;
+			}
+			.navigacijaFooter {
+			    margin-left: 15px;
+			}
+			.pregledTraka div:nth-child(1){
+				display: none;
+			}
+			.pregledTraka div:nth-child(2){
+				margin-right: 0 !important;
+				margin: 0 auto;
+			}
+			.kontaktBrojDiv{
+				margin-top: 15px;
+			}
+			.formaBody {
+			    height: 1330px;
+			}
+		}
+	</style>
+	<div class="coverSlika" style="position: relative;">
+		<div class="navigacija">
+			<div class="breadcrumb">
+				<a href="#">Početna</a>
+				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
+				<a href="#" style="display: none;">Oglasi</a>
+				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
+                <a class="logoutBtn" href="#">Objava</a>
+
+				<script>
+					$('.logoutBtn').click((e)=>{
+						e.preventDefault();
+						$('#logoutForm').submit();
+					});
+				</script>
+			</div>
+			<div class="linijaD"></div>
+		</div>
+		<div class="tvrtka">
+			<div class="avatarKucica">
+                {% if userP.image %}
+                <img src="{{ userP.image.url }}">
+                {% else %}
+				<img src="https://cdn0.capterra-static.com/logos/150/vendor-placeholder-logo.png">
+			    {% endif %}
+            </div>
+			<div class="podaciT">
+				<div>TVRTKA</div>
+				<div>{{user.first_name}}</div>
+				<div>
+					<div>
+						<span class="navNap navNap1 navAct" id="napraviOglas">Napravi oglas</span>
+						<div class="navNapCr"></div>
+					</div>
+					<div>
+						<span class="navNap navNap2" style="margin-left: 190px; color: white" id="pregledajOglas">Pregled</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- coverSlika END -->
+	<div class="formaBody" style="position: relative;">
+		<div class="sadrzaj">
+			<h1><span>BANKARSKE</span> USLUGE</h1>
+			<h3 style="font-family: 'Galano Regular'; font-size: 14px"><span style="font-family: 'Galano Regular'; color: #f89101">NAPOMENA: </span>Žiža putem svoje platforme samo spaja tražioce bankarskih usluga sa bankama. Tražioci bankarskih usluga i banke su odgovorne za dalje procedure i poslovne saradnje. </h3>
+            <form  action="{% url 'createpost' %}" style="margin-top: 50px" id="postForm" method="POST" enctype="multipart/form-data">
+                <input type="hidden" value="2" name="type">
+                <input type="hidden" value="2" name="b2btype">
+                <input type="hidden" value="{{financije.name}}" name="category">
+                <input type="hidden" value="" name="" id="naslov">
+				{% csrf_token %}
+				<div style="display: flex;">
+					<div style="width: 100%">
+						<label>Potreban mi je </label><br>
+						<select name="naslov" id="vrstaBankInput">
+							<option value="" disabled selected>Izaberi...</option>
+				    		<option value="Kredit">Kredit</option>
+				    		<option value="Lizing">Lizing</option>
+						</select>
+					</div>
+				</div>
+
+				<div style="margin-top: 20px">
+					<label>Kanton/regija <span>(na kojoj želite poslovati)</span></label><br>
+					<select name="kanton" id="regionInput">
+						<option value="" disabled selected>Izaberi kanton/regiju</option>
+						<option value="" disabled selected>Entiteti i distrikti</option>
+			    		<option value="Federacija BiH">Federacija BiH</option>
+			    		<option value="Republika Srpska">Republika Srpska</option>
+			    		<option value="Distrikt Brčko">Distrikt Brčko</option>
+			    		<option value="" disabled selected>Kantoni u FBiH</option>
+			    		<option value="Unsko-sanski kanton">Unsko-sanski kanton</option>
+					</select>
+				</div>
+				<div style="margin-top: 20px">
+					<label>Trajanje oglasa</label><br>
+					<select name="expiration">
+						<option value="" disabled selected>Izaberi trajanje</option>
+			    		<option value="15">15 dana</option>
+			    		<option value="30">30 dana</option>
+			    		<option value="60">60 dana</option>
+					</select>
+				</div>
+				<div style="margin-top: 20px; display: flex;" class="kontaktiagain">
+					<div style="width: 53.22%; margin-right: 25px">
+						<label>Kontakt e-mail adresa</label><br>
+						<input type="email" name="email" style="width: 100%" placeholder="npr. ime@adresa.com">
+					</div>
+					<div style="width: 43.75%" class="kontaktBrojDiv">
+						<label>Kontakt broj</label><br>
+						<input type="text" name="brojTel" id="kontaktBrojInput" style="width: 100%" placeholder="npr. 06...">
+					</div>
+				</div>
+				<div style="margin-top: 20px; display: flex;">
+					<div style="width: 100%">
+						<label>Kontakt osoba</label><br>
+						<input type="email" name="position" id="kontaktOsobaInput" style="width: 100%" placeholder="npr. direktor">
+					</div>
+				</div>
+
+				<div  style="margin-top: 30px;">
+					<label style="margin-bottom: 8px">Detalji oglasa</label>
+					<!-- TEXTEDITOR zapocinje -->
+					<input name="opis" type="hidden">
+      				<div id="editor-container"></div>
+					<!-- TEXTEDITOR zavrsava -->
+				</div>
+				<button id="aktivirajPregled">PREGLED<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+			</form>
+		</div>
+	</div> <!-- formaBody END -->
+	<div class="glavniDio">
+		<div class="uvodniDio">
+			<div class="trazimo">
+				<h2 id="nazivOglasa"><span>BANKARSTVO /</span> Potreban <span style="font-family: 'Galano Regular'" id="kredLiz"></span></h2>
+				<p>Žiža putem svoje platforme samo spaja tražioce bankarskih usluga sa bankama. Tražioci bankarskih usluga i banke su odgovorne za dalje procedure i poslovne saradnje. </p>
+			</div>
+		</div>
+		<div class="tabelarni">
+			<div>
+				<h3 id="lokacijaPlace">N/A</h3>
+				<p>KANTON/REGIJA</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3 id="kontaktOsoba">N/A</h3>
+				<p>KONTAKT OSOBA</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3 id="kontaktBroj">N/A</h3>
+				<p>KONTAKT BROJ</p>
+			</div>
+		</div>
+		<div class="detaljniOpis">
+			<p>Lorem ipsum dolor sit amet, torquatos omittantur neglegentur te cum. Eos idque noluisse nominati et, cu nec duis summo ornatus. Ex vim laboramus vituperata. Vix novum vocent at, in duo congue decore. Ea eirmod vidisse ius, ex elitr facilisi vix, dicant nonumes definitionem nec ne. His dicant mucius debitis te, in harum aeterno scriptorem his. Quo in quaeque imperdiet, mei aeterno quaerendum an.</p>
+			<p>Ea quo constituam neglegentur, maluisset salutatus et vel. Eligendi democritum ea est. Eam lorem quodsi ad, et adhuc labitur sadipscing mea, nec essent accusamus torquatos ex. Pri soleat constituto et, latine tamquam pro no, eu iusto diceret eos. An per dicta facilisis definitiones.</p>
+			<p>Dico legere ex mea, cu habemus pertinax vis, ea mediocrem comprehensam sit. Impedit docendi offendit vix et. Tantas verear democritum sit an, mei invenire consetetur honestatis ei. Ad his iriure ceteros oporteat.</p>
+		</div>
+		<div class="navigacijaFooter">
+			<div class="prevTraka">
+				<img src="{% static 'images/lijevoOglas.png' %}" style="cursor: pointer;" class="lijevoEd">
+				<div>
+					<span>PRIJAŠNJI OGLAS</span>
+					<span></span>
+				</div>
+			</div>
+			<img src="{% static 'images/prijavaoglas.png' %}" class="srednjaSlika" style="cursor: pointer;">
+			<div class="prevTraka" style="justify-content: flex-end;">
+				<div style="margin-left: 0">
+					<span>SLJEDEĆI OGLAS</span>
+					<span style="color: #f89101; text-align: right;"></span>
+				</div>
+				<img src="{% static 'images/desnoOglas.png' %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
+			</div>
+		</div>
+	</div> <!-- glavniDio END -->
+	<div class="pregledTraka"><div style="margin-left: 50px">Ovako će Vaš oglas izgledati nakon objave!</div><div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;"><img src="/images/desnoPregled.png" style="margin-right: 11px; transform: rotate(180deg);"><span id="goBack" style="margin-right: 20px">NAZAD</span> <span id="objaviOglas">OBJAVI</span><img src="/images/desnoPregled.png" style="margin-left: 11px"></div></div>
+	<script type="text/javascript">
+		$("#objaviOglas").click(function(){
+            var about = document.querySelector('input[name=opis]');
+            var type =$('#b2b_type').find(":selected").text();
+            var cat = $('#catg').find(":selected").text();
+            document.querySelector('#naslov').value = type + ' za djelatnost: ' + cat;
+            about.value = $('.ql-editor').html();
+            form.submit();
+		});
+	</script>
+	@include('common.footer')
+</body>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+<script>
+var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: [
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+    ]
+  },
+  placeholder: 'Unesite detaljan opis Vašeg oglasa...',
+  theme: 'snow'
+});
+var form = document.querySelector('#postForm');
+form.onsubmit = function() {
+  var about = document.querySelector('input[name=opis]');
+  about.value = $('.ql-editor').html();
+  console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+  return false;
+};
+
+$(document).ready( function() {
+    $(".ql-editor").attr('spellcheck',false);
+});
+
+$('#aktivirajPregled').click(function(e){
+	e.preventDefault();
+	$('.formaBody').css('display', 'none');
+	$('.glavniDio').css('display', 'block');
+	$('.navNap1').removeClass("navAct");
+	$('.navNap2').addClass("navAct");
+	$('.navNapCr').css('margin-left', '155px');
+	$('.pregledTraka').css('display', 'flex');
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	$('.detaljniOpis').html($('.ql-editor').html());
+
+	var vrstaUsluge = $("#vrstaBankInput option:selected").text();
+	$('#kredLiz').html(vrstaUsluge.toLowerCase());
+
+	var lokacija = $('#regionInput  option:selected').text();
+	$('#lokacijaPlace').html(lokacija.toUpperCase());
+
+	var osoba = $('#kontaktOsobaInput').val();
+	$('#kontaktOsoba').html(osoba.toUpperCase());
+
+	var broj = $('#kontaktBrojInput').val();
+	$('#kontaktBroj').html(broj.toUpperCase());
+
+
+
+});
+$('#goBack').click(function(e){
+	e.preventDefault();
+	$('.formaBody').css('display', 'block');
+	$('.glavniDio').css('display', 'none');
+	$('.navNap1').addClass("navAct");
+	$('.navNap2').removeClass("navAct");
+	$('.navNapCr').css('margin-left', '-5px');
+	$('.pregledTraka').css('display', 'none');
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+});
+
+</script>
+</html>

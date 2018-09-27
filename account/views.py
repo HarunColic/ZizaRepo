@@ -367,6 +367,7 @@ def pretraga(request):
             auth = True
 
             user = request.user
+            userP = UserProfile.objects.get(userID=user)
 
             if request.POST.get('pretragaTrigger', "False") == "True":
                 grad = request.POST.get('gradovi', None)
@@ -374,7 +375,12 @@ def pretraga(request):
                 kljucnaRijec = request.POST.get('kljucnaRijec', None)
 
                 if Company.objects.filter(userID=user).exists():
-                    posts = Post.objects.all().filter(type=2)
+                    userComp = Company.objects.get(userID=user)
+                    if userComp.categoryID.name == "Financijske usluge":
+                        posts = Post.objects.all().filter(type=2)
+                    else:
+                        posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Financijske usluge")
+
                 else:
                     posts = Post.objects.all().filter(type=1)
 
