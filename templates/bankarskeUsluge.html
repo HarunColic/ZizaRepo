@@ -9,6 +9,7 @@
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
 	<meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}">
 	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
@@ -181,7 +182,7 @@
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="#">Početna</a>
+				<a href="{% url 'home' %}">Početna</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
 				<a href="#" style="display: none;">Oglasi</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
@@ -335,7 +336,7 @@
 			</div>
 		</div>
 	</div> <!-- glavniDio END -->
-	<div class="pregledTraka"><div style="margin-left: 50px">Ovako će Vaš oglas izgledati nakon objave!</div><div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;"><img src="/images/desnoPregled.png" style="margin-right: 11px; transform: rotate(180deg);"><span id="goBack" style="margin-right: 20px">NAZAD</span> <span id="objaviOglas">OBJAVI</span><img src="/images/desnoPregled.png" style="margin-left: 11px"></div></div>
+	<div class="pregledTraka"><div style="margin-left: 50px">Ovako će Vaš oglas izgledati nakon objave!</div><div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;"><img src="{% static 'images/desnoPregled.png' %}" style="margin-right: 11px; transform: rotate(180deg);"><span id="goBack" style="margin-right: 20px">NAZAD</span> <span id="objaviOglas">OBJAVI</span><img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></div></div>
 	<script type="text/javascript">
 		$("#objaviOglas").click(function(){
             var about = document.querySelector('input[name=opis]');
@@ -347,6 +348,9 @@
 		});
 	</script>
 	@include('common.footer')
+
+{% load sweetify %}
+    {% sweetify %}
 </body>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>

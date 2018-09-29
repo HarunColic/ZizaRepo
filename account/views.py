@@ -13,10 +13,9 @@ from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
-import sweetify
 from django.http import HttpResponseRedirect
 from datetime import datetime
-from django.contrib import messages
+import sweetify
 
 
 class soon:
@@ -26,6 +25,16 @@ class soon:
 def comingsoon(request):
     soon.soon = True
     return render(request, 'comingsoon.html')
+
+
+def validation(request, args):
+
+    for i in args:
+        if i == "":
+            sweetify.error(request, title="Sva polja su obavezna", text="", icon="error", timer=10000)
+            return False
+
+    return True
 
 
 def home(request):
@@ -123,16 +132,26 @@ def register(request):
                 user.username = user.last_name + "." + user.email
                 lozinka = request.POST['pswd']
 
+                args = [user.first_name, user.last_name, user.email, lozinka]
+
+                if not validation(request, args):
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
                 if len(lozinka) < 6:
-                    sweetify.sweetalert(request, title="Lozinka mora biti 6 ili više karaktera", icon="error", timer=10000)
+                    sweetify.sweetalert(request, button=True, title="Lozinka mora biti 6 ili više karaktera", icon="error", timer=10000)
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
                 elif not validateMail(user.email):
-                        sweetify.sweetalert(request, title="Unesite validnu email adresu", icon="error", timer=10000)
+                        sweetify.sweetalert(request,button=True, title="Unesite validnu email adresu", icon="error", timer=10000)
                         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 if User.objects.filter(email=user.email).exists():
-                    sweetify.sweetalert(request, title="Email adresa već postoji", text="Već postoji korisnik sa ovom email adresom, ako ste zaboravili loyinku molimo kliknite na 'Forgot password'", icon="error", timer=10000)
-                    return redirect('home')
+                    sweetify.sweetalert(request, title="Email adresa već postoji", text="Već postoji korisnik sa ovom email adresom, ako ste zaboravili lozinku molimo kliknite na Forgot password", icon="error", timer=10000)
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+                elif not validateMail(user.email):
+                    sweetify.sweetalert(request, button=True, title="Neispravna Email adresa", text="Molimo unesite ispravnu Email adresu", icon="error", timer=10000)
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
                 else:
 
                     if validateMail(user.email):
@@ -165,18 +184,30 @@ def register(request):
                 else:
                     city.save()
 
-                categoryname = request.POST['Category']
+                categoryname = request.POST.get('Category', None)
                 user.first_name = request.POST['FirstName']
                 user.last_name = request.POST['LastName']
                 user.email = request.POST['mail']
                 user.set_password(request.POST['pswd'])
                 user.username = user.last_name + "." + user.email
+                lozinka = request.POST['pswd']
+
+                args = [user.first_name, user.last_name, user.email, lozinka, categoryname]
+
+                if not validation(request, args):
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
                 category = Category.objects.get(name=categoryname)
 
                 if User.objects.filter(email=user.email).exists():
-                   return redirect('home')
+                    sweetify.sweetalert(request, title="Email adresa već postoji", text="Već postoji korisnik sa ovom email adresom, ako ste zaboravili lozinku molimo kliknite na Forgot password", icon="error", timer=10000)
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+                elif not validateMail(user.email):
+                    sweetify.sweetalert(request, title="Neispravna Email adresa", text="Molimo unesite ispravnu Email adresu", icon="error")
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
                 else:
                     user.clean()
                     user.save()
@@ -222,6 +253,11 @@ def signin(request):
 
             mail = request.POST['mail']
             password = request.POST['pswd']
+
+            args = [mail, password]
+
+            if not validation(request, args):
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
             if User.objects.filter(email=mail).exists():
                 user = User.objects.get(email=mail)
@@ -277,10 +313,15 @@ def submitchange(request):
                 mail = request.POST['email']
                 brojtel = request.POST['brojTel']
                 grad = request.POST['city']
-                cat = request.POST['category']
+                cat = request.POST.get('category', None)
                 brojuposlenika = request.POST['brojuposlenih']
                 opis = request.POST['opis']
                 slika = request.FILES.get('profilePicture', default=None)
+
+                args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
+
+                if not validation(request, args):
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 user = request.user
                 userP = UserProfile.objects.get(userID=user)

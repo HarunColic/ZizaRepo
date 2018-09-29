@@ -91,7 +91,8 @@
 				<div>
 					<div>
 
-						<div>{% if p.type == 1 %}{{ p.title }} {% else %} {% if p.b2b_type == 1 %} Ponuda {% elif p.b2b_type == 2 %} Potražnja {% else %} Partnerstvo {% endif %} {% endif %}</div>
+						<div>
+                            {% if p.type == 1 %}{{ p.title }} {% else %} {% if p.b2b_type == 1 %} Ponuda {% elif p.b2b_type == 2 %} Potražnja {% else %} Partnerstvo {% endif %} {% endif %}</div>
 						<div>
 							<span>{{ p.categoryID.name }}</span>
 							<span>

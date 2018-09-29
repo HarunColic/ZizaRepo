@@ -7,6 +7,8 @@ from location.models import City
 import sweetify
 from django.http import HttpResponseRedirect
 from account import views
+from account.views import validation
+
 
 def newpost(request):
     if views.soon.soon:
@@ -45,8 +47,8 @@ def createpost(request):
             if request.POST['type'] == "1":
 
                 title = request.POST['naslov']
-                category = request.POST['category']
-                expiration = request.POST['expiration']
+                category = request.POST.get('category', None)
+                expiration = request.POST.get('expiration', None)
                 lokacija = request.POST['lokacija']
                 pozicija = request.POST['pozicija']
                 godineIskustva = request.POST['godineIskustva']
@@ -55,6 +57,11 @@ def createpost(request):
                 brojTel = request.POST['brojTel']
                 opis = request.POST['opis']
                 type = request.POST['type']
+
+                args = [title, category, expiration, lokacija, pozicija, godineIskustva, strucnasprema, email, brojTel, opis, type]
+
+                if not validation(request, args):
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 cat = Category.objects.get(name=category)
 
@@ -77,17 +84,23 @@ def createpost(request):
             else:
 
                 type = request.POST['type']
-                btobtype = request.POST['b2btype']
-                category = request.POST['category']
-                kanton = request.POST['kanton']
-                trajanje = request.POST['expiration']
+                btobtype = request.POST.get('b2btype', None)
+                category = request.POST.get('category', None)
+                kanton = request.POST.get('kanton', None)
+                trajanje = request.POST.get('expiration', None)
                 email = request.POST['email']
                 brojTel = request.POST['brojTel']
                 opis = request.POST['opis']
 
+
+                args = [type, btobtype, category, kanton, trajanje, email, brojTel, opis]
+
+                if not validation(request, args):
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
                 cat = Category.objects.get(name=category)
 
-                if category == 'Financijske usluge':
+                if category == 'Financijske usluge' or category == "Usluge osiguranja":
                     title = request.POST['naslov']
                 else:
                     if btobtype == 1:
@@ -97,7 +110,7 @@ def createpost(request):
                     else:
                         title = "Partnerstvo"
 
-                if category == 'Financijske usluge':
+                if category == 'Financijske usluge' or category == "Usluge osiguranja":
                     position = request.POST['position']
                 else:
                     position = ""
@@ -122,6 +135,11 @@ def showpost(request, id):
     else:
         post = Post.objects.get(pk=id)
         userP = UserProfile.objects.get(userID=post.userID)
+
+        authorized = Company.objects.filter(userID=request.user).exists()
+
+        if post.type == 2 and not authorized:
+            return redirect('home')
 
         if post.b2b_type == 1:
             b2b = "Ponuda"

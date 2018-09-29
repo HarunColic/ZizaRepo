@@ -171,11 +171,5 @@ EMAIL_HOST_USER = 'testingziza@gmail.com'
 EMAIL_HOST_PASSWORD = 'Verification1'
 EMAIL_PORT = 587
 
-sweetify.DEFAULT_OPTS = {
-    'showConfirmButton': False,
-    'timer': 10000,
-    'allowOutsideClick': True,
-    'confirmButtonText': 'OK',
-}
 
 

@@ -46,7 +46,7 @@
 				<p>Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
 			</div>
 			<div class="downloadPDF">
-				<img src="{% static "images/downloadIkona.png" %}"> PDF OGLAS
+				<img src="{% static "images/downloadikona.png" %}"> PDF OGLAS
 			</div>
 		</div>
 		<div class="tabelarni">
@@ -62,7 +62,7 @@
             {% if post.type == 1 %}
 			<div class="malaLinija"></div>
 			<div>
-				<h3>{{ post.experience }}</h3>
+				<h3>{{ post.experience }}+</h3>
 				<p>GODINE ISKUSTVA</p>
 			</div>
 
@@ -70,6 +70,15 @@
 			<div>
 				<h3>{{ post.specialty }}</h3>
 				<p>STRUČNA SPREMA</p>
+			</div>
+        {% endif %}
+        {% if post.type == 2 and post.categoryID.name == "Financijske usluge" or post.categoryID.name == "Financijske usluge"%}
+
+
+			<div class="malaLinija"></div>
+			<div>
+				<h3>{{ post.contact_phone }}</h3>
+				<p>Kontakt telefon</p>
 			</div>
         {% endif %}
 		</div>
