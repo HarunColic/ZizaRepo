@@ -681,7 +681,7 @@
 			<div class="main__oglasi--oglasi" id="aktivniOglasi">
                                     {% for p in activepPosts %}
 
-               <div>
+               <div style="z-index: 1;" onclick="event.preventDefault();location.href='{% url 'showpost' id=p.pk %}'">
 
 					<div>
 
@@ -697,9 +697,9 @@
 					</div>
 					<div>
 						<div>{{ p.count_users}}</div> <!-- ukupni broj aplikanata -->
-						<div>UREDI</div>
-						<div>ZAVRŠI</div>
-						<div>+3</div> <!-- broj novih od zadnje posjete -->
+						<div style="z-index: 999999" onclick="event.preventDefault(); location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
+						<div style="z-index: 999999" onclick="event.preventDefault(); location.href='{% url 'zavrsi' id=p.pk %}'">ZAVRŠI</div>
+						<div></div> <!-- broj novih od zadnje posjete -->
 					</div>
 					<div>
 						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> Aplikanata

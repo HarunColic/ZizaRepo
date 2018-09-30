@@ -10,6 +10,7 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=255, null=True)
     created_at = models.DateTimeField(default=datetime.now)
+    type = models.IntegerField(default=1)
 
 
 class Post(models.Model):
@@ -27,7 +28,7 @@ class Post(models.Model):
     experience = models.IntegerField(default=1)
     contact_email = models.CharField(max_length=100, null=True)
     contact_phone = models.CharField(max_length=50, null=True)
-    attachment = models.FileField(null=True)
+    attachment = models.FileField(null=True, upload_to='documents/')
     content = models.TextField()
     expires_at = models.DateTimeField(db_index=True)
     created_at = models.DateTimeField(default=timezone.now)
@@ -45,7 +46,6 @@ class Post(models.Model):
     @property
     def count_users(self):
         return WorkersPosts.objects.filter(postID=self.pk).count()
-
 
 
 class Tag(models.Model):

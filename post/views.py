@@ -8,6 +8,7 @@ import sweetify
 from django.http import HttpResponseRedirect
 from account import views
 from account.views import validation
+from django.core.files.storage import FileSystemStorage
 
 
 def newpost(request):
@@ -58,6 +59,14 @@ def createpost(request):
                 opis = request.POST['opis']
                 type = request.POST['type']
 
+                if request.FILES.get('image_uploads', None):
+                    myfile = request.FILES['image_uploads']
+                    fs = FileSystemStorage()
+                    filename = fs.save(myfile.name, myfile)
+                    uploaded_file_url = fs.url(filename)
+                else:
+                    myfile = None
+
                 args = [title, category, expiration, lokacija, pozicija, godineIskustva, strucnasprema, email, brojTel, opis, type]
 
                 if not validation(request, args):
@@ -71,7 +80,8 @@ def createpost(request):
                     city = City(name=lokacija)
                     city.save()
 
-                post = Post(userID=request.user, categoryID=cat, title=title, region="BiH", location=city.name, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
+                post = Post( userID=request.user, categoryID=cat, title=title, region="BiH", location=city.name, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
+                post.attachment = myfile
                 post.save()
 
                 postcat = PostCategories(postID=post, categoryID=cat)
@@ -92,6 +102,14 @@ def createpost(request):
                 brojTel = request.POST['brojTel']
                 opis = request.POST['opis']
 
+                if request.FILES['image_uploads']:
+
+                    myfile = request.FILES.get('image_uploads', None)
+                    fs = FileSystemStorage()
+                    filename = fs.save(myfile.name, myfile)
+                    uploaded_file_url = fs.url(filename)
+                else:
+                    myfile = None
 
                 args = [type, btobtype, category, kanton, trajanje, email, brojTel, opis]
 
@@ -115,7 +133,7 @@ def createpost(request):
                 else:
                     position = ""
 
-                post = Post(position=position, title=title, userID=request.user, categoryID=cat, type=int(type), b2b_type=int(btobtype), region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
+                post = Post(attachment=myfile, position=position, title=title, userID=request.user, categoryID=cat, type=int(type), b2b_type=int(btobtype), region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
 
                 post.save()
 
@@ -198,3 +216,27 @@ def prijaviOglas(request, id):
 
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def urediPost(request, id):
+
+    post = Post.objects.get(pk=id)
+
+    if post.type == 1:
+        return render(request, 'newpost.html')
+    elif post.type == 2 and post.categoryID.name != "Financijske usluge" and post.categoryID.name != "Usluge osiguranja":
+        return render(request, 'dodajPotraznju.html')
+    elif post.type == 2 and post.categoryID.name == "Financijske usluge":
+        return render(request, 'bankarskeUsluge.html')
+    elif post.type == 2 and post.categoryID.name == "Usluge osiguranja":
+        return render(request, 'OsiguranjeUsluge.html')
+    else:
+        return redirect('home')
+
+
+def zavrsi(request, id):
+
+    post = Post.objects.get(pk=id)
+    post.soft_delete=True
+    post.save()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
