@@ -4,7 +4,7 @@ from account.models import Company, Employee, UserProfile
 from location.models import City
 from post.models import Category
 from django.contrib.auth import logout, login
-from post.models import Post
+from post.models import Post, WorkersPosts
 from django.db.models import Q
 import re
 from django.core.mail import EmailMessage
@@ -16,6 +16,7 @@ from django.utils.encoding import force_bytes, force_text
 from django.http import HttpResponseRedirect
 from datetime import datetime
 import sweetify
+from django.db.models import Count
 
 
 class soon:
@@ -242,7 +243,7 @@ def activate(request, uidb64, token):
         userP = UserProfile.objects.filter(userID=user).update(verified=True)
         login(request, user)
 
-    return redirect('home')
+    return redirect('pretraga')
 
 
 def signin(request):
@@ -271,7 +272,7 @@ def signin(request):
                 else:
                     sweetify.error(request, 'Mail nije verifikovan', text='Molimo potvrdite svoju registraciju klikom na link u mailu', icon="error", timer=10000)
 
-        return redirect('profil')
+        return redirect('pretraga')
 
 
 def signout(request):
@@ -462,3 +463,15 @@ def pristup(request):
 
     soon.soon = False
     return redirect('home')
+
+
+def dashboard(request):
+
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+        activePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=True)
+        inactivePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=False)
+
+        return render(request, 'dashboard.html', {'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts, 'inactivePosts': inactivePosts})
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))

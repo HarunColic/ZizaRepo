@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from post.models import Post, Category, PostCategories
+from post.models import Post, Category, PostCategories, WorkersPosts
 from datetime import datetime, timedelta
 from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
@@ -155,6 +155,8 @@ def showpost(request, id):
             post.save()
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         else:
+            post.views += 1
+            post.save()
             return render(request, 'oglas.html', {'post': post, 'userP': userP, 'b2b': b2b})
 
 def bankUsluge(request):
@@ -170,6 +172,7 @@ def bankUsluge(request):
         else:
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
+
 def osiguranjeUsluge(request):
 
     user = request.user
@@ -177,3 +180,21 @@ def osiguranjeUsluge(request):
     cat = Category.objects.get(name="Usluge osiguranja")
 
     return render(request, 'OsiguranjeUsluge.html', {'user': user, 'userP': userP, 'cat': cat})
+
+
+def prijaviOglas(request, id):
+
+    if request.user.is_authenticated:
+        post = Post.objects.get(pk=id)
+
+        if WorkersPosts.objects.filter(userID=request.user, postID=post).exists():
+            sweetify.sweetalert(request, title="Već ste prijavljeni na ovaj oglas", icon="success", timer=10000)
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+        userPost = WorkersPosts(userID=request.user, postID=post)
+        userPost.save()
+        sweetify.sweetalert(request, title="Uspješna prijava", icon="error", timer=10000)
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

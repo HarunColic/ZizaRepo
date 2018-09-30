@@ -8,6 +8,7 @@
     <meta name="author" content="META5">
 	<meta charset="utf-8">
     {% load static %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 	<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "style-oglas.css" %}">
 </head>
@@ -95,7 +96,7 @@
 					<span>Violeta</span>
 				</div>
 			</div>
-			<img src="{% static "images/prijavaoglas.png" %}" class="srednjaSlika" style="cursor: pointer;">
+			<img onclick="location.href='{% url 'prijaviOglas' id=post.pk%}'" src="{% static "images/prijavaoglas.png" %}" class="srednjaSlika" style="cursor: pointer;">
 			<div class="prevTraka" style="justify-content: flex-end;">
 				<div style="margin-left: 0">
 					<span>SLJEDEĆI OGLAS</span>
@@ -105,9 +106,12 @@
 			</div>
 		</div>
 	</div>
+{% load sweetify %}
+{% sweetify %}
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
 <script type="text/javascript" src="{% static "skripta.js" %}"></script>
+
 </html>

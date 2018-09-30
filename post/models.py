@@ -27,11 +27,12 @@ class Post(models.Model):
     experience = models.IntegerField(default=1)
     contact_email = models.CharField(max_length=100, null=True)
     contact_phone = models.CharField(max_length=50, null=True)
-    attachment = models.CharField(max_length=100, null=True)
+    attachment = models.FileField(null=True)
     content = models.TextField()
     expires_at = models.DateTimeField(db_index=True)
     created_at = models.DateTimeField(default=timezone.now)
     soft_delete = models.BooleanField(default=False)
+    views = models.IntegerField(default=0)
 
     @property
     def is_past_due(self):
@@ -40,6 +41,11 @@ class Post(models.Model):
         exp = self.expires_at
 
         return today > exp
+
+    @property
+    def count_users(self):
+        return WorkersPosts.objects.filter(postID=self.pk).count()
+
 
 
 class Tag(models.Model):

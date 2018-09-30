@@ -44,5 +44,7 @@ urlpatterns = [
     url('^pristup/', AC_Views.pristup, name='pristup'),
     url('bankUsluge', P_Views.bankUsluge, name='bankUsluge'),
     url('osiguranjeUsluge', P_Views.osiguranjeUsluge, name='osiguranjeUsluge'),
+    url('prijaviOglas/(?P<id>[0-9]+)/', P_Views.prijaviOglas, name='prijaviOglas'),
+    url('dashboard', AC_Views.dashboard, name='dashboard'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
