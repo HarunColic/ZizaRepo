@@ -2,7 +2,7 @@
 <html lang="ba">
 <head>
     {% load static %}
-	<title>ŽIŽA.ba | O nama</title>
+	<title>ŽIŽA.ba | Dashboard</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -766,8 +766,8 @@
 					</div>
 					<div>
 						<div>{{ p.count_users }}</div> <!-- ukupni broj aplikanata -->
-						<div>UREDI</div>
-						<div>OBNOVI</div>
+						<div onclick="location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
+						<div onclick="location.href='{% url 'obnovi' id=p.pk %}'" >OBNOVI</div>
 						<div></div> <!-- ostaje prazno -->
 					</div>
 					<div>

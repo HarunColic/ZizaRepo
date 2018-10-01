@@ -213,13 +213,13 @@ def urediPost(request, id):
     post = Post.objects.get(pk=id)
 
     if post.type == 1:
-        return render(request, 'newpost.html')
+        return render(request, 'newpost2.html')
     elif post.type == 2 and post.categoryID.name != "Financijske usluge" and post.categoryID.name != "Usluge osiguranja":
-        return render(request, 'dodajPotraznju.html')
+        return render(request, 'dodajPotraznju2.html')
     elif post.type == 2 and post.categoryID.name == "Financijske usluge":
-        return render(request, 'bankarskeUsluge.html')
+        return render(request, 'bankarskeUsluge2.html')
     elif post.type == 2 and post.categoryID.name == "Usluge osiguranja":
-        return render(request, 'OsiguranjeUsluge.html')
+        return render(request, 'OsiguranjeUsluge2.html')
     else:
         return redirect('home')
 
@@ -229,4 +229,14 @@ def zavrsi(request, id):
     post = Post.objects.get(pk=id)
     post.soft_delete=True
     post.save()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def obnovi(request, id):
+
+    post = Post.objects.get(pk=id)
+    newpost = Post(post)
+
+    sweetify.sweetalert(request, "Uspjesno obnovljen oglas", icon="success")
+
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

@@ -45,6 +45,7 @@ urlpatterns = [
     url('dashboard', AC_Views.dashboard, name='dashboard'),
     url('urediPost/(?P<id>[0-9]+)/', P_Views.urediPost, name='urediPost'),
     url('zavrsi/(?P<id>[0-9]+)/', P_Views.zavrsi, name='zavrsi'),
+    url('obnovi/(?P<id>[0-9]+)/', P_Views.obnovi, name='obnovi'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
