@@ -35,7 +35,7 @@ def home(request):
             userP = UserProfile.objects.get(userID=request.user)
             return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None})
         else:
-            industries = Category.objects.filter(type=1)
+            industries = Category.objects.filter(type=0)
             return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries})
 
 
@@ -65,7 +65,7 @@ def profil(request):
             userP = UserProfile.objects.get(userID=user)
             data = posts
             gradovi = City.objects.all()
-            cat = Category.objects.all()
+            cat = Category.objects.filter(type=0)
             counter = posts.count()
             company = Company.objects.get(userID=user)
 
@@ -273,7 +273,7 @@ def editprofil(request):
         userP = UserProfile.objects.get(userID=user)
         gradovi = City.objects.all()
         comp = Company.objects.get(userID=user)
-        cat = Category.objects.all()
+        cat = Category.objects.filter(type=0)
 
         return render(request, 'editProfilTvrtka.html', {'user': user, 'gradovi': gradovi, 'userP': userP, 'comp': comp, 'cat': cat})
     else:
@@ -355,7 +355,7 @@ def onama(request):
         return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'userP': userP, 'industries': None})
     else:
         auth = False
-        industries = Category.objects.all()
+        industries = Category.objects.filter(type=0)
         return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'industries': industries})
 
 
@@ -366,7 +366,7 @@ def konsalting(request):
         userP = UserProfile.objects.get(userID=user)
         return render(request, 'konsalting.html', {'user': user, 'userP':userP, 'auth': True, 'industries': None})
     else:
-        industries = Category.objects.all()
+        industries = Category.objects.filter(type=0)
         return render(request, 'konsalting.html', {'user': None, 'userP':None, 'auth': False, 'industries': industries})
 
 
@@ -414,7 +414,7 @@ def pretraga(request):
 
         userP = UserProfile.objects.get(userID=user)
         gradovi = City.objects.all()
-        cat = Category.objects.all()
+        cat = Category.objects.filter(type=1)
         counter = data.count()
         users = User.objects.all()
         userPs = UserProfile.objects.all()

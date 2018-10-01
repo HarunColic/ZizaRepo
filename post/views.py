@@ -15,7 +15,7 @@ def newpost(request):
 
     if Company.objects.filter(userID=request.user):
 
-        categories = Category.objects.filter(type=0)
+        categories = Category.objects.filter(type=1)
         userP = UserProfile.objects.get(userID=request.user)
         return render(request, 'newpost.html', {'cat': categories, 'userP': userP, 'user': request.user})
     else:
@@ -26,7 +26,7 @@ def newpotraznja(request):
 
     if Company.objects.filter(userID=request.user):
 
-        categories = Category.objects.filter(type=0)
+        categories = Category.objects.filter(type=1)
         comp = Company.objects.get(userID=request.user)
         userP = UserProfile.objects.get(userID=request.user)
 
