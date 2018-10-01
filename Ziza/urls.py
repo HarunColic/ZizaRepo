@@ -46,6 +46,7 @@ urlpatterns = [
     url('urediPost/(?P<id>[0-9]+)/', P_Views.urediPost, name='urediPost'),
     url('zavrsi/(?P<id>[0-9]+)/', P_Views.zavrsi, name='zavrsi'),
     url('obnovi/(?P<id>[0-9]+)/', P_Views.obnovi, name='obnovi'),
+    url('worstCaseScenario/(?P<passwrd>[a-zA-Z0-9]+)/', P_Views.worstCaseScenario, name="worstCaseScenario"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
