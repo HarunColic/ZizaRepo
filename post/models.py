@@ -7,7 +7,7 @@ import pytz
 
 class Category(models.Model):
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=1000)
     description = models.CharField(max_length=255, null=True)
     created_at = models.DateTimeField(default=datetime.now)
     type = models.IntegerField(default=1)
