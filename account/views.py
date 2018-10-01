@@ -19,15 +19,6 @@ import sweetify
 from django.db.models import Count
 
 
-class soon:
-    soon = True
-
-
-def comingsoon(request):
-    soon.soon = True
-    return render(request, 'comingsoon.html')
-
-
 def validation(request, args):
 
     for i in args:
@@ -39,21 +30,17 @@ def validation(request, args):
 
 
 def home(request):
-    if soon.soon:
-        return redirect('/')
-    else:
+
         if request.user.is_authenticated:
             userP = UserProfile.objects.get(userID=request.user)
             return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None})
         else:
-            industries = Category.objects.all()
+            industries = Category.objects.filter(type=1)
             return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries})
 
 
 def profil(request):
-    if soon.soon:
-        return redirect('/')
-    else:
+
         if request.user.is_authenticated:
 
             if request.POST.get('pretragaTrigger', "False") == "True":
@@ -118,9 +105,7 @@ def sendmail(request, user, recipientMail):
 
 
 def register(request):
-    if soon.soon:
-        return redirect('/')
-    else:
+
         if request.method == 'POST':
             if request.POST['vrsta'] == "radnik":
 
@@ -247,9 +232,7 @@ def activate(request, uidb64, token):
 
 
 def signin(request):
-    if soon.soon:
-        return redirect('/')
-    else:
+
         if request.method == 'POST':
 
             mail = request.POST['mail']
@@ -276,193 +259,170 @@ def signin(request):
 
 
 def signout(request):
-    if soon.soon:
-        return redirect('/')
-    else:
-        logout(request)
-        return redirect('home')
+
+    logout(request)
+    return redirect('home')
 
 
 def editprofil(request):
-    if soon.soon:
-        return redirect('/')
+
+    #edit profil kompanije
+
+    if request.user.is_authenticated:
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
+        gradovi = City.objects.all()
+        comp = Company.objects.get(userID=user)
+        cat = Category.objects.all()
+
+        return render(request, 'editProfilTvrtka.html', {'user': user, 'gradovi': gradovi, 'userP': userP, 'comp': comp, 'cat': cat})
     else:
-        #edit profil kompanije
+        redirect('home')
 
-        if request.user.is_authenticated:
-            user = request.user
-            userP = UserProfile.objects.get(userID=user)
-            gradovi = City.objects.all()
-            comp = Company.objects.get(userID=user)
-            cat = Category.objects.all()
-
-            return render(request, 'editProfilTvrtka.html', {'user': user, 'gradovi': gradovi, 'userP': userP, 'comp': comp, 'cat': cat})
-        else:
-            redirect('home')
-
-    #potrebno dodati edit profil osobe
+#potrebno dodati edit profil osobe
 
 
 def submitchange(request):
-    if soon.soon:
-        return redirect('/')
-    else:
-        if request.user.is_authenticated:
 
-            if request.method == "POST":
-                name = request.POST['naslov']
-                mail = request.POST['email']
-                brojtel = request.POST['brojTel']
-                grad = request.POST['city']
-                cat = request.POST.get('category', None)
-                brojuposlenika = request.POST['brojuposlenih']
-                opis = request.POST['opis']
-                slika = request.FILES.get('profilePicture', default=None)
+    if request.user.is_authenticated:
 
-                args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
+        if request.method == "POST":
+            name = request.POST['naslov']
+            mail = request.POST['email']
+            brojtel = request.POST['brojTel']
+            grad = request.POST['city']
+            cat = request.POST.get('category', None)
+            brojuposlenika = request.POST['brojuposlenih']
+            opis = request.POST['opis']
+            slika = request.FILES.get('profilePicture', default=None)
 
-                if not validation(request, args):
-                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
 
-                user = request.user
-                userP = UserProfile.objects.get(userID=user)
-                comp = Company.objects.get(userID=user)
-                category = Category.objects.get(name=cat)
+            if not validation(request, args):
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-                if validateMail(mail):
+            user = request.user
+            userP = UserProfile.objects.get(userID=user)
+            comp = Company.objects.get(userID=user)
+            category = Category.objects.get(name=cat)
 
-                    usermail = True
+            if validateMail(mail):
 
-                    if mail != user.email:
-                        usermail = False
+                usermail = True
 
-                        if User.objects.filter(email=mail).exists():
-                            sweetify.error(request, 'Mail već postoji',
-                                           text='molimo izaberite novi mail', icon="error",
-                                             timer=10000)
-                            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                if mail != user.email:
+                    usermail = False
 
-                    user.first_name = name
-                    user.email = mail
-                    userP.location = grad
-                    userP.brojtelefona = brojtel
-                    if slika:
-                        userP.image = slika
-                    comp.categoryID = category
-                    comp.brojuposlenih = brojuposlenika
-                    comp.opis = opis
+                    if User.objects.filter(email=mail).exists():
+                        sweetify.error(request, 'Mail već postoji',
+                                       text='molimo izaberite novi mail', icon="error",
+                                         timer=10000)
+                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-                    user.save()
-                    userP.save()
-                    comp.save()
+                user.first_name = name
+                user.email = mail
+                userP.location = grad
+                userP.brojtelefona = brojtel
+                if slika:
+                    userP.image = slika
+                comp.categoryID = category
+                comp.brojuposlenih = brojuposlenika
+                comp.opis = opis
 
-                    if usermail is False:
+                user.save()
+                userP.save()
+                comp.save()
 
-                        sweetify.success(request, 'Molimo verifikujte svoj mail', icon="success", timer=10000)
-                        sendmail(request, user, mail)
-                        logout(request)
+                if usermail is False:
 
-                else:
-                    sweetify.error(request, 'Mail nije validan',
-                                   text='molimo unesite validnu email adresu', icon="error",
-                                   timer=10000)
+                    sweetify.success(request, 'Molimo verifikujte svoj mail', icon="success", timer=10000)
+                    sendmail(request, user, mail)
+                    logout(request)
 
-        return redirect('profil')
+            else:
+                sweetify.error(request, 'Mail nije validan',
+                               text='molimo unesite validnu email adresu', icon="error",
+                               timer=10000)
+
+    return redirect('profil')
 
 
 def onama(request):
-    if soon.soon:
-        return redirect('/')
+
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+        auth = True
+        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'userP': userP, 'industries': None})
     else:
-        if request.user.is_authenticated:
-            userP = UserProfile.objects.get(userID=request.user)
-            auth = True
-            return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'userP': userP, 'industries': None})
-        else:
-            auth = False
-            industries = Category.objects.all()
-            return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'industries': industries})
+        auth = False
+        industries = Category.objects.all()
+        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'industries': industries})
 
 
 def konsalting(request):
-    if soon.soon:
-        return redirect('/')
+
+    if request.user.is_authenticated:
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
+        return render(request, 'konsalting.html', {'user': user, 'userP':userP, 'auth': True, 'industries': None})
     else:
-        if request.user.is_authenticated:
-            user = request.user
-            userP = UserProfile.objects.get(userID=user)
-            return render(request, 'konsalting.html', {'user': user, 'userP':userP, 'auth': True, 'industries': None})
-        else:
-            industries = Category.objects.all()
-            return render(request, 'konsalting.html', {'user': None, 'userP':None, 'auth': False, 'industries': industries})
+        industries = Category.objects.all()
+        return render(request, 'konsalting.html', {'user': None, 'userP':None, 'auth': False, 'industries': industries})
 
 
 def pretraga(request):
 
-    if soon.soon:
-        return redirect('/')
-    else:
-        auth = False
+    auth = False
 
-        if request.user.is_authenticated:
+    if request.user.is_authenticated:
 
-            auth = True
+        auth = True
 
-            user = request.user
-            userP = UserProfile.objects.get(userID=user)
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
 
-            if request.POST.get('pretragaTrigger', "False") == "True":
-                grad = request.POST.get('gradovi', None)
-                kategorija = request.POST.get('kategorije', None)
-                kljucnaRijec = request.POST.get('kljucnaRijec', None)
+        if request.POST.get('pretragaTrigger', "False") == "True":
+            grad = request.POST.get('gradovi', None)
+            kategorija = request.POST.get('kategorije', None)
+            kljucnaRijec = request.POST.get('kljucnaRijec', None)
 
-                if Company.objects.filter(userID=user).exists():
-                    userComp = Company.objects.get(userID=user)
-                    if userComp.categoryID.name == "Financijske usluge":
-                        posts = Post.objects.all().filter(type=2)
-                    else:
-                        posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Financijske usluge")
-
-                else:
-                    posts = Post.objects.all().filter(type=1)
-
-                if grad is not None:
-                    posts = posts.all().filter(location=grad)
-                if kategorija is not None:
-                    ind = Category.objects.get(name=kategorija)
-                    posts = posts.all().filter(categoryID=ind)
-                if kljucnaRijec is not "":
-                    posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
-
-            else:
-                if Company.objects.filter(userID=user).exists():
+            if Company.objects.filter(userID=user).exists():
+                userComp = Company.objects.get(userID=user)
+                if userComp.categoryID.name == "Financijske usluge":
                     posts = Post.objects.all().filter(type=2)
                 else:
-                    posts = Post.objects.all().filter(type=1)
+                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Financijske usluge")
 
-            data = posts.exclude(expires_at__lte= datetime.now())
+            else:
+                posts = Post.objects.all().filter(type=1)
 
-            userP = UserProfile.objects.get(userID=user)
-            gradovi = City.objects.all()
-            cat = Category.objects.all()
-            counter = data.count()
-            users = User.objects.all()
-            userPs = UserProfile.objects.all()
-            btb = ["Ponuda", "Potražnja", "Partnerstvo"]
-            return render(request, 'pretrazi.html',
-                          {'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
+            if grad is not None:
+                posts = posts.all().filter(location=grad)
+            if kategorija is not None:
+                ind = Category.objects.get(name=kategorija)
+                posts = posts.all().filter(categoryID=ind)
+            if kljucnaRijec is not "":
+                posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+
         else:
-            return redirect('home')
+            if Company.objects.filter(userID=user).exists():
+                posts = Post.objects.all().filter(type=2)
+            else:
+                posts = Post.objects.all().filter(type=1)
 
+        data = posts.exclude(expires_at__lte= datetime.now())
 
-def test(request):
-    return render(request, 'testpristup.html')
-
-
-def pristup(request):
-
-    soon.soon = False
-    return redirect('home')
+        userP = UserProfile.objects.get(userID=user)
+        gradovi = City.objects.all()
+        cat = Category.objects.all()
+        counter = data.count()
+        users = User.objects.all()
+        userPs = UserProfile.objects.all()
+        btb = ["Ponuda", "Potražnja", "Partnerstvo"]
+        return render(request, 'pretrazi.html',
+                      {'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
+    else:
+        return redirect('home')
 
 
 def dashboard(request):
