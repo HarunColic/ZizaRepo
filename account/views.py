@@ -428,10 +428,18 @@ def pretraga(request):
 def dashboard(request):
 
     if request.user.is_authenticated:
-        userP = UserProfile.objects.get(userID=request.user)
-        activePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=True)
-        inactivePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=False)
 
-        return render(request, 'dashboard.html', {'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts, 'inactivePosts': inactivePosts})
+        if Company.objects.filter(userID=request.user).exists():
+
+            userP = UserProfile.objects.get(userID=request.user)
+            activePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=True)
+            inactivePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=False)
+            company = Company.objects.get(userID=request.user)
+            relevantPosts = Post.objects.filter(categoryID=company.categoryID)
+
+            return render(request, 'dashboard.html', {'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts, 'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+        else:
+            return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))
+
     else:
         return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))

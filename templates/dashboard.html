@@ -835,14 +835,15 @@
 			</div>
 		</div>
 		<div class="main__oglasi--oglasi" id="preporuke">
+            {% for p in relevantPosts %}
 				<div class="ponudaBox">
 					<div>
 						<div>
-							Ovlašteni inženjer građevine
+							{{ p.title }}
 						</div>
 						<div>
-							<div class="imeStruke">GRAĐEVINA</div>
-							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
+							<div class="imeStruke">{{ p.categoryID.name }}</div>
+							<div>Prije 6h <span>{{ p.location }} {{ p.region }}</span></div>
 						</div>
 					</div>
 					<div style="left: 811px; display: block;">
@@ -851,6 +852,8 @@
 					<div>
 					</div>
 				</div>
+            {% endfor %}
+            <!--
 				<div class="potraznjaBox">
 					<div>
 						<div>
@@ -882,7 +885,7 @@
 					</div>
 					<div>
 					</div>
-				</div>
+				</div>-->
 		</div>
 		<div class="bg_end">
 			<span>Želiš vidjeti još oglasa?</span>

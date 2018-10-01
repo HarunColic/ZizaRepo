@@ -7,7 +7,7 @@
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
     <meta charset="utf-8">
-    {% load static %}
+    {% load static %}<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body style="margin-bottom: 100px">
@@ -199,6 +199,154 @@
   	.header__language{
   		background: #f9f5e5;
   	}
+  	@media screen and (max-width: 1170px){
+  		.video{
+  			max-width: 900px;
+  		}
+  		.video__circle{
+  			left: 420px;
+  		}
+  		.tekst{
+  			max-width: 900px;
+  		}
+  		.tekst p {
+    		max-width: 759px;
+    		margin-left: 79px;
+		}
+		.tekst p:nth-child(5){
+			padding-left: 100px;
+			width: auto;
+		}
+		.tekst h3{
+			padding-left: 79px;
+		}
+		.aleksaC{
+			padding-left: 141px !important;
+		}
+		.tekst{
+			padding-bottom: 0 !important;
+		}
+  	}
+  	@media screen and (max-width: 900px){
+  		.video{
+  			max-width: 500px;
+  			height: 450px;
+  		}
+  		.video__circle{
+  			left: 220px;
+  		}
+  		.tekst{
+  			max-width: 500px;
+  		}
+  		.tekst p {
+    		max-width: 359px;
+    		margin-left: 69px;
+		}
+		.tekst p:nth-child(5){
+			padding-left: 100px;
+			width: auto;
+		}
+		.tekst h3{
+			padding-left: 79px;
+		}
+		.aleksaC{
+			padding-left: 141px !important;
+		}
+		.tekst{
+			padding-bottom: 0 !important;
+		}
+		.video p{
+			font-size: 20px;
+		}
+		.tekst__skakacica{
+			transform: scale(0.4);
+			left: -20px;
+		}
+		.tekst p:nth-child(5) {
+		    padding-left: 70px;
+		}
+		.sunceT{
+			font-size: 15px !important;
+		}
+		.aleksaC {
+		    padding-left: 71px !important;
+		}
+		.doubM{
+			padding-left: 150px !important;
+		}
+		.tekst ol {
+	    	width: 317px;
+	    	margin-left: 50px;
+	  	}
+	  	.tekst li{
+	  		text-align: center;
+	  	}
+  	}
+  	@media screen and (max-width: 420px){
+  		.video{
+  			max-width: 350px;
+  			height: 300px;
+  		}
+  		.video__circle{
+  			display: none;
+  		}
+  		.tekst{
+  			max-width: 350px;
+  		}
+  		.tekst p {
+    		max-width: 300px;
+    		margin-left: 30px;
+		}
+		.tekst p:nth-child(5){
+			padding-left: 20px;
+			width: auto;
+		}
+		.tekst h3{
+			padding-left: 29px;
+			font-size: 20px;
+		}
+		.aleksaC{
+			padding-left: 0px !important;
+		}
+		.tekst{
+			padding-bottom: 0 !important;
+		}
+		.video p{
+			font-size: 17px;
+		}
+		.tekst__skakacica{
+			transform: scale(0.4);
+			left: -150px;
+		}
+		.tekst p:nth-child(5) {
+		    padding-left: 70px;
+		}
+		.sunceT{
+			font-size: 15px !important;
+		}
+		.aleksaC {
+		    padding-left: 20px !important;
+		}
+		.doubM{
+			padding-left: 60px !important;
+		}
+		.tekst ol {
+	    	width: 217px;
+	    	margin-left: 30px;
+	    	font-size: 13px;
+	  	}
+	  	.tekst li{
+	  		text-align: center;
+	  	}
+	  	.tekst p{
+	  		font-size: 13px !important;
+	  	}
+	  	.tekst p:nth-child(5) {
+		    padding-left: 30px;
+		    width: 290px;
+		}
+  	}
+
 </style>
     {% with var1=user var2=auth var3=userP ind=industries %}
     {% include 'header.html' %}
@@ -211,7 +359,6 @@
 	</div>
 	<div class="tekst" style="padding-bottom: 187px">
 		<p>Uzet ćemo sebi za pravo reći kako niste pronašli odgovarajuću stanicu. Nadamo se da ne zamjerate. Naime, u potrazi za odgovorima na Vaša pitanja, gotovo smo sigurni da niste došli do središta traženih rješenja. U ŽIŽU svega. Do nas.</p>
-
 		<h3>Kako je sve <span>počelo</span></h3>
 
 		<p>
@@ -241,10 +388,10 @@
 		<p>
 			<strong>Aleksa Šantić</strong>. Tako je, dobro ste pročitali. Istini na volju ne osobno on, ali njegova "za bukvara" jeste. <i>Sunce tuđeg neba, neće vas grijat kô što ovo grije</i>. Vratili smo se i odlučili kreirati nešto što do sada pod našim nebom nije bilo. <strong>Jedinstvenu platformu</strong> koja nudi poslovna, konsultantska, finansijska i ostala business rješenja. Dali smo si za pravo Šantićevom suncu pridružiti prekogranični solarni backup. Umrežavamo Vas sa inostranim partnerima i investitorima. Odgovaramo na međunarodna pravna pitanja. Rješavamo papire. Ne one vizne. Administrativne za ostati ovdje čineći Vas vidljivijima na međunarodnim poslovnim radarima.
 		</p>
+<div style="padding-left: 221px; padding-top: 94px; padding-bottom: 60px;" class="aleksaC">
+			<div style="font-family: 'Galano Black'; font-size: 200px; color: #f0ede2; position: absolute; left: 168px; margin-top: -115px; z-index: 0" class="doubM">“</div>
+			<div style="font-family: 'Galano Regular'; color: #010101; font-size: 26px; font-weight: normal; z-index: 1; position: relative;" class="sunceT">Sunce tuđeg neba, neće vas grijat kô što ovo grije. </div>
 
-		<div style="padding-left: 221px; padding-top: 94px; padding-bottom: 60px;">
-			<div style="font-family: 'Galano Black'; font-size: 200px; color: #f0ede2; position: absolute; left: 168px; margin-top: -115px; z-index: 0">“</div>
-			<div style="font-family: 'Galano Regular'; color: #010101; font-size: 26px; font-weight: normal; z-index: 1; position: relative;">Sunce tuđeg neba, neće vas grijat kô što ovo grije. </div>
 			<div style="color: #fecd35; font-family: 'Galano Black'; font-size: 16px; padding-top: 20px">Aleksa Šantić</div>
 			<div style="color: #b5b4af; font-family: 'Galano Regular'; font-size: 12px; padding-top: 5px">Pjesnik</div>
 		</div>
@@ -254,6 +401,19 @@
 		</p>
 
 		<h3>Naš <span>cilj</span></h3>
+		<style type="text/css">
+			ol {list-style: none}
+	li::before {
+		content: "✔";
+		font-size: 20px;
+		color: #fecd35;
+  		display: inline-block;
+  		width: 1em;
+  		margin-left: -1em;
+  		padding-right: 26px;
+  	}
+		</style>
+
 
 		<ol>
 			<li>Podignuti konkuretnost bosanskohercegovačkog tržišta koristeći raspoložive resurse i &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vodeći se dokazanim studijama</li>
