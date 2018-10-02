@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
 from location.models import City
@@ -16,7 +16,7 @@ from django.utils.encoding import force_bytes, force_text
 from django.http import HttpResponseRedirect
 from datetime import datetime
 import sweetify
-from django.db.models import Count
+from django.template.context_processors import csrf
 
 
 def validation(request, args):
@@ -183,7 +183,6 @@ def register(request):
                 if not validation(request, args):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-
                 category = Category.objects.get(name=categoryname)
 
                 if User.objects.filter(email=user.email).exists():
@@ -255,12 +254,17 @@ def signin(request):
                 else:
                     sweetify.error(request, 'Mail nije verifikovan', text='Molimo potvrdite svoju registraciju klikom na link u mailu', icon="error", timer=10000)
 
-        return redirect('pretraga')
+            if Employee.objects.filter(userID=request.user).exists():
+                return redirect('pretraga')
+            else:
+                return redirect('dashboard')
 
 
 def signout(request):
 
     logout(request)
+    c = {}
+    c.update(csrf(request))
     return redirect('home')
 
 

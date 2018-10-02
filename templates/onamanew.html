@@ -174,7 +174,7 @@
 		margin-top: 67px;
 	}
 
-	ol{
+	.tekst ol{
 		width: 717px;
 		margin: 0 auto;
 		font-family: 'Galano Medium';
@@ -183,8 +183,8 @@
 		font-size: 16px;
 		font-weight: 500;
 	}
-	ol {list-style: none}
-	li::before {
+	.tekst ol {list-style: none}
+	.tekst li::before {
 		content: "✔"; 
 		font-size: 20px;
 		color: #fecd35;
@@ -402,8 +402,8 @@
 
 		<h3>Naš <span>cilj</span></h3>
 		<style type="text/css">
-			ol {list-style: none}
-	li::before {
+			.tekst ol {list-style: none}
+	.tekst li::before {
 		content: "✔";
 		font-size: 20px;
 		color: #fecd35;
@@ -411,6 +411,153 @@
   		width: 1em;
   		margin-left: -1em;
   		padding-right: 26px;
+  	}
+            @media screen and (max-width: 1170px){
+  		.video{
+  			max-width: 900px;
+  		}
+  		.video__circle{
+  			left: 420px;
+  		}
+  		.tekst{
+  			max-width: 900px;
+  		}
+  		.tekst p {
+    		max-width: 759px;
+    		margin-left: 79px;
+		}
+		.tekst p:nth-child(5){
+			padding-left: 100px;
+			width: auto;
+		}
+		.tekst h3{
+			padding-left: 79px;
+		}
+		.aleksaC{
+			padding-left: 141px !important;
+		}
+		.tekst{
+			padding-bottom: 0 !important;
+		}
+  	}
+  	@media screen and (max-width: 900px){
+  		.video{
+  			max-width: 500px;
+  			height: 450px;
+  		}
+  		.video__circle{
+  			left: 220px;
+  		}
+  		.tekst{
+  			max-width: 500px;
+  		}
+  		.tekst p {
+    		max-width: 359px;
+    		margin-left: 69px;
+		}
+		.tekst p:nth-child(5){
+			padding-left: 100px;
+			width: auto;
+		}
+		.tekst h3{
+			padding-left: 79px;
+		}
+		.aleksaC{
+			padding-left: 141px !important;
+		}
+		.tekst{
+			padding-bottom: 0 !important;
+		}
+		.video p{
+			font-size: 20px;
+		}
+		.tekst__skakacica{
+			transform: scale(0.4);
+			left: -20px;
+		}
+		.tekst p:nth-child(5) {
+		    padding-left: 70px;
+		}
+		.sunceT{
+			font-size: 15px !important;
+		}
+		.aleksaC {
+		    padding-left: 71px !important;
+		}
+		.doubM{
+			padding-left: 150px !important;
+		}
+		.tekst ol {
+	    	width: 317px;
+	    	margin-left: 50px;
+	  	}
+	  	.tekst li{
+	  		text-align: center;
+	  	}
+  	}
+  	@media screen and (max-width: 420px){
+  		.video{
+  			max-width: 350px;
+  			height: 300px;
+  		}
+  		.video__circle{
+  			display: none;
+  		}
+  		.tekst{
+  			max-width: 350px;
+  		}
+  		.tekst p {
+    		max-width: 300px;
+    		margin-left: 30px;
+		}
+		.tekst p:nth-child(5){
+			padding-left: 20px;
+			width: auto;
+		}
+		.tekst h3{
+			padding-left: 29px;
+			font-size: 20px;
+		}
+		.aleksaC{
+			padding-left: 0px !important;
+		}
+		.tekst{
+			padding-bottom: 0 !important;
+		}
+		.video p{
+			font-size: 17px;
+		}
+		.tekst__skakacica{
+			transform: scale(0.4);
+			left: -150px;
+		}
+		.tekst p:nth-child(5) {
+		    padding-left: 70px;
+		}
+		.sunceT{
+			font-size: 15px !important;
+		}
+		.aleksaC {
+		    padding-left: 20px !important;
+		}
+		.doubM{
+			padding-left: 60px !important;
+		}
+		.tekst ol {
+	    	width: 217px;
+	    	margin-left: 30px;
+	    	font-size: 13px;
+	  	}
+	  	.tekst li{
+	  		text-align: center;
+	  	}
+	  	.tekst p{
+	  		font-size: 13px !important;
+	  	}
+	  	.tekst p:nth-child(5) {
+		    padding-left: 30px;
+		    width: 290px;
+		}
   	}
 		</style>
 

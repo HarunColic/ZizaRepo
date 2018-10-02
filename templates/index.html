@@ -32,6 +32,7 @@
             background-image: url("{% static 'images/cistac.png' %}");
         }
     </style>
+
 <script
 			  src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -308,8 +309,384 @@ ul {list-style: none}
 						margin-left: -50px;
 					}
 				}
+@media screen and (max-width: 799px){
+					.uvod{
+						height: 600px;
+					}
+				}
+				@media screen and (max-width: 660px){
+					.uvod{
+						height: 400px;
+					}
+					.uvod__slike--prijava,
+					.uvod__slike--pcelaPrijava,
+					.uvod__slike--baloncic:nth-child(6){
+						display: none !important;
+					}
+					.uvod__slike--pcelaRegistracija{
+						right: 345px;
+					}
+					.uvod__slike--baloncic{
+						right: 670px;
+					}
+					.uvod__slike--registracija{
+						right: 200px;
+					}
+					.uvod__linkovi{
+						display: none;
+					}
+					.uvod__slike{
+						display: none;
+					}
+					.uvod__tekst{
+						width: auto;
+						padding-left: 100px;
+					}
+					.bounce{
+						margin-top: 100px !important;
+						margin-bottom: -165px !important;
+						margin-right: 130px !important;
+					}
+					.zadnjiPoslovi__popularno, .zadnjiPoslovi__last{
+						transform: scale(0.5);
+					}
+					.zadnjiPoslovi{
+						height: 1000px;
+					}
+					.zadnjiPoslovi__popularno{
+						margin-top: -100px !important;
+					}
+					.zadnjiPoslovi{
+						justify-content: normal;
+					}
+					.zadnjiPoslovi__popularno--dots{
+						left: 280px;
+					}
+					.zadnjiPoslovi__last{
+						margin-top: -350px !important;
+					}
+					.kartice, .kartice__trazitePosao img, .kartice__trazitePartnera img{
+						transform: scale(0.6);
+					}
+					.kartice__trazitePosao h3, .kartice__trazitePartnera h3,
+					.kartice__trazitePosao p, .kartice__trazitePartnera p,
+					.kartice__trazitePosao h4, .kartice__trazitePartnera h4{
+						margin-left: 33px;
+					}
+					.linijaPosao{
+						left: 40px;
+						border-radius: 20px;
+						width: 200px;
+					}
+					.kartice__trazitePosao p, .kartice__trazitePartnera p{
+						font-size: 15px;
+					}
+					.kartice__trazitePosao h4, .kartice__trazitePartnera h4{
+						font-size: 14px;
+					}
+					.oglasi {
+					    margin-top: -260px;
+					    transform: scale(0.5);
+					}
+					.callToRegister img{
+						transform: scale(0.4);
+					}
+					.testmoniali {
+					    margin-top: -80px;
+					}
+					.testmoniali__kucice, .testmoniali h1{
+						margin-top: -100px;
+					}
+					.testmoniali__kucice, .testmoniali h1 {
+					    transform: scale(0.7);
+					}
+					.owl-carousel.owl-loaded {
+					    margin-left: -380px;
+					}
+					.owl-theme .owl-controls{
+						margin-left: -50px;
+					}
+				}
+			</style>
 
-</style>
+    		<style type="text/css">
+			.regBox__lijevo--box.active p {
+    color: black;
+}
+	.registracija.regBox{
+		width: 200px;
+		-webkit-transition:300ms linear;
+	-moz-transition:300ms linear;
+	-o-transition:300ms linear;
+	-ms-transition:300ms linear;
+	transition:300ms linear;
+	}
+	.registracija.regBox, .regBox__lijevo{
+		width: 500px;
+	}
+	.registracija .regBox__desno{
+		display: none;
+		opacity: 0;
+		-webkit-transition:1000ms linear;
+	-moz-transition:300ms linear;
+	-o-transition:1000ms linear;
+	-ms-transition:1000ms linear;
+	transition:1000ms linear;
+	}
+	.regBox__lijevo--box:nth-child(1){
+		border-top-right-radius: 10px;
+	}
+	.regBox__lijevo--box:nth-child(2){
+		border-bottom-right-radius: 10px;
+	}
+				body{
+					overflow-x: hidden;
+				}
+
+				@media screen and (max-width: 1280px) and screen and (max-height: 720px){
+					.bounce{
+						margin-right: 460px !important;
+						padding-right: 0 !important;
+						margin-bottom: -65px !important;
+					}
+					.uvod__slike{
+						transform: scale(0.6);
+						margin-right: -40px;
+					}
+				}
+
+				@media only screen and (max-width: 1850px) and (min-height: 951px){
+					.uvod__slike {
+					    position: relative;
+					    top: 300px;
+					    right: -100px;
+					    transform: scale(0.8);
+					}
+					.uvod__tekst{
+						margin-left: 60px;
+					}
+				}
+
+				@media screen and (max-width: 1024px){
+					.bounce{
+						margin-right: 250px !important;
+						padding-right: 0 !important;
+						margin-bottom: -40px !important;
+					}
+					.uvod__slike{
+						transform: scale(0.6);
+						margin-right: -90px;
+						margin-top: -100px;
+					}
+
+					.zadnjiPoslovi__last{
+						margin-left: 0;
+					}
+					.zadnjiPoslovi__last--timeline{
+						margin-left: -120px;
+					}
+					.kartice, .kartice__trazitePosao img, .kartice__trazitePartnera img{
+						transform: scale(0.7);
+					}
+					.kartice__trazitePosao img, .kartice__trazitePartnera img{
+						left: 289px;
+					}
+					.owl-carousel.owl-loaded{
+						margin-left: -70px;
+					}
+					.testmoniali__kucice{
+						margin-top: -30px;
+					}
+					.testmoniali{
+						padding-bottom: 0;
+					}
+					.footer{
+						transform: scale(0.6);
+						margin-left: -500px;
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+				}
+				@media screen and (max-width: 800px){
+					.bounce{
+						margin-right: 100px !important;
+						padding-right: 0 !important;
+						margin-bottom: -105px !important;
+					}
+					.uvod__slike{
+						transform: scale(0.5);
+						margin-right: -80px;
+					}
+					.uvod__tekst{
+						transform: scale(0.5);
+					}
+					.uvod__linkovi{
+						margin-left: 30px;
+					}
+					.header{
+						margin-left: -60px;
+					}
+					.fa-angle-down{
+						display: none;
+					}
+					.kartice, .kartice__trazitePosao img, .kartice__trazitePartnera img {
+					    transform: scale(0.8);
+					}
+					.kartice__trazitePosao img, .kartice__trazitePartnera img {
+					   display: none;
+					}
+					.oglasi__kartica{
+						width: 800px;
+					}
+					.callToRegister img{
+					    transform: scale(0.6);
+					    margin-top: -200px;
+					}
+					.testmoniali{
+						margin-top: 0;
+					}
+					.owl-carousel.owl-loaded {
+					    margin-left: -200px;
+					}
+					.footer{
+						margin-left: -550px;
+					}
+					.header {
+					    margin-left: -90px;
+					    margin-top: -7px;
+					    margin-bottom: -8px;
+					    transform: scale(0.8);
+					}
+				}
+				@media screen and (max-width: 799px){
+					.uvod{
+						height: 600px;
+					}
+				}
+				@media screen and (max-width: 660px){
+					.uvod{
+						height: 400px;
+					}
+					.uvod__slike--prijava,
+					.uvod__slike--pcelaPrijava,
+					.uvod__slike--baloncic:nth-child(6){
+						display: none !important;
+					}
+					.uvod__slike--pcelaRegistracija{
+						right: 345px;
+					}
+					.uvod__slike--baloncic{
+						right: 670px;
+					}
+					.uvod__slike--registracija{
+						right: 200px;
+					}
+					.uvod__linkovi{
+						display: none;
+					}
+					.uvod__slike{
+						display: none;
+					}
+					.uvod__tekst{
+						width: auto;
+						padding-left: 100px;
+					}
+					.bounce{
+						margin-top: 100px !important;
+						margin-bottom: -165px !important;
+						margin-right: 130px !important;
+					}
+					.zadnjiPoslovi__popularno, .zadnjiPoslovi__last{
+						transform: scale(0.5);
+					}
+					.zadnjiPoslovi{
+						height: 1000px;
+					}
+					.zadnjiPoslovi__popularno{
+						margin-top: -100px !important;
+					}
+					.zadnjiPoslovi{
+						justify-content: normal;
+					}
+					.zadnjiPoslovi__popularno--dots{
+						left: 280px;
+					}
+					.zadnjiPoslovi__last{
+						margin-top: -350px !important;
+					}
+					.kartice, .kartice__trazitePosao img, .kartice__trazitePartnera img{
+						transform: scale(0.6);
+					}
+					.kartice__trazitePosao h3, .kartice__trazitePartnera h3,
+					.kartice__trazitePosao p, .kartice__trazitePartnera p,
+					.kartice__trazitePosao h4, .kartice__trazitePartnera h4{
+						margin-left: 33px;
+					}
+					.linijaPosao{
+						left: 40px;
+						border-radius: 20px;
+						width: 200px;
+					}
+					.kartice__trazitePosao p, .kartice__trazitePartnera p{
+						font-size: 15px;
+					}
+					.kartice__trazitePosao h4, .kartice__trazitePartnera h4{
+						font-size: 14px;
+					}
+					.oglasi {
+					    margin-top: -260px;
+					    transform: scale(0.5);
+					}
+					.callToRegister img{
+						transform: scale(0.4);
+					}
+					.testmoniali {
+					    margin-top: -80px;
+					}
+					.testmoniali__kucice, .testmoniali h1{
+						margin-top: -100px;
+					}
+					.testmoniali__kucice, .testmoniali h1 {
+					    transform: scale(0.7);
+					}
+					.owl-carousel.owl-loaded {
+					    margin-left: -380px;
+					}
+					.owl-theme .owl-controls{
+						margin-left: -50px;
+					}
+				}
+
+
+
+
+                @media screen and (max-width: 400px){
+                    .uvod__tekst {
+                        width: auto;
+                        margin-left: -20px !important;
+                        padding-left: 0;
+                    }
+                    .bounce {
+                        margin-right: 160px !important;
+                        display: none !important;
+                    }
+                    .zadnjiPoslovi__popularno, .zadnjiPoslovi__last {
+                        transform: scale(0.45);
+                    }
+                    .uvod__tekst{
+                        margin-bottom: -40px;
+                    }
+                    .oglasi{
+                        transform: scale(0.45);
+                    }
+                    .owl-carousel.owl-loaded{
+                        margin-left: -400px;
+                    }
+                }
+
+            }
+			</style>
+
 
 </head>
 <body>
@@ -329,7 +706,7 @@ ul {list-style: none}
 		</div>
 		<div class="uvod__tekst">
 			<h1>ŽIŽA</h1>
-			<p>Za povezivanje i poboljšanje <br> Vašeg poslovanja!</p>
+			<p>CONNECT AND IMPROVE <br> YOUR BUSINESS</p>
 			<div class="dugme" style="cursor: pointer;">Zašto Žiža?</div>
 			<img src="../static/images/optimised/arrowBig-min.png" class="bounce" draggable="false" width="64px" height="32px">
 		</div>
@@ -340,6 +717,9 @@ ul {list-style: none}
 			<div class="uvod__slike--pcelaRegistracija"></div>
 			<div class="uvod__slike--baloncic">
 				<p class="animirajKucanje"></p>
+			</div>
+            <div class="uvod__slike--baloncic" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
+				<p style="margin-right: -10px; margin-bottom: 80px; text-align: center;" class="animirajKucanje2"></p>
 			</div>
 		</div> <!-- uvod__slike -->
 	</div> <!-- uvod -->
@@ -548,13 +928,21 @@ ul {list-style: none}
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script>
 	var typed = new Typed('.animirajKucanje', {
-				  strings: ["Tražite posao?", "želite suradnju?", "Potreban Vam<br> je kredit?"],
-				  typeSpeed: 100,
+				  strings: ["Ponudite!", "Potražite!", "Surađujte!", "Pronađite kadar!", "Kredit!?", "Osiguranje!?", "Edukacija!?"],
+				  typeSpeed: 50,
 				  loop: true,
 				  showCursor: false,
 				  loopCount: Infinity,
 				});
+
+	var typed2 = new Typed('.animirajKucanje2', {
+				  strings: ["Konkursi za<br> posao!"],
+				  typeSpeed: 50,
+				  loop: false,
+				  showCursor: false
+				});
 </script>
+
 
 <script>
 		        $(document).ready(function (){

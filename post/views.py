@@ -212,17 +212,150 @@ def prijaviOglas(request, id):
 def urediPost(request, id):
 
     post = Post.objects.get(pk=id)
+    user = request.user
+    userP = UserProfile.objects.get(userID=user)
+    cat = Category.objects.filter(type=0)
 
     if post.type == 1:
-        return render(request, 'newpost2.html')
+        return render(request, 'newpost2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name != "Financijske usluge" and post.categoryID.name != "Usluge osiguranja":
-        return render(request, 'dodajPotraznju2.html')
+        return render(request, 'dodajPotraznju2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name == "Financijske usluge":
-        return render(request, 'bankarskeUsluge2.html')
+        return render(request, 'bankarskeUsluge2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name == "Usluge osiguranja":
-        return render(request, 'OsiguranjeUsluge2.html')
+        return render(request, 'OsiguranjeUsluge2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
     else:
         return redirect('home')
+
+
+def updatePost(request, id):
+
+    if request.method == 'POST':
+
+        if request.POST['type'] == "1":
+
+            title = request.POST['naslov']
+            category = request.POST.get('category', None)
+            expiration = request.POST.get('expiration', None)
+            lokacija = request.POST['lokacija']
+            pozicija = request.POST['pozicija']
+            godineIskustva = request.POST['godineIskustva']
+            strucnasprema = request.POST['strucnasprema']
+            email = request.POST['email']
+            brojTel = request.POST['brojTel']
+            opis = request.POST['opis']
+            type = request.POST['type']
+
+            if request.FILES.get('image_uploads', None):
+                myfile = request.FILES['image_uploads']
+                fs = FileSystemStorage()
+                filename = fs.save(myfile.name, myfile)
+                uploaded_file_url = fs.url(filename)
+            else:
+                myfile = None
+
+            args = [title, category, expiration, lokacija, pozicija, godineIskustva, strucnasprema, email, brojTel, opis, type]
+
+            if not validation(request, args):
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+            cat = Category.objects.get(name=category)
+
+            if City.objects.all().filter(name=lokacija).exists():
+                city = City.objects.get(name=lokacija)
+            else:
+                city = City(name=lokacija)
+                city.save()
+
+            post = Post.objects.get(pk=id)
+            post.userID=request.user
+            post.categoryID=cat
+            post.title=title
+            post.region="BiH"
+            post.location=city.name
+            post.position=pozicija
+            post.type=type
+            post.specialty=strucnasprema
+            post.experience=godineIskustva
+            post.contact_email=email
+            post.contact_phone=brojTel
+            post.content=opis
+            post.expires_at=datetime.now()+timedelta(days=int(expiration))
+            post.attachment = myfile
+            post.save()
+
+            postcat = PostCategories.objects.get(postID=post, categoryID=cat)
+
+            postcat.save()
+
+            sweetify.success(request, title="Uspješno ažuriran oglas", text="", icon="success", timer=8000)
+
+            return redirect('dashboard')
+        else:
+
+            type = request.POST['type']
+            btobtype = request.POST.get('b2btype', None)
+            category = request.POST.get('category', None)
+            kanton = request.POST.get('kanton', None)
+            trajanje = request.POST.get('expiration', None)
+            email = request.POST['email']
+            brojTel = request.POST['brojTel']
+            opis = request.POST['opis']
+
+            if request.FILES['image_uploads']:
+
+                myfile = request.FILES.get('image_uploads', None)
+                fs = FileSystemStorage()
+                filename = fs.save(myfile.name, myfile)
+                uploaded_file_url = fs.url(filename)
+            else:
+                myfile = None
+
+            args = [type, btobtype, category, kanton, trajanje, email, brojTel, opis]
+
+            if not validation(request, args):
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+            cat = Category.objects.get(name=category)
+
+            if category == 'Financijske usluge' or category == "Usluge osiguranja":
+                title = request.POST['naslov']
+            else:
+                if btobtype == 1:
+                    title = "Ponuda"
+                elif btobtype == 2:
+                    title = "Potražnja"
+                else:
+                    title = "Partnerstvo"
+
+            if category == 'Financijske usluge' or category == "Usluge osiguranja":
+                position = request.POST['position']
+            else:
+                position = ""
+
+            post = Post.objects.get(pk=id)
+            post.attachment=myfile
+            post.position=position
+            post.title=title
+            post.userID=request.user
+            post.categoryID=cat
+            post.type=int(type)
+            post.b2b_type=int(btobtype)
+            post.region=kanton
+            post.expires_at= datetime.now()+timedelta(days=int(trajanje))
+            post.contact_email= email
+            post.contact_phone= brojTel
+            post.content=opis
+            post.save()
+
+            postCategories = PostCategories.objects.get(postID=post, categoryID=cat)
+            postCategories.save()
+
+            sweetify.success(request, title="Uspješno ažuriran oglas", icon="success", timer=8000)
+
+            return redirect('dashboard')
+
+    return redirect('dashboard')
 
 
 def zavrsi(request, id):
@@ -237,6 +370,8 @@ def obnovi(request, id):
 
     post = Post.objects.get(pk=id)
     newpost = Post(post)
+    newpost.soft_delete=False
+    newpost.save()
 
     sweetify.sweetalert(request, "Uspjesno obnovljen oglas", icon="success")
 
