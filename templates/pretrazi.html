@@ -98,7 +98,57 @@
         </div><!-- searchBox -->
     </form>
     <div class="kucice">
-                                            <!-- KUCICE -->
+    {% if counter == 0 %}
+        <div class="kolona firstKol">
+				<div class="single-kucica respKuc" style="margin-top: -87px">
+					<div class="logotipFirme"><img src="{% static 'images/hpinvest.png' %}"></div>
+					<div class="jobInfo">
+						<span class="struka"></span>
+						<span class="pozicija"></span>
+						<span class="vrijeme">Prije 0h</span>
+						<span class="lokacijarada">Bosna i Hercegovina</span>
+						<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
+					</div>
+				</div>
+        <div class="single-kucica respKuc" style="margin-top: -87px">
+					<div class="logotipFirme"><img src="{% static 'images/hpinvest.png' %}"></div>
+					<div class="jobInfo">
+						<span class="struka"></span>
+						<span class="pozicija"></span>
+						<span class="vrijeme">Prije 0h</span>
+						<span class="lokacijarada">Bosna i Hercegovina</span>
+						<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="kolona srednjaKol">
+				<div class="single-kucica respKuc" style="margin-top: -87px">
+					<div class="logotipFirme"><img src="{% static 'images/hpinvest.png' %}"></div>
+					<div class="jobInfo">
+						<span class="struka"></span>
+						<span class="pozicija"></span>
+						<span class="vrijeme">Prije 0h</span>
+						<span class="lokacijarada">Bosna i Hercegovina</span>
+						<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="kolona respKol">
+				<div class="single-kucica respKuc" style="margin-top: -87px">
+					<div class="logotipFirme"><img src="{% static 'images/hpinvest.png' %}"></div>
+					<div class="jobInfo">
+						<span class="struka"></span>
+						<span class="pozicija"></span>
+						<span class="vrijeme">Prije 0h</span>
+						<span class="lokacijarada">Bosna i Hercegovina</span>
+						<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
+					</div>
+				</div>
+			</div>
+    {% else %}
+        <!-- KUCICE -->
             <div class="kolona firstKol">
 
         {% for d in data %}
@@ -134,6 +184,8 @@
                     </a>
                     {% endif %}
             {% endfor %}
+            </div>
+
     <!--
                 <div class="single-kucica" style="margin-top: -87px">
                     <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
@@ -176,7 +228,6 @@
                     </div>
                 </div>
             -->
-            </div>
 
             <div class="kolona srednjaKol">
 {% for d in data %}
@@ -212,6 +263,7 @@
 
                     {% endif %}
             {% endfor %}
+            </div>
 
             <!--
                 <div class="single-kucica" style="margin-top: -87px">
@@ -245,7 +297,6 @@
                     </div>
                 </div>
             -->
-            </div>
 
 
             <div class="kolona respKol">
@@ -278,6 +329,10 @@
                 </a>
                 {% endif %}
             {% endfor %}
+            </div>
+    {% endif %}
+    </div>
+
 <!--
                 <div class="single-kucica" style="margin-top: -87px">
                     <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
@@ -305,17 +360,17 @@
 
         <!-- kucice -->
 
-        <div class="navigacijaTipke">
-            <div>1</div>
-            <div class="activTip">2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-        </div>
+{#        <div class="navigacijaTipke">#}
+{#            <div>1</div>#}
+{#            <div class="activTip">2</div>#}
+{#            <div>3</div>#}
+{#            <div>4</div>#}
+{#            <div>5</div>#}
+{#            <div>6</div>#}
+{#            <div>7</div>#}
+{#            <div>8</div>#}
+{#            <div>9</div>#}
+{#        </div>#}
         <div class="footer">
             <div class="footer__traka">
                 <div class="footer__traka--logo">

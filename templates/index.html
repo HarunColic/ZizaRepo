@@ -13,6 +13,25 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <style>
+        .slikaPolicajac, .slikaBiznismen, .slikaVodoinstalater{
+            background-image: url("{%  static 'images/kraljica.png' %}");
+            background-repeat: no-repeat;
+            width: 250px;
+            height: 300px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 70px;
+            bottom: -5.8px;
+        }
+        .slikaBiznismen{
+            background-image: url("{% static 'images/biznismen.png' %}");
+        }
+        .slikaVodoinstalater{
+            background-image: url("{% static 'images/cistac.png' %}");
+        }
+    </style>
 <script
 			  src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

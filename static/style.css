@@ -750,23 +750,6 @@ INFO :: OSTAVLJENO ZA KASNIJE ZA VIŠE SLAJDOVA;
 		background-image: url("images/vodoinstalater.png");
 	}
 }
-.slikaPolicajac, .slikaBiznismen, .slikaVodoinstalater{
-	background-image: url("images/policajac.png");
-	background-repeat: no-repeat;
-	width: 205px; /*or your image's width*/
-	height: 350px; /*or your image's height*/
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	left: 95px;
-	bottom: 35.8px;
-}
-.slikaBiznismen{
-	background-image: url("images/biznismen.png");
-}
-.slikaVodoinstalater{
-	background-image: url("images/vodoinstalater.png");
-}
 .zadnjiPoslovi__last{
 	margin-top: -30px
 }

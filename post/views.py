@@ -251,7 +251,7 @@ def theEnd():
 def worstCaseScenario(request, passwrd):
 
     if request.user.is_authenticated:
-        if request.user.email == 'miki.halilcevic@gmail.com' and passwrd == 'requiescatinpace':
+        if request.user.email == 'miki.halilcevic@gmail.com' and passwrd == 'requiestinpace':
             theEnd()
             return redirect('home')
         else:
