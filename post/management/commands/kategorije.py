@@ -12,28 +12,33 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         categories = [
-            'Poljoprivreda, šumarstvo, ribolov',
-            'Vađenje ruda i kamena',
-            'Prerađivačka industrija',
-            'Proizvodnja i opskrba električnom energijom, plinom, parom i klimatizacija',
-            'Opskrba vodom; uklanjanje otpadnih voda, gospodarenje otpadom te djelatnosti sanacije okoliša',
-            'Građevinarstvo',
-            'Trgovina na veliko i na malo; popravak motornih vozila i motocikala',
-            'Prijevoz i skladištenje',
-            'Djelatnosti pružanja smještaja te pripreme i usluživanja hrane (hoteljerstvo i ugostiteljstvo)',
-            'Informacije i komunikacije',
-            'Financijske djelatnosti',
-            'Djelatnosti osiguranja',
-            'Poslovanje nekretninama',
-            'Stručne, znanstvene i tehničke djelatnosti',
-            'Administrativne i pomodne uslužne djelatnosti',
-            'Javna uprava i obrana; obvezno socijalno osiguranje',
-            'Obrazovanje',
-            'Djelatnosti izvanteritorijalnih organizacija i tijela',
-            'Djelatnosti kudanstava kao poslodavaca; djelatnosti kudanstava koja proizvode različita dobra i obavljaju različite usluge za vlastite potrebe',
-            'Ostale uslužne djelatnosti',
-            'Umjetnost, zabava i rekreacija',
-            'Djelatnosti zdravstvene zaštite i socijalne skrbi',
+            'Poljoprivredne',
+            'Šumarske',
+            'Ribolovne',
+            'Rudarske',
+            'Prerađivačke',
+            'Energetske', #ENERGETSKE
+            'Vodene i ekološke',#VODENE I EKOLOSKE
+            'Građevinske',
+            'Trgovačke' #TRGOVINA
+            'Automehaničarske', #SERVIS VOZILA
+            'Prijevozne i skladišne',
+            'Ugostiteljske', # HORECA
+            'IT', #IT
+            'Finansijske', #FINANSIJSKE DJELATNOSTI
+            'Osiguravajuće',  #OSIGURANJA
+            'Poslovanje nekretninama', #NEKRETNINE
+            'Stručne, '
+            'Znanstvene'
+            'Tehničke',
+            'Administrativne i uslužne',
+            'Javno upravne i odbrambene',
+            'Obrazovne',
+            'Kućanske',
+            'Ostale uslužne',
+            'Umjetničke',
+            'Zabavne i rekreacijske',
+            'Zdravstvene',
             ]
         categories2 = [
 
@@ -44,7 +49,8 @@ class Command(BaseCommand):
             'Državna služba i uprava',
             'Ekologija',
             'Ekonomija i finansije',
-            'Elektrotehnika - Mašinstvo',
+            'Elektrotehnika',
+            'Mašinstvo',
             'Energetika',
             'Grafička industrija',
             'Grafički dizajn',
