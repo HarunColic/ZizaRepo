@@ -31,6 +31,24 @@
         .slikaVodoinstalater{
             background-image: url("{% static 'images/cistac.png' %}");
         }
+        .zadnjiPoslovi__popularno--dots{
+        	padding-left: 40px;
+        }
+        
+        @media screen and (max-width: 410px){
+        	.header, .footer{
+        		display: none;
+        	}
+        	body, .owl-carousel, .owl-stage-outer, .owl-stage, .testmoniali{
+        	overflow-x: hidden !important;
+        }
+        .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+		    -ms-touch-action: auto;
+		        touch-action: auto;
+		        overflow-y: hidden;
+		}
+        }
+        
     </style>
 
 <script
@@ -657,7 +675,9 @@ ul {list-style: none}
 					}
 				}
 
-
+				.mobCall{
+					display: none;
+				}
 
 
                 @media screen and (max-width: 400px){
@@ -682,6 +702,24 @@ ul {list-style: none}
                     .owl-carousel.owl-loaded{
                         margin-left: -400px;
                     }
+                    .testmoniali{
+                    	padding-top: 200px;
+                    }
+                    .callToRegister{
+                    	display: none;
+                    }
+                    .mobCall{
+                    	display: flex;
+                    }
+                    .zadnjiPoslovi {
+    height: 900px;
+}
+.zadnjiPoslovi__last {
+    margin-top: -390px !important;
+}
+.testmoniali h1{
+	margin-bottom: 80px;
+}
                 }
 
             }
@@ -761,17 +799,21 @@ ul {list-style: none}
 				<div class="zadnjiPoslovi__last--navigator--right"></div>
 			</div>
 			<div class="zadnjiPoslovi__last--timeline">
-				<div class="zadnjiPoslovi__last--timeline--stavka">
+
+                {% for p in posts %}
+                <div class="zadnjiPoslovi__last--timeline--stavka">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">7</h4></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
 					<div class="desniDio_job">
-						<div class="desniDio_job__naziv"><h4>GRAĐEVINA</h4></div>
-						<div class="desniDio_job__opis"><h5>Traži se djelatnik za rad na mješalici</h5></div>
+						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
 					</div>
 				</div>
+                {% endfor %}
+                     <!--
 				<div class="zadnjiPoslovi__last--timeline--stavka">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija duza"></div>
@@ -805,22 +847,22 @@ ul {list-style: none}
 						<div class="desniDio_job__naziv"><h4>GRAĐEVINA</h4></div>
 						<div class="desniDio_job__opis"><h5>Traži se djelatnik za rad na mješalici</h5></div>
 					</div>
-				</div>
+				</div>-->
 			</div> <!-- zadnjiPoslovi__last--timeline -->
 		</div> <!-- zadnjiPoslovi__last -->
 	</div> <!-- zadnjiPoslovi -->
 	<div class="kartice">
-		<div class="kartice__trazitePosao">
+		<div class="kartice__trazitePosao" style="cursor: pointer;">
 			<h3>Tražite posao?</h3>
-			<p>Consectetuer adipiscing elit, sed diam nonummy euismod.</p>
-			<h4>500+ otvorenih konkursa</h4>
+			<p style="font-size: 26.5px">I obratno!</p>
+			<h4>Otvoreni konkursi</h4>
 			<div class="linijaPosao"></div>
 			<img src="../static/images/worker_bee.png">
 		</div>
 		<div class="kartice__trazitePartnera">
-			<h3>Tražite posao?</h3>
-			<p>Mirum est notare quam littera gothica, nunc putamus.</p>
-			<h4>50+ firmi spremnih za suradnju</h4>
+			<h3>Vidite!</h3>
+			<p style="font-size: 26.5px">I budite viđeni!</p>
+			<h4>Firme spremne za suradnju</h4>
 			<img src="../static/images/money_bee.png">
 		</div>
 	</div> <!-- kartice -->
@@ -865,11 +907,13 @@ ul {list-style: none}
 			</div>
 		</div>
 	</div> <!-- oglasi -->
+	<div class="callToRegister mobCall" style="margin-top: -100px; margin-bottom: -200px"><img src="../static/images/registrirajse.png"></div>
 	<div class="testmoniali">
 		<div class="callToRegister"><img src="../static/images/registrirajse.png"></div>
 		<h1>ZAŠTO ŽIŽA?</h1>
 		<div class="testmoniali__kucice">
 			<div class="testmoniali__kucice--single">
+				<img src="{%  static 'images/redah.png' %}">
 				<p style="word-break: normal;">Idealno mjesto za povećanje poslovne ponude i potražnje. Olakšava poslovnu komunikaciju (vidljivost) sa potencijalnim (inostranim) partnerima i investitorima. Jednostavno dobar alat za povećanje konkurentnosti bosansko-hercegovačkih kompanija.</p>
 				<div>
 					<h4>Redah</h4>
@@ -878,22 +922,7 @@ ul {list-style: none}
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
-				<p style="word-break: normal;">Fenomenalno, pored svih mogućnosti da vidite i budete viđeni, Žiža svojim članicama omogućava gratis postavljanje oglasa za posao. Naša kompanija je 57. kompanija po rastu u Evropi, te samim tim imamo veliku potrebu za zapošljavanjem novog kadra. Do sada smo naše konkurse objavljivali preko različitih portala i to nas je koštalo veoma mnogo novaca. Ovo je jednostavno rješenje za smanjenje ovih troškova.</p>
-				<div>
-					<h4>NSoft</h4>
-					<h5>IT kompanija</h5>
-					<div class="navodnici">“</div>
-				</div>
-			</div>
-			<div class="testmoniali__kucice--single">
-				<p style="word-break: normal;">Mogućnost da Vas neka kompanija pronađe na osnovu vašeg CV-a i ponudi Vam posao je fantastična. Žiža omogućava upravo to da su stručnjaci konkurentni na tržištu rada. Nešto kao i transferi u fudbalu, dobar radnik je u "izlogu", a dobiće ga kompanija koja će najbolje cijeniti njegove usluge. Mi u "Novom Travniku" smo spremni za taj izazov!</p>
-				<div>
-					<h4></h4>
-					<h5></h5>
-					<div class="navodnici">“</div>
-				</div>
-			</div>
-			<div class="testmoniali__kucice--single">
+				<img src="{%  static 'images/goran.png' %}">
 				<p style="word-break: normal;">Žižini IT eskperti Vam mogu ponuditi moderna IT rješenja te Vam na taj način umanjiti troškove organizacije i najma skupih stranih IT rješenja.</p>
 				<div>
 					<h4>META5</h4>
@@ -902,6 +931,7 @@ ul {list-style: none}
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
+				<img src="{%  static 'images/nedim.png' %}">
 				<p style="word-break: normal;">"Sve banke i osiguranja na jednom mjestu. Postavite Vaše finansijske ili osiguravajuće potrebe i vrlo brzo dobijete ponudu većine banaka i osiguravajućih društava. Na vama je da izaberete najbolje." Ovo je odlična zamisao, štedi vrijeme i povećava konkurenciju a Vama nudi najbolje na tržištu!</p>
 				<div>
 					<h4>Nedim Šuta</h4>
@@ -910,9 +940,20 @@ ul {list-style: none}
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
+				<img src="{%  static 'images/affan.png' %}">
 				<p style="word-break: normal;">Skup eksperata Vam omogućava obuku, edukaciju Vašeg kadra te interim (privremeni) menadžment koji angažuje uključivanje privremenih (iskusnih) menadžera s kojima možete prevazići period bez adekvatnog kadra. U periodu rada interim menadžeri su u stanju obučiti Vaše talentovane uposlenike kako bi preuzeli te funkcije a vi dobili pouzdanog budućeg menadžera. Pored ovoga Žiža nudi finanskijska i (internacionalna) pravna savjetovanja.</p>
 				<div>
 					<h4>Doc. dr. sc. Affan Ćehajić</h4>
+					<h5>Founder ŽIŽA.ba</h5>
+					<div class="navodnici">“</div>
+				</div>
+			</div>
+			<div class="testmoniali__kucice--single">
+				<img src="{%  static 'images/dragan.png' %}">
+				<p style="word-break: normal;">Rješava probleme manjka proizvodnih kapaciteta. Ukoliko imamo preveliku narudžbu preko Žize možemo lakše pronaći partnera s kojim možemo da popunimo nedostatak proizvodnih kapaciteta. Naravno mi već imamo partnere sa kojim sarađujemo, međutim često se desi da je taj partner baš u tom momentu zauzet sa nekom drugom narudžbom, što ga u tom momentu sprjećava da zajednički proizvodimo i zadovoljimo kupca. Žiža olakšava pronalazak više partnera.</p>
+				<div>
+					<h4>Dragan Rezić</h4>
+					<h5>Predsjednik drvnog klastera <br> Hercegovina</h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
@@ -928,7 +969,7 @@ ul {list-style: none}
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script>
 	var typed = new Typed('.animirajKucanje', {
-				  strings: ["Ponudite!", "Potražite!", "Surađujte!", "Pronađite kadar!", "Kredit!?", "Osiguranje!?", "Edukacija!?"],
+				  strings: ["Ponudite!", "Potražite!", "Sarađujte!", "Pronađite kadar!", "Kredit!?", "Osiguranje!?", "Edukacija!?"],
 				  typeSpeed: 50,
 				  loop: true,
 				  showCursor: false,
@@ -965,16 +1006,29 @@ ul {list-style: none}
 
 <script type="text/javascript">
 	$('.regBox__lijevo--box').click(function(){
-		$('.registracija.regBox').css('width', '1160px');
+		$('.regBox').css('width', '1160px');
+
+		$('.regBox__lijevo').css('width', '200px');
+
+
 		$('.regBox__desno').css('display', 'block');
 		 setTimeout(function(){
-		 	$('.registracija.regBox__desno').css('opacity', '1');
+		 	$('.regBox__desno').css('opacity', '1');
 		}, 300);
 		 $('.regBox__lijevo--box.active p').css('color', '#f89101');
 	});
-	$('.close').click(function(){
+	$('.closeReg').click(function(){
+		$('.registracija .regBox').css('width', '200px');
+		$('.registracija .regBox__desno').css('display', 'none');
+		$('.registracija .regBox__desno').css('opacity', '0');
+		$('#myModal2 .regBox').css('height', '461px');
 		$('.registracija.regBox').css('width', '200px');
-		$('regBox__desno').css('display', 'none');
+
+		$('.registracija.regBox').css('width', '500px');
+		$('.regBox__lijevo').css('width', '500px');
 	});
+
 </script>
 </html>
+
+

@@ -12,8 +12,6 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body style="margin-bottom: 100px">
-
-
 	<style type="text/css">
 	.konsaltingBottom{
 		background-color: #262626;
@@ -201,6 +199,138 @@
   	.header__language{
   		background: #f9f5e5;
   	}
+
+  	@media screen and (max-width: 1170px){
+  		.tekst {
+    		max-width: 900px;
+		}
+		.tekst p { 
+			max-width: 719px;
+		}
+		.prvaUn{
+			margin-left: 150px !important;
+		}
+		.druDif{
+			margin-left: 220px !important;
+		}
+  	}
+
+  	@media screen and (max-width: 900px){
+  		.tekst {
+    		max-width: 700px;
+		}
+		.tekst p { 
+			max-width: 519px;
+		}
+		.prvaUn{
+			margin-left: 20px !important;
+			width: 90px;
+		}
+		.druDif{
+			margin-left: 90px !important;
+			width: 90px;
+		}
+		.tekst ol{
+			margin-left: 100px;
+		}
+  	}
+
+  		@media screen and (max-width: 710px){
+	  		.tekst {
+	    		max-width: 500px;
+			}
+			.tekst p { 
+				max-width: 319px;
+			}
+			.prvaUn{
+				display: none;
+			}
+			.druDif{
+				display: none;
+			}
+			.tekst ol{
+				margin-left: 100px;
+				width: 257px;
+			}
+			.linija__down{
+				width: 500px !important;
+			}
+			.tekst h3 > span {
+				display: block;
+			}
+			.interim__slika{
+				width: 350px !important;
+			}
+			.tekst li::before{
+				padding-right: 5px !important;
+			}
+			.tekst{
+				padding-bottom: 50px !important;
+			}
+  		}
+
+  		@media screen and (max-width: 500px){
+  			body{
+  				overflow-x: hidden;
+  				width: 350px;
+  			}
+  					*:not(li){
+			overflow-x: hidden;
+		}
+  			.header, .footer{
+  				display: none;
+  			}
+	  		.tekst {
+	    		max-width: 340px;
+	    		border-radius: 10px;
+			}
+			.tekst p { 
+				max-width: 300px;
+				margin-left: 30px !important;
+				font-size: 15px !important;
+			}
+			.tekst h3{
+				padding-left: 35px;
+			}
+			.tekst ol{
+				margin-left: 20px;
+			}
+			.linija__down{
+				width: 300px !important;
+			}
+			.interim__slika{
+				width: 350px !important;
+			}
+			.tekst li::before{
+				padding-right: 5px !important;
+			}
+			.tekst{
+				padding-bottom: 30px !important;
+			}
+			.prvaUn, .pravnik, .edukator{
+				display: block;
+				position: absolute;
+				opacity: 0.05;
+				top: 370px;
+				width: 150px !important;
+    			left: 190px;
+			}
+			.pravnik{
+				top: 720px;
+    			left: 100px;
+			}
+			.edukator{
+				top: 2220px;
+    			left: 80px;
+    			opacity: 0.1;
+			}
+			.tekst p:nth-child(1){
+				padding-top: 46px;
+			}
+			.interim__slika {
+			    width: 300px !important;
+			}
+  		}
 </style>
 
     {% with var1=user var2=auth var3=userP ind=industries %}
@@ -210,22 +340,22 @@
 	<div class="tekst" style="padding-bottom: 187px; margin-top: 50px">
 		<p>Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta. </p>
 
-		<h3>Finansijsko <span>savjetovanje</span></h3>
+		<h3>Finansijsko <span>savjetovanje</span><img src="https://i.imgur.com/8oT8z3N.png" width="100px" style="margin-left: 400px" class="prvaUn"></h3>
 
 		<p style="margin-bottom: 50px">
 			Naši finansijski stručnjaci djeluju na tri područja: računovodstvo, savjetovanje i edukacije. Pored visokih profesionalnih standarda daje se iznimna važnost etičkim principima uključenih partija.
 		</p>
 
-		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto"></div>
+		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto" class="linija__down"></div>
 
 
-		<h3>Pravno <span>savjetovanje</span></h3>
+		<h3>Pravno <span>savjetovanje</span><img src="https://i.imgur.com/omBpv7t.png" width="100px" style="margin-left: 480px" class="druDif pravnik"></h3>
 
 		<p style="margin-bottom: 50px">
 			Broj izvoznika i privrednika u BiH se svake godine povećava. Ono što je čest problem je doći do iskusnih pravnih stručnjaka na polju poslovnog prava. Žiža platforma će Vam omogućiti saradnju sa iskusnim pravnicima na polju internacionalnog i poslovnog prava uopće. 
 		</p>
 
-		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto"></div>
+		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto" class="linija__down"></div>
 
 		<h3>Interim <span>menadžment</span></h3>
 
@@ -246,9 +376,9 @@
 
 
 
-		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto"></div>
+		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto" class="linija__down"></div>
 
-		<h3><span>Treninzi i edukacije</span></h3>
+		<h3><span>Treninzi i edukacije</span><img src="https://i.imgur.com/bWoDCFE.png" width="130px" style="margin-left: 480px" class="druDif edukator"></h3>
 
 		<p style="margin-bottom: 50px">
 			U Bosni i Hercegovini postoji jako puno predrasuda i nerazumijevanja kada su u pitanju treninzi zaposlenih u kompanijama. Riječ trening je najčešće olako shvaćena i obično se podrazumijeva kao neka vrsta predavanja kombinovanih sa timskim vježbama. Za razliku od zapada gdje se ovim bave posebne službe, kod nas o treninzima zaposlenih obično odlučuju HR odjeljenja kompanija, odnosno psiholozi kojima se ovaj posao najčešće dodjeljuje. Tako se nažalost trening zaposlenih tretira kao oblast psihologije, a ne kao vitalna poslovna funkcija. Kao rezultat ove zablude, poslovni treninzi su se u našim kompanijama najčešće svodili na čitanje slajdova sa gotovim upustvima, igrajnje besmislenih igara i popunjavanje psiholoških formulara i anketa. Zbog nedostatka prave konkurencije i neprepoznavanja njihovog značaja, treninzi su se kod nas najčešće sprovodili iz kozmetičkih razloga (zato što se to radi na zapadu!). <br><br>
@@ -256,9 +386,22 @@
 
 		</p>
 
-		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto"></div>
+		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto" class="linija__down"></div>
 
 		<h3><span>Šta je to</span> pravi trening?</h3>
+
+			<style type="text/css">
+		.tekst ol {list-style: none}
+	.tekst li::before {
+		content: "✔"; 
+		font-size: 20px;
+		color: #fecd35 !important;
+  		display: inline-block; 
+  		width: 1em;
+  		margin-left: -1em;
+  		padding-right: 26px;
+  	}
+	</style>
 
 		<p>
 			Da ne bi ulazili u komplikovane definicije, najbolje se napravi usporedba sa sportom.
@@ -312,4 +455,9 @@
 				    $('.postavkeBottom').css('display', 'none');
 				});
 		    </script>
+
+		     <script type="text/javascript">
+					$('#pocetna_nav').removeClass('selected');
+					$('#konsalting_nav').addClass('selected');
+				</script>
 </html>

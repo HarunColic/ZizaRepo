@@ -33,12 +33,18 @@
 			</div>
 			<div class="linijaD"></div>
 		</div>
-		<div class="tvrtka">
-			<div class="avatarKucica">
-                {% if userP.image  %}
-				<img style="width: 300px; height: 200px;" src="{{ userP.image.url }}">
-	            {% endif %}
-			</div>
+		<div class="tvrtka">  
+			{% if userP.image  %}
+				<div class="avatarKucica">
+	               <img style="max-width: 250px; height: auto;" src="{% if userP.image %} {{ userP.image.url }} {% endif %}">
+				</div>
+			{% else %}
+				<div class="avatarKucica" style="background-color: #262626">
+	               <img style="max-width: 250px; height: auto;" src="https://ziza.ba/static/images/logoNew.png">
+				</div>
+			{% endif %}
+
+
 			<div class="podaciT">
 				<div>TVRTKA</div>
 				<div>{{ user.first_name }}</div>
@@ -53,17 +59,17 @@
 		</div>
 		<div class="tabelarni">
 			<div>
-				<h3>{{ userP.location }}</h3>
+				<h3 style="text-transform: uppercase;">{{ userP.location }}</h3>
 				<p>SJEDIŠTE</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3>{{ company.categoryID.name }}</h3>
+				<h3 style="text-transform: uppercase;" id="djelatnost">{{ company.categoryID.name }}</h3>
 				<p>DJELATNOST</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3>{{ company.brojuposlenih }}</h3>
+				<h3 style="text-transform: uppercase;">{{ company.brojuposlenih }}</h3>
 				<p>BROJ UPOSLENIH</p>
 			</div>
 			<div class="malaLinija"></div>
@@ -84,6 +90,17 @@
 			</div>
 		</div>
 
+		<style type="text/css">
+			.tabelaRasa div:nth-child(1) div:nth-child(1) {
+			    display: flex;
+			    flex-direction: column;
+			    align-items: flex-start;
+			}
+			.tabelaRasa div:nth-child(1) div:nth-child(1) div:nth-child(1) {
+				margin-left: 0 !important;
+			}
+		</style>
+
         <div class="uvodniDio tabelarniDio">
             {% for p in posts %}
 
@@ -95,8 +112,8 @@
 						<div>
                             {% if p.type == 1 %}{{ p.title }} {% else %} {% if p.b2b_type == 1 %} Ponuda {% elif p.b2b_type == 2 %} Potražnja {% else %} Partnerstvo {% endif %} {% endif %}</div>
 						<div>
-							<span>{{ p.categoryID.name }}</span>
-							<span>
+							<span style="text-transform: uppercase;">{{ p.categoryID.name }}</span>
+							<span style="color: black">
 								<span>{{ p.created_at }}</span>
 								{{ p.location }}, {{ p.region }}
 							</span>
@@ -169,7 +186,7 @@
 				</div>
 			</div>
 			-->
-			<p>7 stranica</p>
+			<p>0 stranica</p>
 		</div>
 		<div class="navigacijaFooter" style="margin-top: 10px">
 			<div class="prevTraka" style="width:560px;margin-right: 50px">
@@ -209,9 +226,16 @@
 <script type="text/javascript" src="../static/skripta.js"></script>
 <script src="/node_modules/readmore-js/readmore.min.js"></script>
 <script type="text/javascript">
-	$('.detaljniOpis').readmore({
-		moreLink: '<a href="#">VIŠE</a>',
-		lessLink: '<a href="#">SKRATI</a>'
-	});
+	if($('#djelatnost').html() == 'Prerađivačka industrija'){
+		$('#djelatnost').html('Prerađivačka');
+	}
+	if($('#djelatnost').html() == 'Informacije i komunikacije'){
+		$('#djelatnost').html('IT');
+	}
+	if($('#djelatnost').html() == 'Prijevoz i skladištenje'){
+		$('#djelatnost').html('Prijevoz <br> skladištenje');
+		$('#djelatnost').css('text-align', 'center');
+	}
+
 </script>
 </html>

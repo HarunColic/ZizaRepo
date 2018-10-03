@@ -19,6 +19,14 @@ import sweetify
 from django.template.context_processors import csrf
 
 
+def superUser(user):
+
+    if user.email == "ziza@1blackmoon.com":
+        return True
+    else:
+        return False
+
+
 def validation(request, args):
 
     for i in args:
@@ -31,51 +39,73 @@ def validation(request, args):
 
 def home(request):
 
-        if request.user.is_authenticated:
-            userP = UserProfile.objects.get(userID=request.user)
-            return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None})
-        else:
-            industries = Category.objects.filter(type=0)
-            return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries})
+    posts = Post.objects.order_by('created_at')[0:4]
+
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+        return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None, 'posts': posts})
+    else:
+        industries = Category.objects.filter(type=0)
+        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries, 'posts': posts})
 
 
 def profil(request):
 
-        if request.user.is_authenticated:
+    if request.user.is_authenticated:
 
-            if request.POST.get('pretragaTrigger', "False") == "True":
-                grad = request.POST.get('gradovi', None)
-                kategorija = request.POST.get('kategorije', None)
-                kljucnaRijec = request.POST.get('kljucnaRijec', None)
+        if request.POST.get('pretragaTrigger', "False") == "True":
+            grad = request.POST.get('gradovi', None)
+            kategorija = request.POST.get('kategorije', None)
+            kljucnaRijec = request.POST.get('kljucnaRijec', None)
 
-                posts = Post.objects.all().filter(type=1)
+            posts = Post.objects.all().filter(type=1)
 
-                if grad is not None:
-                    posts = posts.all().filter(location=grad)
-                if kategorija is not None:
-                    cat = Category.objects.get(name=kategorija)
-                    posts = posts.all().filter(CategoryID=cat)
-                if kljucnaRijec is not None:
-                    posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+            if grad is not None:
+                posts = posts.all().filter(location=grad)
+            if kategorija is not None:
+                cat = Category.objects.get(name=kategorija)
+                posts = posts.all().filter(CategoryID=cat)
+            if kljucnaRijec is not None:
+                posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
 
-            else:
-                posts = Post.objects.all().filter(type=1)
-
-            user = request.user
-            userP = UserProfile.objects.get(userID=user)
-            data = posts
-            gradovi = City.objects.all()
-            cat = Category.objects.filter(type=0)
-            counter = posts.count()
-            company = Company.objects.get(userID=user)
-
-            if Company.objects.filter(userID=user).exists():
-                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now())
-                return render(request, 'profilTvrtka.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
-            elif Employee.objects.filter(userID=user).exists():
-                return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
         else:
-            return render(request, 'index.html')
+            posts = Post.objects.all().filter(type=1)
+
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
+        data = posts
+        gradovi = City.objects.all()
+        cat = Category.objects.filter(type=0)
+        counter = posts.count()
+        company = Company.objects.get(userID=user)
+
+        if Company.objects.filter(userID=user).exists():
+
+            userComp = Company.objects.get(userID=user)
+
+            if userComp.categoryID.name == "Finansijske":
+
+                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now()).exclude(categoryID__name="Osiguravajuće")
+                return render(request, 'profilTvrtka.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
+
+            elif userComp.categoryID.name == "Finansijske":
+
+                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now()).exclude(categoryID__name="Finansijske")
+                return render(request, 'profilTvrtka.html',
+                              {'user': user, 'userP': userP, 'company': company, 'posts': posts})
+            elif superUser(request.user):
+                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now())
+                return render(request, 'profilTvrtka.html',
+                              {'user': user, 'userP': userP, 'company': company, 'posts': posts})
+            else:
+                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(
+                    categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
+
+
+    elif Employee.objects.filter(userID=user).exists():
+        return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
+    else:
+        return render(request, 'index.html')
 
 
 def validateMail(mail):
@@ -391,22 +421,26 @@ def pretraga(request):
             kljucnaRijec = request.POST.get('kljucnaRijec', None)
 
             if Company.objects.filter(userID=user).exists():
-                userComp = Company.objects.get(userID=user)
-                if userComp.categoryID.name == "Financijske usluge":
-                    posts = Post.objects.all().filter(type=2)
-                else:
-                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Financijske usluge")
 
+                userComp = Company.objects.get(userID=user)
+                if userComp.categoryID.name == "Finansijske":
+                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
+                elif userComp.categoryID.name == "Osiguravajuće":
+                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now())
+                elif superUser(request.user):
+                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
+                else:
+                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
             else:
-                posts = Post.objects.all().filter(type=1)
+                posts = Post.objects.filter(type=1).exclude(expires_at__lte=datetime.now())
 
             if grad is not None:
-                posts = posts.all().filter(location=grad)
+                posts = posts.filter(location=grad)
             if kategorija is not None:
                 ind = Category.objects.get(name=kategorija)
-                posts = posts.all().filter(categoryID=ind)
+                posts = posts.filter(categoryID=ind)
             if kljucnaRijec is not "":
-                posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+                posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
 
         else:
             if Company.objects.filter(userID=user).exists():

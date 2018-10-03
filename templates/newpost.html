@@ -13,6 +13,16 @@
 	<link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.css">
 	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../static/style-dodajOglas.css">
+	<style type="text/css">
+		input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button { 
+		  -webkit-appearance: none; 
+		  margin: 0; 
+		}
+		.formaBody{
+			height: 1368px;
+		}
+	</style>
 </head>
 <body>
 	<div class="coverSlika" style="position: relative;">
@@ -29,7 +39,7 @@
 		<div class="tvrtka">
 			<div class="avatarKucica">
                 {% if userP.image %}
-				<img style="width: 300px; height: 200px;" src="{{ userP.image.url }}">
+				<img style="max-width: 250px; height: auto;" src="{{ userP.image.url }}">
                 {% endif %}
 			</div>
 			<div class="podaciT">
@@ -55,12 +65,12 @@
             <input type="hidden" name="type" value="1">
                 <div>
 					<label>Naslov oglasa</label><br>
-					<input type="text" id='naslovInput' name="naslov" placeholder="npr. Tražimo menadžera za" style="width: 100%">
+					<input type="text" id='naslovInput' name="naslov" placeholder="npr. Tražimo menadžera za..." style="width: 100%">
 				</div>
-				<div>
+				<div style="margin-top: 20px">
 					<label>Djelatnost oglasa</label><br>
 					<select name="category">
-						<option value="" disabled selected>Izaberi Djelatnost</option>
+						<option value="" disabled selected>Izaberi djelatnost</option>
                         {% for c in cat %}
 			    		<option value="{{ c.name }}">{{ c.name }}</option>
                         {% endfor %}
@@ -86,8 +96,8 @@
 						<input type="text" id='pozicijaInput' name="pozicija" placeholder="npr. kuhar" style="width: 100%">
 					</div>
 					<div style="width: 23%; margin-right: 25px">
-						<label>Godine iskustva</label><br>
-						<input type="text" id='godineInput' name="godineIskustva" placeholder="npr. 3+" style="width: 100%">
+						<label>Min. iskustva</label><br>
+						<input type="number" id='godineInput' name="godineIskustva" placeholder="npr. 3 godine" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="width: 100%">
 					</div>
 					<div style="width: 23%;">
 						<label>Stručna sprema</label><br>

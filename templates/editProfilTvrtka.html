@@ -73,7 +73,7 @@
 
 		<div class="tvrtka">
 			<div class="avatarKucica" style="position: relative;">
-				<div style="width: 90%; height: 100%; background: url({% if userP.image %}{{ userP.image.url }} {% endif %}); background-size: contain; background-position: center; background-repeat: no-repeat;" id="imagePreview"></div>
+				<div style="width: 80%; height: 80%; background: url({% if userP.image %}{{ userP.image.url }} {% endif %}); background-size: contain; background-position: center; background-repeat: no-repeat;" id="imagePreview"></div>
 
 			<div class="avatar-edit">
 	            <input name="profilePicture" type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -109,7 +109,7 @@
 					</div>
 					<div style="width: 43.75%">
 						<label>Kontakt broj</label><br>
-						<input  {% if userP.brojtelefona %} value="{{ userP.brojtelefona }}" {% endif %}type="text" name="brojTel" style="width: 100%">
+						<input  {% if userP.brojtelefona %} value="{{ userP.brojtelefona }}" {% endif %} type="text" name="brojTel" style="width: 100%">
 					</div>
 				</div>
 				<div style="margin-top: 20px">

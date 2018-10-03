@@ -13,6 +13,9 @@
 <body style="margin-bottom: 100px">
 
 	<style type="text/css">
+	.stefka{
+		padding-left: 360px;
+	}
 	.konsaltingBottom{
 		background-color: #262626;
 		width: 250px;
@@ -155,14 +158,14 @@
 		width: 959px;
 		color: #7c7a71;
 	}
-	.tekst p:nth-child(5){
+	.stefka{
 		font-family: 'Galano Regular';
 		font-size: 16px;
 		color: #7c7a71;
 		padding-top: 93px;
 		width: 603px;
 		margin: 0;
-		padding-left: 469px;
+		padding-left: 360px;
 		padding-bottom: 105px;
 		z-index: 1;
 		position: relative;
@@ -213,7 +216,7 @@
     		max-width: 759px;
     		margin-left: 79px;
 		}
-		.tekst p:nth-child(5){
+		.stefka{
 			padding-left: 100px;
 			width: auto;
 		}
@@ -242,7 +245,7 @@
     		max-width: 359px;
     		margin-left: 69px;
 		}
-		.tekst p:nth-child(5){
+		.stefka{
 			padding-left: 100px;
 			width: auto;
 		}
@@ -262,7 +265,7 @@
 			transform: scale(0.4);
 			left: -20px;
 		}
-		.tekst p:nth-child(5) {
+		.stefka {
 		    padding-left: 70px;
 		}
 		.sunceT{
@@ -297,7 +300,7 @@
     		max-width: 300px;
     		margin-left: 30px;
 		}
-		.tekst p:nth-child(5){
+		.stefka{
 			padding-left: 20px;
 			width: auto;
 		}
@@ -318,7 +321,7 @@
 			transform: scale(0.4);
 			left: -150px;
 		}
-		.tekst p:nth-child(5) {
+		.stefka {
 		    padding-left: 70px;
 		}
 		.sunceT{
@@ -341,11 +344,31 @@
 	  	.tekst p{
 	  		font-size: 13px !important;
 	  	}
-	  	.tekst p:nth-child(5) {
+	  	.stefka {
 		    padding-left: 30px;
 		    width: 290px;
 		}
   	}
+
+  	@media screen and (max-width: 400px){
+  		.stefka{
+  			padding-left: 0 !important;
+    		padding-top: 20px !important;
+    		padding-bottom: 80px !important;
+  		}
+  	}
+
+  	.slova span {
+    font-family: 'Galano Bold';
+    font-size: 16px;
+    color: #333;
+}
+
+.slova{
+	margin-top: 50px;
+}
+
+
 
 </style>
     {% with var1=user var2=auth var3=userP ind=industries %}
@@ -359,6 +382,15 @@
 	</div>
 	<div class="tekst" style="padding-bottom: 187px">
 		<p>Uzet ćemo sebi za pravo reći kako niste pronašli odgovarajuću stanicu. Nadamo se da ne zamjerate. Naime, u potrazi za odgovorima na Vaša pitanja, gotovo smo sigurni da niste došli do središta traženih rješenja. U ŽIŽU svega. Do nas.</p>
+
+		<p style="text-align: center;" class="slova">
+			<span>Ž</span>elite jedinstveno rješenje za višestruke probleme poslovne i tržišne prirode?<br>
+			<span style="margin-left: 7px; line-height: 30px">I</span>mate potrebu za mijenjati radnu sredinu i okušati se u novim i većim izazovima?<br>
+			<span>Ž</span>alite što niste bili u mogućnosti realizirati investicijske ideje zbog nedostatka podrške i pomoći?<br>
+			<span style="line-height: 30px; margin-left: -2px">A</span> pritom ste pokušali sve. <br>
+		</p>
+
+
 		<h3>Kako je sve <span>počelo</span></h3>
 
 		<p>
@@ -373,7 +405,7 @@
 
 		<img src="{% static 'images/skakacica.png' %}" class="tekst__skakacica">
 
-		<p>
+		<p class="stefka">
 			Generacijski jaz nam je mlađi od rekorda Štefke Kostadinove. Oslanjamo se na <strong>domaće snage</strong>. Upravljali smo velikim <strong>inostranim projektima</strong> i davali savjete dokazanim evropskim menadžerima. Vjerujući u autohtono, <strong>educirali</strong> smo se na našim fakultetima i posezali za prekograničnim usavršavanjima i obrnuto. Znamo što znači biti pod pritiskom osigurati novac za nama najbliže. <strong>Padali smo</strong>. Učili na vlastitim greškama. Izgradili se u toj mjeri u kojoj se drugi mogu osloniti na nas. <strong>Vi</strong>.
 		</p>
 
@@ -426,7 +458,7 @@
     		max-width: 759px;
     		margin-left: 79px;
 		}
-		.tekst p:nth-child(5){
+		.stefka{
 			padding-left: 100px;
 			width: auto;
 		}
@@ -455,7 +487,7 @@
     		max-width: 359px;
     		margin-left: 69px;
 		}
-		.tekst p:nth-child(5){
+		.stefka{
 			padding-left: 100px;
 			width: auto;
 		}
@@ -475,7 +507,7 @@
 			transform: scale(0.4);
 			left: -20px;
 		}
-		.tekst p:nth-child(5) {
+		.stefka {
 		    padding-left: 70px;
 		}
 		.sunceT{
@@ -510,7 +542,7 @@
     		max-width: 300px;
     		margin-left: 30px;
 		}
-		.tekst p:nth-child(5){
+		.stefka{
 			padding-left: 20px;
 			width: auto;
 		}
@@ -531,7 +563,7 @@
 			transform: scale(0.4);
 			left: -150px;
 		}
-		.tekst p:nth-child(5) {
+		.stefka {
 		    padding-left: 70px;
 		}
 		.sunceT{
@@ -554,7 +586,7 @@
 	  	.tekst p{
 	  		font-size: 13px !important;
 	  	}
-	  	.tekst p:nth-child(5) {
+	  	.stefka {
 		    padding-left: 30px;
 		    width: 290px;
 		}
@@ -625,4 +657,8 @@
 				    $('.postavkeBottom').css('display', 'none');
 				});
 		    </script>
+		    <script type="text/javascript">
+					$('#pocetna_nav').removeClass('selected');
+					$('#onama_nav').addClass('selected');
+				</script>
 </html>

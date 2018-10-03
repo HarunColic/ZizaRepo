@@ -123,10 +123,26 @@ $('#srednjiElement').toggle();
 	}
 });
 
+	function stopMobileScroll() {
+    document.ontouchmove = function (e) {
+        e.preventDefault();
+    };
+};
+
+function enableMobileScroll() {
+    document.ontouchmove = function () {
+        return true;
+    };
+};
+
 $('.testmoniali__kucice').owlCarousel({
 	autoplay: true,
 	center: true,
 	loop: true,
+	touchDrag  : false,
+    mouseDrag  : true,
+    onDrag: stopMobileScroll,
+    onDragged: enableMobileScroll
 });
 
 var modal = document.getElementById('myModal');

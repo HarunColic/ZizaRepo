@@ -11,6 +11,16 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 	<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "style-oglas.css" %}">
+	<style type="text/css">
+		.detaljniOpis p{
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+		.detaljniOpis{
+			font-family: 'Galano Regular';
+			color: #7c7a71;
+		}
+	</style>
 </head>
 <body>
 	<div class="coverSlika">
@@ -27,7 +37,7 @@
 		<div class="tvrtka">
 			<div class="avatarKucica">
                 {% if userP.image %}
-                <img style="height: 200px; width: 250px;" src="{{ userP.image.url }}">
+                <img style="max-width: 250px; height: auto;" src="{{ userP.image.url }}">
                 {% endif %}
             </div>
 			<div class="podaciT">
@@ -52,12 +62,12 @@
 		</div>
 		<div class="tabelarni">
 			<div>
-				<h3>{% if post.type == 1 %}{{ post.location}} {% else %}{{ post.region }}{% endif %}</h3>
+				<h3 style="text-transform: uppercase;">{% if post.type == 1 %}{{ post.location}} {% else %}{{ post.region }}{% endif %}</h3>
 				<p>LOKACIJA</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3>{% if post.type == 1 %}{{ post.position }} {% else %}{{ post.categoryID.name }}{% endif %}</h3>
+				<h3 style="text-transform: uppercase;">{% if post.type == 1 %}{{ post.position }} {% else %}{{ post.categoryID.name }}{% endif %}</h3>
 				<p>POZICIJA</p>
 			</div>
             {% if post.type == 1 %}
@@ -73,7 +83,7 @@
 				<p>STRUČNA SPREMA</p>
 			</div>
         {% endif %}
-        {% if post.type == 2 and post.categoryID.name == "Financijske usluge" or post.categoryID.name == "Financijske usluge"%}
+        {% if post.type == 2 and post.categoryID.name == "Osiguravajuće" or post.categoryID.name == "Finansijske"%}
 
 
 			<div class="malaLinija"></div>
@@ -113,5 +123,9 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
 <script type="text/javascript" src="{% static "skripta.js" %}"></script>
+
+<script type="text/javascript">
+	$('p br').replaceWith(' ');
+</script>
 
 </html>

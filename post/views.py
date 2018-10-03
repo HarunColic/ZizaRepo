@@ -10,6 +10,7 @@ from account import views
 from account.views import validation
 from django.core.files.storage import FileSystemStorage
 import os
+from account.views import superUser
 
 
 def newpost(request):
@@ -85,7 +86,7 @@ def createpost(request):
 
             sweetify.success(request, title="Uspješno kreiran oglas", text="", icon="success", timer=8000)
 
-            return redirect('newpost')
+            return redirect('showpost', post.pk)
         else:
 
             type = request.POST['type']
@@ -113,7 +114,7 @@ def createpost(request):
 
             cat = Category.objects.get(name=category)
 
-            if category == 'Financijske usluge' or category == "Usluge osiguranja":
+            if category == 'Finansijske' or category == "Osiguravajuće":
                 title = request.POST['naslov']
             else:
                 if btobtype == 1:
@@ -123,7 +124,7 @@ def createpost(request):
                 else:
                     title = "Partnerstvo"
 
-            if category == 'Financijske usluge' or category == "Usluge osiguranja":
+            if category == 'Finansijske' or category == "Osiguravajuće":
                 position = request.POST['position']
             else:
                 position = ""
@@ -137,7 +138,7 @@ def createpost(request):
 
             sweetify.success(request, title="Uspješno kreiran oglas", icon="success", timer=8000)
 
-            return redirect('newpotraznja')
+            return redirect('showpost', post.pk)
 
     return redirect('home')
 
@@ -175,7 +176,7 @@ def bankUsluge(request):
 
     if Company.objects.filter(userID=request.user).exists():
         user = request.user
-        financije = Category.objects.get(name="Financijske usluge")
+        financije = Category.objects.get(name="Finansijske")
         userP = UserProfile.objects.get(userID=request.user)
         return render(request, 'bankarskeUsluge.html', {'user': user, 'userP': userP, 'financije': financije})
     else:
@@ -184,9 +185,11 @@ def bankUsluge(request):
 
 def osiguranjeUsluge(request):
 
+
+
     user = request.user
     userP = UserProfile.objects.get(userID=user)
-    cat = Category.objects.get(name="Usluge osiguranja")
+    cat = Category.objects.get(name="Osiguravajuće")
 
     return render(request, 'OsiguranjeUsluge.html', {'user': user, 'userP': userP, 'cat': cat})
 
@@ -218,11 +221,11 @@ def urediPost(request, id):
 
     if post.type == 1:
         return render(request, 'newpost2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
-    elif post.type == 2 and post.categoryID.name != "Financijske usluge" and post.categoryID.name != "Usluge osiguranja":
+    elif post.type == 2 and post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
         return render(request, 'dodajPotraznju2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
-    elif post.type == 2 and post.categoryID.name == "Financijske usluge":
+    elif post.type == 2 and post.categoryID.name == "Finansijske":
         return render(request, 'bankarskeUsluge2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
-    elif post.type == 2 and post.categoryID.name == "Usluge osiguranja":
+    elif post.type == 2 and post.categoryID.name == "Osiguravajuće":
         return render(request, 'OsiguranjeUsluge2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
     else:
         return redirect('home')
@@ -318,7 +321,7 @@ def updatePost(request, id):
 
             cat = Category.objects.get(name=category)
 
-            if category == 'Financijske usluge' or category == "Usluge osiguranja":
+            if category == 'Finansijske' or category == "Osiguravajuće":
                 title = request.POST['naslov']
             else:
                 if btobtype == 1:
@@ -328,7 +331,7 @@ def updatePost(request, id):
                 else:
                     title = "Partnerstvo"
 
-            if category == 'Financijske usluge' or category == "Usluge osiguranja":
+            if category == 'Finansijske' or category == "Osiguravajuće":
                 position = request.POST['position']
             else:
                 position = ""

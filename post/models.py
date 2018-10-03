@@ -47,6 +47,17 @@ class Post(models.Model):
     def count_users(self):
         return WorkersPosts.objects.filter(postID=self.pk).count()
 
+    @property
+    def dateDiff(self):
+        time = timezone.now() - self.created_at
+
+        days, seconds = time.days, time.seconds
+        hours = days * 24 + seconds // 3600
+        minutes = (seconds % 3600) // 60
+        seconds = seconds % 60
+
+        return minutes
+
 
 class Tag(models.Model):
 

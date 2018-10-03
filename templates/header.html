@@ -1,6 +1,7 @@
 {% load static %}
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 <style>
 
@@ -9,6 +10,42 @@
         color: inherit;
     }
 
+  .swal2-header{
+  	font-family: 'Galano Bold';
+  }
+  .swal2-content{
+  	font-family: 'Galano Regular';
+  }
+
+			.regBox__lijevo--box.active p {
+    color: black;
+}
+	.registracija.regBox{
+		width: 200px;
+		-webkit-transition:300ms linear;
+	-moz-transition:300ms linear;
+	-o-transition:300ms linear;
+	-ms-transition:300ms linear;
+	transition:300ms linear;
+	}
+	.registracija.regBox, .regBox__lijevo{
+		width: 500px;
+	}
+	.registracija .regBox__desno{
+		display: none;
+		opacity: 0;
+		-webkit-transition:1000ms linear;
+	-moz-transition:300ms linear;
+	-o-transition:1000ms linear;
+	-ms-transition:1000ms linear;
+	transition:1000ms linear;
+	}
+	.regBox__lijevo--box:nth-child(1){
+		border-top-right-radius: 10px;
+	}
+	.regBox__lijevo--box:nth-child(2){
+		border-bottom-right-radius: 10px;
+	}
 </style>
 <form method="post" action="{% url 'register' %}" id="formaReg">
     {% csrf_token %}
@@ -16,7 +53,7 @@
 
 	<div id="myModal" class="modal" style="z-index: 9999999">
 
-	  <div class="regBox">
+	  <div class="regBox registracija">
 	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
 		<div class="regBox__lijevo">
 			<div class="regBox__lijevo--box active" id="osobaSector">
@@ -52,7 +89,7 @@
 					      <label class="form-label" for="djel" id="Djelatnost"></label>
 
                     <select name="Category" id="djel">
-						<option value="" disabled selected>Izaberite Djelatnost</option>
+						<option value="" disabled selected>Izaberite djelatnost</option>
                         {% for i in ind %}
 			    		<option value="{{ i.name }}">{{ i.name }}</option>
                         {% endfor %}
@@ -88,7 +125,7 @@
 		<div id="myModal2" class="modal" style="z-index: 9999999">
 
 	  <div class="regBox" style="height: 461px">
-	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close closeReg">
 		<div class="regBox__desno" style="width: 100%">
 			<div>
 				<h1 id="naslovTekst">PRIJAVA ZA KORISNIKE</h1>
@@ -201,32 +238,32 @@ ul {list-style: none}
 		<div class="header__navigation--undefined"></div>
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
-				<span onclick="location.href='{% url 'home' %}'" class="selected">Početna</span>
-                <span class="sektor">Usluge
+				<span onclick="location.href='{% url 'home' %}'" class="selected" id="pocetna_nav">Početna</span>
+                <span class="sektor" id="usluge_nav">Usluge
 					<div class="sektorBottom">
 					    <ul style="position: relative;">
-					    	<li onclick="location.href='/firme'"><div class="saStrane"></div>Firme</li>
-					    	<li><div class="saStrane" style="top: 33px !important;"></div>Bankarske usluge</li>
-					    	<li><div class="saStrane" style="top: 73px !important;"></div>Usluge osiguranja</li>
+					    	<li onclick="location.href='/firme'"><div class="saStrane"></div>Firme i udruženja</li>
+					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Banke</li></a>
+					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 73px !important;"></div>Osiguranja</li></a>
 					    	<li><div class="saStrane" style="top: 118px !important;"></div>Konkursi za posao</li>
 					    </ul>
 					</div>
 				</span>
-                <span class="konkurs">Oglasi
+                <span class="konkurs" id="oglasi_nav">Oglasi
 					<div class="konkursBottom">
 					    <ul>
-					    	<li><div class="saStrane"></div> Kadrovska potraznja </li>
-					    	<li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li>
-					    	<li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li>
-					    	<li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li>
-					    	<li><div class="saStrane" style="top: 160px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled oglasa</li>
+					    	<a href="{% url 'newpost' %}"><li><div class="saStrane" ></div> Kadrovska potraznja </li></a>
+					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li></a>
+					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li></a>
+					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li></a>
+                            <a href="{% url 'pretraga' %}" ><li><div class="saStrane" style="top: 160px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled oglasa</li></a>
 					    </ul>
 					</div>
 				</span>
-				<span class="konsalting" onclick=" location.href='{% url 'konsalting' %}'" >Konsalting
+				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >Konsalting
 
 				</span>
-				<span onclick="location.href='/onama'" style="width: 80px">O nama</span>
+				<span onclick="location.href='/onama'" style="width: 80px" id="onama_nav">O nama</span>
 			</div>
 			<div class="header__navigation--dugmad">
 				<span id="myBtn2" style="cursor: pointer;">Prijava</span>
@@ -299,27 +336,27 @@ ul {list-style: none}
 					<div class="sektorBottom">
 					    <ul style="position: relative;">
 					    	<li onclick="location.href='/firme'"><div class="saStrane"></div>Firme i udruženja</li>
-					    	<li><div class="saStrane" onclick="location.href='{% url 'bankUsluge' %}'" style="top: 33px !important;"></div>Banke</li>
-					    	<li><div class="saStrane" onclick="location.href='{% url 'osiguranjeUsluge' %}'" style="top: 73px !important;"></div>Osiguranja</li>
-					    	<li><div class="saStrane" style="top: 118px !important;"></div>Konkursi za posao</li>
+					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Banke</li></a>
+					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 73px !important;"></div>Osiguranja</li></a>
+					    	<a href="{% url 'pretraga' %}" ><li><div class="saStrane" style="top: 118px !important;"></div>Konkursi za posao</li></a>
 					    </ul>
 					</div>
 				</span>
 				<span class="konkurs">Oglasi
 					<div class="konkursBottom">
 					    <ul>
-					    	<li><div class="saStrane" onclick="location.href='{% url 'newpost' %}'" ></div> Kadrovska potraznja </li>
-					    	<li><div class="saStrane" onclick="location.href='{% url 'newpotraznja' %}'" style="top: 33px !important;"></div> Poslovni oglas</li>
-					    	<li><div class="saStrane" onclick="location.href='{% url 'bankUsluge' %}'" style="top: 75px !important;"></div> Bankarske usluge</li>
-					    	<li><div class="saStrane" onclick="location.href='{% url 'osiguranjeUsluge' %}'" style="top: 118px !important;"></div> Usluge osiguranja</li>
-                            <a href='{% url 'pretraga' %}' ><li><div class="saStrane" style="top: 160px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled oglasa</li></a>
+					    	<a href="{% url 'newpost' %}"><li><div class="saStrane" ></div> Kadrovska potraznja </li></a>
+					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li></a>
+					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li></a>
+					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li></a>
+                            <a href="{% url 'pretraga' %}" ><li><div class="saStrane" style="top: 160px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled oglasa</li></a>
 					    </ul>
 					</div>
 				</span>
-				<span class="konsalting" onclick="location.href='{% url 'konsalting' %}'" >Konsalting
+				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >Konsalting
 
 				</span>
-				<span onclick="location.href='{% url 'onama' %}'" style="width: 80px">O nama</span>
+				<span onclick="location.href='/onama'" style="width: 80px" id="onama_nav">O nama</span>
 			</div>
 			<div class="header__navigation--dugmad">
 				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
@@ -327,13 +364,13 @@ ul {list-style: none}
 					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px; margin-right: 150px" class="postavke">{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px"></i>
 					<div class="postavkeBottom">
 					    <ul style="position: relative;">
-					    	<li onclick="location.href='{% url 'profil' %}'"><div onclick="location.href = {% url 'profil' %}" class="saStrane"></div>Profil firme</li>
-					    	<li onclick="location.href='{% url 'editprofil' %}'"><div class="saStrane" style="top: 33px !important;"></div>Postavke</li>
-					    	<li class="logoutBtn" onclick="location.href='{% url 'signout' %}'"><div class="saStrane" style="top: 73px !important;"></div>Odjava</li>
-                            <li class="logoutBtn" onclick="location.href='{% url 'dashboard' %}'"><div class="saStrane" style="top: 113px !important;"></div>Dashboard</li>
-
+					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>Profil firme</li></a>
+					    	 <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Postavke</li></a>
+					    	 <a href="{% url 'signout' %}"><li class="logoutBtn"><div class="saStrane" style="top: 73px !important;"></div>Odjava</li></a>
+                             <a href="{% url 'dashboard' %}"><li class="logoutBtn"><div class="saStrane" style="top: 113px !important;"></div>Dashboard</li></a>
 					    </ul>
-					</div></div>
+					</div>
+				</div>
 				</div>
 			</div>
 			<div class="header__navigation--call">
