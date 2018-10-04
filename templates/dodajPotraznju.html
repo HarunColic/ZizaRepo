@@ -57,7 +57,7 @@
 
 
             <!-- FORMA -->
-			<form style="margin-top: 70px" id="newpotraznjaForm" method="post" action="{% url 'createpost' %}">
+			<form style="margin-top: 70px" id="newpotraznjaForm" method="post" action="{% url 'createpost' %}" enctype="multipart/form-data" >
 				{% csrf_token %}
                 <input type="hidden" name="type" value="2">
                 <div style="display: flex;">

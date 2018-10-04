@@ -100,10 +100,11 @@ def profil(request):
             else:
                 posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(
                     categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
+                return render(request, 'profilTvrtka.html',
+                          {'user': user, 'userP': userP, 'company': company, 'posts': posts})
 
-
-    elif Employee.objects.filter(userID=user).exists():
-        return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
+        elif Employee.objects.filter(userID=user).exists():
+            return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
     else:
         return render(request, 'index.html')
 
@@ -481,3 +482,66 @@ def dashboard(request):
 
     else:
         return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))
+
+
+def testPretraga(request):
+
+    auth = False
+
+    if request.user.is_authenticated:
+
+        auth = True
+
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
+
+        if request.POST.get('pretragaTrigger', "False") == "True":
+            grad = request.POST.get('gradovi', None)
+            kategorija = request.POST.get('kategorije', None)
+            kljucnaRijec = request.POST.get('kljucnaRijec', None)
+
+            if Company.objects.filter(userID=user).exists():
+
+                userComp = Company.objects.get(userID=user)
+                if userComp.categoryID.name == "Finansijske":
+                    posts = Post.objects.all().filter(type=2).exclude().exclude(
+                        categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
+                elif userComp.categoryID.name == "Osiguravajuće":
+                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Finansijske").exclude(
+                        expires_at__lte=datetime.now())
+                elif superUser(request.user):
+                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
+                else:
+                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(
+                        categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
+            else:
+                posts = Post.objects.filter(type=1).exclude(expires_at__lte=datetime.now())
+
+            if grad is not None:
+                posts = posts.filter(location=grad)
+            if kategorija is not None:
+                ind = Category.objects.get(name=kategorija)
+                posts = posts.filter(categoryID=ind)
+            if kljucnaRijec is not "":
+                posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+
+        else:
+            if Company.objects.filter(userID=user).exists():
+                posts = Post.objects.all().filter(type=2)
+            else:
+                posts = Post.objects.all().filter(type=1)
+
+        data = posts.exclude(expires_at__lte=datetime.now())
+
+        userP = UserProfile.objects.get(userID=user)
+        gradovi = City.objects.all()
+        cat = Category.objects.filter(type=1)
+        counter = data.count()
+        users = User.objects.all()
+        userPs = UserProfile.objects.all()
+        btb = ["Ponuda", "Potražnja", "Partnerstvo"]
+        return render(request, 'pretrazi.html',
+                      {'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth,
+                       'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
+    else:
+        return redirect('home')
