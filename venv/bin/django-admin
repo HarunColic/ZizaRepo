@@ -1,4 +1,4 @@
-#!/home/harun/PycharmProjects/Ziza/venv/bin/python
+#!/var/www/html/zizarepo/venv/bin/python3
 
 # -*- coding: utf-8 -*-
 import re
