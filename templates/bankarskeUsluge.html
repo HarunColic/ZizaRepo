@@ -265,11 +265,11 @@
 				<div style="margin-top: 20px; display: flex;" class="kontaktiagain">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Kontakt e-mail adresa</label><br>
-						<input type="email" name="email" style="width: 100%" placeholder="npr. ime@adresa.com">
+						<input type="email" value="{{ user.email }}" name="email" style="width: 100%" placeholder="npr. ime@adresa.com">
 					</div>
 					<div style="width: 43.75%" class="kontaktBrojDiv">
 						<label>Kontakt broj</label><br>
-						<input type="text" name="brojTel" id="kontaktBrojInput" style="width: 100%" placeholder="npr. 06...">
+						<input type="text" name="brojTel" value="{{ userP.brojtelefona }}" id="kontaktBrojInput" style="width: 100%" placeholder="npr. 06...">
 					</div>
 				</div>
 				<div style="margin-top: 20px; display: flex;">

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ba">
 <head>
+{% load static %}
+
 	<title>ŽIŽA.ba | Kreiraj oglas</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
@@ -8,20 +10,20 @@
     <meta name="author" content="META5">
 	<meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
-	<link rel="stylesheet" type="text/css" href="../static/style.css">
-	<link rel="stylesheet" type="text/css" href="../static/style-oglas.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}">
 	<link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.css">
 	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../static/style-dodajOglas.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'style-dodajOglas.css' %}">
 </head>
 <body>
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
 			<div class="breadcrumb">
 				<a href="{% url 'home' %}">Početna</a>
-				<img src="../static/images/arrowDesnoZuto.png" style="display: none;">
+				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
 				<a href="#" style="display: none;">Oglasi</a>
-				<img src="../static/images/arrowDesnoZuto.png" style="margin-left: 9px; margin-right: 9px">
+				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
 				<a href="#">Objava</a>
 			</div>
 			<div class="linijaD"></div>

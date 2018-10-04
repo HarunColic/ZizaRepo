@@ -1,4 +1,4 @@
-#!/var/www/html/zizarepo/venv/bin/python3
+#!/home/harun/PycharmProjects/Ziza/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":

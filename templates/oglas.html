@@ -20,6 +20,11 @@
 			font-family: 'Galano Regular';
 			color: #7c7a71;
 		}
+            a{
+        text-decoration: none;
+        color: inherit;
+    }
+
 	</style>
 </head>
 <body>
@@ -56,9 +61,9 @@
 				<h2><span>OGLAS /</span> {% if post.type == 1 %} {{ post.title }} {% else %} {{ post.title }} : {{ post.categoryID.name }} {% endif %}</h2>
 				<p>Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
 			</div>
-			<div class="downloadPDF">
+			<a href="/download?file={{ post.attachment.name }}" ><div class="downloadPDF">
 				<img src="{% static "images/downloadikona.png" %}"> PDF OGLAS
-			</div>
+            </div></a>
 		</div>
 		<div class="tabelarni">
 			<div>

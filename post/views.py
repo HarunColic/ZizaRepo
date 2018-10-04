@@ -11,6 +11,8 @@ from account.views import validation
 from django.core.files.storage import FileSystemStorage
 import os
 from account.views import superUser
+from django.http import HttpResponse
+from django.conf import settings
 
 
 def newpost(request):
@@ -224,6 +226,10 @@ def prijaviOglas(request, id):
 def urediPost(request, id):
 
     post = Post.objects.get(pk=id)
+
+    if request.user != post.userID:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
     user = request.user
     userP = UserProfile.objects.get(userID=user)
     cat = Category.objects.filter(type=0)
@@ -405,3 +411,21 @@ def worstCaseScenario(request, passwrd):
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def download(request):
+
+    if request.GET.get('file', None) is None:
+        sweetify.sweetalert(request, title="Datoteka ne postoji", icon="error")
+        return False
+
+    file_path = os.path.join(settings.MEDIA_ROOT, request.GET.get('file', None))
+
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/pdf")
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            return response
+    else:
+        sweetify.sweetalert(request, title="Datoteka ne postoji", icon="error")
+        return False

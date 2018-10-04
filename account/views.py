@@ -30,7 +30,7 @@ def superUser(user):
 def validation(request, args):
 
     for i in args:
-        if i == "":
+        if i == "" or i is None:
             sweetify.error(request, title="Sva polja su obavezna", text="", icon="error", timer=10000)
             return False
 
