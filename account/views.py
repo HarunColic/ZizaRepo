@@ -540,7 +540,7 @@ def testPretraga(request):
         users = User.objects.all()
         userPs = UserProfile.objects.all()
         btb = ["Ponuda", "Potražnja", "Partnerstvo"]
-        return render(request, 'pretrazi.html',
+        return render(request, 'testPretraga.html',
                       {'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth,
                        'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
     else:
