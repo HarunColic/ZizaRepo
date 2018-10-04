@@ -26,7 +26,7 @@ SECRET_KEY = '8yd0w1$#g6zzpigdqd7!3*80k5q7d=v!(rhv6#s_3fsw5=@t*v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['185.99.2.141','ziza.ba', 'www.ziza.ba']
 
 
 # Application definition
@@ -108,11 +108,11 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'testingziza',
-        'USER': 'postgres',
-        'PASSWORD': '',
+        'NAME': 'zizadb',
+        'USER': 'cola',
+        'PASSWORD': 'cola',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 
