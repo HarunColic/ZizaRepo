@@ -98,96 +98,8 @@
         </div><!-- searchBox -->
     </form>
     <div class="kucice">
-    {% if counter == 0 %}
         <div class="kolona firstKol">
-				<div class="single-kucica respKuc" style="margin-top: -87px">
-					<div class="logotipFirme"><img src="{% static 'images/hpinvest.png' %}"></div>
-					<div class="jobInfo">
-						<span class="struka"></span>
-						<span class="pozicija"></span>
-						<span class="vrijeme">Prije 0h</span>
-						<span class="lokacijarada">Bosna i Hercegovina</span>
-						<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-					</div>
-				</div>
-        <div class="single-kucica respKuc" style="margin-top: -87px">
-					<div class="logotipFirme"><img src="{% static 'images/hpinvest.png' %}"></div>
-					<div class="jobInfo">
-						<span class="struka"></span>
-						<span class="pozicija"></span>
-						<span class="vrijeme">Prije 0h</span>
-						<span class="lokacijarada">Bosna i Hercegovina</span>
-						<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="kolona srednjaKol">
-				<div class="single-kucica respKuc" style="margin-top: -87px">
-					<div class="logotipFirme"><img src="{% static 'images/hpinvest.png' %}"></div>
-					<div class="jobInfo">
-						<span class="struka"></span>
-						<span class="pozicija"></span>
-						<span class="vrijeme">Prije 0h</span>
-						<span class="lokacijarada">Bosna i Hercegovina</span>
-						<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="kolona respKol">
-				<div class="single-kucica respKuc" style="margin-top: -87px">
-					<div class="logotipFirme"><img src="{% static 'images/hpinvest.png' %}"></div>
-					<div class="jobInfo">
-						<span class="struka"></span>
-						<span class="pozicija"></span>
-						<span class="vrijeme">Prije 0h</span>
-						<span class="lokacijarada">Bosna i Hercegovina</span>
-						<div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-					</div>
-				</div>
-			</div>
-    {% else %}
-        <!-- KUCICE -->
-            <div class="kolona firstKol">
-
-        {% for d in data %}
-
-                {% if forloop.counter == 0 or forloop.counter0|divisibleby:3 %}
-                    <a href={% url 'showpost' id=d.pk %}>
-
-
-                <div class="single-kucica">
-
-                    {% for u in users %}
-                        {% if d.userID == u %}
-                            {% for up in userPs %}
-                                 {% if up.userID == u %}
-                                     {% if up.image %}
-                        <div class="logotipFirme" ><img style="height: 200px; width: 300px; " src="{{ up.image.url }}" ></div>
-                                         {% else %}
-                        <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
-                                         {% endif %}
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-
-                    <div class="jobInfo">
-                        <span class="struka">{% if d.type == 2 %} {{ d.title }}: {{ d.categoryID.name }}{% endif %}</span>
-                       {% if d.type == 1 %} <span class="pozicija">{{ d.position }}</span>{% endif %}
-                        <span class="vrijeme">{{ d.created_at|date:"d.m.Y" }}</span>
-                        <span class="lokacijarada">{{ d.location }} {{ d.region }}</span>
-                        <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-                    </div>
-                </div>
-                    </a>
-                    {% endif %}
-            {% endfor %}
-            </div>
-
-    <!--
-                <div class="single-kucica" style="margin-top: -87px">
+            <div class="single-kucica" style="margin-top: -87px">
                     <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
                     <div class="jobInfo">
                         <span class="struka">GRAĐEVINA</span>
@@ -197,180 +109,130 @@
                         <div class="srce"><img src="../static/images/srce.png"></div>
                     </div>
                 </div>
-                <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-                <div class="single-kucica respKuc" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-                <div class="single-kucica respKuc" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-            -->
-
-            <div class="kolona srednjaKol">
-{% for d in data %}
-                {% if forloop.counter|divisibleby:3 %}
-
-                <a href={% url 'showpost' id=d.pk %}>
-                    <div class="single-kucica">
-
-
-                    {% for u in users %}
-                        {% if d.userID == u %}
-                            {% for up in userPs %}
-                                 {% if up.userID == u %}
-                                     {% if up.image %}
-                        <div class="logotipFirme" ><img style="height: 200px; width: 300px;" src="{{ up.image.url }}" ></div>
-                                         {% else %}
-                        <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
-                                         {% endif %}
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-
-                   <div class="jobInfo">
-                        <span class="struka">{% if d.type == 2 %} {{ d.title }}: {{ d.categoryID.name }}{% endif %}</span>
-                       {% if d.type == 1 %} <span class="pozicija">{{ d.position }}</span>{% endif %}
-                        <span class="vrijeme">{{ d.created_at|date:"d.m.Y"}}</span>
-                        <span class="lokacijarada">{{ d.location }} {{ d.region }}</span>
-                        <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-                    </div>
-                </div>
-                </a>
-
-                    {% endif %}
-            {% endfor %}
-            </div>
-
-            <!--
-                <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-                <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-                <div class="single-kucica respKuc" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-            -->
-
-
-            <div class="kolona respKol">
-            {% for d in data %}
-                {% if forloop.counter0 == 1 or forloop.revcounter0|divisibleby:3 %}
-                <a href={% url 'showpost' id=d.pk %}>
-                <div class="single-kucica">
-
-                    {% for u in users %}
-                        {% if d.userID == u %}
-                            {% for up in userPs %}
-                                 {% if up.userID == u %}
-                                     {% if up.image %}
-                        <div class="logotipFirme" ><img style="width: 300px; height: 200px;" src="{{ up.image.url }}" ></div>
-                                         {% else %}
-                        <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
-                                         {% endif %}
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                   <div class="jobInfo">
-                        <span class="struka">{% if d.type == 2 %} {{ d.title }}: {{ d.categoryID.name }}{% endif %}</span>
-                       {% if d.type == 1 %} <span class="pozicija">{{ d.position }}</span>{% endif %}
-                        <span class="vrijeme">{{ d.created_at|date:"d.m.Y" }}</span>
-                        <span class="lokacijarada">{{ d.location }} {{ d.region }}</span>
-                        <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-                    </div>
-                </div>
-                </a>
-                {% endif %}
-            {% endfor %}
-            </div>
-    {% endif %}
-    </div>
-
-<!--
-                <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-                <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <!-- kucice -->
+        <div class="kolona srednjaKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
 
-{#        <div class="navigacijaTipke">#}
-{#            <div>1</div>#}
-{#            <div class="activTip">2</div>#}
-{#            <div>3</div>#}
-{#            <div>4</div>#}
-{#            <div>5</div>#}
-{#            <div>6</div>#}
-{#            <div>7</div>#}
-{#            <div>8</div>#}
-{#            <div>9</div>#}
-{#        </div>#}
+        <div class="kolona respKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="kucice" style="margin-top: -500px">
+        <div class="kolona firstKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="kolona srednjaKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="kolona respKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="kucice" style="margin-top: -500px">
+        <div class="kolona firstKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="kolona srednjaKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="kolona respKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+       <div class="navigacijaTipke">
+            <div>1</div>
+            <div class="activTip">2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+
+
+        
         <div class="footer">
             <div class="footer__traka">
                 <div class="footer__traka--logo">
@@ -434,7 +296,7 @@
                 </div>
             </div>
         </div> <!-- footer -->
-    {% load sweetify %}
+    {% load sweetify %}   
     {% sweetify %}
     </body>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -445,12 +307,12 @@
         $('.single-kucica').mouseover(function(){
             $(this).find('.struka').css('color', '#fecd35');
             $(this).find('.struka').css('text-shadow', 'none');
-            $(this).css('background-image', 'url(images/neaktivna.png)');
+            $(this).css('background-image', "url({% static 'images/neaktivna.png' %})");
     });
     $('.single-kucica').mouseout(function(){
             $(this).find('.struka').css('color', '#eeede7');
             $(this).find('.struka').css('text-shadow', '0px 5px 10px rgba(22, 22, 22, 0.25)');
-            $(this).css('background-image', 'url(images/aktivna.png)');
+            $(this).css('background-image', "url({% static 'images/aktivna.png' %})");
     });
     </script>
     </html>
