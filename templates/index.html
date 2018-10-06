@@ -749,14 +749,14 @@ ul {list-style: none}
 			<img src="../static/images/optimised/arrowBig-min.png" class="bounce" draggable="false" width="64px" height="32px">
 		</div>
 		<div class="uvod__slike">
-			<div class="uvod__slike--prijava"></div>
-			<div class="uvod__slike--pcelaPrijava"></div>
-			<div class="uvod__slike--registracija"></div>
-			<div class="uvod__slike--pcelaRegistracija"></div>
-			<div class="uvod__slike--baloncic">
+			<div class="uvod__slike--prijava tLog"></div>
+			<div class="uvod__slike--pcelaPrijava tkon"></div>
+			<div class="uvod__slike--registracija tReg"></div>
+			<div class="uvod__slike--pcelaRegistracija tReg"></div>
+			<div class="uvod__slike--baloncic tReg">
 				<p class="animirajKucanje"></p>
 			</div>
-            <div class="uvod__slike--baloncic" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
+            <div class="uvod__slike--baloncic tkon" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
 				<p style="margin-right: -10px; margin-bottom: 80px; text-align: center;" class="animirajKucanje2"></p>
 			</div>
 		</div> <!-- uvod__slike -->
@@ -1028,6 +1028,19 @@ ul {list-style: none}
 		$('.regBox__lijevo').css('width', '500px');
 	});
 
+    $(".tReg").click(function(){
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+    })
+
+    $(".tLog").click(function(){
+        var modal2 = document.getElementById('myModal2');
+        modal2.style.display = "block";
+    })
+
+    $(".tkon").click(function(){
+        location.href = {% url 'pretraga' %};
+    })
 </script>
 </html>
 
