@@ -452,7 +452,6 @@ def pretraga(request):
         if superUser(request.user):
             posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
 
-
         data = posts.exclude(expires_at__lte= datetime.now())
         counter = data.count()
         data = list(data)
