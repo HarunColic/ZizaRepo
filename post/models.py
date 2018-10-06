@@ -50,7 +50,7 @@ class Post(models.Model):
     @property
     def dateDiff(self):
         time = timezone.now() - self.created_at
-
+        
         days, seconds = time.days, time.seconds
         hours = days * 24 + seconds // 3600
         minutes = (seconds % 3600) // 60

@@ -548,3 +548,6 @@ def testPretraga(request):
                        'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
     else:
         return redirect('home')
+
+def firme(request):
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

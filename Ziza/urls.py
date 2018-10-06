@@ -50,6 +50,7 @@ urlpatterns = [
     url('updatePost/(?P<id>[0-9]+)/', P_Views.updatePost, name='updatePost'),
     url('download', P_Views.download, name="download"),
     url('testPretraga', AC_Views.testPretraga, name="testPretraga"),
+    url('firme', AC_Views.firme, name="firme"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
