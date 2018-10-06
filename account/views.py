@@ -420,16 +420,15 @@ def pretraga(request):
             grad = request.POST.get('gradovi', None)
             kategorija = request.POST.get('kategorije', None)
             kljucnaRijec = request.POST.get('kljucnaRijec', None)
-
             if Company.objects.filter(userID=user).exists():
 
                 userComp = Company.objects.get(userID=user)
-                if userComp.categoryID.name == "Finansijske":
+                if superUser(request.user):
+                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
+                elif userComp.categoryID.name == "Finansijske":
                     posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
                 elif userComp.categoryID.name == "Osiguravajuće":
                     posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now())
-                elif superUser(request.user):
-                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
                 else:
                     posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
             else:
@@ -449,17 +448,22 @@ def pretraga(request):
             else:
                 posts = Post.objects.all().filter(type=1)
 
-        data = posts.exclude(expires_at__lte= datetime.now())
 
+        if superUser(request.user):
+            posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
+
+
+        data = posts.exclude(expires_at__lte= datetime.now())
+        counter = data.count()
+        data = list(data)
         userP = UserProfile.objects.get(userID=user)
         gradovi = City.objects.all()
         cat = Category.objects.filter(type=1)
-        counter = data.count()
         users = User.objects.all()
         userPs = UserProfile.objects.all()
         btb = ["Ponuda", "Potražnja", "Partnerstvo"]
         return render(request, 'pretrazi.html',
-                      {'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
+                      {'iterRange': range(0,counter,3),'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
     else:
         return redirect('home')
 
@@ -503,14 +507,14 @@ def testPretraga(request):
             if Company.objects.filter(userID=user).exists():
 
                 userComp = Company.objects.get(userID=user)
-                if userComp.categoryID.name == "Finansijske":
+                if superUser(request.user):
+                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
+                elif userComp.categoryID.name == "Finansijske":
                     posts = Post.objects.all().filter(type=2).exclude().exclude(
                         categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
                 elif userComp.categoryID.name == "Osiguravajuće":
                     posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Finansijske").exclude(
                         expires_at__lte=datetime.now())
-                elif superUser(request.user):
-                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
                 else:
                     posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(
                         categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
