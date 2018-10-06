@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/account/static/skripta.js" beforeDir="false" afterPath="$PROJECT_DIR$/account/static/skripta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,9 +64,9 @@
           <entry key="Django Console" value="21" />
           <entry key="css" value="76" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="19216" />
-          <entry key="js" value="185" />
-          <entry key="py" value="27981" />
+          <entry key="html" value="19237" />
+          <entry key="js" value="250" />
+          <entry key="py" value="28035" />
           <entry key="py@Ziza" value="593" />
           <entry key="txt" value="7" />
         </counts>
@@ -73,10 +75,10 @@
         <counts>
           <entry key="CSS" value="76" />
           <entry key="CommandLine" value="583" />
-          <entry key="HTML" value="19216" />
-          <entry key="JavaScript" value="185" />
+          <entry key="HTML" value="19237" />
+          <entry key="JavaScript" value="250" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="28001" />
+          <entry key="Python" value="28055" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -86,7 +88,7 @@
           <entry key="css" value="26" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="213" />
-          <entry key="js" value="18" />
+          <entry key="js" value="19" />
           <entry key="py" value="139" />
         </counts>
       </usages-collector>
@@ -95,7 +97,7 @@
           <entry key="CSS" value="26" />
           <entry key="HTML" value="213" />
           <entry key="Ini" value="1" />
-          <entry key="JavaScript" value="18" />
+          <entry key="JavaScript" value="19" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Python" value="139" />
         </counts>
@@ -124,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+            <state relative-caret-position="87">
+              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
               <folding>
                 <element signature="e#628#660#0" expanded="true" />
               </folding>
@@ -169,23 +171,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2594">
-              <caret line="457" selection-start-line="457" selection-end-line="457" />
+            <state relative-caret-position="-540">
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
-                <marker date="1538867096702" expanded="true" signature="861:960" ph="..." />
-                <marker date="1538867096702" expanded="true" signature="990:1191" ph="..." />
-                <marker date="1538867096702" expanded="true" signature="19425:19426" ph="..." />
+                <marker date="1538868798624" expanded="true" signature="861:960" ph="..." />
+                <marker date="1538868798624" expanded="true" signature="990:1191" ph="..." />
+                <marker date="1538868798624" expanded="true" signature="19723:19724" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="1032" column="13" selection-start-line="1032" selection-start-column="13" selection-end-line="1032" selection-end-column="13" />
+            <state relative-caret-position="185">
+              <caret line="803" column="69" selection-start-line="803" selection-start-column="69" selection-end-line="803" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/account/static/skripta.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -208,15 +218,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/testpristup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1170">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -229,7 +230,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>myBtn2</find>
       <find>uredi</find>
       <find>load st</find>
       <find>download</find>
@@ -255,10 +255,11 @@
       <find>superUser</find>
       <find>superU</find>
       <find>pretraga</find>
-      <find>pretraga(</find>
       <find>uvod__</find>
       <find>tLogin</find>
       <find>tLog</find>
+      <find>pretraga(</find>
+      <find>posaoButton</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -273,7 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/account/templates/index.html" />
         <option value="$PROJECT_DIR$/static/style-logiran.css" />
         <option value="$PROJECT_DIR$/templates/acc_active_email.html" />
         <option value="$PROJECT_DIR$/templates/logiran.html" />
@@ -321,9 +321,10 @@
         <option value="$PROJECT_DIR$/templates/dodajPotraznju2.html" />
         <option value="$PROJECT_DIR$/post/management/commands/kategorije.py" />
         <option value="$PROJECT_DIR$/templates/pretrazi.html" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/header.html" />
+        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/account/static/skripta.js" />
       </list>
     </option>
   </component>
@@ -522,7 +523,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952693" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960095" weight="0.2512235" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960095" visible="true" weight="0.2512235" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22838499" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -588,9 +589,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/jquery-1.11.2.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/tokens.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -870,23 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding>
-            <element signature="e#628#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="239" column="33" selection-start-line="239" selection-start-column="33" selection-end-line="239" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1228">
@@ -919,6 +900,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -929,30 +917,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2594">
-          <caret line="457" selection-start-line="457" selection-end-line="457" />
+        <state relative-caret-position="299">
+          <caret line="239" column="33" selection-start-line="239" selection-start-column="33" selection-end-line="239" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
           <folding>
-            <element signature="e#0#65#0" expanded="true" />
-            <marker date="1538867096702" expanded="true" signature="861:960" ph="..." />
-            <marker date="1538867096702" expanded="true" signature="990:1191" ph="..." />
-            <marker date="1538867096702" expanded="true" signature="19425:19426" ph="..." />
+            <element signature="e#628#660#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.html">
+    <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="282" column="4" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
+        <state relative-caret-position="-540">
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+            <marker date="1538868798624" expanded="true" signature="861:960" ph="..." />
+            <marker date="1538868798624" expanded="true" signature="990:1191" ph="..." />
+            <marker date="1538868798624" expanded="true" signature="19723:19724" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="1032" column="13" selection-start-line="1032" selection-start-column="13" selection-end-line="1032" selection-end-column="13" />
+        <state relative-caret-position="185">
+          <caret line="803" column="69" selection-start-line="803" selection-start-column="69" selection-end-line="803" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/static/skripta.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>

@@ -39,14 +39,14 @@ def validation(request, args):
 
 def home(request):
 
-    posts = Post.objects.order_by('created_at')[0:4]
-
+    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('created_at')[0:4]
+    postsB2B = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('created_at')[0:4]
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
-        return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None, 'posts': posts})
+        return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None, 'postsbc': postsB2C,'postbb':postsB2B})
     else:
         industries = Category.objects.filter(type=0)
-        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries, 'posts': posts})
+        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries, 'postsbc': postsB2C,'postbb':postsB2B})
 
 
 def profil(request):

@@ -800,8 +800,22 @@ ul {list-style: none}
 			</div>
 			<div class="zadnjiPoslovi__last--timeline">
 
-                {% for p in posts %}
-                <div class="zadnjiPoslovi__last--timeline--stavka">
+                {% for p in postsB2C %}
+                <div class="zadnjiPoslovi__last--timeline--stavka b2c">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job">
+						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
+					</div>
+				</div>
+                {% endfor %}
+
+            {% for p in postsB2B %}
+                <div class="zadnjiPoslovi__last--timeline--stavka b2b hidden">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
