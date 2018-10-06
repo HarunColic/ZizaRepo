@@ -49,16 +49,23 @@
                 color: #fff !important;
             }
             @media only screen and (max-width: 889px){
-                .kucice{
-                    margin-bottom: -650px;
-                }
                 .navigacijaTipke {
                     margin-left: 0;
                     justify-content: center;
                     margin-bottom: -50px;
                 }
             }
+            .navigacijaTipke{
+            	display: none;
+            }
+            .logotipFirme img{
+            	max-width: 300px;
+            }
+            .srce{
+            	display: none;
+            }
         </style>
+
 
     {% with var1=user var2=auth var3=userP %}
     {% include 'header.html' %}
@@ -66,7 +73,7 @@
 
         <div class="searchTop">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" width="50px" style="position: absolute; top: 90px; right: 30px" class="burgerMenu">
-            <h1>IMAMO <u>{{ counter }}</u> PONUDA ZA VAS!</h1>
+            <h1>ZA VAS IMAMO <u>{{ counter }}</u> PONUDA!</h1>
         </div><!-- searchTop -->
     <form id="pretraga" method="post" action="{% url 'pretraga' %}">
 
@@ -97,6 +104,48 @@
             </div>
         </div><!-- searchBox -->
     </form>
+
+
+    <div class="kucice startRed">
+        <div class="kolona firstKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="kolona srednjaKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="kolona respKol">
+            <div class="single-kucica" style="margin-top: -87px">
+                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
+                    <div class="jobInfo">
+                        <span class="struka">GRAĐEVINA</span>
+                        <span class="pozicija">Ovlašteni inženjer građevine</span>
+                        <span class="vrijeme">Prije 6h</span>
+                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
+                        <div class="srce"><img src="../static/images/srce.png"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
     <div class="kucice">
         <div class="kolona firstKol">
             <div class="single-kucica" style="margin-top: -87px">
@@ -137,87 +186,7 @@
                 </div>
         </div>
     </div>
-    <div class="kucice" style="margin-top: -500px">
-        <div class="kolona firstKol">
-            <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-        </div>
-
-        <div class="kolona srednjaKol">
-            <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-        </div>
-
-        <div class="kolona respKol">
-            <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-        </div>
-    </div>
-    <div class="kucice" style="margin-top: -500px">
-        <div class="kolona firstKol">
-            <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-        </div>
-
-        <div class="kolona srednjaKol">
-            <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-        </div>
-
-        <div class="kolona respKol">
-            <div class="single-kucica" style="margin-top: -87px">
-                    <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
-                    <div class="jobInfo">
-                        <span class="struka">GRAĐEVINA</span>
-                        <span class="pozicija">Ovlašteni inženjer građevine</span>
-                        <span class="vrijeme">Prije 6h</span>
-                        <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
-                        <div class="srce"><img src="../static/images/srce.png"></div>
-                    </div>
-                </div>
-        </div>
-    </div>
-
+    
 
        <div class="navigacijaTipke">
             <div>1</div>
