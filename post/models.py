@@ -55,7 +55,8 @@ class Post(models.Model):
         hours = days * 24 + seconds // 3600
         minutes = (seconds % 3600) // 60
         seconds = seconds % 60
-
+        if minutes <= 0:
+            minutes = '59+'
         return minutes
 
 
