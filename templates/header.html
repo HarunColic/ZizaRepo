@@ -119,28 +119,66 @@
         </div>
 </form>
 
+<style type="text/css">
+	.logBox{
+		width: 600px;
+	}
+</style>
+
 <form id="formaLog" method="post" action="{% url 'signin' %}">
      {% csrf_token %}
 
 		<div id="myModal2" class="modal" style="z-index: 9999999">
 
-	  <div class="regBox" style="height: 461px">
+	  <div class="regBox logBox" style="height: 501px">
 	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close closeReg">
 		<div class="regBox__desno" style="width: 100%">
-			<div>
-				<h1 id="naslovTekst">PRIJAVA ZA KORISNIKE</h1>
-				<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
+			<div style="margin-top: 50px; margin-bottom: 20px">
+				<h1 id="naslovTekst" style="margin-top: 0; margin-bottom: 0">PRIJAVA ZA KORISNIKE</h1>
+				<p id="myBtn3" style="cursor: pointer;">Zaboravili ste lozinku?</p>
 			</div>
-			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
+			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0; margin-top: -23px">
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px">
+					<div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 70px; flex-direction: column;">
 						<div class="form-group">
 					      <label class="form-label" for="ema">e-mail adresa</label>
 					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
 					    </div>
-					    <div class="form-group" style="margin-left: 40px">
+					    <div class="form-group" style="margin-left: 0px; margin-top: 50px;">
 					      <label class="form-label" for="pas">Lozinka</label>
 					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+					    </div>
+					</div>
+				</div>
+				<img id="submitLog" src="../static/images/send.png" style="margin-top: 30px; cursor: pointer;">
+			</div>
+		</div>
+	</div>
+	</div>
+</form>
+
+<style type="text/css">
+	.restBox{
+		width: 600px;
+	}
+</style>
+
+<form id="formaRes" method="post" action="{% url 'signin' %}">
+
+		<div id="myModal3" class="modal" style="z-index: 9999999">
+
+	  <div class="regBox restBox" style="height: 421px">
+	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+		<div class="regBox__desno" style="width: 100%">
+			<div>
+				<h1 id="naslovTekst">RESTARTOVANJE LOZINKE</h1>
+			</div>
+			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
+				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 30px">
+						<div class="form-group">
+					      <label class="form-label" for="ema">e-mail adresa</label>
+					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
 					    </div>
 					</div>
 				</div>
