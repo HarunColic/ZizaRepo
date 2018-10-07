@@ -159,6 +159,18 @@ def showpost(request, id):
     post = Post.objects.get(pk=id)
     userP = UserProfile.objects.get(userID=post.userID)
 
+    if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
+
+        nextPost = Post.objects.filter(pk__gt=id, type=post.type).first()
+    else:
+        nextPost = Post.objects.filter(pk__gt=id, categoryID__name=post.categoryID.name).first()
+
+    if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
+
+        prevPost = Post.objects.filter(pk__lt=id, type=post.type).last()
+    else:
+        prevPost = Post.objects.filter(pk__lt=id, categoryID__name=post.categoryID.name).last()
+
     authorized = Company.objects.filter(userID=request.user).exists()
 
     if post.type == 2 and not authorized:
@@ -180,7 +192,7 @@ def showpost(request, id):
     else:
         post.views += 1
         post.save()
-        return render(request, 'oglas.html', {'post': post, 'userP': userP, 'b2b': b2b})
+        return render(request, 'oglas.html', {'post': post, 'userP': userP, 'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost})
 
 
 def bankUsluge(request):

@@ -105,19 +105,31 @@
 		</div>
 		<div class="navigacijaFooter">
 			<div class="prevTraka">
-				<img src="{% static "images/lijevoOglas.png" %}" style="cursor: pointer;" class="lijevoEd">
+                    {% if prevPost %}
+
+				<img onclick="location.href='{% url 'showpost' id=prevPost.pk %}'" src="{% static "images/lijevoOglas.png" %}" style="cursor: pointer;" class="lijevoEd">
 				<div>
 					<span>PRIJAŠNJI OGLAS</span>
-					<span>Violeta</span>
+					<span>{{ prevPost.userID.first_name }}</span>
 				</div>
+                                    {% endif %}
+
+
 			</div>
+
 			<img onclick="location.href='{% url 'prijaviOglas' id=post.pk%}'" src="{% static "images/prijavaoglas.png" %}" class="srednjaSlika" style="cursor: pointer;">
 			<div class="prevTraka" style="justify-content: flex-end;">
+                                    {% if nextPost %}
+
 				<div style="margin-left: 0">
 					<span>SLJEDEĆI OGLAS</span>
-					<span style="color: #f89101; text-align: right;">Volkswagen</span>
+
+					<span style="color: #f89101; text-align: right;">{{ nextPost.userID.first_name }}</span>
 				</div>
-				<img src="{% static "images/desnoOglas.png" %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
+
+				<img onclick="location.href='{% url 'showpost' id=nextPost.pk %}'"  src="{% static "images/desnoOglas.png" %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
+                    {% endif %}
+
 			</div>
 		</div>
 	</div>
