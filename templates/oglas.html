@@ -116,9 +116,10 @@
 
 
 			</div>
-
+            {% if user is not None %}
 			<img onclick="location.href='{% url 'prijaviOglas' id=post.pk%}'" src="{% static "images/prijavaoglas.png" %}" class="srednjaSlika" style="cursor: pointer;">
-			<div class="prevTraka" style="justify-content: flex-end;">
+			{% endif %}
+            <div class="prevTraka" style="justify-content: flex-end;">
                                     {% if nextPost %}
 
 				<div style="margin-left: 0">

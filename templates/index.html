@@ -867,14 +867,14 @@ ul {list-style: none}
 		</div> <!-- zadnjiPoslovi__last -->
 	</div> <!-- zadnjiPoslovi -->
 	<div class="kartice">
-		<div class="kartice__trazitePosao" style="cursor: pointer;">
+		<div onclick="location.href='{% url 'anonimnaPretraga' id=1 %}'" class="kartice__trazitePosao" style="cursor: pointer;">
 			<h3>Tražite posao?</h3>
 			<p style="font-size: 26.5px">I obratno!</p>
 			<h4>Otvoreni konkursi</h4>
 			<div class="linijaPosao"></div>
 			<img src="../static/images/worker_bee.png">
 		</div>
-		<div class="kartice__trazitePartnera">
+		<div onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'"  class="kartice__trazitePartnera">
 			<h3>Vidite!</h3>
 			<p style="font-size: 26.5px">I budite viđeni!</p>
 			<h4>Firme spremne za suradnju</h4>

@@ -171,7 +171,12 @@ def showpost(request, id):
     else:
         prevPost = Post.objects.filter(pk__lt=id, categoryID__name=post.categoryID.name).last()
 
-    authorized = Company.objects.filter(userID=request.user).exists()
+    if request.user.is_authenticated:
+        authorized = Company.objects.filter(userID=request.user).exists()
+        user = request.user
+    else:
+        authorized = True
+        user = None
 
     if post.type == 2 and not authorized:
         return redirect('home')
@@ -192,7 +197,7 @@ def showpost(request, id):
     else:
         post.views += 1
         post.save()
-        return render(request, 'oglas.html', {'post': post, 'userP': userP, 'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost})
+        return render(request, 'oglas.html', {'post': post, 'userP': userP, 'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
 
 
 def bankUsluge(request):
