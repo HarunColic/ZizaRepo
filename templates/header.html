@@ -150,7 +150,7 @@
 					    </div>
 					</div>
 				</div>
-				<img id="submitLog" src="../static/images/send.png" style="margin-top: 30px; cursor: pointer;">
+				<img  onclick="" id="submitLog" src="../static/images/send.png" style="margin-top: 30px; cursor: pointer;">
 			</div>
 		</div>
 	</div>
@@ -163,7 +163,9 @@
 	}
 </style>
 
-<form id="formaRes" method="post" action="{% url 'signin' %}">
+<form id="formaRes" method="post" action="{% url 'forgotPassword' %}">
+
+    {% csrf_token %}
 
 		<div id="myModal3" class="modal" style="z-index: 9999999">
 
@@ -178,11 +180,11 @@
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 30px">
 						<div class="form-group">
 					      <label class="form-label" for="ema">e-mail adresa</label>
-					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
+					      <input name="mailres" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
 					    </div>
 					</div>
 				</div>
-				<img id="submitLog" src="../static/images/send.png" style="margin-top: 60px; cursor: pointer;">
+				<img onclick="document.getElementById('formaRes').submit()" id="submitLog" src="../static/images/send.png" style="margin-top: 60px; cursor: pointer;">
 			</div>
 		</div>
 	</div>

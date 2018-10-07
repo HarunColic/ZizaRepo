@@ -51,6 +51,8 @@ urlpatterns = [
     url('download', P_Views.download, name="download"),
     url('testPretraga', AC_Views.testPretraga, name="testPretraga"),
     url('firme', AC_Views.firme, name="firme"),
+    url('forgotPassword', AC_Views.forgotPassword, name='forgotPassword'),
+    url('resetPass/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/(?P<sifra>[0-9A-Za-z_\-]+)/$', AC_Views.resetPass, name='resetPass')
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

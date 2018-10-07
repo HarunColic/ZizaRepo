@@ -17,6 +17,7 @@ from django.http import HttpResponseRedirect
 from datetime import datetime
 import sweetify
 from django.template.context_processors import csrf
+from django.utils.crypto import get_random_string
 
 
 def superUser(user):
@@ -549,5 +550,60 @@ def testPretraga(request):
     else:
         return redirect('home')
 
+
 def firme(request):
+
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def sifraMail(request, recipientMail):
+
+    user = User.objects.get(email=recipientMail)
+    tempSifra = get_random_string(length=10)
+    current_site = get_current_site(request)
+
+    mail_subject = "Obnovi lozinku"
+    message = render_to_string('forgotPass.html', {
+        'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+        'token': account_activation_token.make_token(user),
+        'tempSifra': tempSifra,
+        'domain': current_site.domain,
+    })
+
+    email = EmailMessage(
+        mail_subject, message, to=[recipientMail]
+    )
+
+    email.send()
+
+
+def forgotPassword(request):
+
+    mail = request.POST.get('mailres', None)
+
+    if mail is None:
+        sweetify.sweetalert(request, title="Unesite svoju Email adresu", icon="error", timer=10000)
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    elif User.objects.filter(email=mail).exists():
+        sifraMail(request, mail)
+        sweetify.sweetalert(request, title="Link za obnovu lozinke vam je poslan na email", icon="success", timer=10000)
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    else:
+        sweetify.sweetalert(request, title="Ne postoji korisnik sa ovom email adresom", icon="error", timer=10000)
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def resetPass(request, uidb64, token, sifra):
+
+    uid = force_text(urlsafe_base64_decode(uidb64))
+    user = User.objects.get(pk=uid)
+
+    if user is not None and account_activation_token.check_token(user, token):
+        user.set_password(sifra)
+        user.save()
+
+        sweetify.sweetalert(request, title="Lozinka uspješno promijenjena", icon="success", timer=10000)
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
