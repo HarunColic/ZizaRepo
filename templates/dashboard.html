@@ -679,17 +679,12 @@
 				</div>
 			</div>
 			<div class="main__oglasi--oglasi" id="aktivniOglasi">
-                                    {% for p in activepPosts %}
-
-               <div style="z-index: 1;" onclick="event.preventDefault();location.href='{% url 'showpost' id=p.pk %}'">
-
+                {% for p in activepPosts %}
+               <div class="rdiv"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.pk %}'">
 					<div>
-
 						<div>
-
 							{{ p.title }}
 						</div>
-
 						<div>
 							<div>{{ p.categoryID.name}}</div>
 							<div>{{ p.created_at.date|date:"d. m. Y." }}  <span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }} {{ p.region }}{% else %} nepoznato{% endif %}</span></div>
@@ -697,59 +692,15 @@
 					</div>
 					<div>
 						<div>{{ p.count_users}}</div> <!-- ukupni broj aplikanata -->
-						<div style="z-index: 999999" onclick="event.preventDefault(); location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
-						<div style="z-index: 999999" onclick="event.preventDefault(); location.href='{% url 'zavrsi' id=p.pk %}'">ZAVRŠI</div>
+						<div onclick="event.stopPropagation();location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
+						<div onclick="event.stopPropagation();location.href='{% url 'zavrsi' id=p.pk %}'">ZAVRŠI</div>
 						<div></div> <!-- broj novih od zadnje posjete -->
 					</div>
 					<div>
 						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> Aplikanata
-
                     </div>
-
 				</div>
-                                    {% endfor %}
-
-                <!--
-				<div>
-					<div>
-						<div>
-							Ovlašteni inženjer građevine
-						</div>
-						<div>
-							<div>GRAĐEVINA</div>
-							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
-						</div>
-					</div>
-					<div>
-						<div>5</div> <!-- ukupni broj aplikanata
-						<div>UREDI</div>
-						<div>ZAVRŠI</div>
-						<div>+3</div> <!-- broj novih od zadnje posjete
-					</div>
-					<div>
-						<span>320</span> Pregleda <span>5</span> Aplikanata
-					</div>
-				</div>
-				<div>
-					<div>
-						<div>
-							Ovlašteni inženjer građevine
-						</div>
-						<div>
-							<div>GRAĐEVINA</div>
-							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
-						</div>
-					</div>
-					<div>
-						<div>5</div> <!-- ukupni broj aplikanata
-						<div>UREDI</div>
-						<div>ZAVRŠI</div>
-						<div>+3</div> <!-- broj novih od zadnje posjete
-					</div>
-					<div>
-						<span>320</span> Pregleda <span>5</span> Aplikanata
-					</div>
-				</div>-->
+                {% endfor %}
 			</div>
 			<div class="main__oglasi--oglasi" id="zavrseniOglasi">
                 {% for p in inactivePosts %}
@@ -928,5 +879,19 @@
 			$('#aktivniOglasi, #zavrseniOglasi').toggle();
 		}
 	});
+
+	var p = document.querySelector('#aktivniOglasi .rdiv');
+    console.log(p);
+    console.log(p.length);
+    if(p.length){
+        for(var i = 0; i < p.length; i++) {
+            p[i].addEventListener('click', function(pEvent) {
+                pEvent.stopPropagation();
+            })
+        }
+    }else
+        p.addEventListener('click', function(pEvent) {
+            pEvent.stopPropagation();
+        })
 </script>
 </html>

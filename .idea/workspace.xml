@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +62,7 @@
           <entry key="Django Console" value="21" />
           <entry key="css" value="76" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="19299" />
+          <entry key="html" value="19894" />
           <entry key="js" value="275" />
           <entry key="py" value="28122" />
           <entry key="py@Ziza" value="593" />
@@ -75,7 +73,7 @@
         <counts>
           <entry key="CSS" value="76" />
           <entry key="CommandLine" value="583" />
-          <entry key="HTML" value="19299" />
+          <entry key="HTML" value="19894" />
           <entry key="JavaScript" value="275" />
           <entry key="PLAIN_TEXT" value="19" />
           <entry key="Python" value="28142" />
@@ -87,7 +85,7 @@
           <entry key="cfg" value="1" />
           <entry key="css" value="26" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="213" />
+          <entry key="html" value="214" />
           <entry key="js" value="21" />
           <entry key="py" value="141" />
         </counts>
@@ -95,7 +93,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="26" />
-          <entry key="HTML" value="213" />
+          <entry key="HTML" value="214" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="21" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -148,7 +146,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="298">
@@ -159,6 +157,18 @@
                 <marker date="1538870024375" expanded="true" signature="990:1191" ph="..." />
                 <marker date="1538870024375" expanded="true" signature="19723:19724" ph="..." />
                 <marker date="1538870024375" expanded="true" signature="22484:22485" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="695" column="62" selection-start-line="695" selection-start-column="62" selection-end-line="695" selection-end-column="62" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,8 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sho</find>
-      <find>dash</find>
       <find>Osiguravajuće</find>
       <find>categor</find>
       <find>category.s</find>
@@ -205,7 +213,9 @@
       <find>pretraga(</find>
       <find>/firme</find>
       <find>firme</find>
+      <find>main__oglasi--oglasi</find>
       <find>HttpResponseRedirect</find>
+      <find>.main__oglasi--oglasi &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2), .main__oglasi--oglasi &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3)</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -249,7 +259,6 @@
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" />
         <option value="$PROJECT_DIR$/templates/onamanew.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" />
         <option value="$PROJECT_DIR$/templates/bankarskeUsluge.html" />
@@ -271,6 +280,7 @@
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/Ziza/urls.py" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
       </list>
     </option>
   </component>
@@ -686,13 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11445">
-          <caret line="763" selection-start-line="763" selection-end-line="763" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venvic/pyvenv.cfg" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -904,6 +907,16 @@
             <marker date="1538870024375" expanded="true" signature="990:1191" ph="..." />
             <marker date="1538870024375" expanded="true" signature="19723:19724" ph="..." />
             <marker date="1538870024375" expanded="true" signature="22484:22485" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="695" column="62" selection-start-line="695" selection-start-column="62" selection-end-line="695" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
