@@ -27,7 +27,6 @@ $(document).ready(function(){
 $("#biznisButton").click(function(){
 	if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '140px'){
 		$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciDesno 0.5s ease-out 0s 1 normal forwards running');
-		console.log($('#b2c'));
 		$('#b2c').addClass('hidden');
 		$('#b2b').removeClass('hidden');
 	}
