@@ -161,15 +161,15 @@ def showpost(request, id):
 
     if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
 
-        nextPost = Post.objects.filter(pk__gt=id, type=post.type).first()
+        nextPost = Post.objects.filter(pk__gt=id, type=post.type).exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").first()
     else:
-        nextPost = Post.objects.filter(pk__gt=id, categoryID__name=post.categoryID.name).first()
+        nextPost = Post.objects.filter(pk__gt=id, type=post.type).exclude(soft_delete=True).first()
 
     if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
 
-        prevPost = Post.objects.filter(pk__lt=id, type=post.type).last()
+        prevPost = Post.objects.filter(pk__lt=id, type=post.type).exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").last()
     else:
-        prevPost = Post.objects.filter(pk__lt=id, categoryID__name=post.categoryID.name).last()
+        prevPost = Post.objects.filter(pk__lt=id, categoryID__name=post.categoryID.name).exclude(soft_delete=True).last()
 
     if request.user.is_authenticated:
         authorized = Company.objects.filter(userID=request.user).exists()
@@ -404,8 +404,9 @@ def zavrsi(request, id):
 def obnovi(request, id):
 
     post = Post.objects.get(pk=id)
-    newpost = Post(post)
-    newpost.soft_delete=False
+    razlika = post.expires_at - post.created_at
+    newExpires_at = datetime.now() + timedelta(days=razlika.days)
+    newpost = Post(title=post.title, region=post.region, location=post.location, position=post.position, specialty=post.specialty, type=post.type, b2b_type=post.b2b_type, experience=post.experience, contact_email=post.contact_email, contact_phone=post.contact_phone, attachment=post.attachment, userID=post.userID, soft_delete=False, categoryID=post.categoryID, views=0, expires_at=newExpires_at)
     newpost.save()
 
     sweetify.sweetalert(request, "Uspjesno obnovljen oglas", icon="success")

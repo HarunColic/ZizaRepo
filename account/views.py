@@ -287,6 +287,10 @@ def signin(request):
                     login(request, user)
                 else:
                     sweetify.error(request, 'Mail nije verifikovan', text='Molimo potvrdite svoju registraciju klikom na link u mailu', icon="error", timer=10000)
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            else:
+                sweetify.sweetalert(request, title="Pogrešna lozinka", text="", icon="error", timer=1000)
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
             if Employee.objects.filter(userID=request.user).exists():
                 return redirect('pretraga')
@@ -450,7 +454,6 @@ def pretraga(request):
                 posts = Post.objects.all().filter(type=2)
             else:
                 posts = Post.objects.all().filter(type=1)
-
 
         if superUser(request.user):
             posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
