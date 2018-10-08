@@ -812,10 +812,10 @@ ul {list-style: none}
 					</div>
 				</div>
                 {% endfor %}
-
-            <div class="zadnjiPoslovi__last--timeline hidden" id="b2b">
-            {% for p in postsbb %}
-                <div class="zadnjiPoslovi__last--timeline--stavka b2b">
+			</div> <!-- zadnjiPoslovi__last--timeline -->
+                   <div class="zadnjiPoslovi__last--timeline hidden" id="b2b">
+            {% for p in postbb %}
+                <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
@@ -828,44 +828,9 @@ ul {list-style: none}
 				</div>
                 {% endfor %}
 				</div>
-                     <!--
-				<div class="zadnjiPoslovi__last--timeline--stavka">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija duza"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">15</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-					</div>
-					<div class="desniDio_job">
-						<div class="desniDio_job__naziv"><h4>GRAĐEVINA</h4></div>
-						<div class="desniDio_job__opis"><h5>Traži se djelatnik za rad na mješalici</h5></div>
-					</div>
-				</div>
-				<div class="zadnjiPoslovi__last--timeline--stavka">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija duza"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">26</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-					</div>
-					<div class="desniDio_job">
-						<div class="desniDio_job__naziv"><h4>GRAĐEVINA</h4></div>
-						<div class="desniDio_job__opis"><h5>Traži se djelatnik za rad na mješalici</h5></div>
-					</div>
-				</div>
-				<div class="zadnjiPoslovi__last--timeline--stavka">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija duza"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">42</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-						<div class="lijeviDio_time__linija zadnja"></div>
-					</div>
-					<div class="desniDio_job">
-						<div class="desniDio_job__naziv"><h4>GRAĐEVINA</h4></div>
-						<div class="desniDio_job__opis"><h5>Traži se djelatnik za rad na mješalici</h5></div>
-					</div>
-				</div>-->
-			</div> <!-- zadnjiPoslovi__last--timeline -->
 		</div> <!-- zadnjiPoslovi__last -->
 	</div> <!-- zadnjiPoslovi -->
+
 	<div class="kartice">
 		<div onclick="location.href='{% url 'anonimnaPretraga' id=1 %}'" class="kartice__trazitePosao" style="cursor: pointer;">
 			<h3>Tražite posao?</h3>
