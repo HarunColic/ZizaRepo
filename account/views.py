@@ -495,7 +495,12 @@ def dashboard(request):
 
 def anonimnaPretraga(request, id):
 
-    auth = False
+    if request.user.is_authenticated:
+        auth = True
+        userP = UserProfile.objects.get(userID=request.user)
+    else:
+        auth = False
+        userP = None
 
     if id == '1':
         posts = Post.objects.all().exclude(soft_delete=True).exclude(type=2)
@@ -527,7 +532,7 @@ def anonimnaPretraga(request, id):
     btb = ["Ponuda", "Potražnja", "Partnerstvo"]
     return render(request, 'testPretraga.html',
                   {'data': data, 'gradovi': gradovi, 'cat': cat, 'auth': auth,
-                   'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange})
+                   'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange, 'userP': userP})
 
 
 def firme(request):

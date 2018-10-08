@@ -60,10 +60,11 @@
 			<div class="trazimo">
 				<h2><span>OGLAS /</span> {% if post.type == 1 %} {{ post.title }} {% else %} {{ post.title }} : {{ post.categoryID.name }} {% endif %}</h2>
 				<p>Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
-			</div>
+			</div>{% if post.attachment %}
 			<a href="/download?file={{ post.attachment.name }}" ><div class="downloadPDF">
-				<img src="{% static "images/downloadikona.png" %}"> PDF OGLAS
+            <img src="{% static "images/downloadikona.png" %}"> PDF OGLAS
             </div></a>
+        {% endif %}
 		</div>
 		<div class="tabelarni">
 			<div>
