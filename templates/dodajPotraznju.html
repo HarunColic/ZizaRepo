@@ -19,6 +19,12 @@
 <body>
 
 	<style type="text/css">
+		.formaBody{
+			height: 1268px;
+		}
+	</style>
+
+	<style type="text/css">
 	</style>
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
@@ -34,7 +40,7 @@
 		<div class="tvrtka">
 			<div class="avatarKucica">
                 {% if userP.image %}
-				<img src="{{ userP.image.url }}">
+				<img style="max-width: 250px; height: auto;" src="{{ userP.image.url }}">
                 {% endif %}
 			</div>
 			<div class="podaciT">
@@ -72,7 +78,7 @@
 						</select>
 					</div>
 					<div style="width: 49%">
-						<label>za Kategoriju</label><br>
+						<label>za kategoriju</label><br>
 						<select id="pozicijaInput" name="category">
 						<option value="" disabled selected>Izaberi kategoriju</option>
                         {% for c in cat %}

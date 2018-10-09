@@ -122,7 +122,7 @@
                             {% for up in userPs %}
                                  {% if up.userID == u %}
                                      {% if up.image %}
-                        <div class="logotipFirme" ><img style="height: 200px; width: 300px; " src="{{ up.image.url }}" ></div>
+                        <div class="logotipFirme" ><img style="height: auto; max-width: 200px;" src="{{ up.image.url }}" ></div>
                                          {% else %}
                         <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
                                          {% endif %}
@@ -153,7 +153,7 @@
                             {% for up in userPs %}
                                  {% if up.userID == u %}
                                      {% if up.image %}
-                        <div class="logotipFirme" ><img style="height: 200px; width: 300px; " src="{{ up.image.url }}" ></div>
+                        <div class="logotipFirme" ><img style="height: auto; max-width: 200px;" src="{{ up.image.url }}" ></div>
                                          {% else %}
                         <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
                                          {% endif %}
@@ -197,7 +197,7 @@
                             {% for up in userPs %}
                                  {% if up.userID == u %}
                                      {% if up.image %}
-                        <div class="logotipFirme" ><img style="height: 200px; width: 300px; " src="{{ up.image.url }}" ></div>
+                        <div class="logotipFirme" ><img style="height: auto; max-width: 200px;" src="{{ up.image.url }}" ></div>
                                          {% else %}
                         <div class="logotipFirme" ><img src="{% static 'images/pcelafirma.png' %}" ></div>
                                          {% endif %}
