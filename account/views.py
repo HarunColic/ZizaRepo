@@ -20,6 +20,7 @@ from datetime import datetime
 import sweetify
 from django.template.context_processors import csrf
 from django.utils.crypto import get_random_string
+from django.core.urlresolvers import resolve
 
 
 def superUser(user):
@@ -42,14 +43,44 @@ def validation(request, args):
 
 def home(request):
 
+    danasnjiOglasi = Post.objects.filter(created_at__year=datetime.now().year).filter(created_at__month=datetime.now().month).filter(created_at__day=datetime.now().day)
+
+    if danasnjiOglasi.count() < 1:
+        topOglasi = None
+        oglas1 = None
+        oglas2 = None
+        oglas3 = None
+    else:
+        topOglasi = Post.objects.filter(created_at__year=datetime.now().year).filter(created_at__month=datetime.now().month).filter(
+            created_at__day=datetime.now().day).order_by('views')[0:3]
+
+        if danasnjiOglasi.count() > 0:
+            topOglasi = list(topOglasi)
+            oglas1 = topOglasi[0]
+        else:
+            oglas1 = None
+
+        if  danasnjiOglasi.count() > 1:
+            topOglasi = list(topOglasi)
+            oglas2 = topOglasi[1]
+        else:
+            oglas2 = None
+
+        if danasnjiOglasi.count() > 2:
+            topOglasi = list(topOglasi)
+            oglas3 = topOglasi[2]
+        else:
+            oglas3 = None
+
     postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('created_at')[0:4]
     postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('created_at')[0:4]
+
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
-        return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None, 'postsbc': postsB2C,'postbb':postsB2B})
+        return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None, 'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2, 'oglas3': oglas3})
     else:
         industries = Category.objects.filter(type=0)
-        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries, 'postsbc': postsB2C,'postbb':postsB2B})
+        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries, 'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2, 'oglas3': oglas3})
 
 
 def profil(request):
@@ -266,36 +297,40 @@ def activate(request, uidb64, token):
 
 def signin(request):
 
-        if request.method == 'POST':
+    if request.user.is_authenticated:
+        sweetify.sweetalert(request, title="Već ste prijavljeni", icon="error")
+        return redirect('home')
 
-            mail = request.POST['mail']
-            password = request.POST['pswd']
+    if request.method == 'POST':
 
-            args = [mail, password]
+        mail = request.POST['mail']
+        password = request.POST['pswd']
 
-            if not validation(request, args):
-                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        args = [mail, password]
 
-            if User.objects.filter(email=mail).exists():
-                user = User.objects.get(email=mail)
+        if not validation(request, args):
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+        if User.objects.filter(email=mail).exists():
+            user = User.objects.get(email=mail)
+        else:
+            sweetify.sweetalert(request, title="Korisnik ne postoji", text="Korisnik sa unesenom email adresom ne postoji", icon="error", timer=10000)
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+        if user.check_password(password):
+            if UserProfile.objects.get(userID=user).verified:
+                login(request, user)
             else:
-                sweetify.sweetalert(request, title="Korisnik ne postoji", text="Korisnik sa unesenom email adresom ne postoji", icon="error", timer=10000)
+                sweetify.error(request, 'Mail nije verifikovan', text='Molimo potvrdite svoju registraciju klikom na link u mailu', icon="error", timer=10000)
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        else:
+            sweetify.sweetalert(request, title="Pogrešna lozinka", text="", icon="error", timer=1000)
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-            if user.check_password(password):
-                if UserProfile.objects.get(userID=user).verified:
-                    login(request, user)
-                else:
-                    sweetify.error(request, 'Mail nije verifikovan', text='Molimo potvrdite svoju registraciju klikom na link u mailu', icon="error", timer=10000)
-                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-            else:
-                sweetify.sweetalert(request, title="Pogrešna lozinka", text="", icon="error", timer=1000)
-                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-
-            if Employee.objects.filter(userID=request.user).exists():
-                return redirect('pretraga')
-            else:
-                return redirect('dashboard')
+        if Employee.objects.filter(userID=request.user).exists():
+            return redirect('pretraga')
+        else:
+            return redirect('dashboard')
 
 
 def signout(request):
@@ -591,3 +626,10 @@ def resetPass(request, uidb64, token, sifra):
 
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def csrf_failure(request, reason=""):
+
+    if resolve(request.path_info).url_name == 'signin/':
+        sweetify.sweetalert(request, title="Već ste prijavljeni", icon="error")
+        return redirect('home')
