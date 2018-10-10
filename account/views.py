@@ -281,6 +281,20 @@ def register(request):
         return redirect('home')
 
 
+def sendZahvanicu(request, recipientMail):
+
+    current_site = get_current_site(request)
+    mail_subject = "Zahvalnica"
+    message = render_to_string('zahvalnica.html', {})
+
+    email = EmailMessage(
+        mail_subject, message, to=[recipientMail]
+    )
+
+    email.send()
+
+
+
 def activate(request, uidb64, token):
     try:
         uid = force_text(urlsafe_base64_decode(uidb64))
@@ -290,6 +304,7 @@ def activate(request, uidb64, token):
 
     if user is not None and account_activation_token.check_token(user, token):
         userP = UserProfile.objects.filter(userID=user).update(verified=True)
+        sendZahvanicu(request, user.email)
         login(request, user)
 
     return redirect('pretraga')
@@ -466,7 +481,7 @@ def pretraga(request):
 
                 userComp = Company.objects.get(userID=user)
                 if superUser(request.user):
-                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
+                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
                 elif userComp.categoryID.name == "Finansijske":
                     posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
                 elif userComp.categoryID.name == "Osiguravajuće":
