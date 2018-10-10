@@ -858,17 +858,19 @@ ul {list-style: none}
 		</div>
 	</div> <!-- kartice -->
 	<div class="oglasi">
+        {% for p in cetriOglasa %}
 		<div class="oglasi__kartica prvaKartica">
 			<div class="selectUp"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
-					<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
-					<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h <span>Mostar, BiH</span></p></div>
+					<div><h3>{{ p.title }}</h3></div>
+					<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }}, {{ p.region }}</span></p></div>
 				</div>
-				<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/boing.png"></div>
+				<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image  %}<img style="height: 60px; width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 			</div>
 		</div>
-		<div class="oglasi__kartica">
+        {% endfor %}
+	<!--<div class="oglasi__kartica">
 			<div class="cosakTrokut"><img src="../static/images/munja.png"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
@@ -896,8 +898,8 @@ ul {list-style: none}
 				</div>
 				<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/infinite.png"></div>
 			</div>
-		</div>
-	</div> <!-- oglasi -->
+		</div><!-- oglasi -->
+	</div>
 	<div class="callToRegister mobCall" style="margin-top: -100px; margin-bottom: -200px"><img src="../static/images/registrirajse.png"></div>
 	<div class="testmoniali">
 		<div class="callToRegister"><img src="../static/images/registrirajse.png"></div>

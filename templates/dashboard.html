@@ -794,7 +794,7 @@
 						</div>
 						<div>
 							<div class="imeStruke">{{ p.categoryID.name }}</div>
-							<div>Prije 6h <span>{{ p.location }} {{ p.region }}</span></div>
+							<div> {{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }} {{ p.region }}</span></div>
 						</div>
 					</div>
 					<div style="left: 811px; display: block;">

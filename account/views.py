@@ -43,6 +43,11 @@ def validation(request, args):
 
 def home(request):
 
+    cetriOglasa = Post.objects.filter().exclude(soft_delete=True)[0:4]
+    cetriUserP = []
+    for cet in cetriOglasa:
+        cetriUserP.append(UserProfile.objects.get(userID=cet.userID))
+
     danasnjiOglasi = Post.objects.filter(created_at__year=datetime.now().year).filter(created_at__month=datetime.now().month).filter(created_at__day=datetime.now().day)
 
     if danasnjiOglasi.count() < 1:
@@ -77,10 +82,14 @@ def home(request):
 
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
-        return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None, 'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2, 'oglas3': oglas3})
+        return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None,
+                                              'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2,
+                                              'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP})
     else:
         industries = Category.objects.filter(type=0)
-        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries, 'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2, 'oglas3': oglas3})
+        return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries,
+                                              'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2,
+                                              'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP})
 
 
 def profil(request):
@@ -483,13 +492,13 @@ def pretraga(request):
                 if superUser(request.user):
                     posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
                 elif userComp.categoryID.name == "Finansijske":
-                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
+                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
                 elif userComp.categoryID.name == "Osiguravajuće":
-                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now())
+                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
                 else:
-                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
+                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
             else:
-                posts = Post.objects.filter(type=1).exclude(expires_at__lte=datetime.now())
+                posts = Post.objects.filter(type=1).exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
 
             if grad is not None:
                 posts = posts.filter(location=grad)
@@ -501,12 +510,12 @@ def pretraga(request):
 
         else:
             if Company.objects.filter(userID=user).exists():
-                posts = Post.objects.all().filter(type=2)
+                posts = Post.objects.all().filter(type=2).exclude(soft_delete=True)
             else:
-                posts = Post.objects.all().filter(type=1)
+                posts = Post.objects.all().filter(type=1).exclude(soft_delete=True)
 
         if superUser(request.user):
-            posts = Post.objects.all().exclude(expires_at__lte=datetime.now())
+            posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
 
         data = posts.exclude(expires_at__lte= datetime.now())
         counter = data.count()
