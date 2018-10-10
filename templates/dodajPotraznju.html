@@ -149,7 +149,7 @@
 		<div class="uvodniDio">
 			<div class="trazimo">
 				<h2 id="nazivOglasa"><span>PARTNERSTVO /</span> Poslovni oglas</h2>
-				<p>Prijavom na oglas Prevent grupacija ima uvid u vaš CV!</p>
+				<p>Prijavom na oglas {{ user.first_name }} ima uvid u vaš CV!</p>
 			</div>
 			<div class="downloadPDF">
 				<img src="{% static 'images/downloadikona.png' %}"> PDF OGLAS
@@ -162,7 +162,7 @@
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3 id="pozicijaPlace">ARHITEKTURA</h3>
+				<h3 id="pozicijaPlace"></h3>
 				<p>SEKTOR</p>
 			</div>
 		</div>
@@ -239,12 +239,10 @@ $('#aktivirajPregled').click(function(e){
 	$('.pregledTraka').css('display', 'flex');
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 	$('.detaljniOpis').html($('.ql-editor').html());
-	var naslov = $('#naslovInput').val();
-	$('#nazivOglasa').html('<span>OGLAS /</span> ' + naslov.toUpperCase());
-	var lokacija = $('#lokacijaInput').val();
-	$('#lokacijaPlace').html(lokacija.toUpperCase());
-	var pozicija = $('#pozicijaInput').val();
+
+	var pozicija = $("#pozicijaInput :selected").text();
 	$('#pozicijaPlace').html(pozicija.toUpperCase());
+
 	var godine = $('#godineInput').val();
 	$('#iskustvoPlace').html(godine.toUpperCase());
 	var sprema = $('#spremaInput').val();

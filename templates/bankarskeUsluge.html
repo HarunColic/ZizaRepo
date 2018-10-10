@@ -200,7 +200,7 @@
 		<div class="tvrtka">
 			<div class="avatarKucica">
                 {% if userP.image %}
-                <img src="{{ userP.image.url }}">
+                <img style="max-width: 250px; height: auto" src="{{ userP.image.url }}">
                 {% else %}
 				<img src="https://cdn0.capterra-static.com/logos/150/vendor-placeholder-logo.png">
 			    {% endif %}

@@ -1020,9 +1020,12 @@ ul {list-style: none}
         modal2.style.display = "block";
     })
 
-    $(".tkon").click(function(){
+    var clickBub = $(".tkon").click(function(){
         location.href = {% url 'pretraga' %};
-    })
+    });
+</script>
+<script type="text/javascript">
+	$('.pocetNa').addClass('selected');
 </script>
 </html>
 

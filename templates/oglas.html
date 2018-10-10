@@ -85,9 +85,10 @@
 
 			<div class="malaLinija"></div>
 			<div>
-				<h3>{{ post.specialty }}</h3>
+				<h3 id="strucnaSpremChange">{{ post.specialty }}</h3>
 				<p>STRUČNA SPREMA</p>
 			</div>
+		
         {% endif %}
         {% if post.type == 2 and post.categoryID.name == "Osiguravajuće" or post.categoryID.name == "Finansijske"%}
 
@@ -146,5 +147,8 @@
 <script type="text/javascript">
 	$('p br').replaceWith(' ');
 </script>
+	<script type="text/javascript">
+		$('#strucnaSpremChange').html($('#strucnaSpremChange').html().substring(0, 3));
+	</script>
 
 </html>
