@@ -152,8 +152,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="jobInfo">
-                        <span class="struka">{{ obj.title }}: {{ obj.categoryID.name }}</span>
-                        <span class="pozicija">{{ obj.position }}</span>
+                        <span class="struka">{{ obj.categoryID.name }}</span>
+                        <span class="pozicija">{{ obj.title }}</span>
                         <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
                         <span class="lokacijarada">{{ obj.location }} {{ obj.region }}</span>
                         <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
@@ -182,13 +182,13 @@
                             {% endfor %}
                         {% endif %}
                     {% endfor %}
-                  <div class="jobInfo">
-                    <span class="struka">{{ obj.title }}: {{ obj.categoryID.name }}</span>
-                    <span class="pozicija">{{ obj.position }}</span>
-                    <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
-                    <span class="lokacijarada">{{ obj.location }} {{ obj.region }}</span>
-                    <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-                </div>
+                    <div class="jobInfo">
+                        <span class="struka">{{ obj.categoryID.name }}</span>
+                        <span class="pozicija">{{ obj.title }}</span>
+                        <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
+                        <span class="lokacijarada">{{ obj.location }} {{ obj.region }}</span>
+                        <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
+                    </div>
             </div>
         </div>
           </a>
@@ -226,13 +226,13 @@
                             {% endfor %}
                         {% endif %}
                     {% endfor %}
-                  <div class="jobInfo">
-                    <span class="struka">{{ obj.title }}: {{ obj.categoryID.name }}</span>
-                    <span class="pozicija">{{ obj.position }}</span>
-                    <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
-                    <span class="lokacijarada">{{ obj.location }} {{ obj.region }}</span>
-                    <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
-                </div>
+                    <div class="jobInfo">
+                        <span class="struka">{{ obj.categoryID.name }}</span>
+                        <span class="pozicija">{{ obj.title }}</span>
+                        <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
+                        <span class="lokacijarada">{{ obj.location }} {{ obj.region }}</span>
+                        <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
+                    </div>
             </div>
         </div>
         </a>
