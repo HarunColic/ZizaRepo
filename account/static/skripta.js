@@ -14,38 +14,6 @@ $("#posaoButton").click(function(){
 	}
 });
 
-setInterval(function(){
-	setTimeout(function(){
-		document.getElementById("lijevo").style.animation = "naCentar 0.7s ease-out 0s 1 normal forwards running";
-		document.getElementById("centar").style.animation = "okreni 1s ease-out 0s 1 normal forwards running";
-		document.getElementById("desno").style.animation = "atomskiDesno 1s ease-out 0s 1 normal forwards running";
-		document.getElementById('cijenaRada').innerHTML = "1200";
-		document.getElementById('traziSe').innerHTML = "Traži se <strong>vodoinstalater</strong> na području Cazina!";
-		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').removeClass('active');
-		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').addClass('active');
-}, 1000);
- 
-	setTimeout(function(){
-		document.getElementById("lijevo").style.animation = "okreni2 1s ease-out 0s 1 normal forwards running";
-		document.getElementById("centar").style.animation = "okreni3 1s ease-out 0s 1 normal forwards running";
-		document.getElementById("desno").style.animation = "okreni4 0.7s ease-out 0s 1 normal forwards running";
-		document.getElementById('cijenaRada').innerHTML = "1500";
-		document.getElementById('traziSe').innerHTML = "Traži se <strong>mladi policajac</strong> na području Sarajeva!";
-		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').removeClass('active');
-		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').addClass('active');
-	}, 3000);
-
-	setTimeout(function(){
-		document.getElementById("desno").style.animation = "okreni5 1s ease-out 0s 1 normal forwards running";
-		document.getElementById("lijevo").style.animation = "okreni6 1s ease-out 0s 1 normal forwards running";
-		document.getElementById("centar").style.animation = "okreni7 0.7s ease-out 0s 1 normal forwards running";
-		document.getElementById('cijenaRada').innerHTML = "1700";
-		document.getElementById('traziSe').innerHTML = "Traži se <strong>komercijalista</strong> na području Mostara!";
-		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').removeClass('active');
-		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').addClass('active');
-		// document.getElementById("biz").style.animation = "slikaChange 0.7s ease-out 0s 1 normal forwards running";
-	}, 5000);
-}, 6000);
 
 $(document).ready(function() {
     $('.goToTop').click(function(){
