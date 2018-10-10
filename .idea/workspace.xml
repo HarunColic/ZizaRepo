@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/dodajPotraznju.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/dodajPotraznju.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/newpost.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/newpost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/templates/oglas.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/oglas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/oglas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/oglas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dodajPotraznju.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dodajPotraznju2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/newpost.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/newpost2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost2.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +51,7 @@
     <session id="364218502">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="2" />
@@ -52,14 +59,14 @@
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="3" />
           <entry key="project.open.time.17" value="3" />
-          <entry key="project.open.time.18" value="3" />
+          <entry key="project.open.time.18" value="4" />
           <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -67,9 +74,9 @@
           <entry key="Django Console" value="21" />
           <entry key="css" value="76" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="20764" />
-          <entry key="js" value="296" />
-          <entry key="py" value="30852" />
+          <entry key="html" value="21359" />
+          <entry key="js" value="299" />
+          <entry key="py" value="31893" />
           <entry key="py@Ziza" value="593" />
           <entry key="txt" value="7" />
         </counts>
@@ -78,10 +85,10 @@
         <counts>
           <entry key="CSS" value="76" />
           <entry key="CommandLine" value="583" />
-          <entry key="HTML" value="20764" />
-          <entry key="JavaScript" value="296" />
+          <entry key="HTML" value="21359" />
+          <entry key="JavaScript" value="299" />
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="30872" />
+          <entry key="Python" value="31913" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -90,21 +97,21 @@
           <entry key="cfg" value="1" />
           <entry key="css" value="26" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="232" />
-          <entry key="js" value="23" />
+          <entry key="html" value="242" />
+          <entry key="js" value="24" />
           <entry key="po" value="1" />
-          <entry key="py" value="149" />
+          <entry key="py" value="151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="26" />
-          <entry key="HTML" value="232" />
+          <entry key="HTML" value="242" />
           <entry key="Ini" value="1" />
-          <entry key="JavaScript" value="23" />
+          <entry key="JavaScript" value="24" />
           <entry key="Locale" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="149" />
+          <entry key="Python" value="151" />
         </counts>
       </usages-collector>
     </session>
@@ -112,89 +119,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post/management/commands/kategorije.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="27" column="26" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-              <folding>
-                <element signature="e#628#660#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="406" column="47" selection-start-line="406" selection-start-column="47" selection-end-line="406" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-                <marker date="1539018558634" expanded="true" signature="955:957" ph="..." />
-                <marker date="1539018558634" expanded="true" signature="8060:8061" ph="..." />
-                <marker date="1539018558634" expanded="true" signature="15192:15194" ph="..." />
-                <marker date="1539018558634" expanded="true" signature="15394:15395" ph="..." />
-                <marker date="1539018558634" expanded="true" signature="15394:15400" ph="..." />
-                <marker date="1539018558634" expanded="true" signature="16126:16132" ph="..." />
-                <marker date="1539018558634" expanded="true" signature="16126:16199" ph="..." />
-                <marker date="1539018558634" expanded="true" signature="16239:16240" ph="..." />
-                <marker date="1539018558634" expanded="true" signature="16239:16245" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/oglas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="538" selection-start-line="538" selection-end-line="538" />
+            <state relative-caret-position="130">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1539020988242" expanded="true" signature="938:1037" ph="..." />
-                <marker date="1539020988242" expanded="true" signature="1067:1268" ph="..." />
-                <marker date="1539020988242" expanded="true" signature="20101:20102" ph="..." />
-                <marker date="1539020988242" expanded="true" signature="21655:21656" ph="..." />
-                <marker date="1539020988242" expanded="true" signature="22297:22299" ph="..." />
-                <marker date="1539020988242" expanded="true" signature="22327:22333" ph="..." />
-                <marker date="1539020988242" expanded="true" signature="23098:23188" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="983:1082" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="1112:1313" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="21286:21287" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="22840:22841" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="23482:23484" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="23512:23518" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="24283:24373" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="24812:24813" ph="..." />
+                <marker date="1539123799635" expanded="true" signature="24812:24818" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/skripta.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="28" column="127" selection-start-line="28" selection-start-column="127" selection-end-line="28" selection-end-column="127" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -202,8 +142,85 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="832" column="22" selection-start-line="832" selection-start-column="22" selection-end-line="832" selection-end-column="22" />
+            <state relative-caret-position="106">
+              <caret line="814" column="22" lean-forward="true" selection-start-line="814" selection-start-column="22" selection-end-line="814" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="257" column="40" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/account/templates/oglas.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/newpost.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="147" column="55" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/newpost2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="141" column="55" selection-start-line="141" selection-start-column="55" selection-end-line="141" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/account/templates/newpost.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="135" column="37" lean-forward="true" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="151" column="58" selection-start-line="151" selection-start-column="58" selection-end-line="151" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="156" column="58" selection-start-line="156" selection-start-column="58" selection-end-line="156" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/account/templates/dodajPotraznju.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="147" column="36" lean-forward="true" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -220,12 +237,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>forgotPas</find>
-      <find>forgotPassword</find>
-      <find>mailRes</find>
-      <find>activate</find>
-      <find>sendMail</find>
-      <find>show</find>
       <find>osigurava</find>
       <find>trajanje</find>
       <find>update</find>
@@ -241,15 +252,21 @@
       <find>cou</find>
       <find>showP</find>
       <find>p.region</find>
-      <find>sign</find>
       <find>Biznis</find>
       <find>b2b</find>
       <find>\	\	\$\(\'\#b2b\'\)\.removeClass\(\'hidden\'\)\;\n</find>
-      <find>home</find>
       <find>Obno</find>
       <find>min</find>
       <find>anoni</find>
       <find>Oglas</find>
+      <find>sign</find>
+      <find>popularno</find>
+      <find>1200</find>
+      <find>zadnjiPoslovi__popularno--dot</find>
+      <find>Traži se</find>
+      <find>home</find>
+      <find>prevent grupa</find>
+      <find>prevent grupacija</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -278,9 +295,6 @@
         <option value="$PROJECT_DIR$/templates/comingsoon.html" />
         <option value="$PROJECT_DIR$/templates/footer.html" />
         <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/sweetify/sweetify.py" />
-        <option value="$PROJECT_DIR$/account/templates/dodajPotraznju.html" />
-        <option value="$PROJECT_DIR$/account/templates/newpost.html" />
-        <option value="$PROJECT_DIR$/account/templates/oglas.html" />
         <option value="$PROJECT_DIR$/templates/editProfilTvrtka.html" />
         <option value="$PROJECT_DIR$/post/management/commands/smartFind.py" />
         <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
@@ -289,32 +303,35 @@
         <option value="$PROJECT_DIR$/account/static/style.css" />
         <option value="$PROJECT_DIR$/Ziza/static/style.css" />
         <option value="$PROJECT_DIR$/static/style.css" />
-        <option value="$PROJECT_DIR$/Ziza/settings.py" />
         <option value="$PROJECT_DIR$/templates/onamanew.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/post/management/commands/kategorije.py" />
         <option value="$PROJECT_DIR$/templates/pretrazi.html" />
         <option value="$PROJECT_DIR$/account/static/skripta.js" />
-        <option value="$PROJECT_DIR$/Ziza/static/skripta.js" />
         <option value="$PROJECT_DIR$/post/models.py" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/forgotPass.html" />
-        <option value="$PROJECT_DIR$/templates/newpost.html" />
-        <option value="$PROJECT_DIR$/templates/newpost2.html" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" />
-        <option value="$PROJECT_DIR$/templates/dodajPotraznju.html" />
-        <option value="$PROJECT_DIR$/templates/dodajPotraznju2.html" />
         <option value="$PROJECT_DIR$/templates/bankarskeUsluge.html" />
         <option value="$PROJECT_DIR$/templates/bankarskeUsluge2.html" />
-        <option value="$PROJECT_DIR$/Ziza/urls.py" />
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
         <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/static/skripta.js" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/oglas.html" />
+        <option value="$PROJECT_DIR$/Ziza/urls.py" />
+        <option value="$PROJECT_DIR$/Ziza/settings.py" />
+        <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/Ziza/static/skripta.js" />
+        <option value="$PROJECT_DIR$/account/templates/oglas.html" />
+        <option value="$PROJECT_DIR$/templates/newpost.html" />
+        <option value="$PROJECT_DIR$/templates/newpost2.html" />
+        <option value="$PROJECT_DIR$/account/templates/newpost.html" />
+        <option value="$PROJECT_DIR$/templates/dodajPotraznju.html" />
+        <option value="$PROJECT_DIR$/templates/dodajPotraznju2.html" />
+        <option value="$PROJECT_DIR$/account/templates/dodajPotraznju.html" />
       </list>
     </option>
   </component>
@@ -364,11 +381,6 @@
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
               <item name="account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
@@ -511,13 +523,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20430966" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.207502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.2512235" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.22838499" />
+      <window_info anchor="bottom" id="Debug" order="2" visible="true" weight="0.22838499" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32952693" />
@@ -526,7 +539,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.30016312" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.20880914" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.20717782" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32626426" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.32952693" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -607,20 +620,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/sweetify/sweetify.py" />
-    <entry file="file://$PROJECT_DIR$/account/templates/oglas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account/templates/dodajPotraznju.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="141" column="42" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/editProfilTvrtka.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -730,24 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="170" column="35" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/static/skripta.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" selection-start-column="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/static/skripta.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -762,27 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="167" column="17" selection-start-line="167" selection-start-column="17" selection-end-line="167" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#form#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#form#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#2;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,52 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/templates/newpost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="69" column="42" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/newpost2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/newpost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="257" column="43" selection-start-line="257" selection-start-column="43" selection-end-line="257" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="257" column="40" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="110" column="43" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="99" column="43" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -877,30 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pretrazi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="253" lean-forward="true" selection-start-line="124" selection-start-column="1" selection-end-line="253" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post/management/commands/kategorije.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-          <folding>
-            <element signature="e#628#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
@@ -915,23 +813,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post/models.py">
+    <entry file="file://$PROJECT_DIR$/post/management/commands/kategorije.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/skripta.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="28" column="127" selection-start-line="28" selection-start-column="127" selection-end-line="28" selection-end-column="127" />
+        <state relative-caret-position="315">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="5880">
           <caret line="406" column="47" selection-start-line="406" selection-start-column="47" selection-end-line="406" selection-end-column="47" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
@@ -948,34 +839,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/static/skripta.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="832" column="22" selection-start-line="832" selection-start-column="22" selection-end-line="832" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="538" selection-start-line="538" selection-end-line="538" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1539020988242" expanded="true" signature="938:1037" ph="..." />
-            <marker date="1539020988242" expanded="true" signature="1067:1268" ph="..." />
-            <marker date="1539020988242" expanded="true" signature="20101:20102" ph="..." />
-            <marker date="1539020988242" expanded="true" signature="21655:21656" ph="..." />
-            <marker date="1539020988242" expanded="true" signature="22297:22299" ph="..." />
-            <marker date="1539020988242" expanded="true" signature="22327:22333" ph="..." />
-            <marker date="1539020988242" expanded="true" signature="23098:23188" ph="..." />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="28" column="127" selection-start-line="28" selection-start-column="127" selection-end-line="28" selection-end-column="127" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/oglas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
-          <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+          <caret line="66" column="19" lean-forward="true" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="15" />
+          <folding>
+            <element signature="e#628#660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="174" column="47" lean-forward="true" selection-start-line="174" selection-start-column="35" selection-end-line="174" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pretrazi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="220" column="106" selection-start-line="220" selection-start-column="106" selection-end-line="220" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ziza/static/skripta.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="67" lean-forward="true" selection-start-line="35" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1539123799635" expanded="true" signature="983:1082" ph="..." />
+            <marker date="1539123799635" expanded="true" signature="1112:1313" ph="..." />
+            <marker date="1539123799635" expanded="true" signature="21286:21287" ph="..." />
+            <marker date="1539123799635" expanded="true" signature="22840:22841" ph="..." />
+            <marker date="1539123799635" expanded="true" signature="23482:23484" ph="..." />
+            <marker date="1539123799635" expanded="true" signature="23512:23518" ph="..." />
+            <marker date="1539123799635" expanded="true" signature="24283:24373" ph="..." />
+            <marker date="1539123799635" expanded="true" signature="24812:24813" ph="..." />
+            <marker date="1539123799635" expanded="true" signature="24812:24818" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="814" column="22" lean-forward="true" selection-start-line="814" selection-start-column="22" selection-end-line="814" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="257" column="40" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/templates/oglas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/newpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="147" column="55" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/newpost2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="141" column="55" selection-start-line="141" selection-start-column="55" selection-end-line="141" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/templates/newpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="135" column="37" lean-forward="true" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="151" column="58" selection-start-line="151" selection-start-column="58" selection-end-line="151" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="156" column="58" selection-start-line="156" selection-start-column="58" selection-end-line="156" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/templates/dodajPotraznju.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="147" column="36" lean-forward="true" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
         </state>
       </provider>
     </entry>

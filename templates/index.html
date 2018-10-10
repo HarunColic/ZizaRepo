@@ -764,12 +764,12 @@ ul {list-style: none}
 		</div> <!-- uvod__slike -->
 	</div> <!-- uvod -->
 	<div class="zadnjiPoslovi">
-		<div class="zadnjiPoslovi__popularno">
+	<div class="zadnjiPoslovi__popularno">
 			<h2>POPULARNO</h2>
 			<p>Najpopularniji oglasi za posao u posljednja 24 sata!</p>
 			<div class="zadnjiPoslovi__popularno--slajder">
 				<div class="slider-poslovi" style="display: flex; justify-content: flex-start; align-items: center;margin-left: -90px">
-					<h3 style="margin-left: 130px; margin-bottom: 70px"><span id="cijenaRada" style="color: inherit">1200</span>+<span>KM</span></h3>
+					<h3 style="margin-left: 130px; margin-bottom: 70px"><span id="cijenaRada" style="color: inherit"></span><span></span></h3>
 
 					<div class="zadnjiPoslovi__popularno--slajder__sac prviEl" id="lijevo">
 						<div class="slikaVodoinstalater"></div>
@@ -782,7 +782,7 @@ ul {list-style: none}
 					<div class="zadnjiPoslovi__popularno--slajder__sac treciEl" id="desno">
 						<div class="slikaPolicajac"></div>
 					</div>
-					<p id="traziSe">Traži se <strong>komercijalista</strong> na području Mostara!</p>
+					<p id="traziSe"><strong></strong></p>
 				</div>
 				<div class="zadnjiPoslovi__popularno--dots">
 					<div class="dot"></div>
@@ -1026,6 +1026,46 @@ ul {list-style: none}
 </script>
 <script type="text/javascript">
 	$('.pocetNa').addClass('selected');
+</script>
+<script>
+
+    setInterval(function(){
+        {% if oglas1 %}
+	setTimeout(function(){
+		document.getElementById("lijevo").style.animation = "naCentar 0.7s ease-out 0s 1 normal forwards running";
+		document.getElementById("centar").style.animation = "okreni 1s ease-out 0s 1 normal forwards running";
+		document.getElementById("desno").style.animation = "atomskiDesno 1s ease-out 0s 1 normal forwards running";
+		document.getElementById('cijenaRada').innerHTML = "";
+		document.getElementById('traziSe').innerHTML = "{% if oglas1 %} <strong>{{ oglas1.title }}</strong> na području {{ oglas1.location }}!{% endif %}";
+		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').removeClass('active');
+		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').addClass('active');
+}, 1000);
+        {% endif %}
+        {% if oglas2 %}
+	setTimeout(function(){
+		document.getElementById("lijevo").style.animation = "okreni2 1s ease-out 0s 1 normal forwards running";
+		document.getElementById("centar").style.animation = "okreni3 1s ease-out 0s 1 normal forwards running";
+		document.getElementById("desno").style.animation = "okreni4 0.7s ease-out 0s 1 normal forwards running";
+		document.getElementById('cijenaRada').innerHTML = "";
+		document.getElementById('traziSe').innerHTML = "{% if oglas2 %}<strong>{{ oglas2.title }}</strong> na području {{ oglas2.location }}!{% endif %}" ;
+		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').removeClass('active');
+		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').addClass('active');
+	}, 3000);
+        {% endif %}
+	{% if oglas3 %}
+	setTimeout(function(){
+		document.getElementById("desno").style.animation = "okreni5 1s ease-out 0s 1 normal forwards running";
+		document.getElementById("lijevo").style.animation = "okreni6 1s ease-out 0s 1 normal forwards running";
+		document.getElementById("centar").style.animation = "okreni7 0.7s ease-out 0s 1 normal forwards running";
+		document.getElementById('cijenaRada').innerHTML = "";
+		document.getElementById('traziSe').innerHTML = "{% if oglas3 %}<strong>{{ oglas3.title }}</strong> na području {{ oglas3.location }}! {% endif %}";
+		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').removeClass('active');
+		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').addClass('active');
+		// document.getElementById("biz").style.animation = "slikaChange 0.7s ease-out 0s 1 normal forwards running";
+	}, 5000);
+        {% endif %}
+}, 6000);
+
 </script>
 </html>
 
