@@ -152,7 +152,7 @@
                         {% endif %}
                     {% endfor %}
                     <div class="jobInfo">
-                        <span class="struka">{{ obj.categoryID.name }}</span>
+                        <span class="struka"><strong>{{ obj.categoryID.name }}</strong></span>
                         <span class="pozicija">{{ obj.title }}</span>
                         <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
                         <span class="lokacijarada">{{ obj.location }} {{ obj.region }}</span>
@@ -200,7 +200,7 @@
                 <div class="jobInfo">
                     <span class="struka">{{ cnt }}</span>
                     <span class="pozicija">Ovlašteni inženjer građevine</span>
-                    <span class="vrijeme">Prije 6h</span>
+                    <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
                     <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
                     <div class="srce"><img src="../static/images/srce.png"></div>
                 </div>
