@@ -48,7 +48,7 @@
 	}
 	@media screen and (max-width: 610px){
 		.logBox{
-			width: 350px !important;
+			width: 330px !important;
 		}
 		.headLogin{
 			flex-direction: column;
@@ -78,11 +78,11 @@
 		.focused .form-label{
 			margin-top: -17px !important;
 		}
-		.mobileBottom{
-			z-index: 999999999999;
+		.grupField{
+			margin-top: 40px !important;
 		}
-		.logBox{
-			z-index: 9999999999999999999999999999;
+		.registracija.regBox{
+			width: 300px;
 		}
 	}
 </style>
@@ -178,7 +178,7 @@
 			</div>
 			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0; margin-top: -23px">
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
-					<div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 70px; flex-direction: column;">
+					<div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 70px; flex-direction: column;" class="grupField">
 						<div class="form-group">
 					      <label class="form-label" for="ema">e-mail adresa</label>
 					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
@@ -367,6 +367,7 @@ ul {list-style: none}
   	}
   }
 
+
 </style>
 <!-- NOVA NAVIGACIJA CSS END-->
 
@@ -407,7 +408,7 @@ ul {list-style: none}
 			   		<div style="font-family: Galano Bold; font-size: 10px; color: #ffffff; display: flex;
 			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;" class="tLogin">PRIJAVA</div>
 			   		<div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">REGISTRACIJA</div>
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);" class="tRegister">REGISTRACIJA</div>
 			   	</div>
 			</div>
 		</span>
@@ -465,7 +466,12 @@ ul {list-style: none}
     $(".tLogin").click(function(){
         var modal2 = document.getElementById('myModal2');
         modal2.style.display = "block";
-    })
+    });
+
+    $(".tRegister").click(function(){
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+    });
 
     </script>
 {% endif %}
@@ -656,17 +662,17 @@ ul {list-style: none}
 		$('.burgermenu').click(function(){
 			$('.mobileBottom').toggle();
 		});
-	</script>
-	<script type="text/javascript">
-		$('.mojaZiza--navMen, .mojaZiza--reactivate').click(function(){
-			$('.mojaZiza--extraMen').toggle();
-			$('.mainNav').toggle();
-		});
-		$('.oglasi--navMen, .oglasi--reactivate').click(function(){
-			$('.oglasi--extraMen').toggle();
-			$('.mainNav').toggle();
-		});
-		$('.tLogin').click(function(){
-			$('.mobileBottom').toggle();
-		});
-	</script>
+</script>
+<script type="text/javascript">
+	$('.mojaZiza--navMen, .mojaZiza--reactivate').click(function(){
+		$('.mojaZiza--extraMen').toggle();
+		$('.mainNav').toggle();
+	});
+	$('.oglasi--navMen, .oglasi--reactivate').click(function(){
+		$('.oglasi--extraMen').toggle();
+		$('.mainNav').toggle();
+	});
+	$('.tLogin, .tRegister').click(function(){
+		$('.mobileBottom').toggle();
+	});
+</script>

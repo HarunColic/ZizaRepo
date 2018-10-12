@@ -302,45 +302,98 @@ n-top: 30px;
 		display: none;
 		visibility: hidden;
 	}
+	.kucice{
+		margin-top: -500px;
+	}
+	.startRed{
+		margin-top: -100px !important;
+	}
+
+	body{
+		overflow-x: hidden;
+	}
+
+	.searchBox{
+		width: 100%;
+		position: absolute;
+    	margin-top: -80px;
+	}
+
+	#pretraga{
+		margin-bottom: 50px !important;
+	}
+
 	@media screen and (max-width: 1320px){
-		.respKol{
-			display: none;
-			visibility: hidden;
+		.kucice{
+			transform: scale(0.8);
 		}
-		.respKuc{
-			display: block;
-			visibility: visible;
-		}
-		.srednjaKol{
-			margin: 0;
-			margin-left: -200px;
-			margin-right: 200px;
+		.navigacijaTipke{
+			margin-top: -100px !important;
+			display: flex;
+    		margin: 0 auto;
+    		justify-content: center;
+    		margin-left: 0 !important;
 		}
 		.kucice{
+			margin-top: -600px;
+		}
+		.startRed{
+			margin-top: -200px !important;
+		}
+	}
+
+	@media screen and (max-width: 1055px){
+		.kucice{
+			flex-direction: column;
+		}
+		.srednjaKol{
 			margin-top: 0;
 		}
-		.firstKol{
-			margin-left: 200px;
+		#pretraga{
+			margin-bottom: 80px !important;
 		}
-	}
-	@media screen and (max-width: 892px){
+		.navigacijaTipke{
+			margin-top: -150px !important;
+		}
 		.kucice{
-			flex-wrap: wrap;
+			margin-top: -300px;
 		}
-		.srednjaKol{
-			margin: 0;
-			margin-top: -80px;
-		}
-		.firstKol{
-			margin-left: 0px;
+		.startRed{
+			margin-top: -150px !important;
 		}
 	}
-	@media screen and (max-width: 892px){
+
+	@media screen and (max-width: 500px){
+		*:not(.kolona, .searchBox){
+			overflow-x: hidden;
+		}
+		body{
+			overflow-x: hidden;
+			overflow-y: scroll;
+			height: 100%;
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 390px){
 		.kucice{
-			transform: scale(0.7);
-			margin-top: -650px;
+			transform: scale(0.65);
+		}
+		.kucice{
+			margin-top: -550px;
+		}
+		#pretraga{
+			margin-bottom: -200px !important;
 		}
 	}
+
+	@media screen and (max-width: 320px){
+		.kucice{
+			transform: scale(0.6);
+		}
+	}
+
 	@media screen and (max-width: 1130px){
 		.header{
 			display: none;

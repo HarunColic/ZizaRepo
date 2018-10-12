@@ -2,25 +2,31 @@ $(document).ready(function(){
    $('#submitSlika').click(function(){
       $('#formaReg').submit()
    })
-})
+});
 
 $(document).ready(function(){
    $('#submitLog').click(function(){
       $('#formaLog').submit()
    })
+});
+
+$(document).ready(function(){
+   $('#pretragaBTN').click(function(){
+      $('#pretraga').submit()
+   })
 })
 
+/*
 $(document).ready(function(){
    $('#myBtn').click(function(){
       $('#logoutForm').submit()
    })
 })
-
+*/
 
 $("#biznisButton").click(function(){
 	if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '140px'){
 		$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciDesno 0.5s ease-out 0s 1 normal forwards running');
-		console.log($('#b2c'));
 		$('#b2c').addClass('hidden');
 		$('#b2b').removeClass('hidden');
 	}
@@ -123,16 +129,34 @@ $('#srednjiElement').toggle();
 	}
 });
 
+	function stopMobileScroll() {
+    document.ontouchmove = function (e) {
+        e.preventDefault();
+    };
+};
+
+function enableMobileScroll() {
+    document.ontouchmove = function () {
+        return true;
+    };
+};
+
 $('.testmoniali__kucice').owlCarousel({
 	autoplay: true,
 	center: true,
 	loop: true,
+	touchDrag  : false,
+    mouseDrag  : true,
+    onDrag: stopMobileScroll,
+    onDragged: enableMobileScroll
 });
 
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close")[1];
+var span3 = document.getElementsByClassName("close")[2];
+
 btn.onclick = function() { modal.style.display = "block";  }
 span.onclick = function() {
     modal.style.display = "none";
@@ -150,6 +174,14 @@ window.onclick = function(event) {
     if (event.target == modal2) { modal2.style.display = "none"; }
 }
 
+var modal3 = document.getElementById('myModal3');
+var btn3 = document.getElementById("myBtn3");
+btn3.onclick = function() { modal3.style.display = "block"; }
+span3.onclick = function() { modal3.style.display = "none"; }
+window.onclick = function(event) {
+    if (event.target == modal3) { modal3.style.display = "none"; }
+}
+
 $('.single-kucica').mouseover(function(){
 		$(this).find('.struka').css('color', '#fecd35');
 		$(this).find('.struka').css('text-shadow', 'none');
@@ -160,3 +192,4 @@ $('.single-kucica').mouseout(function(){
 		$(this).find('.struka').css('text-shadow', '0px 5px 10px rgba(22, 22, 22, 0.25)');
 		$(this).css('background-image', 'url(images/aktivna.png)');
 });
+

@@ -1,3 +1,5 @@
+
+
 /***************************************************
                       FONTOVI
 ***************************************************/
@@ -68,12 +70,12 @@ img {
 .header__language{
 	width: 20%;
 	font-family: 'Galano Bold';
-	font-size: 14px; 
+	font-size: 14px;
 	font-style: normal;
-	font-stretch: normal; 
-	line-height: 2.86; 
-	letter-spacing: normal; 
-	text-align: center; 
+	font-stretch: normal;
+	line-height: 2.86;
+	letter-spacing: normal;
+	text-align: center;
 	color: #000000;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -125,7 +127,8 @@ img {
 	font-size: 14px;
 	font-style: normal;
 	font-stretch: normal;
-	line-height: 2.86;
+	/* line-height: 2.86; */
+	text-align: center;
 	letter-spacing: normal;
 	color: #e3e0d7;
 	padding: 0 9px 0 9px;
@@ -138,7 +141,7 @@ img {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	margin-right: 57px;
+	margin-right: 40px;
 }
 .header__navigation--linkovi span.selected{
 	color: #f6b81b;
@@ -154,9 +157,9 @@ img {
 }
 
 .header__navigation--dugmad{
-	background-color: #181818;	
-	display: -webkit-box;	
-	display: -ms-flexbox;	
+	background-color: #181818;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -323,7 +326,7 @@ img {
 		height: 950px;
 		margin-left: 250px;
 	}
-}		
+}
 @media only screen and (max-height: 741px){
 	.uvod__tekst{
 		transform: scale(0.7);
@@ -370,7 +373,7 @@ img {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
-	        flex-direction: column;	
+	        flex-direction: column;
 }
 .uvod__linkovi p{
 	color: #7c7a71;
@@ -596,7 +599,7 @@ img {
 }
 
 
-/* 
+/*
 
 INFO :: OSTAVLJENO ZA KASNIJE ZA VIŠE SLAJDOVA;
 
@@ -747,7 +750,6 @@ INFO :: OSTAVLJENO ZA KASNIJE ZA VIŠE SLAJDOVA;
 		background-image: url("images/vodoinstalater.png");
 	}
 }
-
 .zadnjiPoslovi__last{
 	margin-top: -30px
 }
@@ -757,7 +759,7 @@ INFO :: OSTAVLJENO ZA KASNIJE ZA VIŠE SLAJDOVA;
 	color: #000;
 }
 .zadnjiPoslovi__last--timeline{
-	display: flex; 
+	display: flex;
 	flex-direction: column;
 }
 .zadnjiPoslovi__last--timeline--stavka{
@@ -797,7 +799,7 @@ INFO :: OSTAVLJENO ZA KASNIJE ZA VIŠE SLAJDOVA;
 	margin-top: -5px
 }
 .desniDio_job__naziv{
-	height: 45px; 
+	height: 45px;
 	display: flex;
 	align-items: center;
 }
@@ -987,13 +989,13 @@ body{
 .zanimanje{
 	font-family: 'Galano Medium';
 	font-size: 14px;
-	color: #fed14b;		
+	color: #fed14b;
 	margin-right: 30px;
 }
 .vrijemeObjave{
 	font-family: 'Galano Regular';
 	font-size: 14px;
-	color: #919089;		
+	color: #919089;
 }
 .vrijemeObjave span{
 	color: #000;
@@ -1022,7 +1024,7 @@ body{
 .aktivnaKartica{
 	z-index: 5;
 	box-shadow: 0px 20px 80px 0 rgba(248, 145, 1, 0.2);
-	border-bottom: 0px; width: 1165px; 
+	border-bottom: 0px; width: 1165px;
 	border-radius: 10px;
 }
 .cosakTrokut{
@@ -1048,11 +1050,11 @@ body{
 }
 .cosakTrokut img{
 	position: absolute;
-	top: -48px; 
+	top: -48px;
 	left: 10px;
 }
 .oglasi__kartica:nth-child(2){
-	border-bottom: 0px; 
+	border-bottom: 0px;
 	filter: blur(2px);
 }
 .oglasi__kartica:nth-child(3){
@@ -1103,7 +1105,7 @@ body{
 	margin-bottom: 0; padding: 0;
 	font-family: 'Galano Bold';
 	font-size: 14px;
-	color: #262626;	
+	color: #262626;
 }
 .testmoniali__kucice--single h5{
 	color: #b5b4af;
@@ -1295,8 +1297,8 @@ body{
 	border-bottom-right-radius: 10px;
 	display: flex;
 	justify-content:
-	center; align-items: 
-	center;cursor: 
+	center; align-items:
+	center;cursor:
 	pointer;
 }
 .footer__copyright p{
@@ -1386,7 +1388,7 @@ body{
 		.regBox__desno h1{
 			font-size: 30px;
 			font-weight: 900;
-			text-align: left; 
+			text-align: left;
 			color: #262626;
 			font-family: 'Galano Black';
 			margin-left: 60px;
@@ -1394,7 +1396,7 @@ body{
 		}
 		.regBox__desno p{
 			font-family: 'Galano Regular';
-			font-size: 18px; 
+			font-size: 18px;
 			line-height: 1.33;
 			color: #000;
 		}
@@ -1429,8 +1431,8 @@ body{
 			background-color: #eeede7 !important;
 			color: #7c7a71 !important;
 		}
-		
-		.regBox input{
+
+		.regBox input, .regBox select{
 			width: 331px;
 			height: 50px;
 			mix-blend-mode: undefined;
@@ -1452,7 +1454,7 @@ body{
 			color: #262626;
 		}
 		.regBox__desno--input{
-			margin-left: 100px; 
+			margin-left: 100px;
 			margin-top: 43px;
 		}
 		.form-group {

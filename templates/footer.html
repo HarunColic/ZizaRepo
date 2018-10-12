@@ -58,29 +58,40 @@
 
 
 		<script type="text/javascript">
-	$('.regBox__lijevo--box').click(function(){
-		$('.regBox').css('width', '1160px');
+			if($(window).width() > 1168){
+				$('.regBox__lijevo--box').click(function(){
+					$('.regBox').css('width', '1160px');
+					$('.regBox__lijevo').css('width', '200px');
+					$('.regBox__desno').css('display', 'block');
+					 setTimeout(function(){
+					 	$('.regBox__desno').css('opacity', '1');
+					}, 300);
+					$('.regBox__lijevo--box.active p').css('color', '#f89101');
+				}
+			} else{
+				$('.regBox__lijevo--box').click(function(){
+					$('.regBox').css('width', '320px !important');
+					$('.regBox__lijevo').css('width', '200px');
+					$('.regBox__desno').css('display', 'block');
+					 setTimeout(function(){
+					 	$('.regBox__desno').css('opacity', '1');
+					}, 300);
+					$('.regBox__lijevo--box.active p').css('color', '#f89101');
+				}
+			}
 
-		$('.regBox__lijevo').css('width', '200px');
 
 
-		$('.regBox__desno').css('display', 'block');
-		 setTimeout(function(){
-		 	$('.regBox__desno').css('opacity', '1');
-		}, 300);
-		 $('.regBox__lijevo--box.active p').css('color', '#f89101');
-	});
+
 	$('.closeReg').click(function(){
 		$('.registracija .regBox').css('width', '200px');
 		$('.registracija .regBox__desno').css('display', 'none');
 		$('.registracija .regBox__desno').css('opacity', '0');
 		$('#myModal2 .regBox').css('height', '461px');
 		$('.registracija.regBox').css('width', '200px');
-
 		$('.registracija.regBox').css('width', '500px');
 		$('.regBox__lijevo').css('width', '500px');
 	});
-
 </script>
 
 

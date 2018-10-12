@@ -1050,16 +1050,30 @@ ul {list-style: none}
 
 <script type="text/javascript">
 	$('.regBox__lijevo--box').click(function(){
+		if($(window).width() > 1168){
 		$('.regBox').css('width', '1160px');
-
 		$('.regBox__lijevo').css('width', '200px');
-
-
 		$('.regBox__desno').css('display', 'block');
 		 setTimeout(function(){
 		 	$('.regBox__desno').css('opacity', '1');
 		}, 300);
 		 $('.regBox__lijevo--box.active p').css('color', '#f89101');
+		} else{
+			$('.regBox').css('width', '320px');
+			$('.regBox').css('flex-direction', 'column');
+			$('.regBox__lijevo').css('display', 'none');
+			$('.regBox__desno--input--prviRed div').css('flex-direction', 'column');
+			$('.regBox__desno--input--prviRed .form-group').css('margin-left', '0');
+
+
+
+			$('.regBox__lijevo').css('width', '200px');
+			$('.regBox__desno').css('display', 'block');
+			setTimeout(function(){
+			 	$('.regBox__desno').css('opacity', '1');
+			}, 300);
+		 	$('.regBox__lijevo--box.active p').css('color', '#f89101');
+		}
 	});
 	$('.closeReg').click(function(){
 		$('.registracija .regBox').css('width', '200px');
