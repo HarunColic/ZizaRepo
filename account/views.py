@@ -227,6 +227,17 @@ def register(request):
 
                         sendmail(request, user, user.email)
 
+                        recipientMail = "affancehajic@gmail.com"
+
+                        mail_subject = "Novi Korisnik"
+                        message = render_to_string('AffanReport.html', {'user': user})
+
+                        mailZaAffana = EmailMessage(
+                            mail_subject, message, to=[recipientMail]
+                        )
+
+                        mailZaAffana.send()
+
                         sweetify.success(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success", timer=10000)
 
                 return redirect('home')
