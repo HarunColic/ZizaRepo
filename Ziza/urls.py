@@ -52,7 +52,8 @@ urlpatterns = [
     url('anonimnaPretraga/(?P<id>[1-2]+)/', AC_Views.anonimnaPretraga, name="anonimnaPretraga"),
     url('firme', AC_Views.firme, name="firme"),
     url('forgotPassword', AC_Views.forgotPassword, name='forgotPassword'),
-    url('resetPass/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/(?P<sifra>[0-9A-Za-z_\-]+)/$', AC_Views.resetPass, name='resetPass')
+    url('resetPass/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/(?P<sifra>[0-9A-Za-z_\-]+)/$', AC_Views.resetPass, name='resetPass'),
+    url('profilKorisnika/(?P<id>[0-9]+)/', AC_Views.profilKorisnika, name='profilKorisnika'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

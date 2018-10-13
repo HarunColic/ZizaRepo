@@ -668,3 +668,15 @@ def csrf_failure(request, reason=""):
     if resolve(request.path_info).url_name == 'signin/':
         sweetify.sweetalert(request, title="Već ste prijavljeni", icon="error")
         return redirect('home')
+
+
+def profilKorisnika(request, id):
+
+    if request.user.is_authenticated:
+
+        user = User.objects.get(pk=id)
+        if Company.objects.filter(userID=user).exists():
+            company = Company.objects.get(userID=user)
+            userP = UserProfile.objects.get(userID=user)
+            posts = Post.objects.filter(soft_delete=False).filter(userID=user)
+            return render(request, 'ProfilKorisnika.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
