@@ -79,6 +79,10 @@ $(document).ready(function() {
     });
 });
 
+$('#osobaSector').click(function(){
+		$('.regBox').css('height', '714px !important');
+	});
+
 $('#srednjiElement').toggle();
 	$('#osobaSector').click(function(){
 		if(!$('#osobaSector').hasClass("active")){
@@ -90,9 +94,13 @@ $('#srednjiElement').toggle();
 			$('#drugiInput').text('Prezime');
 			$('#srednjiElement').addClass('hidden');
 			$('#srednjiElement').toggle();
-			$('.regBox').css('height', '542px');
 			document.getElementById("vrsta").value = "radnik"
 		}
+		if($(window).width() > 1168){
+				$('.regBox').css('height', '542px');
+			} else if($(window).width() < 1168){
+				$('.regBox').css('height', '714px');
+			}
 	});
 	$('#firmaSector').click(function(){
 		if(!$('#firmaSector').hasClass("active")){
@@ -104,7 +112,11 @@ $('#srednjiElement').toggle();
 			$('#drugiInput').text('ID broj');
 			$('#srednjiElement').removeClass('hidden');
 			$('#srednjiElement').toggle();
-			$('.regBox').css('height', '670px');
+			if($(window).width() > 1168){
+				$('.regBox').css('height', '670px');
+			} else if($(window).width() < 1168){
+				$('.regBox').css('height', '920px');
+			}
 			$('.regBox__lijevo--box').css('height', '361px');
 			$('.regBox__lijevo').css('display', 'block !important');
 			document.getElementById("vrsta").value = "firma"

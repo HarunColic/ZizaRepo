@@ -57,30 +57,87 @@
 		</div>
 
 
+		    <style type="text/css">
+		    @media screen and (max-width: 1160px){
+		    	.regBox label, .regBox select {
+		    		font-size: 15px;
+		    		margin-top: 3px;
+		    	}
+		    	.regBox__desno--input--prviRed > div{
+		    		margin-top: 50px !important;
+		    	}
+		    	.regBox__desno--input--prviRed > div:nth-child(1){
+		    		margin-top: 0px !important;
+		    	}
+		    	.regBox__desno h1{
+		    		margin-left: 0;
+		    		text-align: center !important;
+		    	}
+		    	.regBox__desno div:nth-child(2) p{
+		    		display: none;
+		    	}
+		    	#submitSlika{
+		    		width: 200px;
+		    	}
+		    	#myBtn3{margin-bottom: 68px}
+		    }
+		    </style>
+
+
+
 		<script type="text/javascript">
-			if($(window).width() > 1168){
-				$('.regBox__lijevo--box').click(function(){
-					$('.regBox').css('width', '1160px');
-					$('.regBox__lijevo').css('width', '200px');
-					$('.regBox__desno').css('display', 'block');
-					 setTimeout(function(){
-					 	$('.regBox__desno').css('opacity', '1');
-					}, 300);
-					$('.regBox__lijevo--box.active p').css('color', '#f89101');
-				}
-			} else{
-				$('.regBox__lijevo--box').click(function(){
-					$('.regBox').css('width', '320px !important');
-					$('.regBox__lijevo').css('width', '200px');
-					$('.regBox__desno').css('display', 'block');
-					 setTimeout(function(){
-					 	$('.regBox__desno').css('opacity', '1');
-					}, 300);
-					$('.regBox__lijevo--box.active p').css('color', '#f89101');
-				}
-			}
+		$('.regBox__lijevo--box').click(function(){
+		if($(window).width() > 1168){
+		$('.regBox').css('width', '1160px');
+		$('.regBox__lijevo').css('width', '200px');
+		$('.regBox__desno').css('display', 'block');
+		 setTimeout(function(){
+		 	$('.regBox__desno').css('opacity', '1');
+		}, 300);
+		 $('.regBox__lijevo--box.active p').css('color', '#f89101');
+		} else{
+			$('.regBox').css('width', '320px');
+			$('.regBox').css('flex-direction', 'column');
+			$('.regBox__lijevo, .linijaActive').css('display', 'none');
+			$('.regBox__desno--input--prviRed div').css('flex-direction', 'column');
+			$('.regBox__desno--input--prviRed .form-group, .regBox__desno--input').css('margin-left', '0');
+			$('.regBox input').css('width', '220px');
+			$('.regBox select').css('width', '220px !important');
+			$('.regBox__desno--input--prviRed div .form-group:nth-child(2)').css('margin-top', '50px');
+
+			$('.regBox').css('height', '920px !important');
+
+		
+
+			$('.regBox__lijevo').css('width', '200px');
+			$('.regBox__desno').css('display', 'block');
+			setTimeout(function(){
+			 	$('.regBox__desno').css('opacity', '1');
+			}, 300);
+		 	$('.regBox__lijevo--box.active p').css('color', '#f89101');
+		}
+	});
+
+	$('.close').click(function(){
+		$('.logBox').css('height', '504px');
+	});
 
 
+
+
+    $(".tReg").click(function(){
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+    })
+
+    $(".tLog").click(function(){
+        var modal2 = document.getElementById('myModal2');
+        modal2.style.display = "block";
+    })
+
+	$('#osobaSector').click(function(){
+		$('.regBox').css('height', '714px !important');
+	});
 
 
 	$('.closeReg').click(function(){
