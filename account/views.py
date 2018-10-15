@@ -508,7 +508,7 @@ def pretraga(request):
 
         pretrazuje = request.POST.get('pretragaTrigger', "False")
 
-        if superUser(request.user) and not pretrazuje:
+        if superUser(request.user) and pretrazuje == "False":
             posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
 
         data = posts.exclude(expires_at__lte= datetime.now())

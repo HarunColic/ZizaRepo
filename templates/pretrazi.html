@@ -166,7 +166,7 @@
 
      {% if data|length >= 2 %}
       {% with obj=data.pop %}
-          <a href="{% url 'showpost' id=obj.pk %}">
+        <a href="{% url 'showpost' id=obj.pk %}">
         <div class="kolona srednjaKol">
             <div class="single-kucica" style="margin-top: -87px">
                     {% for u in users %}
@@ -192,6 +192,7 @@
             </div>
         </div>
           </a>
+
      {% endwith %}
      {% else %}
          <div class="kolona srednjaKol" style="visibility: hidden">
@@ -210,7 +211,8 @@
 
      {% if data|length >= 1 %}
         {% with obj=data.pop %}
-        <a href="{% url 'showpost' id=obj.pk %}">
+                                <a href="{% url 'showpost' id=obj.pk %}">
+
         <div class="kolona respKol">
             <div class="single-kucica" style="margin-top: -87px">
                         {% for u in users %}
@@ -234,8 +236,10 @@
                         <div class="srce"><img src="{% static 'images/srce.png' %}"></div>
                     </div>
             </div>
+
         </div>
-        </a>
+             </a>
+
         {% endwith %}
      {% else %}
          <div class="kolona respKol" style="visibility: hidden">
