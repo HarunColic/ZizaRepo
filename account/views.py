@@ -48,37 +48,15 @@ def home(request):
     for cet in cetriOglasa:
         cetriUserP.append(UserProfile.objects.get(userID=cet.userID))
 
-    danasnjiOglasi = Post.objects.filter(created_at__year=datetime.now().year).filter(created_at__month=datetime.now().month).filter(created_at__day=datetime.now().day)
+    topOglasi = Post.objects.filter().exclude(soft_delete=True).order_by('views', '-created_at')[0:3]
 
-    if danasnjiOglasi.count() < 1:
-        topOglasi = None
-        oglas1 = None
-        oglas2 = None
-        oglas3 = None
-    else:
-        topOglasi = Post.objects.filter(created_at__year=datetime.now().year).filter(created_at__month=datetime.now().month).filter(
-            created_at__day=datetime.now().day).order_by('views')[0:3]
+    topOglasi = list(topOglasi)
+    oglas1 = topOglasi[0]
+    oglas2 = topOglasi[1]
+    oglas3 = topOglasi[2]
 
-        if danasnjiOglasi.count() > 0:
-            topOglasi = list(topOglasi)
-            oglas1 = topOglasi[0]
-        else:
-            oglas1 = None
-
-        if  danasnjiOglasi.count() > 1:
-            topOglasi = list(topOglasi)
-            oglas2 = topOglasi[1]
-        else:
-            oglas2 = None
-
-        if danasnjiOglasi.count() > 2:
-            topOglasi = list(topOglasi)
-            oglas3 = topOglasi[2]
-        else:
-            oglas3 = None
-
-    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('created_at')[0:4]
-    postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('created_at')[0:4]
+    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
+    postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
 
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
@@ -128,12 +106,12 @@ def profil(request):
 
             if userComp.categoryID.name == "Finansijske":
 
-                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now()).exclude(categoryID__name="Osiguravajuće")
+                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now()).exclude(categoryID__name="Osiguravajuće").order_by('-created_at')
                 return render(request, 'profilTvrtka.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
 
             elif userComp.categoryID.name == "Finansijske":
 
-                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now()).exclude(categoryID__name="Finansijske")
+                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now()).exclude(categoryID__name="Finansijske").order_by('-created_at')
                 return render(request, 'profilTvrtka.html',
                               {'user': user, 'userP': userP, 'company': company, 'posts': posts})
             elif superUser(request.user):
@@ -142,7 +120,7 @@ def profil(request):
                               {'user': user, 'userP': userP, 'company': company, 'posts': posts})
             else:
                 posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(
-                    categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())
+                    categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).order_by('-created_at')
                 return render(request, 'profilTvrtka.html',
                           {'user': user, 'userP': userP, 'company': company, 'posts': posts})
 
@@ -327,7 +305,10 @@ def activate(request, uidb64, token):
         sendZahvanicu(request, user.email)
         login(request, user)
 
-    return redirect('pretraga')
+        if Company.objects.filter(userID=user):
+            return redirect('editprofil')
+        else:
+            return redirect('pretraga')
 
 
 def signin(request):
@@ -517,7 +498,7 @@ def pretraga(request):
                 ind = Category.objects.get(name=kategorija)
                 posts = posts.filter(categoryID=ind)
             if kljucnaRijec is not "":
-                posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+                posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec) | Q(categoryID__name__contains=kljucnaRijec))
 
         else:
             if Company.objects.filter(userID=user).exists():
@@ -525,7 +506,9 @@ def pretraga(request):
             else:
                 posts = Post.objects.all().filter(type=1).exclude(soft_delete=True)
 
-        if superUser(request.user):
+        pretrazuje = request.POST.get('pretragaTrigger', "False")
+
+        if superUser(request.user) and not pretrazuje:
             posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
 
         data = posts.exclude(expires_at__lte= datetime.now())
@@ -550,8 +533,8 @@ def dashboard(request):
         if Company.objects.filter(userID=request.user).exists():
 
             userP = UserProfile.objects.get(userID=request.user)
-            activePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=True)
-            inactivePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=False)
+            activePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=True).order_by('-created_at')
+            inactivePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=False).order_by('-created_at')
             company = Company.objects.get(userID=request.user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
 
