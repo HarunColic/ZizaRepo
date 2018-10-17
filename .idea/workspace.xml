@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/account/migrations/0013_employee_editovanprofil.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0014_employee_strucnasprema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0015_employee_obrazovanje.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0016_auto_20181017_1912.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0017_auto_20181017_2125.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0018_remove_userprofile_location.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0019_userprofile_location.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0020_auto_20181017_2215.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/management/commands/slikeKategorije.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/migrations/0020_post_brojizvrsitelja.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/migrations/0021_category_slika.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pcela_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/editProfilPL.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/gradovi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/_config.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/_config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editProfilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilTvrtka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newpost.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost.html" afterDir="false" />
-    </list>
+    <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +88,7 @@
           <entry key="js" value="28" />
           <entry key="png" value="3" />
           <entry key="po" value="1" />
-          <entry key="py" value="171" />
+          <entry key="py" value="172" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
@@ -136,7 +101,7 @@
           <entry key="JavaScript" value="28" />
           <entry key="Locale" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="171" />
+          <entry key="Python" value="172" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -160,6 +125,18 @@
                 <marker date="1539809445958" expanded="true" signature="16773:16846" ph="..." />
                 <marker date="1539809445958" expanded="true" signature="16886:16887" ph="..." />
                 <marker date="1539809445958" expanded="true" signature="16886:16892" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/account/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -247,11 +224,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="514" column="37" selection-start-line="514" selection-start-column="37" selection-end-line="514" selection-end-column="37" />
+            <state relative-caret-position="250">
+              <caret line="510" column="27" lean-forward="true" selection-start-line="510" selection-start-column="27" selection-end-line="510" selection-end-column="27" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
                 <marker date="1539814786671" expanded="true" signature="1022:1121" ph="..." />
@@ -307,12 +284,12 @@
       <find>iskus</find>
       <find>brojTel</find>
       <find>files</find>
-      <find>newpo</find>
       <find>image</find>
       <find>&lt;form</find>
-      <find>profilePicture</find>
       <find>kontak</find>
       <find>sjed</find>
+      <find>profilePicture</find>
+      <find>newpo</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -598,7 +575,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14126097" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14126097" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -612,7 +589,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.30016312" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.19412725" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.19412725" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32626426" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.32952693" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -936,35 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="88" column="129" selection-start-line="88" selection-start-column="129" selection-end-line="88" selection-end-column="129" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <marker date="1539809445958" expanded="true" signature="1077:1079" ph="..." />
-            <marker date="1539809445958" expanded="true" signature="8434:8435" ph="..." />
-            <marker date="1539809445958" expanded="true" signature="15839:15841" ph="..." />
-            <marker date="1539809445958" expanded="true" signature="16041:16042" ph="..." />
-            <marker date="1539809445958" expanded="true" signature="16041:16047" ph="..." />
-            <marker date="1539809445958" expanded="true" signature="16773:16779" ph="..." />
-            <marker date="1539809445958" expanded="true" signature="16773:16846" ph="..." />
-            <marker date="1539809445958" expanded="true" signature="16886:16887" ph="..." />
-            <marker date="1539809445958" expanded="true" signature="16886:16892" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
@@ -1053,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="514" column="37" selection-start-line="514" selection-start-column="37" selection-end-line="514" selection-end-column="37" />
+        <state relative-caret-position="250">
+          <caret line="510" column="27" lean-forward="true" selection-start-line="510" selection-start-column="27" selection-end-line="510" selection-end-column="27" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
             <marker date="1539814786671" expanded="true" signature="1022:1121" ph="..." />
@@ -1069,6 +1017,35 @@
             <marker date="1539814786671" expanded="true" signature="28845:28851" ph="..." />
             <marker date="1539814786671" expanded="true" signature="29051:29053" ph="..." />
             <marker date="1539814786671" expanded="true" signature="29051:29057" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="88" column="129" selection-start-line="88" selection-start-column="129" selection-end-line="88" selection-end-column="129" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1539809445958" expanded="true" signature="1077:1079" ph="..." />
+            <marker date="1539809445958" expanded="true" signature="8434:8435" ph="..." />
+            <marker date="1539809445958" expanded="true" signature="15839:15841" ph="..." />
+            <marker date="1539809445958" expanded="true" signature="16041:16042" ph="..." />
+            <marker date="1539809445958" expanded="true" signature="16041:16047" ph="..." />
+            <marker date="1539809445958" expanded="true" signature="16773:16779" ph="..." />
+            <marker date="1539809445958" expanded="true" signature="16773:16846" ph="..." />
+            <marker date="1539809445958" expanded="true" signature="16886:16887" ph="..." />
+            <marker date="1539809445958" expanded="true" signature="16886:16892" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
