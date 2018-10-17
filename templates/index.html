@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <style>
         .slikaPolicajac, .slikaBiznismen, .slikaVodoinstalater{
-            background-image: url("{%  static 'images/bankar.png' %}");
+            background-image: url("{%  static trecaSlika %}");
             background-repeat: no-repeat;
             width: 250px;
             height: 300px;
@@ -35,10 +35,10 @@
         	cursor: pointer;
         }
         .slikaBiznismen{
-            background-image: url("{% static 'images/laptop.png' %}");
+            background-image: url("{% static drugaSlika %}");
         }
         .slikaVodoinstalater{
-            background-image: url("{% static 'images/cistac.png' %}");
+            background-image: url("{% static prvaSlika %}");
         }
         .zadnjiPoslovi__popularno--dots{
         	padding-left: 40px;
@@ -748,10 +748,8 @@ ul {list-style: none}
 
                 }
 
-            
+
 			</style>
-
-
 </head>
 <body>
 

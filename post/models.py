@@ -11,6 +11,7 @@ class Category(models.Model):
     description = models.CharField(max_length=255, null=True)
     created_at = models.DateTimeField(default=datetime.now)
     type = models.IntegerField(default=1)
+    slika = models.IntegerField(default=0)
 
 
 class Post(models.Model):
@@ -34,6 +35,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     soft_delete = models.BooleanField(default=False)
     views = models.IntegerField(default=0)
+    brojIzvrsitelja = models.IntegerField(default=1)
 
     @property
     def is_past_due(self):

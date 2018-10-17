@@ -136,9 +136,10 @@
 
 					    </div>
 					    <div class="form-group" style="margin-left: 40px">
-					      <select name="City" id="sjed">
-						<option value="" disabled selected>Sjedište firme</option>
-			    		<option value="Grad A">Grad A</option>
+					     {% with var=1 %}
+
+			    		{% include 'gradovi.html' %}
+                            {% endwith %}
 						</select>
 					    </div>
 					</div>
@@ -654,7 +655,7 @@ ul {list-style: none}
 			</div>
 			<div class="header__navigation--dugmad">
 				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
-					<div style="width: 42px; height: 42px; border-radius: 50%; background: url({% if var3.image %}{{ var3.image.url }} {% endif %}); background-position: center; background-size: cover"></div>
+					<div style="width: 42px; height: 42px; border-radius: 50%; background: url({% if var3.image %}{{var3.image.url }}{% endif %}); background-position: center; background-size: cover"></div>
 					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px; margin-right: 50px" class="postavke">{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px"></i>
 					<div class="postavkeBottom">
 					    <ul style="position: relative;">

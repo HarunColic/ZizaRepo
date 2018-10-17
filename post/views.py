@@ -17,9 +17,13 @@ from django.conf import settings
 
 def newpost(request):
 
-    if Company.objects.filter(userID=request.user):
+    if Company.objects.filter(userID=request.user).exists():
 
-        categories = Category.objects.filter(type=1)
+        if superUser(request.user):
+            categories = Category.objects.exclude(type=0)
+        else:
+            categories = Category.objects.filter(type=1)
+
         userP = UserProfile.objects.get(userID=request.user)
         return render(request, 'newpost.html', {'cat': categories, 'userP': userP, 'user': request.user})
     else:
@@ -30,7 +34,12 @@ def newpotraznja(request):
 
     if Company.objects.filter(userID=request.user):
 
-        categories = Category.objects.filter(type=1)
+        if superUser(request.user):
+
+            categories = Category.objects.exclude(type=0)
+        else:
+            categories = Category.objects.filter(type=1)
+
         comp = Company.objects.get(userID=request.user)
         userP = UserProfile.objects.get(userID=request.user)
 
@@ -48,7 +57,7 @@ def createpost(request):
             title = request.POST['naslov']
             category = request.POST.get('category', None)
             expiration = request.POST.get('expiration', None)
-            lokacija = request.POST['lokacija']
+            lokacija = request.POST['City']
             pozicija = request.POST['pozicija']
             godineIskustva = request.POST['godineIskustva']
             strucnasprema = request.POST['strucnasprema']
@@ -56,6 +65,7 @@ def createpost(request):
             brojTel = request.POST['brojTel']
             opis = request.POST['opis']
             type = request.POST['type']
+            brojIzv = request.POST['brojIzvr']
 
             if request.FILES.get('image_uploads', None):
                 myfile = request.FILES['image_uploads']
@@ -69,20 +79,14 @@ def createpost(request):
             else:
                 myfile = None
 
-            args = [title, category, expiration, lokacija, pozicija, godineIskustva, strucnasprema, email, brojTel, opis, type]
+            args = [title, category, expiration, lokacija, pozicija, godineIskustva, strucnasprema, email, brojTel, opis, type, brojIzv]
 
             if not validation(request, args):
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
             cat = Category.objects.get(name=category)
 
-            if City.objects.all().filter(name=lokacija).exists():
-                city = City.objects.get(name=lokacija)
-            else:
-                city = City(name=lokacija)
-                city.save()
-
-            post = Post( userID=request.user, categoryID=cat, title=title, region="BiH", location=city.name, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
+            post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
             post.attachment = myfile
             post.save()
 
@@ -156,6 +160,12 @@ def createpost(request):
 
 def showpost(request, id):
 
+    if Employee.objects.filter(userID=request.user):
+        emp = Employee.objects.get(userID=request.user)
+        if not emp.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
     post = Post.objects.get(pk=id)
     userP = UserProfile.objects.get(userID=post.userID)
 
@@ -213,8 +223,6 @@ def bankUsluge(request):
 
 def osiguranjeUsluge(request):
 
-
-
     user = request.user
     userP = UserProfile.objects.get(userID=user)
     cat = Category.objects.get(name="Osiguravajuće")
@@ -223,6 +231,12 @@ def osiguranjeUsluge(request):
 
 
 def prijaviOglas(request, id):
+
+    if Employee.objects.filter(userID=request.user):
+        emp = Employee.objects.get(userID=request.user)
+        if not emp.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
     if request.user.is_authenticated:
         post = Post.objects.get(pk=id)

@@ -21,6 +21,7 @@ import sweetify
 from django.template.context_processors import csrf
 from django.utils.crypto import get_random_string
 from django.core.urlresolvers import resolve
+from post.models import UserCategories
 
 
 def superUser(user):
@@ -45,29 +46,50 @@ def home(request):
 
     cetriOglasa = Post.objects.filter().exclude(soft_delete=True)[0:4]
     cetriUserP = []
+
     for cet in cetriOglasa:
-        cetriUserP.append(UserProfile.objects.get(userID=cet.userID))
+        #cetriUserP.append(UserProfile.objects.get(userID=cet.userID))
+        cetriUserP.append(None  )
 
     topOglasi = Post.objects.filter().exclude(soft_delete=True).order_by('views', '-created_at')[0:3]
 
-    topOglasi = list(topOglasi)
-    oglas1 = topOglasi[0]
-    oglas2 = topOglasi[1]
-    oglas3 = topOglasi[2]
+    if topOglasi.count() == 3:
+
+        topOglasi = list(topOglasi)
+        oglas1 = topOglasi[0]
+        oglas2 = topOglasi[1]
+        oglas3 = topOglasi[2]
+
+        prvaSlika = 'images/pcela_' + str(oglas1.categoryID.slika) + '.png'
+        drugaSlika = 'images/pcela_' + str(oglas2.categoryID.slika) + '.png'
+        trecaSlika = 'images/pcela_' + str(oglas3.categoryID.slika) + '.png'
+
+    else:
+        topOglasi = list(topOglasi)
+        oglas1 = None
+        oglas2 = None
+        oglas3 = None
+
+        prvaSlika = None
+        drugaSlika = None
+        trecaSlika = None
 
     postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
     postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
+
 
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
         return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None,
                                               'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2,
-                                              'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP})
+                                              'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP,
+                                              'prvaSlika': prvaSlika, 'drugaSlika': drugaSlika, 'trecaSlika': trecaSlika})
     else:
         industries = Category.objects.filter(type=0)
         return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries,
                                               'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2,
-                                              'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP})
+                                              'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP,
+                                              'prvaSlika': prvaSlika, 'drugaSlika': drugaSlika, 'trecaSlika': trecaSlika})
 
 
 def profil(request):
@@ -102,28 +124,10 @@ def profil(request):
 
         if Company.objects.filter(userID=user).exists():
 
-            userComp = Company.objects.get(userID=user)
+            posts = Post.objects.filter(userID=user).exclude(soft_delete=True)
 
-            if userComp.categoryID.name == "Finansijske":
-
-                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now()).exclude(categoryID__name="Osiguravajuće").order_by('-created_at')
-                return render(request, 'profilTvrtka.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
-
-            elif userComp.categoryID.name == "Finansijske":
-
-                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now()).exclude(categoryID__name="Finansijske").order_by('-created_at')
-                return render(request, 'profilTvrtka.html',
-                              {'user': user, 'userP': userP, 'company': company, 'posts': posts})
-            elif superUser(request.user):
-                posts = Post.objects.all().filter(userID=user).exclude(expires_at__lte=datetime.now())
-                return render(request, 'profilTvrtka.html',
-                              {'user': user, 'userP': userP, 'company': company, 'posts': posts})
-            else:
-                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(
-                    categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).order_by('-created_at')
-                return render(request, 'profilTvrtka.html',
+            return render(request, 'profilTvrtka.html',
                           {'user': user, 'userP': userP, 'company': company, 'posts': posts})
-
         elif Employee.objects.filter(userID=user).exists():
             return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
     else:
@@ -203,18 +207,19 @@ def register(request):
                         userP = UserProfile(userID=user)
                         userP.save()
 
+
                         sendmail(request, user, user.email)
 
-                        recipientMail = "affancehajic@gmail.com"
+                       # recipientMail = "affancehajic@gmail.com"
 
-                        mail_subject = "Novi Korisnik"
-                        message = render_to_string('AffanReport.html', {'user': user})
+                        #mail_subject = "Novi Korisnik"
+                        #message = render_to_string('AffanReport.html', {'user': user})
 
-                        mailZaAffana = EmailMessage(
-                            mail_subject, message, to=[recipientMail]
-                        )
+                        # mailZaAffana = EmailMessage(
+                        #   mail_subject, message, to=[recipientMail]
+                        # )
 
-                        mailZaAffana.send()
+                        # mailZaAffana.send()
 
                         sweetify.success(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success", timer=10000)
 
@@ -223,15 +228,9 @@ def register(request):
             else:
 
                 user = User()
-                city = City(name=request.POST['City'])
+                grad = request.POST['City']
 
-                city.name = city.name.lower()
-                city.name = city.name.title()
-
-                if City.objects.filter(name=city.name).exists():
-                    city = City.objects.get(name=city.name)
-                else:
-                    city.save()
+                city = City.objects.get(name=grad)
 
                 categoryname = request.POST.get('Category', None)
                 user.first_name = request.POST['FirstName']
@@ -305,10 +304,7 @@ def activate(request, uidb64, token):
         sendZahvanicu(request, user.email)
         login(request, user)
 
-        if Company.objects.filter(userID=user):
-            return redirect('editprofil')
-        else:
-            return redirect('pretraga')
+        return redirect('editprofil')
 
 
 def signin(request):
@@ -362,80 +358,161 @@ def editprofil(request):
     #edit profil kompanije
 
     if request.user.is_authenticated:
-        user = request.user
-        userP = UserProfile.objects.get(userID=user)
-        gradovi = City.objects.all()
-        comp = Company.objects.get(userID=user)
-        cat = Category.objects.filter(type=0)
 
-        return render(request, 'editProfilTvrtka.html', {'user': user, 'gradovi': gradovi, 'userP': userP, 'comp': comp, 'cat': cat})
+        if Company.objects.filter(userID=request.user).exists():
+            user = request.user
+            userP = UserProfile.objects.get(userID=user)
+            gradovi = City.objects.all()
+            comp = Company.objects.get(userID=user)
+            cat = Category.objects.filter(type=0)
+
+            return render(request, 'editProfilTvrtka.html', {'user': user, 'gradovi': gradovi, 'userP': userP, 'comp': comp, 'cat': cat})
+
+        elif Employee.objects.filter(userID=request.user).exists():
+            user = request.user
+            userP = UserProfile.objects.get(userID=user)
+            gradovi = City.objects.all()
+            emp = Employee.objects.get(userID=user)
+            cat = Category.objects.filter(type=0)
+            return render(request, 'editProfilPL.html', {'user': user, 'gradovi': gradovi, 'userP': userP, 'emp': emp, 'cat': cat})
+
     else:
         redirect('home')
-
-#potrebno dodati edit profil osobe
 
 
 def submitchange(request):
 
     if request.user.is_authenticated:
 
-        if request.method == "POST":
-            name = request.POST['naslov']
-            mail = request.POST['email']
-            brojtel = request.POST['brojTel']
-            grad = request.POST['city']
-            cat = request.POST.get('category', None)
-            brojuposlenika = request.POST['brojuposlenih']
-            opis = request.POST['opis']
-            slika = request.FILES.get('profilePicture', default=None)
+        if Company.objects.filter(userID=request.user).exists():
 
-            args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
+            if request.method == "POST":
+                name = request.POST['naslov']
+                mail = request.POST['email']
+                brojtel = request.POST['brojTel']
+                grad = request.POST['city']
+                cat = request.POST.get('category', None)
+                brojuposlenika = request.POST['brojuposlenih']
+                opis = request.POST['opis']
+                slika = request.FILES.get('profilePicture', default=None)
+                args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
 
-            if not validation(request, args):
-                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                if not validation(request, args):
+                    sweetify.sweetalert(request, title="Sva polja obavezna", icon="error")
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-            user = request.user
-            userP = UserProfile.objects.get(userID=user)
-            comp = Company.objects.get(userID=user)
-            category = Category.objects.get(name=cat)
+                user = request.user
+                userP = UserProfile.objects.get(userID=user)
+                comp = Company.objects.get(userID=user)
+                category = Category.objects.get(name=cat)
 
-            if validateMail(mail):
+                if validateMail(mail):
 
-                usermail = True
+                    usermail = True
 
-                if mail != user.email:
-                    usermail = False
+                    if mail != user.email:
+                        usermail = False
 
-                    if User.objects.filter(email=mail).exists():
-                        sweetify.error(request, 'Mail već postoji',
-                                       text='molimo izaberite novi mail', icon="error",
-                                         timer=10000)
-                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                        if User.objects.filter(email=mail).exists():
+                            sweetify.error(request, 'Mail već postoji',
+                                           text='molimo izaberite novi mail', icon="error",
+                                             timer=10000)
+                            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-                user.first_name = name
-                user.email = mail
+                    user.first_name = name
+                    user.email = mail
+                    userP.location = grad
+                    userP.brojtelefona = brojtel
+                    if slika:
+                        userP.image = slika
+                    comp.categoryID = category
+                    comp.brojuposlenih = brojuposlenika
+                    comp.opis = opis
+
+                    user.save()
+                    userP.save()
+                    comp.save()
+
+                    if usermail is False:
+
+                        sweetify.success(request, 'Molimo verifikujte svoj mail', icon="success", timer=10000)
+                        sendmail(request, user, mail)
+                        logout(request)
+
+                else:
+                    sweetify.error(request, 'Mail nije validan',
+                                   text='molimo unesite validnu email adresu', icon="error",
+                                   timer=10000)
+        else:
+
+            if request.method == "POST":
+                name = request.POST.get('naslov', default=None)
+                radnoMjesto = request.POST.get('radno', default=None)
+                email = request.POST.get('email', default=None)
+                iskustvo = request.POST.get('iskustvo', default= None)
+                kontaktBroj = request.POST.get('brojTel', None)
+                grad = request.POST.get('grad', default=None)
+                opis = request.POST.get('opis', None)
+                slika = request.FILES.get('profilePicture', default=None)
+                kategorije = request.POST.getlist('kategorije')
+                strucnaSprema = request.POST.get('strucnaSprema', default=None)
+                obrazovanje = request.POST.get('obrazovanje', default=None)
+
+                if iskustvo is None or iskustvo == '':
+                    iskustvo = 0
+
+                myfile = request.FILES.get('image_uploads', None)
+
+                if myfile is not None:
+                    fs = FileSystemStorage()
+                    filename = fs.save(myfile.name, myfile)
+                    uploaded_file_url = fs.url(filename)
+
+                args = [email, name, grad, kontaktBroj,opis, strucnaSprema, obrazovanje]
+
+                if not validation(request, args):
+                    sweetify.sweetalert(request, title="Sva polja obavezna", icon="error")
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+                imeiPrezime = name.split()
+                ime = imeiPrezime[0]
+                prezime = imeiPrezime[1]
+
+                user = request.user
+
+                user.first_name = ime
+                user.last_name = prezime
+
+                emp = Employee.objects.get(userID=request.user)
+                emp.strucnaSprema=strucnaSprema
+                emp.obrazovanje = obrazovanje
+                emp.iskustvo = iskustvo
+
+                userP = UserProfile.objects.get(userID=request.user)
+
+                if myfile is not None:
+                    userP.cv = myfile
+
                 userP.location = grad
-                userP.brojtelefona = brojtel
-                if slika:
+                userP.brojtelefona = kontaktBroj
+
+                if radnoMjesto is not None or radnoMjesto == '':
+                    emp.radnoMjesto = radnoMjesto
+                if slika is not None:
                     userP.image = slika
-                comp.categoryID = category
-                comp.brojuposlenih = brojuposlenika
-                comp.opis = opis
+
+                for k in kategorije:
+                    cat = Category.objects.get(name=k)
+                    userCat = UserCategories(userID=user, categoryID=cat)
+                    userCat.save()
+
+                emp.editovanProfil = True
 
                 user.save()
+                emp.save()
                 userP.save()
-                comp.save()
 
-                if usermail is False:
-
-                    sweetify.success(request, 'Molimo verifikujte svoj mail', icon="success", timer=10000)
-                    sendmail(request, user, mail)
-                    logout(request)
-
-            else:
-                sweetify.error(request, 'Mail nije validan',
-                               text='molimo unesite validnu email adresu', icon="error",
-                               timer=10000)
+                return redirect('home')
 
     return redirect('profil')
 
@@ -469,6 +546,12 @@ def pretraga(request):
 
     if request.user.is_authenticated:
 
+        if Employee.objects.filter(userID=request.user):
+            emp = Employee.objects.get(userID=request.user)
+            if not emp.editovanProfil:
+                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+                return redirect('editprofil')
+
         auth = True
 
         user = request.user
@@ -484,9 +567,9 @@ def pretraga(request):
                 if superUser(request.user):
                     posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
                 elif userComp.categoryID.name == "Finansijske":
-                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
                 elif userComp.categoryID.name == "Osiguravajuće":
-                    posts = Post.objects.all().filter(type=2).exclude().exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
                 else:
                     posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
             else:
@@ -656,6 +739,13 @@ def csrf_failure(request, reason=""):
 def profilKorisnika(request, id):
 
     if request.user.is_authenticated:
+
+
+        if Employee.objects.filter(userID=request.user):
+            emp = Employee.objects.get(userID=request.user)
+            if not emp.editovanProfil:
+                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+                return redirect('editprofil')
 
         user = User.objects.get(pk=id)
         if Company.objects.filter(userID=user).exists():

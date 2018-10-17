@@ -114,13 +114,9 @@
 				</div>
 				<div style="margin-top: 20px">
 					<label>Sjedište</label><br>
-					<select name="city">
-						<option value="{{ userP.location }}" >{{ userP.location }}</option>
-                        {% for g in gradovi %}
-                            {% if g.name != userP.location %}
-			    		<option value="{{ g.name }}">{{ g.name }}</option>
-                            {% endif %}
-					    {% endfor %}
+					{% with var=1 %}
+                        {% include 'gradovi.html' %}
+                    {% endwith %}
                     </select>
 				</div>
 				<div style="margin-top: 20px">
