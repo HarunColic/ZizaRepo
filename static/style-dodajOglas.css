@@ -302,3 +302,154 @@ display: none;
     font-size: 18px;
     text-align: justify;
 	}
+
+		.sadrzaj{
+		max-width: 960px !important;
+	}
+	@media only screen and (max-width: 1150px){
+		.sadrzaj{
+			margin-left: 50px;
+		}
+		.formaBody{
+			height: 100%;
+		}
+		div > input, div > select{
+			width: 50% !important;
+			display: flex;
+			margin: 0 auto;
+		}
+		label{
+			width: 50%;
+			display: flex;
+			align-items: center;
+			margin: 0 auto;
+			margin-top: 40px;
+		}
+		form > div:nth-child(2){
+			margin-top: 20px;
+		}
+		.multipleFour, 
+		.multipleTwo{
+			display: flex;
+			flex-direction: column;
+			margin-top: 0px !important;
+		}
+		.multipleFour > div, 
+		.multipleTwo > div{
+			width: 100% !important;
+		}
+
+		#editor-container, 
+		.ql-toolbar{
+			margin: 0 auto;
+			width: 50%;
+		}
+		.specLab{
+			margin-bottom: 18px !important;
+		}
+		.dokumentPDF > div{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			margin-top: -70px;
+			margin-bottom: 50px;
+			margin-left: -120px;
+		}
+		/* tobe jarabi sta covjek napisa :) */
+		.dokumentPDF > div > div:nth-child(1){
+			margin-top: -40px;
+		}
+	}
+	@media only screen and (max-width: 1000px){
+		div > input, div > select{
+			width: 100% !important;
+			display: flex;
+			margin: 0;
+		}
+		label{
+			width: 100%;
+			margin: 0;
+			margin-top: 40px;
+		}
+		#editor-container, 
+		.ql-toolbar{
+			margin: 0 auto;
+			width: 100%;
+		}
+		.sadrzaj{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100% !important;
+
+		}
+		.formaBody{
+			max-width: 500px !important;
+		}
+		.sadrzaj{
+			margin-left:10px;
+		}
+		form{
+			margin-top: 20px !important;
+		}
+		.custom-file-upload{
+			width: 50%;
+		}
+		.dokumentPDF div:nth-child(1){
+			margin-left: 90px !important;
+		}
+		.podaciT div:nth-child(3){
+			display: none;
+			visibility: hidden;
+		}
+		#aktivirajPregled{
+			left: 150px !important;
+		}
+	}
+	@media only screen and (max-width: 450px){
+		.formaBody{
+			max-width: 350px !important;
+		}
+		div > input, div > select{
+			width: 90% !important;
+			display: flex;
+			margin: 0;
+		}
+		label{
+			width: 90%;
+			margin: 0;
+			margin-top: 40px;
+		}
+		.sadrzaj{
+			margin-left:20px;
+		}
+		label > span{
+			visibility: hidden;
+		}
+		#editor-container, 
+		.ql-toolbar{
+			width: 90%;
+			margin-left: 0px;
+		}
+		.dokumentPDF label{
+			width: 100% !important;
+			font-size: 15px;
+		}
+		.dokumentPDF div:nth-child(1){
+			width: 80px;
+		}
+		.dokumentPDF div{
+			display: flex;
+			flex-direction: column;
+		}
+		.dokumentPDF div:nth-child(1){
+			margin-left: 0px !important;
+		}
+		.dokumentPDF div:nth-child(2){
+			margin-left: 50px !important;
+		}
+		#aktivirajPregled{
+			left: 70px !important;
+		}
+	}

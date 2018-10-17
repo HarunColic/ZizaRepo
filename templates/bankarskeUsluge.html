@@ -373,6 +373,16 @@ var quill = new Quill('#editor-container', {
   placeholder: 'Unesite detaljan opis Vašeg oglasa...',
   theme: 'snow'
 });
+
+this.quill.clipboard.addMatcher(Node.ELEMENT_NODE, (node, delta) => {
+  delta.ops = delta.ops.map(op => {
+    return {
+      insert: op.insert
+    }
+  })
+  return delta
+});
+
 var form = document.querySelector('#postForm');
 form.onsubmit = function() {
   var about = document.querySelector('input[name=opis]');

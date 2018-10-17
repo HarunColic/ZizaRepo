@@ -7,12 +7,12 @@
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
 	<meta charset="utf-8">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
 	<link rel="stylesheet" type="text/css" href="../static/style-oglas.css">
 	<link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.css">
 	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../static/style-dodajOglas.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 	<style type="text/css">
 		input[type=number]::-webkit-inner-spin-button, 
 		input[type=number]::-webkit-outer-spin-button { 
@@ -20,7 +20,8 @@
 		  margin: 0; 
 		}
 		.formaBody{
-			height: 1368px;
+			height: 100%;
+			padding-bottom: 40px;
 		}
 	</style>
 </head>
@@ -77,17 +78,25 @@
 					</select>
 				</div>
 
-				<div style="margin-top: 20px">
-					<label>Trajanje oglasa</label><br>
-					<select name="expiration">
-						<option value="" disabled selected>Izaberi trajanje</option>
-                        <option value="7">7 dana</option>
-			    		<option value="15">15 dana</option>
-			    		<option value="30">30 dana</option>
-			    		<option value="60">60 dana</option>
-					</select>
+
+				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
+					<div style="width: 53.22%; margin-right: 25px">
+						<label>Trajanje oglasa</label><br>
+						<select name="expiration" style="width: 100%">
+							<option value="" disabled selected>Izaberi trajanje</option>
+	                        <option value="7">7 dana</option>
+				    		<option value="15">15 dana</option>
+				    		<option value="30">30 dana</option>
+				    		<option value="60">60 dana</option>
+						</select>
+					</div>
+					<div style="width: 43.75%">
+						<label>Broj izvršitelja</label><br>
+						<input type="number" id="spremaInput" name="brojIzvr" value="" style="width: 100%">
+					</div>
 				</div>
-				<div style="margin-top: 20px; display: flex;">
+
+				<div style="margin-top: 20px; display: flex;" class="multipleFour">
 					<div style="width: 23%; margin-right: 25px">
 						<label>Lokacija</label><br>
 						<input type="text" id='lokacijaInput' name="lokacija" placeholder="npr. Mostar" style="width: 100%">
@@ -102,10 +111,10 @@
 					</div>
 					<div style="width: 23%;">
 						<label>Stručna sprema</label><br>
-						<input type="text" id='spremaInput' name="strucnasprema" placeholder="npr. SSS" style="width: 100%">
+						<input type="text" id='sprema2Input' name="strucnasprema" placeholder="npr. SSS" style="width: 100%">
 					</div>
 				</div>
-				<div style="margin-top: 20px; display: flex;">
+				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Kontakt e-mail adresa</label><br>
 						<input type="email" value="{{ user.email }}" name="email" style="width: 100%">
@@ -116,13 +125,13 @@
 					</div>
 				</div>
 				<div  style="margin-top: 30px;">
-					<label style="margin-bottom: 8px">Detalji oglasa</label>
+					<label style="margin-bottom: 8px" class="specLab">Detalji oglasa</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
       				<div id="editor-container"></div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
-				<div style="margin-top: 30px;">
+				<div style="margin-top: 30px;" class="dokumentPDF">
 					<label style="margin-bottom: 8px">PDF/Word dokument oglasa <span>(opcionalno)</span></label><br>
 					<div style="margin-top: 24px"></div>
 					<div style="display: flex; align-items: center;">
@@ -169,7 +178,7 @@
 			<div class="malaLinija"></div>
 			<div>
 				<h3 id="spremaPlace">B</h3>
-				<p>STRUČNA SPREMA</p>
+				<p>BROJ IZVRŠITELJA</p>
 			</div>
 		</div>
 		<div class="detaljniOpis">
@@ -227,6 +236,15 @@ var quill = new Quill('#editor-container', {
   },
   placeholder: 'Unesite detaljan opis Vašeg oglasa...',
   theme: 'snow'
+});
+
+this.quill.clipboard.addMatcher(Node.ELEMENT_NODE, (node, delta) => {
+  delta.ops = delta.ops.map(op => {
+    return {
+      insert: op.insert
+    }
+  })
+  return delta
 });
 
 var form = document.querySelector('#newpostForm');
