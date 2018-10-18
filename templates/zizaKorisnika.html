@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+    {% load static %}
+	<title>ŽIŽA.ba | Dashboard</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<style type="text/css"></style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+
+    <style>
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+<body>
+<style type="text/css">
+	ul { list-style: none }
+	li::before {
+		content: "•";
+		color: #f6b81b;
+  		display: inline-block;
+  		width: 1em;
+  		margin-left: -1em
+  	}
+	.konsaltingBottom{
+		background-color: #262626;
+		width: 250px;
+		height: 170px;
+		position: absolute;
+		top: 70px;
+		color: white;
+		z-index: 999999999999999;
+		text-align: left;
+		font-family: 'Galano Regular';
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		box-shadow:0px 2px 2px black;
+		display: none;
+	}
+	.header__navigation--linkovi span{
+		cursor: pointer;
+	}
+	body{
+		background-color: white;
+	}
+	.main h1{
+    	font-size: 38px;
+    	color: #262626;
+    	font-family: 'Galano Regular';
+    	padding-top: 69px;
+	}
+	.main h1:nth-child(1){
+    	margin-bottom: 78px;
+    	margin-left: 50px;
+	}
+	.main h1:nth-child(3){
+    	margin-bottom: 10px;
+    	margin-left: 50px;
+    }
+	.main h1 > span {
+    	font-family: 'Galano Black';
+	}
+	.main__oglasi{
+		display: flex;
+		justify-content: center;
+	}
+	.main__oglasi--filter{
+		width: 371px;
+  		height: 366px;
+  		border-radius: 26px;
+  		background-color: #eeede7;
+	}
+	.main__oglasi--filter-part{
+		height: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.main__oglasi--filter-part:nth-child(1){
+		border-top-left-radius: 26px;
+		border-top-right-radius: 26px;
+	}
+	.main__oglasi--filter-part:nth-child(2){
+		border-bottom-left-radius: 26px;
+		border-bottom-right-radius: 26px;
+	}
+	.main__oglasi--filter-part.active{
+		background-image: linear-gradient(32deg, #fee653, #f6b81b);
+	}
+	.main__oglasi--filter-part span{
+		color: #262626;
+		font-size: 24px;
+		font-weight: 500;
+		font-family: 'Galano Medium';
+		margin: 0;
+		padding: 0;
+	}
+	.main__oglasi--filter-part span:nth-child(2){
+		color: #000000;
+		font-size: 14px;
+		font-weight: 900;
+		font-family: 'Galano Black';
+		margin-top: 20px;
+		padding: 0;
+	}
+	.main__oglasi--filter-part div:nth-child(1){
+		display: flex;
+		flex-direction: column;
+	}
+	.main__oglasi--filter-part div:nth-child(2) div{
+		width: 77px;
+  		height: 49px;
+  		border-radius: 5px;
+  		background-color: #262626;
+  		box-shadow: 0px 5px 40px 0 rgba(38, 38, 38, 0.3);
+  		color: #ffffff;
+  		line-height: 1.25;
+  		font-size: 26px;
+  		font-family: 'Galano Bold';
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.main__oglasi--filter-part:nth-child(1) div:nth-child(2){
+		margin-left: 90px;
+	}
+	.main__oglasi--filter-part:nth-child(2) div:nth-child(2){
+		margin-left: 65px;
+	}
+	.main__oglasi--oglasi{
+		width: 1031px;
+		border-radius: 26px;
+  		background-color: #eeede7;
+  		margin-left: 27px;
+	}
+	.main__oglasi--oglasi{
+		width: 1031px;
+	}
+	.main__oglasi--oglasi > div{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 182px;
+		width: 1031px;
+		border-bottom: 1px solid #d6d5cf;
+		position: relative;
+		align-items: center;
+	}
+	.main__oglasi--oglasi > div{
+		border-top-left-radius: 26px;
+		border-top-right-radius: 26px;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(1){
+		display: flex;
+		flex-direction: column;
+		margin-left: 60px;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(1) > div:nth-child(1){
+		font-size: 24px;
+  		font-weight: 500;
+  		color: #262626;
+  		line-height: 1;
+  		font-family: 'Galano Medium';
+	}
+	.main__oglasi--oglasi > div > div:nth-child(1) > div:nth-child(2){
+		display: flex;
+		margin-top: 22px;
+		align-items: center;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+		color: #000000;
+		line-height: 1.86;
+		font-weight: 900;
+		margin-right: 30px;
+		font-size: 14px;
+		font-family: 'Galano Black';
+	}
+	.main__oglasi--oglasi > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+		line-height: 1.57;
+		font-family: 'Galano Regular';
+		color: #7c7a71;
+		font-size: 14px;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span{
+		color: #262626;
+		margin-left: 5px;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(2){
+		position: absolute;
+		left: 587px;
+		display: none;
+	}
+	.sakrij{
+		display: flex !important;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(1){
+		width: 51px;
+		height: 51px;
+		border-radius: 16px;
+		background-color: #262626;
+		box-shadow: 0px 5px 10px 0 rgba(38, 38, 38, 0.25);
+		color: #ffffff;
+		font-weight: 500px;
+		font-size: 20px;
+		font-family: 'Galano Black';
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(2){
+		margin-left: 45px;
+		margin-right: 16px;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(2),
+	.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(3){
+		width: 131px;
+ 	 	height: 49px;
+  		border-radius: 5px;
+  		border: solid 3px #262626;
+  		color: #262626;
+  		font-family: 'Galano Bold';
+  		line-height: 2.83;
+  		font-size: 11.5px;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(2):hover,
+	.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(3):hover{
+		background-color: #262626;
+		color: white;
+		cursor: pointer;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(4){
+		color: #ff0101;
+		font-weight: 900;
+		font-size: 20px;
+		font-family: 'Galano Black';
+		position: absolute;
+		left: 45px;
+		top: -25px;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(3){
+		color: #262626;
+		line-height: 1.57;
+		font-size: 14px;
+		font-family: 'Galano Regular';
+		position: absolute;
+		right: 60px;
+		top: 22px;
+		display: none;
+	}
+	.main__oglasi--oglasi > div > div:nth-child(3) span{
+		color: #ff0000;
+	}
+	.main__oglasi--oglasi > div:nth-last-child(1){
+		border-bottom: 0;
+	}
+	#zavrseniOglasi{
+		display: none;
+	}
+	.main__oglasi--filter-part:hover{
+		cursor: pointer;
+	}
+	.uvod__linkovi{
+		position: absolute;
+		top: 341px;
+	}
+	.main__oglasi--oglasi > div:hover{
+		cursor: pointer;
+	}
+	.main h2{
+  		font-family: 'Galano Medium';
+  		font-size: 24px;
+  		font-weight: 500;
+  		color: #857b40;
+  		margin-top: 0;
+  		margin-left: 50px;
+  		margin-bottom: 28px;
+	}
+	.main{
+		width: 1500px;
+		margin: 0 auto;
+	}
+	.main__filteri > div > div:nth-child(1){
+		width: 18px;
+  		height: 18px;
+  		border-radius: 3px;
+  		background-color: #01aad1;
+  		box-shadow: 0px 5px 10px 0 rgba(1, 170, 209, 0.25);
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.potraznja > div:nth-child(1){
+		box-shadow: 0px 5px 10px 0 rgba(97, 177, 49, 0.25);
+		background-color: #61b131;
+	}
+	.suradnja > div:nth-child(1){
+		 box-shadow: 0px 5px 10px 0 rgba(177, 176, 171, 0.25);
+		 background-color: #f11212
+	}
+	.main__filteri > div{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.main__filteri > div > div:nth-child(1) > img{
+		margin-top: 1px; margin-left: 0.73px
+	}
+	.main__filteri > div > div:nth-child(2){
+		margin-left: 15px;
+		font-size: 14px;
+  		font-weight: 500;
+  		line-height: 2.86;
+  		color: #01aad1;
+  		font-family: 'Galano Medium';
+  		cursor: pointer;
+	}
+	.inactive div:nth-child(1){
+		background-color: white !important;
+		box-shadow: 0px 0px 5px 0 #7c7a71 !important;
+	}
+	.inactive.ponuda:hover div:nth-child(1){ /*BOJA*/
+		background-color: #01aad1 !important;
+		box-shadow: 0px 5px 10px 0 rgba(1, 170, 209, 0.25) !important;
+		cursor: pointer;
+	}
+	.inactive > div:nth-child(2){
+		color: #7c7a71 !important;
+	}
+	.inactive.ponuda:hover div:nth-child(2){ /*BOJA*/
+		color: #01aad1 !important;
+	}
+	.main__filteri{
+		display: flex;
+		width: 450px;
+		justify-content: space-between;
+	}
+	.inactive.potraznja:hover div:nth-child(2){ /*BOJA*/
+		color: #61b131 !important;
+	}
+	.inactive.potraznja:hover div:nth-child(1){ /*BOJA*/
+		background-color: #61b131 !important;
+		box-shadow: 0px 5px 10px 0 rgba(97, 177, 49, 0.25) !important;
+		cursor: pointer;
+	}
+	.inactive.suradnja:hover div:nth-child(2){ /*BOJA*/
+		color: #f11212 !important;
+	}
+	.inactive.suradnja:hover div:nth-child(1){ /*BOJA*/
+		background-color: #f11212 !important;
+		box-shadow: 0px 5px 10px 0 rgba(177, 176, 171, 0.25) !important;
+		cursor: pointer;
+	}
+	#preporuke{
+		margin: 0 auto;
+		margin-top: 49px;
+		box-shadow: 0px 30px 128px 0 rgba(38, 38, 38, 0.5);
+		position: relative;
+		z-index: 9999999999;
+	}
+	.slGab{
+		height: 41px;
+		width: auto;
+	}
+	.main__filteri{
+		width: 1031px;
+		margin: 0 auto;
+		padding-right: 50px;
+		justify-content: flex-end;
+	}
+	.ponudaBox .imeStruke{
+		color: #01aad1 !important;
+	}
+	.potraznjaBox .imeStruke{
+		color: #61b131 !important;
+	}
+	.suradnjaBox .imeStruke{
+		color: #f11212 !important;
+	}
+	.ponudaBox:hover img,
+	.potraznjaBox:hover img,
+	.suradnjaBox:hover img{
+		display: none;
+	}
+	.ponudaBox:hover,
+	.potraznjaBox:hover,
+	.suradnjaBox:hover{
+		background-color: #fecc35;
+  		box-shadow: 0px 20px 80px 0 rgba(248, 145, 1, 0.2);
+  		padding-left: 10px;
+  		margin-left: -10px;
+  		border-radius: 5px;
+  		padding-right: 10px;
+	}
+	.bg_end{
+		background-image: linear-gradient(32deg, #fee653, #f6b81b);
+		height: 300px;
+		margin-top: -200px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		padding-top: 50px;
+  		padding-bottom: 60px;
+	}
+	.bg_end span{
+		color: #000000;
+		font-size: 30.5px;
+  		font-weight: 500;
+  		font-family: 'Galano Medium';
+  		line-height: 3.1;
+	}
+	#aktivirajPregled{
+	    width: 200px;
+	    height: 60px;
+	    border-radius: 5px;
+	    background-color: #01a23c;
+	    font-family: 'Galano Black';
+	    font-size: 18px;
+	    color: #f9f5e5;
+	    border: 0;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    margin: 0 auto;
+	    margin-top: -30px;
+	    margin-bottom: 80px;
+	}
+
+    	@media screen and (max-width: 1700px){
+		.uvod__linkovi{
+			display: none;
+		}
+	}
+	@media screen and (max-width: 1490px){
+		.main__oglasi--filter{
+			width: 300px;
+		}
+		.main h1{
+			font-size: 25px;
+		}
+		.main h1:nth-child(1) {
+		    margin-bottom:60px;
+		    margin-left: 100px;
+		}
+		.main__oglasi--filter-part span {
+			font-size: 18px;
+		}
+		.main__oglasi--filter-part span:nth-child(2){
+			font-size: 12px;
+		}
+		.main__oglasi--filter-part div:nth-child(2) div{
+			font-size: 20px;
+			width: 57px;
+		}
+		.main__oglasi--oglasi > div{
+			width: 900px;
+		}
+		.main__oglasi--oglasi{
+			width: 900px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(1) > div:nth-child(1){
+			font-size: 20px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(1){
+			width: 45px;
+			height: 45px;
+			font-size: 15px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(4){
+			font-size: 15px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(2), .main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(3){
+			width: 91px;
+			height: 39px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(2){
+			left: 537px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(3){
+			font-size: 12px;
+		}
+		.main h2{
+			font-size: 20px;
+			margin-left: 100px;
+		}
+		.main h1:nth-child(3){
+			margin-left: 100px;
+		}
+		.main__oglasi{
+			margin-left: -20px;
+		}
+		.main{
+			width: auto;
+		}
+		.bg_end{
+			max-width: 1500px;
+		}
+		.ponudaBox div:nth-child(2),
+		.potraznjaBox div:nth-child(2),
+		.suradnjaBox div:nth-child(2){
+			left: 691px !important;
+		}
+		.bg_end span{
+			font-size: 25px;
+		}
+		.main__filteri > div > div:nth-child(2){
+			font-size: 12px;
+		}
+		.main__oglasi{
+			margin-left: 0;
+		}
+	}
+	@media screen and (max-width: 1270px){
+		.main__oglasi{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.main__oglasi--filter{
+			margin-bottom: 30px;
+			display: flex;
+			flex-direction: row;
+			width: auto;
+			height: auto;
+		}
+		.main__oglasi--filter-part:nth-child(1){
+			border-top-left-radius: 26px;
+    		border-bottom-left-radius: 26px;
+    		border-top-right-radius: 0px;
+		}
+		.main__oglasi--filter-part{
+			padding: 40px;
+		}
+		.main__oglasi--filter-part:nth-child(2) {
+		    border-top-right-radius: 26px;
+		    border-bottom-right-radius: 26px;
+		    border-bottom-left-radius: 0px;
+		}
+		.main__filteri{
+			width: 900px;
+		}
+	}
+	@media screen and (max-width: 950px){
+		.main h1:nth-child(1),
+		.main h1:nth-child(3),
+		.main h2{
+			margin-left: 50px;
+		}
+	}
+	@media screen and (max-width: 900px){
+		.main__oglasi--oglasi > div{
+			flex-direction: column;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(1){
+			margin-top: 29px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(2){
+			position: static;
+			margin-top: 20px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(2) > div:nth-child(4){
+			display: none;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(3){
+			display: none !important;
+		}
+		.main__oglasi--oglasi,
+		.main__oglasi--oglasi > div{
+			width: 600px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(2){
+			display: flex;
+		}
+		.main__oglasi--oglasi > div{
+			height: 200px;
+		}
+		.main__oglasi--oglasi{
+			margin-left: 0;
+		}
+		.main__filteri{
+			width: 600px;
+			margin-top: 50px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(1){
+			margin-left: 0;
+			text-align: center;
+		}
+	}
+	@media screen and (max-width: 620px){
+		.main__oglasi--filter-part{
+			padding: 25px;
+		}
+		.main__oglasi--oglasi, .main__oglasi--oglasi > div{
+			width: 350px;
+		}
+		.main__oglasi--oglasi > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+			margin-left: 20px;
+		}
+		.main__oglasi--filter{
+			flex-direction: column;
+		}
+		.main__oglasi--filter-part:nth-child(1){
+			border-top-left-radius: 26px;
+    		border-bottom-left-radius: 0px;
+    		border-top-right-radius: 26px;
+		}
+		.main__oglasi--filter-part{
+			padding: 25px;
+		}
+		.main__oglasi--filter-part:nth-child(2) {
+		    border-top-right-radius: 0px;
+		    border-bottom-right-radius: 26px;
+		    border-bottom-left-radius: 26px;
+		}
+		.main__filteri{
+			width: 450px;
+		}
+		.slGab{
+			height: 30px;
+			margin-top: 7px;
+		}
+	}
+	@media screen and (max-width: 460px){
+		.main h1:nth-child(1), .main h1:nth-child(3), .main h2{
+			margin-left: 20px;
+		}
+		.main__filteri{
+			justify-content: center;
+			padding: 0;
+			transform: scale(0.8);
+			width: auto;
+		}
+		.ponudaBox:hover img,
+		.potraznjaBox:hover img,
+		.suradnjaBox:hover img{
+			display: block;
+		}
+	}
+    .main__oglasi--oglasi > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+        text-transform: uppercase;
+    }
+</style>
+     {% with var1=user var2=auth var3=userP ind=industries %}
+    {% include 'header.html' %}
+    {% endwith %}
+
+	<div class="main">
+		<h1><span>MOJI</span> OGLASI</h1>
+		<div class="main__oglasi">
+			<div class="main__oglasi--filter">
+				<div class="main__oglasi--filter-part active" id="aktivniOglasi__button">
+					<div>
+						<span>AKTIVNI</span>
+						<span>OGLASI</span>
+					</div>
+					<div>
+						<div>{{ activepPosts.count }}</div> <!-- ucitaj iz baze broj aktivnih -->
+					</div>
+				</div>
+				<div class="main__oglasi--filter-part" id="zavrseniOglasi__button">
+					<div>
+						<span>ZAVRŠENI</span>
+						<span>OGLASI</span>
+					</div>
+					<div>
+						<div>{{ inactivePosts.count }}</div>  <!-- ucitaj iz baze broj okončanih -->
+					</div>
+				</div>
+			</div>
+			<div class="main__oglasi--oglasi" id="aktivniOglasi">
+                {% for p in activepPosts %}
+               <div class="rdiv"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.pk %}'">
+					<div>
+						<div>
+							{{ p.title }}
+						</div>
+						<div>
+							<div>{{ p.categoryID.name}}</div>
+							<div>{{ p.created_at.date|date:"d. m. Y." }}  <span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }} {{ p.region }}{% else %} nepoznato{% endif %}</span></div>
+						</div>
+					</div>
+					<div>
+						<div>{{ p.count_users}}</div> <!-- ukupni broj aplikanata -->
+						<div onclick="event.stopPropagation();location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
+						<div onclick="event.stopPropagation();location.href='{% url 'zavrsi' id=p.pk %}'">ZAVRŠI</div>
+						<div></div> <!-- broj novih od zadnje posjete -->
+					</div>
+					<div>
+						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> Aplikanata
+                    </div>
+				</div>
+                {% endfor %}
+			</div>
+			<div class="main__oglasi--oglasi" id="zavrseniOglasi">
+                {% for p in inactivePosts %}
+				<div>
+					<div>
+						<div>
+							{{ p.title }}
+						</div>
+						<div>
+							<div>{{ p.categoryID.name }}</div>
+                            <div>{{ p.created_at.date|date:"d. m. Y." }}<span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }}{% else %} nepoznato{% endif %}</span></div>
+
+						</div>
+					</div>
+					<div>
+						<div>{{ p.count_users }}</div> <!-- ukupni broj aplikanata -->
+						<div onclick="location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
+						<div onclick="location.href='{% url 'obnovi' id=p.pk %}'" >OBNOVI</div>
+						<div></div> <!-- ostaje prazno -->
+					</div>
+					<div>
+						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> Aplikanata
+					</div>
+				</div>
+                {% endfor %}
+                <!--
+				<div>
+					<div>
+						<div>
+							Ovlašteni inženjer građevine
+						</div>
+						<div>
+							<div>GRAĐEVINA</div>
+							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
+						</div>
+					</div>
+					<div>
+						<div>5</div>
+						<div>UREDI</div>
+						<div>OBNOVI</div>
+						<div></div> <!-- ostaje prazno
+					</div>
+					<div>
+						<span>320</span> Pregleda <span>5</span> Aplikanata
+					</div>
+				</div>
+				<div>
+					<div>
+						<div>
+							Ovlašteni inženjer građevine
+						</div>
+						<div>
+							<div>GRAĐEVINA</div>
+							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
+						</div>
+					</div>
+					<div>
+						<div>5</div> <!-- ukupni broj aplikanata
+						<div>UREDI</div>
+						<div>OBNOVI</div>
+						<div></div> <!-- ostaje prazno
+					</div>
+					<div>
+						<span>320</span> Pregleda <span>5</span> Aplikanata
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<h1><span>PREPORUKE</span></h1>
+		<h2>Najpopularniji oglasi iz Vaše branše.</h2>
+		<div class="main__filteri">
+			<div class="inactive ponuda" style="margin-right: 36px">
+				<div><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
+				<div>PONUDA</div>
+			</div>
+			<div class="inactive potraznja" style="margin-right: 36px">
+				<div style="box-shadow: 0px 5px 10px 0 rgba(97, 177, 49, 0.25); background-color: #61b131;"><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
+				<div style="color: #61b131">POTRAŽNJA</div>
+			</div>
+			<div class="inactive suradnja">
+				<div style="box-shadow: 0px 5px 10px 0 rgba(177, 176, 171, 0.25); background-color: #f11212;"><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
+				<div style="color: #f11212">SURADNJA</div>
+			</div>
+		</div>
+		<div class="main__oglasi--oglasi" id="preporuke">
+            {% for p in relevantPosts %}
+				<div class="ponudaBox">
+					<div>
+						<div>
+							{{ p.title }}
+						</div>
+						<div>
+							<div class="imeStruke">{{ p.categoryID.name }}</div>
+							<div> {{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }} {{ p.region }}</span></div>
+						</div>
+					</div>
+					<div style="left: 811px; display: block;">
+						<img class="slGab" src="https://i.imgur.com/vUXO3Xr.png">
+					</div>
+					<div>
+					</div>
+				</div>
+            {% endfor %}
+            <!--
+				<div class="potraznjaBox">
+					<div>
+						<div>
+							Ovlašteni inženjer građevine
+						</div>
+						<div>
+							<div class="imeStruke">GRAĐEVINA</div>
+							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
+						</div>
+					</div>
+					<div style="left: 811px; display: block;">
+						<img class="slGab" src="https://i.imgur.com/vUXO3Xr.png">
+					</div>
+					<div>
+					</div>
+				</div>
+				<div class="suradnjaBox">
+					<div>
+						<div>
+							Ovlašteni inženjer građevine
+						</div>
+						<div>
+							<div class="imeStruke">GRAĐEVINA</div>
+							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
+						</div>
+					</div>
+					<div style="left: 811px; display: block;">
+						<img class="slGab" src="https://i.imgur.com/vUXO3Xr.png">
+					</div>
+					<div>
+					</div>
+				</div>-->
+		</div>
+		<div class="bg_end">
+			<span>Želite li vidjeti još oglasa?</span>
+		</div>
+		<button id="aktivirajPregled">OGLASI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+	</div>
+	<div class="uvod__linkovi">
+		<img src="{% static 'images/optimised/rss-min.png' %}" draggable="false" width="16px" height="16px">
+		<img src="{% static 'images/optimised/linkedin-min.png' %}" draggable="false" width="16px" height="15px">
+		<img src="{% static 'images/optimised/twitter-min.png' %}" draggable="false" width="16px" height="13px">
+		<img src="{% static 'images/optimised/facebook-min.png' %}" draggable="false" width="16px" height="16px">
+		<p>Pratite nas</p>
+	</div>
+
+			{% include 'footer.html' %}
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script type="text/javascript" src="skripta.js"></script>
+<script>
+	$('.main__oglasi--oglasi > div').hover(function(){
+		$('div:eq(5)', this).toggleClass('sakrij');
+		$('div:eq(10)', this).toggle();
+	});
+	$('.inactive').click(function(){
+		$(this).toggleClass('inactive');
+	});
+	$('#aktivniOglasi__button').click(function(){
+		if(!$('#aktivniOglasi__button').hasClass('active')){
+			$('#aktivniOglasi__button').addClass('active');
+			$('#zavrseniOglasi__button').removeClass('active');
+			$('#aktivniOglasi, #zavrseniOglasi').toggle();
+		}
+	});
+	$('#zavrseniOglasi__button').click(function(){
+		if(!$('#zavrseniOglasi__button').hasClass('active')){
+			$('#zavrseniOglasi__button').addClass('active');
+			$('#aktivniOglasi__button').removeClass('active');
+			$('#aktivniOglasi, #zavrseniOglasi').toggle();
+		}
+	});
+
+	var p = document.querySelector('#aktivniOglasi .rdiv');
+    console.log(p);
+    console.log(p.length);
+    if(p.length){
+        for(var i = 0; i < p.length; i++) {
+            p[i].addEventListener('click', function(pEvent) {
+                pEvent.stopPropagation();
+            })
+        }
+    }else
+        p.addEventListener('click', function(pEvent) {
+            pEvent.stopPropagation();
+        })
+</script>
+</html>
