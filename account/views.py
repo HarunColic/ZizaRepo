@@ -1,5 +1,5 @@
 from builtins import type
-
+from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
@@ -501,6 +501,8 @@ def submitchange(request):
                 if slika is not None:
                     userP.image = slika
 
+                UserCategories.objects.filter(userID=user).delete()
+
                 for k in kategorije:
                     cat = Category.objects.get(name=k)
                     userCat = UserCategories(userID=user, categoryID=cat)
@@ -753,3 +755,22 @@ def profilKorisnika(request, id):
             userP = UserProfile.objects.get(userID=user)
             posts = Post.objects.filter(soft_delete=False).filter(userID=user)
             return render(request, 'ProfilKorisnika.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
+
+
+def zizaKorisnika(request, id):
+
+    if request.user.is_authenticated:
+
+        if Employee.objects.filter(userID=request.user):
+            emp = Employee.objects.get(userID=request.user)
+            if not emp.editovanProfil:
+                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+                return redirect('editprofil')
+
+        user = User.objects.get(pk=id)
+        if Company.objects.filter(userID=user).exists():
+            company = Company.objects.get(userID=user)
+            userP = UserProfile.objects.get(userID=user)
+            posts = Post.objects.filter(soft_delete=False).filter(userID=user)
+            return render(request, 'ProfilKorisnika.html',
+                          {'user': user, 'userP': userP, 'company': company, 'posts': posts})
