@@ -16,6 +16,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userprofile',
             name='location',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='location.City'),
+            field=models.CharField(null=True, max_length=255),
         ),
     ]
