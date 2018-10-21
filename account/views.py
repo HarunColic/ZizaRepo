@@ -615,6 +615,11 @@ def dashboard(request):
 
     if request.user.is_authenticated:
 
+        if superUser(request.user):
+            super = True
+        else:
+            super = False
+
         if Company.objects.filter(userID=request.user).exists():
 
             userP = UserProfile.objects.get(userID=request.user)
@@ -623,7 +628,7 @@ def dashboard(request):
             company = Company.objects.get(userID=request.user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
 
-            return render(request, 'dashboard.html', {'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts, 'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+            return render(request, 'dashboard.html', {'super': super, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts, 'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
         else:
             return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))
 
@@ -776,3 +781,28 @@ def zizaKorisnika(request, id):
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
             return render(request, 'zizaKorisnika.html',
                           {'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts,'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+
+
+def contactAll(request):
+
+    if not superUser(request.user):
+        return redirect('home')
+
+    subject = request.POST['subject']
+    sadrzaj = request.POST['Sadržaj']
+
+    mail_subject = subject
+    message = render_to_string(sadrzaj, {})
+
+    users = User.objects.all()
+
+    for u in users:
+
+        email = EmailMessage(
+            mail_subject, message, to=[u.email]
+        )
+
+        email.send()
+
+    sweetify.sweetalert(request, title="Mail poslan", icon="success")
+    return redirect('home')
