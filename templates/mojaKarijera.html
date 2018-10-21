@@ -665,7 +665,7 @@
 						<span>OGLASI</span>
 					</div>
 					<div>
-						<div>{{ activepPosts.count }}</div> <!-- ucitaj iz baze broj aktivnih -->
+						<div>{{ activePosts.count}}</div> <!-- ucitaj iz baze broj aktivnih -->
 					</div>
 				</div>
 				<div class="main__oglasi--filter-part" id="zavrseniOglasi__button">
@@ -679,7 +679,7 @@
 				</div>
 			</div>
 			<div class="main__oglasi--oglasi" id="aktivniOglasi">
-                {% for p in activepPosts %}
+                {% for p in activePosts %}
                <div class="rdiv"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.pk %}'">
 					<div>
 						<div>
@@ -692,8 +692,8 @@
 					</div>
 					<div>
 						<div>{{ p.count_users}}</div> <!-- ukupni broj aplikanata -->
-						<div onclick="event.stopPropagation();location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
-						<div onclick="event.stopPropagation();location.href='{% url 'zavrsi' id=p.pk %}'">ZAVRŠI</div>
+						<div style="visibility: hidden" onclick="event.stopPropagation();" ></div>
+						<div style="visibility: hidden" onclick="event.stopPropagation();"></div>
 						<div></div> <!-- broj novih od zadnje posjete -->
 					</div>
 					<div>
@@ -717,8 +717,8 @@
 					</div>
 					<div>
 						<div>{{ p.count_users }}</div> <!-- ukupni broj aplikanata -->
-						<div onclick="location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
-						<div onclick="location.href='{% url 'obnovi' id=p.pk %}'" >OBNOVI</div>
+						<div style="visibility: hidden" ></div>
+						<div style="visibility: hidden" ></div>
 						<div></div> <!-- ostaje prazno -->
 					</div>
 					<div>
@@ -851,12 +851,6 @@
 		<p>Pratite nas</p>
 	</div>
 
-
-        {%  if super %}
-
-            {% include 'conatctAll.html' %}
-
-{% endif %}
 
 			{% include 'footer.html' %}
 </body>

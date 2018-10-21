@@ -77,19 +77,24 @@ def home(request):
     postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
     postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
 
-
     if request.user.is_authenticated:
+        if Company.objects.filter(userID=request.user).exists():
+            usr = 'comp'
+        else:
+            usr = 'wrkr'
         userP = UserProfile.objects.get(userID=request.user)
         return render(request, 'index.html', {'user': request.user, 'auth': True, 'userP': userP, 'industries': None,
                                               'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2,
                                               'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP,
-                                              'prvaSlika': prvaSlika, 'drugaSlika': drugaSlika, 'trecaSlika': trecaSlika})
+                                              'prvaSlika': prvaSlika, 'drugaSlika': drugaSlika, 'trecaSlika': trecaSlika,
+                                              'usr': usr})
     else:
         industries = Category.objects.filter(type=0)
         return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries,
                                               'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2,
                                               'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP,
-                                              'prvaSlika': prvaSlika, 'drugaSlika': drugaSlika, 'trecaSlika': trecaSlika})
+                                              'prvaSlika': prvaSlika, 'drugaSlika': drugaSlika, 'trecaSlika': trecaSlika,
+                                              'usr': None})
 
 
 def profil(request):
@@ -210,16 +215,16 @@ def register(request):
 
                         sendmail(request, user, user.email)
 
-                       # recipientMail = "affancehajic@gmail.com"
+                        recipientMail = "affancehajic@gmail.com"
 
-                        #mail_subject = "Novi Korisnik"
-                        #message = render_to_string('AffanReport.html', {'user': user})
+                        mail_subject = "Novi Korisnik"
+                        message = render_to_string('AffanReport.html', {'user': user})
 
-                        # mailZaAffana = EmailMessage(
-                        #   mail_subject, message, to=[recipientMail]
-                        # )
+                        mailZaAffana = EmailMessage(
+                           mail_subject, message, to=[recipientMail]
+                        )
 
-                        # mailZaAffana.send()
+                        mailZaAffana.send()
 
                         sweetify.success(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success", timer=10000)
 
@@ -522,24 +527,36 @@ def submitchange(request):
 def onama(request):
 
     if request.user.is_authenticated:
+
+        if Company.objects.filter(userID=request.user).exists():
+            usr = 'comp'
+        else:
+            usr = 'wrkr'
+
         userP = UserProfile.objects.get(userID=request.user)
         auth = True
-        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'userP': userP, 'industries': None})
+        return render(request, 'onamanew.html', {'usr': usr, 'user': request.user, 'auth': auth, 'userP': userP, 'industries': None})
     else:
         auth = False
         industries = Category.objects.filter(type=0)
-        return render(request, 'onamanew.html', {'user': request.user, 'auth': auth, 'industries': industries})
+        return render(request, 'onamanew.html', {'usr': None, 'user': request.user, 'auth': auth, 'industries': industries})
 
 
 def konsalting(request):
 
     if request.user.is_authenticated:
+
+        if Company.objects.filter(userID=request.user).exists():
+            usr = 'comp'
+        else:
+            usr = 'wrkr'
+
         user = request.user
         userP = UserProfile.objects.get(userID=user)
-        return render(request, 'konsalting.html', {'user': user, 'userP':userP, 'auth': True, 'industries': None})
+        return render(request, 'konsalting.html', {'usr': usr, 'user': user, 'userP':userP, 'auth': True, 'industries': None})
     else:
         industries = Category.objects.filter(type=0)
-        return render(request, 'konsalting.html', {'user': None, 'userP':None, 'auth': False, 'industries': industries})
+        return render(request, 'konsalting.html', {'usr': None, 'user': None, 'userP':None, 'auth': False, 'industries': industries})
 
 
 def pretraga(request):
@@ -555,6 +572,8 @@ def pretraga(request):
                 return redirect('editprofil')
 
         auth = True
+
+        usr = None
 
         user = request.user
         userP = UserProfile.objects.get(userID=user)
@@ -587,8 +606,10 @@ def pretraga(request):
 
         else:
             if Company.objects.filter(userID=user).exists():
+                usr = 'comp'
                 posts = Post.objects.all().filter(type=2).exclude(soft_delete=True)
             else:
+                usr = 'wrkr'
                 posts = Post.objects.all().filter(type=1).exclude(soft_delete=True)
 
         pretrazuje = request.POST.get('pretragaTrigger', "False")
@@ -606,7 +627,7 @@ def pretraga(request):
         userPs = UserProfile.objects.all()
         btb = ["Ponuda", "Potražnja", "Partnerstvo"]
         return render(request, 'pretrazi.html',
-                      {'iterRange': range(0,counter,3),'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
+                      {'usr': usr, 'iterRange': range(0,counter,3),'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
     else:
         return redirect('home')
 
@@ -628,7 +649,7 @@ def dashboard(request):
             company = Company.objects.get(userID=request.user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
 
-            return render(request, 'dashboard.html', {'super': super, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts, 'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+            return render(request, 'dashboard.html', {'usr': 'comp', 'super': super, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts, 'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
         else:
             return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))
 
@@ -639,16 +660,26 @@ def dashboard(request):
 def anonimnaPretraga(request, id):
 
     if request.user.is_authenticated:
+
+
+        if Company.objects.filter(userID=request.user).exists():
+            usr = 'comp'
+        else:
+            usr = 'wrkr'
+
         auth = True
         userP = UserProfile.objects.get(userID=request.user)
     else:
         auth = False
         userP = None
+        usr = None
 
     if id == '1':
         posts = Post.objects.all().exclude(soft_delete=True).exclude(type=2)
-    else:
+    elif id == '2':
         posts = Post.objects.all().exclude(soft_delete=True).exclude(type=1)
+    else:
+        return redirect('home')
 
     if request.POST.get('pretragaTrigger', "False") == "True":
         grad = request.POST.get('gradovi', None)
@@ -675,7 +706,8 @@ def anonimnaPretraga(request, id):
     btb = ["Ponuda", "Potražnja", "Partnerstvo"]
     return render(request, 'testPretraga.html',
                   {'data': data, 'gradovi': gradovi, 'cat': cat, 'auth': auth,
-                   'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange, 'userP': userP})
+                   'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange, 'userP': userP,
+                   'usr': usr})
 
 
 def firme(request):
@@ -805,4 +837,25 @@ def contactAll(request):
         email.send()
 
     sweetify.sweetalert(request, title="Mail poslan", icon="success")
+    return redirect('home')
+
+
+def mojaKarijera(request):
+
+    if request.user.is_authenticated:
+
+        user = request.user
+
+        userP = UserProfile.objects.get(userID=user)
+
+        categories = Category.objects.filter(usercategories__userID=user)
+
+        activePosts = Post.objects.filter(workersposts__userID=user).exclude(soft_delete=True)
+        inactivePosts = Post.objects.filter(workersposts__userID=user).exclude(soft_delete=False)
+        relevantPosts = Post.objects.filter(categoryID__in=categories)
+
+        return render(request, 'mojaKarijera.html', {'user': user, 'userP': userP, 'activePosts': activePosts,
+                                                     'inactivePosts': inactivePosts, 'auth': True, 'ind': None,
+                                                     'relevantPosts': relevantPosts, 'usr': 'wrkr'})
+
     return redirect('home')
