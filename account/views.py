@@ -440,6 +440,10 @@ def submitchange(request):
                     userP.brojtelefona = brojtel
                     if slika:
                         userP.image = slika
+                    elif not userP.image:
+                        sweetify.sweetalert(request, title="Molimo dodajte sliku", icon="error")
+                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
                     comp.categoryID = category
                     comp.brojuposlenih = brojuposlenika
                     comp.opis = opis
@@ -516,6 +520,9 @@ def submitchange(request):
                     emp.radnoMjesto = radnoMjesto
                 if slika is not None:
                     userP.image = slika
+                elif not userP.image:
+                    sweetify.sweetalert(request, title="Molimo dodajte sliku", icon="error")
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 UserCategories.objects.filter(userID=user).delete()
 
