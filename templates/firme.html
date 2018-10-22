@@ -101,7 +101,7 @@
 		</div>
 		<div class="uvodniDio tabelarniDio">
             {% for f in kompanije %}
-			<a href="{% url 'zizaKorisnika' id=f.userID %}"> <!-- link do profila firme -->
+			<a href="{% url 'zizaKorisnika' id=f.userID.pk %}"> <!-- link do profila firme -->
 				<div class="tabelaRasa">
 					<div>
 						<div>
