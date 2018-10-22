@@ -405,7 +405,7 @@ def submitchange(request):
                 name = request.POST['naslov']
                 mail = request.POST['email']
                 brojtel = request.POST['brojTel']
-                grad = request.POST['city']
+                grad = request.POST['City']
                 cat = request.POST.get('category', None)
                 brojuposlenika = request.POST['brojuposlenih']
                 opis = request.POST['opis']
@@ -445,6 +445,7 @@ def submitchange(request):
                     comp.opis = opis
 
                     user.save()
+                    userP.editovanProfil = True
                     userP.save()
                     comp.save()
 
@@ -523,7 +524,7 @@ def submitchange(request):
                     userCat = UserCategories(userID=user, categoryID=cat)
                     userCat.save()
 
-                emp.editovanProfil = True
+                userP.editovanProfil = True
 
                 user.save()
                 emp.save()
