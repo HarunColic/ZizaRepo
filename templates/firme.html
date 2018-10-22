@@ -107,14 +107,14 @@
 						<div>
 							<div>{{ f.userID.first_name }}</div> <!-- ime kompanije -->
 							<div>
-								<span>{{ f.company.categoryID.name}}</span> <!-- djelatnost pod kojom se registrovala -->
+								<span>{{ f.categoryID.name}}</span> <!-- djelatnost pod kojom se registrovala -->
 								<span>
 									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
-									{{ f.userprofile.location }}<!-- sjediste firme -->
+									{{ f.userID.userprofile.location }}<!-- sjediste firme -->
 								</span>
 							</div>
 						</div>
-						<div class="srce"><img {% if f.userprofile.image %}src="{{ f.userprofile.image.url }}{% endif %}"></div>
+						<div class="srce"><img {% if f.userID.userprofile.image %}src="{{ f.userID.userprofile.image.url }}{% endif %}"></div>
 					</div>
 				</div>
 			</a>
