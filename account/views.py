@@ -857,3 +857,9 @@ def mojaKarijera(request):
                                                      'relevantPosts': relevantPosts, 'usr': 'wrkr'})
 
     return redirect('home')
+
+
+def mailSvima(request):
+
+    if superUser(request.user):
+        return render(request, 'conatctAll.html')

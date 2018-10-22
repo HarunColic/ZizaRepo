@@ -57,6 +57,7 @@ urlpatterns = [
     url('zizaKorisnika/(?P<id>[0-9]+)/', AC_Views.zizaKorisnika, name='zizaKorisnika'),
     url('contactAll', AC_Views.contactAll, name='contactAll'),
     url('mojaKarijera', AC_Views.mojaKarijera, name='mojaKarijera'),
+    url('mailSvima', AC_Views.mailSvima, name='mailSvima'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,9 +65,9 @@
           <entry key="Django Console" value="125" />
           <entry key="css" value="76" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="24764" />
+          <entry key="html" value="24765" />
           <entry key="js" value="301" />
-          <entry key="py" value="39666" />
+          <entry key="py" value="39752" />
           <entry key="py@Ziza" value="1073" />
           <entry key="txt" value="7" />
         </counts>
@@ -75,10 +76,10 @@
         <counts>
           <entry key="CSS" value="76" />
           <entry key="CommandLine" value="969" />
-          <entry key="HTML" value="24764" />
+          <entry key="HTML" value="24765" />
           <entry key="JavaScript" value="301" />
           <entry key="PLAIN_TEXT" value="113" />
-          <entry key="Python" value="39790" />
+          <entry key="Python" value="39876" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -87,24 +88,24 @@
           <entry key="cfg" value="1" />
           <entry key="css" value="34" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="286" />
+          <entry key="html" value="287" />
           <entry key="js" value="31" />
           <entry key="png" value="3" />
           <entry key="po" value="1" />
-          <entry key="py" value="175" />
+          <entry key="py" value="176" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="34" />
-          <entry key="HTML" value="286" />
+          <entry key="HTML" value="287" />
           <entry key="Image" value="3" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="31" />
           <entry key="Locale" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="175" />
+          <entry key="Python" value="176" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -112,29 +113,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="271" column="66" selection-start-line="271" selection-start-column="66" selection-end-line="271" selection-end-column="66" />
+            <state relative-caret-position="324">
+              <caret line="861" column="13" selection-start-line="861" selection-start-column="4" selection-end-line="861" selection-end-column="13" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1540215712022" expanded="true" signature="1077:1176" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="1206:1407" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="11409:11646" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="26156:26157" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="27944:27945" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="28586:28588" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="28616:28622" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="29387:29477" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="29916:29917" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="29916:29922" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="30122:30124" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="30122:30128" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="30907:30908" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="32018:32089" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="32018:32093" ph="..." />
-                <marker date="1540215712022" expanded="true" signature="32528:32534" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="1077:1176" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="1206:1407" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="11409:11646" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="26156:26157" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="27944:27945" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="28586:28588" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="28616:28622" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="29387:29477" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="29916:29917" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="29916:29922" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="30122:30124" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="30122:30128" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="30907:30908" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="32018:32089" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="32018:32093" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="32528:32534" ph="..." />
+                <marker date="1540216053395" expanded="true" signature="33370:33376" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="854" selection-start-line="854" selection-end-line="854" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
+              <folding>
+                <element signature="e#628#660#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,15 +271,15 @@
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/pretrazi.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/konsalting.html" />
         <option value="$PROJECT_DIR$/templates/testpristup.html" />
         <option value="$PROJECT_DIR$/templates/zizaKorisnika.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/Ziza/urls.py" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/mojaKarijera.html" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/Ziza/urls.py" />
       </list>
     </option>
   </component>
@@ -325,54 +348,6 @@
               <item name="post" type="462c0819:PsiDirectoryNode" />
               <item name="management" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-              <item name="font-awesome-4.7.0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-              <item name="font-awesome-4.7.0" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-              <item name="font-awesome-4.7.0" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="font-awesome.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="tilt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
@@ -511,11 +486,11 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14844373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14844373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.4980048" visible="true" weight="0.24959217" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24959217" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.2300163" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -525,7 +500,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.30016312" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.19349593" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.19249593" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32626426" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.32952693" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -816,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="654" column="7" selection-start-line="654" selection-start-column="7" selection-end-line="654" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/konsalting.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -858,16 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="58" column="68" selection-start-line="58" selection-start-column="68" selection-end-line="58" selection-end-column="68" />
-          <folding>
-            <element signature="e#628#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -889,28 +847,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="854" selection-start-line="854" selection-end-line="854" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="271" column="66" selection-start-line="271" selection-start-column="66" selection-end-line="271" selection-end-column="66" />
+        <state relative-caret-position="324">
+          <caret line="861" column="13" selection-start-line="861" selection-start-column="4" selection-end-line="861" selection-end-column="13" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1540215712022" expanded="true" signature="1077:1176" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="1206:1407" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="11409:11646" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="26156:26157" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="27944:27945" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="28586:28588" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="28616:28622" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="29387:29477" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="29916:29917" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="29916:29922" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="30122:30124" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="30122:30128" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="30907:30908" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="32018:32089" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="32018:32093" ph="..." />
-            <marker date="1540215712022" expanded="true" signature="32528:32534" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="1077:1176" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="1206:1407" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="11409:11646" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="26156:26157" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="27944:27945" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="28586:28588" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="28616:28622" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="29387:29477" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="29916:29917" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="29916:29922" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="30122:30124" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="30122:30128" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="30907:30908" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="32018:32089" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="32018:32093" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="32528:32534" ph="..." />
+            <marker date="1540216053395" expanded="true" signature="33370:33376" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="59" column="59" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
+          <folding>
+            <element signature="e#628#660#0" expanded="true" />
           </folding>
         </state>
       </provider>
