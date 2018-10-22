@@ -235,8 +235,6 @@ def register(request):
                 user = User()
                 grad = request.POST['City']
 
-                city = City.objects.get(name=grad)
-
                 categoryname = request.POST.get('Category', None)
                 user.first_name = request.POST['FirstName']
                 user.last_name = request.POST['LastName']
@@ -271,7 +269,7 @@ def register(request):
                     comp.clean()
                     comp.save()
 
-                    userP = UserProfile(userID=user, location=city.name)
+                    userP = UserProfile(userID=user, location=grad)
                     userP.save()
 
                     sendmail(request, user, user.email)
