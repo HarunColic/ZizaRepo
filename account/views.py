@@ -710,7 +710,21 @@ def anonimnaPretraga(request, id):
 
 def firme(request):
 
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    if request.user.is_authenticated:
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
+
+        if Company.objects.filter(userID=user).exists():
+            usr = 'comp'
+        else:
+            usr = 'wrkr'
+
+        kompanije = Company.objects.all()
+        userPs = UserProfile.objects.filter(userID__company__in=kompanije)
+        firme = User.objects.filter(pk__in=kompanije)
+        return render(request, 'firme.html', {'usr': usr, 'userP': userP, 'user': user, 'firme': firme, 'userPs': userPs, 'kompanije': kompanije})
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
 def sifraMail(request, recipientMail):
