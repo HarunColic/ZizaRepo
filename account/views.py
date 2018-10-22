@@ -769,9 +769,7 @@ def firme(request):
             usr = 'wrkr'
 
         kompanije = Company.objects.all()
-        userPs = UserProfile.objects.filter(userID__company__in=kompanije)
-        firme = User.objects.filter(pk__in=kompanije)
-        return render(request, 'firme.html', {'usr': usr, 'userP': userP, 'user': user, 'firme': firme, 'userPs': userPs, 'kompanije': kompanije})
+        return render(request, 'firme.html', {'usr': usr, 'userP': userP, 'user': user, 'kompanije': kompanije})
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
