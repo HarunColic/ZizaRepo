@@ -17,35 +17,51 @@ from django.conf import settings
 
 def newpost(request):
 
-    if Company.objects.filter(userID=request.user).exists():
-
-        if superUser(request.user):
-            categories = Category.objects.exclude(type=0)
-        else:
-            categories = Category.objects.filter(type=1)
+    if request.user.is_authenticated:
 
         userP = UserProfile.objects.get(userID=request.user)
-        return render(request, 'newpost.html', {'cat': categories, 'userP': userP, 'user': request.user})
-    else:
-        return redirect('home')
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
+        if Company.objects.filter(userID=request.user).exists():
+
+            if superUser(request.user):
+                categories = Category.objects.exclude(type=0)
+            else:
+                categories = Category.objects.filter(type=1)
+
+            userP = UserProfile.objects.get(userID=request.user)
+            return render(request, 'newpost.html', {'cat': categories, 'userP': userP, 'user': request.user})
+        else:
+            return redirect('home')
 
 
 def newpotraznja(request):
 
-    if Company.objects.filter(userID=request.user):
+    if request.user.is_authenticated:
 
-        if superUser(request.user):
-
-            categories = Category.objects.exclude(type=0)
-        else:
-            categories = Category.objects.filter(type=1)
-
-        comp = Company.objects.get(userID=request.user)
         userP = UserProfile.objects.get(userID=request.user)
 
-        return render(request, 'dodajPotraznju.html', {'cat': categories, 'comp': comp, 'user': request.user, 'userP': userP})
-    else:
-        return redirect('home')
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
+        if Company.objects.filter(userID=request.user):
+
+            if superUser(request.user):
+
+                categories = Category.objects.exclude(type=0)
+            else:
+                categories = Category.objects.filter(type=1)
+
+            comp = Company.objects.get(userID=request.user)
+            userP = UserProfile.objects.get(userID=request.user)
+
+            return render(request, 'dodajPotraznju.html', {'cat': categories, 'comp': comp, 'user': request.user, 'userP': userP})
+        else:
+            return redirect('home')
 
 
 def createpost(request):
@@ -160,9 +176,11 @@ def createpost(request):
 
 def showpost(request, id):
 
-    if Employee.objects.filter(userID=request.user):
-        emp = Employee.objects.get(userID=request.user)
-        if not emp.editovanProfil:
+    if request.user.is_authenticated:
+
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
@@ -212,6 +230,13 @@ def showpost(request, id):
 
 def bankUsluge(request):
 
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
     if Company.objects.filter(userID=request.user).exists():
         user = request.user
         financije = Category.objects.get(name="Finansijske")
@@ -223,6 +248,13 @@ def bankUsluge(request):
 
 def osiguranjeUsluge(request):
 
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
     user = request.user
     userP = UserProfile.objects.get(userID=user)
     cat = Category.objects.get(name="Osiguravajuće")
@@ -231,6 +263,13 @@ def osiguranjeUsluge(request):
 
 
 def prijaviOglas(request, id):
+
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
     if Employee.objects.filter(userID=request.user):
         emp = Employee.objects.get(userID=request.user)
@@ -256,6 +295,13 @@ def prijaviOglas(request, id):
 
 def urediPost(request, id):
 
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
     post = Post.objects.get(pk=id)
 
     if request.user != post.userID:
@@ -278,6 +324,13 @@ def urediPost(request, id):
 
 
 def updatePost(request, id):
+
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
     if request.method == 'POST':
 
@@ -409,6 +462,13 @@ def updatePost(request, id):
 
 def zavrsi(request, id):
 
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
     post = Post.objects.get(pk=id)
     post.soft_delete=True
     post.save()
@@ -416,6 +476,13 @@ def zavrsi(request, id):
 
 
 def obnovi(request, id):
+
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
     post = Post.objects.get(pk=id)
     razlika = post.expires_at - post.created_at

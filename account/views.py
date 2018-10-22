@@ -44,6 +44,13 @@ def validation(request, args):
 
 def home(request):
 
+    if request.user.is_authenticated:
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
     cetriOglasa = Post.objects.filter().exclude(soft_delete=True)[0:4]
     cetriUserP = []
 
@@ -100,6 +107,12 @@ def home(request):
 def profil(request):
 
     if request.user.is_authenticated:
+
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
         if request.POST.get('pretragaTrigger', "False") == "True":
             grad = request.POST.get('gradovi', None)
@@ -292,7 +305,6 @@ def sendZahvanicu(request, recipientMail):
     )
 
     email.send()
-
 
 
 def activate(request, uidb64, token):
@@ -526,6 +538,13 @@ def onama(request):
 
     if request.user.is_authenticated:
 
+
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
         if Company.objects.filter(userID=request.user).exists():
             usr = 'comp'
         else:
@@ -543,6 +562,13 @@ def onama(request):
 def konsalting(request):
 
     if request.user.is_authenticated:
+
+
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
         if Company.objects.filter(userID=request.user).exists():
             usr = 'comp'
@@ -563,11 +589,11 @@ def pretraga(request):
 
     if request.user.is_authenticated:
 
-        if Employee.objects.filter(userID=request.user):
-            emp = Employee.objects.get(userID=request.user)
-            if not emp.editovanProfil:
-                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
-                return redirect('editprofil')
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
         auth = True
 
@@ -634,6 +660,12 @@ def dashboard(request):
 
     if request.user.is_authenticated:
 
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
         if superUser(request.user):
             super = True
         else:
@@ -659,6 +691,11 @@ def anonimnaPretraga(request, id):
 
     if request.user.is_authenticated:
 
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
         if Company.objects.filter(userID=request.user).exists():
             usr = 'comp'
@@ -713,6 +750,10 @@ def firme(request):
     if request.user.is_authenticated:
         user = request.user
         userP = UserProfile.objects.get(userID=user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
         if Company.objects.filter(userID=user).exists():
             usr = 'comp'
@@ -791,12 +832,11 @@ def profilKorisnika(request, id):
 
     if request.user.is_authenticated:
 
+        userP = UserProfile.objects.get(userID=request.user)
 
-        if Employee.objects.filter(userID=request.user):
-            emp = Employee.objects.get(userID=request.user)
-            if not emp.editovanProfil:
-                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
-                return redirect('editprofil')
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
         user = User.objects.get(pk=id)
         if Company.objects.filter(userID=user).exists():
@@ -810,11 +850,12 @@ def zizaKorisnika(request, id):
 
     if request.user.is_authenticated:
 
-        if Employee.objects.filter(userID=request.user):
-            emp = Employee.objects.get(userID=request.user)
-            if not emp.editovanProfil:
-                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
-                return redirect('editprofil')
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
 
         user = User.objects.get(pk=id)
         if Company.objects.filter(userID=user).exists():
@@ -856,9 +897,13 @@ def mojaKarijera(request):
 
     if request.user.is_authenticated:
 
-        user = request.user
+        userP = UserProfile.objects.get(userID=request.user)
 
-        userP = UserProfile.objects.get(userID=user)
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
+        user = request.user
 
         categories = Category.objects.filter(usercategories__userID=user)
 

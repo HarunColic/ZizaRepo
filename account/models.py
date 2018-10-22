@@ -16,6 +16,7 @@ class UserProfile(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     deleted = models.BooleanField(default=False)
     brojtelefona = models.CharField(max_length=20, null=True)
+    editovanProfil = models.BooleanField(default=False)
 
 
 class Employee(models.Model):
