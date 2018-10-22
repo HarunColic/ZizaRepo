@@ -100,12 +100,12 @@
 			</div>
 		</div>
 		<div class="uvodniDio tabelarniDio">
-            {% for f in firme %}
+            {% for f in kompanije %}
 			<a href="{% url 'zizaKorisnika' id=f.pk %}"> <!-- link do profila firme -->
 				<div class="tabelaRasa">
 					<div>
 						<div>
-							<div>{{ f.first_name }}</div> <!-- ime kompanije -->
+							<div>{{ f.userID.first_name }}</div> <!-- ime kompanije -->
 							<div>
 								<span>{{ f.company.categoryID.name}}</span> <!-- djelatnost pod kojom se registrovala -->
 								<span>
