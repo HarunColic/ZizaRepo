@@ -856,17 +856,18 @@ def zizaKorisnika(request, id):
         if not userP.editovanProfil:
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
-
-
+        usr = 'wrkr'
         user = User.objects.get(pk=id)
         if Company.objects.filter(userID=user).exists():
-            userP = UserProfile.objects.get(userID=user)
+            usr = 'comp'
+            userP = UserProfile.objects.get(userID=request.user)
+            uProfil = UserProfile.objects.get(userID=user)
             activePosts = Post.objects.filter(userID=user).exclude(soft_delete=True).order_by('-created_at')
             inactivePosts = Post.objects.filter(userID=user).exclude(soft_delete=False).order_by('-created_at')
             company = Company.objects.get(userID=user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
             return render(request, 'zizaKorisnika.html',
-                          {'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts,'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+                          {'usr': usr, 'uProfil': uProfil, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts,'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
 
 
 def contactAll(request):
