@@ -5,6 +5,10 @@
 
 <style>
 
+.header__navigation--call{
+	margin-left: 30px !important;
+}
+
     a{
         text-decoration: none;
         color: inherit;
@@ -377,7 +381,9 @@ ul {list-style: none}
   	}
   }
 
-
+.header__navigation--call{
+	margin-left: 30px;
+}
 </style>
 <!-- NOVA NAVIGACIJA CSS END-->
 
@@ -398,8 +404,6 @@ ul {list-style: none}
 			    	{% endif %}
                         <li class="oglasi--navMen"><div class="saStrane" style="top: 78px !important;"></div>Oglasi</li>
 			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 117px !important;"></div>Konsalting</li></a>
-			    	<a href="/onama"><li><div class="saStrane" style="top: 160px !important;"></div>O nama</li></a>
-			    	<a href="{% url 'firme' %}"><li>Članice</li></a>
 			   	</ul>
             {% if usr == 'comp' %}
 			   	<ul style="position: relative;" class="mojaZiza--extraMen">
@@ -463,8 +467,8 @@ ul {list-style: none}
 				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >Konsalting
 
 				</span>
-				<span onclick="location.href='/onama'" style="width: 80px" id="onama_nav">O nama</span>
-				<span onclick="location.href='/firme'" style="width: 80px" id="onama_nav">Članice</span>
+				<span onclick="location.href='/onama'" style="width: 80px; margin-right: 20px" id="onama_nav">O nama</span>
+				<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">Članice</span>
 			</div>
 			<div class="header__navigation--dugmad">
 				<span id="myBtn2" style="cursor: pointer;">Prijava</span>
@@ -601,12 +605,12 @@ ul {list-style: none}
                         <li class="oglasi--navMen"><div class="saStrane" style="top: 78px !important;"></div>Oglasi</li>
 			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 117px !important;"></div>Konsalting</li></a>
 			    	<a href="/onama"><li><div class="saStrane" style="top: 160px !important;"></div>O nama</li></a>
-			    	<a href="{% url 'firme' %}"><li><div class="saStrane" style="top: 160px !important;"></div>Članice</li></a>
+			    	<a href="/firme"><li><div class="saStrane" style="top: 200px !important;"></div>Članice</li></a>
 			   	</ul>
             {% if usr == 'comp' %}
 			   	<ul style="position: relative;" class="mojaZiza--extraMen">
 			    	<li style="color: #f89101" class="mojaZiza--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Moja ŽIŽA</li>
-			    	<a href="{% url 'firme' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 30px !important;"></div>Firme i udruženja</li></a>
+			    	<a href="{% url 'dashboard' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 30px !important;"></div>Firme i udruženja</li></a>
 			    	<a href="{% url 'dashboard' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 78px !important;"></div>Banke</li></a>
 			    	<a href="{% url 'dashboard' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 117px !important;"></div>Osiguranja</li></a>
 			   	</ul>
@@ -649,7 +653,7 @@ ul {list-style: none}
 				<span class="sektor">Moja ŽIŽA
 					<div class="sektorBottom">
 					    <ul style="position: relative;">
-					    	<a href="{% url 'firme' %}"><li><div class="saStrane"></div>Firme i udruženja</li></a>
+					    	<a href="{% url 'dashboard' %}"><li><div class="saStrane"></div>Firme i udruženja</li></a>
 					    	<a href="{% url 'dashboard' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Banke</li></a>
 					    	<a href="{% url 'dashboard' %}"><li><div class="saStrane" style="top: 73px !important;"></div>Osiguranja</li></a>
 					    </ul>
@@ -673,8 +677,8 @@ ul {list-style: none}
 				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >Konsalting
 
 				</span>
-				<span onclick="location.href='/onama'" style="width: 80px" id="onama_nav">O nama</span>
-				<a href="{% url 'firme' %}"><li><div class="saStrane" style="top: 160px !important;"></div>Članice</li></a>
+				<span onclick="location.href='/onama'" style="width: 80px;  margin-right: 20px" id="onama_nav">O nama</span>
+				<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">Članice</span>
 			</div>
 			<div class="header__navigation--dugmad">
 				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
