@@ -108,7 +108,7 @@
 		<div class="uvodniDio tabelarniDio">
             {% for f in kompanije %}
             {% if userP is not None %}
-            <a href="{% url 'zizaKorisnika' id=f.userID.pk %}"> <!-- link do profila firme -->
+            <a href="{% url 'profilKorisnika' id=f.userID.pk %}"> <!-- link do profila firme -->
                 <div class="tabelaRasa">
             {% else %}
             <a class="tLog"> <!-- link do profila firme -->
