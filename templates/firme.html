@@ -11,10 +11,15 @@
 	<link rel="stylesheet" type="text/css" href="{%  static 'style.css' %}"> <!-- include sa servera odgovarajuci -->
 	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}"> <!-- include sa servera odgovarajuci -->
 	<link rel="stylesheet" type="text/css" href="{% static 'style-tvrtkaProfil.css' %}"> <!-- include sa servera odgovarajuci -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
 </head>
 <body>
 
-{% with var1=user var2=True var3=userP ind=industries usr=usr  %}
+{% with var1=user var2=userP var3=userP ind=industries usr=usr  %}
 
 {% include 'header.html' %}
 
@@ -101,18 +106,35 @@
 		</div>
 		<div class="uvodniDio tabelarniDio">
             {% for f in kompanije %}
-			<a href="{% url 'zizaKorisnika' id=f.userID.pk %}"> <!-- link do profila firme -->
-				<div class="tabelaRasa">
+            {% if userP is not None %}
+            <a href="{% url 'zizaKorisnika' id=f.userID.pk %}"> <!-- link do profila firme -->
+                <div class="tabelaRasa">
+            {% else %}
+            <a class="tLog"> <!-- link do profila firme -->
+                <div class="tLogin tabelaRasa">
+            {% endif %}
 					<div>
 						<div>
 							<div>{{ f.userID.first_name }}</div> <!-- ime kompanije -->
 							<div>
-								<span>{{ f.categoryID.name}}</span> <!-- djelatnost pod kojom se registrovala -->
-								<span>
+                                {% if f.categoryID.name is None %}
+                                    <span>Nije dostupno</span> <!-- djelatnost pod kojom se registrovala -->
+                                {% else %}
+                                    <span>{{ f.categoryID.name}}</span> <!-- djelatnost pod kojom se registrovala -->
+                                {% endif %}
+
+                                {% if f.categoryID.name is None %}
+                                    <span>
 									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
-									{{ f.userID.userprofile.location }}<!-- sjediste firme -->
+                                    Nije dostupno<!-- sjediste firme -->
 								</span>
-							</div>
+                                {% else %}
+                                <span>
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
+                                    {{ f.userID.userprofile.location }}<!-- sjediste firme -->
+								</span>
+                                {% endif %}
+                            </div>
 						</div>
 						<div class="srce"><img {% if f.userID.userprofile.image %}src="{{ f.userID.userprofile.image.url }}{% endif %}"></div>
 					</div>
@@ -161,5 +183,11 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{% static 'skripta.js' %}"></script> <!-- include sa servera odgovarajuci -->
+<script>
+    $(".tLog").click(function(){
+        var modal2 = document.getElementById('myModal2');
+        modal2.style.display = "block";
+    })
 
+</script>
 </html>
