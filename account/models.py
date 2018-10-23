@@ -38,4 +38,5 @@ class Company(models.Model):
     brojuposlenih = models.IntegerField(null=True)
     opis = models.TextField(null=True)
     created_at = models.DateTimeField(default=timezone.now)
+    web = models.CharField(max_length=1000, null=True)
 

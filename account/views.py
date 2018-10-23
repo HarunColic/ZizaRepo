@@ -410,6 +410,7 @@ def submitchange(request):
                 brojuposlenika = request.POST['brojuposlenih']
                 opis = request.POST['opis']
                 slika = request.FILES.get('profilePicture', default=None)
+                webStranica = request.POST.get('webStranica', None)
                 args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
 
                 if not validation(request, args):
@@ -448,6 +449,9 @@ def submitchange(request):
                     comp.brojuposlenih = brojuposlenika
                     comp.opis = opis
 
+                    if webStranica:
+                        comp.web = webStranica
+
                     user.save()
                     userP.editovanProfil = True
                     userP.save()
@@ -473,7 +477,7 @@ def submitchange(request):
                 kontaktBroj = request.POST.get('brojTel', None)
                 grad = request.POST.get('grad', default=None)
                 opis = request.POST.get('opis', None)
-                slika = request.FILES.get('profilePicture', default=None)
+                slika = request.FILES.get('profilePicture', None)
                 kategorije = request.POST.getlist('kategorije')
                 strucnaSprema = request.POST.get('strucnaSprema', default=None)
                 obrazovanje = request.POST.get('obrazovanje', default=None)
@@ -545,7 +549,6 @@ def submitchange(request):
 def onama(request):
 
     if request.user.is_authenticated:
-
 
         userP = UserProfile.objects.get(userID=request.user)
 
@@ -934,4 +937,6 @@ def mojaKarijera(request):
 def mailSvima(request):
 
     if superUser(request.user):
-        return render(request, 'conatctAll.html')
+        user = request.user
+        userP = UserProfile.objects.get(userID=user)
+        return render(request, 'conatctAll.html', {'user': user, 'userP': userP})
