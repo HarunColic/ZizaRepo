@@ -130,9 +130,15 @@
 					    {% endfor %}
                     </select>
 				</div>
-				<div style="margin-top: 20px">
-					<label>Broj uposlenih</label><br>
-					<input value="{{ comp.brojuposlenih }}" type="number" id='brojUposlenihInput' name="brojuposlenih" style="width: 100%">
+				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
+					<div style="width: 53.22%; margin-right: 25px">
+						<label>Broj uposlenih</label><br>
+						<input value="{{ comp.brojuposlenih }}" type="number" id='brojUposlenihInput' name="brojuposlenih" style="width: 100%">
+					</div>
+					<div style="width: 43.75%">
+						<label>Web stranica</label><br>
+						<input value="" type="text" id='webStranica' name="webStranica" style="width: 100%" placeholder="https://www...">
+					</div>
 				</div>
 				<div  style="margin-top: 30px;">
 					<label style="margin-bottom: 8px;" class="specLab">O nama</label>
