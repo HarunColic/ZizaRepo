@@ -867,7 +867,7 @@ def zizaKorisnika(request, id):
             return redirect('editprofil')
         usr = 'wrkr'
         user = User.objects.get(pk=id)
-        if Company.objects.filter(userID=user).exists():
+        if Company.objects.filter(userID=user).exists() and Company.objects.filter(userID=request.user).exists():
             usr = 'comp'
             userP = UserProfile.objects.get(userID=request.user)
             uProfil = UserProfile.objects.get(userID=user)
@@ -877,6 +877,8 @@ def zizaKorisnika(request, id):
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
             return render(request, 'zizaKorisnika.html',
                           {'usr': usr, 'uProfil': uProfil, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts,'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+    sweetify.sweetalert(request, title="Akcija nije dozvoljena", icon="error")
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
 def contactAll(request):
