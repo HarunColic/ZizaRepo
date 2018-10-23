@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/conatctAll.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/conatctAll.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,9 +64,9 @@
           <entry key="Django Console" value="125" />
           <entry key="css" value="76" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="25617" />
+          <entry key="html" value="25694" />
           <entry key="js" value="301" />
-          <entry key="py" value="40921" />
+          <entry key="py" value="40929" />
           <entry key="py@Ziza" value="1115" />
           <entry key="txt" value="7" />
         </counts>
@@ -74,10 +75,10 @@
         <counts>
           <entry key="CSS" value="76" />
           <entry key="CommandLine" value="1011" />
-          <entry key="HTML" value="25617" />
+          <entry key="HTML" value="25694" />
           <entry key="JavaScript" value="301" />
           <entry key="PLAIN_TEXT" value="113" />
-          <entry key="Python" value="41045" />
+          <entry key="Python" value="41053" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -111,62 +112,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="941" column="79" selection-start-line="941" selection-start-column="79" selection-end-line="941" selection-end-column="79" />
+            <state relative-caret-position="346">
+              <caret line="938" column="3" selection-start-line="938" selection-start-column="3" selection-end-line="938" selection-end-column="3" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1540310028020" expanded="true" signature="1077:1176" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="1206:1407" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="11907:12143" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="27922:27923" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="29939:29940" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="31336:31338" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="31366:31372" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="32137:32227" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="32666:32667" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="32666:32672" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="32872:32874" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="32872:32878" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="33591:33592" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="34988:35059" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="34988:35063" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="35498:35504" ph="..." />
-                <marker date="1540310028020" expanded="true" signature="36516:36522" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="1077:1176" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="1206:1407" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="11907:12143" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="27922:27923" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="29939:29940" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="31336:31338" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="31366:31372" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="32137:32227" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="32666:32667" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="32666:32672" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="32872:32874" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="32872:32878" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="33591:33592" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="34988:35059" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="34988:35063" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="35476:35482" ph="..." />
+                <marker date="1540310879817" expanded="true" signature="36494:36500" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/editProfilTvrtka.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="145" column="53" selection-start-line="145" selection-start-column="53" selection-end-line="145" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="79" column="18" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="757" selection-start-line="756" selection-end-line="757" />
             </state>
           </provider>
         </entry>
@@ -189,11 +159,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/conatctAll.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="228">
+              <caret line="43" column="58" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="58" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#submit#0;n#div#2;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -304,8 +277,8 @@
         <option value="$PROJECT_DIR$/templates/firme.html" />
         <option value="$PROJECT_DIR$/account/models.py" />
         <option value="$PROJECT_DIR$/templates/editProfilPL.html" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/conatctAll.html" />
+        <option value="$PROJECT_DIR$/account/views.py" />
       </list>
     </option>
   </component>
@@ -504,7 +477,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24959217" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.2300163" />
+      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.2300163" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32952693" />
@@ -513,7 +486,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.30016312" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.18760195" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.18760195" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32626426" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.32952693" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -560,6 +533,11 @@
           <url>file://$PROJECT_DIR$/account/views.py</url>
           <line>397</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/account/views.py</url>
+          <line>886</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -863,37 +841,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/conatctAll.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="941" column="79" selection-start-line="941" selection-start-column="79" selection-end-line="941" selection-end-column="79" />
+        <state relative-caret-position="228">
+          <caret line="43" column="58" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="58" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <marker date="1540310028020" expanded="true" signature="1077:1176" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="1206:1407" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="11907:12143" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="27922:27923" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="29939:29940" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="31336:31338" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="31366:31372" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="32137:32227" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="32666:32667" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="32666:32672" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="32872:32874" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="32872:32878" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="33591:33592" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="34988:35059" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="34988:35063" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="35498:35504" ph="..." />
-            <marker date="1540310028020" expanded="true" signature="36516:36522" ph="..." />
+            <element signature="n#style#0;n#span#0;n#submit#0;n#div#2;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/conatctAll.html">
+    <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="346">
+          <caret line="938" column="3" selection-start-line="938" selection-start-column="3" selection-end-line="938" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1540310879817" expanded="true" signature="1077:1176" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="1206:1407" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="11907:12143" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="27922:27923" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="29939:29940" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="31336:31338" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="31366:31372" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="32137:32227" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="32666:32667" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="32666:32672" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="32872:32874" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="32872:32878" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="33591:33592" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="34988:35059" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="34988:35063" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="35476:35482" ph="..." />
+            <marker date="1540310879817" expanded="true" signature="36494:36500" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

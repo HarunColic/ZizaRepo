@@ -890,10 +890,10 @@ def contactAll(request):
         return redirect('home')
 
     subject = request.POST['subject']
-    sadrzaj = request.POST['Sadržaj']
+    sadrzaj = request.POST['message']
 
     mail_subject = subject
-    message = render_to_string(sadrzaj, {})
+    message = sadrzaj
 
     users = User.objects.all()
 
