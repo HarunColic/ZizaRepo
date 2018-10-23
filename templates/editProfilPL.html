@@ -69,7 +69,7 @@
 			<div class="linijaD"></div>
 		</div>
     			<form id="edituj" method="post" action="{% url 'submitchange' %}" enctype="multipart/form-data" style="margin-top: 70px">
-{% csrf_token %}
+    {% csrf_token %}
 		<div class="tvrtka">
 			<div class="avatarKucica" style="position: relative;">
 				<div style="width: 100%; height: 100%; {% if userP.image %} background: url({{ userP.image.url }});{% endif %} background-size: cover; background-position: center; background-repeat: no-repeat;" id="imagePreview"></div>
