@@ -771,6 +771,9 @@ def firme(request):
         kompanije = Company.objects.all()
         return render(request, 'firme.html', {'usr': usr, 'userP': userP, 'user': user, 'kompanije': kompanije})
     else:
+        usr = 'wrkr'
+        kompanije = Company.objects.all()
+        return render(request, 'firme.html', {'usr': usr, 'userP': None, 'user': None, 'kompanije': kompanije})
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
