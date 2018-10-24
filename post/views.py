@@ -91,6 +91,7 @@ def createpost(request):
                 else:
                     fs = FileSystemStorage()
                     filename = fs.save(myfile.name, myfile)
+                    filename.encode('utf-8')
                     uploaded_file_url = fs.url(filename)
             else:
                 myfile = None
