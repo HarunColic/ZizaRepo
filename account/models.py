@@ -19,6 +19,15 @@ class UserProfile(models.Model):
     editovanProfil = models.BooleanField(default=False)
 
 
+    def __str__(self):
+
+        user = User.objects.get(pk=self.pk)
+
+        ime_i_prezime = user.first_name + user.last_name
+
+        return ime_i_prezime
+
+
 class Employee(models.Model):
 
     userID = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -28,6 +37,14 @@ class Employee(models.Model):
     obrazovanje = models.CharField(max_length=200, null=True)
     radnoMjesto = models.CharField(max_length=200, null=True)
     iskustvo = models.IntegerField(null=True)
+
+    def __str__(self):
+
+        user = User.objects.get(pk=self.pk)
+
+        ime_i_prezime = user.first_name + user.last_name
+
+        return ime_i_prezime
 
 
 class Company(models.Model):
