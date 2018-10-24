@@ -40,3 +40,9 @@ class Company(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     web = models.CharField(max_length=1000, null=True)
 
+    def __str__(self):
+
+        user = User.objects.get(pk=self.pk)
+
+        return user.first_name
+
