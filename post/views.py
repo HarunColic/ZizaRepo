@@ -90,8 +90,8 @@ def createpost(request):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
                 else:
                     fs = FileSystemStorage()
+                    myfile.name.encode('utf-8')
                     filename = fs.save(myfile.name, myfile)
-                    filename.encode('utf-8')
                     uploaded_file_url = fs.url(filename)
             else:
                 myfile = None
