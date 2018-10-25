@@ -12,7 +12,7 @@ class UserProfile(models.Model):
     smart_find = models.BooleanField(default=True)
     image = models.ImageField(null=True)
     location = models.CharField(max_length=255, null=True)
-    cv = models.FileField(max_length=1000, null=True)
+    cv = models.FileField(null=True)
     created_at = models.DateTimeField(default=timezone.now)
     deleted = models.BooleanField(default=False)
     brojtelefona = models.CharField(max_length=20, null=True)

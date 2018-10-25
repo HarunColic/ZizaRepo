@@ -17,4 +17,5 @@ admin.site.register(Pmodels.Tag)
 admin.site.register(Pmodels.FAQ)
 admin.site.register(Pmodels.PostTags)
 
-list_display = [UP.CV_file]
+fields = ('CV_file', )
+readonly_fields = ('CV_file', )
