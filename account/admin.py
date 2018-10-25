@@ -15,3 +15,6 @@ admin.site.register(Pmodels.UserCategories)
 admin.site.register(Pmodels.Tag)
 admin.site.register(Pmodels.FAQ)
 admin.site.register(Pmodels.PostTags)
+
+
+fields = ('CV_file', )

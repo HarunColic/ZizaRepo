@@ -18,14 +18,17 @@ class UserProfile(models.Model):
     brojtelefona = models.CharField(max_length=20, null=True)
     editovanProfil = models.BooleanField(default=False)
 
-
     def __str__(self):
 
         user = User.objects.get(pk=self.pk)
 
-        ime_i_prezime = user.first_name + user.last_name
+        ime_i_prezime = user.first_name + " " + user.last_name
 
         return ime_i_prezime
+
+    def CV_file(self):
+
+        return self.cv
 
 
 class Employee(models.Model):
@@ -42,7 +45,7 @@ class Employee(models.Model):
 
         user = User.objects.get(pk=self.pk)
 
-        ime_i_prezime = user.first_name + user.last_name
+        ime_i_prezime = user.first_name + " " + user.last_name
 
         return ime_i_prezime
 
