@@ -30,6 +30,6 @@ class Command(BaseCommand):
             postCat = p.categoryID
             users = User.objects.filter(userID__usercategories__categoryID=postCat)
             user = User.objects.get(pk=p.userID)
-
+	    
             if users.count():
                 sendmail(users, user)
