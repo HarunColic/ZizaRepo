@@ -29,9 +29,11 @@ class UserProfile(models.Model):
     def CV_file(self):
 
         if self.cv:
-            return "<a href='%s'>CV</a>" % (self.cv.url,)
+            return "<a href='%s'>CV File</a>" % (self.cv.url,)
         else:
             return "No CV"
+
+    CV_file.allow_tags = True
 
 
 class Employee(models.Model):
