@@ -30,7 +30,6 @@ class Command(BaseCommand):
             postCat = p.categoryID
             users = User.objects.filter(userID__usercategories__categoryID=postCat)
             user = User.objects.get(pk=p.userID)
-            p.soft_delete = True
 
             if users.count():
                 sendmail(users, user)
