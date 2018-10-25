@@ -1,5 +1,6 @@
 from django.contrib import admin
 from account import models as Amodels
+from account.models import UserProfile as UP
 from post import models as Pmodels
 
 # Register your models here.
@@ -16,5 +17,4 @@ admin.site.register(Pmodels.Tag)
 admin.site.register(Pmodels.FAQ)
 admin.site.register(Pmodels.PostTags)
 
-
-fields = ('CV_file', )
+list_display = [UP.CV_file]
