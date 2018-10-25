@@ -28,7 +28,10 @@ class UserProfile(models.Model):
 
     def CV_file(self):
 
-        return self.cv
+        if self.cv:
+            return "<a href='%s'>CV</a>" % (self.cv,)
+        else:
+            return "No CV"
 
 
 class Employee(models.Model):
