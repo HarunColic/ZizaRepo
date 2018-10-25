@@ -12,7 +12,7 @@ class UserProfile(models.Model):
     smart_find = models.BooleanField(default=True)
     image = models.ImageField(null=True)
     location = models.CharField(max_length=255, null=True)
-    cv = models.CharField(max_length=1000, null=True)
+    cv = models.FileField(max_length=1000, null=True)
     created_at = models.DateTimeField(default=timezone.now)
     deleted = models.BooleanField(default=False)
     brojtelefona = models.CharField(max_length=20, null=True)
@@ -29,7 +29,7 @@ class UserProfile(models.Model):
     def CV_file(self):
 
         if self.cv:
-            return "<a href='%s'>CV</a>" % (self.cv,)
+            return "<a href='%s'>CV</a>" % (self.cv.url,)
         else:
             return "No CV"
 
