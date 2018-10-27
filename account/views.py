@@ -22,6 +22,7 @@ from django.template.context_processors import csrf
 from django.utils.crypto import get_random_string
 from django.core.urlresolvers import resolve
 from post.models import UserCategories
+import  os
 
 
 def superUser(user):
@@ -504,6 +505,7 @@ def submitchange(request):
                 if myfile is not None:
                     fs = FileSystemStorage()
                     filename = fs.save(myfile.name, myfile)
+                    os.fsdecode(filename)
                     uploaded_file_url = fs.url(filename)
 
                 args = [email, name, grad, kontaktBroj,opis, strucnaSprema, obrazovanje]
