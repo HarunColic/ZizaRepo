@@ -108,6 +108,9 @@ def profil(request):
 
     if request.user.is_authenticated:
 
+        if Employee.objects.filter(userID=request.user).exists():
+            return redirect('home')
+
         userP = UserProfile.objects.get(userID=request.user)
 
         if not userP.editovanProfil:
@@ -381,7 +384,7 @@ def signout(request):
 
 def editprofil(request):
 
-    #edit profil kompanije
+    # - * - coding: utf - 8 -*-
 
     if request.user.is_authenticated:
 
