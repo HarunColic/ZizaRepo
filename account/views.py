@@ -506,7 +506,7 @@ def submitchange(request):
 
                 if myfile is not None:
                     fs = FileSystemStorage()
-                    filename = fs.save(myfile.name, myfile)
+                    filename = fs.save(datetime.now(), myfile)
                     uploaded_file_url = fs.url(filename)
 
                 args = [email, name, grad, kontaktBroj,opis, strucnaSprema, obrazovanje]
