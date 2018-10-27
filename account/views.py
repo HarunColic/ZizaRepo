@@ -385,7 +385,6 @@ def signout(request):
 
 def editprofil(request):
 
-    # - * - coding: utf - 8 -*-
 
     if request.user.is_authenticated:
 
@@ -411,6 +410,9 @@ def editprofil(request):
 
 
 def submitchange(request):
+
+    # - * - coding: utf - 8 -*-
+
 
     if request.user.is_authenticated:
 
@@ -504,7 +506,7 @@ def submitchange(request):
 
                 if myfile is not None:
                     fs = FileSystemStorage()
-                    filename = fs.save(myfile.name.decode('utf-8', 'ignore').encode('utf-8'), myfile)
+                    filename = fs.save(myfile.name, myfile)
                     uploaded_file_url = fs.url(filename)
 
                 args = [email, name, grad, kontaktBroj,opis, strucnaSprema, obrazovanje]
