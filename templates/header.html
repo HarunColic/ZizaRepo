@@ -421,20 +421,10 @@ ul {list-style: none}
 			<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
 			    <ul style="position: relative;" class="mainNav">
 			    	<a href="{% url 'home' %}"><li><div class="saStrane"></div>Početna</li></a>
-                    {% if usr == 'comp' %}
-			    	<li class="mojaZiza--navMen"><div class="saStrane" style="top: 30px !important;"></div>Moja ŽIŽA</li>
-			    	{% endif %}
+
                         <li class="oglasi--navMen"><div class="saStrane" style="top: 78px !important;"></div>Oglasi</li>
 			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 117px !important;"></div>Konsalting</li></a>
 			   	</ul>
-            {% if usr == 'comp' %}
-			   	<ul style="position: relative;" class="mojaZiza--extraMen">
-			    	<li style="color: #f89101" class="mojaZiza--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Moja ŽIŽA</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 30px !important;"></div>Firme i udruženja</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 78px !important;"></div>Banke</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 117px !important;"></div>Osiguranja</li>
-			   	</ul>
-                {% endif %}
 			   	<ul style="position: relative;" class="oglasi--extraMen">
 			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Oglasi</li>
 			    	<li class="submenu tLogin"><div class="saStrane" style="top: 33px !important"></div>Kadrovska potražnja</li>
@@ -463,17 +453,6 @@ ul {list-style: none}
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
 				<span onclick="location.href='{% url 'home' %}'" class="selected" id="pocetna_nav">Početna</span>
-                {%  if cusr == 'comp' %}
-                <span class="sektor" id="usluge_nav">Moja ŽIŽA
-					<div class="sektorBottom">
-					    <ul style="position: relative;">
-					    	<li class="tLogin" ><div class="saStrane"></div>Firme i udruženja</li>
-					    	<li class="tLogin" ><div class="saStrane" style="top: 33px !important;"></div>Banke</li>
-					    	<li class="tLogin" ><div class="saStrane" style="top: 73px !important;"></div>Osiguranja</li>
-					    </ul>
-					</div>
-				</span>
-                    {% endif %}
                 <span class="konkurs" id="oglasi_nav">Oglasi
 					<div class="konkursBottom">
 					    <ul>
@@ -621,22 +600,11 @@ ul {list-style: none}
 			<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
 			    <ul style="position: relative;" class="mainNav">
 			    	<a href="{% url 'home' %}"><li><div class="saStrane"></div>Početna</li></a>
-                    {% if usr == 'comp' %}
-			    	<li class="mojaZiza--navMen"><div class="saStrane" style="top: 30px !important;"></div>Moja ŽIŽA</li>
-			    	{% endif %}
                         <li class="oglasi--navMen"><div class="saStrane" style="top: 78px !important;"></div>Oglasi</li>
 			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 117px !important;"></div>Konsalting</li></a>
 			    	<a href="/onama"><li><div class="saStrane" style="top: 160px !important;"></div>O nama</li></a>
 			    	<a href="/firme"><li><div class="saStrane" style="top: 200px !important;"></div>Članice</li></a>
 			   	</ul>
-            {% if usr == 'comp' %}
-			   	<ul style="position: relative;" class="mojaZiza--extraMen">
-			    	<li style="color: #f89101" class="mojaZiza--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Moja ŽIŽA</li>
-			    	<a href="{% url 'firme' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 30px !important;"></div>Firme i udruženja</li></a>
-			    	<a href="{% url 'dashboard' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 78px !important;"></div>Banke</li></a>
-			    	<a href="{% url 'dashboard' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 117px !important;"></div>Osiguranja</li></a>
-			   	</ul>
-                {% endif %}
 			   	<ul style="position: relative;" class="oglasi--extraMen">
 			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Oglasi</li>
 			    	<a href="{% url 'newpost' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 33px !important"></div>Kadrovska potražnja</li></a>
@@ -671,17 +639,6 @@ ul {list-style: none}
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
 				<span onclick="location.href='/home'" class="pocetNa">Početna</span>
-                {% if usr == 'comp' %}
-				<span class="sektor">Moja ŽIŽA
-					<div class="sektorBottom">
-					    <ul style="position: relative;">
-					    	<a href="{% url 'firme' %}"><li><div class="saStrane"></div>Firme i udruženja</li></a>
-					    	<a href="{% url 'dashboard' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Banke</li></a>
-					    	<a href="{% url 'dashboard' %}"><li><div class="saStrane" style="top: 73px !important;"></div>Osiguranja</li></a>
-					    </ul>
-					</div>
-				</span>
-                    {% endif %}
 				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs">Oglasi
                     {% if usr == 'comp' %}
 					<div class="konkursBottom">
