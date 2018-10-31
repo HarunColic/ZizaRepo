@@ -14,6 +14,18 @@ class Category(models.Model):
     slika = models.IntegerField(default=0)
 
 
+class izlog(models.Model):
+
+    categoryID = models.ForeignKey(Category, on_delete=models.CASCADE)
+    userID = models.ForeignKey(User, on_delete=models.CASCADE)
+    expires_at = models.DateTimeField(db_index=True)
+    location = models.CharField(max_length=200)
+    content = models.TextField()
+    attachment = models.FileField(null=True, upload_to='documents/')
+    created_at = models.DateTimeField(default=timezone.now)
+    soft_delete = models.BooleanField(default=False)
+
+
 class Post(models.Model):
 
     categoryID = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)

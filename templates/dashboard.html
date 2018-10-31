@@ -841,7 +841,7 @@
 		<div class="bg_end">
 			<span>Želite li vidjeti još oglasa?</span>
 		</div>
-		<button id="aktivirajPregled">OGLASI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+		<button style="cursor: pointer" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'" id="aktivirajPregled">OGLASI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
 	</div>
 	<div class="uvod__linkovi">
 		<img src="{% static 'images/optimised/rss-min.png' %}" draggable="false" width="16px" height="16px">

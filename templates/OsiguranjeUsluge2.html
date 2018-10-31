@@ -19,6 +19,13 @@
 
 </head>
 <body>
+
+{% with var1=user var2=auth var3=userP ind=industries usr=usr %}
+    {% include 'header.html' %}
+    {% endwith %}
+
+
+
 	<style type="text/css">
 	.formaBody{
 		height: 1100px;
@@ -354,6 +361,7 @@
 		});
 	</script>
 
+{% include 'footer.html' %}
 
 {% load sweetify %}
     {% sweetify %}

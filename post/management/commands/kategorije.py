@@ -91,13 +91,13 @@ class Command(BaseCommand):
             'Zanatske usluge',
             'Zdravstvo',
         ]
-        # for c in categories:
-        #     cat = Category(name=c, type=0)
-        #     cat.save()
-        #
-        # for c in categories2:
-        #     cat = Category(name=c, type=1)
-        #     cat.save()
-        for c in categories3:
+        for c in categories:
+            cat = Category(name=c, type=0)
+            cat.save()
+
+        for c in categories2:
             cat = Category(name=c, type=1)
             cat.save()
+        #for c in categories3:
+         #   cat = Category(name=c, type=1)
+          #  cat.save()

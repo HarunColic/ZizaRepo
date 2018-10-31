@@ -14,8 +14,16 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}">
 	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static 'style-dodajOglas.css' %}">
+
 </head>
 <body>
+
+{% with var1=user var2=auth var3=userP ind=industries usr=usr %}
+    {% include 'header.html' %}
+    {% endwith %}
+
+
+
 	<style type="text/css">
 	.formaBody{
 		height: 1250px;
@@ -355,6 +363,9 @@
             form.submit();
 		});
 	</script>
+
+
+    {% include 'footer.html' %}
 
 {% load sweetify %}
     {% sweetify %}

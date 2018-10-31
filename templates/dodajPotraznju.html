@@ -18,6 +18,11 @@
 </head>
 <body>
 
+{% with var1=user var2=auth var3=userP ind=industries usr=usr %}
+    {% include 'header.html' %}
+    {% endwith %}
+
+
 	<style type="text/css">
 		.formaBody{
 			height: 1268px;
@@ -197,6 +202,8 @@
 		</div>
 	</div> <!-- glavniDio END -->
 	<div class="pregledTraka"><div style="margin-left: 50px">Ovako će Vaš oglas izgledati nakon objave!</div><div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;"><img src="../static/images/desnoPregled.png" style="margin-right: 11px; transform: rotate(180deg);"><span id="goBack" style="margin-right: 20px">NAZAD</span> <span id="objaviOglas">OBJAVI</span><img src="../static/images/desnoPregled.png" style="margin-left: 11px"></div></div>
+
+    {% include 'footer.html' %}
 
 {% load sweetify %}
 {% sweetify %}

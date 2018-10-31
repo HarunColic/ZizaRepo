@@ -395,7 +395,7 @@ def editprofil(request):
             comp = Company.objects.get(userID=user)
             cat = Category.objects.filter(type=0)
 
-            return render(request, 'editProfilTvrtka.html', {'user': user, 'gradovi': gradovi, 'userP': userP, 'comp': comp, 'cat': cat})
+            return render(request, 'editProfilTvrtka.html', {'auth': True, 'usr': 'comp', 'user': user, 'gradovi': gradovi, 'userP': userP, 'comp': comp, 'cat': cat})
 
         elif Employee.objects.filter(userID=request.user).exists():
             user = request.user
@@ -403,7 +403,7 @@ def editprofil(request):
             gradovi = City.objects.all()
             emp = Employee.objects.get(userID=user)
             cat = Category.objects.filter(type=0)
-            return render(request, 'editProfilPL.html', {'user': user, 'gradovi': gradovi, 'userP': userP, 'emp': emp, 'cat': cat})
+            return render(request, 'editProfilPL.html', {'auth': True, 'usr': 'wrkr', 'user': user, 'gradovi': gradovi, 'userP': userP, 'emp': emp, 'cat': cat})
 
     else:
         redirect('home')
@@ -412,7 +412,6 @@ def editprofil(request):
 def submitchange(request):
 
     # - * - coding: utf - 8 -*-
-
 
     if request.user.is_authenticated:
 
@@ -547,6 +546,10 @@ def submitchange(request):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 UserCategories.objects.filter(userID=user).delete()
+
+                if len(kategorije) > 5:
+                    sweetify.sweetalert(request, title="Unesite do 5 kategorija", icon="error")
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 for k in kategorije:
                     cat = Category.objects.get(name=k)
@@ -874,7 +877,7 @@ def profilKorisnika(request, id):
             company = Company.objects.get(userID=user)
             userP = UserProfile.objects.get(userID=user)
             posts = Post.objects.filter(soft_delete=False).filter(userID=user)
-            return render(request, 'ProfilKorisnika.html', {'user': user, 'userP': userP, 'company': company, 'posts': posts})
+            return render(request, 'ProfilKorisnika.html', {'usr': 'wrkr', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts})
 
 
 def zizaKorisnika(request, id):

@@ -33,7 +33,7 @@ def newpost(request):
                 categories = Category.objects.filter(type=1)
 
             userP = UserProfile.objects.get(userID=request.user)
-            return render(request, 'newpost.html', {'cat': categories, 'userP': userP, 'user': request.user})
+            return render(request, 'newpost.html', {'auth': True, 'usr': 'comp', 'cat': categories, 'userP': userP, 'user': request.user})
         else:
             return redirect('home')
 
@@ -59,7 +59,7 @@ def newpotraznja(request):
             comp = Company.objects.get(userID=request.user)
             userP = UserProfile.objects.get(userID=request.user)
 
-            return render(request, 'dodajPotraznju.html', {'cat': categories, 'comp': comp, 'user': request.user, 'userP': userP})
+            return render(request, 'dodajPotraznju.html', {'auth': True, 'usr': 'comp', 'cat': categories, 'comp': comp, 'user': request.user, 'userP': userP})
         else:
             return redirect('home')
 
@@ -242,7 +242,7 @@ def bankUsluge(request):
         user = request.user
         financije = Category.objects.get(name="Finansijske")
         userP = UserProfile.objects.get(userID=request.user)
-        return render(request, 'bankarskeUsluge.html', {'user': user, 'userP': userP, 'financije': financije})
+        return render(request, 'bankarskeUsluge.html', {'auth': True, 'usr': 'comp', 'user': user, 'userP': userP, 'financije': financije})
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
@@ -260,7 +260,7 @@ def osiguranjeUsluge(request):
     userP = UserProfile.objects.get(userID=user)
     cat = Category.objects.get(name="Osiguravajuće")
 
-    return render(request, 'OsiguranjeUsluge.html', {'user': user, 'userP': userP, 'cat': cat})
+    return render(request, 'OsiguranjeUsluge.html', {'auth': True, 'usr': 'comp', 'user': user, 'userP': userP, 'cat': cat})
 
 
 def prijaviOglas(request, id):
@@ -313,13 +313,13 @@ def urediPost(request, id):
     cat = Category.objects.filter(type=0)
 
     if post.type == 1:
-        return render(request, 'newpost2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
+        return render(request, 'newpost2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user, 'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
-        return render(request, 'dodajPotraznju2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
+        return render(request, 'dodajPotraznju2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user, 'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name == "Finansijske":
-        return render(request, 'bankarskeUsluge2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
+        return render(request, 'bankarskeUsluge2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user, 'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name == "Osiguravajuće":
-        return render(request, 'OsiguranjeUsluge2.html', {'post': post, 'user': user, 'userP': userP, 'cat': cat})
+        return render(request, 'OsiguranjeUsluge2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user, 'userP': userP, 'cat': cat})
     else:
         return redirect('home')
 
@@ -529,3 +529,8 @@ def download(request):
     else:
         sweetify.sweetalert(request, title="Datoteka ne postoji", icon="error")
         return False
+
+
+def izlog(request):
+
+    return redirect('home')
