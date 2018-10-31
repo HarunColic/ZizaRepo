@@ -23,6 +23,7 @@ from django.utils.crypto import get_random_string
 from django.core.urlresolvers import resolve
 from post.models import UserCategories
 import  os
+from threading import Thread
 
 
 def superUser(user):
@@ -149,7 +150,7 @@ def profil(request):
             posts = Post.objects.filter(userID=user).exclude(soft_delete=True)
 
             return render(request, 'profilTvrtka.html',
-                          {'user': user, 'userP': userP, 'company': company, 'posts': posts})
+                          {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts})
         elif Employee.objects.filter(userID=user).exists():
             return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
     else:
@@ -905,6 +906,15 @@ def zizaKorisnika(request, id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
+def postpone(function):
+
+    def decorator(*args, **kwargs):
+        t = Thread(target=function, args=args, kwargs=kwargs)
+        t.daemon = True
+        t.start()
+    return decorator
+
+@postpone
 def contactAll(request):
 
     if not superUser(request.user):
