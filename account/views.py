@@ -386,7 +386,6 @@ def signout(request):
 
 def editprofil(request):
 
-
     if request.user.is_authenticated:
 
         if Company.objects.filter(userID=request.user).exists():
@@ -493,7 +492,7 @@ def submitchange(request):
                 iskustvo = request.POST.get('iskustvo', default= None)
                 kontaktBroj = request.POST.get('brojTel', None)
                 grad = request.POST.get('grad', default=None)
-                opis = request.POST.get('opis', None)
+                opis = request.POST.get('opis', default=None)
                 slika = request.FILES.get('profilePicture', None)
                 kategorije = request.POST.getlist('kategorije')
                 strucnaSprema = request.POST.get('strucnaSprema', default=None)
@@ -505,15 +504,17 @@ def submitchange(request):
                 myfile = request.FILES.get('image_uploads', None)
 
                 if myfile is not None:
-                    myfile.name = str(datetime.now())
+
+                    splitovano = myfile.name.split(".")
+
+                    myfile.name = str(datetime.now()) + "." + splitovano[splitovano.__len__()-1]
                     fs = FileSystemStorage()
                     filename = fs.save(myfile.name, myfile)
                     uploaded_file_url = fs.url(filename)
 
-                args = [email, name, grad, kontaktBroj,opis, strucnaSprema, obrazovanje]
+                args = [email, name, grad, kontaktBroj, opis, strucnaSprema, obrazovanje]
 
                 if not validation(request, args):
-                    sweetify.sweetalert(request, title="Sva polja obavezna", icon="error")
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 imeiPrezime = name.split()
@@ -762,7 +763,7 @@ def anonimnaPretraga(request, id):
         if kljucnaRijec is not "":
             posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
 
-    data = posts.exclude(expires_at__lte=datetime.now())
+    data = posts.exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
 
     gradovi = City.objects.all()
     cat = Category.objects.filter(type=1)

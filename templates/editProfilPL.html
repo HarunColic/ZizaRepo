@@ -259,7 +259,7 @@
 						</div>
 					</div>
 				</div>
-				<button id="aktivirajPregled">SPREMI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+				<a style="cursor: pointers;" id="aktivirajPregled">SPREMI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></a>
 			</form>
 		</div>
 	</div> <!-- formaBody END -->
@@ -268,6 +268,8 @@
 	<script type="text/javascript">
 
 		 $("#aktivirajPregled").click(function(){
+          var about = document.querySelector('input[name=opis]');
+          about.value = $('.ql-editor').html();
           form.submit();
         });
 
@@ -293,11 +295,8 @@ var quill = new Quill('#editor-container', {
   placeholder: 'Nadopunite Vaš CV informacijama koje nedostaju...',
   theme: 'snow'
 });
-var form = document.querySelector('form');
+var form = document.querySelector('#edituj');
 form.onsubmit = function() {
-  var about = document.querySelector('input[name=opis]');
-  about.value = JSON.stringify(quill.getContents());
-  console.log("Submitted", $(form).serialize(), $(form).serializeArray());
   return true;
 };
 
