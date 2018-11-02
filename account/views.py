@@ -747,12 +747,10 @@ def anonimnaPretraga(request, id):
         postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=2).exclude(
             userID__first_name='Ziza').exclude(soft_delete=True)
         zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
-        posts = postovi.union(zizaPosts)
     elif id == '2':
         postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=1).exclude(
             userID__first_name='Ziza').exclude(soft_delete=True)
         zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
-        posts = postovi.union(zizaPosts)
     else:
         return redirect('home')
 
@@ -762,19 +760,20 @@ def anonimnaPretraga(request, id):
         kljucnaRijec = request.POST.get('kljucnaRijec', None)
 
         if grad is not None:
-            posts = posts.filter(location=grad)
+            zizaPosts = zizaPosts.filter(location=grad)
+            postovi = postovi.filter(location=grad)
         if kategorija is not None:
             ind = Category.objects.get(name=kategorija)
-            posts = posts.filter(categoryID=ind)
+            zizaPosts = zizaPosts.filter(categoryID=ind)
+            postovi = postovi.filter(categoryID=ind)
         if kljucnaRijec is not "":
-            posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+            zizaPosts = zizaPosts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+            postovi = postovi.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
 
-    data = posts
-
+    data = list(postovi) + list(zizaPosts)
     gradovi = City.objects.all()
     cat = Category.objects.filter(type=1)
-    counter = data.count()
-    data = list(data)
+    counter = len(data)
     users = User.objects.all()
     userPs = UserProfile.objects.all()
     iterRange = range(0, counter, 3)
