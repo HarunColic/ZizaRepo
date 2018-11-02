@@ -770,7 +770,7 @@ def anonimnaPretraga(request, id):
             zizaPosts = zizaPosts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
             postovi = postovi.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
 
-    data = list(postovi) + list(zizaPosts)
+    data =  list(zizaPosts) + list(postovi)
     gradovi = City.objects.all()
     cat = Category.objects.filter(type=1)
     counter = len(data)

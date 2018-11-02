@@ -67,7 +67,7 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="26229" />
           <entry key="js" value="301" />
-          <entry key="py" value="43590" />
+          <entry key="py" value="43594" />
           <entry key="py@Ziza" value="1157" />
           <entry key="txt" value="7" />
         </counts>
@@ -79,7 +79,7 @@
           <entry key="HTML" value="26229" />
           <entry key="JavaScript" value="301" />
           <entry key="PLAIN_TEXT" value="113" />
-          <entry key="Python" value="43714" />
+          <entry key="Python" value="43718" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -116,11 +116,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="772" column="34" lean-forward="true" selection-start-line="772" selection-start-column="34" selection-end-line="772" selection-end-column="34" />
+            <state relative-caret-position="175">
+              <caret line="772" column="43" selection-start-line="772" selection-start-column="43" selection-end-line="772" selection-end-column="43" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1541174909015" expanded="true" signature="36604:36609" ph="..." />
+                <marker date="1541174965623" expanded="true" signature="36605:36610" ph="..." />
               </folding>
             </state>
           </provider>
@@ -294,7 +294,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="1299" />
@@ -863,11 +863,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="772" column="34" lean-forward="true" selection-start-line="772" selection-start-column="34" selection-end-line="772" selection-end-column="34" />
+        <state relative-caret-position="175">
+          <caret line="772" column="43" selection-start-line="772" selection-start-column="43" selection-end-line="772" selection-end-column="43" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1541174909015" expanded="true" signature="36604:36609" ph="..." />
+            <marker date="1541174965623" expanded="true" signature="36605:36610" ph="..." />
           </folding>
         </state>
       </provider>
