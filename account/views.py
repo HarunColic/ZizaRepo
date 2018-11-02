@@ -38,7 +38,7 @@ def validation(request, args):
 
     for i in args:
         if i == "" or i is None:
-            sweetify.error(request, title="Sva polja su obavezna", text="", icon="error", timer=10000)
+            sweetify.error(request, title="Unesite obavezna polja", text="", icon="error", timer=10000)
             return False
 
     return True
@@ -597,7 +597,6 @@ def konsalting(request):
 
     if request.user.is_authenticated:
 
-
         userP = UserProfile.objects.get(userID=request.user)
 
         if not userP.editovanProfil:
@@ -685,7 +684,7 @@ def pretraga(request):
         userPs = UserProfile.objects.all()
         btb = ["Ponuda", "Potražnja", "Partnerstvo"]
         return render(request, 'pretrazi.html',
-                      {'usr': usr, 'iterRange': range(0,counter,3),'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
+                      {'usr': usr, 'iterRange': range(0, counter, 3), 'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
     else:
         return redirect('home')
 
