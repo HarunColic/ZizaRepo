@@ -767,7 +767,7 @@ def anonimnaPretraga(request, id):
         if kljucnaRijec is not "":
             posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
 
-    data = posts.exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+    data = posts.exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True).order_by('-userID__first_name')
 
     gradovi = City.objects.all()
     cat = Category.objects.filter(type=1)
