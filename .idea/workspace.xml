@@ -116,11 +116,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="756" column="23" selection-start-line="756" selection-start-column="23" selection-end-line="756" selection-end-column="23" />
+            <state relative-caret-position="40">
+              <caret line="748" column="30" selection-start-line="748" selection-start-column="30" selection-end-line="748" selection-end-column="30" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1541172846054" expanded="true" signature="36490:36495" ph="..." />
+                <marker date="1541172886950" expanded="true" signature="36380:36385" ph="..." />
               </folding>
             </state>
           </provider>
@@ -851,11 +851,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="756" column="23" selection-start-line="756" selection-start-column="23" selection-end-line="756" selection-end-column="23" />
+        <state relative-caret-position="40">
+          <caret line="748" column="30" selection-start-line="748" selection-start-column="30" selection-end-line="748" selection-end-column="30" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1541172846054" expanded="true" signature="36490:36495" ph="..." />
+            <marker date="1541172886950" expanded="true" signature="36380:36385" ph="..." />
           </folding>
         </state>
       </provider>
