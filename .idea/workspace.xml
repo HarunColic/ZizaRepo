@@ -67,7 +67,7 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="26229" />
           <entry key="js" value="301" />
-          <entry key="py" value="42988" />
+          <entry key="py" value="43054" />
           <entry key="py@Ziza" value="1157" />
           <entry key="txt" value="7" />
         </counts>
@@ -79,7 +79,7 @@
           <entry key="HTML" value="26229" />
           <entry key="JavaScript" value="301" />
           <entry key="PLAIN_TEXT" value="113" />
-          <entry key="Python" value="43112" />
+          <entry key="Python" value="43178" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -116,11 +116,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="748" column="30" selection-start-line="748" selection-start-column="30" selection-end-line="748" selection-end-column="30" />
+            <state relative-caret-position="235">
+              <caret line="755" column="9" lean-forward="true" selection-start-line="755" selection-start-column="9" selection-end-line="755" selection-end-column="9" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1541172886950" expanded="true" signature="36380:36385" ph="..." />
+                <marker date="1541173056517" expanded="true" signature="36500:36505" ph="..." />
               </folding>
             </state>
           </provider>
@@ -851,11 +851,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="748" column="30" selection-start-line="748" selection-start-column="30" selection-end-line="748" selection-end-column="30" />
+        <state relative-caret-position="235">
+          <caret line="755" column="9" lean-forward="true" selection-start-line="755" selection-start-column="9" selection-end-line="755" selection-end-column="9" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1541172886950" expanded="true" signature="36380:36385" ph="..." />
+            <marker date="1541173056517" expanded="true" signature="36500:36505" ph="..." />
           </folding>
         </state>
       </provider>
