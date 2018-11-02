@@ -744,13 +744,13 @@ def anonimnaPretraga(request, id):
         usr = None
 
     if id == '1':
-        postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=2).exclude(userID__first_name='Ziza')
-        zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2)
-        posts = postovi | zizaPosts
+        postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=2).exclude(userID__first_name='Ziza').exclude(soft_delete=True)
+        zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
+        posts = list(chain(postovi, zizaPosts))
     elif id == '2':
-        postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=1).exclude(userID__first_name='Ziza')
-        zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2)
-        posts = postovi | zizaPosts
+        postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=1).exclude(userID__first_name='Ziza').exclude(soft_delete=True)
+        zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
+        posts = list(chain(postovi, zizaPosts))
     else:
         return redirect('home')
 
@@ -767,11 +767,11 @@ def anonimnaPretraga(request, id):
         if kljucnaRijec is not "":
             posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
 
-    data = posts.exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True).order_by('-userID__first_name')
+    data = posts
 
     gradovi = City.objects.all()
     cat = Category.objects.filter(type=1)
-    counter = data.count()
+    counter = len(data)
     data = list(data)
     users = User.objects.all()
     userPs = UserProfile.objects.all()
