@@ -22,6 +22,7 @@ from django.template.context_processors import csrf
 from django.utils.crypto import get_random_string
 from django.core.urlresolvers import resolve
 from post.models import UserCategories
+from django.db.models.functions import Length
 import  os
 from threading import Thread
 from itertools import chain
@@ -742,15 +743,16 @@ def anonimnaPretraga(request, id):
         auth = False
         userP = None
         usr = None
-
     if id == '1':
-        postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=2).exclude(userID__first_name='Ziza').exclude(soft_delete=True)
+        postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=2).exclude(
+            userID__first_name='Ziza').exclude(soft_delete=True)
         zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
-        posts = postovi | zizaPosts
+        posts = postovi.union(zizaPosts)
     elif id == '2':
-        postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=1).exclude(userID__first_name='Ziza').exclude(soft_delete=True)
+        postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=1).exclude(
+            userID__first_name='Ziza').exclude(soft_delete=True)
         zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
-        posts = postovi | zizaPosts
+        posts = postovi.union(zizaPosts)
     else:
         return redirect('home')
 
