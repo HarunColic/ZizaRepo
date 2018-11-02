@@ -746,11 +746,11 @@ def anonimnaPretraga(request, id):
     if id == '1':
         postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=2).exclude(userID__first_name='Ziza').exclude(soft_delete=True)
         zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
-        posts = list(chain(postovi, zizaPosts))
+        posts = zizaPosts | postovi
     elif id == '2':
         postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=1).exclude(userID__first_name='Ziza').exclude(soft_delete=True)
         zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
-        posts = list(chain(postovi, zizaPosts))
+        posts = zizaPosts | postovi
     else:
         return redirect('home')
 
@@ -771,7 +771,7 @@ def anonimnaPretraga(request, id):
 
     gradovi = City.objects.all()
     cat = Category.objects.filter(type=1)
-    counter = len(data)
+    counter = data.count()
     data = list(data)
     users = User.objects.all()
     userPs = UserProfile.objects.all()

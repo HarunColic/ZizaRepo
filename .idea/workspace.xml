@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +67,7 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="26229" />
           <entry key="js" value="301" />
-          <entry key="py" value="42853" />
+          <entry key="py" value="42867" />
           <entry key="py@Ziza" value="1157" />
           <entry key="txt" value="7" />
         </counts>
@@ -80,7 +79,7 @@
           <entry key="HTML" value="26229" />
           <entry key="JavaScript" value="301" />
           <entry key="PLAIN_TEXT" value="113" />
-          <entry key="Python" value="42977" />
+          <entry key="Python" value="42991" />
           <entry key="RegExp" value="1" />
         </counts>
       </usages-collector>
@@ -117,11 +116,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="776" column="35" selection-start-line="776" selection-start-column="35" selection-end-line="776" selection-end-column="35" />
+            <state relative-caret-position="175">
+              <caret line="748" column="35" selection-start-line="748" selection-start-column="35" selection-end-line="748" selection-end-column="35" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
-                <marker date="1541170946288" expanded="true" signature="36391:36396" ph="..." />
+                <marker date="1541171808376" expanded="true" signature="36370:36375" ph="..." />
               </folding>
             </state>
           </provider>
@@ -852,11 +851,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="776" column="35" selection-start-line="776" selection-start-column="35" selection-end-line="776" selection-end-column="35" />
+        <state relative-caret-position="175">
+          <caret line="748" column="35" selection-start-line="748" selection-start-column="35" selection-end-line="748" selection-end-column="35" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
-            <marker date="1541170946288" expanded="true" signature="36391:36396" ph="..." />
+            <marker date="1541171808376" expanded="true" signature="36370:36375" ph="..." />
           </folding>
         </state>
       </provider>
