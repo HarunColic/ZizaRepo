@@ -253,15 +253,18 @@ def register(request):
             else:
 
                 user = User()
-                grad = request.POST['City']
-
+                grad = request.POST.get('City', None)
                 categoryname = request.POST.get('Category', None)
-                user.first_name = request.POST['FirstName']
-                user.last_name = request.POST['LastName']
-                user.email = request.POST['mail']
-                user.set_password(request.POST['pswd'])
+                user.first_name = request.POST.get('FirstName', None)
+                user.last_name = request.POST.get('LastName', None)
+                user.email = request.POST.get('mail', None)
+                user.set_password(request.POST.get('pswd', None))
                 user.username = user.last_name + "." + user.email
                 lozinka = request.POST['pswd']
+
+                if len(user.first_name) > 100:
+                    sweetify.sweetalert(request, title="Naziv firme predug", text="Molimo unesite naziv do 100 karaktera", icon="error", timer=4000)
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 args = [user.first_name, user.last_name, user.email, lozinka, categoryname]
 
