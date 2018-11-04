@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="755" column="81" selection-start-line="755" selection-start-column="81" selection-end-line="755" selection-end-column="81" />
+            <state relative-caret-position="283">
+              <caret line="758" lean-forward="true" selection-start-line="758" selection-end-line="758" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
                 <marker date="1541349153584" expanded="true" signature="36938:36943" ph="..." />
@@ -307,28 +305,20 @@
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
+              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -461,7 +451,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24829932" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.4980048" visible="true" weight="0.24829932" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.292517" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -471,9 +461,9 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.30016312" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.1802721" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.1802721" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32626426" />
-      <window_info anchor="bottom" id="Find" order="13" weight="0.32952693" />
+      <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24980047" />
@@ -843,8 +833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="755" column="81" selection-start-line="755" selection-start-column="81" selection-end-line="755" selection-end-column="81" />
+        <state relative-caret-position="283">
+          <caret line="758" lean-forward="true" selection-start-line="758" selection-end-line="758" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
             <marker date="1541349153584" expanded="true" signature="36938:36943" ph="..." />
