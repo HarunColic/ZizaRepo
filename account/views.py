@@ -753,7 +753,7 @@ def anonimnaPretraga(request, id):
     elif id == '2':
         postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=1).exclude(
             userID__first_name='Ziza').exclude(soft_delete=True)
-        zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
+        zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=1).exclude(soft_delete=True)
     else:
         return redirect('home')
 
