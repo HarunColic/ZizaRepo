@@ -96,14 +96,20 @@ def createpost(request):
             else:
                 myfile = None
 
-            args = [title, category, expiration, lokacija, pozicija, godineIskustva, strucnasprema, email, brojTel, opis, type, brojIzv]
+            args = [title, category, expiration, lokacija, pozicija, godineIskustva, email, brojTel, opis, type, brojIzv]
 
             if not validation(request, args):
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
             cat = Category.objects.get(name=category)
 
-            post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis, expires_at=datetime.now()+timedelta(days=int(expiration)))
+            post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis)
+
+            if expiration > 0:
+                post.expires_at = datetime.now()+timedelta(days=int(expiration))
+            else:
+                post.expires_at = None
+
             post.attachment = myfile
             post.save()
 
