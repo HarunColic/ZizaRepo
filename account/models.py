@@ -48,7 +48,7 @@ class Employee(models.Model):
 
     def __str__(self):
 
-        user = User.objects.get(pk=self.pk)
+        user = User.objects.get(employee=self)
 
         ime_i_prezime = user.first_name + " " + user.last_name
 
@@ -67,7 +67,7 @@ class Company(models.Model):
 
     def __str__(self):
 
-        user = User.objects.get(pk=self.pk)
+        user = User.objects.get(company=self)
 
         return user.first_name
 
