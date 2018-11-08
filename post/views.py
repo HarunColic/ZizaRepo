@@ -105,10 +105,10 @@ def createpost(request):
 
             post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis)
 
-            if expiration is not 0:
+            if expiration is not '0':
                 post.expires_at = datetime.now()+timedelta(days=int(expiration))
             else:
-                post.expires_at = post.expires_at.replace(year=3333)
+                post.expires_at = datetime.now()+timedelta(days=999999)
 
             post.attachment = myfile
             post.save()
