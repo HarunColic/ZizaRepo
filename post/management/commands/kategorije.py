@@ -40,6 +40,8 @@ class Command(BaseCommand):
             'Zdravstvene',
         ]
         categories2 = [
+# kategorije za postove i za CVove
+
 
             'Administrativne i slične usluge',
             'Arhitektonske usluge',
