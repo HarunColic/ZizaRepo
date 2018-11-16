@@ -150,12 +150,19 @@ def profil(request):
 
         if Company.objects.filter(userID=user).exists():
 
-            posts = Post.objects.filter(userID=user).exclude(soft_delete=True)
+            postovi = Post.objects.filter(userID=user).exclude(soft_delete=True)
+
+            paginator = Paginator(postovi, 10)
+            page = request.GET.get('page', 1)
+            posts = paginator.page(page)
+            rng = range(1, paginator.num_pages + 1)
 
             return render(request, 'profilTvrtka.html',
-                          {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts})
+                          {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
+                              , 'page': int(page), 'rng': rng})
         elif Employee.objects.filter(userID=user).exists():
-            return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
+            return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi,
+                                                     'cat': cat, 'userP': userP, 'page': int(page), 'rng': rng})
     else:
         return render(request, 'index.html')
 
