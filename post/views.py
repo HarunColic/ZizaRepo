@@ -13,6 +13,7 @@ import os
 from account.views import superUser
 from django.http import HttpResponse
 from django.conf import settings
+from django.core.paginator import Paginator
 
 
 def newpost(request):
@@ -70,7 +71,7 @@ def createpost(request):
 
         if request.POST['type'] == "1":
 
-            title = request.POST['naslov']
+            title = ' '
             category = request.POST.get('category', None)
             expiration = request.POST.get('expiration', None)
             lokacija = request.POST['City']

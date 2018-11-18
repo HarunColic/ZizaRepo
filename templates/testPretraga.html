@@ -56,7 +56,7 @@
                 }
             }
             .navigacijaTipke{
-            	display: none;
+
             }
             .logotipFirme img{
             	max-width: 300px;
@@ -236,17 +236,19 @@
     {% endfor %}
 
 
+
+
+
        <div class="navigacijaTipke">
-            <div>1</div>
-            <div class="activTip">2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
+    {% for pn in number_pages %}
+        {% if pn == page %}
+        <div onclick="location.href='{{ request.path }}/?page={{ pn }}'" class="activTip">{{ pn }}</div>
+        {% else %}
+        <div onclick="location.href='{{ request.path }}/?page={{ pn }}'" class="">{{ pn }}</div>
+        {% endif %}
+    {% endfor %}
         </div>
+
     {% include 'footer.html' %}
         
     {% load sweetify %}

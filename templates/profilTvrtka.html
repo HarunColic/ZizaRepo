@@ -208,31 +208,32 @@
 			-->
 			<p>0 stranica</p>
 		</div>
+    {% with prev=page|add:-1 next=page|add:1 %}
 		<div class="navigacijaFooter" style="margin-top: 10px">
-			<div class="prevTraka" style="width:560px;margin-right: 50px">
+			<div {% if prev > 0 %} onclick="location.href='{{ request.path }}?page={{ prev }}'" {% endif %}class="prevTraka" style="width:560px;margin-right: 50px">
 				<img src="{% static 'images/lijevoOglas.png' %}" style="cursor: pointer;" class="lijevoEd">
-				<div>
+				<div  >
 					<span>PRIJAŠNJA STRANICA</span>
 				</div>
 			</div>
-			<div class="prevTraka" style="justify-content: flex-end; background-color: white">
+			<div {% if next <= rng|last %} onclick="location.href='{{ request.path }}?page={{ next }}'" {% endif %}class="prevTraka" style="justify-content: flex-end; background-color: white">
 				<div style="margin-left: 0">
 					<span>SLJEDEĆA STRANICA</span>
 				</div>
 				<img src="{% static 'images/desnoOglas.png' %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
 			</div>
 		</div>
+    {% endwith %}
 		<div class="uvodniDio">
 			<div class="navigacijaTipke" style="margin-bottom: 20px">
-				<div>1</div>
-				<div class="activTip">2</div>
-				<div>3</div>
-				<div>4</div>
-				<div>5</div>
-				<div>6</div>
-				<div>7</div>
-				<div>8</div>
-				<div>9</div>
+				{% for r in rng %}
+
+                    {% if r == page %}
+                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="activTip">{{ r }}</div>
+                    {% else %}
+                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="">{{ r }}</div>
+                    {% endif %}
+                {% endfor %}
 			</div>
 		</div>	
 	</div>

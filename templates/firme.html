@@ -132,7 +132,7 @@
                                 {% else %}
                                 <span>
 									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
-                                    {{ f.userID.userprofile.location }}<!-- sjediste firme -->
+                                    {% if f.userID.userprofile.location %}{{ f.userID.userprofile.location }} {% endif %}<!-- sjediste firme -->
 								</span>
                                 {% endif %}
                             </div>

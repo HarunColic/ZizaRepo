@@ -26,6 +26,7 @@ from django.db.models.functions import Length
 import  os
 from threading import Thread
 from itertools import chain
+from django.core.paginator import Paginator
 
 
 def superUser(user):
@@ -149,12 +150,19 @@ def profil(request):
 
         if Company.objects.filter(userID=user).exists():
 
-            posts = Post.objects.filter(userID=user).exclude(soft_delete=True)
+            postovi = Post.objects.filter(userID=user).exclude(soft_delete=True)
+
+            paginator = Paginator(postovi, 10)
+            page = request.GET.get('page', 1)
+            posts = paginator.page(page)
+            rng = range(1, paginator.num_pages + 1)
 
             return render(request, 'profilTvrtka.html',
-                          {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts})
+                          {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
+                              , 'page': int(page), 'rng': rng})
         elif Employee.objects.filter(userID=user).exists():
-            return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi, 'cat': cat, 'userP': userP})
+            return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi,
+                                                     'cat': cat, 'userP': userP, 'page': int(page), 'rng': rng})
     else:
         return render(request, 'index.html')
 
@@ -773,10 +781,15 @@ def anonimnaPretraga(request, id):
             zizaPosts = zizaPosts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
             postovi = postovi.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
 
-    data =  list(zizaPosts) + list(postovi)
+    data = list(zizaPosts) + list(postovi)
+    counter = len(data)
+    paginator = Paginator(data, 9)
+    page = request.GET.get('page', 1)
+    posts = paginator.page(page)
+    data = list(posts)
+    number_pages = range(1, paginator.num_pages + 1)
     gradovi = City.objects.all()
     cat = Category.objects.filter(type=1)
-    counter = len(data)
     users = User.objects.all()
     userPs = UserProfile.objects.all()
     iterRange = range(0, counter, 3)
@@ -784,7 +797,7 @@ def anonimnaPretraga(request, id):
     return render(request, 'testPretraga.html',
                   {'data': data, 'gradovi': gradovi, 'cat': cat, 'auth': auth,
                    'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange, 'userP': userP,
-                   'usr': usr})
+                   'usr': usr, 'number_pages': number_pages, 'page': int(page)})
 
 
 def firme(request):
