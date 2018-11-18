@@ -23,14 +23,66 @@
 			height: 100%;
 			padding-bottom: 40px;
 		}
+		.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
+
 	</style>
 </head>
-<body>
+<body style="position: relative; margin-top: -20px">
+
+	<img src="/static/images/logoNew.png" class="logotipNavbarMali">
 
 
 {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
     {% include 'header.html' %}
     {% endwith %}
+
+
+    <style type="text/css">
+    	body{
+    		background: #f9f5e5 !important;
+    	}
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+    </style>
 
 
 	<div class="coverSlika" style="position: relative;">
