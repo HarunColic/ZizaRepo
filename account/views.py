@@ -543,6 +543,7 @@ def submitchange(request):
                 emp.strucnaSprema=strucnaSprema
                 emp.obrazovanje = obrazovanje
                 emp.iskustvo = iskustvo
+                emp.opis = opis
 
                 userP = UserProfile.objects.get(userID=request.user)
 

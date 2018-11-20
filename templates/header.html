@@ -116,7 +116,7 @@
 </style>
 <form method="post" action="{% url 'register' %}" id="formaReg">
     {% csrf_token %}
-    <input id="vrsta" type="hidden" value="radnik" name="vrsta">
+    <input id="vrsta" type="hidden" value="radnik" name="vrsta" autocomplete="off">
 
 	<div id="myModal" class="modal" style="z-index: 9999999">
 

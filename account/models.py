@@ -45,6 +45,7 @@ class Employee(models.Model):
     obrazovanje = models.CharField(max_length=200, null=True)
     radnoMjesto = models.CharField(max_length=200, null=True)
     iskustvo = models.IntegerField(null=True)
+    opis = models.TextField(null=True)
 
     def __str__(self):
 

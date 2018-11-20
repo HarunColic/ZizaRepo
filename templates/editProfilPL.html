@@ -241,7 +241,7 @@
 					<label style="margin-bottom: 8px;" class="specLab">O meni</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
-      				<div id="editor-container"></div>
+      				<div id="editor-container">{{ emp.opis }}</div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
 				<div style="margin-top: 30px;" class="dokumentPDF">
@@ -303,6 +303,7 @@ form.onsubmit = function() {
 
 $(document).ready( function() {
     $(".ql-editor").attr('spellcheck',false);
+    $("select[name=grad]").val("{{ userP.location }}")
 });
 
 
