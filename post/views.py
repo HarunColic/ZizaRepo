@@ -27,12 +27,7 @@ def newpost(request):
             return redirect('editprofil')
 
         if Company.objects.filter(userID=request.user).exists():
-
-            if superUser(request.user):
-                categories = Category.objects.exclude(type=0)
-            else:
-                categories = Category.objects.filter(type=1)
-
+            categories = Category.objects.filter(type=1).order_by('name')
             userP = UserProfile.objects.get(userID=request.user)
             return render(request, 'newpost.html', {'auth': True, 'usr': 'comp', 'cat': categories, 'userP': userP, 'user': request.user})
         else:
@@ -50,13 +45,7 @@ def newpotraznja(request):
             return redirect('editprofil')
 
         if Company.objects.filter(userID=request.user):
-
-            if superUser(request.user):
-
-                categories = Category.objects.exclude(type=0)
-            else:
-                categories = Category.objects.filter(type=1)
-
+            categories = Category.objects.filter(type=1).order_by('name')
             comp = Company.objects.get(userID=request.user)
             userP = UserProfile.objects.get(userID=request.user)
 

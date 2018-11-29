@@ -784,11 +784,11 @@ def anonimnaPretraga(request, id):
 
     data = list(zizaPosts) + list(postovi)
     counter = len(data)
-    paginator = Paginator(data, 9)
-    page = request.GET.get('page', 1)
-    posts = paginator.page(page)
-    data = list(posts)
-    number_pages = range(1, paginator.num_pages + 1)
+    #paginator = Paginator(data, 9)
+    #page = request.GET.get('page', 1)
+    #posts = paginator.page(page)
+    #data = list(posts)
+    number_pages = range(1,1)
     gradovi = City.objects.all()
     cat = Category.objects.filter(type=1)
     users = User.objects.all()
@@ -798,7 +798,7 @@ def anonimnaPretraga(request, id):
     return render(request, 'testPretraga.html',
                   {'data': data, 'gradovi': gradovi, 'cat': cat, 'auth': auth,
                    'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange, 'userP': userP,
-                   'usr': usr, 'number_pages': number_pages, 'page': int(page)})
+                   'usr': usr, 'number_pages': number_pages, 'page': int(1)})
 
 
 def firme(request):
