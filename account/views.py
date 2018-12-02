@@ -134,7 +134,7 @@ def profil(request):
             if grad is not None:
                 posts = posts.all().filter(location=grad)
             if kategorija is not None:
-                cat = Category.objects.get(name=kategorija)
+                cat = Category.objects.filter(name=kategorija)[0]
                 posts = posts.all().filter(CategoryID=cat)
             if kljucnaRijec is not None:
                 posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
@@ -214,6 +214,11 @@ def register(request):
                 if not validation(request, args):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
+                if len(user.last_name) >= 30:
+                    sweetify.sweetalert(request, button=True, title="Prezime mora biti manje od 30 karaktera",
+                                        icon="error", timer=10000)
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
                 if len(lozinka) < 6:
                     sweetify.sweetalert(request, button=True, title="Lozinka mora biti 6 ili više karaktera", icon="error", timer=10000)
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
@@ -274,6 +279,11 @@ def register(request):
 
                 if len(user.first_name) > 100:
                     sweetify.sweetalert(request, title="Naziv firme predug", text="Molimo unesite naziv do 100 karaktera", icon="error", timer=4000)
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+                if len(user.last_name) >= 30:
+                    sweetify.sweetalert(request, button=True, title="Broj firme mora biti manje od 30 karaktera",
+                                        icon="error", timer=10000)
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 args = [user.first_name, user.last_name, user.email, lozinka, categoryname]
@@ -569,7 +579,7 @@ def submitchange(request):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 for k in kategorije:
-                    cat = Category.objects.get(name=k)
+                    cat = Category.objects.filter(name=k)[0]
                     userCat = UserCategories(userID=user, categoryID=cat)
                     userCat.save()
 
@@ -656,7 +666,7 @@ def pretraga(request):
             kljucnaRijec = request.POST.get('kljucnaRijec', None)
             if Company.objects.filter(userID=user).exists():
 
-                userComp = Company.objects.get(userID=user)
+                userComp = Company.objects.filter(userID=user)[0]
                 if superUser(request.user):
                     posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
                 elif userComp.categoryID.name == "Finansijske":
@@ -671,7 +681,7 @@ def pretraga(request):
             if grad is not None:
                 posts = posts.filter(location=grad)
             if kategorija is not None:
-                ind = Category.objects.get(name=kategorija)
+                ind = Category.objects.filter(name=kategorija)[0]
                 posts = posts.filter(categoryID=ind)
             if kljucnaRijec is not "":
                 posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec) | Q(categoryID__name__contains=kljucnaRijec))
