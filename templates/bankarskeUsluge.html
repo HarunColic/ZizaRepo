@@ -433,27 +433,10 @@
 </body>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
-<script>
-var quill = new Quill('#editor-container', {
-  modules: {
-    toolbar: [
-      ['bold', 'italic'],
-      ['link', 'blockquote', 'code-block', 'image'],
-      [{ list: 'ordered' }, { list: 'bullet' }]
-    ]
-  },
-  placeholder: 'Unesite detaljan opis Vašeg oglasa...',
-  theme: 'snow'
-});
+<script src="../static/sessionstorage.js"></script>
 
-this.quill.clipboard.addMatcher(Node.ELEMENT_NODE, (node, delta) => {
-  delta.ops = delta.ops.map(op => {
-    return {
-      insert: op.insert
-    }
-  })
-  return delta
-});
+<script>
+
 
 var form = document.querySelector('#postForm');
 form.onsubmit = function() {
@@ -505,4 +488,5 @@ $('#goBack').click(function(e){
 });
 
 </script>
+
 </html>

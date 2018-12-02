@@ -16,6 +16,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from datetime import datetime
 import sweetify
 from django.template.context_processors import csrf
@@ -41,7 +42,8 @@ def validation(request, args):
 
     for i in args:
         if i == "" or i is None:
-            sweetify.error(request, title="Unesite obavezna polja", text="", icon="error", timer=10000)
+            # sweetify.error(request, title="Unesite obavezna polja", text="", icon="error", timer=10000)
+            return HttpResponse(i)
             return False
 
     return True
@@ -279,7 +281,7 @@ def register(request):
                 if not validation(request, args):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-                category = Category.objects.get(name=categoryname)
+                category = Category.objects.filter(name=categoryname,type=0)[0]
 
                 if User.objects.filter(email=user.email).exists():
                     sweetify.sweetalert(request, title="Email adresa već postoji", text="Već postoji korisnik sa ovom email adresom, ako ste zaboravili lozinku molimo kliknite na Forgot password", icon="error", timer=10000)
@@ -441,7 +443,6 @@ def submitchange(request):
                 slika = request.FILES.get('profilePicture', default=None)
                 webStranica = request.POST.get('webStranica', None)
                 args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
-
                 if not validation(request, args):
                     sweetify.sweetalert(request, title="Sva polja obavezna", icon="error")
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
@@ -449,7 +450,7 @@ def submitchange(request):
                 user = request.user
                 userP = UserProfile.objects.get(userID=user)
                 comp = Company.objects.get(userID=user)
-                category = Category.objects.get(name=cat)
+                category = Category.objects.filter(name=cat)[0]
 
                 if validateMail(mail):
 
@@ -994,3 +995,15 @@ def mailSvima(request):
         user = request.user
         userP = UserProfile.objects.get(userID=user)
         return render(request, 'conatctAll.html', {'user': user, 'userP': userP})
+
+##novo
+
+def konsalting_detailed(request, slug):
+    return render(request, slug+'.html')
+
+def testclanovi(request):
+    usr = 'wrkr'
+    return render(request, 'testclanovi.html', {'usr': usr, 'userP': None, 'user': None})
+
+def testprofil(request):
+    return render(request,'testprofil.html')

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+    <title>ŽIŽA.ba | Profil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+	<meta charset="utf-8">
+
+    {% load static %}
+
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style-tvrtkaProfil.css' %}">
+ </head>
+
+  <style>
+    a{ text-decoration:none !important;}
+    </style>
+
+
+{% block body %}
+
+	<div class="coverSlika">
+		<div class="navigacija">
+			<div class="breadcrumb">
+				<a href="{% url 'home' %}">Početna</a>
+				<img src="{% static 'images/arrowDesnoZuto.png' %}">
+				<a href="#">Tvrtka</a>
+				<img src="{% static 'images/arrowDesnoZuto.png' %}">
+				<a href="#">asdasdasd</a>
+			</div>
+			<div class="linijaD"></div>
+		</div>
+		<div class="tvrtka">
+				<div class="avatarKucica" style="background-color: #262626">
+	               <img style="max-width: 250px; height: auto;" src="https://ziza.ba/static/images/logoNew.png">
+				</div>
+
+
+			<div class="podaciT">
+				<div>TVRTKA</div>
+				<div>op op</div>
+			</div>
+		</div>
+	</div>
+	<div class="glavniDio">
+		<div class="uvodniDio">
+			<div class="trazimo">
+                <h2><span>O NAMA</span></h2>
+			</div>
+		</div>
+		<div class="tabelarni">
+			<div>
+				<h3 style="text-transform: uppercase;">{{ userP.location }}</h3>
+				<p>SJEDIŠTE</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3 style="text-transform: uppercase;" id="djelatnost">{{ company.categoryID.name }}</h3>
+				<p>DJELATNOST</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3 style="text-transform: uppercase;">{{ company.brojuposlenih }}</h3>
+				<p>BROJ UPOSLENIH</p>
+			</div>
+			<div class="malaLinija"></div>
+			<a>
+                <div>
+                <a href="mailto:{{ uProfile.email }}"> <h3>KLIKNI OVDJE</h3></a>
+				<p>KONTAKT</p>
+			</div>
+		</div>
+		<div id="opisProfila" class="detaljniOpis">
+		</div>
+		
+        <!--
+			<div class="tabelaRasa">
+				<div>
+					<div>
+						<div>Ovlašteni inženjer građevine</div>
+						<div>
+							<span>GRAĐEVINA</span>
+							<span>
+								<span>Prije 6h</span>
+								Mostar, Bosna i Hercegovina
+							</span>
+						</div>
+					</div>
+					<div class="srce"> </div>
+				</div>
+			</div>
+			<div class="tabelaRasa">
+				<div>
+					<div>
+						<div>Ovlašteni inženjer građevine</div>
+						<div>
+							<span>GRAĐEVINA</span>
+							<span>
+								<span>Prije 6h</span>
+								Mostar, Bosna i Hercegovina
+							</span>
+						</div>
+					</div>
+					<div class="srce"> </div>
+				</div>
+			</div>
+			<div class="tabelaRasa">
+				<div>
+					<div>
+						<div>Ovlašteni inženjer građevine</div>
+						<div>
+							<span>GRAĐEVINA</span>
+							<span>
+								<span>Prije 6h</span>
+								Mostar, Bosna i Hercegovina
+							</span>
+						</div>
+					</div>
+					<div class="srce"> </div>
+				</div>
+			</div>
+			<div class="tabelaRasa">
+				<div>
+					<div>
+						<div>Ovlašteni inženjer građevine</div>
+						<div>
+							<span>GRAĐEVINA</span>
+							<span>
+								<span>Prije 6h</span>
+								Mostar, Bosna i Hercegovina
+							</span>
+						</div>
+					</div>
+					<div class="srce"> </div>
+				</div>
+			</div>
+			-->
+			<p>0 stranica</p>
+		</div>
+		<div class="navigacijaFooter" style="margin-top: 10px">
+			<div class="prevTraka" style="width:560px;margin-right: 50px">
+				<img src="{% static 'images/lijevoOglas.png' %}" style="cursor: pointer;" class="lijevoEd">
+				<div>
+					<span>PRIJAŠNJA STRANICA</span>
+				</div>
+			</div>
+			<div class="prevTraka" style="justify-content: flex-end; background-color: white">
+				<div style="margin-left: 0">
+					<span>SLJEDEĆA STRANICA</span>
+				</div>
+				<img src="{% static 'images/desnoOglas.png' %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
+			</div>
+		</div>
+		<div class="uvodniDio">
+			<div class="navigacijaTipke" style="margin-bottom: 20px">
+				<div>1</div>
+				<div class="activTip">2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+				<div>7</div>
+				<div>8</div>
+				<div>9</div>
+			</div>
+		</div>
+	</div>
+{% load sweetify %}
+{% sweetify %}
+{% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../static/skripta.js"></script>
+<script src="/node_modules/readmore-js/readmore.min.js"></script>
+<script type="text/javascript">
+	if($('#djelatnost').html() == 'Prerađivačka industrija'){
+		$('#djelatnost').html('Prerađivačka');
+	}
+	if($('#djelatnost').html() == 'Informacije i komunikacije'){
+		$('#djelatnost').html('IT');
+	}
+	if($('#djelatnost').html() == 'Prijevoz i skladištenje'){
+		$('#djelatnost').html('Prijevoz <br> skladištenje');
+		$('#djelatnost').css('text-align', 'center');
+	}
+
+</script>
+</html>

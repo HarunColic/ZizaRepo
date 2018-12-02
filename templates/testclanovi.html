@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+    {% load static %}
+	<title>ŽIŽA.ba | O nama</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{%  static 'style.css' %}"> <!-- include sa servera odgovarajuci -->
+	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}"> <!-- include sa servera odgovarajuci -->
+	<link rel="stylesheet" type="text/css" href="{% static 'style-tvrtkaProfil.css' %}"> <!-- include sa servera odgovarajuci -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+
+		{% with var1=user var2=userP var3=userP ind=industries usr=usr  %}
+
+		{% include 'header.html' %}
+		
+		{% endwith %}
+
+<div class="glavniDio">
+		<div class="uvodniDio">
+			<div class="trazimo">
+				<h2><span>POPIS KOMPANIJA ČLANICA</h2>
+			</div>
+		</div>
+		<div class="tabelarni" style="display: none;">
+			<div>
+				<h3>SARAJEVO</h3>
+				<p>SJEDIŠTE</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3>INDUSTRIJA</h3>
+				<p>DJELATNOST</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3>13.000</h3>
+				<p>BROJ UPOSLENIH</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3>KLIKNI OVDJE</h3>
+				<p>KONTAKT</p>
+			</div>
+		</div>
+		<div class="detaljniOpis" style="display: none;">
+			<p>Lorem ipsum dolor sit amet, torquatos omittantur neglegentur te cum. Eos idque noluisse nominati et, cu nec duis summo ornatus. Ex vim laboramus vituperata. Vix novum vocent at, in duo congue decore. Ea eirmod vidisse ius, ex elitr facilisi vix, dicant nonumes definitionem nec ne. His dicant mucius debitis te, in harum aeterno scriptorem his. Quo in quaeque imperdiet, mei aeterno quaerendum an.</p>
+			<p>Ea quo constituam neglegentur, maluisset salutatus et vel. Eligendi democritum ea est. Eam lorem quodsi ad, et adhuc labitur sadipscing mea, nec essent accusamus torquatos ex. Pri soleat constituto et, latine tamquam pro no, eu iusto diceret eos. An per dicta facilisis definitiones.</p>
+			<p>Dico legere ex mea, cu habemus pertinax vis, ea mediocrem comprehensam sit. Impedit docendi offendit vix et. Tantas verear democritum sit an, mei invenire consetetur honestatis ei. Ad his iriure ceteros oporteat.</p>
+		</div>
+			<style type="text/css">
+			.tabelaRasa div:nth-child(1) div:nth-child(1) {
+			    display: flex;
+			    flex-direction: column;
+			    align-items: flex-start;
+			}
+			.tabelaRasa div:nth-child(1) div:nth-child(1) div:nth-child(1) {
+				margin-left: 0 !important;
+			}
+			.srce{
+				background-color: transparent;
+				box-shadow: none;
+				width: auto;
+				margin-right: 150px;
+				height: auto;
+			}
+			.srce img{
+				max-width: 200px;
+				max-width: 100px;
+			}
+			.tabelarniDio a{
+				text-decoration: none;
+				color: inherit;
+			}
+			a{ text-decoration:none !important; }
+		    .tabelaRasa:nth-child(1) {
+			    border-top-left-radius: 0px;
+			    border-top-right-radius: 0px;
+			}
+			.tabelaRasa:nth-last-child(1) {
+			    border-bottom-left-radius: 0px;
+			    border-bottom-right-radius: 0px;
+			}
+			.tabelarniDio a:nth-child(1) .tabelaRasa{
+				border-top-left-radius: 26px;
+			    border-top-right-radius: 26px;
+			}
+			.tabelarniDio a:last-child .tabelaRasa{
+				border-bottom-left-radius: 26px;
+			    border-bottom-right-radius: 26px;
+			}
+		</style>
+
+		<div class="uvodniDio tabelarniUvodniDio" style="margin-top: -100px">
+			<div class="trazimo">
+				<h2 style="display: none;"><span>AKTIVNI</span> OGLASI</h2>
+			</div>
+		</div>
+		<div class="uvodniDio tabelarniDio">
+            <a class=""> <!-- link do profila firme -->
+                <div class=" tabelaRasa">
+					<div>
+						<div>
+							<div></div> <!-- ime kompanije -->
+							<div>
+							   <span></span> <!-- djelatnost pod kojom se registrovala -->
+                                    <span>
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
+                                    Nije dostupno<!-- sjediste firme -->
+								</span>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+{% include 'footer.html' %}
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'skripta.js' %}"></script> <!-- include sa servera odgovarajuci -->
+<script>
+    $(".tLog").click(function(){
+        var modal2 = document.getElementById('myModal2');
+        modal2.style.display = "block";
+    })
+</script>
+<script type="text/javascript">
+		$('#pocetna_nav').removeClass('selected');
+		$('#clanice_nav').addClass('selected');
+</script>
+</html>

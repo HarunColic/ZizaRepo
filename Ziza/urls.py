@@ -38,6 +38,7 @@ urlpatterns = [
     url('editprofil/', AC_Views.editprofil, name='editprofil'),
     url('^submitchange/', AC_Views.submitchange, name='submitchange'),
     url('^pretraga/', AC_Views.pretraga, name='pretraga'),
+    url('konsalting/detaljno/(?P<slug>[A-Za-z0-9\-]+)', AC_Views.konsalting_detailed, name='konsalting_detailed'),
     url('^konsalting/', AC_Views.konsalting, name='konsalting'),
     url('bankUsluge', P_Views.bankUsluge, name='bankUsluge'),
     url('osiguranjeUsluge', P_Views.osiguranjeUsluge, name='osiguranjeUsluge'),
@@ -59,6 +60,9 @@ urlpatterns = [
     url('mojaKarijera', AC_Views.mojaKarijera, name='mojaKarijera'),
     url('mailSvima', AC_Views.mailSvima, name='mailSvima'),
     url('izlog', P_Views.izlog, name='izlog'),
+
+    url('testclanovi', AC_Views.testclanovi, name="testclanovi"),
+    url('testprofil', AC_Views.testprofil, name="testprofil"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
