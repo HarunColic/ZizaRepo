@@ -750,13 +750,67 @@ ul {list-style: none}
 
 
 			</style>
+
+	<style type="text/css">
+		.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+		
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
+	</style>
 </head>
 <body>
 
+	<img src="/static/images/logoNew.png" class="logotipNavbarMali">
 
     {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
     {% include 'header.html' %}
     {% endwith %}
+
+    <style type="text/css">
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+		@media only screen and (max-width: 990px){
+			body{
+			}
+		}
+    </style>
 
 	<div class="uvod">
 		<div class="uvod__linkovi">
@@ -773,12 +827,15 @@ ul {list-style: none}
 		</div>
 		<div class="uvod__slike">
             {% if auth %}
-			<div class="uvod__slike--prijava tkon"></div>
-			<div class="uvod__slike--pcelaPrijava tkon"></div>
-			<div class="uvod__slike--registracija tkon"></div>
-			<div class="uvod__slike--pcelaRegistracija tkon"></div>
-			<div class="uvod__slike--baloncic tkon">
+			<div class="uvod__slike--prijava tkon" data-type="1"></div>
+			<div class="uvod__slike--pcelaPrijava tkon" data-type="1"></div>
+			<div class="uvod__slike--registracija tkon" data-type="2"></div>
+			<div class="uvod__slike--pcelaRegistracija tkon" data-type="2"></div>
+			<div class="uvod__slike--baloncic tkon" data-type="2">
 				<p class="animirajKucanje"></p>
+			</div>
+            <div class="uvod__slike--baloncic tkon" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
+				<p style="margin-right: -10px; margin-bottom: 80px; text-align: center;" class="animirajKucanje2"></p>
 			</div>
             {% else %}
             <div class="uvod__slike--prijava tLog"></div>
@@ -787,12 +844,11 @@ ul {list-style: none}
 			<div class="uvod__slike--pcelaRegistracija tReg"></div>
 			<div class="uvod__slike--baloncic tReg">
 				<p class="animirajKucanje"></p>
-			</div>
-                        {% endif %}
-
-            <div class="uvod__slike--baloncic tReg" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
+			</div>	
+			<div class="uvod__slike--baloncic tReg" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
 				<p style="margin-right: -10px; margin-bottom: 80px; text-align: center;" class="animirajKucanje2"></p>
 			</div>
+			{% endif %}
 
 		</div> <!-- uvod__slike -->
 	</div> <!-- uvod -->
@@ -1133,8 +1189,13 @@ ul {list-style: none}
         modal2.style.display = "block";
     })
 
-    var clickBub = $(".tkon").click(function(){
-        location.href = {% url 'pretraga' %};
+    var clickBub = $(".tkon").click(function(e){
+		if(e.target.getAttribute('data-type') == 1){
+    	    location.href = "{% url 'anonimnaPretraga' id=1 %}";
+		}
+		else{
+	        location.href = "{% url 'anonimnaPretraga' id=2 %}";
+		}
     });
 
 

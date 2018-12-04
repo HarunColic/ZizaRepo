@@ -2,7 +2,7 @@
 <html lang="ba">
 {% load static %}
 <head>
-	<title>ŽIŽA.ba | Naslovnica</title>
+	<title>ŽIŽA.ba | Naslovnicaa</title>
 
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
@@ -31,11 +31,67 @@ ul {list-style: none}
   	cursor: pointer;
   }
 
+.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+		
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
 </style>
+
+<img src="/static/images/logoNew.png" class="logotipNavbarMali">
 
 {% with var1=user var2=auth var3=userP usr=usr %}
 {% include 'header.html' %}
 {% endwith %}
+
+<style type="text/css">
+    	body{
+    		background: #f9f5e5 !important;
+    	}
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+		@media only screen and (max-width: 990px){
+			body{
+				margin-top: -20px !important;
+			}
+		}
+    </style>
 
 	<div class="uvod">
 		<div class="uvod__linkovi">

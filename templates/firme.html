@@ -19,11 +19,64 @@
 </head>
 <body>
 
-{% with var1=user var2=userP var3=userP ind=industries usr=usr  %}
+  <style type="text/css">
+		.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+		
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
+	</style>
 
-{% include 'header.html' %}
+  <img src="/static/images/logoNew.png" class="logotipNavbarMali">
 
-{% endwith %}
+    {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
+    {% include 'header.html' %}
+    {% endwith %}
+
+    <style type="text/css">
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+		@media only screen and (max-width: 990px){
+			body{
+			}
+		}
+    </style>
 
 <div class="glavniDio">
 		<div class="uvodniDio">

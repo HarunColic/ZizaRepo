@@ -18,7 +18,13 @@
 </head>
 <style type="text/css">
 		.formaBody{
-			height: 1268px;
+			height: 100%;
+			padding-bottom: 40px;
+		}
+		@media screen and (max-width: 1210px){
+			.footer{
+				display: none;
+			}
 		}
 		.logotipNavbarMali{
 			position: absolute;
@@ -48,6 +54,20 @@
 			}
 		}
 
+		@media screen and (max-width: 414px){
+			.coverSlika {
+			    height: 400px;
+			}
+			.navigacija{
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 900px){
+			.sadrzaj h1{
+				padding-right: 35px;
+			}
+		}
 	</style>
 <body>
 
@@ -128,7 +148,7 @@
 			<form style="margin-top: 70px" id="newpotraznjaForm" method="post" action="{% url 'createpost' %}" enctype="multipart/form-data" >
 				{% csrf_token %}
                 <input type="hidden" name="type" value="2">
-                <div style="display: flex;">
+                <div style="display: flex;" class="multipleTwo">
 					<div style="width: 49%; margin-right: 25px">
 						<label>Tražim/nudim</label><br>
 						<select name="b2btype">
@@ -179,7 +199,7 @@
 			    		<option value="0">Neograničeno</option>
 					</select>
 				</div>
-				<div style="margin-top: 20px; display: flex;">
+				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Kontakt e-mail adresa</label><br>
 						<input type="email" value="{{ user.email }}" name="email" style="width: 100%">
@@ -190,13 +210,13 @@
 					</div>
 				</div>
 				<div  style="margin-top: 30px;">
-					<label style="margin-bottom: 8px">Detalji oglasa</label>
+					<label style="margin-bottom: 8px" class="specLab">Detalji oglasa</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
       				<div id="editor-container"></div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
-				<div style="margin-top: 30px;">
+				<div style="margin-top: 30px;" class="dokumentPDF">
 					<label style="margin-bottom: 8px">PDF/Word dokument oglasa <span>(opcionalno)</span></label><br>
 					<div style="margin-top: 24px"></div>
 					<div style="display: flex; align-items: center;">
