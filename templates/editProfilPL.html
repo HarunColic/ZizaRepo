@@ -298,7 +298,7 @@
 					<label style="margin-bottom: 8px;" class="specLab">O meni</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
-      				<div id="editor-container">{{ emp.opis }}</div>
+      				<div id="editor-container">{{ emp.opis|safe }}</div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
 				<div style="margin-top: 30px;" class="dokumentPDF">
