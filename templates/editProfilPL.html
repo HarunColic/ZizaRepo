@@ -341,8 +341,10 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+<script  type="text/javascript" src="{% static 'sessionstorage.js' %}" >
 <script>
-var quill = new Quill('#editor-container', {
+/*
+    var quill = new Quill('#editor-container', {
   modules: {
     toolbar: [
       ['bold', 'italic'],
@@ -353,6 +355,7 @@ var quill = new Quill('#editor-container', {
   placeholder: 'Nadopunite Vaš CV informacijama koje nedostaju...',
   theme: 'snow'
 });
+*/
 var form = document.querySelector('#edituj');
 form.onsubmit = function() {
   return true;
@@ -361,6 +364,7 @@ form.onsubmit = function() {
 $(document).ready( function() {
     $(".ql-editor").attr('spellcheck',false);
     $("select[name=grad]").val("{{ userP.location }}")
+    $("select[name=strucnaSprema]").val("{{ emp.strucnaSprema}}")
 });
 
 

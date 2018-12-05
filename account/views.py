@@ -559,6 +559,9 @@ def submitchange(request):
                 userP = UserProfile.objects.get(userID=request.user)
 
                 if myfile is not None:
+                    if myfile._size > 5242880:
+                        sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaš CV prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
+                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
                     userP.cv = myfile
 
                 userP.location = grad
@@ -567,7 +570,12 @@ def submitchange(request):
                 if radnoMjesto is not None or radnoMjesto == '':
                     emp.radnoMjesto = radnoMjesto
                 if slika is not None:
-                    userP.image = slika
+                    try:
+                        userP.image = slika
+                    except IOError:
+                        sweetify.sweetalert(request, title='Slika nije validna', icon='error')
+                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
                 elif not userP.image:
                     sweetify.sweetalert(request, title="Molimo dodajte sliku", icon="error")
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
@@ -579,7 +587,7 @@ def submitchange(request):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 for k in kategorije:
-                    cat = Category.objects.filter(name=k)[0]
+                    cat = Category.objects.filter(name=k).filter(type=4)[0]
                     userCat = UserCategories(userID=user, categoryID=cat)
                     userCat.save()
 
