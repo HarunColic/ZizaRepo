@@ -208,7 +208,7 @@
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Posljednje radno mjesto</label><br>
-						<input type="text" name="radno" {% if emp.radnoMjesto %}value="{{ emp.radnoMjesto }}{% endif %}" name="email" style="width: 100%">
+						<input type="text" name="radno" {% if emp.radnoMjesto %}value="{{ emp.radnoMjesto }}{% endif %}"  style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
 						<label>Godina iskustva</label><br>
@@ -341,7 +341,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
-<script  type="text/javascript" src="{% static 'sessionstorage.js' %}" >
+<script  type="text/javascript" src="{% static 'sessionstorage.js' %}" ></script>
 <script>
 /*
     var quill = new Quill('#editor-container', {

@@ -1,6 +1,6 @@
 $('input').change((e)=>{
 	sessionStorage.setItem(e.target.getAttribute('name'),e.target.value)
-	console.log(e.target.value);
+	//console.log(e.target.value);
 })
 
 $('select').change((e)=>{
@@ -8,9 +8,10 @@ $('select').change((e)=>{
 })
 
 $(document).ready(()=>{
-	$('input').not('input[type=hidden] input[type=hidden] input[type=file]').each((i,e)=>{
+	$('input').not('input[type=hidden] input[type=file]').each((i,e)=>{
 		if(sessionStorage.getItem(e.getAttribute('name')))
 		e.value = sessionStorage.getItem(e.getAttribute('name'));
+		console.log(e);
 	});
 	$('select').each((i,e)=>{
 		if(sessionStorage.getItem(e.getAttribute('name')))
