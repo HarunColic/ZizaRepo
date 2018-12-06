@@ -581,11 +581,11 @@ def submitchange(request):
                     sweetify.sweetalert(request, title="Molimo dodajte sliku", icon="error")
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-                UserCategories.objects.filter(userID=user).delete()
-
                 if len(kategorije) > 10 or len(kategorije) < 3:
                     sweetify.sweetalert(request, title="Unesite od 3 do 10 kategorija", icon="error")
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+                UserCategories.objects.filter(userID=user).delete()
 
                 for k in kategorije:
                     cat = Category.objects.filter(name=k).filter(type=4)[0]
