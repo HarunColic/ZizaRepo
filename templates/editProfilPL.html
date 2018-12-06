@@ -286,8 +286,8 @@
 					<div style="display: flex; justify-content: space-around; flex-wrap: wrap;margin-top: 40px;">
                     {% endif %}
 
-					 <input value="{{ c.name }}" name="kategorije" type="checkbox" id="box-{{ forloop.counter0 }}">
- 					 <label for="box-{{ forloop.counter0 }}" style="color: #262626; width: 200px"> {{ c.name|slice:":60" }}...</label>
+					 <input value="{{ c.name }}" name="kategorije" type="checkbox" id="box{{ c.id }}">
+ 					 <label for="box{{ c.id}}" style="color: #262626; width: 200px"> {{ c.name|slice:":60" }}...</label>
 
                         {% if forloop.counter|divisibleby:"3"%}
  					</div>
@@ -365,6 +365,11 @@ $(document).ready( function() {
     $(".ql-editor").attr('spellcheck',false);
     $("select[name=grad]").val("{{ userP.location }}")
     $("select[name=strucnaSprema]").val("{{ emp.strucnaSprema}}")
+    {% for c in userCats %}
+
+        document.querySelector('#box{{ c.categoryID.pk }}').checked = true;
+
+    {% endfor %}
 });
 
 

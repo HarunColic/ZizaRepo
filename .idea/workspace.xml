@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editProfilPL.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilPL.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,20 +33,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="585" column="69" selection-start-line="585" selection-start-column="69" selection-end-line="585" selection-end-column="69" />
+            <state relative-caret-position="323">
+              <caret line="428" column="51" lean-forward="true" selection-start-line="428" selection-start-column="51" selection-end-line="428" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="346" column="48" lean-forward="true" selection-start-line="346" selection-start-column="48" selection-end-line="346" selection-end-column="48" />
+            <state relative-caret-position="113">
+              <caret line="369" column="55" selection-start-line="369" selection-start-column="55" selection-end-line="369" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -65,7 +65,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/53ab07c7-0d3e-4a81-8028-74ed60e32654/console.sql">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="33" selection-end-column="33" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -92,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Bankarstvo</find>
       <find>Prodajne operacije</find>
       <find>lokacij</find>
       <find>Lokacija</find>
@@ -122,6 +125,7 @@
       <find>submit</find>
       <find>ema</find>
       <find>submi</find>
+      <find>for</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -184,10 +188,10 @@
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/post/views.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/53ab07c7-0d3e-4a81-8028-74ed60e32654/console.sql" />
         <option value="$PROJECT_DIR$/static/sessionstorage.js" />
-        <option value="$PROJECT_DIR$/templates/editProfilPL.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/53ab07c7-0d3e-4a81-8028-74ed60e32654/console.sql" />
+        <option value="$PROJECT_DIR$/templates/editProfilPL.html" />
       </list>
     </option>
   </component>
@@ -256,6 +260,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="/var/zizarepo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -359,7 +364,7 @@
       <workItem from="1543790070766" duration="3142000" />
       <workItem from="1543965014208" duration="3270000" />
       <workItem from="1544015288043" duration="3884000" />
-      <workItem from="1544100671315" duration="1000000" />
+      <workItem from="1544100671315" duration="1692000" />
     </task>
     <servers />
   </component>
@@ -369,7 +374,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13220000" />
+    <option name="totallyTimeSpent" value="13912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,9 +389,10 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21787709" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21787709" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Database Console" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24592833" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.2805873" />
@@ -398,7 +404,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.22185971" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.16612378" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.16612378" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32626426" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -746,9 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/53ab07c7-0d3e-4a81-8028-74ed60e32654/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -759,17 +762,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
+    <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="346" column="48" lean-forward="true" selection-start-line="346" selection-start-column="48" selection-end-line="346" selection-end-column="48" />
+        <state relative-caret-position="323">
+          <caret line="428" column="51" lean-forward="true" selection-start-line="428" selection-start-column="51" selection-end-line="428" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/53ab07c7-0d3e-4a81-8028-74ed60e32654/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="585" column="69" selection-start-line="585" selection-start-column="69" selection-end-line="585" selection-end-column="69" />
+        <state>
+          <caret column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="369" column="55" selection-start-line="369" selection-start-column="55" selection-end-line="369" selection-end-column="55" />
         </state>
       </provider>
     </entry>

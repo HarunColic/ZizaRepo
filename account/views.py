@@ -428,7 +428,8 @@ def editprofil(request):
             gradovi = City.objects.all()
             emp = Employee.objects.get(userID=user)
             cat = Category.objects.filter(type=4)
-            return render(request, 'editProfilPL.html', {'auth': True, 'usr': 'wrkr', 'user': user, 'gradovi': gradovi, 'userP': userP, 'emp': emp, 'cat': cat})
+            userCats = UserCategories.objects.filter(userID=user)
+            return render(request, 'editProfilPL.html', {'userCats': userCats, 'auth': True, 'usr': 'wrkr', 'user': user, 'gradovi': gradovi, 'userP': userP, 'emp': emp, 'cat': cat})
 
     else:
         redirect('home')
