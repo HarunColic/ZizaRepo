@@ -582,8 +582,8 @@ def submitchange(request):
 
                 UserCategories.objects.filter(userID=user).delete()
 
-                if len(kategorije) > 5:
-                    sweetify.sweetalert(request, title="Unesite do 5 kategorija", icon="error")
+                if len(kategorije) > 10 or len(kategorije) < 3:
+                    sweetify.sweetalert(request, title="Unesite od 3 do 10 kategorija", icon="error")
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 for k in kategorije:
