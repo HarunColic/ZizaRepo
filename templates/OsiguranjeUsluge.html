@@ -411,7 +411,25 @@
 			</div>
 		</div>
 	</div> <!-- glavniDio END -->
-	<div class="pregledTraka"><div style="margin-left: 50px">Ovako će Vaš oglas izgledati nakon objave!</div><div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;"><img src="{% static 'images/desnoPregled.png' %}" style="margin-right: 11px; transform: rotate(180deg);"><span id="goBack" style="margin-right: 20px">NAZAD</span> <span id="objaviOglas">OBJAVI</span><img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></div></div>
+	
+		<style type="text/css">
+		@media screen and (max-width: 650px){
+			.sakrij__mob__navSt{
+				display: none;
+			}
+		}
+	</style>
+	<div class="pregledTraka">
+		<div style="font-family: 'Galano Black'; margin-left: 50px;">
+			<img src="../static/images/desnoPregled.png" style="transform: rotate(180deg); margin-right: 11px">
+			<span id="goBack">NAZAD</span>
+		</div>
+		<div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;">
+			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">Ovako će Vaš oglas izgledati nakon objave!</div>
+			<span id="objaviOglas">OBJAVI</span><img src="../static/images/desnoPregled.png" style="margin-left: 11px">
+		</div>
+	</div>
+
 	<script type="text/javascript">
 		$("#objaviOglas").click(function(){
             var about = document.querySelector('input[name=opis]');
@@ -423,7 +441,6 @@
 		});
 	</script>
 
-{% include 'footer.html' %}
 
 {% load sweetify %}
     {% sweetify %}

@@ -266,25 +266,41 @@
 				<img src="../static/images/lijevoOglas.png" style="cursor: pointer;" class="lijevoEd">
 				<div>
 					<span>PRIJAŠNJI OGLAS</span>
-					<span>Violeta</span>
+					<span>Neki oglas</span>
 				</div>
 			</div>
 			<img src="../static/images/prijavaoglas.png" class="srednjaSlika" style="cursor: pointer;">
 			<div class="prevTraka" style="justify-content: flex-end;">
 				<div style="margin-left: 0">
 					<span>SLJEDEĆI OGLAS</span>
-					<span style="color: #f89101; text-align: right;">Volkswagen</span>
+					<span style="color: #f89101; text-align: right;">Neki oglas</span>
 				</div>
 				<img src="../static/images/desnoOglas.png" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
 			</div>
 		</div>
 	</div> <!-- glavniDio END -->
-	<div class="pregledTraka"><div style="margin-left: 50px">Ovako će Vaš oglas izgledati nakon objave!</div><div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;"><img src="../static/images/desnoPregled.png" style="margin-right: 11px; transform: rotate(180deg);"><span id="goBack" style="margin-right: 20px">NAZAD</span> <span id="objaviOglas">OBJAVI</span><img src="../static/images/desnoPregled.png" style="margin-left: 11px"></div></div>
 
-    {% include 'footer.html' %}
+	<style type="text/css">
+		@media screen and (max-width: 650px){
+			.sakrij__mob__navSt{
+				display: none;
+			}
+		}
+	</style>
+	<div class="pregledTraka">
+		<div style="font-family: 'Galano Black'; margin-left: 50px;">
+			<img src="../static/images/desnoPregled.png" style="transform: rotate(180deg); margin-right: 11px">
+			<span id="goBack">NAZAD</span>
+		</div>
+		<div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;">
+			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">Ovako će Vaš oglas izgledati nakon objave!</div>
+			<span id="objaviOglas">OBJAVI</span><img src="../static/images/desnoPregled.png" style="margin-left: 11px">
+		</div>
+	</div>
 
 {% load sweetify %}
 {% sweetify %}
+
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

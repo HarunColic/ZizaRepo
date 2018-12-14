@@ -129,11 +129,11 @@
 		<div class="regBox__lijevo">
 			<div class="regBox__lijevo--box active" id="osobaSector">
 				<img src="../static/images/pcelaobicna.png">
-				<p>Prijava<br>kao osoba</p>
+				<p>Prijava<br>kao fizičko lice</p>
 			</div>
 			<div class="regBox__lijevo--box" id="firmaSector">
 				<img src="../static/images/pcelafirma.png" style="margin-top: 5px">
-				<p style="margin-top: 4px">Prijava<br>kao firma</p>
+				<p style="margin-top: 4px">Prijava<br>kao pravno lice</p>
 			</div>
 		</div>
 		<div class="regBox__desno">
@@ -177,11 +177,11 @@
 					</div>
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" class="boxHolder">
 						<div class="form-group">
-					      <label class="form-label" for="ema">e-mail adresa</label>
+					      <label class="form-label" for="ema">E-mail adresa</label>
 					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
 					    </div>
 					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="pas">lozinka</label>
+					      <label class="form-label" for="pas">Lozinka</label>
 					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
 					    </div>
 					</div>
@@ -215,7 +215,7 @@
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
 					<div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 70px; flex-direction: column;" class="grupField">
 						<div class="form-group">
-					      <label class="form-label" for="ema">e-mail adresa</label>
+					      <label class="form-label" for="ema">E-mail adresa</label>
 					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
 					    </div>
 					    <div class="form-group" style="margin-left: 0px; margin-top: 50px;">
@@ -253,7 +253,7 @@
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 30px">
 						<div class="form-group">
-					      <label class="form-label" for="ema">e-mail adresa</label>
+					      <label class="form-label" for="ema">E-mail adresa</label>
 					      <input name="mailres" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
 					    </div>
 					</div>
@@ -767,6 +767,33 @@ ul {list-style: none}
 		window.open('https://ziza.ba/');
 	});
 
+		var max_chars = 25;
+		var max_chars_em = 50;
+
+
+	$('#first, #last').keydown( function(e){
+	    if ($(this).val().length >= max_chars) { 
+	        $(this).val($(this).val().substr(0, max_chars));
+	    }
+	});
+
+	$('#first, #last').keyup( function(e){
+	    if ($(this).val().length >= max_chars) { 
+	        $(this).val($(this).val().substr(0, max_chars));
+	    }
+	});
+
+	$('#ema').keydown( function(e){
+	    if ($(this).val().length >= max_chars_em) { 
+	        $(this).val($(this).val().substr(0, max_chars_em));
+	    }
+	});
+
+	$('#ema').keyup( function(e){
+	    if ($(this).val().length >= max_chars_em) { 
+	        $(this).val($(this).val().substr(0, max_chars_em));
+	    }
+	});
 </script>
 <style type="text/css">
 	@media screen and (max-width: 990px){

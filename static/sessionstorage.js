@@ -25,8 +25,8 @@ var quill = new Quill('#editor-container', {
 	modules: {
 		toolbar: [
 		['bold', 'italic'],
-		['link', 'blockquote', 'code-block', 'image'],
-		[{ list: 'ordered' }, { list: 'bullet' }]
+		['link', 'blockquote', 'code-block'],
+		[{ list: 'ordered' }, { list: 'bullet' }, 'image']
 		]
 	},
 	placeholder: 'Unesite detaljan opis Vašeg oglasa...',
@@ -46,5 +46,4 @@ var quill = new Quill('#editor-container', {
 			sessionStorage.setItem('desc',$('.ql-editor').html())
 		}
 	});
-	
 })

@@ -1,3 +1,5 @@
+sessionStorage.clear();
+
 $(document).ready(function(){
    $('#submitSlika').click(function(){
       $('#formaReg').submit()
