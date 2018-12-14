@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/acc_active_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/acc_active_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editProfilPL.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilPL.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editProfilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilTvrtka.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profilTvrtka.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +37,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="593" lean-forward="true" selection-start-line="593" selection-end-line="593" />
+            <state relative-caret-position="167">
+              <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/acc_active_email.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#header#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#pre#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#li#0;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#small#0;n#li#0;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#small#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#li#2;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#small#0;n#li#2;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +81,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="369" column="55" selection-start-line="369" selection-start-column="55" selection-end-line="369" selection-end-column="55" />
+            <state relative-caret-position="242">
+              <caret line="2174" column="12" selection-start-line="2174" selection-start-column="12" selection-end-line="2174" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/editProfilTvrtka.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="466" column="36" lean-forward="true" selection-start-line="466" selection-start-column="36" selection-end-line="466" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="177" selection-start-line="177" selection-end-line="177" />
             </state>
           </provider>
         </entry>
@@ -74,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+            <state relative-caret-position="255">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -95,11 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Prodajne operacije</find>
-      <find>lokacij</find>
-      <find>Lokacija</find>
-      <find>Kanton</find>
-      <find>anonimna</find>
       <find>navigacij</find>
       <find>navigacijaTipke</find>
       <find>spremi</find>
@@ -121,10 +171,15 @@
       <find>csr</find>
       <find>sessio</find>
       <find>email</find>
-      <find>submit</find>
       <find>ema</find>
       <find>submi</find>
       <find>for</find>
+      <find>submit</find>
+      <find>Vje</find>
+      <find>Vještine</find>
+      <find>Apple</find>
+      <find>Upload</find>
+      <find>Register</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -140,7 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/forgotPass.html" />
         <option value="$PROJECT_DIR$/static/skripta.js" />
         <option value="$PROJECT_DIR$/Ziza/static/skripta.js" />
         <option value="$PROJECT_DIR$/account/templates/oglas.html" />
@@ -180,9 +234,7 @@
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" />
         <option value="$PROJECT_DIR$/templates/firme.html" />
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
-        <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
-        <option value="$PROJECT_DIR$/templates/editProfilTvrtka.html" />
         <option value="$PROJECT_DIR$/account/models.py" />
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
@@ -190,15 +242,18 @@
         <option value="$PROJECT_DIR$/static/sessionstorage.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/53ab07c7-0d3e-4a81-8028-74ed60e32654/console.sql" />
         <option value="$PROJECT_DIR$/templates/editProfilPL.html" />
+        <option value="$PROJECT_DIR$/templates/editProfilTvrtka.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
+        <option value="$PROJECT_DIR$/templates/acc_active_email.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1299" />
-    <option name="height" value="743" />
+    <option name="x" value="1728" />
+    <option name="y" value="165" />
+    <option name="width" value="1289" />
+    <option name="height" value="555" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -223,6 +278,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,26 +289,17 @@
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,7 +410,8 @@
       <workItem from="1543790070766" duration="3142000" />
       <workItem from="1543965014208" duration="3270000" />
       <workItem from="1544015288043" duration="3884000" />
-      <workItem from="1544100671315" duration="1769000" />
+      <workItem from="1544100671315" duration="1915000" />
+      <workItem from="1544798530400" duration="6529000" />
     </task>
     <servers />
   </component>
@@ -373,7 +421,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13989000" />
+    <option name="totallyTimeSpent" value="20664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,15 +433,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21787709" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.14834578" />
+      <window_info id="Structure" order="1" sideWeight="0.1279555" side_tool="true" weight="0.14834578" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24592833" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" visible="true" weight="0.2455404" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.2805873" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -403,9 +450,10 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.22185971" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.16612378" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.10703043" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32626426" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24980047" />
@@ -452,7 +500,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/images/main.js" />
     <entry file="file://$PROJECT_DIR$/static/main.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -682,24 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/editProfilTvrtka.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="211" column="53" lean-forward="true" selection-start-line="211" selection-start-column="53" selection-end-line="211" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/gradovi.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="42" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="216" column="22" selection-start-line="216" selection-start-column="22" selection-end-line="216" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -751,16 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/53ab07c7-0d3e-4a81-8028-74ed60e32654/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -768,17 +791,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/account/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="369" column="55" selection-start-line="369" selection-start-column="55" selection-end-line="369" selection-end-column="55" />
+        <state relative-caret-position="242">
+          <caret line="2174" column="12" selection-start-line="2174" selection-start-column="12" selection-end-line="2174" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/editProfilTvrtka.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="466" column="36" lean-forward="true" selection-start-line="466" selection-start-column="36" selection-end-line="466" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="593" lean-forward="true" selection-start-line="593" selection-end-line="593" />
+        <state relative-caret-position="167">
+          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/acc_active_email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#header#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#p#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#li#0;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#small#0;n#li#0;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#small#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#li#2;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#small#0;n#li#2;n#ul#0;n#footer#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

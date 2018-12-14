@@ -556,7 +556,8 @@
 				<div style="margin-top: 20px">
 					<label>Vještine</label><br>
 					<div id="ms1" class="tag-ctn"><div id="tag-trigger-0" class="tag-trigger"><div class="tag-trigger-ico"></div></div><div class="tag-helper " style="display: block;"></div><div id="tag-sel-ctn-0" class="tag-sel-ctn"><input id="tag-input-0" type="text" class="tag-empty-text" value="Počnite unositi..." style="width: 358px;"></div></div>
-				</div>
+
+                </div>
 
 
 				<!-- STARI DIO :: DJELATNOSTI IZ BAZE KOJE KORISTIMO PO STRANICI -->
@@ -2161,8 +2162,18 @@ $("#imageUpload").change(function() {
 
 
         $(document).ready(function() {
+
+        /*    let categoryNames = [];
+
+            {% for c in catNames %}
+
+                categoryNames.push({{ c }});
+
+            {% endfor %}
+*/
             var jsonData = [];
             var fruits = 'Apple,Orange,Banana,Strawberry'.split(',');
+            //var fruits = categoryNames.split(',');
             for(var i=0;i<fruits.length;i++) jsonData.push({id:i,name:fruits[i]});
             var ms1 = $('#ms1').tagSuggest({
                 data: jsonData,

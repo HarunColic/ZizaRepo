@@ -429,7 +429,12 @@ def editprofil(request):
             emp = Employee.objects.get(userID=user)
             cat = Category.objects.filter(type=4)
             userCats = UserCategories.objects.filter(userID=user)
-            return render(request, 'editProfilPL.html', {'userCats': userCats, 'auth': True, 'usr': 'wrkr', 'user': user, 'gradovi': gradovi, 'userP': userP, 'emp': emp, 'cat': cat})
+            catNames = []
+
+            for c in cat:
+                catNames.append(c.name)
+
+            return render(request, 'editProfilPL.html', {'catNames': catNames, 'userCats': userCats, 'auth': True, 'usr': 'wrkr', 'user': user, 'gradovi': gradovi, 'userP': userP, 'emp': emp, 'cat': cat})
 
     else:
         redirect('home')
@@ -453,6 +458,7 @@ def submitchange(request):
                 opis = request.POST['opis']
                 slika = request.FILES.get('profilePicture', default=None)
                 webStranica = request.POST.get('webStranica', None)
+                izvjestaj = request.POST.get('finIzvjestaj', None)
                 args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
                 if not validation(request, args):
                     sweetify.sweetalert(request, title="Sva polja obavezna", icon="error")
@@ -476,6 +482,16 @@ def submitchange(request):
                                              timer=10000)
                             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
+                    if izvjestaj is not None:
+                        if izvjestaj._size > 5242880:
+                            sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaša datoteka prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
+                            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+                        fs = FileSystemStorage()
+                        filename = fs.save(izvjestaj.name, izvjestaj)
+                        uploaded_file_url = fs.url(filename)
+
+
                     user.first_name = name
                     user.email = mail
                     userP.location = grad
@@ -495,6 +511,7 @@ def submitchange(request):
 
                     user.save()
                     userP.editovanProfil = True
+                    userP.cv = izvjestaj
                     userP.save()
                     comp.save()
 
