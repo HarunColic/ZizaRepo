@@ -11,14 +11,13 @@ $(document).ready(()=>{
 	$('input').not('input[type=hidden] input[type=file]').each((i,e)=>{
 		if(sessionStorage.getItem(e.getAttribute('name')))
 		e.value = sessionStorage.getItem(e.getAttribute('name'));
-		console.log(e);
 	});
 	$('select').each((i,e)=>{
 		if(sessionStorage.getItem(e.getAttribute('name')))
 		e.value = sessionStorage.getItem(e.getAttribute('name'));
     });
 
-	if(sessionStorage.getItem('desc'))
+	if(sessionStorage.getItem('desc'))list
 	$('#editor-container').html(sessionStorage.getItem('desc'));
 
 var quill = new Quill('#editor-container', {

@@ -536,7 +536,7 @@ def submitchange(request):
                 grad = request.POST.get('grad', default=None)
                 opis = request.POST.get('opis', default=None)
                 slika = request.FILES.get('profilePicture', None)
-                kategorije = request.POST.getlist('kategorije')
+                kategorije = request.POST.get('kkk').split(',')
                 strucnaSprema = request.POST.get('strucnaSprema', default=None)
                 obrazovanje = request.POST.get('obrazovanje', default=None)
 
@@ -605,7 +605,7 @@ def submitchange(request):
                 UserCategories.objects.filter(userID=user).delete()
 
                 for k in kategorije:
-                    cat = Category.objects.filter(name=k).filter(type=4)[0]
+                    cat = Category.objects.filter(pk=int(k)).filter(type=4)[0]
                     userCat = UserCategories(userID=user, categoryID=cat)
                     userCat.save()
 

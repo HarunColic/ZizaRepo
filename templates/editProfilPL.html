@@ -555,29 +555,12 @@
 				<!-- NOVI DIO -->
 				<div style="margin-top: 20px">
 					<label>Vještine</label><br>
-					<div id="ms1" class="tag-ctn"><div id="tag-trigger-0" class="tag-trigger"><div class="tag-trigger-ico"></div></div><div class="tag-helper " style="display: block;"></div><div id="tag-sel-ctn-0" class="tag-sel-ctn"><input id="tag-input-0" type="text" class="tag-empty-text" value="Počnite unositi..." style="width: 358px;"></div></div>
+					<div id="ms1" class="tag-ctn"><div id="tag-trigger-0" class="tag-trigger"><div class="tag-trigger-ico"></div></div><div class="tag-helper " style="display: block;"></div><div id="tag-sel-ctn-0" class="tag-sel-ctn"><input name="vjestine" id="tag-input-0" type="text" class="tag-empty-text" value="Počnite unositi..." style="width: 358px;"></div></div>
 
                 </div>
 
 
 				<!-- STARI DIO :: DJELATNOSTI IZ BAZE KOJE KORISTIMO PO STRANICI -->
-				<div style="margin-top: 20px" class="kompetencije">
-					<label>Spisak struka</label><br>
-                    {% for c in cat %}
-                    {% if forloop.counter == 1 %}
-					<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px;">
-                   {% elif forloop.counter0|divisibleby:"3"%}
-					<div style="display: flex; justify-content: space-around; flex-wrap: wrap;margin-top: 40px;">
-                    {% endif %}
-
-					 <input value="{{ c.name }}" name="kategorije" type="checkbox" id="box{{ c.id }}">
- 					 <label for="box{{ c.id}}" style="color: #262626; width: 200px"> {{ c.name|slice:":60" }}...</label>
-
-                        {% if forloop.counter|divisibleby:"3"%}
- 					</div>
-                        {% endif %}
- 					{% endfor %}
-				</div>
 				<div  style="margin-top: 30px;">
 					<label style="margin-bottom: 8px;" class="specLab">O meni</label>
 					<!-- TEXTEDITOR zapocinje -->
@@ -601,6 +584,7 @@
 					</div>
 				</div>
 				<a style="cursor: pointers;" id="aktivirajPregled">SPREMI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></a>
+            <input type="hidden" name="kkk" id="vjest">
 			</form>
 		</div>
 	</div> <!-- formaBody END -->
@@ -609,10 +593,14 @@
 	<script type="text/javascript">
 
 		 $("#aktivirajPregled").click(function(){
-          var about = document.querySelector('input[name=opis]');
-          about.value = $('.ql-editor').html();
-          form.submit();
-        });
+            var about = document.querySelector('input[name=opis]');
+            about.value = $('.ql-editor').html();
+            var vjestine = document.querySelector('input[name=vjestine]');
+             console.log(vjestine.value);
+             vjestine.value = vjestine.value.replace('[','').replace(']','');
+             document.querySelector('#vjest').value = vjestine.value;
+             form.submit();
+         });
 
 	</script>
 
@@ -654,16 +642,11 @@ $(document).ready( function() {
     $(".ql-editor").attr('spellcheck',false);
 
     $('.ql-image').empty();
-	$('.ql-image').css('width','90px').css('color','#7d7d7d').css('margin-right','-17px');
+ 	$('.ql-image').css('width','90px').css('color','#7d7d7d').css('margin-right','-17px');
 	$('.ql-image').html('Postavi sliku');
 
     $("select[name=grad]").val("{{ userP.location }}")
     $("select[name=strucnaSprema]").val("{{ emp.strucnaSprema}}")
-    {% for c in userCats %}
-
-        document.querySelector('#box{{ c.categoryID.pk }}').checked = true;
-
-    {% endfor %}
 });
 
 
@@ -974,14 +957,14 @@ $("#imageUpload").change(function() {
              * <p>Set to true to render selection as comma separated string</p>
              * Defaults to <code>false</code>.
              */
-            resultAsString: false,
+            resultAsString: true,
 
             /**
              * @cfg {String} resultsField
              * <p>Name of JSON object property that represents the list of suggested objets</p>
              * Defaults to <code>results</code>
              */
-            resultsField: 'results',
+            resultsField: 'vjestine',
 
             /**
              * @cfg {String} selectionCls
@@ -2163,23 +2146,26 @@ $("#imageUpload").change(function() {
 
         $(document).ready(function() {
 
-        /*    let categoryNames = [];
 
-            {% for c in catNames %}
+            var jsonData = [];
+            //var fruits = 'Apple,Orange,Banana,Strawberry'.split(',');
+            //var fruits = categoryNames;
+            //for(var i=0;i<fruits.length;i++)
 
-                categoryNames.push({{ c }});
+            {% for c in cat %}
+
+                jsonData.push({id:{{ c.pk }},name:'{{c.name}}'});
 
             {% endfor %}
-*/
-            var jsonData = [];
-            var fruits = 'Apple,Orange,Banana,Strawberry'.split(',');
-            //var fruits = categoryNames.split(',');
-            for(var i=0;i<fruits.length;i++) jsonData.push({id:i,name:fruits[i]});
+
             var ms1 = $('#ms1').tagSuggest({
                 data: jsonData,
                 sortOrder: 'name',
                 maxDropHeight: 200,
-                name: 'ms1'
+                name: 'vjestine',
+                resultAsString: true,
+
+
             });
         });
 
