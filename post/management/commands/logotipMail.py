@@ -10,12 +10,12 @@ from post.models import Category
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        userPs = UserProfile.objects.filter(image=None)
+        userPs = UserProfile.objects.filter(image='')
         mails = []
 
         for up in userPs:
 
-            this = User.objects.get(UserProfile=up)
+            this = User.objects.get(userprofile=up)
             mails.append(this.email)
 
         mail_subject = "Mailovi korisnika bez logotipa"
@@ -26,7 +26,7 @@ class Command(BaseCommand):
         })
 
         email = EmailMessage(
-            mail_subject, message, to=['haruncolic@hotmail.com']
+            mail_subject, message, to=['affan@ziza.ba']
         )
 
         email.send()
