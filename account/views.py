@@ -443,7 +443,7 @@ def submitchange(request):
                 opis = request.POST['opis']
                 slika = request.FILES.get('profilePicture', default=None)
                 webStranica = request.POST.get('webStranica', None)
-                izvjestaj = request.POST.get('finIzvjestaj', None)
+                izvjestaj = request.FILES.get('finIzvjestaj', None)
                 args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
                 if not validation(request, args):
                     sweetify.sweetalert(request, title="Sva polja obavezna", icon="error")
@@ -467,15 +467,15 @@ def submitchange(request):
                                              timer=10000)
                             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-                    if izvjestaj is not None:
-                        if izvjestaj._size > 5242880:
-                            sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaša datoteka prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
-                            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                         fs = FileSystemStorage()
                         filename = fs.save(izvjestaj.name, izvjestaj)
                         uploaded_file_url = fs.url(filename)
 
+                    if izvjestaj is not None:
+                        if izvjestaj._size > 5242880:
+                            sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaša datoteka prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
+                            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                     user.first_name = name
                     user.email = mail

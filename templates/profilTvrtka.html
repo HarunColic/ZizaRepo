@@ -139,9 +139,9 @@
 			<div class="trazimo">
                 <h2><span>O NAMA</span></h2>
 			</div>
-			<a href="/download?file={{ userP.cv.name }}" ><div class="downloadPDF">
+			{% if userP.cv %}<a href="/download?file={{ userP.cv.name }}" ><div class="downloadPDF">
             <img src="{% static "images/downloadikona.png" %}"> FIN. IZVJEŠTAJ
-            </div></a>
+            </div></a>{% endif %}
 		</div>
 		<div class="tabelarni">
 			<div>
