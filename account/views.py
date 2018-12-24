@@ -124,30 +124,8 @@ def profil(request):
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
-        if request.POST.get('pretragaTrigger', "False") == "True":
-            grad = request.POST.get('gradovi', None)
-            kategorija = request.POST.get('kategorije', None)
-            kljucnaRijec = request.POST.get('kljucnaRijec', None)
-
-            posts = Post.objects.all().filter(type=1)
-
-            if grad is not None:
-                posts = posts.all().filter(location=grad)
-            if kategorija is not None:
-                cat = Category.objects.filter(name=kategorija)[0]
-                posts = posts.all().filter(CategoryID=cat)
-            if kljucnaRijec is not None:
-                posts = posts.all().filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
-
-        else:
-            posts = Post.objects.all().filter(type=1)
-
         user = request.user
         userP = UserProfile.objects.get(userID=user)
-        data = posts
-        gradovi = City.objects.all()
-        cat = Category.objects.filter(type=0)
-        counter = posts.count()
         company = Company.objects.get(userID=user)
 
         if Company.objects.filter(userID=user).exists():
@@ -163,8 +141,15 @@ def profil(request):
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
                               , 'page': int(page), 'rng': rng})
         elif Employee.objects.filter(userID=user).exists():
-            return render(request, 'pretrazi.html', {'user': user, 'data': data, 'counter': counter, 'gradovi': gradovi,
-                                                     'cat': cat, 'userP': userP, 'page': int(page), 'rng': rng})
+            postovi = Post.objects.filter(userID=user).exclude(soft_delete=True)
+
+            paginator = Paginator(postovi, 10)
+            page = request.GET.get('page', 1)
+            posts = paginator.page(page)
+            rng = range(1, paginator.num_pages + 1)
+
+            return render(request, 'korisnik.html', {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
+                              , 'page': int(page), 'rng': rng})
     else:
         return render(request, 'index.html')
 
@@ -1034,12 +1019,25 @@ def mailSvima(request):
 
 ##novo
 
+
 def konsalting_detailed(request, slug):
     return render(request, slug+'.html')
+
 
 def testclanovi(request):
     usr = 'wrkr'
     return render(request, 'testclanovi.html', {'usr': usr, 'userP': None, 'user': None})
 
+
 def testprofil(request):
     return render(request,'testprofil.html')
+
+
+def korisnik(request):
+
+    return render(request, 'korisnik.html')
+
+
+def CVs(request):
+
+    return render(request, 'CVs.html')

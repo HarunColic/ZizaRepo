@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+    {% load static %}
+	<title>ŽIŽA.ba | O nama</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{%  static 'style.css' %}"> <!-- include sa servera odgovarajuci -->
+	<link rel="stylesheet" type="text/css" href="{% static 'style-oglas.css' %}"> <!-- include sa servera odgovarajuci -->
+	<link rel="stylesheet" type="text/css" href="{% static 'style-tvrtkaProfil.css' %}"> <!-- include sa servera odgovarajuci -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <style type="text/css">
+		.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
+	</style>
+
+  <img src="/static/images/logoNew.png" class="logotipNavbarMali">
+
+    {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
+    {% include 'header.html' %}
+    {% endwith %}
+
+    <style type="text/css">
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+		@media only screen and (max-width: 990px){
+			body{
+			}
+		}
+    </style>
+
+<div class="glavniDio">
+		<div class="uvodniDio">
+			<div class="trazimo">
+				<h2><span>POPIS KOMPANIJA ČLANICA</h2>
+			</div>
+		</div>
+		<div class="tabelarni" style="display: none;">
+			<div>
+				<h3>SARAJEVO</h3>
+				<p>SJEDIŠTE</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3>INDUSTRIJA</h3>
+				<p>DJELATNOST</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3>13.000</h3>
+				<p>BROJ UPOSLENIH</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3>KLIKNI OVDJE</h3>
+				<p>KONTAKT</p>
+			</div>
+		</div>
+		<div class="detaljniOpis" style="display: none;">
+			<p>Lorem ipsum dolor sit amet, torquatos omittantur neglegentur te cum. Eos idque noluisse nominati et, cu nec duis summo ornatus. Ex vim laboramus vituperata. Vix novum vocent at, in duo congue decore. Ea eirmod vidisse ius, ex elitr facilisi vix, dicant nonumes definitionem nec ne. His dicant mucius debitis te, in harum aeterno scriptorem his. Quo in quaeque imperdiet, mei aeterno quaerendum an.</p>
+			<p>Ea quo constituam neglegentur, maluisset salutatus et vel. Eligendi democritum ea est. Eam lorem quodsi ad, et adhuc labitur sadipscing mea, nec essent accusamus torquatos ex. Pri soleat constituto et, latine tamquam pro no, eu iusto diceret eos. An per dicta facilisis definitiones.</p>
+			<p>Dico legere ex mea, cu habemus pertinax vis, ea mediocrem comprehensam sit. Impedit docendi offendit vix et. Tantas verear democritum sit an, mei invenire consetetur honestatis ei. Ad his iriure ceteros oporteat.</p>
+		</div>
+			<style type="text/css">
+			.tabelaRasa div:nth-child(1) div:nth-child(1) {
+			    display: flex;
+			    flex-direction: column;
+			    align-items: flex-start;
+			}
+			.tabelaRasa div:nth-child(1) div:nth-child(1) div:nth-child(1) {
+				margin-left: 0 !important;
+			}
+			.srce{
+				background-color: transparent;
+				box-shadow: none;
+				width: auto;
+				margin-right: 150px;
+				height: auto;
+			}
+			.srce img{
+				max-width: 200px;
+				max-width: 100px;
+			}
+			.tabelarniDio a{
+				text-decoration: none;
+				color: inherit;
+			}
+			a{ text-decoration:none !important; }
+		    .tabelaRasa:nth-child(1) {
+			    border-top-left-radius: 0px;
+			    border-top-right-radius: 0px;
+			}
+			.tabelaRasa:nth-last-child(1) {
+			    border-bottom-left-radius: 0px;
+			    border-bottom-right-radius: 0px;
+			}
+			.tabelarniDio a:nth-child(1) .tabelaRasa{
+				border-top-left-radius: 26px;
+			    border-top-right-radius: 26px;
+			}
+			.tabelarniDio a:last-child .tabelaRasa{
+				border-bottom-left-radius: 26px;
+			    border-bottom-right-radius: 26px;
+			}
+		</style>
+
+		<div class="uvodniDio tabelarniUvodniDio" style="margin-top: -100px">
+			<div class="trazimo">
+				<h2 style="display: none;"><span>AKTIVNI</span> OGLASI</h2>
+			</div>
+		</div>
+		<div class="uvodniDio tabelarniDio">
+            {% for f in kompanije %}
+            {% if userP is not None %}
+            <a href="{% url 'profilKorisnika' id=f.userID.pk %}"> <!-- link do profila firme -->
+                <div class="tabelaRasa">
+            {% else %}
+            <a class="tLog"> <!-- link do profila firme -->
+                <div class="tLogin tabelaRasa">
+            {% endif %}
+					<div>
+						<div>
+							<div>{{ f.userID.first_name }}</div> <!-- ime kompanije -->
+							<div>
+                                {% if f.categoryID.name is None %}
+                                    <span>Nije dostupno</span> <!-- djelatnost pod kojom se registrovala -->
+                                {% else %}
+                                    <span>{{ f.categoryID.name}}</span> <!-- djelatnost pod kojom se registrovala -->
+                                {% endif %}
+
+                                {% if f.categoryID.name is None %}
+                                    <span>
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
+                                    Nije dostupno<!-- sjediste firme -->
+								</span>
+                                {% else %}
+                                <span>
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
+                                    {% if f.userID.userprofile.location %}{{ f.userID.userprofile.location }} {% endif %}<!-- sjediste firme -->
+								</span>
+                                {% endif %}
+                            </div>
+						</div>
+						<div class="srce"><img {% if f.userID.userprofile.image %}src="{{ f.userID.userprofile.image.url }}{% endif %}"></div>
+					</div>
+				</div>
+			</a>
+            {% endfor %}
+			<!--<a href="#"> <!-- link do profila firme
+				<div class="tabelaRasa">
+					<div>
+						<div>
+							<div>META5</div> <!-- ime kompanije
+							<div>
+								<span>GRAĐEVINA</span> <!-- djelatnost pod kojom se registrovala
+								<span>
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!!
+									Mostar, Bosna i Hercegovina <!-- sjediste firme
+								</span>
+							</div>
+						</div>
+						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div>
+					</div>
+				</div>
+			</a>
+			<a href="#"> <!-- link do profila firme
+				<div class="tabelaRasa">
+					<div>
+						<div>
+							<div>META5</div> <!-- ime kompanije
+							<div>
+								<span>GRAĐEVINA</span> <!-- djelatnost pod kojom se registrovala
+								<span>
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!!
+									Mostar, Bosna i Hercegovina <!-- sjediste firme
+								</span>
+							</div>
+						</div>
+						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div>
+					</div>
+				</div>
+			</a> -->
+		</div>
+	</div>
+
+    {% include 'footer.html' %}
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'skripta.js' %}"></script> <!-- include sa servera odgovarajuci -->
+<script>
+    $(".tLog").click(function(){
+        var modal2 = document.getElementById('myModal2');
+        modal2.style.display = "block";
+    })
+</script>
+<script type="text/javascript">
+		$('#pocetna_nav').removeClass('selected');
+		$('#clanice_nav').addClass('selected');
+</script>
+</html>

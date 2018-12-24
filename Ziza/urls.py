@@ -60,9 +60,10 @@ urlpatterns = [
     url('mojaKarijera', AC_Views.mojaKarijera, name='mojaKarijera'),
     url('mailSvima', AC_Views.mailSvima, name='mailSvima'),
     url('izlog', P_Views.izlog, name='izlog'),
-
     url('testclanovi', AC_Views.testclanovi, name="testclanovi"),
     url('testprofil', AC_Views.testprofil, name="testprofil"),
+    url('CVs', AC_Views.CVs, name="CVs"),
+    url('korisnik', AC_Views.korisnik, name="korisnik"),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
