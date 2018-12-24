@@ -346,6 +346,7 @@ form.onsubmit = function() {
 
 $(document).ready( function() {
     $(".ql-editor").attr('spellcheck',false);
+    $('.ql-image').html('Postavi sliku').css('width', '90px').css('color', 'rgba(0,0,0,0.6)');
 });
 
 $('#aktivirajPregled').click(function(e){
@@ -377,6 +378,8 @@ $('#goBack').click(function(e){
 	$('.pregledTraka').css('display', 'none');
 	$("html, body").animate({ scrollTop: 0 }, "slow");
 });
+
+
 
 </script>
 </html>

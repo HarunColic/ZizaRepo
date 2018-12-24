@@ -45,7 +45,7 @@
         }
         
         @media screen and (max-width: 410px){
-        	.header, .footer{
+        	.header{
         		display: none;
         	}
         	body, .owl-carousel, .owl-stage-outer, .owl-stage, .testmoniali{
@@ -180,12 +180,6 @@ ul {list-style: none}
 					.testmoniali{
 						padding-bottom: 0;
 					}
-					.footer{
-						transform: scale(0.6);
-						margin-left: -500px;
-						margin-top: 0;
-						margin-bottom: 0;
-					}
 				}
 				@media screen and (max-width: 800px){
 					.bounce{
@@ -227,9 +221,6 @@ ul {list-style: none}
 					}
 					.owl-carousel.owl-loaded {
 					    margin-left: -200px;
-					}
-					.footer{
-						margin-left: -550px;
 					}
 					.header {
 					    margin-left: -90px;
@@ -527,12 +518,6 @@ ul {list-style: none}
 					.testmoniali{
 						padding-bottom: 0;
 					}
-					.footer{
-						transform: scale(0.6);
-						margin-left: -500px;
-						margin-top: 0;
-						margin-bottom: 0;
-					}
 				}
 				@media screen and (max-width: 800px){
 					.bounce{
@@ -574,9 +559,6 @@ ul {list-style: none}
 					}
 					.owl-carousel.owl-loaded {
 					    margin-left: -200px;
-					}
-					.footer{
-						margin-left: -550px;
 					}
 					.header {
 					    margin-left: -90px;
@@ -827,14 +809,14 @@ ul {list-style: none}
 		</div>
 		<div class="uvod__slike">
             {% if auth %}
-			<div class="uvod__slike--prijava tkon" data-type="1"></div>
-			<div class="uvod__slike--pcelaPrijava tkon" data-type="1"></div>
+			<div class="uvod__slike--prijava tkon2" data-type="1"></div>
+			<div class="uvod__slike--pcelaPrijava tkon2" data-type="1"></div>
 			<div class="uvod__slike--registracija tkon" data-type="2"></div>
 			<div class="uvod__slike--pcelaRegistracija tkon" data-type="2"></div>
 			<div class="uvod__slike--baloncic tkon" data-type="2">
 				<p class="animirajKucanje"></p>
 			</div>
-            <div class="uvod__slike--baloncic tkon" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
+            <div class="uvod__slike--baloncic tkon2" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
 				<p style="margin-right: -10px; margin-bottom: 80px; text-align: center;" class="animirajKucanje2"></p>
 			</div>
             {% else %}
@@ -1198,6 +1180,9 @@ ul {list-style: none}
 		}
     });
 
+ var clickBub = $(".tkon2").click(function(e){
+    	    location.href = "{% url 'anonimnaPretraga' id=1 %}";
+    });
 
     $('.regBox__lijevo--box').click(function(){
 		$('.regBox').css('height', '920px !important');

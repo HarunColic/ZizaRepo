@@ -24,6 +24,24 @@
   gtag('config', 'UA-128194280-1');
 </script>
 
+	<link rel="stylesheet" href="https://ziza.ba/static/tingle.min.css">
+	<script src="https://ziza.ba/static/tingle.min.js"></script>
+
+	<style type="text/css">
+		.tingle-modal-box__content{
+			background-image: linear-gradient(236deg, #fee552, #f7ba1d);
+			border-radius: 10px;
+			margin-right: -1px; 
+			z-index: 999999;
+		}
+		.tingle-modal-box{
+			border-radius: 10px;
+			z-index: 999999;
+		}
+		.popup_1 li:hover{
+			color: #000;
+		}
+	</style>
 
 <style>
 
@@ -347,7 +365,7 @@ ul {list-style: none}
   li:hover .saStrane{
   	visibility: visible !important;
   }
-  .konsaltingBottom, .sektorBottom, .konkursBottom{
+  .konsaltingBottom, .sektorBottom, .konkursBottom, .konkurs2Bottom{
   	background-color: #181818; width: 250px; height: auto; position: absolute;
     top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano SemiBold'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none; margin-left: 90px; font-size: 14px; color: #7c7a71;
   }
@@ -392,7 +410,7 @@ ul {list-style: none}
   .submenu{
   	margin-left: 20px !important;
   }
-  .mojaZiza--extraMen, .oglasi--extraMen{
+  .mojaZiza--extraMen, .oglasi--extraMen, .oglasi--extraMen2{
   	display: none;
   }
 
@@ -433,30 +451,49 @@ ul {list-style: none}
 			    		</li>
 			    	</a>
 			    	<style type="text/css">
-			    		.oglasi--navMen{
+			    		.oglasi--navMen, .oglasi--navMen2{
 			    			cursor: pointer;
 			    		}
 			    	</style>
 			    	<!-- prava lokacija -->
 					<li class="oglasi--navMen">
 						<div class="saStrane" style="top: 33px !important;"></div>
-						Oglasi
+						Postavite oglas
+					</li>
+					<li class="oglasi--navMen2">
+						<div class="saStrane" style="top: 75px !important;"></div>
+						Pregled oglasa
 					</li>
 			    	<a href="{% url 'konsalting' %}">
 			    		<li>
-			    			<div class="saStrane" style="top: 75px !important;"></div>
+			    			<div class="saStrane" style="top: 118px !important;"></div>
 			    			Konsalting
+			    		</li>
+			    	</a>
+			    	<a href="/onama">
+			    		<li>
+			    			<div class="saStrane" style="top: 160px !important;"></div>
+			    			O nama
+			    		</li>
+			    	</a>
+			    	<a href="/firme">
+			    		<li>
+			    			<div class="saStrane" style="top: 200px !important;"></div>
+			    			Članice
 			    		</li>
 			    	</a>
 			   	</ul>
 			   	<ul style="position: relative;" class="oglasi--extraMen">
-			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Oglasi</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 33px !important"></div>Kadrovska potražnja</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 75px !important;"></div>Poslovni oglas</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 118px !important;"></div>Bankarske usluge</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 160px !important;"></div>Usluge osiguranja</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 200px !important;"></div>Pregled poslovnih oglasa</li>
-			    	<li class="submenu tLogin"><div class="saStrane" style="top: 240px !important;"></div>Pregled konkursa</li>
+			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Postavite oglas</li>
+			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 33px !important"></div>Kadrovska potražnja</li>
+			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 75px !important;"></div>Poslovni oglas</li>
+			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 118px !important;"></div>Bankarske usluge</li>
+			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 160px !important;"></div>Usluge osiguranja</li>
+			   	</ul>
+			   	<ul style="position: relative;" class="oglasi--extraMen2">
+			    	<li style="color: #f89101" class="oglasi--reactivate2"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Pregled oglasa</li>
+			    	<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');"><div class="saStrane" style="top: 33px !important;"></div>Pregled poslovnih oglasa</li>
+			    	<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');"><div class="saStrane" style="top: 75px !important;"></div>Pregled konkursa</li>
 			   	</ul>
 			   	<div style="height: 1px; width: 100%; background: #f89101;"></div>
 			   	<div style="display: flex; align-items: center; justify-content: center; margin-top: 25px">
@@ -477,15 +514,21 @@ ul {list-style: none}
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
 				<span onclick="location.href='{% url 'home' %}'" class="selected" id="pocetna_nav">Početna</span>
-                <span class="konkurs" id="oglasi_nav">Oglasi
+                <span class="konkurs" id="oglasi_nav">Postavite oglas
 					<div class="konkursBottom">
 					    <ul>
-					    	<li class="tLogin" ><div class="saStrane" ></div> Kadrovska potraznja </li>
-					    	<li class="tLogin" ><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li>
-					    	<li class="tLogin" ><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li>
-					    	<li class="tLogin" ><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li>
-                            <li class="tLogin" ><div class="saStrane" style="top: 160px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled poslovnih oglasa</li>
-                            <li class="tLogin" ><div class="saStrane" style="top: 200px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled konkursa</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" ></div> Kadrovska potraznja </li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li>
+					    </ul>
+					</div>
+				</span>
+				 <span class="konkurs2" id="oglasi_nav">Pregled oglasa
+					<div class="konkurs2Bottom">
+					    <ul>
+                            <li onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');"><div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled poslovnih oglasa</li>
+                            <li  onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');"><div class="saStrane" style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled konkursa</li>
 					    </ul>
 					</div>
 				</span>
@@ -555,7 +598,7 @@ ul {list-style: none}
   li:hover .saStrane{
   	visibility: visible !important;
   }
-  .konsaltingBottom, .sektorBottom, .konkursBottom, .postavkeBottom{
+  .konsaltingBottom, .sektorBottom, .konkursBottom, .konkurs2Bottom, .postavkeBottom{
   	background-color: #181818; width: 250px; height: auto; position: absolute;
     top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano SemiBold'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none; margin-left: 90px; font-size: 14px; color: #7c7a71;
   }
@@ -606,7 +649,7 @@ ul {list-style: none}
   .submenu{
   	margin-left: 20px !important;
   }
-  .mojaZiza--extraMen, .oglasi--extraMen{
+  .mojaZiza--extraMen, .oglasi--extraMen, .oglasi--extraMen2{
   	display: none;
   }
 
@@ -624,24 +667,28 @@ ul {list-style: none}
 			<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
 			    <ul style="position: relative;" class="mainNav">
 			    	<a href="{% url 'home' %}"><li><div class="saStrane"></div>Početna</li></a>
-                        <li class="oglasi--navMen"><div class="saStrane" style="top: 78px !important;"></div>Oglasi</li>
+                    <li class="oglasi--navMen"><div class="saStrane" style="top: 78px !important;"></div>Postavite oglas</li>
+                     <li class="oglasi--navMen2"><div class="saStrane" style="top: 78px !important;"></div>Pregled oglasa</li>
 			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 117px !important;"></div>Konsalting</li></a>
 			    	<a href="/onama"><li><div class="saStrane" style="top: 160px !important;"></div>O nama</li></a>
 			    	<a href="/firme"><li><div class="saStrane" style="top: 200px !important;"></div>Članice</li></a>
 			   	</ul>
 			   	<ul style="position: relative;" class="oglasi--extraMen">
-			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Oglasi</li>
-			    	<a href="{% url 'newpost' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 33px !important"></div>Kadrovska potražnja</li></a>
-			    	<a href="{% url 'newpotraznja' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 75px !important;"></div>Poslovni oglas</li></a>
-			    	<a href="{% url 'bankUsluge' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 118px !important;"></div>Bankarske usluge</li></a>
-			    	<a href="{% url 'osiguranjeUsluge' %}"><li class="submenu tLogin"><div class="saStrane" style="top: 160px !important;"></div>Usluge osiguranja</li></a>
-			    	<a href="{% url 'anonimnaPretraga' id=2 %}"><li class="submenu tLogin"><div class="saStrane" style="top: 200px !important;"></div>Pregled poslovnih oglasa</li></a>
-			    	<a href="{% url 'anonimnaPretraga' id=1 %}"><li class="submenu tLogin"><div class="saStrane" style="top: 240px !important;"></div>Pregled konkursa</li></a>
+			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Postavite oglas</li>
+			    	<a href="{% url 'newpost' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 33px !important"></div>Kadrovska potražnja</li></a>
+			    	<a href="{% url 'newpotraznja' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 75px !important;"></div>Poslovni oglas</li></a>
+			    	<a href="{% url 'bankUsluge' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 118px !important;"></div>Bankarske usluge</li></a>
+			    	<a href="{% url 'osiguranjeUsluge' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 160px !important;"></div>Usluge osiguranja</li></a>
+			   	</ul>
+			   	<ul style="position: relative;" class="oglasi--extraMen2">
+			    	<li style="color: #f89101" class="oglasi--reactivate2"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Pregled oglasa</li>
+			    	<a href="{% url 'anonimnaPretraga' id=2 %}"><li class="submenu"><div class="saStrane" style="top: 33px !important;"></div>Pregled poslovnih oglasa</li></a>
+			    	<a href="{% url 'anonimnaPretraga' id=1 %}"><li class="submenu"><div class="saStrane" style="top: 75px !important;"></div>Pregled konkursa</li></a>
 			   	</ul>
 			   	<div style="height: 1px; width: 100%; background: #f89101;"></div>
 			   	<div style="display: flex; align-items: center; justify-content: center; margin-top: 25px">
 			   		 <a href="{% url 'signout' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #ffffff; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;" class="tLogin">ODJAVA</div></a>
+			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;">ODJAVA</div></a>
                     {% if usr == 'comp' %}
 			   		 <a href="{% url 'dashboard' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
 			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">MOJA ŽIŽA</div></a>
@@ -663,7 +710,7 @@ ul {list-style: none}
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
 				<span onclick="location.href='/home'" class="pocetNa">Početna</span>
-				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs">Oglasi
+				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs">Postavite oglas
                     {% if usr == 'comp' %}
 					<div class="konkursBottom">
 					    <ul>
@@ -671,8 +718,16 @@ ul {list-style: none}
 					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li></a>
 					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li></a>
 					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li></a>
-                            <a href="{% url 'anonimnaPretraga' id=2 %}" ><li><div class="saStrane" style="top: 160px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled poslovnih oglasa</li></a>
-                            <a href="{% url 'anonimnaPretraga' id=1 %}" ><li><div class="saStrane" style="top: 200px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled konkursa</li></a>
+					    </ul>
+					</div>
+                        {% endif %}
+				</span>
+				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs2">Pregled oglasa
+                    {% if usr == 'comp' %}
+					<div class="konkurs2Bottom">
+					    <ul>
+                            <a href="{% url 'anonimnaPretraga' id=2 %}" ><li><div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled poslovnih oglasa</li></a>
+                            <a href="{% url 'anonimnaPretraga' id=1 %}" ><li><div class="saStrane" style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled konkursa</li></a>
 					    </ul>
 					</div>
                         {% endif %}
@@ -739,6 +794,12 @@ ul {list-style: none}
 		$('.konkursBottom').css('display', 'none');
 	});
 
+	$( ".konkurs2" ).mouseover(function() {
+		$('.konkurs2Bottom').css('display', 'block');
+	}).mouseout(function() {
+		$('.konkurs2Bottom').css('display', 'none');
+	});
+
 	$( ".postavke" ).mouseover(function() {
 		$('.postavkeBottom').css('display', 'block');
 	}).mouseout(function() {
@@ -757,6 +818,10 @@ ul {list-style: none}
 	});
 	$('.oglasi--navMen, .oglasi--reactivate').click(function(){
 		$('.oglasi--extraMen').toggle();
+		$('.mainNav').toggle();
+	});
+	$('.oglasi--navMen2, .oglasi--reactivate2').click(function(){
+		$('.oglasi--extraMen2').toggle();
 		$('.mainNav').toggle();
 	});
 	$('.tLogin, .tRegister').click(function(){
@@ -806,3 +871,20 @@ ul {list-style: none}
 
   	}
 </style>
+<script type="text/javascript">
+
+	
+	var modalTinyNoFooter = new tingle.modal({
+	    beforeOpen: function() {
+	    	$('.konkursBottom, .mobileBottom').css('display', 'none');
+	    }
+	});
+
+	$('.js-tingle-modal-1').click(function(){
+		modalTinyNoFooter.open();
+	});
+
+
+
+	modalTinyNoFooter.setContent('<div class="popup_1" style="font-family: Galano Regular; border-radius: 10px"> <p>Ukoliko se prijavite moći ćete postavljati četiri vrste oglasa:</p> <ol> <li style="font-family: Galano SemiBold">Kadrovska potražnja</li> <p>Preko ovog oglasa možete samostalno kreirati konkurs za posao. Prednost postavljanja konkursa za posao preko Žiže je ta Vas naš sistem preko traženih kompetencija automatski spaja sa potencijalnim kandidatima koji su ostavili svoj CV kod nas na stranicu. Dakle, pored onih ljudi koji su konkurisali na posao, dobićete šansu da stupite u kontakt sa ljudima koji imaju kompetencije da zadovolje Vašim zahtjevima a nisu direktno konkurisali iz nekog određenog razloga (npr. Možda su zaposleni pa ne gledaju toliko aktivno konkurse ali samim tim što su ostavili svoj CV postoji šansa da će prihvatiti bolju ponudu) na Vaš konkurs.</p> <li style="font-family: Galano SemiBold">Poslovni oglasi</li> <p>Preko ovog oglasa kompanije mogu postavljati oglase za ponudu, potražnju ili partnerstvu.</p> <p style="font-family: Galano Light">- Primjeri ponude:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Ukoliko imate polovnu proizvodnu liniju koju želite prodati jer ste nabavili drugu i bolju, objavite preko Žiže i usmjerite je direktno na djelatnost koje se tiče ta proizvodna linija, npr. Metalni ili drvni sektor. Sve članice koje su iz tog sektora prijavljene na Žiža poslovnoj platformi će dobiti tu poruku. Na taj način šaljete direktno ponudu potencijalnim kupcima iz poslovnog sektora.</span></li> <li><span style="font-family: Galano Regular">Prodajete svoje posolvne nekretnine, auta ili bilo šta, objavite na Žiža poslovnoj platformi i usmjerite direktno na djelatnost za koju je Vaša ponuda relevantna.</span></li> </ol> <p style="font-family: Galano Light">Primjeri potražnje:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Gradite zgradu, hotel ili bilo šta na određenom mjestu, opišete i objavite potražnju preko Žiža poslovne platforme te je usmjerite ka građevinskom sektoru. Sve građevinske kompanije koje su članica Žiža poslovne platforme dobiće informaciju o Vašim namjerama, te će ukoliko su zainteresovani poslati svoju ponudu. Vi dobijate mogućnost da izaberete najbojlu ponudu a građevinske kompanije dobiju informaciju o mogućnosti angažmana.</span></li> <li><span style="font-family: Galano Regular">Raspišete privatni tender kako bi došli do kompanija koje su u stanju da vrše poslove koje vi ne želite unutar Vaše kompanije. Npr. Raspišete tender za čišćenje ili za montažu vaših štandova na sajmovima itd...</span></li> </ol> <p style="font-family: Galano Light">Primjeri partnerstva:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Ukoliko dobijete šansu za posao u nekoj stranoj zemlji a nemate tehničkih ili ljudskih resursa da količinski, dovljno brzo i kvalitetno zadovoljite kupca, preko Žiža poslovne platforme možete opisati projekat i usmjeriti ga ka djelatnosti koja Vas se tiče i pronaći partnera koji je u tom periodu u mogućnosti zajedno sa Vama proizvesti ono što je potrebno da izađete na strano tržište i zadovoljite rokove, količine i kupca uopšte. Imajte na umu da uvijek ne možete računati na Vaše stalne partnere, jer niko ne garantuje da su njihovi resursi baš u tom momentu slobodni za Vaš projekat.</span></li> </ol><br> <li style="font-family: Galano SemiBold">Bankarske usluge</li> <p>Preko ovog oglasa kompanije mogu tražiti najbolje finansijske mogućnosti. Jednostavno izrazite želju da želite kredit ili lizing i Žiža poslovna platforma Vas spoji sa većinom banaka u BiH. Banke Vas kontaktiraju a Vi izaberete najbolju ponudu. Ovaj vid usluge ostaje poznat samo Vama i bankama koje su došle u kontakt sa Vama.</p> <li style="font-family: Galano SemiBold">Usluge osiguranja</li> <p>Preko ovog oglasa kompanije mogu tražiti usluge osiguranja. Žiža poslovna platforma Vas spoji sa većinom osiguravajućih kuća u BiH. Osiguranja Vas kontaktiraju i Vi izaberete najbolju ponudu. Ovaj vid uslug ostaj poznat samo Vama i osiguravajućim kućama koje su došle u kontakt sa Vama.</p> </ol> </div>');
+</script>
