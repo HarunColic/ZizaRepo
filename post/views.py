@@ -223,7 +223,7 @@ def showpost(request, id):
     else:
         post.views += 1
         post.save()
-        return render(request, 'oglas.html', {'post': post, 'userP': userP, 'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
+        return render(request, 'oglas.html', {'auth': True, 'post': post, 'userP': userP, 'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
 
 
 def bankUsluge(request):

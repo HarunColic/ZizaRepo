@@ -83,7 +83,9 @@
 	</style>
 
 <body>
+    {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
 	 {% include 'header.html' %}
+{% endwith %}
 	 <style type="text/css">
     	body{
     		background: #f9f5e5 !important;
