@@ -28,6 +28,7 @@ import  os
 from threading import Thread
 from itertools import chain
 from django.core.paginator import Paginator
+from django.core.mail import EmailMultiAlternatives
 
 
 def superUser(user):
@@ -173,10 +174,10 @@ def sendmail(request, user, recipientMail):
         'token': account_activation_token.make_token(user),
     })
 
-    email = EmailMessage(
+    email = EmailMultiAlternatives(
         mail_subject, message, to=[recipientMail]
     )
-
+    email.attach_alternative(message, "text/html")
     email.send()
 
 
