@@ -9,11 +9,29 @@
     <meta charset="utf-8">
     {% load static %}<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-	<link rel="stylesheet" href="https://meta5.io/css/modal-video.min.css">
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.4.7/plyr.css">
 </head>
-<body style="margin-bottom: 100px">
-
+<body>
 	<style type="text/css">
+	.plyr__control--overlaid{
+		background: #f6b81b;
+	}
+	.plyr--full-ui input[type=range]{
+		color: #f6b81b;
+	}
+			}
+		.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
+		    background: #e4ab1b;
+		    color: #fff;
+		}
+		.plyr__control.plyr__tab-focus{
+			box-shadow: 0 0 0 5px rgba(228,171,27,.56);
+		}
+</style>
+	<style type="text/css">
+	.footer{
+		margin-top: 100px;
+	}
 	@media screen and (max-width: 500px){
   		*:not(li, .mobile__header){
 			overflow-x: hidden !important;
@@ -455,18 +473,11 @@
 		}
     </style>
 
-	<div class="video">
-		<h1>ŽIŽA</h1>
-		<p>CONNECT AND IMPROVE YOUR BUSINESS</p>
-
-		<style type="text/css">
-			.video__circle{
-				cursor: pointer;   
-			}
-		</style>
-
-		<div class="video__circle playButtonContainer js-video-button" data-video-id="X-5q2G2icpk"><img src="{% static 'images/play.png' %}" width="20px" height="20px"></div>
+	
+    <div class="video plyr__video-embed" id="player" style="max-width: 1160px; max-height: 620px; margin: 0 auto; margin-top: 100px; border-top-right-radius: 15px; border-top-left-radius: 15px">
+		<iframe src="https://www.youtube.com/embed/iTPVetvsZUo?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
 	</div>
+
 	<div class="tekst" style="padding-bottom: 187px">
 		<p>Uzet ćemo sebi za pravo reći kako niste pronašli odgovarajuću stanicu. Nadamo se da ne zamjerate. Naime, u potrazi za odgovorima na Vaša pitanja, gotovo smo sigurni da niste došli do središta traženih rješenja. U ŽIŽU svega. Do nas.</p>
 
@@ -761,4 +772,6 @@
 					$('#pocetna_nav').removeClass('selected');
 					$('#onama_nav').addClass('selected');
 				</script>
+				<script src="https://cdn.plyr.io/3.4.7/plyr.polyfilled.js"></script>
+<script>const player = new Plyr('#player');</script>
 </html>

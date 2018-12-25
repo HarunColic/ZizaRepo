@@ -237,5 +237,48 @@
 		$('#djelatnost').css('text-align', 'center');
 	}
 
+	if($('#djelatnost').html() == 'Drva industrija'){
+		$('#djelatnost').html('Drvna ind.');
+	}
+	if($('#djelatnost').html() == 'Metalna industrija'){
+		$('#djelatnost').html('Metalna ind.');
+	}
+	if($('#djelatnost').html() == 'Hemijska industrija'){
+		$('#djelatnost').html('Hemijska ind.');
+	}
+	if($('#djelatnost').html() == 'Vodene i ekološke'){
+		$('#djelatnost').html('Ekološka');
+	}
+	if($('#djelatnost').html() == 'Farmaceutska industrija'){
+		$('#djelatnost').html('Farmacija');
+	}
+	if($('#djelatnost').html() == 'Prijevozne i skladišne'){
+		$('#djelatnost').html('Transport');
+	}
+	if($('#djelatnost').html() == 'Poslovanje nekretninama'){
+		$('#djelatnost').html('Nekretnine');
+	}
+	if($('#djelatnost').html() == 'Stručne, ZnanstveneTehničke'){
+		$('#djelatnost').html('Znanstvena');
+	}
+	if($('#djelatnost').html() == 'Administrativne i uslužne'){
+		$('#djelatnost').html('Administracija');
+	}
+	if($('#djelatnost').html() == 'Javno upravne i odbrambene'){
+		$('#djelatnost').html('Javna uprava');
+	}
+	if($('#djelatnost').html() == 'Ostale uslužne'){
+		$('#djelatnost').html('Uslužna');
+	}
+	if($('#djelatnost').html() == 'Zabavne i rekreacijske'){
+		$('#djelatnost').html('Rekreacija');
+	}
+
+
+	var sadrzajTeksta = document.getElementsByClassName('detaljniOpis')[0].innerHTML
+	var procisceniSadrzaj = sadrzajTeksta.replace(new RegExp('<p><br></p>', 'g'), "");
+	document.getElementsByClassName('detaljniOpis')[0].innerHTML = procisceniSadrzaj;
+
+
 </script>
 </html>

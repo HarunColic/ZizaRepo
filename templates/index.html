@@ -14,6 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <style>
+
+
         .slikaPolicajac, .slikaBiznismen, .slikaVodoinstalater{
             background-image: url("{%  static trecaSlika %}");
             background-repeat: no-repeat;
@@ -796,7 +798,7 @@ ul {list-style: none}
 
 	<div class="uvod">
 		<div class="uvod__linkovi">
-			<img onclick="alert('RSS Feed je prazan!')" src="../static/images/optimised/rss-min.png" draggable="false" width="16px" height="16px" style="cursor: pointer;">
+			
 			<a href="https://www.linkedin.com/company/ziza-connect-and-improve-your-business/"><img src="../static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
 			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="../static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
 			<p>Pratite nas</p>
@@ -1092,6 +1094,12 @@ ul {list-style: none}
 
 
 		    <style type="text/css">
+		    body{
+		    	background-color: #f9f5e5 !important;
+		    }
+		    .uvod {
+    background: white !important;
+}
 		    @media screen and (max-width: 1160px){
 		    	.regBox label, .regBox select {
 		    		font-size: 15px;

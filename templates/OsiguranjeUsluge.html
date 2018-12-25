@@ -19,6 +19,33 @@
 
 </head>
 <style type="text/css">
+.ql-container.ql-snow{
+	height: 300px;
+}
+.detaljniOpis img{
+			max-width: 1000px;
+			height: auto;
+		}
+		@media only screen and (max-width: 1175px){
+			.detaljniOpis img{
+				max-width: 700px;
+			}
+		}
+		@media only screen and (max-width: 840px){
+			.detaljniOpis img{
+				max-width: 450px;
+			}
+		}
+		@media only screen and (max-width: 505px){
+			.detaljniOpis img{
+				max-width: 400px;
+			}
+		}
+		@media only screen and (max-width: 415px){
+			.detaljniOpis img{
+				max-width: 300px;
+			}
+		}
 		.logotipNavbarMali{
 			position: absolute;
 			top: 17px;
@@ -393,23 +420,7 @@
 			<p>Ea quo constituam neglegentur, maluisset salutatus et vel. Eligendi democritum ea est. Eam lorem quodsi ad, et adhuc labitur sadipscing mea, nec essent accusamus torquatos ex. Pri soleat constituto et, latine tamquam pro no, eu iusto diceret eos. An per dicta facilisis definitiones.</p>
 			<p>Dico legere ex mea, cu habemus pertinax vis, ea mediocrem comprehensam sit. Impedit docendi offendit vix et. Tantas verear democritum sit an, mei invenire consetetur honestatis ei. Ad his iriure ceteros oporteat.</p>
 		</div>
-		<div class="navigacijaFooter">
-			<div class="prevTraka">
-				<img src="{% static 'images/lijevoOglas.png' %}" style="cursor: pointer;" class="lijevoEd">
-				<div>
-					<span>PRIJAŠNJI OGLAS</span>
-					<span></span>
-				</div>
-			</div>
-			<img src="{% static 'images/prijavaoglas.png' %}" class="srednjaSlika" style="cursor: pointer;">
-			<div class="prevTraka" style="justify-content: flex-end;">
-				<div style="margin-left: 0">
-					<span>SLJEDEĆI OGLAS</span>
-					<span style="color: #f89101; text-align: right;"></span>
-				</div>
-				<img src="{% static 'images/desnoOglas.png' %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
-			</div>
-		</div>
+		
 	</div> <!-- glavniDio END -->
 	
 		<style type="text/css">

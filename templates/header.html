@@ -741,7 +741,7 @@ ul {list-style: none}
 			<div class="header__navigation--dugmad">
 				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
 					<div style="width: 42px; height: 42px; border-radius: 50%; background: url({% if var3.image %}{{var3.image.url }}{% endif %}); background-position: center; background-size: cover"></div>
-					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px; margin-right: 50px" class="postavke">{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px"></i>
+					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px; margin-right: 50px" class="postavke"><div>{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px; display: inline;"></i></div>
 					<div class="postavkeBottom">
 					    <ul style="position: relative;">
 					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>Profil</li></a>

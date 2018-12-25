@@ -20,6 +20,9 @@
 <body>
 
   <style type="text/css">
+  .footer{
+  	margin-top: 100px;
+  }
 		.logotipNavbarMali{
 			position: absolute;
 			top: 17px;
@@ -81,7 +84,7 @@
 <div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-				<h2><span>POPIS KOMPANIJA ČLANICA</h2>
+				<h2><span>POPIS FIZIČKIH LICA</h2>
 			</div>
 		</div>
 		<div class="tabelarni" style="display: none;">
@@ -159,76 +162,62 @@
 			</div>
 		</div>
 		<div class="uvodniDio tabelarniDio">
-            {% for f in kompanije %}
-            {% if userP is not None %}
-            <a href="{% url 'profilKorisnika' id=f.userID.pk %}"> <!-- link do profila firme -->
-                <div class="tabelaRasa">
-            {% else %}
-            <a class="tLog"> <!-- link do profila firme -->
-                <div class="tLogin tabelaRasa">
-            {% endif %}
-					<div>
-						<div>
-							<div>{{ f.userID.first_name }}</div> <!-- ime kompanije -->
-							<div>
-                                {% if f.categoryID.name is None %}
-                                    <span>Nije dostupno</span> <!-- djelatnost pod kojom se registrovala -->
-                                {% else %}
-                                    <span>{{ f.categoryID.name}}</span> <!-- djelatnost pod kojom se registrovala -->
-                                {% endif %}
 
-                                {% if f.categoryID.name is None %}
-                                    <span>
-									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
-                                    Nije dostupno<!-- sjediste firme -->
-								</span>
-                                {% else %}
-                                <span>
-									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
-                                    {% if f.userID.userprofile.location %}{{ f.userID.userprofile.location }} {% endif %}<!-- sjediste firme -->
-								</span>
-                                {% endif %}
-                            </div>
-						</div>
-						<div class="srce"><img {% if f.userID.userprofile.image %}src="{{ f.userID.userprofile.image.url }}{% endif %}"></div>
-					</div>
-				</div>
-			</a>
-            {% endfor %}
-			<!--<a href="#"> <!-- link do profila firme
+			<style type="text/css">
+				.custom-file-upload {
+    border-radius: 30px;
+    background-color: #01aad1;
+    box-shadow: 0px 5px 40px 0 rgba(1, 170, 209, 0.3);
+    padding: 14px 35px 14px 35px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Galano Black';
+    cursor: pointer;
+}
+			</style>
+            
+			<a href="#"> 
 				<div class="tabelaRasa">
 					<div>
 						<div>
-							<div>META5</div> <!-- ime kompanije
+							<div>Alem Tatarević</div> <!-- ime i prezime korisnika -->
 							<div>
-								<span>GRAĐEVINA</span> <!-- djelatnost pod kojom se registrovala
 								<span>
-									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!!
-									Mostar, Bosna i Hercegovina <!-- sjediste firme
+									<label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px;" onclick="alert('heurka!')">
+						    		PREUZMI CV
+							</label>
+								</span> 
+								<span>
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ostavi ovako, ne diraj -->
+									Cazin, Bosna i Hercegovina <!-- grad, Bosna i Hercegovina -->
 								</span>
 							</div>
 						</div>
-						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div>
+						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div> <!-- profilna slika korisnika-->
 					</div>
 				</div>
 			</a>
-			<a href="#"> <!-- link do profila firme
+			<a href="#"> 
 				<div class="tabelaRasa">
 					<div>
 						<div>
-							<div>META5</div> <!-- ime kompanije
+							<div>Alem Tatarević</div> <!-- ime i prezime korisnika -->
 							<div>
-								<span>GRAĐEVINA</span> <!-- djelatnost pod kojom se registrovala
 								<span>
-									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!!
-									Mostar, Bosna i Hercegovina <!-- sjediste firme
+									<label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px; background-color: #f27474" onclick="alert('heurka!')">
+						    		NEMA CV
+							</label>
+								</span> 
+								<span>
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ostavi ovako, ne diraj -->
+									Cazin, Bosna i Hercegovina <!-- grad, Bosna i Hercegovina -->
 								</span>
 							</div>
 						</div>
-						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div>
+						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div> <!-- profilna slika korisnika-->
 					</div>
 				</div>
-			</a> -->
+			</a>
 		</div>
 	</div>
 

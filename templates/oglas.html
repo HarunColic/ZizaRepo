@@ -12,9 +12,33 @@
 	<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "style-oglas.css" %}">
 	<style type="text/css">
+		.detaljniOpis img{
+			max-width: 1000px;
+			height: auto;
+		}
+		@media only screen and (max-width: 1175px){
+			.detaljniOpis img{
+				max-width: 700px;
+			}
+		}
+		@media only screen and (max-width: 840px){
+			.detaljniOpis img{
+				max-width: 450px;
+			}
+		}
+		@media only screen and (max-width: 505px){
+			.detaljniOpis img{
+				max-width: 400px;
+			}
+		}
+		@media only screen and (max-width: 415px){
+			.detaljniOpis img{
+				max-width: 300px;
+			}
+		}
 		.detaljniOpis p{
 			margin-top: 5px;
-			margin-bottom: 10px;
+			margin-bottom: 5px;
 		}
 		.detaljniOpis{
 			font-family: 'Galano Regular';
@@ -27,7 +51,69 @@
 
 	</style>
 </head>
+ <style type="text/css">
+		.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+		
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
+
+	</style>
+
 <body>
+	 {% include 'header.html' %}
+	 <style type="text/css">
+    	body{
+    		background: #f9f5e5 !important;
+    	}
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__navigation{
+    		box-shadow: none;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+		@media only screen and (max-width: 990px){
+			body{
+				margin-top: -20px !important;
+			}
+		}
+    </style>
+    <img src="/static/images/logoNew.png" class="logotipNavbarMali">
 	<div class="coverSlika">
 		<div class="navigacija">
 			<div class="breadcrumb">
@@ -136,6 +222,7 @@
 			</div>
 		</div>
 	</div>
+	{% include 'footer.html' %}
 {% load sweetify %}
 {% sweetify %}
 </body>
@@ -149,6 +236,10 @@
 </script>
 	<script type="text/javascript">
 		$('#strucnaSpremChange').html($('#strucnaSpremChange').html().substring(0, 3));
+
+		var sadrzajTeksta = document.getElementsByClassName('detaljniOpis')[0].innerHTML
+	var procisceniSadrzaj = sadrzajTeksta.replace(new RegExp('<p><br></p>', 'g'), "");
+	document.getElementsByClassName('detaljniOpis')[0].innerHTML = procisceniSadrzaj;
 	</script>
 
 </html>

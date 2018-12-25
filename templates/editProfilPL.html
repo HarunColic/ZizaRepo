@@ -353,6 +353,7 @@
 	#tag-input-1{
 		padding-bottom: 15px;
 		padding-top: 15px;
+		background-color: #eeede7;
 	}
 	.tag-sel-ctn .tag-sel-item:hover{
 	    background: #565656;
@@ -688,7 +689,7 @@ $("#imageUpload").change(function() {
              * <p>Restricts or allows the user to validate typed entries.</p>
              * Defaults to <code>true</code>.
              */
-            allowFreeEntries: true,
+            allowFreeEntries: false,
 
             /**
              * @cfg {String} cls
@@ -783,7 +784,7 @@ $("#imageUpload").change(function() {
              * Defaults to <code>false</code>.
              */
             expandOnFocus: function() {
-                return cfg.editable ? false : true;
+                return cfg.editable ? true : false;
             },
 
             /**
@@ -1671,7 +1672,7 @@ $("#imageUpload").change(function() {
                     // tag representing selected value
                     if(asText === true) {
                         selectedItemEl = $('<div/>', {
-                            'class': 'tag-sel-item tag-sel-text ' + cfg.selectionCls,
+                            'class': 'tag-sel-item ' + cfg.selectionCls,
                             html: selectedItemHtml + (index === (_selection.length - 1) ? '' : ',')
                         }).data('json', value);
                     }

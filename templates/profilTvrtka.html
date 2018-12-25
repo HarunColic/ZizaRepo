@@ -23,6 +23,33 @@
 			left: 292px;
 			z-index: 999;
 		}
+
+		.detaljniOpis img{
+			max-width: 1000px;
+			height: auto;
+		}
+		@media only screen and (max-width: 1175px){
+			.detaljniOpis img{
+				max-width: 700px;
+			}
+		}
+		@media only screen and (max-width: 840px){
+			.detaljniOpis img{
+				max-width: 450px;
+			}
+		}
+		@media only screen and (max-width: 505px){
+			.detaljniOpis img{
+				max-width: 400px;
+			}
+		}
+		@media only screen and (max-width: 415px){
+			.detaljniOpis img{
+				max-width: 300px;
+			}
+		}
+
+
 		@media only screen and (max-width: 1700px){
 			.logotipNavbarMali{
 				left: 200px;
@@ -272,7 +299,24 @@
 				</div>
 			</div>
 			-->
-			<p>0 stranica</p>
+			<style type="text/css">
+				.navigacijaTipke{
+					margin-left: 0 !important;
+					margin-top: 20px;
+				}
+			</style>
+			<div style="display: flex; justify-content: center;">
+			<div class="navigacijaTipke" style="margin-bottom: 20px">
+				{% for r in rng %}
+
+                    {% if r == page %}
+                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="activTip">{{ r }}</div>
+                    {% else %}
+                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="">{{ r }}</div>
+                    {% endif %}
+                {% endfor %}
+			</div>
+		</div>
 		</div>
     {% with prev=page|add:-1 next=page|add:1 %}
 		<div class="navigacijaFooter" style="margin-top: 10px">
@@ -290,18 +334,6 @@
 			</div>
 		</div>
     {% endwith %}
-		<div class="uvodniDio">
-			<div class="navigacijaTipke" style="margin-bottom: 20px">
-				{% for r in rng %}
-
-                    {% if r == page %}
-                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="activTip">{{ r }}</div>
-                    {% else %}
-                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="">{{ r }}</div>
-                    {% endif %}
-                {% endfor %}
-			</div>
-		</div>	
 	</div>
 
 
@@ -328,5 +360,45 @@
 		$('#djelatnost').css('text-align', 'center');
 	}
 
+	if($('#djelatnost').html() == 'Drva industrija'){
+		$('#djelatnost').html('Drvna ind.');
+	}
+	if($('#djelatnost').html() == 'Metalna industrija'){
+		$('#djelatnost').html('Metalna ind.');
+	}
+	if($('#djelatnost').html() == 'Hemijska industrija'){
+		$('#djelatnost').html('Hemijska ind.');
+	}
+	if($('#djelatnost').html() == 'Vodene i ekološke'){
+		$('#djelatnost').html('Ekološka');
+	}
+	if($('#djelatnost').html() == 'Farmaceutska industrija'){
+		$('#djelatnost').html('Farmacija');
+	}
+	if($('#djelatnost').html() == 'Prijevozne i skladišne'){
+		$('#djelatnost').html('Transport');
+	}
+	if($('#djelatnost').html() == 'Poslovanje nekretninama'){
+		$('#djelatnost').html('Nekretnine');
+	}
+	if($('#djelatnost').html() == 'Stručne, ZnanstveneTehničke'){
+		$('#djelatnost').html('Znanstvena');
+	}
+	if($('#djelatnost').html() == 'Administrativne i uslužne'){
+		$('#djelatnost').html('Administracija');
+	}
+	if($('#djelatnost').html() == 'Javno upravne i odbrambene'){
+		$('#djelatnost').html('Javna uprava');
+	}
+	if($('#djelatnost').html() == 'Ostale uslužne'){
+		$('#djelatnost').html('Uslužna');
+	}
+	if($('#djelatnost').html() == 'Zabavne i rekreacijske'){
+		$('#djelatnost').html('Rekreacija');
+	}
+
+	var sadrzajTeksta = document.getElementsByClassName('detaljniOpis')[0].innerHTML
+	var procisceniSadrzaj = sadrzajTeksta.replace(new RegExp('<p><br></p>', 'g'), "");
+	document.getElementsByClassName('detaljniOpis')[0].innerHTML = procisceniSadrzaj;
 </script>
 </html>

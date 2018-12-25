@@ -11,8 +11,11 @@
     {% load static %}
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
-<body style="margin-bottom: 100px">
+<body>
 	<style type="text/css">
+	.footer{
+		margin-top: 100px;
+	}
 	.konsaltingBottom{
 		background-color: #262626;
 		width: 250px;
@@ -32,7 +35,6 @@
 		cursor: pointer;
 	}
 	body{
-		background: white;
 		/* background-image: url(images/background.png); */
 	}
 	.oNama{
@@ -71,7 +73,7 @@
 </style>
 <style type="text/css">
 	body{
-		background-color: #f9f5e5;
+		background-color: #f9f5e5 !important;
 	}
 	p{
 		margin: 0;
@@ -184,7 +186,7 @@
 		font-weight: 500;
 	}
 	ol {list-style: none}
-	li::before {
+	.tekst li::before {
 		content: "✔";
 		font-size: 20px;
 		color: #fecd35;
@@ -261,7 +263,7 @@
 			.interim__slika{
 				width: 350px !important;
 			}
-			.tekst li::before{
+			.tekst .tekst li::before{
 				padding-right: 5px !important;
 			}
 			.tekst{
@@ -300,7 +302,7 @@
 			.interim__slika{
 				width: 350px !important;
 			}
-			.tekst li::before{
+			.tekst .tekst li::before{
 				padding-right: 5px !important;
 			}
 			.tekst{
@@ -390,7 +392,7 @@
 		}
     </style>
 
-	<div class="tekst" style="padding-bottom: 187px; margin-top: 50px">
+	<div class="tekst" style="margin-top: 50px; padding-bottom: 20px">
 		<p>Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta. </p>
 		<a href="{% url 'konsalting_detailed' slug='finansijsko-savjetovanje' %}">
 			<h3 >Finansijsko <span>savjetovanje</span><img src="https://i.imgur.com/8oT8z3N.png" width="100px" style="margin-left: 400px" class="prvaUn"></h3>
@@ -404,13 +406,13 @@
 		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto" class="linija__down"></div>
 
 		<a href="{% url 'konsalting_detailed' slug='interim-menadzment' %}">
-			<h3>Interim <span>menadžment</span></h3>
+			<h3>Interim <span>menadžment</span><img src="https://i.imgur.com/omBpv7t.png" width="100px" style="margin-left: 480px; visibility: hidden;" class="druDif pravnik"></h3>
 		</a>
 
 		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto" class="linija__down"></div>
 
 		<a href="{% url 'konsalting_detailed' slug='treninzi-i-edukacije' %}">
-			<h3><span>Treninzi i edukacije</span><img src="https://i.imgur.com/bWoDCFE.png" width="130px" style="margin-left: 480px" class="druDif edukator"></h3>
+			<h3>Treninzi <span>i edukacije</span><img src="https://i.imgur.com/bWoDCFE.png" width="130px" style="margin-left: 480px" class="druDif edukator"></h3>
 		</a>
 
 	</div>
