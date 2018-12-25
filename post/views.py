@@ -183,7 +183,7 @@ def showpost(request, id):
             return redirect('editprofil')
 
     post = Post.objects.get(pk=id)
-    userP = UserProfile.objects.get(userID=post.userID)
+    userPP = UserProfile.objects.get(userID=post.userID)
 
     if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
 
@@ -223,7 +223,8 @@ def showpost(request, id):
     else:
         post.views += 1
         post.save()
-        return render(request, 'oglas.html', {'auth': True, 'post': post, 'userP': userP, 'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
+        userP = UserProfile.objects.get(userID=request.user)
+        return render(request, 'oglas.html', {'auth': True, 'post': post, 'userP': userP, 'userPP': userPP, 'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
 
 
 def bankUsluge(request):
