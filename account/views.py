@@ -840,7 +840,7 @@ def firme(request):
             usr = 'wrkr'
 
         kompanije = Company.objects.all()
-        return render(request, 'firme.html', {'usr': usr, 'userP': userP, 'user': user, 'kompanije': kompanije})
+        return render(request, 'firme.html', {'auth': True, 'usr': usr, 'userP': userP, 'user': user, 'kompanije': kompanije})
     else:
         usr = 'wrkr'
 

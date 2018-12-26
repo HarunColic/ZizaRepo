@@ -69,7 +69,7 @@
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3 style="text-transform: uppercase;">{{ company.brojuposlenih }}</h3>
+				{% if company.brojuposlenih < 1 or company.brojuposlenih == None %} <h3 style="text-transform: uppercase;">N/A</h3> {% else %}<h3 style="text-transform: uppercase;">{{ company.brojuposlenih }}</h3>{% endif %}
 				<p>BROJ UPOSLENIH</p>
 			</div>
 			<div class="malaLinija"></div>
