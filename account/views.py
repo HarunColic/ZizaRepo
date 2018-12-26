@@ -749,7 +749,9 @@ def dashboard(request):
             company = Company.objects.get(userID=request.user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
 
-            return render(request, 'dashboard.html', {'usr': 'comp', 'super': super, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts, 'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+            return render(request, 'dashboard.html', {'usr': 'comp', 'super': super, 'user': request.user,
+                                                      'userP': userP, 'auth': True, 'ind': None, 'activePosts': activePosts,
+                                                      'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
         else:
             return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))
 
