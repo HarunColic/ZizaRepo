@@ -60,7 +60,6 @@ def createpost(request):
 
         if request.POST['type'] == "1":
 
-            #title = request.POST.get('naslov', None)
             category = request.POST.get('category', None)
             expiration = request.POST.get('expiration', None)
             lokacija = request.POST['City']
@@ -72,7 +71,11 @@ def createpost(request):
             opis = request.POST['opis']
             type = request.POST['type']
             brojIzv = request.POST['brojIzvr']
-            title = pozicija + category
+
+            if type == '1':
+                title = request.POST.get('naslov', None)
+            else:
+                title = pozicija + category
 
             if request.FILES.get('image_uploads', None):
                 myfile = request.FILES['image_uploads']
