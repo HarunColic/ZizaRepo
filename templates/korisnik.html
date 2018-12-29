@@ -190,7 +190,7 @@
         <div class="uvodniDio tabelarniDio">
             {% for p in posts %}
 
-                <a href={% url 'showpost' id=p.pk %}>
+                <a href={% url 'showpost' id=p.userID.first_name slug=p.url %}>
             <div class="tabelaRasa">
 				<div>
 					<div>

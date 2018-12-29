@@ -197,7 +197,7 @@
 			<div class="prevTraka">
                     {% if prevPost %}
 
-				<img onclick="location.href='{% url 'showpost' id=prevPost.pk %}'" src="{% static "images/lijevoOglas.png" %}" style="cursor: pointer;" class="lijevoEd">
+				<img onclick="location.href='{% url 'showpost' id=prevPost.userID.first_name slug=prevPost.url %}'" src="{% static "images/lijevoOglas.png" %}" style="cursor: pointer;" class="lijevoEd">
 				<div>
 					<span>PRIJAŠNJI OGLAS</span>
 					<span>{{ prevPost.userID.first_name }}</span>
@@ -218,7 +218,7 @@
 					<span style="color: #f89101; text-align: right;">{{ nextPost.userID.first_name }}</span>
 				</div>
 
-				<img onclick="location.href='{% url 'showpost' id=nextPost.pk %}'"  src="{% static "images/desnoOglas.png" %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
+				<img onclick="location.href='{% url 'showpost' id=nextPost.userID.first_name slug=nextPost.url %}'"  src="{% static "images/desnoOglas.png" %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
                     {% endif %}
 
 			</div>

@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from django.utils import timezone
 import pytz
-
+from django.template.defaultfilters import slugify
 
 class Category(models.Model):
 
@@ -72,6 +72,11 @@ class Post(models.Model):
         if minutes <= 0:
             minutes = '59+'
         return minutes
+
+    @property
+    def generateSlug(self):
+
+        return slugify(self.categoryID.name + " " + self.position + " " + str(self.pk))
 
 
 class Tag(models.Model):

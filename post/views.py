@@ -98,6 +98,7 @@ def createpost(request):
             cat = Category.objects.get(name=category)
 
             post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis)
+            post.url = post.generateSlug
 
             if expiration is not '0':
                 post.expires_at = datetime.now()+timedelta(days=int(expiration))
@@ -113,7 +114,7 @@ def createpost(request):
 
             sweetify.success(request, title="Uspješno kreiran oglas", text="", icon="success", timer=8000)
 
-            return redirect('showpost', post.pk)
+            return redirect('showpost', request.user.first_name, post.url)
         else:
 
             type = request.POST['type']
@@ -162,6 +163,7 @@ def createpost(request):
                 position = ""
 
             post = Post(attachment=myfile, position=position, title=title, userID=request.user, categoryID=cat, type=int(type), b2b_type=int(btobtype), region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
+            post.url = post.generateSlug
 
             post.save()
 
@@ -170,12 +172,12 @@ def createpost(request):
 
             sweetify.success(request, title="Uspješno kreiran oglas", icon="success", timer=8000)
 
-            return redirect('showpost', post.pk)
+            return redirect('showpost', request.user.first_name, post.url)
 
     return redirect('home')
 
 
-def showpost(request, id):
+def showpost(request, id, slug):
 
     if request.user.is_authenticated:
 
@@ -185,20 +187,20 @@ def showpost(request, id):
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
-    post = Post.objects.get(pk=id)
+    post = Post.objects.get(url=slug)
     userPP = UserProfile.objects.get(userID=post.userID)
 
     if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
 
-        nextPost = Post.objects.filter(pk__gt=id, type=post.type).exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").first()
+        nextPost = Post.objects.filter(pk__gt=post.pk, type=post.type).exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").first()
     else:
-        nextPost = Post.objects.filter(pk__gt=id, type=post.type).exclude(soft_delete=True).first()
+        nextPost = Post.objects.filter(pk__gt=post.pk, type=post.type).exclude(soft_delete=True).first()
 
     if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
 
-        prevPost = Post.objects.filter(pk__lt=id, type=post.type).exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").last()
+        prevPost = Post.objects.filter(pk__lt=post.pk, type=post.type).exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").last()
     else:
-        prevPost = Post.objects.filter(pk__lt=id, categoryID__name=post.categoryID.name).exclude(soft_delete=True).last()
+        prevPost = Post.objects.filter(pk__lt=post.pk, categoryID__name=post.categoryID.name).exclude(soft_delete=True).last()
 
     if request.user.is_authenticated:
         authorized = Company.objects.filter(userID=request.user).exists()
@@ -535,3 +537,6 @@ def download(request):
 def izlog(request):
 
     return redirect('home')
+
+
+
