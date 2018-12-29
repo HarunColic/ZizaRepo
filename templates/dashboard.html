@@ -772,7 +772,7 @@
 						<span>OGLASI</span>
 					</div>
 					<div>
-						<div>{{ activePosts.count }}</div> <!-- ucitaj iz baze broj aktivnih -->
+						<div>{{ activePosts.paginator.count }}</div> <!-- ucitaj iz baze broj aktivnih -->
 					</div>
 				</div>
 				<div class="main__oglasi--filter-part" id="zavrseniOglasi__button">
@@ -781,7 +781,7 @@
 						<span>OGLASI</span>
 					</div>
 					<div>
-						<div>{{ inactivePosts.count }}</div>  <!-- ucitaj iz baze broj okončanih -->
+						<div>{{ inactivePosts.paginator.count }}</div>  <!-- ucitaj iz baze broj okončanih -->
 					</div>
 				</div>
 			</div>
@@ -812,10 +812,15 @@
                 <!-- navigacija za aktivne -->
                 <div>
                 	<div class="navigacijaTipke" style="margin-bottom: 20px">
-                		<div onclick="location.href='#'" class="activTip">1</div>
-                		<div onclick="location.href='#'" class="">2</div>
-                		<div onclick="location.href='#'" class="">3</div>
-                		<div onclick="location.href='#'" class="">4</div>
+                	{% for r in rng %}
+
+                    {% if r == page %}
+                <div onclick="location.href='{{ request.path }}?page={{ r }}&a'" class="activTip">{{ r }}</div>
+                    {% else %}
+                <div onclick="location.href='{{ request.path }}?page={{ r }}&a'" class="">{{ r }}</div>
+                    {% endif %}
+                {% endfor %}
+
                 	</div>
                 </div>
 			</div>
@@ -846,9 +851,15 @@
                 <!-- navigacija za završene -->
                 <div>
                 	<div class="navigacijaTipke" style="margin-bottom: 20px">
-                		<div onclick="location.href='#'" class="activTip">1</div>
-                		<div onclick="location.href='#'" class="">2</div>
-                		<div onclick="location.href='#'" class="">3</div>
+                {% for r in rng2 %}
+
+                    {% if r == page2 %}
+                <div onclick="location.href='{{ request.path }}?page={{ r }}&z'" class="activTip">{{ r }}</div>
+                    {% else %}
+                <div onclick="location.href='{{ request.path }}?page={{ r }}&z'" class="">{{ r }}</div>
+                    {% endif %}
+                {% endfor %}
+
                 	</div>
                 </div>
 			</div>
@@ -950,20 +961,39 @@
 	$('.inactive').click(function(){
 		$(this).toggleClass('inactive');
 	});
-	$('#aktivniOglasi__button').click(function(){
-		if(!$('#aktivniOglasi__button').hasClass('active')){
+
+	function ToggleA(){
+	    if(!$('#aktivniOglasi__button').hasClass('active')){
 			$('#aktivniOglasi__button').addClass('active');
 			$('#zavrseniOglasi__button').removeClass('active');
 			$('#aktivniOglasi, #zavrseniOglasi').toggle();
 		}
-	});
-	$('#zavrseniOglasi__button').click(function(){
-		if(!$('#zavrseniOglasi__button').hasClass('active')){
+    }
+
+    function ToggleZ(){
+	    	if(!$('#zavrseniOglasi__button').hasClass('active')){
 			$('#zavrseniOglasi__button').addClass('active');
 			$('#aktivniOglasi__button').removeClass('active');
 			$('#aktivniOglasi, #zavrseniOglasi').toggle();
 		}
+    }
+	$('#aktivniOglasi__button').click(function(){
+		ToggleA();
 	});
+
+	$('#zavrseniOglasi__button').click(function(){
+		ToggleZ();
+
+	});
+
+
+	var url  = '{{ request.get_full_path }}'.split('?')[1].replace('amp;','').split('&');
+
+    if(url.find((a)=>{return a == 'a'}))
+        ToggleA();
+    else if(url.find((a)=>{return a == 'z'}))
+        ToggleZ();
+
 
 	var p = document.querySelector('#aktivniOglasi .rdiv');
     console.log(p);

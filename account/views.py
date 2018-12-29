@@ -43,8 +43,7 @@ def validation(request, args):
 
     for i in args:
         if i == "" or i is None:
-            # sweetify.error(request, title="Unesite obavezna polja", text="", icon="error", timer=10000)
-            return HttpResponse(i)
+            sweetify.error(request, title="Unesite obavezna polja", text="", icon="error", timer=10000)
             return False
 
     return True
@@ -744,14 +743,25 @@ def dashboard(request):
         if Company.objects.filter(userID=request.user).exists():
 
             userP = UserProfile.objects.get(userID=request.user)
-            activePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=True).order_by('-created_at')
-            inactivePosts = Post.objects.filter(userID=request.user).exclude(soft_delete=False).order_by('-created_at')
+            aktPostovi = Post.objects.filter(userID=request.user).exclude(soft_delete=True).order_by('-created_at')
+            inaktPostovi = Post.objects.filter(userID=request.user).exclude(soft_delete=False).order_by('-created_at')
             company = Company.objects.get(userID=request.user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
 
+            paginator = Paginator(aktPostovi, 10)
+            page = request.GET.get('page', 1)
+            activePosts = paginator.page(page)
+            rng = range(1, paginator.num_pages + 1)
+
+            paginator2 = Paginator(inaktPostovi, 10)
+            page2 = request.GET.get('page', 1)
+            inactivePosts = paginator2.page(page2)
+            rng2 = range(1, paginator2.num_pages + 1)
+
             return render(request, 'dashboard.html', {'usr': 'comp', 'super': super, 'user': request.user,
                                                       'userP': userP, 'auth': True, 'ind': None, 'activePosts': activePosts,
-                                                      'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+                                                      'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts,
+                                                      'page': int(page), 'rng': rng, 'page2': int(page2), 'rng2': rng2})
         else:
             return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))
 
