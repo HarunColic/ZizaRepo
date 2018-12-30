@@ -98,7 +98,6 @@ def createpost(request):
             cat = Category.objects.get(name=category)
 
             post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis)
-            post.url = post.generateSlug
 
             if expiration is not '0':
                 post.expires_at = datetime.now()+timedelta(days=int(expiration))
@@ -106,6 +105,8 @@ def createpost(request):
                 post.expires_at = datetime.now()+timedelta(days=999999)
 
             post.attachment = myfile
+            post.save()
+            post.url = post.generateSlug
             post.save()
 
             postcat = PostCategories(postID=post, categoryID=cat)
@@ -163,8 +164,8 @@ def createpost(request):
                 position = ""
 
             post = Post(attachment=myfile, position=position, title=title, userID=request.user, categoryID=cat, type=int(type), b2b_type=int(btobtype), region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
+            post.save()
             post.url = post.generateSlug
-
             post.save()
 
             postCategories = PostCategories(postID=post, categoryID=cat)
@@ -492,6 +493,8 @@ def obnovi(request, id):
     razlika = post.expires_at - post.created_at
     newExpires_at = datetime.now() + timedelta(days=razlika.days)
     newpost = Post(title=post.title, region=post.region, location=post.location, position=post.position, specialty=post.specialty, type=post.type, b2b_type=post.b2b_type, experience=post.experience, contact_email=post.contact_email, contact_phone=post.contact_phone, attachment=post.attachment, userID=post.userID, soft_delete=False, categoryID=post.categoryID, views=0, expires_at=newExpires_at)
+    newpost.save()
+    newpost.url = newpost.generateSlug
     newpost.save()
 
     sweetify.sweetalert(request, "Uspjesno obnovljen oglas", icon="success")
