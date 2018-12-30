@@ -16,3 +16,4 @@ class Command(BaseCommand):
         for p in posts:
 
             p.title = p.categoryID.name + "-" + p.position
+            p.save()
