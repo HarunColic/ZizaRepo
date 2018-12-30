@@ -49,9 +49,11 @@
 				<h3>Kontakt</h3>
 				<p>Ulica XX 29<br>88104 Mostar<br>Bosna i Hercegovina</p>
 				<div style="display: flex;">
-					<div class="sendInput" style="width: 180px; border-radius: 20px; font-family: Galano Bold; color: white; font-size: 13px; background-color: #f89101; margin-left: 50px;">
+					{% if not auth %}
+                    <div class="sendInput" style="width: 180px; border-radius: 20px; font-family: Galano Bold; color: white; font-size: 13px; background-color: #f89101; margin-left: 50px;">
 						PRIDRUŽI SE
 					</div>
+                    {% endif %}
 				</div>
 			</div>
 		</div>

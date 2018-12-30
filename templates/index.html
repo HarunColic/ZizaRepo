@@ -1049,8 +1049,9 @@ ul {list-style: none}
 	</div> <!-- testmoniali -->
 
 
-        {% include 'footer.html' %}
-
+          {% with auth=auth %}
+			{% include 'footer.html' %}
+            {% endwith %}
 </body>
 <script type="text/javascript" src="../static/skripta.js"></script>
 <script type="text/javascript" src="../static/skripta.js"></script>
