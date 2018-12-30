@@ -31,6 +31,5 @@ class Command(BaseCommand):
 
             if elementi[elementi.__len__()-1] == 'doc' or elementi[elementi.__len__()-1] == 'docx' or elementi[elementi.__len__()-1] == 'pdf':
 
-                print(filename)
-                print(filename.replace(' ', '-'))
+                os.rename(filename, filename.replace(' ', '-'))
 
