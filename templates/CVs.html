@@ -51,6 +51,41 @@
 			}
 		}
 	</style>
+	<style type="text/css">
+		.navigacijaTipke {
+			display: flex;
+			justify-content: center;
+			margin-left: 0;
+		}
+		.navigacijaTipke div{
+			cursor: pointer;
+			height: 40px;
+			width: 35px;
+			border-radius: 3px;
+			background-color: #fff;
+			font-size: 14px;
+			color: #7c7a71;
+			font-family: 'Galano Regular';
+			display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 30px;
+		}
+		.navigacijaTipke > div{
+			margin-right: 5px;
+			box-shadow: 0px 5px 10px 0 rgba(177, 176, 171, 0.25);
+		}
+		.navigacijaTipke > div:hover{
+			background-color: #ffffff;
+				box-shadow: 0px 5px 10px 0 rgba(177, 176, 171, 0.25);
+				color: #f89101;
+		}
+		.activTip{
+				background-color: #f89101 !important;
+				box-shadow: 0px 5px 10px 0 rgba(248, 145, 1, 0.3) !important;
+				color: #fff !important;
+		}
+    </style>
 
   <img src="/static/images/logoNew.png" class="logotipNavbarMali">
 
@@ -188,7 +223,7 @@
                                     <label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px;" onclick="location.href='/download?file={{ u.cv.name }}'">
 						    		PREUZMI CV
                                     {% else %}
-                                        <label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px; background-color: #f27474">
+                                        <label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px; background-color: #f27474; box-shadow: 0px 5px 40px 0 rgba(209, 1, 1, 0.3)">
 						    		NEMA CV
                                             {% endif %}
 							</label>
@@ -204,6 +239,13 @@
 				</div>
 			</a>
             {% endfor %}
+            <div>
+	                	<div class="navigacijaTipke" style="margin-bottom: 20px">
+	                		<div onclick="location.href='#'" class="activTip">1</div>
+	                		<div onclick="location.href='#'" class="">2</div>
+	                		<div onclick="location.href='#'" class="">3</div>
+	                	</div>
+                	</div>
 			<!--<a href="#">
 				<div class="tabelaRasa">
 					<div>
