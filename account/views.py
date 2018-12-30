@@ -29,6 +29,7 @@ from threading import Thread
 from itertools import chain
 from django.core.paginator import Paginator
 from django.core.mail import EmailMultiAlternatives
+from django.template.defaultfilters import slugify
 
 
 def superUser(user):
@@ -534,8 +535,9 @@ def submitchange(request):
 
                     splitovano = myfile.name.split(".")
 
-                    myfile.name = str(datetime.now()) + "." + splitovano[splitovano.__len__()-1]
+                    myfile.name = slugify(str(datetime.now()) + "." + splitovano[splitovano.__len__()-1])
                     fs = FileSystemStorage()
+
                     filename = fs.save(myfile.name, myfile)
                     uploaded_file_url = fs.url(filename)
 
