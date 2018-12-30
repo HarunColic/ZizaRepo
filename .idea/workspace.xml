@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/post/management/commands/NaziviFajlova.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="368">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
               </folding>
@@ -427,7 +427,7 @@
       <workItem from="1545753706347" duration="11299000" />
       <workItem from="1545842687610" duration="6533000" />
       <workItem from="1546113886852" duration="17042000" />
-      <workItem from="1546199952974" duration="2355000" />
+      <workItem from="1546199952974" duration="2708000" />
     </task>
     <servers />
   </component>
@@ -437,7 +437,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69061000" />
+    <option name="totallyTimeSpent" value="69414000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1054,8 +1054,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/post/management/commands/NaziviFajlova.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="368">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
