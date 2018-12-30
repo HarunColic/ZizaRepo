@@ -709,7 +709,7 @@ ul {list-style: none}
 		<div class="header__navigation--undefined"></div>
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
-				<span onclick="location.href='/home'" class="pocetNa">Početna</span>
+				<span onclick="location.href='{% url 'home' %}'" class="pocetNa">Početna</span>
 				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs">Postavite oglas
                     {% if usr == 'comp' %}
 					<div class="konkursBottom">

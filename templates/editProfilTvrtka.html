@@ -476,8 +476,9 @@
 		</div>
 	</div> <!-- formaBody END -->
 
-    {% include 'footer.html' %}
-
+      {% with auth=auth %}
+			{% include 'footer.html' %}
+            {% endwith %}
 {% load sweetify %}
 {% sweetify %}
 </body>
