@@ -6,9 +6,7 @@
     <bookmark url="file://$PROJECT_DIR$/templates/editProfilPL.html" line="598" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="1211" column="133" selection-start-line="1211" selection-start-column="133" selection-end-line="1211" selection-end-column="133" />
+            <state relative-caret-position="260">
+              <caret line="1223" column="13" lean-forward="true" selection-start-line="1223" selection-start-column="13" selection-end-line="1223" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -273,7 +271,7 @@
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -396,7 +394,7 @@
       <workItem from="1545753706347" duration="11299000" />
       <workItem from="1545842687610" duration="6533000" />
       <workItem from="1546113886852" duration="17042000" />
-      <workItem from="1546199952974" duration="11248000" />
+      <workItem from="1546199952974" duration="12550000" />
     </task>
     <servers />
   </component>
@@ -406,7 +404,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77954000" />
+    <option name="totallyTimeSpent" value="79256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,7 +419,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.1452514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.19313647" />
       <window_info id="Structure" order="1" sideWeight="0.1279555" side_tool="true" weight="0.14834578" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -435,7 +433,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.3110749" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.18241042" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.18241042" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32410422" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
@@ -1032,8 +1030,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="1211" column="133" selection-start-line="1211" selection-start-column="133" selection-end-line="1211" selection-end-column="133" />
+        <state relative-caret-position="260">
+          <caret line="1223" column="13" lean-forward="true" selection-start-line="1223" selection-start-column="13" selection-end-line="1223" selection-end-column="13" />
         </state>
       </provider>
     </entry>
