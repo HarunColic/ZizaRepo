@@ -794,7 +794,7 @@
                    {% endif %}
 
                 {% for p in activePosts %}
-               <div class="rdiv singleOglas__pregled"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.userID.first_name slug=p.url %}'">
+               <div class="rdiv singleOglas__pregled"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.slugifyName slug=p.url %}'">
 
                    <div>
 						<div>
