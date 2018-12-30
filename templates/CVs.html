@@ -175,33 +175,40 @@
     cursor: pointer;
 }
 			</style>
-            
+            {% for u in userPs %}
 			<a href="#"> 
 				<div class="tabelaRasa">
 					<div>
 						<div>
-							<div>Alem Tatarević</div> <!-- ime i prezime korisnika -->
-							<div>
+							<div>{{ u.userID.first_name }} {{ u.userID.last_name }}</div> <!-- ime i prezime korisnika -->
+                            <div>
 								<span>
-									<label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px;" onclick="alert('heurka!')">
+
+                                    {% if u.cv %}
+                                    <label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px;" onclick="location.href='/download?file={{ u.cv.name }}'">
 						    		PREUZMI CV
+                                    {% else %}
+                                        <label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px; background-color: #f27474">
+						    		NEMA CV
+                                            {% endif %}
 							</label>
 								</span> 
 								<span>
 									<span style="visibility: hidden;">Prije 6h</span> <!-- ostavi ovako, ne diraj -->
-									Cazin, Bosna i Hercegovina <!-- grad, Bosna i Hercegovina -->
+									{% if u.location %}{{ u.location }}{% else %} N/A {% endif %}, Bosna i Hercegovina <!-- grad, Bosna i Hercegovina -->
 								</span>
 							</div>
 						</div>
-						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div> <!-- profilna slika korisnika-->
+						<div class="srce"><img src="{% if u.image %}{{ u.image.url }}{% endif %}"></div> <!-- profilna slika korisnika-->
 					</div>
 				</div>
 			</a>
-			<a href="#"> 
+            {% endfor %}
+			<!--<a href="#">
 				<div class="tabelaRasa">
 					<div>
 						<div>
-							<div>Alem Tatarević</div> <!-- ime i prezime korisnika -->
+							<div>Alem Tatarević</div> <!-- ime i prezime korisnika
 							<div>
 								<span>
 									<label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px; background-color: #f27474" onclick="alert('heurka!')">
@@ -209,15 +216,15 @@
 							</label>
 								</span> 
 								<span>
-									<span style="visibility: hidden;">Prije 6h</span> <!-- ostavi ovako, ne diraj -->
-									Cazin, Bosna i Hercegovina <!-- grad, Bosna i Hercegovina -->
+									<span style="visibility: hidden;">Prije 6h</span> <!-- ostavi ovako, ne diraj
+									Cazin, Bosna i Hercegovina <!-- grad, Bosna i Hercegovina
 								</span>
 							</div>
 						</div>
-						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div> <!-- profilna slika korisnika-->
+						<div class="srce"><img src="https://meta5.io/img/logo.svg"></div> <!-- profilna slika korisnika
 					</div>
 				</div>
-			</a>
+			</a>-->
 		</div>
 	</div>
 
