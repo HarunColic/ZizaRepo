@@ -7,34 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/CVs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CVs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bankarskeUsluge2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dodajPotraznju2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editProfilPL.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilPL.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editProfilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilTvrtka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/finansijsko-savjetovanje.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/finansijsko-savjetovanje.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/firme.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/firme.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/interim-menadzment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/interim-menadzment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/konsalting.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/konsalting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/korisnik.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/korisnik.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mojaKarijera.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mojaKarijera.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newpost2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/oglas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/oglas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/onamanew.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/onamanew.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pravno-savjetovanje.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pravno-savjetovanje.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pretrazi.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pretrazi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profilTvrtka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/testPretraga.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testPretraga.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/testclanovi.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testclanovi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/treninzi-i-edukacije.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/treninzi-i-edukacije.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zizaKorisnika.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/zizaKorisnika.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,11 +39,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/footer.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/CVs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+            <state relative-caret-position="383">
+              <caret line="250" column="30" lean-forward="true" selection-start-line="250" selection-start-column="30" selection-end-line="250" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="826" column="80" selection-start-line="826" selection-start-column="21" selection-end-line="826" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/account/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="1070" column="69" selection-start-line="1070" selection-start-column="69" selection-end-line="1070" selection-end-column="69" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,14 +81,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dashboard(</find>
-      <find>uredi</find>
       <find>urediPo</find>
       <find>{% if p</find>
       <find>Pregled</find>
       <find>aktivirajPregled</find>
       <find>Profil(</find>
-      <find>rng</find>
       <find>navigacijaTipke</find>
       <find>re</find>
       <find>zavrseniOglasi__button</find>
@@ -101,7 +94,6 @@
       <find>showpost(</find>
       <find>'showpost'</find>
       <find>p.pk</find>
-      <find>CVs(</find>
       <find>{% if post.a</find>
       <find>popis</find>
       <find>OGLAS ?</find>
@@ -112,9 +104,13 @@
       <find>{% load</find>
       <find>{% inc</find>
       <find>{%</find>
-      <find>Dashboard(</find>
       <find>{% include 'footer.html' %}</find>
       <find>PRIDRUŽI SE</find>
+      <find>CVs(</find>
+      <find>dashboard(</find>
+      <find>rng</find>
+      <find>page</find>
+      <find>Dashboard(</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -152,7 +148,6 @@
         <option value="$PROJECT_DIR$/templates/ProfilKorisnika.html" />
         <option value="$PROJECT_DIR$/templates/testpristup.html" />
         <option value="$PROJECT_DIR$/post/views.py" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/Ziza/urls.py" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
@@ -175,12 +170,13 @@
         <option value="$PROJECT_DIR$/templates/testclanovi.html" />
         <option value="$PROJECT_DIR$/templates/finansijsko-savjetovanje.html" />
         <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
-        <option value="$PROJECT_DIR$/templates/CVs.html" />
         <option value="$PROJECT_DIR$/templates/korisnik.html" />
         <option value="$PROJECT_DIR$/templates/onamanew.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/mojaKarijera.html" />
         <option value="$PROJECT_DIR$/templates/footer.html" />
+        <option value="$PROJECT_DIR$/templates/CVs.html" />
+        <option value="$PROJECT_DIR$/account/views.py" />
       </list>
     </option>
   </component>
@@ -379,7 +375,7 @@
       <workItem from="1545666858794" duration="4089000" />
       <workItem from="1545753706347" duration="11299000" />
       <workItem from="1545842687610" duration="6533000" />
-      <workItem from="1546113886852" duration="15686000" />
+      <workItem from="1546113886852" duration="16581000" />
     </task>
     <servers />
   </component>
@@ -389,7 +385,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65350000" />
+    <option name="totallyTimeSpent" value="66245000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -817,16 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="755" column="51" lean-forward="true" selection-start-line="755" selection-start-column="51" selection-end-line="755" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-626">
@@ -845,17 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="856" selection-start-line="856" selection-end-line="856" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="971" column="12" selection-start-line="971" selection-start-column="12" selection-end-line="971" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -978,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/CVs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -1024,6 +992,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="826" column="80" selection-start-line="826" selection-start-column="21" selection-end-line="826" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/CVs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="250" column="30" lean-forward="true" selection-start-line="250" selection-start-column="30" selection-end-line="250" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="1070" column="69" selection-start-line="1070" selection-start-column="69" selection-end-line="1070" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

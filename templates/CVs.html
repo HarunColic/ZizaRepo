@@ -241,9 +241,13 @@
             {% endfor %}
             <div>
 	                	<div class="navigacijaTipke" style="margin-bottom: 20px">
-	                		<div onclick="location.href='#'" class="activTip">1</div>
-	                		<div onclick="location.href='#'" class="">2</div>
-	                		<div onclick="location.href='#'" class="">3</div>
+                            {% for r in rng %}
+                                {% if r == page %}
+                            <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="activTip">{{ r }}</div>
+                                {% else %}
+                            <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="">{{ r }}</div>
+                            {% endif %}
+                            {% endfor %}
 	                	</div>
                 	</div>
 			<!--<a href="#">

@@ -1060,6 +1060,12 @@ def CVs(request):
 
     employees = Employee.objects.all()
 
-    userPs = UserProfile.objects.filter(userID__employee__in=employees)
+    userPrs = UserProfile.objects.filter(userID__employee__in=employees)
 
-    return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP})
+    paginator = Paginator(userPrs, 10)
+    page = request.GET.get('page', 1)
+    rng = range(1, paginator.num_pages + 1)
+    userPs = paginator.page(page)
+
+    return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP,
+                                        'rng': rng, 'page': int(page)})
