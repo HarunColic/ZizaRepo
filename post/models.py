@@ -78,6 +78,10 @@ class Post(models.Model):
 
         return slugify(self.categoryID.name + " " + self.position + " " + str(self.pk))
 
+    @property
+    def slugifyName(self):
+
+        return slugify(self.userID.first_name)
 
 class Tag(models.Model):
 
