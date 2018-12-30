@@ -1052,11 +1052,14 @@ def korisnik(request):
 
 def CVs(request):
 
+    userP = UserProfile.objects.get(userID=request.user)
+
+    if not userP.editovanProfil:
+        sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+        return redirect('editprofil')
+
     employees = Employee.objects.all()
 
     userPs = UserProfile.objects.filter(userID__employee__in=employees)
 
-    userP = UserProfile.objects.get(userID=request.user)
-
-    return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP
-                                        })
+    return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP})
