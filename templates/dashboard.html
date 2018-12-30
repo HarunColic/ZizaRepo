@@ -785,10 +785,18 @@
 					</div>
 				</div>
 			</div>
+          {% if activePosts.paginator.count == 0 %}
+
+                    <div class="main__oglasi--oglasi" id="aktivniOglasi" style="display: flex;justify-content: center;align-items: center;font-family: Galano Bold;">Nemate objavljenih oglasa!
+
+                    {% else %}
 			<div class="main__oglasi--oglasi" id="aktivniOglasi">
+    `               {% endif %}
+
                 {% for p in activePosts %}
                <div class="rdiv singleOglas__pregled"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.userID.first_name slug=p.url %}'">
-					<div>
+
+                   <div>
 						<div>
 							{{ p.title }}
 						</div>
@@ -808,10 +816,11 @@
                     </div>
 				</div>
                 {% endfor %}
-
                 <!-- navigacija za aktivne -->
                 <div>
                 	<div class="navigacijaTipke" style="margin-bottom: 20px">
+
+                     {% if activePosts.paginator.count > 0 %}
                 	{% for r in rng %}
 
                     {% if r == page %}
@@ -820,11 +829,20 @@
                 <div onclick="location.href='{{ request.path }}?page={{ r }}&a'" class="">{{ r }}</div>
                     {% endif %}
                 {% endfor %}
-
+                    {% endif %}
                 	</div>
                 </div>
+
+
 			</div>
+    {% if inactivePosts.paginator.count == 0 %}
+
+            <div class="main__oglasi--oglasi" id="aktivniOglasi" style="display: flex;justify-content: center;align-items: center;font-family: Galano Bold;">Nemate završenih oglasa!
+
+                {% else %}
+
 			<div class="main__oglasi--oglasi" id="zavrseniOglasi">
+{% endif %}
                 {% for p in inactivePosts %}
 				<div class="singleOglas__pregled">
 					<div>
@@ -848,9 +866,12 @@
 					</div>
 				</div>
                 {% endfor %}
+
                 <!-- navigacija za završene -->
                 <div>
                 	<div class="navigacijaTipke" style="margin-bottom: 20px">
+                            {% if inactivePosts.paginator.count > 0 %}
+
                 {% for r in rng2 %}
 
                     {% if r == page2 %}
@@ -859,10 +880,11 @@
                 <div onclick="location.href='{{ request.path }}?page={{ r }}&z'" class="">{{ r }}</div>
                     {% endif %}
                 {% endfor %}
-
+                {% endif %}
                 	</div>
                 </div>
 			</div>
+
 		</div>
 		<h1><span>PRILIKE</span></h1>
 		<h2>Najpopularniji oglasi iz Vaše branše.</h2>
