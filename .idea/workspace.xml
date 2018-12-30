@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +37,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="843" column="66" lean-forward="true" selection-start-line="843" selection-start-column="66" selection-end-line="843" selection-end-column="66" />
+            <state relative-caret-position="199">
+              <caret line="793" column="4" selection-start-line="793" selection-start-column="4" selection-end-line="793" selection-end-column="4" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -168,8 +168,8 @@
         <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/templates/CVs.html" />
         <option value="$PROJECT_DIR$/templates/oglas.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
       </list>
     </option>
   </component>
@@ -368,7 +368,7 @@
       <workItem from="1545666858794" duration="4089000" />
       <workItem from="1545753706347" duration="11299000" />
       <workItem from="1545842687610" duration="6533000" />
-      <workItem from="1546113886852" duration="13731000" />
+      <workItem from="1546113886852" duration="13983000" />
     </task>
     <servers />
   </component>
@@ -378,7 +378,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63395000" />
+    <option name="totallyTimeSpent" value="63647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1005,23 +1005,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="843" column="66" lean-forward="true" selection-start-line="843" selection-start-column="66" selection-end-line="843" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="755" column="50" selection-start-line="755" selection-start-column="50" selection-end-line="755" selection-end-column="50" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="793" column="4" selection-start-line="793" selection-start-column="4" selection-end-line="793" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

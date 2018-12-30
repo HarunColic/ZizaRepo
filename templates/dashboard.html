@@ -791,7 +791,7 @@
 
                     {% else %}
 			<div class="main__oglasi--oglasi" id="aktivniOglasi">
-    `               {% endif %}
+                   {% endif %}
 
                 {% for p in activePosts %}
                <div class="rdiv singleOglas__pregled"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.userID.first_name slug=p.url %}'">
