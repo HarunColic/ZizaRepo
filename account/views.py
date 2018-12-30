@@ -748,12 +748,12 @@ def dashboard(request):
             company = Company.objects.get(userID=request.user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
 
-            paginator = Paginator(aktPostovi, 10)
+            paginator = Paginator(aktPostovi, 5)
             page = request.GET.get('page', 1)
             activePosts = paginator.page(page)
             rng = range(1, paginator.num_pages + 1)
 
-            paginator2 = Paginator(inaktPostovi, 10)
+            paginator2 = Paginator(inaktPostovi, 5)
             page2 = request.GET.get('page', 1)
             inactivePosts = paginator2.page(page2)
             rng2 = range(1, paginator2.num_pages + 1)
