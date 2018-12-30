@@ -1209,7 +1209,7 @@ setInterval(function(){
 		document.getElementById("lijevo").style.animation = "naCentar 0.7s ease-out 0s 1 normal forwards running";
 		document.getElementById("centar").style.animation = "okreni 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("desno").style.animation = "atomskiDesno 1s ease-out 0s 1 normal forwards running";
-		document.getElementById('traziSe').innerHTML = "{{ oglas1.title }} {{ oglas1.position }} {% if oglas1.type == 2 %}{{ oglas1.categoryID.name }}{% endif %}: {% if oglas1.type == 1 %}{{ oglas1.location }}{% else %}{{ oglas1.region }}{% endif %}";
+		document.getElementById('traziSe').innerHTML = "{{ oglas1.position }} {% if oglas1.type == 2 %}{{ oglas1.categoryID.name }}{% endif %}: {% if oglas1.type == 1 %}{{ oglas1.location }}{% else %}{{ oglas1.region }}{% endif %}";
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').addClass('active');
 }, 1000);
@@ -1218,7 +1218,7 @@ setInterval(function(){
 		document.getElementById("lijevo").style.animation = "okreni2 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("centar").style.animation = "okreni3 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("desno").style.animation = "okreni4 0.7s ease-out 0s 1 normal forwards running";
-		document.getElementById('traziSe').innerHTML = "{{ oglas2.title }} {{ oglas2.position }} : {% if oglas2.type == 1 %}{{ oglas2.location }}{% else %}{{ oglas2.region }}{% endif %}";
+		document.getElementById('traziSe').innerHTML = " {{ oglas2.position }} : {% if oglas2.type == 1 %}{{ oglas2.location }}{% else %}{{ oglas2.region }}{% endif %}";
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').addClass('active');
 	}, 3000);
@@ -1227,7 +1227,7 @@ setInterval(function(){
 		document.getElementById("desno").style.animation = "okreni5 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("lijevo").style.animation = "okreni6 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("centar").style.animation = "okreni7 0.7s ease-out 0s 1 normal forwards running";
-		document.getElementById('traziSe').innerHTML = "{{ oglas3.title }} {{ oglas3.position }} : {% if oglas3.type == 1 %}{{ oglas3.location }}{% else %}{{ oglas3.region }}{% endif %}";
+		document.getElementById('traziSe').innerHTML = " {{ oglas3.position }} : {% if oglas3.type == 1 %}{{ oglas3.location }}{% else %}{{ oglas3.region }}{% endif %}";
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').addClass('active');
 		// document.getElementById("biz").style.animation = "slikaChange 0.7s ease-out 0s 1 normal forwards running";
