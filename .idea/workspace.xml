@@ -6,7 +6,16 @@
     <bookmark url="file://$PROJECT_DIR$/templates/editProfilPL.html" line="598" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="" />
+    <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ProfilKorisnika.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ProfilKorisnika.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/firme.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/firme.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profilTvrtka.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="793" column="18" lean-forward="true" selection-start-line="793" selection-start-column="18" selection-end-line="793" selection-end-column="18" />
+            <state relative-caret-position="100">
+              <caret line="926" column="37" lean-forward="true" selection-start-line="926" selection-start-column="37" selection-end-line="926" selection-end-column="37" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -48,28 +57,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+        <entry file="file://$PROJECT_DIR$/account/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="800" column="41" lean-forward="true" selection-start-line="800" selection-start-column="41" selection-end-line="800" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="194" selection-start-line="194" selection-end-line="194" />
+            <state relative-caret-position="345">
+              <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/templates/firme.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="1223" column="13" lean-forward="true" selection-start-line="1223" selection-start-column="13" selection-end-line="1223" selection-end-column="13" />
+            <state relative-caret-position="242">
+              <caret line="196" column="25" lean-forward="true" selection-start-line="196" selection-start-column="25" selection-end-line="196" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -86,22 +89,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>popis</find>
-      <find>OGLAS ?</find>
-      <find>nemate</find>
-      <find>nemate z</find>
-      <find>{% if</find>
-      <find>Početna</find>
-      <find>{% load</find>
-      <find>{% inc</find>
-      <find>{%</find>
-      <find>{% include 'footer.html' %}</find>
-      <find>PRIDRUŽI SE</find>
-      <find>CVs(</find>
       <find>dashboard(</find>
       <find>rng</find>
       <find>page</find>
-      <find>Dashboard(</find>
       <find>submit</find>
       <find>Anonimna</find>
       <find>showpost(</find>
@@ -116,6 +106,19 @@
       <find>obj</find>
       <find>poslj</find>
       <find>zadnjiPoslovi__popularno</find>
+      <find>Dashboard(</find>
+      <find>[</find>
+      <find>Dashboa</find>
+      <find>showpost</find>
+      <find>relevant</find>
+      <find>bg_end</find>
+      <find>Akti</find>
+      <find>profil</find>
+      <find>profil(</find>
+      <find>profilko</find>
+      <find>HTTP</find>
+      <find>profilKo</find>
+      <find>Prili</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -136,7 +139,6 @@
         <option value="$PROJECT_DIR$/templates/dodajPotraznju.html" />
         <option value="$PROJECT_DIR$/templates/bankarskeUsluge.html" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" />
-        <option value="$PROJECT_DIR$/account/models.py" />
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/53ab07c7-0d3e-4a81-8028-74ed60e32654/console.sql" />
         <option value="$PROJECT_DIR$/templates/acc_active_email.html" />
@@ -157,7 +159,6 @@
         <option value="$PROJECT_DIR$/templates/dodajPotraznju2.html" />
         <option value="$PROJECT_DIR$/templates/bankarskeUsluge2.html" />
         <option value="$PROJECT_DIR$/templates/oglas.html" />
-        <option value="$PROJECT_DIR$/templates/firme.html" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" />
         <option value="$PROJECT_DIR$/templates/interim-menadzment.html" />
         <option value="$PROJECT_DIR$/templates/treninzi-i-edukacije.html" />
@@ -165,23 +166,25 @@
         <option value="$PROJECT_DIR$/templates/pravno-savjetovanje.html" />
         <option value="$PROJECT_DIR$/templates/testclanovi.html" />
         <option value="$PROJECT_DIR$/templates/finansijsko-savjetovanje.html" />
-        <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
         <option value="$PROJECT_DIR$/templates/korisnik.html" />
         <option value="$PROJECT_DIR$/templates/onamanew.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/mojaKarijera.html" />
         <option value="$PROJECT_DIR$/templates/footer.html" />
         <option value="$PROJECT_DIR$/templates/CVs.html" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/post/management/commands/NaziviFajlova.py" />
         <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/post/models.py" />
-        <option value="$PROJECT_DIR$/Ziza/urls.py" />
-        <option value="$PROJECT_DIR$/templates/ProfilKorisnika.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/post/management/commands/GenerateTitle.py" />
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
+        <option value="$PROJECT_DIR$/templates/ProfilKorisnika.html" />
+        <option value="$PROJECT_DIR$/Ziza/urls.py" />
+        <option value="$PROJECT_DIR$/account/models.py" />
+        <option value="$PROJECT_DIR$/templates/firme.html" />
+        <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
       </list>
     </option>
   </component>
@@ -237,13 +240,6 @@
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
               <item name="post" type="462c0819:PsiDirectoryNode" />
               <item name="management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
@@ -394,7 +390,8 @@
       <workItem from="1545753706347" duration="11299000" />
       <workItem from="1545842687610" duration="6533000" />
       <workItem from="1546113886852" duration="17042000" />
-      <workItem from="1546199952974" duration="12550000" />
+      <workItem from="1546199952974" duration="12575000" />
+      <workItem from="1546294742501" duration="7360000" />
     </task>
     <servers />
   </component>
@@ -404,7 +401,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79256000" />
+    <option name="totallyTimeSpent" value="86641000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,12 +416,12 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.19313647" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.1963288" />
       <window_info id="Structure" order="1" sideWeight="0.1279555" side_tool="true" weight="0.14834578" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24429968" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.2801303" />
+      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.2801303" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32899022" />
@@ -433,7 +430,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.3110749" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.18241042" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.18078175" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32410422" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
@@ -473,6 +470,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/account/views.py</url>
+          <line>924</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -737,16 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-626">
@@ -803,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/firme.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="264" lean-forward="true" selection-start-line="264" selection-end-line="264" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -856,13 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="310" lean-forward="true" selection-start-line="310" selection-end-line="310" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="342" lean-forward="true" selection-start-line="342" selection-end-line="342" />
         </state>
       </provider>
     </entry>
@@ -950,40 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="83" column="45" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnika.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="793" column="18" lean-forward="true" selection-start-line="793" selection-start-column="18" selection-end-line="793" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/post/management/commands/generateSlugs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1014,10 +960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="800" column="41" lean-forward="true" selection-start-line="800" selection-start-column="41" selection-end-line="800" selection-end-column="41" />
+        <state relative-caret-position="260">
+          <caret line="1223" column="13" lean-forward="true" selection-start-line="1223" selection-start-column="13" selection-end-line="1223" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1028,10 +974,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="1223" column="13" lean-forward="true" selection-start-line="1223" selection-start-column="13" selection-end-line="1223" selection-end-column="13" />
+        <state relative-caret-position="197">
+          <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="926" column="37" lean-forward="true" selection-start-line="926" selection-start-column="37" selection-end-line="926" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="321" column="47" lean-forward="true" selection-start-line="321" selection-start-column="47" selection-end-line="321" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnika.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="190" column="15" lean-forward="true" selection-start-line="190" selection-start-column="15" selection-end-line="190" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="933" column="30" lean-forward="true" selection-start-line="933" selection-start-column="30" selection-end-line="933" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/firme.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="196" column="25" lean-forward="true" selection-start-line="196" selection-start-column="25" selection-end-line="196" selection-end-column="25" />
         </state>
       </provider>
     </entry>

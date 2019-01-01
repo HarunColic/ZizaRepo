@@ -215,6 +215,7 @@
 		</style>
 
         <div class="uvodniDio tabelarniDio">
+
             {% for p in posts %}
 
                 <a href={% url 'showpost' id=p.userID.first_name slug=p.url %}>

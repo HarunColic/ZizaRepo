@@ -4,6 +4,7 @@ from datetime import datetime
 from django.utils import timezone
 from post.models import Category
 from location.models import City
+from django.template.defaultfilters import slugify
 
 
 class UserProfile(models.Model):
@@ -34,6 +35,12 @@ class UserProfile(models.Model):
             return "No CV"
 
     CV_file.allow_tags = True
+
+    @property
+    def slugifyName(self):
+
+        user = User.objects.get(pk=self.userID.pk)
+        return slugify(user.first_name)
 
 
 class Employee(models.Model):

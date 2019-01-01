@@ -9,7 +9,7 @@
     <meta name="author" content="META5">
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-	<style type="text/css"></style>
+	<style type="text/css" ></style>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 
     <style>
@@ -902,9 +902,11 @@
 				<div style="color: #f11212">SURADNJA</div>
 			</div>
 		</div>
+                            <!--    {% for p in relevantPosts %}
+
 		<div class="main__oglasi--oglasi" id="preporuke">
-            {% for p in relevantPosts %}
-				<div class="ponudaBox">
+
+				<div class="ponudaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
 						<div>
 							{{ p.title }}
@@ -915,12 +917,15 @@
 						</div>
 					</div>
 					<div style="left: 811px; display: block;">
-						<img class="slGab" src="https://i.imgur.com/vUXO3Xr.png">
+						<img class="slGab" src="{{ p.userID.userprofile.image.url }}">
 					</div>
 					<div>
 					</div>
 				</div>
-            {% endfor %}
+
+            </div>
+           {% endfor %} -->
+
             <!--
 				<div class="potraznjaBox">
 					<div>

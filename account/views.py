@@ -133,7 +133,7 @@ def profil(request):
 
             postovi = Post.objects.filter(userID=user).exclude(soft_delete=True)
 
-            paginator = Paginator(postovi, 10)
+            paginator = Paginator(postovi, 5)
             page = request.GET.get('page', 1)
             posts = paginator.page(page)
             rng = range(1, paginator.num_pages + 1)
@@ -712,7 +712,7 @@ def pretraga(request):
         if superUser(request.user) and pretrazuje == "False":
             posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
 
-        data = posts.exclude(expires_at__lte= datetime.now())
+        data = posts.exclude(expires_at__lte=datetime.now())
         counter = data.count()
         data = list(data)
         userP = UserProfile.objects.get(userID=user)
@@ -748,7 +748,7 @@ def dashboard(request):
             aktPostovi = Post.objects.filter(userID=request.user).exclude(soft_delete=True).order_by('-created_at')
             inaktPostovi = Post.objects.filter(userID=request.user).exclude(soft_delete=False).order_by('-created_at')
             company = Company.objects.get(userID=request.user)
-            relevantPosts = Post.objects.filter(categoryID=company.categoryID)
+            relevantPosts = Post.objects.all()[0:5]
 
             paginator = Paginator(aktPostovi, 5)
             page = request.GET.get('pagea', 1)
@@ -922,7 +922,7 @@ def csrf_failure(request, reason=""):
         return redirect('home')
 
 
-def profilKorisnika(request, id):
+def profilKorisnika(request, id, slug):
 
     if request.user.is_authenticated:
 
@@ -933,11 +933,26 @@ def profilKorisnika(request, id):
             return redirect('editprofil')
 
         user = User.objects.get(pk=id)
+
+        slugified = slugify(user.first_name)
+
         if Company.objects.filter(userID=user).exists():
             company = Company.objects.get(userID=user)
             userP = UserProfile.objects.get(userID=user)
-            posts = Post.objects.filter(soft_delete=False).filter(userID=user)
-            return render(request, 'ProfilKorisnika.html', {'usr': 'wrkr', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts})
+            postovi = Post.objects.filter(soft_delete=False).filter(userID=user)
+
+            paginator = Paginator(postovi, 5)
+            page = request.GET.get('page', 1)
+            posts = paginator.page(page)
+            rng = range(1, paginator.num_pages + 1)
+
+            if slug == slugified:
+                return render(request, 'ProfilKorisnika.html', {'usr': 'wrkr', 'auth': True, 'user': user, 'userP': userP,
+                                                            'company': company, 'posts': posts, 'rng': rng, 'page': int(page)})
+            else:
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        else:
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
 def zizaKorisnika(request, id):
