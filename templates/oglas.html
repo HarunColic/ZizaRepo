@@ -138,7 +138,7 @@
 				<div>{{ post.userID.first_name }}</div>
 				<div>
 					<span></span>
-					<span style="cursor: pointer" onclick="location.href='{% url 'profilKorisnika' id=post.userID.pk %}'" >Vidi ostale {{ post.userID.first_name }} oglase</span>
+					<span style="cursor: pointer" onclick="location.href='{% url 'profilKorisnika' id=post.userID.pk slug=post.userID.userprofile.slugifyName %}'" >Vidi ostale {{ post.userID.first_name }} oglase</span>
 				</div>
 			</div>
 		</div>
