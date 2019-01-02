@@ -188,9 +188,6 @@ def showpost(request, id, slug):
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
-    else:
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-
     post = Post.objects.get(url=slug)
     userPP = UserProfile.objects.get(userID=post.userID)
 
@@ -210,7 +207,7 @@ def showpost(request, id, slug):
         authorized = Company.objects.filter(userID=request.user).exists()
         user = request.user
     else:
-        authorized = True
+        authorized = False
         user = None
 
     if post.type == 2 and not authorized:
@@ -233,7 +230,8 @@ def showpost(request, id, slug):
         post.views += 1
         post.save()
         userP = UserProfile.objects.get(userID=request.user)
-        return render(request, 'oglas.html', {'auth': True, 'post': post, 'userP': userP, 'userPP': userPP, 'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
+        return render(request, 'oglas.html', {'auth': authorized, 'post': post, 'userP': userP, 'userPP': userPP, 'b2b': b2b,
+                                              'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
 
 
 def bankUsluge(request):

@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/oglas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/oglas.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/post/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="191" column="71" selection-start-line="191" selection-start-column="71" selection-end-line="191" selection-end-column="71" />
+            <state relative-caret-position="320">
+              <caret line="298" column="74" lean-forward="true" selection-start-line="298" selection-start-column="74" selection-end-line="298" selection-end-column="74" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -76,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/oglas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="136" column="33" lean-forward="true" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
+            <state relative-caret-position="-953">
+              <caret line="123" column="38" lean-forward="true" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -115,7 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>submit</find>
       <find>Anonimna</find>
       <find>showpost(</find>
       <find>create</find>
@@ -145,6 +141,7 @@
       <find>preporuke</find>
       <find>showpo</find>
       <find>onclick=&quot;location.href='{% url 'profilKorisnika' id=post.userID.pk %}'&quot;</find>
+      <find>prija</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -412,7 +409,7 @@
       <workItem from="1546113886852" duration="17042000" />
       <workItem from="1546199952974" duration="12575000" />
       <workItem from="1546294742501" duration="9329000" />
-      <workItem from="1546468948498" duration="456000" />
+      <workItem from="1546468948498" duration="1257000" />
     </task>
     <servers />
   </component>
@@ -422,7 +419,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89066000" />
+    <option name="totallyTimeSpent" value="89867000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,11 +434,11 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.19952115" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.19952115" />
       <window_info id="Structure" order="1" sideWeight="0.1279555" side_tool="true" weight="0.14834578" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" visible="true" weight="0.24429968" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24429968" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.2801303" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -451,7 +448,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.3110749" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.1791531" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.1791531" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32410422" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
@@ -1030,13 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="136" column="33" lean-forward="true" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -1047,10 +1037,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-953">
+          <caret line="123" column="38" lean-forward="true" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="191" column="71" selection-start-line="191" selection-start-column="71" selection-end-line="191" selection-end-column="71" />
+        <state relative-caret-position="320">
+          <caret line="298" column="74" lean-forward="true" selection-start-line="298" selection-start-column="74" selection-end-line="298" selection-end-column="74" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
