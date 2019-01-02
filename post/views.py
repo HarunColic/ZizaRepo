@@ -205,10 +205,12 @@ def showpost(request, id, slug):
 
     if request.user.is_authenticated:
         authorized = Company.objects.filter(userID=request.user).exists()
+        userP = UserProfile.objects.get(userID=request.user)
         user = request.user
     else:
         authorized = False
         user = None
+        userP = None
 
     if post.type == 2 and not authorized:
         return redirect('home')
@@ -229,7 +231,6 @@ def showpost(request, id, slug):
     else:
         post.views += 1
         post.save()
-        userP = UserProfile.objects.get(userID=request.user)
         return render(request, 'oglas.html', {'auth': authorized, 'post': post, 'userP': userP, 'userPP': userPP, 'b2b': b2b,
                                               'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
 
