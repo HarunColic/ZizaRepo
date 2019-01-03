@@ -1089,21 +1089,25 @@ def CVs(request):
 
 def pozovi(request, id, sender):
 
-    if request.method == 'POST':
+    if request.user.is_authenticated:
 
-        sweetify.sweetalert(request, title="Korisnik je obaviješten da ga zelite kontaktirati", icon="success")
-        user = User.objects.get(pk=id)
+        if request.method == 'POST':
 
-        sender = User.objects.get(pk=sender)
+            sweetify.sweetalert(request, title="Korisnik je obaviješten da ga zelite kontaktirati", icon="success")
+            user = User.objects.get(pk=id)
 
-        title = "Kontakt"
-        message = render_to_string('pozovi.html', {'sender': sender})
+            sender = User.objects.get(pk=sender)
 
-        email = EmailMessage(title, message, to=[user.email])
+            title = "Kontakt"
+            message = render_to_string('pozovi.html', {'sender': sender})
 
-        email.send()
+            email = EmailMessage(title, message, to=[user.email])
 
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            email.send()
 
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+        else:
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

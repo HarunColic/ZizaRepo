@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/ProfilKorisnikaLP.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pozovi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/CVs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CVs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/testprofil.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testprofil.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +42,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/account/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="1104" lean-forward="true" selection-start-line="1104" selection-end-line="1104" />
+                <state relative-caret-position="718">
+                  <caret line="1113" lean-forward="true" selection-start-line="1113" selection-end-line="1113" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -252,10 +245,10 @@
         <option value="$PROJECT_DIR$/templates/CVs.html" />
         <option value="$PROJECT_DIR$/Ziza/urls.py" />
         <option value="$PROJECT_DIR$/templates/ProfilKorisnikaLP.html" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/account/models.py" />
         <option value="$PROJECT_DIR$/templates/pozovi.html" />
         <option value="$PROJECT_DIR$/templates/testprofil.html" />
+        <option value="$PROJECT_DIR$/account/views.py" />
       </list>
     </option>
   </component>
@@ -459,7 +452,7 @@
       <workItem from="1546294742501" duration="9329000" />
       <workItem from="1546468948498" duration="2493000" />
       <workItem from="1546477098864" duration="822000" />
-      <workItem from="1546529598472" duration="9726000" />
+      <workItem from="1546529598472" duration="9771000" />
     </task>
     <servers />
   </component>
@@ -469,7 +462,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101651000" />
+    <option name="totallyTimeSpent" value="101696000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,12 +477,12 @@
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.13767342" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.13767342" />
       <window_info id="Structure" order="1" sideWeight="0.1279555" side_tool="true" weight="0.14834578" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24344176" />
-      <window_info anchor="bottom" id="Debug" order="2" visible="true" weight="0.27911857" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.27911857" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32899022" />
@@ -498,7 +491,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.3110749" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.11437566" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.11437566" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32410422" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
@@ -884,18 +877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/CVs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-909">
-          <caret line="204" column="54" lean-forward="true" selection-start-line="204" selection-start-column="54" selection-end-line="204" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="1104" lean-forward="true" selection-start-line="1104" selection-end-line="1104" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-300">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -943,6 +926,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="1113" lean-forward="true" selection-start-line="1113" selection-end-line="1113" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
