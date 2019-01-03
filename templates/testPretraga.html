@@ -192,6 +192,9 @@
                         {% endif %}
                     {% endfor %}
                     <div class="jobInfo">
+                        {% if obj.type == 2 %}
+                        <span class="struka">{{ obj.title }}</span>
+                        {% endif %}
                         <span class="struka">{{ obj.categoryID.name }}</span>
                         <span class="pozicija">{{ obj.position }}</span>
                         <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
