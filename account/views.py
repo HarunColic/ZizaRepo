@@ -927,6 +927,11 @@ def profilKorisnika(request, id, slug):
 
         slugified = slugify(user.first_name)
 
+        if Company.objects.filter(userID=request.user).exists():
+            usr = 'comp'
+        else:
+            usr = 'wrkr'
+
         if Company.objects.filter(userID=user).exists():
             company = Company.objects.get(userID=user)
             userP = UserProfile.objects.get(userID=user)
@@ -938,12 +943,18 @@ def profilKorisnika(request, id, slug):
             rng = range(1, paginator.num_pages + 1)
 
             if slug == slugified:
-                return render(request, 'ProfilKorisnika.html', {'usr': 'wrkr', 'auth': True, 'user': user, 'userP': userP,
+                return render(request, 'ProfilKorisnika.html', {'usr': usr, 'auth': True, 'user': user, 'userP': userP,
                                                             'company': company, 'posts': posts, 'rng': rng, 'page': int(page)})
             else:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         else:
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            user = User.objects.get(pk=id)
+
+            emp = Employee.objects.get(userID=user)
+            vjestine = UserCategories.objects.filter(userID=user)
+
+            return render(request, 'ProfilKorisnikaLP.html', {'userP': userP, 'emp': emp, 'vjestine': vjestine,
+                                                              'auth': True, 'usr': 'wrkr', 'user': user})
 
 
 def zizaKorisnika(request, id):
@@ -1050,10 +1061,6 @@ def testclanovi(request):
     return render(request, 'testclanovi.html', {'usr': usr, 'userP': None, 'user': None})
 
 
-def testprofil(request):
-    return render(request,'testprofil.html')
-
-
 def korisnik(request):
 
     return render(request, 'korisnik.html')
@@ -1078,3 +1085,25 @@ def CVs(request):
 
     return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP,
                                         'rng': rng, 'page': int(page)})
+
+
+def pozovi(request, id, sender):
+
+    if request.method == 'POST':
+
+        sweetify.sweetalert(request, title="Korisnik je obaviješten da ga zelite kontaktirati", icon="success")
+        user = User.objects.get(pk=id)
+
+        sender = User.objects.get(pk=sender)
+
+        title = "Kontakt"
+        message = render_to_string('pozovi.html', {'sender': sender})
+
+        email = EmailMessage(title, message, to=[user.email])
+
+        email.send()
+
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

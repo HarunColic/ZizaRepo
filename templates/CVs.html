@@ -211,7 +211,7 @@
 }
 			</style>
             {% for u in userPs %}
-			<a href="#"> 
+			<a href="{%  url 'profilKorisnika' id=u.userID.pk slug=u.slugifyName %}">
 				<div class="tabelaRasa">
 					<div>
 						<div>

@@ -7,6 +7,7 @@ from location.models import City
 from django.template.defaultfilters import slugify
 import os
 
+
 class UserProfile(models.Model):
     userID = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     verified = models.BooleanField(default=False)

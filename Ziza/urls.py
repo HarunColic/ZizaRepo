@@ -62,9 +62,9 @@ urlpatterns = [
     url('mailSvima', AC_Views.mailSvima, name='mailSvima'),
     url('izlog', P_Views.izlog, name='izlog'),
     url('testclanovi', AC_Views.testclanovi, name="testclanovi"),
-    url('testprofil', AC_Views.testprofil, name="testprofil"),
     url('CVs', AC_Views.CVs, name="CVs"),
     url('korisnik', AC_Views.korisnik, name="korisnik"),
+    url('pozovi/(?P<id>[0-9]+)/(?P<sender>[0-9]+)/', AC_Views.pozovi, name="pozovi"),
 
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

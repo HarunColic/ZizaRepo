@@ -46,7 +46,7 @@
 				left: 150px;
 			}
 		}
-		
+
 		@media only screen and (max-width: 1316px){
 			.header__navigation {
 				border-bottom-left-radius: 0px;
@@ -153,7 +153,7 @@
 				left: 150px;
 			}
 		}
-		
+
 		@media only screen and (max-width: 1316px){
 			.header__navigation {
 				border-bottom-left-radius: 0px;
@@ -403,7 +403,7 @@
 
 
 
-<body>
+<form>
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
 			<div class="breadcrumb">
@@ -418,9 +418,9 @@
     			<form id="edituj" method="post" action="{% url 'submitchange' %}" enctype="multipart/form-data" style="margin-top: 70px">
     {% csrf_token %}
 		<div class="tvrtka">
-			{% if userP.image  %}
+			{% if user.userprofile.image  %}
 				<div class="avatarKucica">
-	               <img style="max-width: 250px; height: auto;" src="{% if userP.image %} {{ userP.image.url }} {% endif %}">
+	               <img style="max-width: 250px; height: auto;" src=" {{ user.userprofile.image.url }} ">
 				</div>
 			{% else %}
 				<div class="avatarKucica" style="background-color: #262626">
@@ -458,10 +458,10 @@
 					</div>
 				</div>
 
-				
+
 				<div style="margin-top: 20px">
                         <label>Mjesto prebivališta</label><br>
-						<input type="text" disabled value="{{ userP.location }}" name="grad" style="width: 100%">
+						<input type="text" disabled value="{{ user.userprofile.location }}" name="grad" style="width: 100%">
 				</div>
 
 
@@ -583,24 +583,25 @@
 						</div>
 					</div>
 				</div>
+            <a style="cursor: pointers;" id="aktivirajPregled">POZOVI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></a>
             <input type="hidden" name="kkk" id="vjest">
-			</form>
 		</div>
 	</div> <!-- formaBody END -->
+{% if usr == 'comp' %}
 
+</form>
+            <form style="display:none;visibility: hidden;" id="pozovi" method="post" action="{% url 'pozovi' id=user.pk sender=userP.userID.pk %}">
+            {% csrf_token %}
+			</form>
 
+{% endif %}
 	<script type="text/javascript">
 
-		 $("aktivirajPregled").click(function(){
-            var about = document.querySelector('input[name=opis]');
-            about.value = $('.ql-editor').html();
-            var vjestine = document.querySelector('input[name=vjestine]');
-             console.log(vjestine.value);
-             vjestine.value = vjestine.value.replace('[','').replace(']','');
-             document.querySelector('#vjest').value = vjestine.value;
-             form.submit();
-         });
 
+
+        $("#aktivirajPregled").click(function (e) {
+            $('#pozovi').submit();
+        });
 	</script>
 
 
