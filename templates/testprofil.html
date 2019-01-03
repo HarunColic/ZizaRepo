@@ -461,14 +461,14 @@
 				
 				<div style="margin-top: 20px">
                         <label>Mjesto prebivališta</label><br>
-						<input type="text" disabled value="Cazin" name="grad" style="width: 100%">
+						<input type="text" disabled value="{{ userP.location }}" name="grad" style="width: 100%">
 				</div>
 
 
 				<!-- Sacuvaj u bazi i ove spreme, koristit cemo ih na citavoj stranici -->
 				<div style="margin-top: 20px">
 					<label>Stručna sprema</label><br>
-					<input type="text" disabled value="II stepen - osnovna škola" name="strucnaSprema" style="width: 100%">
+					<input type="text" disabled value="{{ emp.strucnaSprema }}" name="strucnaSprema" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px">
 					<label>Posljednje obrazovanje</label><br>
@@ -549,7 +549,7 @@
 				<!-- NOVI DIO -->
 				<div style="margin-top: 20px">
 					<label>Vještine</label><br>
-					<input type="text" name="vjestine" value="HTML, CSS, JS" disabled style="width: 100%; font-family: 'Galano Bold'">
+					<input type="text" name="vjestine" value="{% for v in vjestine %} {{ v.categoryID.name }}, {% endfor %}" disabled style="width: 100%; font-family: 'Galano Bold'">
             	</div>
 
 				<!-- STARI DIO :: DJELATNOSTI IZ BAZE KOJE KORISTIMO PO STRANICI -->
@@ -557,9 +557,11 @@
 					<label style="margin-bottom: 8px;" class="specLab">O meni</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
-      				<p style="background-color: #eeede7; min-height: 60px; border-radius: 5px; padding: 21px; margin-top: 5px; font-family: 'Galano Regular'">
-      					Ovdje ide opis...
-      				</p>
+      				<div style="background-color: #eeede7; min-height: 60px; border-radius: 5px; padding: 21px; margin-top: 5px; font-family: 'Galano Regular'">
+                        {% if emp.opis is not None %}
+                            {{ emp.opis|safe }}
+                        {% endif %}
+      				</div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
 				<div style="margin-top: 30px;" class="dokumentPDF">
@@ -568,12 +570,16 @@
 					<div style="display: flex; align-items: center;">
 						<div>
 							<label for="file-upload"  class="custom-file-upload">
-						    	<input id="file-upload" type="file"  name="image_uploads" accept=".pdf, .doc, .docx" multiple disabled>
-						    		PREUZMI
+						    	{% if userP.cv %}<a href="/download?file={{ userP.cv.name }}" ><div class="downloadPDF">
+                                </div></a>
+                                {% endif %}
+                                PREUZMI
 							</label>
 						</div>
 						<div>
-							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Zadnje ažuriranje 3.1.2019.</p>
+                            {% if userP.cv %}
+							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Zadnje ažuriranje {{ userP.lastModifiedCV }}</p>
+                            {% endif %}
 						</div>
 					</div>
 				</div>
@@ -586,7 +592,7 @@
 
 	<script type="text/javascript">
 
-		 $("#aktivirajPregled").click(function(){
+		 $("aktivirajPregled").click(function(){
             var about = document.querySelector('input[name=opis]');
             about.value = $('.ql-editor').html();
             var vjestine = document.querySelector('input[name=vjestine]');
@@ -2182,6 +2188,7 @@ $("#imageUpload").change(function() {
 		'color' : '#7d7d7d',
 		'margin-right' : '-17px'
 	});
+	 $('.ql-image').empty();
+
 </script>
- $('.ql-image').empty();
 </html>

@@ -116,20 +116,15 @@ def profil(request):
 
     if request.user.is_authenticated:
 
-        if Employee.objects.filter(userID=request.user).exists():
-            return redirect('home')
-
         userP = UserProfile.objects.get(userID=request.user)
+        user = request.user
 
         if not userP.editovanProfil:
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
-        user = request.user
-        userP = UserProfile.objects.get(userID=user)
-        company = Company.objects.get(userID=user)
-
         if Company.objects.filter(userID=user).exists():
+            company = Company.objects.get(userID=user)
 
             postovi = Post.objects.filter(userID=user).exclude(soft_delete=True)
 
@@ -142,15 +137,11 @@ def profil(request):
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
                               , 'page': int(page), 'rng': rng})
         elif Employee.objects.filter(userID=user).exists():
-            postovi = Post.objects.filter(userID=user).exclude(soft_delete=True)
+            emp = Employee.objects.get(userID=user)
+            vjestine = UserCategories.objects.filter(userID=user)
 
-            paginator = Paginator(postovi, 10)
-            page = request.GET.get('page', 1)
-            posts = paginator.page(page)
-            rng = range(1, paginator.num_pages + 1)
-
-            return render(request, 'korisnik.html', {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
-                              , 'page': int(page), 'rng': rng})
+            return render(request, 'testprofil.html', {'emp': emp, 'usr': 'wrkr', 'auth': True, 'user': user,
+                                                       'userP': userP, 'vjestine': vjestine})
     else:
         return render(request, 'index.html')
 
@@ -975,7 +966,8 @@ def zizaKorisnika(request, id):
             company = Company.objects.get(userID=user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
             return render(request, 'zizaKorisnika.html',
-                          {'usr': usr, 'uProfil': uProfil, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None, 'activepPosts': activePosts,'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+                          {'usr': usr, 'uProfil': uProfil, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None,
+                           'activepPosts': activePosts,'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
     sweetify.sweetalert(request, title="Akcija nije dozvoljena", icon="error")
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 

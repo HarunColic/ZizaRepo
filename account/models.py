@@ -5,7 +5,7 @@ from django.utils import timezone
 from post.models import Category
 from location.models import City
 from django.template.defaultfilters import slugify
-
+import os
 
 class UserProfile(models.Model):
     userID = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
@@ -41,6 +41,16 @@ class UserProfile(models.Model):
 
         user = User.objects.get(pk=self.userID.pk)
         return slugify(user.first_name)
+
+
+    @property
+    def lastModifiedCV(self):
+        stat = os.stat(self.cv.path)
+
+        try:
+            return stat.st_mtime
+        except AttributeError:
+            return stat.st_ctime
 
 
 class Employee(models.Model):
