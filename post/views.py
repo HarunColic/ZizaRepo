@@ -544,4 +544,20 @@ def izlog(request):
     return redirect('home')
 
 
+def aplikanti(request, postID):
 
+    if request.user.is_authenticated:
+        if Company.objects.filter(userID=request.user).exists():
+            users = WorkersPosts.objects.filter(postID=postID)
+            userProfs = UserProfile.objects.filter(userID__workersposts__in=users)
+            userP = UserProfile.objects.get(userID=request.user)
+
+            paginator = Paginator(userProfs, 10)
+            page = request.GET.get('page', 1)
+            userPs = paginator.page(page)
+            rng = range(1, paginator.num_pages +1)
+
+            return render(request, 'Aplikanti.html', {'userPs': userPs, 'auth': True, 'userP': userP,
+                                                      'page': int(page), 'rng': rng})
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

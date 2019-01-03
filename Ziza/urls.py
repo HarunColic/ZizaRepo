@@ -65,6 +65,7 @@ urlpatterns = [
     url('CVs', AC_Views.CVs, name="CVs"),
     url('korisnik', AC_Views.korisnik, name="korisnik"),
     url('pozovi/(?P<id>[0-9]+)/(?P<sender>[0-9]+)/', AC_Views.pozovi, name="pozovi"),
+    url('aplikanti/(?P<postID>[0-9]+)/', P_Views.aplikanti, name="aplikanti"),
 
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

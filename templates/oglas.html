@@ -148,13 +148,25 @@
 			<div class="trazimo">
 				<h2><span>OGLAS /</span> {{ post.position }}</h2>
 				<p>Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
-			</div>{% if post.attachment %}
+		<!--	</div>{% if post.attachment %}
 			<a href="/download?file={{ post.attachment.name }}" ><div class="downloadPDF">
             <img src="{% static "images/downloadikona.png" %}"> PDF OGLAS
             </div></a>
         {% endif %}
+		</div> -->
+
+    	</div>{% if post.userID == user%}
+        <form id="aplikantiForm" method="POST" action="{% url 'aplikanti' postID=post.pk %}">
+        {% csrf_token %}
+			<a ><div id="aplikantiImg" class="downloadPDF">
+            <img src="{% static "images/downloadikona.png" %}"> Aplikanti
+            </div></a>
+        </form>
+        {% endif %}
 		</div>
-		<div class="tabelarni">
+
+
+        <div class="tabelarni">
 			<div>
 				<h3 style="text-transform: uppercase;">{% if post.type == 1 %}{{ post.location}} {% else %}{{ post.region }}{% endif %}</h3>
 				<p>LOKACIJA</p>
@@ -246,6 +258,18 @@
 		var sadrzajTeksta = document.getElementsByClassName('detaljniOpis')[0].innerHTML
 	var procisceniSadrzaj = sadrzajTeksta.replace(new RegExp('<p><br></p>', 'g'), "");
 	document.getElementsByClassName('detaljniOpis')[0].innerHTML = procisceniSadrzaj;
-	</script>
+
+
+
+    </script>
+
+    <script>
+    $('#aplikantiImg').click(function(){
+
+        $('#aplikantiForm').submit();
+
+    });
+
+    </script>
 
 </html>
