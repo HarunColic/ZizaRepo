@@ -739,7 +739,7 @@ def dashboard(request):
             aktPostovi = Post.objects.filter(userID=request.user).exclude(soft_delete=True).order_by('-created_at')
             inaktPostovi = Post.objects.filter(userID=request.user).exclude(soft_delete=False).order_by('-created_at')
             company = Company.objects.get(userID=request.user)
-            relevantPosts = Post.objects.all()[0:5]
+            relevantPosts = Post.objects.all().exclude(soft_delete=True)[0:5]
 
             paginator = Paginator(aktPostovi, 5)
             page = request.GET.get('pagea', 1)
