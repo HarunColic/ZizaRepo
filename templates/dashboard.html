@@ -906,10 +906,12 @@
 		</div>
 
 
-                                {% for p in relevantPosts %}
 
 
 		<div class="main__oglasi--oglasi" id="preporuke">
+
+                                            {% for p in relevantPosts %}
+
 
 				<div class="ponudaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
@@ -927,9 +929,9 @@
 					<div>
 					</div>
 				</div>
+           {% endfor %}
 
             </div>
-           {% endfor %}
         <!--
 
 
