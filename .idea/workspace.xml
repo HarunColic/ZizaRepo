@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/Aplikanti.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/oglas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/oglas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +43,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/account/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="132" column="11" lean-forward="true" selection-start-line="132" selection-start-column="11" selection-end-line="132" selection-end-column="11" />
+                <state relative-caret-position="1515">
+                  <caret line="132" column="11" selection-start-line="132" selection-start-column="11" selection-end-line="132" selection-end-column="11" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -58,7 +55,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="643">
+                <state relative-caret-position="930">
                   <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
                 </state>
               </provider>
@@ -67,8 +64,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/post/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="557" column="50" lean-forward="true" selection-start-line="557" selection-start-column="50" selection-end-line="557" selection-end-column="50" />
+                <state relative-caret-position="647">
+                  <caret line="553" lean-forward="true" selection-start-line="553" selection-end-line="553" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
                   </folding>
@@ -79,7 +76,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/account/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
+                <state relative-caret-position="315">
                   <caret line="28" selection-start-line="28" selection-end-line="28" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
@@ -91,12 +88,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/oglas.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+                <state relative-caret-position="1125">
+                  <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -104,8 +101,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/testprofil.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="606" column="23" lean-forward="true" selection-start-line="606" selection-start-column="23" selection-end-line="606" selection-end-column="23" />
+                <state relative-caret-position="9090">
+                  <caret line="606" column="23" selection-start-line="606" selection-start-column="23" selection-end-line="606" selection-end-column="23" />
                   <folding>
                     <element signature="n#style#0;n#p#0;n#div#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -116,8 +113,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnikaLP.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="584" column="22" lean-forward="true" selection-start-line="584" selection-start-column="22" selection-end-line="584" selection-end-column="22" />
+                <state relative-caret-position="8760">
+                  <caret line="584" column="22" selection-start-line="584" selection-start-column="22" selection-end-line="584" selection-end-column="22" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -128,11 +125,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/Aplikanti.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="246">
-                  <caret line="124" column="54" lean-forward="true" selection-start-line="124" selection-start-column="54" selection-end-line="124" selection-end-column="54" />
+                <state relative-caret-position="626">
+                  <caret line="164" column="29" lean-forward="true" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
+                  <folding>
+                    <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="434">
+                  <caret line="940" column="43" selection-start-line="940" selection-start-column="43" selection-end-line="940" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
@@ -233,7 +242,6 @@
         <option value="$PROJECT_DIR$/post/management/commands/GenerateTitle.py" />
         <option value="$PROJECT_DIR$/templates/ProfilKorisnika.html" />
         <option value="$PROJECT_DIR$/templates/firme.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
         <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
@@ -247,13 +255,14 @@
         <option value="$PROJECT_DIR$/templates/oglas.html" />
         <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/templates/Aplikanti.html" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-40" />
-    <option name="y" value="109" />
-    <option name="width" value="1289" />
+    <option name="x" value="1280" />
+    <option name="y" value="28" />
+    <option name="width" value="909" />
     <option name="height" value="555" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -279,7 +288,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,6 +337,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,7 +459,8 @@
       <workItem from="1546294742501" duration="9329000" />
       <workItem from="1546468948498" duration="2493000" />
       <workItem from="1546477098864" duration="822000" />
-      <workItem from="1546529598472" duration="13673000" />
+      <workItem from="1546529598472" duration="13739000" />
+      <workItem from="1546803897182" duration="848000" />
     </task>
     <servers />
   </component>
@@ -460,7 +470,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105598000" />
+    <option name="totallyTimeSpent" value="106512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,15 +482,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
+    <frame x="1280" y="-2" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.13767342" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.1307364" />
       <window_info id="Structure" order="1" sideWeight="0.1279555" side_tool="true" weight="0.14834578" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24344176" />
-      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.27911857" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.43322477" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32899022" />
@@ -489,7 +499,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.3110749" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.11437566" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.1227702" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32410422" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
@@ -786,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13725">
-          <caret line="915" column="16" selection-start-line="915" selection-start-column="16" selection-end-line="915" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13230">
@@ -842,36 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/testprofil.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="606" column="23" lean-forward="true" selection-start-line="606" selection-start-column="23" selection-end-line="606" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="75" column="44" lean-forward="true" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnikaLP.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="584" column="22" lean-forward="true" selection-start-line="584" selection-start-column="22" selection-end-line="584" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -888,8 +861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="132" column="11" lean-forward="true" selection-start-line="132" selection-start-column="11" selection-end-line="132" selection-end-column="11" />
+        <state relative-caret-position="1515">
+          <caret line="132" column="11" selection-start-line="132" selection-start-column="11" selection-end-line="132" selection-end-column="11" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -898,14 +871,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
+        <state relative-caret-position="930">
           <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/account/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="315">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -913,10 +886,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/testprofil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9090">
+          <caret line="606" column="23" selection-start-line="606" selection-start-column="23" selection-end-line="606" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnikaLP.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8760">
+          <caret line="584" column="22" selection-start-line="584" selection-start-column="22" selection-end-line="584" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="557" column="50" lean-forward="true" selection-start-line="557" selection-start-column="50" selection-end-line="557" selection-end-column="50" />
+        <state relative-caret-position="647">
+          <caret line="553" lean-forward="true" selection-start-line="553" selection-end-line="553" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -925,8 +928,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Aplikanti.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="124" column="54" lean-forward="true" selection-start-line="124" selection-start-column="54" selection-end-line="124" selection-end-column="54" />
+        <state relative-caret-position="626">
+          <caret line="164" column="29" lean-forward="true" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="940" column="43" selection-start-line="940" selection-start-column="43" selection-end-line="940" selection-end-column="43" />
         </state>
       </provider>
     </entry>
