@@ -85,7 +85,7 @@
 			    		<option value="15">15 dana</option>
 			    		<option value="30">30 dana</option>
 			    		<option value="60">60 dana</option>
-			    		<option value="0">Neograničeno</option>
+			    		<option value="9999999">Neograničeno</option>
 					</select>
 				</div>
 				<div style="margin-top: 20px; display: flex;">
@@ -138,7 +138,7 @@
 						</div>
 					</div>
 				</div>
-				<button id="aktivirajPregled" type="button">PREGLED<img src="../static/images/desnoPregled.png" style="margin-left: 11px"></button>
+				<button id="aktivirajPregled" type="button">PREGLED<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
 			</form>
 		</div>
 	</div> <!-- formaBody END -->
@@ -149,7 +149,7 @@
 				<p>Prijavom na oglas {{ user.first_name }} ima uvid u vaš CV!</p>
 			</div>
 			<div class="downloadPDF">
-				<img src="../static/images/downloadikona.png"> PDF OGLAS
+				<img src="{%  static 'images/downloadikona.png' %}"> PDF OGLAS
 			</div>
 		</div>
 		<div class="tabelarni">
@@ -180,19 +180,19 @@
 		</div>
 		<div class="navigacijaFooter">
 			<div class="prevTraka">
-				<img src="../static/images/lijevoOglas.png" style="cursor: pointer;" class="lijevoEd">
+				<img src="{%  static 'images/lijevoOglas.png' %}" style="cursor: pointer;" class="lijevoEd">
 				<div>
 					<span>PRIJAŠNJI OGLAS</span>
 					<span>Violeta</span>
 				</div>
 			</div>
-			<img id="submitPost" src="../static/images/prijavaoglas.png" class="srednjaSlika" style="cursor: pointer;">
+			<img id="submitPost" src="{% static 'images/prijavaoglas.png' %}" class="srednjaSlika" style="cursor: pointer;">
 			<div class="prevTraka" style="justify-content: flex-end;">
 				<div style="margin-left: 0">
 					<span>SLJEDEĆI OGLAS</span>
 					<span style="color: #f89101; text-align: right;">Volkswagen</span>
 				</div>
-				<img src="../static/images/desnoOglas.png" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
+				<img src="{% static 'images/desnoOglas.png' %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
 			</div>
 		</div>
 	</div> <!-- glavniDio END -->
