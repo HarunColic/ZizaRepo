@@ -102,7 +102,7 @@ def createpost(request):
             if expiration is not '0':
                 post.expires_at = datetime.now()+timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.now()+timedelta(days=99999)
+                post.expires_at = datetime.now()+timedelta(years=999)
 
             post.attachment = myfile
             post.save()
@@ -460,7 +460,7 @@ def updatePost(request, id):
             if trajanje is not '0':
                 post.expires_at = datetime.now() + timedelta(days=int(trajanje))
             else:
-                post.expires_at = datetime.now() + timedelta(days=99999)
+                post.expires_at = datetime.now() + timedelta(years=999)
 
             post.save()
 
