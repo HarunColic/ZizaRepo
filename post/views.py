@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from post.models import Post, Category, PostCategories, WorkersPosts
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
 from location.models import City
@@ -102,7 +102,11 @@ def createpost(request):
             if expiration is not '0':
                 post.expires_at = datetime.now()+timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.now()+timedelta(years=999)
+                post.expires_at = datetime.now()
+                post.expires_at = post.expires_at.year.__add__(9999)
+
+
+                #post.expires_at = datetime.now()+timedelta(years=999)
 
             post.attachment = myfile
             post.save()
@@ -394,7 +398,8 @@ def updatePost(request, id):
             if expiration is not '0':
                 post.expires_at = datetime.now() + timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.now() + timedelta(days=99999)
+                post.expires_at = datetime.now()
+                post.expires_at = post.expires_at.year.__add__(9999)
 
 
             post.save()
@@ -460,7 +465,8 @@ def updatePost(request, id):
             if trajanje is not '0':
                 post.expires_at = datetime.now() + timedelta(days=int(trajanje))
             else:
-                post.expires_at = datetime.now() + timedelta(years=999)
+                post.expires_at = datetime.now()
+                post.expires_at = post.expires_at.year.__add__(9999)
 
             post.save()
 
