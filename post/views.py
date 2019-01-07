@@ -397,7 +397,7 @@ def updatePost(request, id):
             if expiration is not '0':
                 post.expires_at = datetime.now() + timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.now()
+                return HttpResponse(datetime.max)
 
             post.save()
 
