@@ -102,8 +102,7 @@ def createpost(request):
             if expiration is not '0':
                 post.expires_at = datetime.now()+timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.now()
-                post.expires_at = post.expires_at.year.__add__(9999)
+                post.expires_at = datetime.max
 
 
                 #post.expires_at = datetime.now()+timedelta(years=999)
@@ -398,8 +397,7 @@ def updatePost(request, id):
             if expiration is not '0':
                 post.expires_at = datetime.now() + timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.now()
-                post.expires_at = post.expires_at.year.__add__(9999)
+                post.expires_at = datetime.max
 
             post.save()
 
@@ -464,8 +462,7 @@ def updatePost(request, id):
             if trajanje is not '0':
                 post.expires_at = datetime.now() + timedelta(days=int(trajanje))
             else:
-                post.expires_at = datetime.now()
-                post.expires_at = post.expires_at.year.__add__(9999)
+                post.expires_at = datetime.max
 
             post.save()
 

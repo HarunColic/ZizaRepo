@@ -42,8 +42,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/post/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="365">
-                  <caret line="402" lean-forward="true" selection-start-line="402" selection-end-line="402" />
+                <state relative-caret-position="155">
+                  <caret line="460" lean-forward="true" selection-start-line="460" selection-end-line="460" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
                   </folding>
@@ -99,7 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pozo</find>
       <find>action=&quot;</find>
       <find>profilKo</find>
       <find>PDF</find>
@@ -129,6 +128,7 @@
       <find>if expiration is not '0':</find>
       <find>updat</find>
       <find>years</find>
+      <find>__add__</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -401,7 +401,7 @@
       <workItem from="1546529598472" duration="13739000" />
       <workItem from="1546803897182" duration="2748000" />
       <workItem from="1546819327939" duration="1090000" />
-      <workItem from="1546871020495" duration="2056000" />
+      <workItem from="1546871020495" duration="2451000" />
     </task>
     <servers />
   </component>
@@ -411,7 +411,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111558000" />
+    <option name="totallyTimeSpent" value="111953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -483,12 +483,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/post/views.py</url>
-          <line>493</line>
+          <line>490</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/post/views.py</url>
-          <line>306</line>
+          <line>305</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -879,8 +879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="402" lean-forward="true" selection-start-line="402" selection-end-line="402" />
+        <state relative-caret-position="155">
+          <caret line="460" lean-forward="true" selection-start-line="460" selection-end-line="460" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
