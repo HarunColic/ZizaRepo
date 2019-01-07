@@ -401,7 +401,6 @@ def updatePost(request, id):
                 post.expires_at = datetime.now()
                 post.expires_at = post.expires_at.year.__add__(9999)
 
-
             post.save()
 
             sweetify.success(request, title="Uspješno ažuriran oglas", text="", icon="success", timer=8000)
