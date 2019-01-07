@@ -393,10 +393,6 @@ def updatePost(request, id):
             post.attachment = myfile
             post.save()
 
-            postcat = PostCategories.objects.get(postID=post, categoryID=cat)
-
-            postcat.save()
-
             sweetify.success(request, title="Uspješno ažuriran oglas", text="", icon="success", timer=8000)
 
             return redirect('dashboard')
