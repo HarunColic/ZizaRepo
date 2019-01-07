@@ -42,8 +42,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/post/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="155">
-                  <caret line="460" lean-forward="true" selection-start-line="460" selection-end-line="460" />
+                <state relative-caret-position="545">
+                  <caret line="399" column="47" selection-start-line="399" selection-start-column="47" selection-end-line="399" selection-end-column="47" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
                   </folding>
@@ -122,13 +122,13 @@
       <find>url</find>
       <find>update</find>
       <find>traja</find>
-      <find>Neograni</find>
       <find>createPo</find>
       <find>Neograničeno</find>
       <find>if expiration is not '0':</find>
       <find>updat</find>
       <find>years</find>
       <find>__add__</find>
+      <find>Neograni</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -401,7 +401,7 @@
       <workItem from="1546529598472" duration="13739000" />
       <workItem from="1546803897182" duration="2748000" />
       <workItem from="1546819327939" duration="1090000" />
-      <workItem from="1546871020495" duration="2451000" />
+      <workItem from="1546871020495" duration="2678000" />
     </task>
     <servers />
   </component>
@@ -411,7 +411,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111953000" />
+    <option name="totallyTimeSpent" value="112180000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -879,8 +879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="460" lean-forward="true" selection-start-line="460" selection-end-line="460" />
+        <state relative-caret-position="545">
+          <caret line="399" column="47" selection-start-line="399" selection-start-column="47" selection-end-line="399" selection-end-column="47" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
