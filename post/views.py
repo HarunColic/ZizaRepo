@@ -457,9 +457,6 @@ def updatePost(request, id):
             post.content=opis
             post.save()
 
-            postCategories = PostCategories.objects.get(postID=post, categoryID=cat)
-            postCategories.save()
-
             sweetify.success(request, title="Uspješno ažuriran oglas", icon="success", timer=8000)
 
             return redirect('dashboard')
