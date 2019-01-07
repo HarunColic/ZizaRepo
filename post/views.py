@@ -102,7 +102,7 @@ def createpost(request):
             if expiration is not '0':
                 post.expires_at = datetime.now()+timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.now()+timedelta(days=999999)
+                post.expires_at = datetime.now()+timedelta(days=99999)
 
             post.attachment = myfile
             post.save()
@@ -389,8 +389,14 @@ def updatePost(request, id):
             post.contact_email=email
             post.contact_phone=brojTel
             post.content=opis
-            post.expires_at=datetime.now()+timedelta(days=int(expiration))
             post.attachment = myfile
+
+            if expiration is not '0':
+                post.expires_at = datetime.now() + timedelta(days=int(expiration))
+            else:
+                post.expires_at = datetime.now() + timedelta(days=99999)
+
+
             post.save()
 
             sweetify.success(request, title="Uspješno ažuriran oglas", text="", icon="success", timer=8000)
@@ -447,10 +453,15 @@ def updatePost(request, id):
             post.type=int(type)
             post.b2b_type=int(btobtype)
             post.region=kanton
-            post.expires_at= datetime.now()+timedelta(days=int(trajanje))
             post.contact_email= email
             post.contact_phone= brojTel
             post.content=opis
+
+            if trajanje is not '0':
+                post.expires_at = datetime.now() + timedelta(days=int(trajanje))
+            else:
+                post.expires_at = datetime.now() + timedelta(days=99999)
+
             post.save()
 
             sweetify.success(request, title="Uspješno ažuriran oglas", icon="success", timer=8000)

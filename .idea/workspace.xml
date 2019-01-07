@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bankarskeUsluge.html" afterDir="false" />
@@ -46,83 +47,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5414604">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="126" column="59" lean-forward="true" selection-start-line="126" selection-start-column="47" selection-end-line="126" selection-end-column="59" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/newpost2.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="87" column="45" lean-forward="true" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="225" column="45" lean-forward="true" selection-start-line="225" selection-start-column="45" selection-end-line="225" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="365" column="45" lean-forward="true" selection-start-line="365" selection-start-column="45" selection-end-line="365" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge2.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="276" column="45" lean-forward="true" selection-start-line="276" selection-start-column="45" selection-end-line="276" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="363" column="45" lean-forward="true" selection-start-line="363" selection-start-column="45" selection-end-line="363" selection-end-column="45" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge2.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="218">
-                  <caret line="274" column="59" lean-forward="true" selection-start-line="274" selection-start-column="59" selection-end-line="274" selection-end-column="59" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/newpost.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
-                  <caret line="201" column="49" lean-forward="true" selection-start-line="201" selection-start-column="49" selection-end-line="201" selection-end-column="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/post/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="545">
-                  <caret line="104" column="64" lean-forward="true" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
+                <state relative-caret-position="645">
+                  <caret line="460" column="78" selection-start-line="460" selection-start-column="78" selection-end-line="460" selection-end-column="78" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
                   </folding>
@@ -178,8 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>profilK</find>
-      <find>unesite</find>
       <find>#aktivirajPregled</find>
       <find>pozo</find>
       <find>action=&quot;</find>
@@ -208,6 +135,8 @@
       <find>Neograni</find>
       <find>createPo</find>
       <find>Neograničeno</find>
+      <find>if expiration is not '0':</find>
+      <find>updat</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -265,15 +194,15 @@
         <option value="$PROJECT_DIR$/templates/Aplikanti.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/post/views.py" />
-        <option value="$PROJECT_DIR$/templates/dodajPotraznju2.html" />
-        <option value="$PROJECT_DIR$/templates/newpost.html" />
+        <option value="$PROJECT_DIR$/templates/bankarskeUsluge2.html" />
         <option value="$PROJECT_DIR$/templates/newpost2.html" />
+        <option value="$PROJECT_DIR$/templates/newpost.html" />
+        <option value="$PROJECT_DIR$/templates/dodajPotraznju2.html" />
         <option value="$PROJECT_DIR$/templates/dodajPotraznju.html" />
         <option value="$PROJECT_DIR$/templates/bankarskeUsluge.html" />
-        <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" />
-        <option value="$PROJECT_DIR$/templates/bankarskeUsluge2.html" />
+        <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" />
+        <option value="$PROJECT_DIR$/post/views.py" />
       </list>
     </option>
   </component>
@@ -480,7 +409,7 @@
       <workItem from="1546529598472" duration="13739000" />
       <workItem from="1546803897182" duration="2748000" />
       <workItem from="1546819327939" duration="1090000" />
-      <workItem from="1546871020495" duration="820000" />
+      <workItem from="1546871020495" duration="1177000" />
     </task>
     <servers />
   </component>
@@ -490,7 +419,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110322000" />
+    <option name="totallyTimeSpent" value="110679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -562,7 +491,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/post/views.py</url>
-          <line>477</line>
+          <line>488</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -900,69 +829,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="104" column="64" lean-forward="true" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="126" column="59" lean-forward="true" selection-start-line="126" selection-start-column="47" selection-end-line="126" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/newpost.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="201" column="49" lean-forward="true" selection-start-line="201" selection-start-column="49" selection-end-line="201" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/newpost2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="87" column="45" lean-forward="true" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="225" column="45" lean-forward="true" selection-start-line="225" selection-start-column="45" selection-end-line="225" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="365" column="45" lean-forward="true" selection-start-line="365" selection-start-column="45" selection-end-line="365" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="276" column="45" lean-forward="true" selection-start-line="276" selection-start-column="45" selection-end-line="276" selection-end-column="45" />
+        <state relative-caret-position="240">
+          <caret line="201" column="44" selection-start-line="201" selection-start-column="44" selection-end-line="201" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="363" column="45" lean-forward="true" selection-start-line="363" selection-start-column="45" selection-end-line="363" selection-end-column="45" />
+        <state relative-caret-position="240">
+          <caret line="363" column="40" selection-start-line="363" selection-start-column="40" selection-end-line="363" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/OsiguranjeUsluge2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="276" column="63" lean-forward="true" selection-start-line="276" selection-start-column="63" selection-end-line="276" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="365" column="40" selection-start-line="365" selection-start-column="40" selection-end-line="365" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/newpost2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="87" column="40" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="126" column="40" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="274" column="59" lean-forward="true" selection-start-line="274" selection-start-column="59" selection-end-line="274" selection-end-column="59" />
+        <state relative-caret-position="248">
+          <caret line="276" column="40" selection-start-line="276" selection-start-column="40" selection-end-line="276" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="460" column="78" selection-start-line="460" selection-start-column="78" selection-end-line="460" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
