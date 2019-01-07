@@ -411,7 +411,7 @@ def updatePost(request, id):
             brojTel = request.POST['brojTel']
             opis = request.POST['opis']
 
-            if request.FILES['image_uploads']:
+            if request.FILES.get('image_uploads', None):
 
                 myfile = request.FILES.get('image_uploads', None)
                 fs = FileSystemStorage()
