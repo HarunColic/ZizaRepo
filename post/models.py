@@ -122,3 +122,14 @@ class FAQ(models.Model):
     question = models.CharField(max_length=255)
     answer = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
+
+
+class Exhibition(models.Model):
+
+    userID = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=50)
+    sub_title = models.CharField(max_length=100)
+    details = models.TextField(null=True)
+    created_at = models.DateTimeField(default=timezone.now)
+    soft_delete = models.BooleanField(default=False)
+    image = models.ImageField(null=True)
