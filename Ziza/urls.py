@@ -60,7 +60,6 @@ urlpatterns = [
     url('contactAll', AC_Views.contactAll, name='contactAll'),
     url('mojaKarijera', AC_Views.mojaKarijera, name='mojaKarijera'),
     url('mailSvima', AC_Views.mailSvima, name='mailSvima'),
-    url('izlog', P_Views.izlog, name='izlog'),
     url('testclanovi', AC_Views.testclanovi, name="testclanovi"),
     url('CVs', AC_Views.CVs, name="CVs"),
     url('korisnik', AC_Views.korisnik, name="korisnik"),
@@ -68,7 +67,7 @@ urlpatterns = [
     url('aplikanti/(?P<postID>[0-9]+)/', P_Views.aplikanti, name="aplikanti"),
     url('dodajIzlog/', P_Views.dodajIzlog, name="dodajIzlog"),
     url('createExhibition/', P_Views.createExhibition, name="createExhibition"),
-    url('izlog/(?P<id>[a-zA-Z0-9\-]+)/(?P<slug>[a-zA-Z0-9\-]+)/', P_Views.izlog, name="izlog"),
+    url('izlog/(?P<id>[a-zA-Z0-9\-]+)/(?P<slug>[a-zA-Z0-9\-]+)', P_Views.izlog, name="izlog"),
 
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

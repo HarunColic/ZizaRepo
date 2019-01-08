@@ -622,7 +622,7 @@ def izlog(request, id, slug):
             return redirect('editprofil')
 
         elements = slug.split('-')
-        pKey = elements[elements.__len__()]
+        pKey = elements[elements.__len__() -1]
 
         izlog = Exhibition.objects.get(pk=pKey)
 

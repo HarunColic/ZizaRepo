@@ -129,16 +129,16 @@
 		</div>
 		<div class="tvrtka">
 			<div class="avatarKucica">
-                {% if userPP.image %}
-                <img style="max-width: 250px; height: auto;" src="{{ userPP.image.url }}">
+                {% if izlog.image %}
+                <img style="max-width: 250px; height: auto;" src="{{ izlog.image.url }}">
                 {% endif %}
             </div>
 			<div class="podaciT">
 				<div>TVRTKA</div>
-				<div>{{ post.userID.first_name }}</div>
+				<div>{{ izlog.userID.first_name }}</div>
 				<div>
 					<span></span>
-					<span style="cursor: pointer" onclick="location.href='{% url 'profilKorisnika' id=post.userID.pk slug=post.userID.userprofile.slugifyName %}'" >Vidi ostale {{ post.userID.first_name }} Izloge</span>
+					<span style="cursor: pointer" onclick="location.href='{% url 'profilKorisnika' id=izlog.userID.pk slug=izlog.userID.userprofile.slugifyName %}'" >Vidi ostale {{ post.userID.first_name }} Izloge</span>
 				</div>
 			</div>
 		</div>
@@ -164,7 +164,7 @@
         </form>
         {% endif %}
 		</div> -->
-
+<!--
 
         <div style="display: none;" class="tabelarni">
 			<div>
@@ -199,13 +199,13 @@
 				<p>Kontakt telefon</p>
 			</div>
         {% endif %}
-		</div>
+		</div> -->
 		<div class="detaljniOpis">
 
             {{ izlog.details|safe }}
 
 		</div>
-		<div style="display: none;" class="navigacijaFooter">
+		<!--<div style="display: none;" class="navigacijaFooter">
 			<div class="prevTraka">
                     {% if prevPost %}
 
@@ -218,9 +218,7 @@
 
 
 			</div>
-            {% if user is not None %}
-			<img onclick="location.href='{% url 'prijaviOglas' id=post.pk%}'" src="{% static "images/prijavaoglas.png" %}" class="srednjaSlika" style="cursor: pointer;">
-			{% endif %}
+
             <div class="prevTraka" style="justify-content: flex-end;">
                                     {% if nextPost %}
 
@@ -234,10 +232,12 @@
                     {% endif %}
 
 			</div>
-		</div>
+		</div> -->
 
 	</div>
 
+        </div>
+    </div>
             {% with auth=auth %}
 			{% include 'footer.html' %}
             {% endwith %}
