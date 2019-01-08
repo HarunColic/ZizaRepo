@@ -969,7 +969,7 @@ ul {list-style: none}
 			<div class="selectUp"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
-					<div><h3>{{ p.title }}</h3></div>
+					<div><h3>{{ p.position }}</h3></div>
 					<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }}, {{ p.region }}</span></p></div>
 				</div>
 				<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image  %}<img style="height: auto; max-width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
