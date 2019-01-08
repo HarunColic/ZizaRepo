@@ -188,7 +188,7 @@
 					    <div class="form-group" style="margin-left: 40px">
 					     {% with var=1 %}
 
-			    		{% include 'gradovi.html' %}
+			    		include 'gradovi.html' %}
                             {% endwith %}
 						</select>
 					    </div>
@@ -746,6 +746,7 @@ ul {list-style: none}
 					    <ul style="position: relative;">
 					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>Profil</li></a>
                              <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Postavke</li></a>
+					    	 <a href="{% url 'dodajIzlog' %}"><li class="logoutBtn"><div class="saStrane" style="top: 73px !important;"></div>Objavi novost</li></a>
 					    	 <a href="{% url 'signout' %}"><li class="logoutBtn"><div class="saStrane" style="top: 73px !important;"></div>Odjava</li></a>
 					    </ul>
 					</div>
