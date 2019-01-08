@@ -607,7 +607,7 @@ def createExhibition(request):
             sweetify.sweetalert(request, title="Molimo popunite obavezna polja", icon="error")
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-        izlog = Exhibition(title=naslov, sub_title=podnaslov, details=sadrzaj)
+        izlog = Exhibition(userID=request.user, title=naslov, sub_title=podnaslov, details=sadrzaj)
         izlog.save()
 
         sweetify.sweetalert(request, title="Uspjesno objavljen izlog", icon="success")
