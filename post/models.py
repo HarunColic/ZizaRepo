@@ -137,4 +137,4 @@ class Exhibition(models.Model):
     @property
     def slug(self):
 
-        return slugify(self.title + self.sub_title + self.pk)
+        return slugify(self.title + "-" + self.sub_title + "-" + str(self.pk))

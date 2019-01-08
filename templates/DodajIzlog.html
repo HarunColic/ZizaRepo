@@ -17,6 +17,49 @@
 
     {% load static %}
 
+
+<style type="text/css">
+	.formaBody{
+		height: 1200px;
+	}
+	.avatar-edit input {
+	  display: none;
+	}
+	.avatar-edit input + label:hover {
+	  background: #f1f1f1;
+	  border-color: #d6d6d6;
+	}
+	.avatar-edit input + label:after {
+	  color: #757575;
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  bottom: 0px;
+	  text-align: center;
+	  margin: auto;
+	  content: 'Dodaj';
+	  font-family: 'Galano Regular';
+	  color: white;
+	  background-color: #a6a397;
+	  cursor: pointer;
+	  opacity: 0.8;
+	  text-transform: uppercase;
+	}
+	@media only screen and (max-width: 1150px){
+		.formaBody {
+		    height: 1300px;
+		}
+		.sadrzaj h1{
+			margin-left: -30px;
+		}
+	}
+	@media only screen and (max-width: 445px){
+		.formaBody {
+		    height: 1350px;
+		}
+	}
+</style>
+
     <style type="text/css">
 	.ql-container.ql-snow{
 	height: 300px;
@@ -208,6 +251,16 @@
 					</div>
 				</div>
 
+                <label for="slika"> Slika za izlog</label>
+                <div class="avatarKucica" style=" text-align: center; position: relative;">
+				<div style="width: 99%; height: 100%; background: url('{% static 'images/defaultImage.jpeg' %}'); background-size: contain; background-position: center; background-repeat: no-repeat;" id="imagePreview"></div>
+
+			    <div class="avatar-edit">
+	            <input name="izlogSlika" type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+	            <label for="imageUpload"></label>
+	        </div>
+			</div>
+
 				<div style=" display: none; margin-top: 20px; display: flex;" class="multipleFour">
 					<div style=" display: none; width: 23%; margin-right: 25px">
 						<label>Lokacija</label><br>
@@ -245,21 +298,8 @@
       				<div id="editor-container"></div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
-				<div style="margin-top: 30px;" class="dokumentPDF">
-					<label style=" display: none; margin-bottom: 8px">PDF/Word dokument oglasa <span>(opcionalno)</span></label><br>
-					<div style="margin-top: 24px"></div>
-					<div style="display: flex; align-items: center;">
-						<div style="display: none;" >
-							<label for="file-upload"  class="custom-file-upload">
-						    	<input id="file-upload" type="file" name="image_uploads" accept=".pdf, .doc, .docx" multiple>
-						    		ODABERI
-							</label>
-						</div>
-						<div style="display: none;" >
-							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Maksimalna veličina: 5 MB.</p>
-						</div>
-					</div>
-				</div>
+
+
 				<button id="aktivirajPregled" type="button">PREGLED<img src="../static/images/desnoPregled.png" style="margin-left: 11px"></button>
 			</form>
 		</div>
@@ -387,6 +427,22 @@ $('#goBack').click(function(e){
 });
 
 $('.ql-image').html('Postavi sliku').css('width', '90px').css('color', 'rgba(0,0,0,0.6)');
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+            $('#imagePreview').hide();
+            $('#imagePreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imageUpload").change(function() {
+    readURL(this);
+});
 
 </script>
 </html>

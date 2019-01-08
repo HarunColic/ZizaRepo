@@ -545,11 +545,6 @@ def download(request):
         return False
 
 
-def izlog(request):
-
-    return redirect('home')
-
-
 def aplikanti(request, postID):
 
     if request.user.is_authenticated:
@@ -583,13 +578,12 @@ def dodajIzlog(request):
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
-        return render(request, 'DodajIzlog.html', {'user': user, 'userP': userP, 'usr': 'comp', 'auth': True,})
+        return render(request, 'DodajIzlog.html', {'user': user, 'userP': userP, 'usr': 'comp', 'auth': True})
 
 
 def createExhibition(request):
 
     if request.user.is_authenticated:
-
 
         userP = UserProfile.objects.get(userID=request.user)
 
@@ -600,14 +594,14 @@ def createExhibition(request):
         naslov = request.POST.get('naslov', None)
         podnaslov = request.POST.get('podnaslov', None)
         sadrzaj = request.POST.get('opis', None)
-
-        args = [naslov, podnaslov, sadrzaj]
+        slika = request.FILES.get('izlogSlika', None)
+        args = [naslov, podnaslov, sadrzaj, slika]
 
         if not validation(request, args):
             sweetify.sweetalert(request, title="Molimo popunite obavezna polja", icon="error")
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-        izlog = Exhibition(userID=request.user, title=naslov, sub_title=podnaslov, details=sadrzaj)
+        izlog = Exhibition(userID=request.user, title=naslov, sub_title=podnaslov, details=sadrzaj, image=slika)
         izlog.save()
 
         sweetify.sweetalert(request, title="Uspjesno objavljen izlog", icon="success")
@@ -633,3 +627,5 @@ def izlog(request, id, slug):
         izlog = Exhibition.objects.get(pk=pKey)
 
         return render(request, 'Izlog.html', {'user': user, 'userP': userP, 'auth': True, 'izlog': izlog})
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

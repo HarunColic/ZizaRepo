@@ -138,7 +138,7 @@ def profil(request):
             exhibPaginator = Paginator(exhibs, 5)
             exhibPage = request.GET.get('pageI', 1)
             izlozi = exhibPaginator.page(exhibPage)
-            exRNG = range(1, exhibPaginator.num_pages, +1)
+            exRNG = range(1, exhibPaginator.num_pages +1)
 
             return render(request, 'profilTvrtka.html',
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
