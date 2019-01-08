@@ -323,22 +323,27 @@
 
         <div class="uvodniDio tabelarniDio" style="display: block;">
 
-            {% for p in posts %}
+            {% for i in izlozi %}
 
-                <a href={% url 'showpost' id=p.userID.first_name slug=p.url %}>
+                <a href={% url 'izlog' id=i.userID.first_name slug=i.slug %}>
             <div class="tabelaRasa tabelaRasa2">
 				<div>
 					<div>
 
 						<div>
-							Novogodišnja akcija od 1.1. do 7.1.
+							{{ i.title }}
                         </div>
 						<div>
-							<span style="text-transform: uppercase;">SPECIJALNA PONUDA</span>
+							<span style="text-transform: uppercase;">i.sub_title</span>
 							<span style="color: black">
 								<span>{{ p.created_at }}</span>
 							</span>
 						</div>
+
+
+                        {% if i.image %}
+                            {{ i.image.url }}
+                        {% endif %}
 					</div>
 					<div class="srce srce2"><img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"></div>
                 </div>
@@ -357,9 +362,11 @@
 				{% for r in rng %}
 
                     {% if r == page %}
-                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="activTip">{{ r }}</div>
+                <div onclick="location.href='{{ request.path }}?pageI={{ r }}'" class="activTip">{{ r }}</div>
                     {% else %}
-                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="">{{ r }}</div>
+                <div onclick="location.href='{{ request.path }}?pageI={{ r }}'" class="">{{ r }}</div>
+
+
                     {% endif %}
                 {% endfor %}
 			</div>

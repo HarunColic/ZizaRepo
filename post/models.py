@@ -133,3 +133,8 @@ class Exhibition(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     soft_delete = models.BooleanField(default=False)
     image = models.ImageField(null=True)
+
+    @property
+    def slug(self):
+
+        return slugify(self.title + self.sub_title + self.pk)

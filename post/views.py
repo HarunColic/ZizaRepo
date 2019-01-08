@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from post.models import Post, Category, PostCategories, WorkersPosts
+from post.models import Post, Category, PostCategories, WorkersPosts, Exhibition
 from datetime import datetime, timedelta, date
 from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
@@ -567,3 +567,70 @@ def aplikanti(request, postID):
                                                       'page': int(page), 'rng': rng})
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def dodajIzlog(request):
+
+    if request.user.is_authenticated:
+
+        userP = UserProfile.objects.get(userID=request.user)
+        user = request.user
+
+        if Employee.objects.filter(userID=user).exists():
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
+        return render(request, 'DodajIzlog.html', {'user': user, 'userP': userP, 'usr': 'comp', 'auth': True,})
+
+
+def createExhibition(request):
+
+    if request.user.is_authenticated:
+
+        if request.method == 'post':
+
+            userP = UserProfile.objects.get(userID=request.user)
+
+            if not userP.editovanProfil:
+                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+                return redirect('editprofil')
+
+            naslov = request.POST.get('naslov', None)
+            podnaslov = request.POST.get('podnaslov', None)
+            sadrzaj = request.POST.get('opis', None)
+
+            args = [naslov, podnaslov, sadrzaj]
+
+            if not validation(request, args):
+                sweetify.sweetalert(request, title="Molimo popunite obavezna polja", icon="error")
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+            izlog = Exhibition(title=naslov, sub_title=podnaslov, details=sadrzaj)
+            izlog.save()
+
+            sweetify.sweetalert(request, title="Uspjesno objavljen izlog", icon="success")
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def izlog(request, id, slug):
+
+    if request.user.is_authenticated:
+
+        userP = UserProfile.objects.get(userID=request.user)
+        user = request.user
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
+        elements = slug.split('-')
+        pKey = elements[elements.__len__()]
+
+        izlog = Exhibition.objects.get(pk=pKey)
+
+        return render(request, 'Izlog.html', {'user': user, 'userP': userP, 'auth': True, 'izlog': izlog})

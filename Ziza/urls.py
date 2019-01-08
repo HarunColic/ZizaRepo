@@ -66,6 +66,9 @@ urlpatterns = [
     url('korisnik', AC_Views.korisnik, name="korisnik"),
     url('pozovi/(?P<id>[0-9]+)/(?P<sender>[0-9]+)/', AC_Views.pozovi, name="pozovi"),
     url('aplikanti/(?P<postID>[0-9]+)/', P_Views.aplikanti, name="aplikanti"),
+    url('dodajIzlog/', P_Views.dodajIzlog, name="dodajIzlog"),
+    url('createExhibition/', P_Views.createExhibition, name="createExhibition"),
+    url('izlog/(?P<id>[a-zA-Z0-9\-]+)/(?P<slug>[a-zA-Z0-9\-]+)', P_Views.izlog, name="izlog"),
 
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

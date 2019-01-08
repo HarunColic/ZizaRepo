@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+	<title>ŽIŽA.ba | Kreiraj izlog</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/style-oglas.css">
+	<link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.css">
+	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../static/style-dodajOglas.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+
+
+    {% load static %}
+
+    <style type="text/css">
+	.ql-container.ql-snow{
+	height: 300px;
+}
+	.detaljniOpis img{
+			max-width: 1000px;
+			height: auto;
+		}
+		@media only screen and (max-width: 1175px){
+			.detaljniOpis img{
+				max-width: 700px;
+			}
+		}
+		@media only screen and (max-width: 840px){
+			.detaljniOpis img{
+				max-width: 450px;
+			}
+		}
+		@media only screen and (max-width: 505px){
+			.detaljniOpis img{
+				max-width: 400px;
+			}
+		}
+		@media only screen and (max-width: 415px){
+			.detaljniOpis img{
+				max-width: 300px;
+			}
+		}
+		input[type=number]::-webkit-inner-spin-button,
+		input[type=number]::-webkit-outer-spin-button {
+		  -webkit-appearance: none;
+		  margin: 0;
+		}
+		@media screen and (max-width: 1210px){
+			.footer{
+				display: none;
+			}
+		}
+		.formaBody{
+			height: 100%;
+			padding-bottom: 40px;
+		}
+		.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
+
+		@media screen and (max-width: 414px){
+			.coverSlika {
+			    height: 400px;
+			}
+			.navigacija{
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 900px){
+			.sadrzaj h1{
+				padding-right: 35px;
+			}
+		}
+	</style>
+</head>
+<body style="position: relative;">
+
+	<img src="/static/images/logoNew.png" class="logotipNavbarMali">
+
+
+{% with var1=user var2=auth var3=userP ind=industries usr=usr %}
+    {% include 'header.html' %}
+    {% endwith %}
+
+
+    <style type="text/css">
+    	body{
+    		background: #f9f5e5 !important;
+    	}
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+		@media only screen and (max-width: 990px){
+			body{
+				margin-top: -20px !important;
+			}
+		}
+    </style>
+
+
+	<div class="coverSlika" style="position: relative;">
+		<div class="navigacija">
+			<div class="breadcrumb">
+				<a href="{% url 'home' %}">Početna</a>
+				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
+				<a href="#" style="display: none;">Oglasi</a>
+				<img src="{%  static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
+				<a href="#">Objava</a>
+			</div>
+			<div class="linijaD"></div>
+		</div>
+		<div class="tvrtka">
+			<div class="avatarKucica">
+                {% if userP.image %}
+				<img style="max-width: 250px; height: auto;" src="{{ userP.image.url }}">
+                {% endif %}
+			</div>
+			<div class="podaciT">
+				<div>TVRTKA</div>
+				<div>{{ user.first_name }}</div>
+				<div>
+					<div>
+						<span class="navNap navNap1 navAct" id="napraviOglas">Napravi novost</span>
+						<div class="navNapCr"></div>
+					</div>
+					<div>
+						<span class="navNap navNap2" style="margin-left: 190px; color: white" id="pregledajOglas">Pregled</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- coverSlika END -->
+	<div class="formaBody" style="position: relative;">
+		<div class="sadrzaj">
+			<h1>KREIRAJ <span>NOVOST</span></h1>
+			<form id="newpostForm" style="margin-top: 70px"  name="newpostFRM" method="post" action="{% url 'createExhibition' %} " enctype="multipart/form-data">
+				{% csrf_token %}
+            <input type="hidden" name="type" value="1">
+                <div>
+					<label>Naslov novosti</label><br>
+					<input type="text" id='naslovInput' name="naslov" placeholder="npr. Tražimo menadžera za..." style="width: 100%">
+				</div>
+				<div style="margin-top: 20px">
+				<label>Podnaslov novosti</label><br>
+					<input type="text" id='naslovInput' name="podnaslov" placeholder="npr. Tražimo menadžera za..." style="width: 100%">
+
+				</div>
+
+
+				<div style=" display: none; margin-top: 20px; display: flex;" class="multipleTwo">
+					<div style="width: 53.22%; margin-right: 25px">
+						<!--<label>Trajanje oglasa</label><br>-->
+						<select name="expiration" style=" display: none; width: 100%">
+							<option value="" disabled selected>Izaberi trajanje</option>
+	                        <option value="7">7 dana</option>
+				    		<option value="15">15 dana</option>
+				    		<option value="30">30 dana</option>
+				    		<option value="60">60 dana</option>
+				    		<option value="0">Neograničeno</option>
+						</select>
+					</div>
+					<div style=" display: none; width: 43.75%">
+						<label>Broj izvršitelja</label><br>
+						<input type="number" id="spremaInput" name="brojIzvr" value="" style="width: 100%">
+					</div>
+				</div>
+
+				<div style=" display: none; margin-top: 20px; display: flex;" class="multipleFour">
+					<div style=" display: none; width: 23%; margin-right: 25px">
+						<label>Lokacija</label><br>
+                        {% with var=1 %}
+                        {% include 'gradovi.html' %}
+                        {% endwith %}
+					</div>
+					<div style=" display: none; width: 23%; margin-right: 25px">
+						<label>Pozicija</label><br>
+						<input type="text" id='pozicijaInput' name="pozicija" placeholder="npr. kuhar" style="width: 100%">
+					</div>
+					<div style=" display: none; width: 23%; margin-right: 25px">
+						<label>Min. iskustva</label><br>
+						<input type="number" id='godineInput' name="godineIskustva" placeholder="npr. 3 godine" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="width: 100%">
+					</div>
+					<div style=" display: none; width: 23%;">
+						<label>Stručna sprema</label><br>
+						<input type="text" id='sprema2Input' name="strucnasprema" placeholder="npr. SSS" style="width: 100%">
+					</div>
+				</div>
+				<div style=" display: none; margin-top: 20px; display: flex;" class="multipleTwo">
+					<div style=" display: none; width: 53.22%; margin-right: 25px">
+						<label>Kontakt e-mail adresa</label><br>
+						<input type="email" value="{{ user.email }}" name="email" style="width: 100%">
+					</div>
+					<div style=" display: none; width: 43.75%">
+						<label>Kontakt broj</label><br>
+						<input type="text" name="brojTel" value="{{ userP.brojtelefona }}" style="width: 100%">
+					</div>
+				</div>
+				<div  style="margin-top: 30px;">
+					<label style="margin-bottom: 8px" class="specLab">Sadrzaj</label>
+					<!-- TEXTEDITOR zapocinje -->
+					<input name="opis" type="hidden">
+      				<div id="editor-container"></div>
+					<!-- TEXTEDITOR zavrsava -->
+				</div>
+				<div style="margin-top: 30px;" class="dokumentPDF">
+					<label style=" display: none; margin-bottom: 8px">PDF/Word dokument oglasa <span>(opcionalno)</span></label><br>
+					<div style="margin-top: 24px"></div>
+					<div style="display: flex; align-items: center;">
+						<div style="display: none;" >
+							<label for="file-upload"  class="custom-file-upload">
+						    	<input id="file-upload" type="file" name="image_uploads" accept=".pdf, .doc, .docx" multiple>
+						    		ODABERI
+							</label>
+						</div>
+						<div style="display: none;" >
+							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Maksimalna veličina: 5 MB.</p>
+						</div>
+					</div>
+				</div>
+				<button id="aktivirajPregled" type="button">PREGLED<img src="../static/images/desnoPregled.png" style="margin-left: 11px"></button>
+			</form>
+		</div>
+	</div> <!-- formaBody END -->
+	<div class="glavniDio">
+		<div class="uvodniDio">
+			<div class="trazimo">
+                <h2 id="nazivOglasa"><span>OGLAS /</span> TRAŽIMO STROJARA</h2>
+               <!-- <p>Prijavom na oglas {{ user.first_name }} ima uvid u vaš CV!</p> -->
+            </div>
+			<div style="display: none;" class="downloadPDF">
+				<img style="display: none;" src="../static/images/downloadikona.png"> PDF OGLAS
+			</div>
+		</div>
+		<div style="display: none;" class="tabelarni">
+			<div>
+				<h3 id="lokacijaPlace">MOSTAR</h3>
+				<p>LOKACIJA</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3 id="pozicijaPlace">STROJAR</h3>
+				<p>POZICIJA</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3 id="iskustvoPlace">3+</h3>
+				<p>GODINE ISKUSTVA</p>
+			</div>
+			<div class="malaLinija"></div>
+			<div>
+				<h3 id="spremaPlace">B</h3>
+				<p>BROJ IZVRŠITELJA</p>
+			</div>
+		</div>
+		<div class="detaljniOpis">
+			<p>Lorem ipsum dolor sit amet, torquatos omittantur neglegentur te cum. Eos idque noluisse nominati et, cu nec duis summo ornatus. Ex vim laboramus vituperata. Vix novum vocent at, in duo congue decore. Ea eirmod vidisse ius, ex elitr facilisi vix, dicant nonumes definitionem nec ne. His dicant mucius debitis te, in harum aeterno scriptorem his. Quo in quaeque imperdiet, mei aeterno quaerendum an.</p>
+			<p>Ea quo constituam neglegentur, maluisset salutatus et vel. Eligendi democritum ea est. Eam lorem quodsi ad, et adhuc labitur sadipscing mea, nec essent accusamus torquatos ex. Pri soleat constituto et, latine tamquam pro no, eu iusto diceret eos. An per dicta facilisis definitiones.</p>
+			<p>Dico legere ex mea, cu habemus pertinax vis, ea mediocrem comprehensam sit. Impedit docendi offendit vix et. Tantas verear democritum sit an, mei invenire consetetur honestatis ei. Ad his iriure ceteros oporteat.</p>
+		</div>
+
+	</div> <!-- glavniDio END -->
+    <style type="text/css">
+		@media screen and (max-width: 650px){
+			.sakrij__mob__navSt{
+				display: none;
+			}
+		}
+	</style>
+	<div class="pregledTraka">
+		<div style="font-family: 'Galano Black'; margin-left: 50px;">
+			<img src="../static/images/desnoPregled.png" style="transform: rotate(180deg); margin-right: 11px">
+			<span id="goBack">NAZAD</span>
+		</div>
+		<div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;">
+			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">Ovako će Vaš izlog izgledati nakon objave!</div>
+			<span id="objaviOglas">OBJAVI</span><img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px">
+		</div>
+	</div>
+
+    {% load sweetify %}
+{% sweetify %}
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+<script type="text/javascript" src="../static/skripta.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+   $('#objaviOglas').click(function(){
+		var about = document.querySelector('input[name=opis]');
+		about.value = $('.ql-editor').html();
+      form.submit()
+   })
+});
+</script>
+<script src="../static/sessionstorage.js"></script>
+
+<script>
+var form = document.querySelector('#newpostForm');
+form.onsubmit = function() {
+  var about = document.querySelector('input[name=opis]');
+  about.value = JSON.stringify(quill.getContents());
+  console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+  return false;
+};
+
+$(document).ready( function() {
+    $(".ql-editor").attr('spellcheck',false);
+    $('.ql-image').html('Postavi sliku').css('width', '90px').css('color', 'rgba(0,0,0,0.6)');
+});
+
+$('#aktivirajPregled').click(function(e){
+	e.preventDefault();
+	$('.formaBody').css('display', 'none');
+	$('.glavniDio').css('display', 'block');
+	$('.navNap1').removeClass("navAct");
+	$('.navNap2').addClass("navAct");
+	$('.navNapCr').css('margin-left', '155px');
+	$('.pregledTraka').css('display', 'flex');
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	$('.detaljniOpis').html($('.ql-editor').html());
+	var naslov = $('#naslovInput').val();
+	$('#nazivOglasa').html('<span>Izlog /</span> ' + naslov.toUpperCase());
+	var lokacija = $('#lokacijaInput').val();
+	$('#lokacijaPlace').html(lokacija.toUpperCase());
+	var pozicija = $('#pozicijaInput').val();
+	$('#pozicijaPlace').html(pozicija.toUpperCase());
+	var godine = $('#godineInput').val();
+	$('#iskustvoPlace').html(godine.toUpperCase()+'+');
+	var sprema = $('#spremaInput').val();
+	$('#spremaPlace').html(sprema.toUpperCase());
+});
+$('#goBack').click(function(e){
+	e.preventDefault();
+	$('.formaBody').css('display', 'block');
+	$('.glavniDio').css('display', 'none');
+	$('.navNap1').addClass("navAct");
+	$('.navNap2').removeClass("navAct");
+	$('.navNapCr').css('margin-left', '-5px');
+	$('.pregledTraka').css('display', 'none');
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+});
+
+$('.ql-image').html('Postavi sliku').css('width', '90px').css('color', 'rgba(0,0,0,0.6)');
+
+</script>
+</html>

@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth.models import User
 from account.models import Company, Employee, UserProfile
 from location.models import City
-from post.models import Category
+from post.models import Category, Exhibition
 from django.contrib.auth import logout, login
 from post.models import Post, WorkersPosts
 from django.db.models import Q
@@ -133,9 +133,18 @@ def profil(request):
             posts = paginator.page(page)
             rng = range(1, paginator.num_pages + 1)
 
+            exhibs = Exhibition.objects.filter(userID=request.user)
+
+            exhibPaginator = Paginator(exhibs, 5)
+            exhibPage = request.GET.get('pageI', 1)
+            izlozi = exhibPaginator.page(exhibPage)
+            exRNG = range(1, exhibPaginator.num_pages, +1)
+
             return render(request, 'profilTvrtka.html',
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
-                              , 'page': int(page), 'rng': rng})
+                              , 'page': int(page), 'rng': rng, 'izlozi': izlozi, 'exhibPage': int(exhibPage), 'exRNG': exRNG,
+                           })
+
         elif Employee.objects.filter(userID=user).exists():
             emp = Employee.objects.get(userID=user)
             vjestine = UserCategories.objects.filter(userID=user)
