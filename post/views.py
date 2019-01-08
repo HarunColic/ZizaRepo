@@ -590,29 +590,28 @@ def createExhibition(request):
 
     if request.user.is_authenticated:
 
-        if request.method == 'post':
 
-            userP = UserProfile.objects.get(userID=request.user)
+        userP = UserProfile.objects.get(userID=request.user)
 
-            if not userP.editovanProfil:
-                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
-                return redirect('editprofil')
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
-            naslov = request.POST.get('naslov', None)
-            podnaslov = request.POST.get('podnaslov', None)
-            sadrzaj = request.POST.get('opis', None)
+        naslov = request.POST.get('naslov', None)
+        podnaslov = request.POST.get('podnaslov', None)
+        sadrzaj = request.POST.get('opis', None)
 
-            args = [naslov, podnaslov, sadrzaj]
+        args = [naslov, podnaslov, sadrzaj]
 
-            if not validation(request, args):
-                sweetify.sweetalert(request, title="Molimo popunite obavezna polja", icon="error")
-                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-
-            izlog = Exhibition(title=naslov, sub_title=podnaslov, details=sadrzaj)
-            izlog.save()
-
-            sweetify.sweetalert(request, title="Uspjesno objavljen izlog", icon="success")
+        if not validation(request, args):
+            sweetify.sweetalert(request, title="Molimo popunite obavezna polja", icon="error")
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+        izlog = Exhibition(title=naslov, sub_title=podnaslov, details=sadrzaj)
+        izlog.save()
+
+        sweetify.sweetalert(request, title="Uspjesno objavljen izlog", icon="success")
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
