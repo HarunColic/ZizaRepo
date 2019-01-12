@@ -136,7 +136,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" width="50px" style="position: absolute; top: 90px; right: 30px" class="burgerMenu">
             <h1>ZA VAS IMAMO <u>{{ counter }}</u> PONUDA!</h1>
         </div><!-- searchTop -->
-    <form id="pretraga" method="post" action="{% url 'pretraga' %}">
+    <form id="pretraga" method="post" action="{% url 'anonimnaPretraga' id=id %}">
 
     {% csrf_token %}
     <input id="pretrazi" type="hidden" value="True" name="pretragaTrigger">

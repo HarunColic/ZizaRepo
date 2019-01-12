@@ -659,6 +659,7 @@ def pretraga(request):
     auth = False
 
     if request.user.is_authenticated:
+        auth = True
 
         userP = UserProfile.objects.get(userID=request.user)
 
@@ -666,65 +667,62 @@ def pretraga(request):
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
-        auth = True
+    usr = None
 
-        usr = None
+    user = request.user
+    userP = None
 
-        user = request.user
-        userP = UserProfile.objects.get(userID=user)
+    if request.POST.get('pretragaTrigger', "False") == "True":
+        grad = request.POST.get('gradovi', None)
+        kategorija = request.POST.get('kategorije', None)
+        kljucnaRijec = request.POST.get('kljucnaRijec', None)
 
-        if request.POST.get('pretragaTrigger', "False") == "True":
-            grad = request.POST.get('gradovi', None)
-            kategorija = request.POST.get('kategorije', None)
-            kljucnaRijec = request.POST.get('kljucnaRijec', None)
-            if Company.objects.filter(userID=user).exists():
+        if Company.objects.filter(userID=user).exists():
 
-                userComp = Company.objects.filter(userID=user)[0]
-                if superUser(request.user):
-                    posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
-                elif userComp.categoryID.name == "Finansijske":
-                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
-                elif userComp.categoryID.name == "Osiguravajuće":
-                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
-                else:
-                    posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+            userComp = Company.objects.filter(userID=user)[0]
+            if superUser(request.user):
+                posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+            elif userComp.categoryID.name == "Finansijske":
+                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+            elif userComp.categoryID.name == "Osiguravajuće":
+                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
             else:
-                posts = Post.objects.filter(type=1).exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
-
-            if grad is not None:
-                posts = posts.filter(location=grad)
-            if kategorija is not None:
-                ind = Category.objects.filter(name=kategorija)[0]
-                posts = posts.filter(categoryID=ind)
-            if kljucnaRijec is not "":
-                posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec) | Q(categoryID__name__contains=kljucnaRijec))
-
+                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
         else:
-            if Company.objects.filter(userID=user).exists():
-                usr = 'comp'
-                posts = Post.objects.all().filter(type=2).exclude(soft_delete=True)
-            else:
-                usr = 'wrkr'
-                posts = Post.objects.all().filter(type=1).exclude(soft_delete=True)
+            posts = Post.objects.filter(type=1).exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
 
-        pretrazuje = request.POST.get('pretragaTrigger', "False")
+        if grad is not None:
+            posts = posts.filter(location=grad)
+        if kategorija is not None:
+            ind = Category.objects.filter(name=kategorija)[0]
+            posts = posts.filter(categoryID=ind)
+        if kljucnaRijec is not "":
+            posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec) | Q(categoryID__name__contains=kljucnaRijec))
 
-        if superUser(request.user) and pretrazuje == "False":
-            posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
-
-        data = posts.exclude(expires_at__lte=datetime.now())
-        counter = data.count()
-        data = list(data)
-        userP = UserProfile.objects.get(userID=user)
-        gradovi = City.objects.all()
-        cat = Category.objects.filter(type=1)
-        users = User.objects.all()
-        userPs = UserProfile.objects.all()
-        btb = ["Ponuda", "Potražnja", "Partnerstvo"]
-        return render(request, 'pretrazi.html',
-                      {'usr': usr, 'iterRange': range(0, counter, 3), 'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
     else:
-        return redirect('home')
+        if Company.objects.filter(userID=user).exists():
+            usr = 'comp'
+            posts = Post.objects.all().filter(type=2).exclude(soft_delete=True)
+        else:
+            usr = 'wrkr'
+            posts = Post.objects.all().filter(type=1).exclude(soft_delete=True)
+
+    pretrazuje = request.POST.get('pretragaTrigger', "False")
+
+    if superUser(request.user) and pretrazuje == "False":
+        posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+
+    data = posts.exclude(expires_at__lte=datetime.now())
+    counter = data.count()
+    data = list(data)
+    userP = UserProfile.objects.get(userID=user)
+    gradovi = City.objects.all()
+    cat = Category.objects.filter(type=1)
+    users = User.objects.all()
+    userPs = UserProfile.objects.all()
+    btb = ["Ponuda", "Potražnja", "Partnerstvo"]
+    return render(request, 'pretrazi.html',
+                  {'usr': usr, 'iterRange': range(0, counter, 3), 'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
 
 
 def dashboard(request):
@@ -835,7 +833,7 @@ def anonimnaPretraga(request, id):
     return render(request, 'testPretraga.html',
                   {'data': data, 'gradovi': gradovi, 'cat': cat, 'auth': auth,
                    'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange, 'userP': userP,
-                   'usr': usr, 'number_pages': number_pages, 'page': int(1)})
+                   'usr': usr, 'number_pages': number_pages, 'page': int(1), 'id': id})
 
 
 def firme(request):
