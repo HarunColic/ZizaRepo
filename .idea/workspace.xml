@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/testPretraga.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testPretraga.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+            <state relative-caret-position="289">
+              <caret line="153" column="68" lean-forward="true" selection-start-line="153" selection-start-column="68" selection-end-line="153" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -73,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="822" column="28" selection-start-line="822" selection-start-column="28" selection-end-line="822" selection-end-column="28" />
+            <state relative-caret-position="285">
+              <caret line="1303" column="22" lean-forward="true" selection-start-line="1303" selection-start-column="22" selection-end-line="1303" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -103,7 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Lokacija</find>
       <find>Prijavom</find>
       <find>odjava</find>
       <find>Profil(</find>
@@ -133,6 +132,7 @@
       <find>pretragaBTN</find>
       <find>anonimna</find>
       <find>Kljucna</find>
+      <find>relevantPosts</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -188,7 +188,6 @@
         <option value="$PROJECT_DIR$/templates/bankarskeUsluge.html" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/editProfilTvrtka.html" />
         <option value="$PROJECT_DIR$/templates/DodajIzlog.html" />
@@ -199,6 +198,7 @@
         <option value="$PROJECT_DIR$/templates/Izlog.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
       </list>
     </option>
   </component>
@@ -408,7 +408,7 @@
       <workItem from="1546871020495" duration="5911000" />
       <workItem from="1546963013307" duration="13133000" />
       <workItem from="1546981910010" duration="1543000" />
-      <workItem from="1547297597123" duration="1552000" />
+      <workItem from="1547297597123" duration="2219000" />
     </task>
     <servers />
   </component>
@@ -418,7 +418,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131641000" />
+    <option name="totallyTimeSpent" value="132308000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -867,13 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="822" column="28" selection-start-line="822" selection-start-column="28" selection-end-line="822" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -886,11 +879,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="143" column="33" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+        <state relative-caret-position="289">
+          <caret line="153" column="68" lean-forward="true" selection-start-line="153" selection-start-column="68" selection-end-line="153" selection-end-column="68" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="1303" column="22" lean-forward="true" selection-start-line="1303" selection-start-column="22" selection-end-line="1303" selection-end-column="22" />
         </state>
       </provider>
     </entry>

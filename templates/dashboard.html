@@ -1263,6 +1263,7 @@
 
                                             {% for p in relevantPosts %}
 
+                                                {% if p.b2b_type == 1 %}
 
 				<div class="ponudaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
@@ -1280,6 +1281,48 @@
 					<div>
 					</div>
 				</div>
+                                                {% endif %}
+
+
+                                                {% if p.b2b_type == 2 %}
+
+				<div class="saradnjaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
+					<div>
+						<div>
+							{{ p.title }}
+						</div>
+						<div>
+							<div class="imeStruke">{{ p.categoryID.name }}</div>
+							<div> {{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }} {{ p.region }}</span></div>
+						</div>
+					</div>
+					<div style="left: 811px; display: block;">
+						<img class="slGab" src="{{ p.userID.userprofile.image.url }}">
+					</div>
+					<div>
+					</div>
+				</div>
+                                                {% endif %}
+
+                                                {% if p.b2b_type == 3 %}
+
+				<div class="potraznjaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
+					<div>
+						<div>
+							{{ p.title }}
+						</div>
+						<div>
+							<div class="imeStruke">{{ p.categoryID.name }}</div>
+							<div> {{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }} {{ p.region }}</span></div>
+						</div>
+					</div>
+					<div style="left: 811px; display: block;">
+						<img class="slGab" src="{{ p.userID.userprofile.image.url }}">
+					</div>
+					<div>
+					</div>
+				</div>
+                                                {% endif %}
            {% endfor %}
 
             </div>
