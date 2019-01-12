@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="740" column="25" lean-forward="true" selection-start-line="740" selection-start-column="25" selection-end-line="740" selection-end-column="25" />
+            <state relative-caret-position="334">
+              <caret line="749" lean-forward="true" selection-start-line="749" selection-end-line="749" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -73,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="1270" column="38" selection-start-line="1270" selection-start-column="38" selection-end-line="1270" selection-end-column="38" />
+            <state relative-caret-position="319">
+              <caret line="1279" column="26" lean-forward="true" selection-start-line="1279" selection-start-column="26" selection-end-line="1279" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -140,8 +140,8 @@
       <find>relevantPosts</find>
       <find>dashboard(</find>
       <find>create</find>
-      <find>relevant</find>
       <find>OGLAS</find>
+      <find>relevant</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -204,10 +204,10 @@
         <option value="$PROJECT_DIR$/Ziza/urls.py" />
         <option value="$PROJECT_DIR$/templates/Izlog.html" />
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/oglas.html" />
         <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/account/views.py" />
       </list>
     </option>
   </component>
@@ -417,7 +417,7 @@
       <workItem from="1546871020495" duration="5911000" />
       <workItem from="1546963013307" duration="13133000" />
       <workItem from="1546981910010" duration="1543000" />
-      <workItem from="1547297597123" duration="4457000" />
+      <workItem from="1547297597123" duration="4773000" />
     </task>
     <servers />
   </component>
@@ -427,7 +427,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134546000" />
+    <option name="totallyTimeSpent" value="134862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -869,16 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="740" column="25" lean-forward="true" selection-start-line="740" selection-start-column="25" selection-end-line="740" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/oglas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -898,8 +888,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="1270" column="38" selection-start-line="1270" selection-start-column="38" selection-end-line="1270" selection-end-column="38" />
+        <state relative-caret-position="319">
+          <caret line="1279" column="26" lean-forward="true" selection-start-line="1279" selection-start-column="26" selection-end-line="1279" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="749" lean-forward="true" selection-start-line="749" selection-end-line="749" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
