@@ -387,7 +387,7 @@
 		z-index: 9999999999;
 	}
 	.slGab{
-		height: 41px;
+		height: 81px;
 		width: auto;
 	}
 	.main__filteri{
@@ -408,7 +408,6 @@
 	.ponudaBox:hover img,
 	.potraznjaBox:hover img,
 	.suradnjaBox:hover img{
-		display: none;
 	}
 	.ponudaBox:hover,
 	.potraznjaBox:hover,
@@ -896,7 +895,351 @@
 
 
 		</div>
-                                    {% if relevantPosts.count > 1 %}
+       	
+       	{% if relevantPosts.count > 1 %}
+
+       	<style type="text/css">
+       		.main__oglasi--oglasi2{
+		width: 1031px;
+		border-radius: 26px;
+  		background-color: #eeede7;
+  		margin-left: 27px;
+	}
+	.main__oglasi--oglasi2{
+		width: 1031px;
+	}
+	.main__oglasi--oglasi2 > div{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 182px;
+		width: 1031px;
+		border-bottom: 1px solid #d6d5cf;
+		position: relative;
+		align-items: center;
+	}
+	.main__oglasi--oglasi2 > div{
+		border-top-left-radius: 26px;
+		border-top-right-radius: 26px;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(1){
+		display: flex;
+		flex-direction: column;
+		margin-left: 60px;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(1) > div:nth-child(1){
+		font-size: 24px;
+  		font-weight: 500;
+  		color: #262626;
+  		line-height: 1;
+  		font-family: 'Galano Medium';
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(1) > div:nth-child(2){
+		display: flex;
+		margin-top: 22px;
+		align-items: center;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+		color: #000000;
+		line-height: 1.86;
+		font-weight: 900;
+		margin-right: 30px;
+		font-size: 14px;
+		font-family: 'Galano Black';
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(2){
+		line-height: 1.57;
+		font-family: 'Galano Regular';
+		color: #7c7a71;
+		font-size: 14px;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > span{
+		color: #262626;
+		margin-left: 5px;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(2){
+		position: absolute;
+		left: 587px;
+		display: none;
+	}
+	.sakrij{
+		display: flex !important;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(1){
+		width: 51px;
+		height: 51px;
+		border-radius: 16px;
+		background-color: #262626;
+		box-shadow: 0px 5px 10px 0 rgba(38, 38, 38, 0.25);
+		color: #ffffff;
+		font-weight: 500px;
+		font-size: 20px;
+		font-family: 'Galano Black';
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(2){
+		margin-left: 45px;
+		margin-right: 16px;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(2),
+	.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(3){
+		width: 131px;
+ 	 	height: 49px;
+  		border-radius: 5px;
+  		border: solid 3px #262626;
+  		color: #262626;
+  		font-family: 'Galano Bold';
+  		line-height: 2.83;
+  		font-size: 11.5px;
+  		display: flex;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(2):hover,
+	.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(3):hover{
+		background-color: #262626;
+		color: white;
+		cursor: pointer;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(4){
+		color: #ff0101;
+		font-weight: 900;
+		font-size: 20px;
+		font-family: 'Galano Black';
+		position: absolute;
+		left: 45px;
+		top: -25px;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(3){
+		color: #262626;
+		line-height: 1.57;
+		font-size: 14px;
+		font-family: 'Galano Regular';
+		position: absolute;
+		right: 60px;
+		top: 22px;
+		display: none;
+	}
+	.main__oglasi--oglasi2 > div > div:nth-child(3) span{
+		color: #ff0000;
+	}
+	.main__oglasi--oglasi2 > div:nth-last-child(1){
+		border-bottom: 0;
+	}
+	/* RESPONZIVNOST -KRENI OVDJE*/
+	@media screen and (max-width: 1700px){
+		.uvod__linkovi{
+			display: none;
+		}
+	}
+	@media screen and (max-width: 1490px){
+		.main__oglasi--filter{
+			width: 300px;
+		}
+		.main h1{
+			font-size: 25px;
+		}
+		.main h1:nth-child(1) {
+		    margin-bottom:60px;
+		    margin-left: 100px;
+		}
+		.main__oglasi--filter-part span {
+			font-size: 18px;
+		}
+		.main__oglasi--filter-part span:nth-child(2){
+			font-size: 12px;
+		}
+		.main__oglasi--filter-part div:nth-child(2) div{
+			font-size: 20px;
+			width: 57px;
+		}
+		.main__oglasi--oglasi2 > div{
+			width: 900px;
+		}
+		.main__oglasi--oglasi2{
+			width: 900px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(1) > div:nth-child(1){
+			font-size: 20px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(1){
+			width: 45px;
+			height: 45px;
+			font-size: 15px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(4){
+			font-size: 15px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(2), .main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(3){
+			width: 91px;
+			height: 39px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(2){
+			left: 537px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(3){
+			font-size: 12px;
+		}
+		.main h2{
+			font-size: 20px;
+			margin-left: 100px;
+		}
+		.main h1:nth-child(3){
+			margin-left: 100px;
+		}
+		.main__oglasi2{
+			margin-left: -20px;
+		}
+		.main{
+			width: auto;
+		}
+		.bg_end{
+			max-width: 1500px;
+		}
+		.ponudaBox div:nth-child(2),
+		.potraznjaBox div:nth-child(2),
+		.suradnjaBox div:nth-child(2){
+			left: 691px !important;
+		}
+		.bg_end span{
+			font-size: 25px;
+		}
+		.main__filteri > div > div:nth-child(2){
+			font-size: 12px;
+		}
+		.main__oglasi{
+			margin-left: 0;
+		}
+	}
+	@media screen and (max-width: 1270px){
+		.main__oglasi{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.main__oglasi--filter{
+			margin-bottom: 30px;
+			display: flex;
+			flex-direction: row;
+			width: auto;
+			height: auto;
+		}
+		.main__oglasi--filter-part:nth-child(1){
+			border-top-left-radius: 26px;
+    		border-bottom-left-radius: 26px;
+    		border-top-right-radius: 0px;
+		}
+		.main__oglasi--filter-part{
+			padding: 40px;
+		}
+		.main__oglasi--filter-part:nth-child(2) {
+		    border-top-right-radius: 26px;
+		    border-bottom-right-radius: 26px;
+		    border-bottom-left-radius: 0px;
+		}
+		.main__filteri{
+			width: 900px;
+		}
+	}
+	@media screen and (max-width: 950px){
+		.main h1:nth-child(1),
+		.main h1:nth-child(3),
+		.main h2{
+			margin-left: 50px;
+		}
+	}
+	@media screen and (max-width: 900px){
+		.main__oglasi--oglasi2 > div{
+			flex-direction: column;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(1){
+			margin-top: 29px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(2){
+			position: static;
+			margin-top: 20px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(2) > div:nth-child(4){
+			display: none;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(3){
+			display: none !important;
+		}
+		.main__oglasi--oglasi2,
+		.main__oglasi--oglasi2 > div{
+			width: 600px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(2){
+			display: flex;
+		}
+		.main__oglasi--oglasi2 > div{
+			height: 200px;
+		}
+		.main__oglasi--oglasi2{
+			margin-left: 0;
+		}
+		.main__filteri{
+			width: 600px;
+			margin-top: 50px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(1){
+			margin-left: 0;
+			text-align: center;
+		}
+	}
+	@media screen and (max-width: 620px){
+		.main__oglasi--filter-part{
+			padding: 25px;
+		}
+		.main__oglasi--oglasi2, .main__oglasi--oglasi2 > div{
+			width: 350px;
+		}
+		.main__oglasi--oglasi2 > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1){
+			margin-left: 20px;
+		}
+		.main__oglasi--filter{
+			flex-direction: column;
+		}
+		.main__oglasi--filter-part:nth-child(1){
+			border-top-left-radius: 26px;
+    		border-bottom-left-radius: 0px;
+    		border-top-right-radius: 26px;
+		}
+		.main__oglasi--filter-part{
+			padding: 25px;
+		}
+		.main__oglasi--filter-part:nth-child(2) {
+		    border-top-right-radius: 0px;
+		    border-bottom-right-radius: 26px;
+		    border-bottom-left-radius: 26px;
+		}
+		.main__filteri{
+			width: 450px;
+		}
+		.slGab{
+			height: 30px;
+			margin-top: 7px;
+		}
+	}
+	@media screen and (max-width: 460px){
+		.main h1:nth-child(1), .main h1:nth-child(3), .main h2{
+			margin-left: 20px;
+		}
+		.main__filteri{
+			justify-content: center;
+			padding: 0;
+			transform: scale(0.8);
+			width: auto;
+		}
+		.ponudaBox:hover img,
+		.potraznjaBox:hover img,
+		.suradnjaBox:hover img{
+			display: block;
+		}
+	}
+       	</style>
 
 		<h1><span>PRILIKE</span></h1>
 		<h2>Najpopularniji oglasi iz Vaše branše.</h2>
@@ -916,7 +1259,7 @@
 		</div>
 
 
-		<div class="main__oglasi--oglasi" id="preporuke">
+		<div class="main__oglasi--oglasi main__oglasi--oglasi2" id="preporuke">
 
                                             {% for p in relevantPosts %}
 
@@ -975,7 +1318,7 @@
 					<div>
 					</div>
 				</div>-->
-		</div>
+
 		<div class="bg_end">
 			<span>Želite li vidjeti još oglasa?</span>
 		</div>
@@ -983,7 +1326,7 @@
 	</div>
             {% endif %}
 
-    </div>
+ 
 
 	<div class="uvod__linkovi">
 			<a href="https://www.linkedin.com/company/ziza-connect-and-improve-your-business/"><img src="../static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
