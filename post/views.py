@@ -156,9 +156,9 @@ def createpost(request):
             elif category == "Osiguravajuće":
                 title = "Osiguravajuće"
             else:
-                if btobtype == 1:
+                if btobtype == '1':
                     title = "Ponuda"
-                elif btobtype == 2:
+                elif btobtype == '2':
                     title = "Potražnja"
                 else:
                     title = "Partnerstvo"
