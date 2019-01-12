@@ -146,7 +146,7 @@
 	<div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-				<h2><span>OGLAS /</span> {{ post.position }}</h2>
+				<h2><span>OGLAS /</span> {% if post.type == 2 %} {{ post.title }} {% else %}{{ post.position }}{% endif %}</h2>
 				<p>Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
 		<!--	</div>{% if post.attachment %}
 			<a href="/download?file={{ post.attachment.name }}" ><div class="downloadPDF">
