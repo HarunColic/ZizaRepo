@@ -1268,7 +1268,7 @@
 				<div class="ponudaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
 						<div>
-							{{ p.title }}
+							{{ p.type }}
 						</div>
 						<div>
 							<div class="imeStruke">{{ p.categoryID.name }}</div>
@@ -1282,11 +1282,9 @@
 					</div>
 				</div>
 
-
-
                                                 {% elif p.b2b_type == 2 %}
 
-				<div class="saradnjaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
+				<div class="potraznjaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
 						<div>
 							{{ p.title }}
@@ -1303,7 +1301,7 @@
 					</div>
 				</div>
                         {% elif p.b2b_type == 3 %}
-				<div class="potraznjaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
+				<div class="saradnjaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
 						<div>
 							{{ p.title }}

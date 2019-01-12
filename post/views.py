@@ -151,8 +151,10 @@ def createpost(request):
 
             cat = Category.objects.get(name=category)
 
-            if category == 'Finansijske' or category == "Osiguravajuće":
-                title = request.POST['naslov']
+            if category == 'Finansijske':
+                title = 'Finansijske'
+            elif category == "Osiguravajuće":
+                title = "Osiguravajuće"
             else:
                 if btobtype == 1:
                     title = "Ponuda"
