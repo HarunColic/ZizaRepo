@@ -1263,7 +1263,7 @@
 
                                             {% for p in relevantPosts %}
 
-                                                {% if p.b2b_type == '1' %}
+                                                {% if p.b2b_type == 1 %}
 
 				<div class="ponudaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
@@ -1281,10 +1281,10 @@
 					<div>
 					</div>
 				</div>
-                                                {% endif %}
 
 
-                                                {% if p.b2b_type == '2' %}
+
+                                                {% elif p.b2b_type == 2 %}
 
 				<div class="saradnjaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
@@ -1302,10 +1302,7 @@
 					<div>
 					</div>
 				</div>
-                                                {% endif %}
-
-                                                {% if p.b2b_type == '3' %}
-
+                                                {% else %}
 				<div class="potraznjaBox" onclick="location.href='{% url 'showpost' id=p.slugifyName slug=p.generateSlug %}'" >
 					<div>
 						<div>
