@@ -220,9 +220,9 @@ def showpost(request, id, slug):
     if post.type == 2 and not authorized:
         return redirect('home')
 
-    if post.b2b_type == 1:
+    if int(post.b2b_type) == 1:
         b2b = "Ponuda"
-    elif post.b2b_type == 2:
+    elif int(post.b2b_type) == 2:
         b2b = "Potražnja"
     else:
         b2b = "Partnerstvo"
