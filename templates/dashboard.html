@@ -1485,11 +1485,11 @@
             if(ponuda.active == 'false' && potraznja.active == 'false' && partnerstvo.active == 'false')
             {
                 $('.saradnjaBox').css('visibility','visible');
-                $('.saradnjaBox').css('display','block');
+                $('.saradnjaBox').css('display','flex');
                 $('.ponudaBox').css('visibility','visible');
-                $('.ponudaBox').css('display','block');
+                $('.ponudaBox').css('display','flex');
                 $('.potraznjaBox').css('visibility','visible');
-                $('.potraznjaBox').css('display','block');
+                $('.potraznjaBox').css('display','flex');
                 return;
             }
 
@@ -1501,15 +1501,15 @@
             $('.potraznjaBox').css('display','none');
 
             if(ponuda.active == "true") {
-                $('.ponudaBox').css('display','block');
+                $('.ponudaBox').css('display','flex');
                 $('.ponudaBox').css('visibility','visible');
             }
             if(potraznja.active == "true") {
-                $('.potraznjaBox').css('display','block');
+                $('.potraznjaBox').css('display','flex');
                 $('.potraznjaBox').css('visibility','visible');
             }
             if(partnerstvo == "true"){
-                $('.saradnjaBox').css('display','block');
+                $('.saradnjaBox').css('display','flex');
                 $('.saradnjaBox').css('visibility','visible');
             }
         }
