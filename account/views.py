@@ -822,8 +822,9 @@ def anonimnaPretraga(request, id):
             zizaPosts = zizaPosts.filter(categoryID=ind)
             postovi = postovi.filter(categoryID=ind)
         if kljucnaRijec is not "":
+
             zizaPosts = zizaPosts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
-            postovi = postovi.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec))
+            postovi = postovi.filter(Q(title__contains__iexact=kljucnaRijec) | Q(content__contains__iexact=kljucnaRijec))
 
     data = list(zizaPosts) + list(postovi)
     counter = len(data)
