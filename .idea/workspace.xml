@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
@@ -79,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="1270" column="41" lean-forward="true" selection-start-line="1270" selection-start-column="41" selection-end-line="1270" selection-end-column="41" />
+            <state relative-caret-position="118">
+              <caret line="1499" column="31" lean-forward="true" selection-start-line="1499" selection-start-column="31" selection-end-line="1499" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -142,7 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>{{</find>
       <find>profilKor</find>
       <find>desni</find>
       <find>desniDio_job</find>
@@ -151,7 +150,6 @@
       <find>dashboard(</find>
       <find>ponuda</find>
       <find>active</find>
-      <find>saradnjaBox</find>
       <find>potraznjaBox</find>
       <find>suradnjaBox</find>
       <find>firme</find>
@@ -172,6 +170,8 @@
       <find>position</find>
       <find>close</find>
       <find>.png</find>
+      <find>inclu</find>
+      <find>saradnjaBox</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -232,12 +232,12 @@
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
         <option value="$PROJECT_DIR$/templates/oglas.html" />
         <option value="$PROJECT_DIR$/post/views.py" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/ProfilKorisnika.html" />
         <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
       </list>
     </option>
   </component>
@@ -449,7 +449,7 @@
       <workItem from="1546981910010" duration="1543000" />
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
-      <workItem from="1547397511099" duration="9887000" />
+      <workItem from="1547397511099" duration="10019000" />
     </task>
     <servers />
   </component>
@@ -459,7 +459,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148493000" />
+    <option name="totallyTimeSpent" value="148625000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -877,18 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="1270" column="41" lean-forward="true" selection-start-line="1270" selection-start-column="41" selection-end-line="1270" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1706">
@@ -947,6 +935,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="190" column="26" selection-start-line="190" selection-start-column="26" selection-end-line="190" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="1499" column="31" lean-forward="true" selection-start-line="1499" selection-start-column="31" selection-end-line="1499" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
