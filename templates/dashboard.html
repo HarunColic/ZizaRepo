@@ -1244,15 +1244,15 @@
 		<h1><span>PRILIKE</span></h1>
 		<h2>Najpopularniji oglasi iz Vaše branše.</h2>
 		<div class="main__filteri">
-			<div id="ponuda" class="inactive ponuda" style="margin-right: 36px">
+			<div id="ponuda" active="false" class="inactive ponuda" style="margin-right: 36px">
 				<div><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
 				<div>PONUDA</div>
 			</div>
-			<div id="potraznja"  class="inactive potraznja" style="margin-right: 36px">
+			<div id="potraznja" active="false" class="inactive potraznja" style="margin-right: 36px">
 				<div style="box-shadow: 0px 5px 10px 0 rgba(97, 177, 49, 0.25); background-color: #61b131;"><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
 				<div style="color: #61b131">POTRAŽNJA</div>
 			</div>
-			<div id="partnerstvo" class="inactive suradnja">
+			<div id="partnerstvo" active="false" class="inactive suradnja">
 				<div style="box-shadow: 0px 5px 10px 0 rgba(177, 176, 171, 0.25); background-color: #f11212;"><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
 				<div style="color: #f11212">SURADNJA</div>
 			</div>
@@ -1437,6 +1437,55 @@
             pEvent.stopPropagation();
         })
 
+        ponuda = document.getElementById("ponuda");
+        potraznja = document.getElementById("potraznja");
+        partnerstvo = document.getElementById("partnerstvo");
+
+        $("#ponuda").click(function(){
+
+            if(ponuda.active === "false"){
+
+                ponuda.active = "true";
+            }
+            else
+                ponuda.active = "false";
+
+        });
+
+        $("#potraznja").click(function(){
+
+            if(potraznja.active === "false"){
+
+                potraznja.active = "true";
+            }
+            else
+                potraznja.active = "false";
+
+        });
+
+        $("#partnerstvo").click(function(){
+
+            if(partnerstvo.active === "false"){
+
+                partnerstvo.active = "true";
+            }
+            else
+                partnerstvo.active = "false";
+
+        });
+
+
+        if(ponuda.active === "true" && potraznja === "false" && partnerstvo === "false"){
+
+            potraznje = document.getElementsByClassName("potraznjaBox");
+            saradnje = document.getElementsByClassName("saradnjaBox");
+
+            for(var i = 0; i < potraznje.length; i++){
+
+                potraznje[i].style.visibility = "hidden";
+                potraznje[i].style.display = "none";
+            }
+        }
 
 </script>
 </html>

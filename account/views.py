@@ -142,7 +142,8 @@ def profil(request):
 
             return render(request, 'profilTvrtka.html',
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
-                              , 'page': int(page), 'rng': rng, 'izlozi': izlozi, 'exhibPage': int(exhibPage), 'exRNG': exRNG,
+                              , 'page': int(page), 'rng': rng, 'izlozi': izlozi, 'exhibPage': int(exhibPage), 'exRNG': exRNG
+                              , 'acctype':'f',
                            })
 
         elif Employee.objects.filter(userID=user).exists():
