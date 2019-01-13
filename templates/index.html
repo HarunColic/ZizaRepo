@@ -821,6 +821,13 @@ ul {list-style: none}
 		}
     </style>
 
+     {% if auth %}
+     <style type="text/css">
+     	.header__navigation{
+     		box-shadow: none;
+     	}
+     </style>
+     {% else %}
 	<div class="uvod">
 		<div class="uvod__linkovi">
 			
@@ -861,6 +868,7 @@ ul {list-style: none}
 
 		</div> <!-- uvod__slike -->
 	</div> <!-- uvod -->
+	{% endif %}
 	<div class="zadnjiPoslovi">
 	<div class="zadnjiPoslovi__popularno">
 			<h2>POPULARNO</h2>
@@ -1020,6 +1028,16 @@ ul {list-style: none}
 			</div>
 		</div><!-- oglasi -->
 	</div>
+	{% if auth %}
+	<style type="text/css">
+		.footer{
+			display: none;
+		}
+		.oglasi__kartica{
+			filter: blur(0px) !important;
+		}
+	</style>
+	{% else %}
 	<div class="callToRegister mobCall" style="margin-top: -100px; margin-bottom: -200px"><img src="../static/images/registrirajse.png"></div>
 	<div class="testmoniali">
 		<div class="callToRegister"><img src="../static/images/registrirajse.png"></div>
@@ -1072,6 +1090,7 @@ ul {list-style: none}
 			</div>
 		</div>
 	</div> <!-- testmoniali -->
+	{% endif %}
 
 
           {% with auth=auth %}
@@ -1232,6 +1251,7 @@ ul {list-style: none}
 	$('.pocetNa').addClass('selected');
 </script>
 <script>
+	document.getElementById('traziSe').innerHTML = "<strong>{% if oglas1.type == 2 %} {{ oglas1.title }}{% else %}{{ oglas1.position }}{% endif %}</strong>, {% if oglas1.type == 1 %}{{ oglas1.location }}{% else %}{{ oglas1.region }}{% endif %}";
 setInterval(function(){
 	setTimeout(function(){
 		document.getElementById("lijevo").style.animation = "naCentar 0.7s ease-out 0s 1 normal forwards running";

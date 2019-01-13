@@ -623,7 +623,7 @@ INFO :: OSTAVLJENO ZA KASNIJE ZA VIŠE SLAJDOVA;
 */
 
 .centralni{
-	animation-delay: 2s;
+	animation-delay: 0s;
 }
 .prviEl{
 	transform: scale(0.8);
