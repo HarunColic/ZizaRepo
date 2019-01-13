@@ -95,7 +95,7 @@ def home(request):
     sviOglasi = postsB2B.union(postsB2C)[:20]
 
     if request.user.is_authenticated:
-        if Company.objects.filter(userID=request.user).exists():
+        if Company.objects.filter(userID=request.user)sts():
             usr = 'comp'
         else:
             usr = 'wrkr'
@@ -1101,24 +1101,30 @@ def korisnik(request):
 
 def CVs(request):
 
-    userP = UserProfile.objects.get(userID=request.user)
+    if request.user.is_authenticated:
 
-    if not userP.editovanProfil:
-        sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
-        return redirect('editprofil')
+        if not superUser(request.user):
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-    employees = Employee.objects.all()
+        userP = UserProfile.objects.get(userID=request.user)
 
-    userPrs = UserProfile.objects.filter(userID__employee__in=employees)
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
 
-    paginator = Paginator(userPrs, 10)
-    page = request.GET.get('page', 1)
-    rng = range(1, paginator.num_pages + 1)
-    userPs = paginator.page(page)
+        employees = Employee.objects.all()
 
-    return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP,
-                                        'rng': rng, 'page': int(page)})
+        userPrs = UserProfile.objects.filter(userID__employee__in=employees)
 
+        paginator = Paginator(userPrs, 10)
+        page = request.GET.get('page', 1)
+        rng = range(1, paginator.num_pages + 1)
+        userPs = paginator.page(page)
+
+        return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP,
+                                            'rng': rng, 'page': int(page)})
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 def pozovi(request, id, sender):
 
