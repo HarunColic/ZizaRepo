@@ -904,7 +904,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='#'" style="cursor: pointer;">
+					<div class="desniDio_job" onclick="location.href='{%  url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
 						<div class="desniDio_job__naziv"><h4>{{ p.position }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
 					</div>
@@ -968,18 +968,18 @@ ul {list-style: none}
 			<p style="font-size: 26.5px">I obratno!</p>
 			<h4>Otvoreni konkursi</h4>
 			<div class="linijaPosao"></div>
-			<img src="../static/images/worker_bee.png">
+			<img src="{%  static 'images/worker_bee.png' %}">
 		</div>
 		<div style="cursor: pointer;" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'"  class="kartice__trazitePartnera">
 			<h3>Vidite!</h3>
 			<p style="font-size: 26.5px">I budite viđeni!</p>
 			<h4>Firme spremne za suradnju</h4>
-			<img src="../static/images/money_bee.png">
+			<img src="{%  static 'images/money_bee.png' %}">
 		</div>
 	</div> <!-- kartice -->
 	<div class="oglasi">
         {% for p in cetriOglasa %}
-		<div class="oglasi__kartica" onclick="location.href='#'" style="cursor: pointer;">
+		<div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
 			<div class="selectUp"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
@@ -1241,7 +1241,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').addClass('active');
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "#";
+            {% if oglas1 is not None %}	location.href = "{%  url 'showpost' id=oglas1.userID.first_name slug=oglas1.generateSlug %}"; {% endif %}
 		});
 }, 1000);
 
@@ -1253,7 +1253,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').addClass('active');
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "#";
+            {%  if oglas2 is not None %}location.href = "{%  url 'showpost' id=oglas2.userID.first_name slug=oglas2.generateSlug %}"; {% endif %}
 		});
 	}, 3000);
 
@@ -1266,7 +1266,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').addClass('active');
 		// document.getElementById("biz").style.animation = "slikaChange 0.7s ease-out 0s 1 normal forwards running";
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "#";
+            {% if oglas3 is not None %}	location.href = "{%  url 'showpost' id=oglas3.userID.first_name slug=oglas3.generateSlug %}"; {% endif %}
 		});
 	}, 5000);
 }, 6000);

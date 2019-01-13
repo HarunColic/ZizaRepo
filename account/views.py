@@ -89,8 +89,8 @@ def home(request):
         drugaSlika = None
         trecaSlika = None
 
-    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
-    postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
+    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')[0:4]
+    postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')[0:4]
 
     if request.user.is_authenticated:
         if Company.objects.filter(userID=request.user).exists():
