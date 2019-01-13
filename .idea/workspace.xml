@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="1107" lean-forward="true" selection-start-line="1107" selection-end-line="1107" />
+            <state relative-caret-position="294">
+              <caret line="985" column="82" selection-start-line="985" selection-start-column="82" selection-end-line="985" selection-end-column="82" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -155,7 +154,6 @@
       <find>ponudaBox</find>
       <find>header.h</find>
       <find>profil(</find>
-      <find>profilKo</find>
       <find>profilKo(</find>
       <find>home(</find>
       <find>cetri</find>
@@ -173,6 +171,7 @@
       <find>anonimna</find>
       <find>CVs(</find>
       <find>.exi</find>
+      <find>profilKo</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -451,7 +450,7 @@
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
       <workItem from="1547397511099" duration="11476000" />
-      <workItem from="1547423482054" duration="281000" />
+      <workItem from="1547423482054" duration="440000" />
     </task>
     <servers />
   </component>
@@ -461,7 +460,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150363000" />
+    <option name="totallyTimeSpent" value="150522000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -944,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="1107" lean-forward="true" selection-start-line="1107" selection-end-line="1107" />
+        <state relative-caret-position="294">
+          <caret line="985" column="82" selection-start-line="985" selection-start-column="82" selection-end-line="985" selection-end-column="82" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
