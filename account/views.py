@@ -64,7 +64,7 @@ def home(request):
 
     for cet in cetriOglasa:
         #cetriUserP.append(UserProfile.objects.get(userID=cet.userID))
-        cetriUserP.append(None  )
+        cetriUserP.append(None)
 
     topOglasi = Post.objects.filter().exclude(soft_delete=True).order_by('views', '-created_at')[0:3]
 
@@ -92,6 +92,8 @@ def home(request):
     postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')[0:4]
     postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')[0:4]
 
+    sviOglasi = postsB2B.union(postsB2C)
+
     if request.user.is_authenticated:
         if Company.objects.filter(userID=request.user).exists():
             usr = 'comp'
@@ -102,7 +104,7 @@ def home(request):
                                               'postsbc': postsB2C, 'postbb':postsB2B, 'oglas1': oglas1, 'oglas2': oglas2,
                                               'oglas3': oglas3, 'cetriOglasa': cetriOglasa, 'cetriUserP': cetriUserP,
                                               'prvaSlika': prvaSlika, 'drugaSlika': drugaSlika, 'trecaSlika': trecaSlika,
-                                              'usr': usr})
+                                              'usr': usr, 'sviOglasi': sviOglasi})
     else:
         industries = Category.objects.filter(type=0)
         return render(request, 'index.html', {'user': None, 'userP': None, 'auth': False, 'industries': industries,
@@ -753,8 +755,6 @@ def dashboard(request):
             rel3 = Post.objects.filter(type=2).filter(b2b_type=3).exclude(soft_delete=True).exclude(userID=request.user)[:10]
 
             relevantPosts = rel1.union(rel2, rel3)
-
-            #relevantPosts = rel1 | rel2 | rel3
 
             paginator = Paginator(aktPostovi, 5)
             page = request.GET.get('pagea', 1)
