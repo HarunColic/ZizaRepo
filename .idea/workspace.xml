@@ -52,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="752" column="120" selection-start-line="752" selection-start-column="120" selection-end-line="752" selection-end-column="120" />
+            <state relative-caret-position="315">
+              <caret line="754" column="46" selection-start-line="754" selection-start-column="46" selection-end-line="754" selection-end-column="46" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -407,7 +407,7 @@
       <workItem from="1546981910010" duration="1543000" />
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
-      <workItem from="1547397511099" duration="3099000" />
+      <workItem from="1547397511099" duration="3265000" />
     </task>
     <servers />
   </component>
@@ -417,7 +417,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141705000" />
+    <option name="totallyTimeSpent" value="141871000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -911,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="752" column="120" selection-start-line="752" selection-start-column="120" selection-end-line="752" selection-end-column="120" />
+        <state relative-caret-position="315">
+          <caret line="754" column="46" selection-start-line="754" selection-start-column="46" selection-end-line="754" selection-end-column="46" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
