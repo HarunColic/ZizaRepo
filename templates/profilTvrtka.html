@@ -293,14 +293,14 @@
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
 				<a href="#">Tvrtka</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
-				<a href="#">{{ user.first_name }}</a>
+				<a href="#">{{ userr.first_name }}</a>
 			</div>
 			<div class="linijaD"></div>
 		</div>
 		<div class="tvrtka">  
-			{% if userP.image  %}
+			{% if userPP.image  %}
 				<div class="avatarKucica">
-	               <img style="max-width: 250px; height: auto;" src="{% if userP.image %} {{ userP.image.url }} {% endif %}">
+	               <img style="max-width: 250px; height: auto;" src="{% if userPP.image %} {{ userPP.image.url }} {% endif %}">
 				</div>
 			{% else %}
 				<div class="avatarKucica" style="background-color: #262626">
@@ -310,7 +310,7 @@
 
 			<div class="podaciT">
 				<div>PROFIL TVRTKE</div>
-				<div>{{ user.first_name }}</div>
+				<div>{{ userr.first_name }}</div>
 			</div>
 		</div>
 	</div>
@@ -326,7 +326,7 @@
 					<div class="zadnjiPoslovi__last--navigator--right"></div>
 				</div>
 			</div>
-            {% if userP.cv %}<a href="/download?file={{ userP.cv.name }}" ><div class="downloadPDF">
+            {% if userPP.cv %}<a href="/download?file={{ userPP.cv.name }}" ><div class="downloadPDF">
             <img src="{% static "images/downloadikona.png" %}"> FIN. IZVJEŠTAJ
             </div></a>{% else %} <a href="#"><div class="downloadPDF downloadPDF2" style="cursor: no-drop; background-color: #b7b5af;">
             <img src="{% static "images/downloadikona.png" %}"> FIN. IZVJEŠTAJ
@@ -334,7 +334,7 @@
 		</div>
 		<div class="tabelarni oNamaContent oNamTab">
 			<div>
-				<h3 style="text-transform: uppercase;">{{ userP.location }}</h3>
+				<h3 style="text-transform: uppercase;">{{ userPP.location }}</h3>
 				<p>SJEDIŠTE</p>
 			</div>
 			<div class="malaLinija"></div>
@@ -350,7 +350,7 @@
 			<div class="malaLinija"></div>
 			<a>
                 <div>
-                <a href="mailto:{{ uProfile.email }}"> <h3>KLIKNI OVDJE</h3></a>
+                <a href="mailto:{{ userPP.userID.email }}"> <h3>KLIKNI OVDJE</h3></a>
 				<p>KONTAKT</p>
 			</div>
 		</div>

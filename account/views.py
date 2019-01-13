@@ -143,7 +143,7 @@ def profil(request):
             return render(request, 'profilTvrtka.html',
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
                               , 'page': int(page), 'rng': rng, 'izlozi': izlozi, 'exhibPage': int(exhibPage), 'exRNG': exRNG
-                              , 'acctype':'f',
+                              , 'userr': user, 'userPP': userP,
                            })
 
         elif Employee.objects.filter(userID=user).exists():
@@ -932,25 +932,33 @@ def profilKorisnika(request, id, slug):
 
     if request.user.is_authenticated:
 
+
+        #Loged in korisnik podaci
+
+        user = request.user
         userP = UserProfile.objects.get(userID=request.user)
+
+
+        #end loged in
+
 
         if not userP.editovanProfil:
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
-        user = User.objects.get(pk=id)
+        userr = User.objects.get(pk=id)
 
-        slugified = slugify(user.first_name)
+        slugified = slugify(userr.first_name)
 
-        if Company.objects.filter(userID=request.user).exists():
+        if Company.objects.filter(userID=userr).exists():
             usr = 'comp'
         else:
             usr = 'wrkr'
 
-        if Company.objects.filter(userID=user).exists():
-            company = Company.objects.get(userID=user)
-            userP = UserProfile.objects.get(userID=user)
-            postovi = Post.objects.filter(soft_delete=False).filter(userID=user)
+        if Company.objects.filter(userID=userr).exists():
+            company = Company.objects.get(userID=userr)
+            userPP = UserProfile.objects.get(userID=userr)
+            postovi = Post.objects.filter(soft_delete=False).filter(userID=userr)
 
             paginator = Paginator(postovi, 5)
             page = request.GET.get('page', 1)
@@ -958,7 +966,8 @@ def profilKorisnika(request, id, slug):
             rng = range(1, paginator.num_pages + 1)
 
             if slug == slugified:
-                return render(request, 'ProfilKorisnika.html', {'usr': usr, 'auth': True, 'user': user, 'userP': userP,
+                return render(request, 'profilTvrtka.html', {'usr': usr, 'auth': True, 'user': user, 'userr': userr,
+                                                             'userP': userP, 'userPP': userPP,
                                                             'company': company, 'posts': posts, 'rng': rng, 'page': int(page)})
             else:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
