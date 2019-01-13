@@ -1442,48 +1442,65 @@
         partnerstvo = document.getElementById("partnerstvo");
 
         $("#ponuda").click(function(){
-
             if(ponuda.active === "false"){
-
                 ponuda.active = "true";
             }
             else
                 ponuda.active = "false";
 
+            Toggle();
         });
 
         $("#potraznja").click(function(){
-
             if(potraznja.active === "false"){
-
                 potraznja.active = "true";
             }
             else
                 potraznja.active = "false";
 
+            Toggle();
         });
 
         $("#partnerstvo").click(function(){
-
             if(partnerstvo.active === "false"){
-
                 partnerstvo.active = "true";
             }
             else
                 partnerstvo.active = "false";
 
+            Toggle();
         });
 
+        function Toggle(){
+            if(ponuda.active === 'false' && potraznje.active === 'false' && partnerstvo.active === 'false')
+            {
+                $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('visibility','visible');
+                $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('display','block');
+                return;
+            }
+            $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('visibility','hidden');
+            $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('display','none');
 
-        if(ponuda.active === "true" && potraznja === "false" && partnerstvo === "false"){
-
-            potraznje = document.getElementsByClassName("potraznjaBox");
-            saradnje = document.getElementsByClassName("saradnjaBox");
-
-            for(var i = 0; i < potraznje.length; i++){
-
-                potraznje[i].style.visibility = "hidden";
-                potraznje[i].style.display = "none";
+            if(ponuda.active === "true") {
+                ponude = document.getElementsByClassName("ponudaBox");
+                for(var i = 0; i < potraznje.length; i++){
+                    ponude[i].style.visibility = "visible";
+                    ponude[i].style.display = "block";
+                }
+            }
+            if(potraznja.active === "true") {
+                potraznje = document.getElementsByClassName("potraznjaBox");
+                for(var i = 0; i < potraznje.length; i++){
+                    potraznje[i].style.visibility = "visible";
+                    potraznje[i].style.display = "block";
+                }
+            }
+            if(partnerstvo === "true"){
+                saradnje = document.getElementsByClassName("saradnjaBox");
+                for(var i = 0; i < potraznje.length; i++){
+                    saradnje[i].style.visibility = "visible";
+                    saradnje[i].style.display = "block";
+                }
             }
         }
 
