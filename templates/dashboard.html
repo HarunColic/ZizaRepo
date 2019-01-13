@@ -1432,12 +1432,22 @@
                 pEvent.stopPropagation();
             })
         }
-    }else
+    }else{
         p.addEventListener('click', function(pEvent) {
             pEvent.stopPropagation();
         })
+    }
 
-        ponuda = document.getElementById("ponuda");
+
+
+
+
+
+</script>
+
+<script>
+
+    ponuda = document.getElementById("ponuda");
         potraznja = document.getElementById("potraznja");
         partnerstvo = document.getElementById("partnerstvo");
 
@@ -1447,6 +1457,7 @@
             }
             else
                 ponuda.active = "false";
+            console.log('Toogle');
 
             Toggle();
         });
@@ -1457,6 +1468,7 @@
             }
             else
                 potraznja.active = "false";
+            console.log('Toogle');
 
             Toggle();
         });
@@ -1467,7 +1479,7 @@
             }
             else
                 partnerstvo.active = "false";
-
+            console.log('Toogle');
             Toggle();
         });
 
