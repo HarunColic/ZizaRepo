@@ -74,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1450" selection-start-line="1450" selection-end-line="1450" />
+              <caret line="1481" lean-forward="true" selection-start-line="1481" selection-end-line="1481" />
             </state>
           </provider>
         </entry>
@@ -100,8 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>izlogSli</find>
-      <find>imagePreview</find>
       <find>submit</find>
       <find>izlog</find>
       <find>magePre</find>
@@ -130,6 +128,8 @@
       <find>home(</find>
       <find>cet</find>
       <find>dashboard(</find>
+      <find>ponuda</find>
+      <find>ponudaBox</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -407,7 +407,7 @@
       <workItem from="1546981910010" duration="1543000" />
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
-      <workItem from="1547397511099" duration="3545000" />
+      <workItem from="1547397511099" duration="3897000" />
     </task>
     <servers />
   </component>
@@ -417,7 +417,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142151000" />
+    <option name="totallyTimeSpent" value="142503000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -915,7 +915,7 @@
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1450" selection-start-line="1450" selection-end-line="1450" />
+          <caret line="1481" lean-forward="true" selection-start-line="1481" selection-end-line="1481" />
         </state>
       </provider>
     </entry>

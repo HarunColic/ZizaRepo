@@ -1447,7 +1447,7 @@
 
 <script>
 
-    ponuda = document.getElementById("ponuda");
+        ponuda = document.getElementById("ponuda");
         potraznja = document.getElementById("potraznja");
         partnerstvo = document.getElementById("partnerstvo");
 
@@ -1494,25 +1494,16 @@
             $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('display','none');
 
             if(ponuda.active === "true") {
-                ponude = document.getElementsByClassName("ponudaBox");
-                for(var i = 0; i < potraznje.length; i++){
-                    ponude[i].style.visibility = "visible";
-                    ponude[i].style.display = "block";
-                }
+                $('.ponudaBox').css('display','block');
+                $('.ponudaBox').css('visibility','visible');
             }
             if(potraznja.active === "true") {
-                potraznje = document.getElementsByClassName("potraznjaBox");
-                for(var i = 0; i < potraznje.length; i++){
-                    potraznje[i].style.visibility = "visible";
-                    potraznje[i].style.display = "block";
-                }
+                $('.potraznjaBox').css('display','block');
+                $('.potraznjaBox').css('visibility','visible');
             }
             if(partnerstvo === "true"){
-                saradnje = document.getElementsByClassName("saradnjaBox");
-                for(var i = 0; i < potraznje.length; i++){
-                    saradnje[i].style.visibility = "visible";
-                    saradnje[i].style.display = "block";
-                }
+                $('.saradnjaBox').css('display','block');
+                $('.saradnjaBox').css('visibility','visible');
             }
         }
 
