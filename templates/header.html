@@ -143,14 +143,14 @@
 	<div id="myModal" class="modal" style="z-index: 9999999">
 
 	  <div class="regBox registracija">
-	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+	  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
 		<div class="regBox__lijevo">
 			<div class="regBox__lijevo--box active" id="osobaSector">
-				<img src="../static/images/pcelaobicna.png">
+				<img src="{% static 'images/pcelaobicna.png' %}">
 				<p>Prijava<br>kao fizičko lice</p>
 			</div>
 			<div class="regBox__lijevo--box" id="firmaSector">
-				<img src="../static/images/pcelafirma.png" style="margin-top: 5px">
+				<img src="{% static 'images/pcelafirma.png' %}" style="margin-top: 5px">
 				<p style="margin-top: 4px">Prijava<br>kao pravno lice</p>
 			</div>
 		</div>
@@ -204,7 +204,7 @@
 					    </div>
 					</div>
 				</div>
-				<img id="submitSlika" src="../static/images/send.png" style="margin-top: 60px; cursor: pointer;">
+				<img id="submitSlika" src="{% static 'images/send.png' %}" style="margin-top: 60px; cursor: pointer;">
 			</div>
 		</div>
 	</div>
@@ -223,7 +223,7 @@
 		<div id="myModal2" class="modal" style="z-index: 9999999">
 
 	  <div class="regBox logBox" style="height: 501px">
-	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close closeReg">
+	  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close closeReg">
 		<div class="regBox__desno" style="width: 100%">
 			<div style="margin-top: 50px; margin-bottom: 20px" class="headLogin">
 				<h1 id="naslovTekst" style="margin-top: 0; margin-bottom: 0">PRIJAVA ZA KORISNIKE</h1>
@@ -262,7 +262,7 @@
 		<div id="myModal3" class="modal" style="z-index: 9999999">
 
 	  <div class="regBox restBox" style="height: 421px">
-	  	<img src="../static/images/close.png" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+	  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
 		<div class="regBox__desno" style="width: 100%">
 			<div>
 				<h1 id="naslovTekst">RESTARTOVANJE LOZINKE</h1>
