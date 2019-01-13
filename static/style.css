@@ -1160,15 +1160,15 @@ body{
 .owl-dot.active span{
 	background-color: #f89101 !important;
 }
-.owl-dots > .owl-dot:nth-child(1) > span, .owl-dots > .owl-dot:nth-child(7) > span{
+.owl-dots > .owl-dot:nth-child(1) > span, .owl-dots > .owl-dot:nth-child(5) > span{
 	width: 4px;
 		height: 4px;
 }
-.owl-dots > .owl-dot:nth-child(2) > span, .owl-dots > .owl-dot:nth-child(6) > span{
+.owl-dots > .owl-dot:nth-child(2) > span, .owl-dots > .owl-dot:nth-child(4) > span{
 	width: 6px;
 		height: 6px;
 }
-.owl-dots > .owl-dot:nth-child(3) > span, .owl-dots > .owl-dot:nth-child(5) > span{
+.owl-dots > .owl-dot:nth-child(3) > span, .owl-dots > .owl-dot:nth-child(3) > span{
 	width: 8px;
 		height: 8px;
 }

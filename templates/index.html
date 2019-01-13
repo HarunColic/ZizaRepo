@@ -438,6 +438,7 @@ ul {list-style: none}
 						margin-left: -50px;
 					}
 				}	
+
 			</style>
 
     		<style type="text/css">
@@ -805,6 +806,19 @@ ul {list-style: none}
 			body{
 			}
 		}
+		.zadnjiPoslovi__popularno--slajder__sac{
+			cursor: pointer;
+		}
+		.selectUp{
+			display: none;
+		}
+		.oglasi__kartica:nth-child(1){
+			border-top-left-radius: 10px;
+    		border-top-right-radius: 10px;
+		}
+		.oglasi__kartica:nth-child(1) > .selectUp{
+    		display: block;
+		}
     </style>
 
 	<div class="uvod">
@@ -864,7 +878,7 @@ ul {list-style: none}
 					<div class="zadnjiPoslovi__popularno--slajder__sac treciEl" id="desno">
 						<div class="slikaPolicajac"></div>
 					</div>
-                     <p id="traziSe"><strong></strong> </p>
+                     <p id="traziSe" style="cursor: pointer;"><strong></strong> </p>
 				</div>
 				<div class="zadnjiPoslovi__popularno--dots">
 					<div class="dot"></div>
@@ -890,7 +904,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job">
+					<div class="desniDio_job" onclick="location.href='#'" style="cursor: pointer;">
 						<div class="desniDio_job__naziv"><h4>{{ p.position }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
 					</div>
@@ -965,7 +979,7 @@ ul {list-style: none}
 	</div> <!-- kartice -->
 	<div class="oglasi">
         {% for p in cetriOglasa %}
-		<div class="oglasi__kartica prvaKartica">
+		<div class="oglasi__kartica" onclick="location.href='#'" style="cursor: pointer;">
 			<div class="selectUp"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
@@ -1082,6 +1096,9 @@ ul {list-style: none}
 				  loop: false,
 				  showCursor: false
 				});
+
+	var random = Math.floor(Math.random()*3+1);
+	$(".oglasi__kartica").eq(random).prepend('<div class="cosakTrokut"><img src="https://i.imgur.com/iPzeUMh.png"></div>');
 </script>
 
 
@@ -1220,28 +1237,37 @@ setInterval(function(){
 		document.getElementById("lijevo").style.animation = "naCentar 0.7s ease-out 0s 1 normal forwards running";
 		document.getElementById("centar").style.animation = "okreni 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("desno").style.animation = "atomskiDesno 1s ease-out 0s 1 normal forwards running";
-		document.getElementById('traziSe').innerHTML = "{% if oglas1.type == 2 %} {{ oglas1.title }} {% else %} {{ oglas1.position }}{% endif %}: {% if oglas1.type == 1 %}{{ oglas1.location }}{% else %}{{ oglas1.region }}{% endif %}";
+		document.getElementById('traziSe').innerHTML = "<strong>{% if oglas1.type == 2 %} {{ oglas1.title }}{% else %}{{ oglas1.position }}{% endif %}</strong>, {% if oglas1.type == 1 %}{{ oglas1.location }}{% else %}{{ oglas1.region }}{% endif %}";
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').addClass('active');
+		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
+			location.href = "#";
+		});
 }, 1000);
 
 	setTimeout(function(){
 		document.getElementById("lijevo").style.animation = "okreni2 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("centar").style.animation = "okreni3 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("desno").style.animation = "okreni4 0.7s ease-out 0s 1 normal forwards running";
-		document.getElementById('traziSe').innerHTML = " {% if oglas2.type == 2 %} {{ oglas2.title }} {% else %} {{ oglas2.position }} {% endif %} : {% if oglas2.type == 1 %}{{ oglas2.location }}{% else %}{{ oglas2.region }}{% endif %}";
+		document.getElementById('traziSe').innerHTML = "<strong>{% if oglas2.type == 2 %} {{ oglas2.title }}{% else %}{{ oglas2.position }}{% endif %}</strong>, {% if oglas2.type == 1 %}{{ oglas2.location }}{% else %}{{ oglas2.region }}{% endif %}";
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').addClass('active');
+		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
+			location.href = "#";
+		});
 	}, 3000);
 
 	setTimeout(function(){
 		document.getElementById("desno").style.animation = "okreni5 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("lijevo").style.animation = "okreni6 1s ease-out 0s 1 normal forwards running";
 		document.getElementById("centar").style.animation = "okreni7 0.7s ease-out 0s 1 normal forwards running";
-		document.getElementById('traziSe').innerHTML = "{% if oglas3.type == 2 %} {{ oglas3.title }} {% else %} {{ oglas3.position }} {% endif %} : {% if oglas3.type == 1 %}{{ oglas3.location }}{% else %}{{ oglas3.region }}{% endif %}";
+		document.getElementById('traziSe').innerHTML = "<strong>{% if oglas3.type == 2 %} {{ oglas3.title }}{% else %}{{ oglas3.position }}{% endif %}</strong>, {% if oglas3.type == 1 %}{{ oglas3.location }}{% else %}{{ oglas3.region }}{% endif %}";
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').addClass('active');
 		// document.getElementById("biz").style.animation = "slikaChange 0.7s ease-out 0s 1 normal forwards running";
+		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
+			location.href = "#";
+		});
 	}, 5000);
 }, 6000);
 

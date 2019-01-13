@@ -150,6 +150,136 @@
 		    border-bottom: none !important;
 		}
 	</style>
+	<style type="text/css">
+		.zadnjiPoslovi__last--kategorije{
+			margin: 0 !important;
+		}
+		.zadnjiPoslovi__last--navigator--left {
+		    width: 150px  !important;
+		    height: 12px;
+		    background: black;
+		    position: absolute;
+		    margin-left: 0px  !important;
+		    margin-top: -10px  !important;
+		}
+		.zadnjiPoslovi__last--navigator--right {
+		    width: 300px  !important;
+		    height: 2px;
+		    background: black;
+		    position: absolute;
+		    margin-left: 0px  !important;
+		    margin-top: -5px  !important;
+		}
+		#posaoButton{
+			margin-right: 35px !important;
+			margin-left: 20px  !important;
+		}
+		#posaoButton, #biznisButton{
+			user-select: none;
+			cursor: pointer;
+		}
+		@keyframes prebaciDesno{
+			0% {
+			    margin-left: 0px;
+			}
+			100% {
+			    margin-left: 150px;
+			}
+		}
+		@keyframes prebaciLijevo{
+			0% {
+			    margin-left: 150px;
+			}
+			100% {
+			    margin-left: 0px;
+			}
+		}
+		.oNamaContent{
+			display: none;
+		}
+		@media screen and (max-width: 1445px){
+			.zadnjiPoslovi__last--navigator {
+			    margin-left: -0px;
+			}
+		}
+		@media screen and (max-width: 1255px){
+			.footer{
+			    margin-top: 100px;
+			}
+		}
+		@media screen and (max-width: 1255px){
+			.trazimoNone{
+			    margin-top: 0px;
+			}
+		}
+		@media screen and (max-width: 1177px){
+			.navigacijaTipke{
+				margin-left: auto !important;
+			    margin: 0 !important;
+			    margin-top: 30px !important;
+    			margin-bottom: 30px !important;
+			}
+		}
+		@media screen and (max-width: 500px){
+			.trazimo{
+			    margin-top: 114px;
+			}
+			.trazimo h2{
+				margin-bottom: 10px;
+			}
+			#posaoButton, #biznisButton{
+				font-size: 25px;
+			}
+			.trazimoNone{
+				margin-top: 0;
+			}
+		}
+		@media screen and (max-width: 410px){
+			.tabelaRasa2 > div div:nth-child(1){
+				margin-left: 32px;
+			}
+			.tabelaRasa2 {
+				width: 350px;
+			}
+			.respTab2{
+				margin-left: 30px;
+			}
+		}
+		@media screen and (max-width: 375px){
+			.trazimo h2{
+				display: block;
+			}
+			.respTab2{
+				margin-top: -90px;
+			}
+			.respTab2{
+				margin-left: 15px;
+			}
+			.navigacijaTipke{
+				flex-wrap: wrap;
+			}
+			.specMobTabCase{
+				margin-top: -100px !important;
+    			margin-bottom: -50px !important;
+			}
+			.navigacija{
+				display: none;
+			}
+		}
+		@media screen and (max-width: 840px){
+			.oNamTab{
+				margin-top: 80px !important;
+			}
+			.navigacijaTipke > div{
+				margin: 0 !important;
+				margin-top: 5px !important;
+    			margin-left: 5px !important;
+			}
+		}
+		.mobile__header{
+			margin-top: 20px;
+		}
+	</style>
 
 
 {% block body %}
@@ -179,7 +309,7 @@
 			{% endif %}
 
 			<div class="podaciT">
-				<div>TVRTKA</div>
+				<div>PROFIL TVRTKE</div>
 				<div>{{ user.first_name }}</div>
 			</div>
 		</div>
@@ -187,13 +317,22 @@
 	<div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-                <h2><span>O NAMA</span></h2>
+				<div class="zadnjiPoslovi__last--kategorije">
+					<h2 id="posaoButton"><span>IZLOG</span></h2>
+					<h2 id="biznisButton"><span>O NAMA</span></h2>
+				</div>
+				<div class="zadnjiPoslovi__last--navigator">
+					<div class="zadnjiPoslovi__last--navigator--left"></div>
+					<div class="zadnjiPoslovi__last--navigator--right"></div>
+				</div>
 			</div>
             {% if userP.cv %}<a href="/download?file={{ userP.cv.name }}" ><div class="downloadPDF">
             <img src="{% static "images/downloadikona.png" %}"> FIN. IZVJEŠTAJ
-            </div></a>{% endif %}
+            </div></a>{% else %} <a href="#"><div class="downloadPDF downloadPDF2" style="cursor: no-drop; background-color: #b7b5af;">
+            <img src="{% static "images/downloadikona.png" %}"> FIN. IZVJEŠTAJ
+            </div></a> {% endif %}
 		</div>
-		<div class="tabelarni">
+		<div class="tabelarni oNamaContent oNamTab">
 			<div>
 				<h3 style="text-transform: uppercase;">{{ userP.location }}</h3>
 				<p>SJEDIŠTE</p>
@@ -215,12 +354,12 @@
 				<p>KONTAKT</p>
 			</div>
 		</div>
-		<div id="opisProfila" class="detaljniOpis">
+		<div id="opisProfila" class="detaljniOpis oNamaContent">
             {% if company.opis is not None %}
 		         {{ company.opis | safe }}
             {% endif %}
         </div>
-		<div class="uvodniDio tabelarniUvodniDio" style="margin-top: -100px">
+		<div class="uvodniDio tabelarniUvodniDio oNamaContent specMobTabCase" style="margin-top: -100px">
 			<div class="trazimo">
 				<h2><span>AKTIVNI</span> OGLASI</h2>
 			</div>
@@ -242,7 +381,7 @@
             {% for p in posts %}
 
                 <a href={% url 'showpost' id=p.userID.first_name slug=p.url %}>
-            <div class="tabelaRasa">
+            <div class="tabelaRasa oNamaContent oNamaContentTable">
 				<div>
 					<div>
 
@@ -269,7 +408,7 @@
 				}
 			</style>
 			<div style="display: flex; justify-content: center;">
-			<div class="navigacijaTipke" style="margin-bottom: 20px">
+			<div class="navigacijaTipke oNamaContent" style="margin-bottom: 20px">
 				{% for r in rng %}
 
                     {% if r == page %}
@@ -282,7 +421,7 @@
 		</div>
 		</div>
     {% with prev=page|add:-1 next=page|add:1 %}
-		<div class="navigacijaFooter" style="margin-top: 10px">
+		<div class="navigacijaFooter oNamaContent" style="margin-top: 10px">
 			<div {% if prev > 0 %} onclick="location.href='{{ request.path }}?page={{ prev }}'" {% endif %}class="prevTraka" style="width:560px;margin-right: 50px">
 				<img src="{% static 'images/lijevoOglas.png' %}" style="cursor: pointer;" class="lijevoEd">
 				<div  >
@@ -300,7 +439,7 @@
 	</div>
 
 	<div class="uvodniDio tabelarniUvodniDio" style="margin-top: -100px;">
-			<div class="trazimo">
+			<div class="trazimo trazimoNone" style="visibility: hidden;">
 				<h2><span>IZLOG</span> KOMPANIJE</h2>
 			</div>
 		</div>
@@ -325,13 +464,13 @@
 			}
 		</style>
 
-        <div class="uvodniDio tabelarniDio" style="display: block;">
+        <div class="uvodniDio tabelarniDio respTab2" style="display: block;">
 
             {% for i in izlozi %}
 
                 <a href={% url 'izlog' id=i.userID.first_name slug=i.slug %}>
 
-            <div class="tabelaRasa tabelaRasa2">
+            <div class="tabelaRasa tabelaRasa2 izlogContent izlogContentTable">
 				<div>
 					<div>
 
@@ -363,7 +502,7 @@
 				}
 			</style>
 			<div style="display: flex; justify-content: center;">
-			<div class="navigacijaTipke" style="margin-bottom: 20px">
+			<div class="navigacijaTipke izlogContent" style="margin-bottom: 20px">
 				{% for r in exRNG %}
 
                     {% if r == page %}
@@ -378,7 +517,7 @@
 		</div>
 		</div>
     {% with prev=exhibPage|add:-1 next=exhibPage|add:1 %}
-		<div class="navigacijaFooter" style="margin-top: 10px">
+		<div class="navigacijaFooter izlogContent" style="margin-top: 10px">
 			<div {% if prev > 0 %} onclick="location.href='{{ request.path }}?pageI={{ prev }}'" {% endif %}class="prevTraka" style="width:560px;margin-right: 50px">
 				<img src="{% static 'images/lijevoOglas.png' %}" style="cursor: pointer;" class="lijevoEd">
 				<div  >
@@ -408,6 +547,30 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
 <script type="text/javascript" src="../static/skripta.js"></script>
 <script src="/node_modules/readmore-js/readmore.min.js"></script>
+<script type="text/javascript">
+	$("#biznisButton").click(function(){
+		if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '0px')
+			$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciDesno 0.5s ease-out 0s 1 normal forwards running');
+			$('.izlogContent').css('display', 'none');
+			$('.izlogContentTable').css('display', 'none');
+			$('.oNamaContent').css('display', 'flex');
+			$('.oNamaContentTable').css('display', 'table');
+			$('.downloadPDF').css('display', 'flex');
+	});
+	$("#posaoButton").click(function(){
+		if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '150px')
+			$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciLijevo 0.5s ease-out 0s 1 normal forwards running');
+			$('.izlogContent').css('display', 'flex');
+			$('.izlogContentTable').css('display', 'table');
+			$('.oNamaContent').css('display', 'none');
+			$('.oNamaContentTable').css('display', 'none');
+			$('.downloadPDF').css('display', 'none');
+	});
+	$('.izlogContent').css('display', 'flex');
+	$('.izlogContentTable').css('display', 'table');
+	$('.downloadPDF').css('display', 'none');
+
+</script>
 <script type="text/javascript">
 	if($('#djelatnost').html() == 'Prerađivačka industrija'){
 		$('#djelatnost').html('Prerađivačka');
