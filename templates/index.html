@@ -915,7 +915,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='#'" style="cursor: pointer;">
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
 						<div class="desniDio_job__naziv"><h4>{{ p.position }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
 					</div>
@@ -930,7 +930,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job">
+					<div class="desniDio_job" onclick="location.href='{% url \'showpost\' id=p.userID.first_name slug=p.generateSlug %}'" >
 						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
 					</div>
@@ -1287,7 +1287,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').addClass('active');
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "#";
+			location.href = "{% url 'showpost' id=oglas1.userID.first_name slug=oglas1.generateSlug %}";
 		});
 }, 1000);
 
@@ -1299,7 +1299,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').addClass('active');
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "#";
+			location.href = "{% url 'showpost' id=oglas2.userID.first_name slug=oglas2.generateSlug %}";
 		});
 	}, 3000);
 
@@ -1312,7 +1312,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').addClass('active');
 		// document.getElementById("biz").style.animation = "slikaChange 0.7s ease-out 0s 1 normal forwards running";
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "#";
+			location.href = "{% url 'showpost' id=oglas3.userID.first_name slug=oglas3.generateSlug %}";
 		});
 	}, 5000);
 }, 6000);

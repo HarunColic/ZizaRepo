@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+            <state relative-caret-position="682">
+              <caret line="105" column="32" lean-forward="true" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="1125" column="36" lean-forward="true" selection-start-line="1125" selection-start-column="36" selection-end-line="1125" selection-end-column="36" />
+            <state relative-caret-position="-75">
+              <caret line="932" column="135" selection-start-line="932" selection-start-column="135" selection-end-line="932" selection-end-column="135" />
             </state>
           </provider>
         </entry>
@@ -133,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>OGLAS</find>
       <find>relevant</find>
       <find>first_n</find>
       <find>profilTv</find>
@@ -163,6 +162,7 @@
       <find>showpost(</find>
       <find>cetr</find>
       <find>svi</find>
+      <find>#</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -227,8 +227,8 @@
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/ProfilKorisnika.html" />
         <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -440,7 +440,7 @@
       <workItem from="1546981910010" duration="1543000" />
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
-      <workItem from="1547397511099" duration="8357000" />
+      <workItem from="1547397511099" duration="8717000" />
     </task>
     <servers />
   </component>
@@ -450,7 +450,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146963000" />
+    <option name="totallyTimeSpent" value="147323000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -904,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="1125" column="36" lean-forward="true" selection-start-line="1125" selection-start-column="36" selection-end-line="1125" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -933,11 +926,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="94" column="41" selection-start-line="94" selection-start-column="41" selection-end-line="94" selection-end-column="41" />
+        <state relative-caret-position="682">
+          <caret line="105" column="32" lean-forward="true" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="932" column="135" selection-start-line="932" selection-start-column="135" selection-end-line="932" selection-end-column="135" />
         </state>
       </provider>
     </entry>
