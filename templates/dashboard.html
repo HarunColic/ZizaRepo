@@ -1450,10 +1450,10 @@
         ponuda = document.getElementById("ponuda");
         potraznja = document.getElementById("potraznja");
         partnerstvo = document.getElementById("partnerstvo");
-
+        ponuda.activeCbx = potraznja.activeCbx = partnerstvo.activeCbx = "false";
         $("#ponuda").click(function(){
-            if(ponuda.activeCbx== "false"){
-                ponuda.activeCbx= "true";
+            if(ponuda.activeCbx == "false"){
+                ponuda.activeCbx = "true";
             }
             else {
                 ponuda.activeCbx = "false";
@@ -1482,7 +1482,7 @@
         });
 
         function Toggle(){
-            if(ponuda.activeCbx == 'false' && potraznja.activeCbx == 'false' && partnerstvo.activeCbx == 'false')
+            if(ponuda.activeCbx == "false" && potraznja.activeCbx == "false" && partnerstvo.activeCbx == "false")
             {
                 $('.saradnjaBox').css('visibility','visible');
                 $('.saradnjaBox').css('display','flex');
