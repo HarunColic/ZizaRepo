@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profilTvrtka.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="145" column="63" selection-start-line="145" selection-start-column="63" selection-end-line="145" selection-end-column="63" />
+            <state relative-caret-position="373">
+              <caret line="978" column="93" selection-start-line="978" selection-start-column="93" selection-end-line="978" selection-end-column="93" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -126,8 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pretragaBTN</find>
-      <find>anonimna</find>
       <find>Kljucna</find>
       <find>relevantPosts</find>
       <find>create</find>
@@ -156,6 +152,8 @@
       <find>ponudaBox</find>
       <find>header.h</find>
       <find>profil(</find>
+      <find>profilKo</find>
+      <find>profilKo(</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -225,7 +223,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="1299" />
@@ -433,7 +431,7 @@
       <workItem from="1546981910010" duration="1543000" />
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
-      <workItem from="1547397511099" duration="6630000" />
+      <workItem from="1547397511099" duration="7019000" />
     </task>
     <servers />
   </component>
@@ -443,7 +441,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145236000" />
+    <option name="totallyTimeSpent" value="145625000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -961,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="145" column="63" selection-start-line="145" selection-start-column="63" selection-end-line="145" selection-end-column="63" />
+        <state relative-caret-position="373">
+          <caret line="978" column="93" selection-start-line="978" selection-start-column="93" selection-end-line="978" selection-end-column="93" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

@@ -960,6 +960,13 @@ def profilKorisnika(request, id, slug):
             userPP = UserProfile.objects.get(userID=userr)
             postovi = Post.objects.filter(soft_delete=False).filter(userID=userr)
 
+            exhibs = Exhibition.objects.filter(userID=userr)
+
+            exhibPaginator = Paginator(exhibs, 5)
+            exhibPage = request.GET.get('pageI', 1)
+            izlozi = exhibPaginator.page(exhibPage)
+            exRNG = range(1, exhibPaginator.num_pages +1)
+
             paginator = Paginator(postovi, 5)
             page = request.GET.get('page', 1)
             posts = paginator.page(page)
@@ -968,7 +975,8 @@ def profilKorisnika(request, id, slug):
             if slug == slugified:
                 return render(request, 'profilTvrtka.html', {'usr': usr, 'auth': True, 'user': user, 'userr': userr,
                                                              'userP': userP, 'userPP': userPP,
-                                                            'company': company, 'posts': posts, 'rng': rng, 'page': int(page)})
+                                                            'company': company, 'posts': posts, 'rng': rng, 'page': int(page),
+                                                             'izlozi': izlozi, 'exRNG': exRNG})
             else:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         else:
