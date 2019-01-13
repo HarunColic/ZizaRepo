@@ -1484,12 +1484,21 @@
         function Toggle(){
             if(ponuda.active == 'false' && potraznja.active == 'false' && partnerstvo.active == 'false')
             {
-                $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('visibility','visible');
-                $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('display','block');
+                $('.saradnjaBox').css('visibility','visible');
+                $('.saradnjaBox').css('display','block');
+                $('.ponudaBox').css('visibility','visible');
+                $('.ponudaBox').css('display','block');
+                $('.potraznjaBox').css('visibility','visible');
+                $('.potraznjaBox').css('display','block');
                 return;
             }
-            $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('visibility','hidden');
-            $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('display','none');
+
+            $('.saradnjaBox').css('visibility','hidden');
+            $('.saradnjaBox').css('display','none');
+            $('.ponudaBox').css('visibility','hidden');
+            $('.ponudaBox').css('display','none');
+            $('.potraznjaBox').css('visibility','hidden');
+            $('.potraznjaBox').css('display','none');
 
             if(ponuda.active == "true") {
                 $('.ponudaBox').css('display','block');
