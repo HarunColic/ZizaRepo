@@ -992,7 +992,7 @@ ul {list-style: none}
 		{% if auth %}
 		{% else %}
         {% for p in cetriOglasa %}
-		<div class="oglasi__kartica" onclick="location.href='#'" style="cursor: pointer;">
+		<div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
 			<div class="selectUp"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
@@ -1114,7 +1114,7 @@ ul {list-style: none}
 	var $el = $('.oglasi');
 	var listView = new infinity.ListView($el);
 	 
-	var $newContent = $('{% for p in sviOglasi %} <div class="oglasi__kartica" onclick="location.href=\'#\'" style="cursor: pointer;"> <div class="selectUp"></div> <div class="oglasi__kartica--sadrzaj"> <div class="oglasi__kartica--sadrzaj--tekst"> <div><h3>{{ p.position }}</h3></div> <div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }}, {{ p.region }}</span></p></div> </div> <div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="height: auto; max-width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div> </div> </div> {% endfor %}');
+	var $newContent = $('{% for p in sviOglasi %} <div class="oglasi__kartica" onclick="location.href=\'{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}\'" style="cursor: pointer;"> <div class="selectUp"></div> <div class="oglasi__kartica--sadrzaj"> <div class="oglasi__kartica--sadrzaj--tekst"> <div><h3>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h3></div> <div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }}, {{ p.region }}</span></p></div> </div> <div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="height: auto; max-width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div> </div> </div> {% endfor %}');
 	listView.append($newContent);
 </script>
 {% endif %}
