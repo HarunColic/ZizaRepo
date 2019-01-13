@@ -916,7 +916,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
 					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
-						<div class="desniDio_job__naziv"><h4>{{ p.position }}</h4></div>
+						<div class="desniDio_job__naziv"><h4>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
 					</div>
 				</div>
@@ -996,7 +996,7 @@ ul {list-style: none}
 			<div class="selectUp"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
-					<div><h3>{{ p.position }}</h3></div>
+					<div><h3>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h3></div>
 					<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }}, {{ p.region }}</span></p></div>
 				</div>
 				<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image  %}<img style="height: auto; max-width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>

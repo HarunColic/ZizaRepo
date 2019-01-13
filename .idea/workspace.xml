@@ -65,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
-              <caret line="932" column="86" lean-forward="true" selection-start-line="932" selection-start-column="86" selection-end-line="932" selection-end-column="86" />
+              <caret line="998" column="85" selection-start-line="998" selection-start-column="77" selection-end-line="998" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -133,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>first_n</find>
       <find>profilTv</find>
       <find>profi</find>
       <find>{{</find>
@@ -163,6 +162,7 @@
       <find>svi</find>
       <find>#</find>
       <find>showpost</find>
+      <find>position</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -440,7 +440,7 @@
       <workItem from="1546981910010" duration="1543000" />
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
-      <workItem from="1547397511099" duration="8801000" />
+      <workItem from="1547397511099" duration="9198000" />
     </task>
     <servers />
   </component>
@@ -450,7 +450,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147407000" />
+    <option name="totallyTimeSpent" value="147804000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -937,7 +937,7 @@
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
-          <caret line="932" column="86" lean-forward="true" selection-start-line="932" selection-start-column="86" selection-end-line="932" selection-end-column="86" />
+          <caret line="998" column="85" selection-start-line="998" selection-start-column="77" selection-end-line="998" selection-end-column="85" />
         </state>
       </provider>
     </entry>
