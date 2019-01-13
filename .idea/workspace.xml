@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="978" column="93" selection-start-line="978" selection-start-column="93" selection-end-line="978" selection-end-column="93" />
+            <state relative-caret-position="244">
+              <caret line="754" column="49" selection-start-line="754" selection-start-column="49" selection-end-line="754" selection-end-column="49" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -431,7 +432,7 @@
       <workItem from="1546981910010" duration="1543000" />
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
-      <workItem from="1547397511099" duration="7019000" />
+      <workItem from="1547397511099" duration="7250000" />
     </task>
     <servers />
   </component>
@@ -441,7 +442,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145625000" />
+    <option name="totallyTimeSpent" value="145856000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -959,8 +960,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="978" column="93" selection-start-line="978" selection-start-column="93" selection-end-line="978" selection-end-column="93" />
+        <state relative-caret-position="244">
+          <caret line="754" column="49" selection-start-line="754" selection-start-column="49" selection-end-line="754" selection-end-column="49" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

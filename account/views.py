@@ -752,7 +752,7 @@ def dashboard(request):
             rel2 = Post.objects.filter(type=2).filter(b2b_type=2).exclude(soft_delete=True).exclude(userID=request.user)[:10]
             rel3 = Post.objects.filter(type=2).filter(b2b_type=3).exclude(soft_delete=True).exclude(userID=request.user)[:10]
 
-            relevantPosts = list(chain(rel1, rel2, rel3))
+            relevantPosts = rel1.union(rel2, rel3)
 
             #relevantPosts = rel1 | rel2 | rel3
 
