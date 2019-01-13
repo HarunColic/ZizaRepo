@@ -377,6 +377,12 @@
 		</style>
 
         <div class="uvodniDio tabelarniDio">
+			{# ALEM #}
+			{# posts if #}
+			{% if posts.paginator.count == 0 %}
+			{% else %}
+			{% endif %}
+			{# ALEM #}
 
             {% for p in posts %}
 
@@ -464,8 +470,14 @@
 			}
 		</style>
 
-        <div class="uvodniDio tabelarniDio respTab2" style="display: block;">
-
+		<div class="uvodniDio tabelarniDio respTab2" style="display: block;">
+			{# ALEM #}
+			{# Izlozi if #}
+			{% if izlozi.paginator.count == 0 %}
+			{% else %}
+			{% endif %}
+			{# ALEM #}
+			
             {% for i in izlozi %}
 
                 <a href={% url 'izlog' id=i.userID.first_name slug=i.slug %}>
