@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1481" lean-forward="true" selection-start-line="1481" selection-end-line="1481" />
+            <state relative-caret-position="388">
+              <caret line="1456" column="13" lean-forward="true" selection-start-line="1456" selection-start-column="13" selection-end-line="1456" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -100,7 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>submit</find>
       <find>izlog</find>
       <find>magePre</find>
       <find>izlog(</find>
@@ -130,6 +129,7 @@
       <find>dashboard(</find>
       <find>ponuda</find>
       <find>ponudaBox</find>
+      <find>active</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -407,7 +407,7 @@
       <workItem from="1546981910010" duration="1543000" />
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
-      <workItem from="1547397511099" duration="3897000" />
+      <workItem from="1547397511099" duration="4088000" />
     </task>
     <servers />
   </component>
@@ -417,7 +417,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142503000" />
+    <option name="totallyTimeSpent" value="142694000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -914,8 +914,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1481" lean-forward="true" selection-start-line="1481" selection-end-line="1481" />
+        <state relative-caret-position="388">
+          <caret line="1456" column="13" lean-forward="true" selection-start-line="1456" selection-start-column="13" selection-end-line="1456" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -1452,29 +1452,27 @@
         partnerstvo = document.getElementById("partnerstvo");
 
         $("#ponuda").click(function(){
-            if(ponuda.active === "false"){
+            if(ponuda.active == "false"){
                 ponuda.active = "true";
             }
             else
                 ponuda.active = "false";
             console.log('Toogle');
-
             Toggle();
         });
 
         $("#potraznja").click(function(){
-            if(potraznja.active === "false"){
+            if(potraznja.active == "false"){
                 potraznja.active = "true";
             }
             else
                 potraznja.active = "false";
             console.log('Toogle');
-
             Toggle();
         });
 
         $("#partnerstvo").click(function(){
-            if(partnerstvo.active === "false"){
+            if(partnerstvo.active == "false"){
                 partnerstvo.active = "true";
             }
             else
@@ -1484,7 +1482,7 @@
         });
 
         function Toggle(){
-            if(ponuda.active === 'false' && potraznje.active === 'false' && partnerstvo.active === 'false')
+            if(ponuda.active == 'false' && potraznje.active == 'false' && partnerstvo.active == 'false')
             {
                 $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('visibility','visible');
                 $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('display','block');
@@ -1493,15 +1491,15 @@
             $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('visibility','hidden');
             $('.saradnjaBox, .ponudaBox, .potraznjaBox').css('display','none');
 
-            if(ponuda.active === "true") {
+            if(ponuda.active == "true") {
                 $('.ponudaBox').css('display','block');
                 $('.ponudaBox').css('visibility','visible');
             }
-            if(potraznja.active === "true") {
+            if(potraznja.active == "true") {
                 $('.potraznjaBox').css('display','block');
                 $('.potraznjaBox').css('visibility','visible');
             }
-            if(partnerstvo === "true"){
+            if(partnerstvo == "true"){
                 $('.saradnjaBox').css('display','block');
                 $('.saradnjaBox').css('visibility','visible');
             }
