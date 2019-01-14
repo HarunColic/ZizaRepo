@@ -569,12 +569,14 @@
 					<div style="margin-top: 24px"></div>
 					<div style="display: flex; align-items: center;">
 						<div>
+                            {% if userPP.cv %}
 							<label for="file-upload"  class="custom-file-upload">
-						    	{% if userPP.cv %}<a href="/download?file={{ userPP.cv.name }}" ><div class="downloadPDF">
+						    	<a href="/download?file={{ userPP.cv.name }}" ><div class="downloadPDF">
                                 </div></a>
-                                {% endif %}
                                 PREUZMI
-							</label>
+                            </label>
+                                                            {% endif %}
+
 						</div>
 						<div>
                             {% if userPP.cv %}
