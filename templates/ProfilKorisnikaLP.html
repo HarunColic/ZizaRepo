@@ -564,19 +564,18 @@
       				</div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
+                                    {% if userPP.cv %}
+
 				<div style="margin-top: 30px;" class="dokumentPDF">
 					<label style="margin-bottom: 8px">PDF/Word format CV-a</label><br>
 					<div style="margin-top: 24px"></div>
 					<div style="display: flex; align-items: center;">
 						<div>
-                            {% if userPP.cv %}
 							<label for="file-upload"  class="custom-file-upload">
 						    	<a href="/download?file={{ userPP.cv.name }}" ><div class="downloadPDF">
                                 </div></a>
                                 PREUZMI
                             </label>
-                                                            {% endif %}
-
 						</div>
 						<div>
                             {% if userPP.cv %}
@@ -585,6 +584,8 @@
 						</div>
 					</div>
 				</div>
+                        {% endif %}
+
             <a style="cursor: pointers;" id="aktivirajPregled">POZOVI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></a>
             <input type="hidden" name="kkk" id="vjest">
 		</div>
