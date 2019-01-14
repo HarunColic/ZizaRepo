@@ -986,12 +986,12 @@ def profilKorisnika(request, id, slug):
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
             userr = User.objects.get(pk=id)
-
+            userPP = UserProfile.objects.get(userID=userr)
             emp = Employee.objects.get(userID=userr)
             vjestine = UserCategories.objects.filter(userID=userr)
 
-            return render(request, 'ProfilKorisnikaLP.html', {'userP': userP, 'emp': emp, 'vjestine': vjestine,
-                                                              'auth': True, 'usr': 'wrkr', 'user': user})
+            return render(request, 'ProfilKorisnikaLP.html', {'userP': userP, 'userPP': userPP, 'emp': emp, 'vjestine': vjestine,
+                                                              'auth': True, 'usr': 'wrkr', 'user': user, 'userr': userr})
 
 
 def zizaKorisnika(request, id):
