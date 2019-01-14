@@ -95,7 +95,7 @@ def home(request):
     sviOglasi = postsB2B.union(postsB2C)[:20]
 
     if request.user.is_authenticated:
-        if Company.objects.filter(userID=request.user)sts():
+        if Company.objects.filter(userID=request.user).exists():
             usr = 'comp'
         else:
             usr = 'wrkr'
