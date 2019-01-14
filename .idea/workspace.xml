@@ -52,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="985" column="82" selection-start-line="985" selection-start-column="82" selection-end-line="985" selection-end-column="82" />
+            <state relative-caret-position="330">
+              <caret line="387" column="45" selection-start-line="387" selection-start-column="45" selection-end-line="387" selection-end-column="45" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -142,7 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>{%</find>
       <find>setInt</find>
       <find>dashboard(</find>
       <find>ponuda</find>
@@ -172,6 +171,7 @@
       <find>CVs(</find>
       <find>.exi</find>
       <find>profilKo</find>
+      <find>sign</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -450,7 +450,7 @@
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
       <workItem from="1547397511099" duration="11476000" />
-      <workItem from="1547423482054" duration="440000" />
+      <workItem from="1547423482054" duration="563000" />
     </task>
     <servers />
   </component>
@@ -460,7 +460,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150522000" />
+    <option name="totallyTimeSpent" value="150645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -943,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="985" column="82" selection-start-line="985" selection-start-column="82" selection-end-line="985" selection-end-column="82" />
+        <state relative-caret-position="330">
+          <caret line="387" column="45" selection-start-line="387" selection-start-column="45" selection-end-line="387" selection-end-column="45" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

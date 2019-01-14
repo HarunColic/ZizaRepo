@@ -385,7 +385,7 @@ def signin(request):
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
         if Employee.objects.filter(userID=request.user).exists():
-            return redirect('pretraga')
+            return redirect('anonimnaPretraga')
         else:
             return redirect('dashboard')
 
