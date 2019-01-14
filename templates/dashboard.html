@@ -896,7 +896,6 @@
 
 		</div>
        	
-       	{% if relevantPosts.count > 1 %}
 
        	<style type="text/css">
        		.main__oglasi--oglasi2{
@@ -1260,6 +1259,7 @@
 
 
 		<div class="main__oglasi--oglasi main__oglasi--oglasi2" id="preporuke">
+       	{% if relevantPosts.count > 1 %}
 
                                             {% for p in relevantPosts %}
 
@@ -1317,8 +1317,9 @@
 					<div>
 					</div>
 				</div>
-                                                {% endif %}
+            {% endif %}
            {% endfor %}
+            {% endif %}
 
             </div>
         <!--
@@ -1356,13 +1357,18 @@
 					<div>
 					</div>
 				</div>-->
-
+{% if relevantPosts.paginator.count > 1 %}
 		<div class="bg_end">
 			<span>Želite li vidjeti još oglasa?</span>
 		</div>
 		<button style="cursor: pointer" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'" id="aktivirajPregled">OGLASI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
-	</div>
-            {% endif %}
+	{% else %}
+    	<div class="bg_end">
+			<span>Trenutno nema oglasa iz Vaše branše!</span>
+		</div>
+
+        {% endif %}
+            </div>
 
  
 
