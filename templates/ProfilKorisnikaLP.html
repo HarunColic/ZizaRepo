@@ -418,9 +418,9 @@
     			<form id="edituj" method="post" action="{% url 'submitchange' %}" enctype="multipart/form-data" style="margin-top: 70px">
     {% csrf_token %}
 		<div class="tvrtka">
-			{% if user.userprofile.image  %}
+			{% if userr.userprofile.image  %}
 				<div class="avatarKucica">
-	               <img style="max-width: 250px; height: auto;" src=" {{ user.userprofile.image.url }} ">
+	               <img style="max-width: 250px; height: auto;" src=" {{ userr.userprofile.image.url }} ">
 				</div>
 			{% else %}
 				<div class="avatarKucica" style="background-color: #262626">
@@ -430,7 +430,7 @@
 
 			<div class="podaciT">
 				<div>FIZIČKO LICE</div>
-				<div>{{ user.first_name }} {{ user.last_name }}</div>
+				<div>{{ userr.first_name }} {{ userr.last_name }}</div>
 				<div>
 					<div style="visibility: hidden;">
 						<span class="navNap navNap1 navAct" id="napraviOglas" style="margin-left: 10px">Uredi profil</span>
@@ -445,23 +445,23 @@
 			<h1>ONLINE <span>CV</span></h1>
 				<div>
 					<label>Ime i prezime</label><br>
-					<input value="{{ user.first_name }} {{ user.last_name }}" type="text" disabled id='naslovInput' name="naslov" placeholder="" style="width: 100%">
+					<input value="{{ userr.first_name }} {{ userr.last_name }}" type="text" disabled id='naslovInput' name="naslov" placeholder="" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Kontakt e-mail adresa</label><br>
-						<input value="{{ user.email }}" type="email" name="email" disabled style="width: 100%" placeholder="">
+						<input value="{{ userr.email }}" type="email" name="email" disabled style="width: 100%" placeholder="">
 					</div>
 					<div style="width: 43.75%">
 						<label>Kontakt broj</label><br>
-						<input type="text" disabled {% if userP.brojtelefona %}value="{{ userP.brojtelefona }}{% endif %}" name="brojTel" style="width: 100%">
+						<input type="text" disabled {% if userPP.brojtelefona %}value="{{ userPP.brojtelefona }}{% endif %}" name="brojTel" style="width: 100%">
 					</div>
 				</div>
 
 
 				<div style="margin-top: 20px">
                         <label>Mjesto prebivališta</label><br>
-						<input type="text" disabled value="{{ user.userprofile.location }}" name="grad" style="width: 100%">
+						<input type="text" disabled value="{{ userr.userprofile.location }}" name="grad" style="width: 100%">
 				</div>
 
 
@@ -570,15 +570,15 @@
 					<div style="display: flex; align-items: center;">
 						<div>
 							<label for="file-upload"  class="custom-file-upload">
-						    	{% if userP.cv %}<a href="/download?file={{ userP.cv.name }}" ><div class="downloadPDF">
+						    	{% if userPP.cv %}<a href="/download?file={{ userPP.cv.name }}" ><div class="downloadPDF">
                                 </div></a>
                                 {% endif %}
                                 PREUZMI
 							</label>
 						</div>
 						<div>
-                            {% if userP.cv %}
-							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Zadnje ažuriranje {{ userP.lastModifiedCV }}</p>
+                            {% if userPP.cv %}
+							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Zadnje ažuriranje {{ userPP.lastModifiedCV }}</p>
                             {% endif %}
 						</div>
 					</div>
@@ -590,7 +590,7 @@
 {% if usr == 'comp' %}
 
 </form>
-            <form style="display:none;visibility: hidden;" id="pozovi" method="post" action="{% url 'pozovi' id=user.pk sender=userP.userID.pk %}">
+            <form style="display:none;visibility: hidden;" id="pozovi" method="post" action="{% url 'pozovi' id=userr.pk sender=userPP.userID.pk %}">
             {% csrf_token %}
 			</form>
 
@@ -649,7 +649,7 @@ $(document).ready( function() {
  	$('.ql-image').css('width','90px').css('color','#7d7d7d').css('margin-right','-17px');
 	$('.ql-image').html('Postavi sliku');
 
-    $("select[name=grad]").val("{{ userP.location }}")
+    $("select[name=grad]").val("{{ userPP.location }}")
     $("select[name=strucnaSprema]").val("{{ emp.strucnaSprema}}")
 });
 
