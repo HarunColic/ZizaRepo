@@ -951,7 +951,7 @@ def profilKorisnika(request, id, slug):
 
         slugified = slugify(userr.first_name)
 
-        if Company.objects.filter(userID=user).exists():
+        if Company.objects.filter(userID=request.user).exists():
             usr = 'comp'
         else:
             usr = 'wrkr'
@@ -982,13 +982,13 @@ def profilKorisnika(request, id, slug):
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         else:
 
-            if Employee.objects.filter(userID=request.user).exists():
+            if Employee.objects.filter(userID=userr).exists():
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
             user = User.objects.get(pk=id)
 
-            emp = Employee.objects.get(userID=user)
-            vjestine = UserCategories.objects.filter(userID=user)
+            emp = Employee.objects.get(userID=userr)
+            vjestine = UserCategories.objects.filter(userID=userr)
 
             return render(request, 'ProfilKorisnikaLP.html', {'userP': userP, 'emp': emp, 'vjestine': vjestine,
                                                               'auth': True, 'usr': 'wrkr', 'user': user})

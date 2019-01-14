@@ -58,7 +58,7 @@
 		}
 	</style>
 
-  <img src="/static/images/logoNew.png" class="logotipNavbarMali">
+  <img src="{% static 'images/logoNew.png' %}" class="logotipNavbarMali">
 
     {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
     {% include 'header.html' %}
