@@ -354,11 +354,11 @@ def activate(request, uidb64, token):
 
 def signin(request):
 
-    if request.user.is_authenticated:
-        sweetify.sweetalert(request, title="Već ste prijavljeni", icon="error")
-        return redirect('home')
-
     if request.method == 'POST':
+
+        if request.user.is_authenticated:
+            sweetify.sweetalert(request, title="Već ste prijavljeni", icon="error")
+            return redirect('home')
 
         mail = request.POST['mail']
         password = request.POST['pswd']
@@ -385,7 +385,7 @@ def signin(request):
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
         if Employee.objects.filter(userID=request.user).exists():
-            return redirect('anonimnaPretraga/1/')
+            return redirect('/anonimnaPretraga/1/')
         else:
             return redirect('dashboard')
 

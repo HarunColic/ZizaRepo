@@ -37,35 +37,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="191" selection-start-line="191" selection-end-line="191" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="387" column="48" selection-start-line="387" selection-start-column="48" selection-end-line="387" selection-end-column="48" />
+            <state relative-caret-position="86">
+              <caret line="387" column="30" selection-start-line="387" selection-start-column="30" selection-end-line="387" selection-end-column="30" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="30" column="51" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -82,7 +61,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dashboard(</find>
       <find>ponuda</find>
       <find>active</find>
       <find>potraznjaBox</find>
@@ -110,8 +88,9 @@
       <find>.exi</find>
       <find>profilKo</find>
       <find>anonimna</find>
-      <find>signin(</find>
       <find>sign</find>
+      <find>signin(</find>
+      <find>anonimnaPretraga(</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -390,7 +369,7 @@
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
       <workItem from="1547397511099" duration="11476000" />
-      <workItem from="1547423482054" duration="975000" />
+      <workItem from="1547423482054" duration="2381000" />
     </task>
     <servers />
   </component>
@@ -400,7 +379,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151057000" />
+    <option name="totallyTimeSpent" value="152463000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -420,7 +399,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24267101" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.23289903" />
+      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.23289903" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32899022" />
@@ -429,7 +408,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.3110749" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.18566775" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.18566775" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32247558" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
@@ -475,6 +454,16 @@
           <line>585</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/account/views.py</url>
+          <line>354</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/account/views.py</url>
+          <line>779</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -486,84 +475,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/pretrazi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="281" column="25" selection-start-line="281" selection-start-column="25" selection-end-line="281" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/interim-menadzment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="434" lean-forward="true" selection-start-line="434" selection-end-line="434" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/treninzi-i-edukacije.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="447" lean-forward="true" selection-start-line="447" selection-end-line="447" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="318" lean-forward="true" selection-start-line="318" selection-end-line="318" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/onamanew.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="719" lean-forward="true" selection-start-line="719" selection-end-line="719" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/korisnik.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="310" lean-forward="true" selection-start-line="310" selection-end-line="310" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/finansijsko-savjetovanje.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="418" lean-forward="true" selection-start-line="418" selection-end-line="418" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/testclanovi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pravno-savjetovanje.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="420" lean-forward="true" selection-start-line="420" selection-end-line="420" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post/management/commands/logotipMail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="8" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1890" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/post/management/commands/NaziviFajlova.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -881,10 +792,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/shortcuts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/sessions/middleware.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/utils/deprecation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/servers/basehttp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="863" selection-start-line="863" selection-end-line="863" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/socketserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="654" selection-start-line="654" selection-end-line="654" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/wsgiref/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/contrib/staticfiles/handlers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/handlers/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="387" column="48" selection-start-line="387" selection-start-column="48" selection-end-line="387" selection-end-column="48" />
+        <state relative-caret-position="86">
+          <caret line="387" column="30" selection-start-line="387" selection-start-column="30" selection-end-line="387" selection-end-column="30" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
