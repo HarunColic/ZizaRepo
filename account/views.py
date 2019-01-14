@@ -982,10 +982,10 @@ def profilKorisnika(request, id, slug):
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         else:
 
-            if Employee.objects.filter(userID=userr).exists():
+            if Employee.objects.filter(userID=request.user).exists():
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-            user = User.objects.get(pk=id)
+            userr = User.objects.get(pk=id)
 
             emp = Employee.objects.get(userID=userr)
             vjestine = UserCategories.objects.filter(userID=userr)
