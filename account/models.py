@@ -6,6 +6,8 @@ from post.models import Category
 from location.models import City
 from django.template.defaultfilters import slugify
 import os
+from django.utils.timezone import activate
+from django.conf import settings
 
 
 class UserProfile(models.Model):
@@ -49,9 +51,13 @@ class UserProfile(models.Model):
         stat = os.stat(self.cv.path)
 
         try:
-            return stat.st_mtime
+            new_datetime = datetime.fromtimestamp(int(stat.st_mtime)).replace(tzinfo=activate(settings.TIME_ZONE))
+            return new_datetime
+            #return stat.st_mtime
         except AttributeError:
-            return stat.st_ctime
+            new_datetime = datetime.fromtimestamp(int(stat.st_ctime)).replace(tzinfo=activate(settings.TIME_ZONE))
+            return new_datetime
+            #return stat.st_ctime
 
 
 class Employee(models.Model):
