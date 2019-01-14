@@ -951,7 +951,7 @@ def profilKorisnika(request, id, slug):
 
         slugified = slugify(userr.first_name)
 
-        if Company.objects.filter(userID=userr).exists():
+        if Company.objects.filter(userID=user).exists():
             usr = 'comp'
         else:
             usr = 'wrkr'
