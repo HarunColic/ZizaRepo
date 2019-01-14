@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnikaLP.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="586" column="24" selection-start-line="586" selection-start-column="24" selection-end-line="586" selection-end-column="24" />
+            <state relative-caret-position="259">
+              <caret line="576" column="36" selection-start-line="576" selection-start-column="36" selection-end-line="576" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -396,7 +396,7 @@
       <workItem from="1547297597123" duration="6512000" />
       <workItem from="1547375872082" duration="2005000" />
       <workItem from="1547397511099" duration="11476000" />
-      <workItem from="1547423482054" duration="4693000" />
+      <workItem from="1547423482054" duration="4957000" />
     </task>
     <servers />
   </component>
@@ -406,7 +406,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154775000" />
+    <option name="totallyTimeSpent" value="155039000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,7 +426,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Run" order="1" sideWeight="0.4980048" weight="0.24267101" />
-      <window_info anchor="bottom" id="Debug" order="2" visible="true" weight="0.23289903" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.23289903" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32899022" />
@@ -435,7 +435,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.3110749" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" weight="0.18566775" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.18566775" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32247558" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
@@ -891,8 +891,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnikaLP.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="586" column="24" selection-start-line="586" selection-start-column="24" selection-end-line="586" selection-end-column="24" />
+        <state relative-caret-position="259">
+          <caret line="576" column="36" selection-start-line="576" selection-start-column="36" selection-end-line="576" selection-end-column="36" />
         </state>
       </provider>
     </entry>
