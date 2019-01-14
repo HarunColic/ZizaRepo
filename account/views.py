@@ -991,7 +991,7 @@ def profilKorisnika(request, id, slug):
             vjestine = UserCategories.objects.filter(userID=userr)
 
             return render(request, 'ProfilKorisnikaLP.html', {'userP': userP, 'userPP': userPP, 'emp': emp, 'vjestine': vjestine,
-                                                              'auth': True, 'usr': 'wrkr', 'user': user, 'userr': userr})
+                                                              'auth': True, 'usr': usr, 'user': user, 'userr': userr})
 
 
 def zizaKorisnika(request, id):
