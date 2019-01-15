@@ -873,11 +873,219 @@ ul {list-style: none}
 	</div> <!-- uvod -->
 	{% endif %}
 	<div class="zadnjiPoslovi">
-	<div class="zadnjiPoslovi__popularno">
+		{% if auth %}
+		<style type="text/css">
+			.zadnjiPoslovi__popularno{
+				padding-top: 30px;
+				margin-left: 0;
+			}
+			.zadnjiPoslovi{
+				justify-content: center;
+			}
+
+			@media screen and (max-width: 1680px){
+				.konkursiRes{
+					transform: scale(1);
+				}
+			}
+			@media screen and (max-width: 1445px){
+				.konkursiRes{
+					transform: scale(1);
+				}
+			}
+
+			.show2000{
+				display: none;
+			}
+
+			@media screen and (max-width: 1205px){
+				.zadnjiPoslovi__popularno, .zadnjiPoslovi__last{
+					transform: scale(0.7);
+				}
+				.konkursiRes{
+					transform: scale(1);
+					padding-top: 3px;
+				}
+				.zadnjiPoslovi{
+					 height: auto;
+				}
+				.zadnjiPoslovi__last{
+					margin-top: 0;
+					margin-left: 0;
+				}
+				.zadnjiPoslovi__last--kategorije{
+					margin-top: 0;
+				}
+				.hide2000{
+					display: none;
+				}
+				.show2000{
+					display: block;
+					margin-top: -80px;
+					margin-bottom: -20px;
+				}
+			}
+
+			@media screen and (max-width: 660px){
+				.zadnjiPoslovi__last{
+					margin: 0 auto !important;
+					margin-top: 100px !important;
+				}
+				.zadnjiPoslovi{
+					 height: 650px;
+				}
+			}
+			@media screen and (max-width: 500px){
+				.zadnjiPoslovi{
+					 height: auto;
+				}
+				.zadnjiPoslovi__last{
+					margin: 0 auto !important;
+					margin-top: -100px !important;
+					padding-left: 100px;
+				}
+				.show2000{
+					transform: scale(0.5);
+					margin-bottom: -160px !important;
+				}
+			}
+
+			.oglasi{
+				margin-top: -150px;
+			}
+
+			body{
+				padding-bottom: 50px;
+			}
+
+			.oglasi__kartica:nth-last-child(1){
+				margin-bottom: 50px;
+			}
+
+		</style>
+		{% endif %}
+	<div class="zadnjiPoslovi__popularno konkursiRes">
+		{% if auth %}
+		{% else %}
 			<h2>POPULARNO</h2>
 			<p>Najpopularniji oglasi za posao u posljednja 24 sata!</p>
+			{% endif %}
+			 {% if auth %}
+			 <div class="zadnjiPoslovi__last show2000">
+			<div class="zadnjiPoslovi__last--kategorije">
+				<h3 id="posaoButton">POSAO</h3>
+				<h3 id="biznisButton">BIZNIS</h3>
+			</div>
+			<div class="zadnjiPoslovi__last--navigator">
+				<div class="zadnjiPoslovi__last--navigator--left"></div>
+				<div class="zadnjiPoslovi__last--navigator--right"></div>
+			</div>
+			<div class="zadnjiPoslovi__last--timeline" id="b2c">
+                {% for p in postsbc %}
+                <div class="zadnjiPoslovi__last--timeline--stavka ">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+						<div class="desniDio_job__naziv"><h4>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
+					</div>
+				</div>
+                {% endfor %}
+			</div> <!-- zadnjiPoslovi__last--timeline -->
+                   <div class="zadnjiPoslovi__last--timeline hidden" id="b2b">
+            {% for p in postbb %}
+                <div class="zadnjiPoslovi__last--timeline--stavka ">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
+						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
+					</div>
+				</div>
+                {% endfor %}
+				</div>
+		</div> <!-- zadnjiPoslovi__last -->
+			 		<div class="zadnjiPoslovi__last hide2000">
+			<div class="zadnjiPoslovi__last--kategorije">
+				<h3 id="posaoButton">KONKURSI</h3>
+			</div>
+			<div class="zadnjiPoslovi__last--navigator">
+				<div class="zadnjiPoslovi__last--navigator--left" style="width: 290px"></div>
+			</div>
+			<div class="zadnjiPoslovi__last--timeline" id="b2c">
+                {% for p in postsbc %}
+                <div class="zadnjiPoslovi__last--timeline--stavka ">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+						<div class="desniDio_job__naziv"><h4>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
+					</div>
+				</div>
+                {% endfor %}
+			</div> <!-- zadnjiPoslovi__last--timeline -->
+                   <div class="zadnjiPoslovi__last--timeline hidden" id="b2b">
+            {% for p in postbb %}
+                <div class="zadnjiPoslovi__last--timeline--stavka ">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
+						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
+					</div>
+				</div>
+				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job">
+						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
+					</div>
+				</div>
+				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job">
+						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
+					</div>
+				</div>
+				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job">
+						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
+					</div>
+				</div>
+                {% endfor %}
+				</div>
+		</div> <!-- zadnjiPoslovi__last -->
+		{% else %}
 			<div class="zadnjiPoslovi__popularno--slajder">
 				<div class="slider-poslovi" style="display: flex; justify-content: flex-start; align-items: center;margin-left: -90px">
+		}
 {#					<h3 style="margin-left: 130px; margin-bottom: 70px"><span id="cijenaRada" style="color: inherit"></span><span></span></h3>#}
 
 					<div class="zadnjiPoslovi__popularno--slajder__sac prviEl" id="lijevo">
@@ -897,7 +1105,48 @@ ul {list-style: none}
 					<div class="dot"></div>
 				</div>
 			</div>
+			{% endif %}
 		</div>
+		{% if auth %}
+		<div class="zadnjiPoslovi__last hide2000">
+			<div class="zadnjiPoslovi__last--kategorije">
+				<h3 id="posaoButton">POSLOVNI OGLASI</h3>
+			</div>
+			<div class="zadnjiPoslovi__last--navigator">
+				<div class="zadnjiPoslovi__last--navigator--left" style="width: 490px"></div>
+			</div>
+			<div class="zadnjiPoslovi__last--timeline hidden" id="b2c">
+                {% for p in postsbc %}
+                <div class="zadnjiPoslovi__last--timeline--stavka ">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+						<div class="desniDio_job__naziv"><h4>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
+					</div>
+				</div>
+                {% endfor %}
+			</div> <!-- zadnjiPoslovi__last--timeline -->
+                   <div class="zadnjiPoslovi__last--timeline" id="b2b">
+            {% for p in postbb %}
+                <div class="zadnjiPoslovi__last--timeline--stavka ">
+					<div class="lijeviDio_time">
+						<div class="lijeviDio_time__linija"></div>
+						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
+						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
+					</div>
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
+						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
+						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
+					</div>
+				</div>
+                {% endfor %}
+				</div>
+		</div> <!-- zadnjiPoslovi__last -->
+		{% else %}
 		<div class="zadnjiPoslovi__last">
 			<div class="zadnjiPoslovi__last--kategorije">
 				<h3 id="posaoButton">POSAO</h3>
@@ -971,8 +1220,11 @@ ul {list-style: none}
                 {% endfor %}
 				</div>
 		</div> <!-- zadnjiPoslovi__last -->
+		{% endif %}
 	</div> <!-- zadnjiPoslovi -->
 
+	{% if auth %}
+	{% else %}
 	<div class="kartice">
 		<div onclick="location.href='{% url 'anonimnaPretraga' id=1 %}'" class="kartice__trazitePosao" style="cursor: pointer;">
 			<h3>Tražite posao?</h3>
@@ -988,6 +1240,7 @@ ul {list-style: none}
 			<img src="../static/images/money_bee.png">
 		</div>
 	</div> <!-- kartice -->
+	{% endif %}
 	<div class="oglasi">
 		{% if auth %}
 		{% else %}
@@ -1097,6 +1350,7 @@ ul {list-style: none}
 			</div>
 		</div>
 	</div> <!-- testmoniali -->
+
 	{% endif %}
 
 
