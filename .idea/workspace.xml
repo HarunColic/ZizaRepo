@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,10 +39,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/account/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="102" column="13" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="1272" column="28" selection-start-line="1272" selection-start-column="28" selection-end-line="1272" selection-end-column="28" />
+            <state relative-caret-position="139">
+              <caret line="1387" column="43" selection-start-line="1387" selection-start-column="43" selection-end-line="1387" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -61,12 +73,9 @@
     <findStrings>
       <find>profil(</find>
       <find>profilKo(</find>
-      <find>home(</find>
-      <find>cetri</find>
       <find>cet</find>
       <find>showpost(</find>
       <find>cetr</find>
-      <find>svi</find>
       <find>#</find>
       <find>showpost</find>
       <find>position</find>
@@ -89,6 +98,9 @@
       <find>PDF</find>
       <find>|date</find>
       <find>ceti</find>
+      <find>cetri</find>
+      <find>svi</find>
+      <find>home(</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -151,10 +163,10 @@
         <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/account/models.py" />
         <option value="$PROJECT_DIR$/templates/ProfilKorisnikaLP.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/account/views.py" />
       </list>
     </option>
   </component>
@@ -368,7 +380,7 @@
       <workItem from="1547375872082" duration="2005000" />
       <workItem from="1547397511099" duration="11476000" />
       <workItem from="1547423482054" duration="6244000" />
-      <workItem from="1547585988371" duration="277000" />
+      <workItem from="1547585988371" duration="731000" />
     </task>
     <servers />
   </component>
@@ -378,7 +390,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156603000" />
+    <option name="totallyTimeSpent" value="157057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,7 +467,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/account/views.py</url>
-          <line>779</line>
+          <line>782</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
@@ -813,16 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4875">
-          <caret line="356" column="32" selection-start-line="356" selection-start-column="32" selection-end-line="356" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20355">
@@ -863,8 +865,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="1272" column="28" selection-start-line="1272" selection-start-column="28" selection-end-line="1272" selection-end-column="28" />
+        <state relative-caret-position="139">
+          <caret line="1387" column="43" selection-start-line="1387" selection-start-column="43" selection-end-line="1387" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="102" column="13" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1224,7 +1224,7 @@ ul {list-style: none}
 	</div> <!-- zadnjiPoslovi -->
 
 	{% if auth %}
-	{% else %}
+    {% else %}
 	<div class="kartice">
 		<div onclick="location.href='{% url 'anonimnaPretraga' id=1 %}'" class="kartice__trazitePosao" style="cursor: pointer;">
 			<h3>Tražite posao?</h3>
