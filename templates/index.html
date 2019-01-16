@@ -822,6 +822,7 @@ ul {list-style: none}
 
     </style>
 
+    {% if not auth %}
      {% if auth %}
      <style type="text/css">
      	.header__navigation{
@@ -1241,6 +1242,10 @@ ul {list-style: none}
 		</div>
 	</div> <!-- kartice -->
 	{% endif %}
+	{% endif %}
+
+
+	{% if not auth %}
 	<div class="oglasi">
 		{% if auth %}
 		{% else %}
@@ -1274,45 +1279,248 @@ ul {list-style: none}
             {% endif %}
         {% endfor %}
         {% endif %}
-	<!--<div class="oglasi__kartica">
-			<div class="cosakTrokut"><img src="../static/images/munja.png"></div>
-			<div class="oglasi__kartica--sadrzaj">
-				<div class="oglasi__kartica--sadrzaj--tekst">
-					<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
-					<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h <span>Mostar, BiH</span></p></div>
-				</div>
-				<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/tulip.png"></div>
-			</div>
-		</div>
-		<div class="oglasi__kartica aktivnaKartica">
-			<div class="oglasi__kartica--sadrzaj">
-				<div class="oglasi__kartica--sadrzaj--tekst">
-					<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
-					<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h <span>Mostar, BiH</span></p></div>
-				</div>
-				<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/unicum.png"></div>
-			</div>
-		</div>
-		<div class="oglasi__kartica">
-			<div class="cosakTrokut"><img src="../static/images/munja.png"></div>
-			<div class="oglasi__kartica--sadrzaj">
-				<div class="oglasi__kartica--sadrzaj--tekst">
-					<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
-					<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h <span>Mostar, BiH</span></p></div>
-				</div>
-				<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/infinite.png"></div>
-			</div>
-		</div><!-- oglasi -->
 	</div>
+	{% endif %}
+
+
+	{% if auth %}
+
+
+	<div class="ponudaContainer">
+		<div class="oglasi2" style="margin-right: 50px;">
+			<h3 style="font-family: Galano Black; font-size: 30px">NOVOSTI</h3>
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
+						<div class="detalji"><p class="zanimanje">Ciljna grupa: menadžeri u prodaji, prodajni agenti i prodavači</p><p class="vrijemeObjave">16.1.2019.</span></p></div>
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
+				</div>
+			</div>
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
+						<div class="detalji"><p class="zanimanje">Ciljna grupa: menadžeri u prodaji, prodajni agenti i prodavači</p><p class="vrijemeObjave">16.1.2019.</span></p></div>
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
+				</div>
+			</div>
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
+						<div class="detalji"><p class="zanimanje">Ciljna grupa: menadžeri u prodaji, prodajni agenti i prodavači</p><p class="vrijemeObjave">16.1.2019.</span></p></div>
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
+				</div>
+			</div>
+		</div>
+		<div class="oglasi3">
+			<h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3>
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
+						<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h - <span>Mostar, BiH</span></p></div>
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/tulip.png"></div>
+				</div>
+			</div>
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
+						<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h - <span>Mostar, BiH</span></p></div>
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/unicum.png" style="height: auto; max-width: 80px;"></div>
+				</div>
+			</div>
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
+						<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h - <span>Mostar, BiH</span></p></div>
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/infinite.png"></div>
+				</div>
+			</div>
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
+						<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h - <span>Mostar, BiH</span></p></div>
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/tulip.png"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+
+
+
 	{% if auth %}
 	<style type="text/css">
+		.oglasi2 .oglasi__kartica--sadrzaj{
+			margin-left: 40px;
+		}
+		.oglasi2 .oglasi__kartica--sadrzaj h3{
+			font-family: 'Galano Regular';
+			font-size: 19px;
+		}
 		.footer{
+			margin-top: 100px;
 			display: none;
+		}
+		body{
+			margin-bottom: 100px;
+		}
+		.oglasi2 .oglasi__kartica:nth-last-child(1),
+		.oglasi3 .oglasi__kartica:nth-last-child(1){
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			border-bottom: none;
+		}
+		.oglasi2 .oglasi__kartica:nth-child(2),
+		.oglasi3 .oglasi__kartica:nth-child(2){
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+		.oglasi3 .oglasi__kartica--sadrzaj h3{
+			max-width: 600px;
+		}
+		.oglasi2 .oglasi__kartica:hover{
+			background-color: #fecc35;
+			box-shadow: 0px 20px 80px 0 rgba(248, 145, 1, 0.2);
+			transform: scale(1.01);
+			border-bottom: 0;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.oglasi3 .oglasi__kartica:hover{
+			box-shadow: 10px 20px 80px 0 rgba(248, 145, 1, 0.2);
+			transform: scale(1.01);
+			border-bottom: 0;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.oglasi2 .zanimanje {
+		    font-family: 'Galano Bold';
+		    font-size: 12px;
+		    font-weight: bold;
+		    color: black;
+		    margin-right: 30px;
+		    overflow: hidden;
+   			white-space: nowrap;
+    		text-overflow: ellipsis;
+    		text-transform: uppercase;
+    		width: 202px;
+		}
+		.oglasi2 .vrijemeObjave {
+		    font-family: 'Galano Regular';
+		    font-size: 12px;
+		    color: #919089;
 		}
 		.oglasi__kartica{
 			filter: blur(0px) !important;
 		}
-
+		.oglasi2 .oglasi__kartica{
+			width: 600px;
+			background-color: #eeede7;
+			border-bottom: 1px solid #d6d5cf;
+		}
+		.oglasi3 .oglasi__kartica{
+			border-bottom: 1px solid #e5e5e5;
+		}
+		.oglasi2 .oglasi__kartica--sadrzaj--text{
+			width: 400px;
+		}
+		.oglasi2 .oglasi__kartica--sadrzaj--slika{
+			position: static;
+			width: 150px; height: 100px; background-image: url('https://ziza.ba/media/sales_training.jpeg'); background-size: contain; box-shadow: 0px 1px 20px 0 rgba(38, 38, 38, 0.15); border-radius: 5px;
+		}
+		.oglasi2 .oglasi__kartica--sadrzaj{
+			align-items: center;
+			justify-content: space-between;
+		}
+		.oglasi2 .oglasi__kartica--sadrzaj--tekst{
+			width: 370px;
+		}
+		.oglasi__kartica{
+			width: 900px;
+		}
+		.ponudaContainer{
+			display: flex; justify-content: center;  margin-top: 80px;
+		}
+		@media screen and (max-width: 1575px){
+			.oglasi__kartica{
+				width: 800px;
+			}
+			.oglasi3 .oglasi__kartica--sadrzaj h3 {
+			    max-width: 500px;
+			}
+		}
+		@media screen and (max-width: 1475px){
+			.oglasi2 .oglasi__kartica--sadrzaj--slika{
+				display: none;
+			}
+			.oglasi2 .oglasi__kartica{
+				width: 420px;
+			}
+		}
+		@media screen and (max-width: 1275px){
+			.ponudaContainer{
+				flex-direction: column;
+			}
+			.oglasi2 .oglasi__kartica--sadrzaj--slika{
+				display: block;
+			}
+			.oglasi2 .oglasi__kartica{
+				width: 600px;
+			}
+			.oglasi3{
+				margin-top: 50px;
+			}
+		}
+		@media screen and (max-width: 830px){
+			.oglasi3 .oglasi__kartica--sadrzaj--slika,
+			.oglasi2 .oglasi__kartica--sadrzaj--slika{
+				display: none;
+			}
+			.oglasi3 .oglasi__kartica,
+			.oglasi2 .oglasi__kartica{
+				width: 500px;
+			}
+			.oglasi2{
+				margin-right: 0px !important;
+			}
+		}
+		@media screen and (max-width: 515px){
+			.oglasi3 .oglasi__kartica,
+			.oglasi2 .oglasi__kartica{
+				width: 370px;
+			}
+			.oglasi__kartica--sadrzaj h3{
+				font-size: 22px !important;
+			}
+			.oglasi2 .oglasi__kartica--sadrzaj h3{
+				font-size: 18px !important;
+			}
+			.zanimanje, .vrijemeObjave{
+				font-size: 14px !important;
+			}
+			.oglasi2 .zanimanje, .oglasi2 .vrijemeObjave{
+				font-size: 12px !important;
+			}
+			.oglasi3 > h3, .oglasi2 > h3{
+				margin-left: 20px;
+			}
+			.oglasi2{
+				margin-top: -30px;
+			}
+		}
 	</style>
 	{% else %}
 	<div class="callToRegister mobCall" style="margin-top: -100px; margin-bottom: -200px"><img src="../static/images/registrirajse.png"></div>
