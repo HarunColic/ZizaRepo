@@ -1287,11 +1287,34 @@ ul {list-style: none}
 
 
 	<div class="ponudaContainer">
+		<!-- 16.1.2019. LIJEVA KOLONA -> NOVOSTI -->
 		<div class="oglasi2" style="margin-right: 50px;">
 			<h3 style="font-family: Galano Black; font-size: 30px">NOVOSTI</h3>
 			<div class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div>
+							<div class="avatarKucica">
+	               				<img src=" /media/logo_1.png ">
+							</div>
+							<span class="imeKompanijeIzlog">META5</span>
+						</div>
+						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
+						<div class="detalji"><p class="zanimanje">Ciljna grupa: menadžeri u prodaji, prodajni agenti i prodavači</p><p class="vrijemeObjave">16.1.2019.</span></p></div>
+						<!-- Datum ispisati u formatu DD.MM.YYYY. -->
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
+				</div>
+			</div>
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div>
+							<div class="avatarKucica">
+	               				<img src="https://ziza.ba/media/nsoft_logo_gmail.png">
+							</div>
+							<span class="imeKompanijeIzlog">NSOFT D.O.O.</span>
+						</div>
 						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
 						<div class="detalji"><p class="zanimanje">Ciljna grupa: menadžeri u prodaji, prodajni agenti i prodavači</p><p class="vrijemeObjave">16.1.2019.</span></p></div>
 					</div>
@@ -1301,15 +1324,12 @@ ul {list-style: none}
 			<div class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
-						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
-						<div class="detalji"><p class="zanimanje">Ciljna grupa: menadžeri u prodaji, prodajni agenti i prodavači</p><p class="vrijemeObjave">16.1.2019.</span></p></div>
-					</div>
-					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
-				</div>
-			</div>
-			<div class="oglasi__kartica">
-				<div class="oglasi__kartica--sadrzaj">
-					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div>
+							<div class="avatarKucica">
+	               				<img src="https://ziza.ba/media/Logo_1.png">
+							</div>
+							<span class="imeKompanijeIzlog">MAS</span>
+						</div>
 						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
 						<div class="detalji"><p class="zanimanje">Ciljna grupa: menadžeri u prodaji, prodajni agenti i prodavači</p><p class="vrijemeObjave">16.1.2019.</span></p></div>
 					</div>
@@ -1317,12 +1337,19 @@ ul {list-style: none}
 				</div>
 			</div>
 		</div>
+		<!-- 16.1.2019. DESNA KOLONA -> KONKURSI / POSLOVNE PONUDE -->
 		<div class="oglasi3">
+<<<<<<< HEAD
 			<h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3>
 
             {% for p in postsbc %}
 
 			<div onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" class="oglasi__kartica">
+=======
+			<h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3> <!-- ili: POSLOVNE PONUDE -->
+			<!-- Ako je logirna firma onda ispiši POSLOVNE PONUDE, a ako je korisnik onda KONKURSI -->
+			<div class="oglasi__kartica">
+>>>>>>> 1f747092fece18857929263a335f004972ffe29b
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
 						<div><h3>{{ p.position }}</h3></div>
@@ -1370,6 +1397,28 @@ ul {list-style: none}
 
 	{% if auth %}
 	<style type="text/css">
+	.avatarKucica {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: white;
+    border: solid 1px #dedaca;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+.avatarKucica img{
+	max-width: 50px; height: auto;
+}
+	.imeKompanijeIzlog{
+		position: absolute; top: 13px; left: 70px; font-weight: bold; font-family: Galano Black; text-transform: uppercase;
+	}
+	.oglasi2 .oglasi__kartica--sadrzaj h3{	
+	}
 		.oglasi2 .oglasi__kartica--sadrzaj{
 			margin-left: 40px;
 		}
@@ -1436,7 +1485,8 @@ ul {list-style: none}
 		.oglasi2 .oglasi__kartica{
 			width: 600px;
 			background-color: #eeede7;
-			border-bottom: 1px solid #d6d5cf;
+			margin-bottom: 40px;
+			border-radius: 15px;
 		}
 		.oglasi3 .oglasi__kartica{
 			border-bottom: 1px solid #e5e5e5;
@@ -1459,7 +1509,13 @@ ul {list-style: none}
 			width: 900px;
 		}
 		.ponudaContainer{
-			display: flex; justify-content: center;  margin-top: 80px;
+			display: flex; justify-content: center;  margin-top: 80px; align-items: center;
+		}
+		.oglasi2 > h3{
+			margin-bottom: 50px;
+		}
+		.oglasi3 > h3{
+			margin-bottom: 50px;
 		}
 		@media screen and (max-width: 1575px){
 			.oglasi__kartica{
@@ -1526,6 +1582,12 @@ ul {list-style: none}
 			}
 			.oglasi2{
 				margin-top: -30px;
+			}
+			.avatarKucica{
+				left: 20px;
+			}
+			.imeKompanijeIzlog{
+				left: 100px;
 			}
 		}
 	</style>

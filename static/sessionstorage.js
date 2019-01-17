@@ -25,7 +25,7 @@ var quill = new Quill('#editor-container', {
 		toolbar: [
 		['bold', 'italic'],
 		['link', 'blockquote', 'code-block'],
-		[{ list: 'ordered' }, { list: 'bullet' }, 'image']
+		[{ list: 'ordered' }, { list: 'bullet' }, 'image', 'video']
 		]
 	},
 	placeholder: 'Unesite detaljan opis Vašeg oglasa...',
@@ -46,3 +46,10 @@ var quill = new Quill('#editor-container', {
 		}
 	});
 })
+
+$(document).ready( function() {
+    $(".ql-editor").attr('spellcheck',false);
+    $('.ql-image').html('Postavi sliku').css('width', '90px').css('color', 'rgba(0,0,0,0.6)');
+    $('.ql-video').html('Postavi video').css('width', '90px').css('color', 'rgba(0,0,0,0.6)');
+
+});
