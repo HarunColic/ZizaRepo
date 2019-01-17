@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="1362" column="79" selection-start-line="1362" selection-start-column="79" selection-end-line="1362" selection-end-column="79" />
+            <state relative-caret-position="163">
+              <caret line="1350" column="142" selection-start-line="1350" selection-start-column="142" selection-end-line="1350" selection-end-column="142" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -397,7 +397,7 @@
       <workItem from="1547423482054" duration="6244000" />
       <workItem from="1547585988371" duration="986000" />
       <workItem from="1547672513638" duration="977000" />
-      <workItem from="1547728896802" duration="662000" />
+      <workItem from="1547728896802" duration="768000" />
     </task>
     <servers />
   </component>
@@ -407,7 +407,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158951000" />
+    <option name="totallyTimeSpent" value="159057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -892,8 +892,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="1362" column="79" selection-start-line="1362" selection-start-column="79" selection-end-line="1362" selection-end-column="79" />
+        <state relative-caret-position="163">
+          <caret line="1350" column="142" selection-start-line="1350" selection-start-column="142" selection-end-line="1350" selection-end-column="142" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
