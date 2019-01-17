@@ -1340,9 +1340,10 @@ ul {list-style: none}
 		<!-- 16.1.2019. DESNA KOLONA -> KONKURSI / POSLOVNE PONUDE -->
 		<div class="oglasi3">
 
-			<h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3> <!-- ili: POSLOVNE PONUDE -->
+			 <!-- ili: POSLOVNE PONUDE -->
 			<!-- Ako je logirna firma onda ispiši POSLOVNE PONUDE, a ako je korisnik onda KONKURSI -->
         {% if auth and usr == "comp" %}
+            <h3 style="font-family: Galano Black; font-size: 30px">POSLOVNE PONUDE</h3>
             {% for p in postbb %}
 			<div class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
@@ -1355,6 +1356,7 @@ ul {list-style: none}
 			</div>
             {% endfor %}
             {% elif auth and usr == "wrkr" %}
+            <h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3>
                 {% for p in postsbc %}
 			<div class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
