@@ -1319,16 +1319,23 @@ ul {list-style: none}
 		</div>
 		<div class="oglasi3">
 			<h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3>
-			<div class="oglasi__kartica">
+
+            {% for p in postsbc %}
+
+			<div onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
-						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
-						<div class="detalji"><p class="zanimanje">Ugostiteljstvo</p><p class="vrijemeObjave">Prije 6h - <span>Mostar, BiH</span></p></div>
+						<div><h3>{{ p.position }}</h3></div>
+						<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.dateDiff }} <span>{{ p.location }}, BiH</span></p></div>
 					</div>
-					<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/tulip.png"></div>
+					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 				</div>
 			</div>
-			<div class="oglasi__kartica">
+
+            {% endfor %}
+
+            <!--
+            <div class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
 						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
@@ -1354,7 +1361,7 @@ ul {list-style: none}
 					</div>
 					<div class="oglasi__kartica--sadrzaj--slika"><img src="../static/images/tulip.png"></div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	{% endif %}
