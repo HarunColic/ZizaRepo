@@ -1354,7 +1354,7 @@ ul {list-style: none}
 						<div><h3>{{ p.title }}</h3></div>
 						<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.dateDiff }} min <span>{{ p.region }}, BiH</span></p></div>
 					</div>
-					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="width: 300px; height: auto;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
+					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="width: 150px; height: 100px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 				</div>
 			</div>
             {% endfor %}
