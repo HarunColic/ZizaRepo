@@ -1290,22 +1290,25 @@ ul {list-style: none}
 		<!-- 16.1.2019. LIJEVA KOLONA -> NOVOSTI -->
 		<div class="oglasi2" style="margin-right: 50px;">
 			<h3 style="font-family: Galano Black; font-size: 30px">NOVOSTI</h3>
-			<div class="oglasi__kartica">
+            {% for i in izlozi %}
+			<div  onclick="location.href='{% url 'izlog' id=i.userID.first_name slug=i.slug %}'" class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
 						<div>
 							<div class="avatarKucica">
-	               				<img src=" /media/logo_1.png ">
+                              {% if i.userID.userprofile.image %}<img src=" {{ i.userID.userprofile.image.url}} ">{% endif %}
 							</div>
-							<span class="imeKompanijeIzlog">META5</span>
+							<span class="imeKompanijeIzlog">{{ i.userID.first_name }}</span>
 						</div>
-						<div><h3>Konobar, ugostiteljstvo, šanker</h3></div>
-						<div class="detalji"><p class="zanimanje">Ciljna grupa: menadžeri u prodaji, prodajni agenti i prodavači</p><p class="vrijemeObjave">16.1.2019.</span></p></div>
+						<div><h3>{{ i.title }}</h3></div>
+						<div class="detalji"><p class="zanimanje"> {{ i.userID.company.categoryID.name }} </p><p class="vrijemeObjave">{{ i.created_at|date:"d. m .Y." }}</p></div>
 						<!-- Datum ispisati u formatu DD.MM.YYYY. -->
 					</div>
 					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
 				</div>
 			</div>
+            {% endfor %}
+            <!--
 			<div class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
@@ -1335,7 +1338,7 @@ ul {list-style: none}
 					</div>
 					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
 				</div>
-			</div>
+			</div>-->
 		</div>
 		<!-- 16.1.2019. DESNA KOLONA -> KONKURSI / POSLOVNE PONUDE -->
 		<div class="oglasi3">
@@ -1345,11 +1348,11 @@ ul {list-style: none}
         {% if auth and usr == "comp" %}
             <h3 style="font-family: Galano Black; font-size: 30px">POSLOVNE PONUDE</h3>
             {% for p in postbb %}
-			<div class="oglasi__kartica">
+			<div onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
 						<div><h3>{{ p.title }}</h3></div>
-						<div class="detalji"><p class="zanimanje">{{ p.title }}</p><p class="vrijemeObjave">{{ p.dateDiff }} min <span>{{ p.region }}, BiH</span></p></div>
+						<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.dateDiff }} min <span>{{ p.region }}, BiH</span></p></div>
 					</div>
 					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="width: 300px; height: auto;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 				</div>
@@ -1362,7 +1365,7 @@ ul {list-style: none}
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
 						<div><h3>{{ p.position }}</h3></div>
-						<div class="detalji"><p class="zanimanje">{{ p.position }}</p><p class="vrijemeObjave">{{ p.dateDiff }} min <span>{{ p.location }}, BiH</span></p></div>
+						<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.dateDiff }} min <span>{{ p.location }}, BiH</span></p></div>
 					</div>
 					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="width: 300px; height: auto;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 				</div>
