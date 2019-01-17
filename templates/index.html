@@ -1339,17 +1339,12 @@ ul {list-style: none}
 		</div>
 		<!-- 16.1.2019. DESNA KOLONA -> KONKURSI / POSLOVNE PONUDE -->
 		<div class="oglasi3">
-<<<<<<< HEAD
-			<h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3>
 
-            {% for p in postsbc %}
-
-			<div onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" class="oglasi__kartica">
-=======
 			<h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3> <!-- ili: POSLOVNE PONUDE -->
 			<!-- Ako je logirna firma onda ispiši POSLOVNE PONUDE, a ako je korisnik onda KONKURSI -->
+        {% if auth and usr == "comp" %}
+            {% for p in postbb %}
 			<div class="oglasi__kartica">
->>>>>>> 1f747092fece18857929263a335f004972ffe29b
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
 						<div><h3>{{ p.position }}</h3></div>
@@ -1358,9 +1353,20 @@ ul {list-style: none}
 					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 				</div>
 			</div>
-
             {% endfor %}
-
+            {% elif auth and usr =="wrkr" %}
+                {% for p in postsbc %}
+			<div class="oglasi__kartica">
+				<div class="oglasi__kartica--sadrzaj">
+					<div class="oglasi__kartica--sadrzaj--tekst">
+						<div><h3>{{ p.position }}</h3></div>
+						<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.dateDiff }} <span>{{ p.location }}, BiH</span></p></div>
+					</div>
+					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
+				</div>
+			</div>
+            {% endfor %}
+            {% endif %}
             <!--
             <div class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
