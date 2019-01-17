@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="1303" column="102" selection-start-line="1303" selection-start-column="102" selection-end-line="1303" selection-end-column="102" />
+              <caret line="1303" column="80" selection-start-line="1303" selection-start-column="80" selection-end-line="1303" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -394,7 +393,7 @@
       <workItem from="1547423482054" duration="6244000" />
       <workItem from="1547585988371" duration="986000" />
       <workItem from="1547672513638" duration="977000" />
-      <workItem from="1547728896802" duration="1934000" />
+      <workItem from="1547728896802" duration="1974000" />
     </task>
     <servers />
   </component>
@@ -404,7 +403,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160223000" />
+    <option name="totallyTimeSpent" value="160263000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,7 +418,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.20830008" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8720445" visible="true" weight="0.20830008" />
       <window_info id="Structure" order="1" sideWeight="0.1279555" side_tool="true" weight="0.14834578" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -433,7 +432,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019952" side_tool="true" weight="0.2512235" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="10" weight="0.3110749" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.18566775" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49720672" visible="true" weight="0.18566775" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32247558" />
       <window_info anchor="bottom" id="Find" order="13" weight="0.3282313" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32899022" />
@@ -890,7 +889,7 @@
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="1303" column="102" selection-start-line="1303" selection-start-column="102" selection-end-line="1303" selection-end-column="102" />
+          <caret line="1303" column="80" selection-start-line="1303" selection-start-column="80" selection-end-line="1303" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
