@@ -65,10 +65,7 @@
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="373">
-              <caret line="1364" column="137" selection-start-line="1364" selection-start-column="137" selection-end-line="1364" selection-end-column="137" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="1364" column="125" selection-start-line="1364" selection-start-column="125" selection-end-line="1364" selection-end-column="125" />
             </state>
           </provider>
         </entry>
@@ -396,7 +393,7 @@
       <workItem from="1547423482054" duration="6244000" />
       <workItem from="1547585988371" duration="986000" />
       <workItem from="1547672513638" duration="977000" />
-      <workItem from="1547728896802" duration="458000" />
+      <workItem from="1547728896802" duration="497000" />
     </task>
     <servers />
   </component>
@@ -406,7 +403,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158747000" />
+    <option name="totallyTimeSpent" value="158786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -892,10 +889,7 @@
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
-          <caret line="1364" column="137" selection-start-line="1364" selection-start-column="137" selection-end-line="1364" selection-end-column="137" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="1364" column="125" selection-start-line="1364" selection-start-column="125" selection-end-line="1364" selection-end-column="125" />
         </state>
       </provider>
     </entry>
