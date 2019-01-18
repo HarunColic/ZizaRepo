@@ -1301,7 +1301,7 @@ ul {list-style: none}
 							<span class="imeKompanijeIzlog">{{ i.userID.first_name }}</span>
 						</div>
 						<div><h3>{{ i.title }}</h3></div>
-						<div class="detalji"><p class="zanimanje"> Ciljna grupa: {{ i.userID.company.categoryID.name }} </p><p class="vrijemeObjave">{{ i.created_at|date:"d. m .Y." }}</p></div>
+						<div class="detalji"><p class="zanimanje"> {{ i.sub_title }} </p><p class="vrijemeObjave">{{ i.created_at|date:"d. m .Y." }}</p></div>
 						<!-- Datum ispisati u formatu DD.MM.YYYY. -->
 					</div>
 					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
@@ -1354,12 +1354,12 @@ ul {list-style: none}
 						<div><h3>{{ p.title }}</h3></div>
 						<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.dateDiff }} min <span>{{ p.region }}, BiH</span></p></div>
 					</div>
-					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="width: 150px; height: 100px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
+					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="height: auto; max-width: 80px" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 				</div>
 			</div>
             {% endfor %}
             {% elif auth and usr == "wrkr" %}
-            <h3 style="font-family: Galano Black; font-size: 30px">KONKURSI</h3>
+            <h3 style="font-family: Galano Black; font-size: 30px">KONKURSI ZA POSAO</h3>
                 {% for p in postsbc %}
 			<div class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
@@ -1367,7 +1367,7 @@ ul {list-style: none}
 						<div><h3>{{ p.position }}</h3></div>
 						<div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.dateDiff }} min <span>{{ p.location }}, BiH</span></p></div>
 					</div>
-					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="width: 300px; height: auto;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
+					<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="height: auto; max-width: 80px" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 				</div>
 			</div>
             {% endfor %}
@@ -1424,6 +1424,9 @@ ul {list-style: none}
 }
 .avatarKucica img{
 	max-width: 50px; height: auto;
+}
+.oglasi2{
+	min-height: 680px;
 }
 	.imeKompanijeIzlog{
 		position: absolute; top: 13px; left: 70px; font-weight: bold; font-family: Galano Black; text-transform: uppercase;
@@ -1494,7 +1497,7 @@ ul {list-style: none}
 			filter: blur(0px) !important;
 		}
 		.oglasi2 .oglasi__kartica{
-			width: 600px;
+			width: 900px;
 			background-color: #eeede7;
 			margin-bottom: 40px;
 			border-radius: 15px;
@@ -1514,10 +1517,10 @@ ul {list-style: none}
 			justify-content: space-between;
 		}
 		.oglasi2 .oglasi__kartica--sadrzaj--tekst{
-			width: 370px;
+			width: 670px;
 		}
 		.oglasi__kartica{
-			width: 900px;
+			width: 600px;
 		}
 		.ponudaContainer{
 			display: flex; justify-content: center;  margin-top: 80px; align-items: center;
@@ -1548,6 +1551,9 @@ ul {list-style: none}
 			.ponudaContainer{
 				flex-direction: column;
 			}
+			.oglasi2 .oglasi__kartica--sadrzaj--tekst{
+			width: 370px;
+		}
 			.oglasi2 .oglasi__kartica--sadrzaj--slika{
 				display: block;
 			}
@@ -1557,21 +1563,48 @@ ul {list-style: none}
 			.oglasi3{
 				margin-top: 50px;
 			}
+			.oglasi2{
+	min-height: auto;
+}
 		}
 		@media screen and (max-width: 830px){
-			.oglasi3 .oglasi__kartica--sadrzaj--slika,
-			.oglasi2 .oglasi__kartica--sadrzaj--slika{
+			.oglasi3 .oglasi__kartica--sadrzaj--slika{
 				display: none;
+			}
+			.oglasi__kartica--sadrzaj{
+				flex-direction: column;
 			}
 			.oglasi3 .oglasi__kartica,
 			.oglasi2 .oglasi__kartica{
 				width: 500px;
+			}
+			.oglasi2 .oglasi__kartica{
+				height: 365px;
+			}
+			.oglasi2 .oglasi__kartica--sadrzaj{
+				margin: 0 auto;
+			}
+			.oglasi2 .oglasi__kartica--sadrzaj--slika{
+				height: 200px;
+				width: 400px;
+				margin-top: 10px;
 			}
 			.oglasi2{
 				margin-right: 0px !important;
 			}
 		}
 		@media screen and (max-width: 515px){
+			.oglasi2 .oglasi__kartica--sadrzaj--slika{
+				height: 150px;
+				width: 300px;
+				margin-bottom: -30px;
+			}
+			.oglasi2 .oglasi__kartica{
+				height: 325px;
+			}
+			.oglasi2 .oglasi__kartica--sadrzaj--tekst{
+				width: 300px;
+			}
 			.oglasi3 .oglasi__kartica,
 			.oglasi2 .oglasi__kartica{
 				width: 370px;
@@ -1584,6 +1617,7 @@ ul {list-style: none}
 			}
 			.zanimanje, .vrijemeObjave{
 				font-size: 14px !important;
+				width: 130px;
 			}
 			.oglasi2 .zanimanje, .oglasi2 .vrijemeObjave{
 				font-size: 12px !important;
