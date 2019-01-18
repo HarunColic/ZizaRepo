@@ -1304,7 +1304,7 @@ ul {list-style: none}
 						<div class="detalji"><p class="zanimanje"> {{ i.sub_title }} </p><p class="vrijemeObjave">{{ i.created_at|date:"d. m .Y." }}</p></div>
 						<!-- Datum ispisati u formatu DD.MM.YYYY. -->
 					</div>
-					<div class="oglasi__kartica--sadrzaj--slika" style=""></div>
+					<div  style=""> {% if i.image %}<img style="height: 100px; width: 150px;" src="{{ i.image.url }}"> {% endif %} </div>
 				</div>
 			</div>
             {% endfor %}

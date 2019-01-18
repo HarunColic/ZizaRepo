@@ -8,6 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d29a730b-5fa6-45f1-8954-6cc7c20befca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/post/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
-              <caret line="513" selection-start-line="513" selection-end-line="513" />
+              <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -64,8 +66,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="1358" column="18" lean-forward="true" selection-start-line="1358" selection-start-column="18" selection-end-line="1358" selection-end-column="18" />
+            <state relative-caret-position="364">
+              <caret line="1310" column="16" lean-forward="true" selection-start-line="1310" selection-start-column="16" selection-end-line="1310" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>showpost</find>
       <find>position</find>
       <find>close</find>
       <find>.png</find>
@@ -121,6 +125,7 @@
       <find>izlo</find>
       <find>Konkursi</find>
       <find>KONKURSI</find>
+      <find>izlozi</find>
     </findStrings>
     <replaceStrings>
       <replace>views.soon</replace>
@@ -184,8 +189,8 @@
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/account/models.py" />
         <option value="$PROJECT_DIR$/templates/ProfilKorisnikaLP.html" />
-        <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
@@ -390,7 +395,7 @@
       <workItem from="1547585988371" duration="986000" />
       <workItem from="1547672513638" duration="977000" />
       <workItem from="1547728896802" duration="2955000" />
-      <workItem from="1547815577629" duration="64000" />
+      <workItem from="1547815577629" duration="943000" />
     </task>
     <servers />
   </component>
@@ -400,7 +405,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161308000" />
+    <option name="totallyTimeSpent" value="162187000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -472,7 +477,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/post/views.py</url>
-          <line>586</line>
+          <line>585</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -876,7 +881,7 @@
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
-          <caret line="513" selection-start-line="513" selection-end-line="513" />
+          <caret line="513" lean-forward="true" selection-start-line="513" selection-end-line="513" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -885,8 +890,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="1358" column="18" lean-forward="true" selection-start-line="1358" selection-start-column="18" selection-end-line="1358" selection-end-column="18" />
+        <state relative-caret-position="364">
+          <caret line="1310" column="16" lean-forward="true" selection-start-line="1310" selection-start-column="16" selection-end-line="1310" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

