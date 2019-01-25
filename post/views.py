@@ -193,6 +193,9 @@ def showpost(request, id, slug):
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
+    else:
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
     post = Post.objects.get(url=slug)
     userPP = UserProfile.objects.get(userID=post.userID)
 
