@@ -1263,7 +1263,7 @@ ul {list-style: none}
 			<p style="font-size: 26.5px">I obratno!</p>
 			<h4>Otvoreni konkursi</h4>
 			<div class="linijaPosao"></div>
-			<img src="../static/images/worker_bee.png">
+			<img src="{% static 'images/worker_bee.png' %}">
 		</div>
 		<div style="cursor: pointer;" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'"  class="kartice__trazitePartnera">
 			<h3>Vidite!</h3>
@@ -1278,10 +1278,9 @@ ul {list-style: none}
 
 	{% if not auth %}
 	<div class="oglasi">
-		{% if auth %}
-		{% else %}
-        {% for p in cetriOglasa %}
-            {% if usr == 'comp' %}
+		{% if not auth %}
+        {% for p in sviOglasi%}
+
                 {% if p.type == 2 %}
 		<div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
 			<div class="selectUp"></div>
@@ -1293,7 +1292,6 @@ ul {list-style: none}
 				<div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image  %}<img style="height: auto; max-width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div>
 			</div>
 		</div>
-                    {% endif %}
             {% else %}
                 {% if usr == 'wrkr' %}
                 <div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
