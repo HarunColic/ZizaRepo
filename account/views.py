@@ -839,7 +839,7 @@ def anonimnaPretraga(request, id):
     #posts = paginator.page(page)
     #data = list(posts)
     number_pages = range(1, 1)
-    gradovi = City.objects.all()
+    gradovi = City.objects.all().order_by('name')
     cat = Category.objects.filter(type=1)
     users = User.objects.all()
     userPs = UserProfile.objects.all()
