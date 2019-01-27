@@ -13,13 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-	<meta property="og:title" content="Izlog">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="www.ziza.ba">
-	<meta property="og:description" content="">
-	<meta property="og:site_name" content="Ziza">
     <style>
-
 
 
         .slikaPolicajac, .slikaBiznismen, .slikaVodoinstalater{
@@ -751,31 +745,6 @@ ul {list-style: none}
                 }
 
 
-                .zadnjiPoslovi__last--navigator--left{
-				width: 290px;
-			}
-			.zadnjiPoslovi__last--navigator--right{
-				width: 580px;
-			}
-			@keyframes prebaciDesno{
-				0%{
-					margin-left: 140px;
-				}
-				100%{
-					margin-left: 430px;
-				}
-			}
-
-			@keyframes prebaciLijevo{
-	from{
-		margin-left: 430px;
-	}
-	to{
-		margin-left: 140px;
-	}
-}
-
-
 			</style>
 
 	<style type="text/css">
@@ -1181,8 +1150,8 @@ ul {list-style: none}
 		{% else %}
 		<div class="zadnjiPoslovi__last">
 			<div class="zadnjiPoslovi__last--kategorije">
-				<h3 id="posaoButton">KONKURSI</h3>
-				<h3 id="biznisButton">POSLOVNI</h3>
+				<h3 id="posaoButton">POSAO</h3>
+				<h3 id="biznisButton">BIZNIS</h3>
 			</div>
 			<div class="zadnjiPoslovi__last--navigator">
 				<div class="zadnjiPoslovi__last--navigator--left"></div>
@@ -1317,13 +1286,9 @@ ul {list-style: none}
 
 	<div class="ponudaContainer">
 		<!-- 16.1.2019. LIJEVA KOLONA -> NOVOSTI -->
-		<div  class="oglasi2" style="margin-right: 50px;">
+		<div class="oglasi2" style="margin-right: 50px;">
 			<h3 style="font-family: Galano Black; font-size: 30px">NOVOSTI</h3>
-			{% for i in izlozi %}
-			{# ALEM #}
-			<!-- <button class="shareBtn" data-page="ln" data-href="https://ziza.ba{% url 'izlog' id=i.userID.first_name slug=i.slug %}">klik</button> -->
-			{# ALEM #}
-
+            {% for i in izlozi %}
 			<div  onclick="location.href='{% url 'izlog' id=i.userID.first_name slug=i.slug %}'" class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
@@ -1334,7 +1299,8 @@ ul {list-style: none}
 							<span class="imeKompanijeIzlog">{{ i.userID.first_name }}</span>
 						</div>
 						<div><h3>{{ i.title }}</h3></div>
-						<div class="detalji"><p class="zanimanje"> {{ i.sub_title }} </p><p class="vrijemeObjave">{{ i.created_at|date:"d.m .Y." }}</p></div>
+						<div class="detalji"><p class="zanimanje"> {{ i.sub_title }} </p><p class="vrijemeObjave">{{ i.created_at|date:"d. m .Y." }}</p></div>
+						<!-- Datum ispisati u formatu DD.MM.YYYY. -->
 					</div>
 					<div  style=""> {% if i.image %}<img style="height: 100px; width: 150px;" src="{{ i.image.url }}"> {% endif %} </div>
 				</div>
@@ -1373,39 +1339,6 @@ ul {list-style: none}
 			</div>-->
 		</div>
 		<!-- 16.1.2019. DESNA KOLONA -> KONKURSI / POSLOVNE PONUDE -->
-		<style type="text/css">
-			.oglasi3{
-				margin-top: -122px;
-			}
-			@media screen and (max-width: 1280px){
-				.oglasi3 .oglasi__kartica{
-					width: 640px;
-				}
-				.oglasi2 .oglasi__kartica{
-					width: 370px;
-				}
-				.oglasi2 .oglasi__kartica--sadrzaj--tekst{
-					width: 320px;
-				}
-				.oglasi2 .oglasi__kartica--sadrzaj > div:nth-child(2){
-					display: none;
-				}
-			}
-			.zadnjiPoslovi__last--navigator--left{
-				width: 290px;
-			}
-			.zadnjiPoslovi__last--navigator--right{
-				width: 580px;
-			}
-			@keyframes prebaciDesno{
-				0%{
-					margin-left: 140px;
-				}
-				100%{
-					margin-left: 430px;
-				}
-			}
-		</style>
 		<div class="oglasi3">
 
 			 <!-- ili: POSLOVNE PONUDE -->
@@ -1976,40 +1909,6 @@ setInterval(function(){
 }, 6000);
 
 </script>
-<script>
-
-{# ALEM #}
-$(".shareBtn").click((e)=>{
-	let dataPage = e.target.getAttribute('data-page');
-	let dataHref = e.target.getAttribute('data-href');
-	console.log(dataHref);
-	console.log(dataPage);
-	//facebook
-	if(dataPage == 'fb'){
-		let shareurl = "https://www.facebook.com/sharer/sharer.php?app_id=392299231338007&sdk=joey&u="+ encodeURIComponent(dataHref) +"&display=popup&ref=plugin&src=share_button";
-		return !window.open(shareurl, 'Facebook', 'width=640,height=580');
-	}
-	//instagram - ne dozvoljava ig
-	// else if(dataPage == 'ig'){}
-	//whatsapp
-	else if(dataPage == 'wa'){
-		location.href = 'whatsapp://send?text='+dataHref;
-	}
-	//linkedin
-	else if(dataPage == 'ln'){
-		let shareurl = "https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(dataHref)+"&summary=&source=ZIZA.ba";
-		!window.open(shareurl, 'Facebook', 'width=640,height=580');
-	}
-	//viber
-	else if(dataPage == 'vb'){
-		location.href = "https://3p3x.adj.st/?adjust_t=u783g1_kw9yml&adjust_fallback=https%3A%2F%2Fwww.viber.com%2F%3Futm_source%3DPartner%26utm_medium%3DSharebutton%26utm_campaign%3DDefualt&adjust_campaign=Sharebutton&adjust_deeplink=" + encodeURIComponent("viber://forward?text=" + encodeURIComponent(dataHref));
-	}
-});
-{# ALEM #}
-
-</script>
 </html>
-
-
 
 

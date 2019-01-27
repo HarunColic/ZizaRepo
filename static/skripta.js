@@ -34,7 +34,7 @@ $("#biznisButton").click(function(){
 	}
 });
 $("#posaoButton").click(function(){
-	if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '430px'){
+	if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '340px'){
 		$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciLijevo 0.5s ease-out 0s 1 normal forwards running');
 		$('#b2b').addClass('hidden');
 		$('#b2c').removeClass('hidden');
