@@ -31,7 +31,7 @@ def newpost(request):
             userP = UserProfile.objects.get(userID=request.user)
             return render(request, 'newpost.html', {'auth': True, 'usr': 'comp', 'cat': categories, 'userP': userP, 'user': request.user})
         else:
-            return redirect('home')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
 def newpotraznja(request):

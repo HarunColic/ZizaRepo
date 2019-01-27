@@ -714,11 +714,18 @@ ul {list-style: none}
                     {% if usr == 'comp' %}
 					<div class="konkursBottom">
 					    <ul>
+                            {% if usr == 'comp' %}
 					    	<a href="{% url 'newpost' %}"><li><div class="saStrane" ></div> Kadrovska potraznja </li></a>
 					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li></a>
 					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li></a>
 					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li></a>
-					    </ul>
+					    {% else %}
+                                <a href="   "><li><div class="saStrane" ></div> Kadrovska potraznja </li></a>
+					    	<a href=""><li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li></a>
+					    	<a href=""><li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li></a>
+					    	<a href=""><li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li></a>
+                            {% endif %}
+                                </ul>
 					</div>
                         {% endif %}
 				</span>
