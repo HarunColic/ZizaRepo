@@ -134,6 +134,12 @@
 				margin-top: -20px !important;
 			}
 		}
+		@media screen and (max-width: 414px){
+	.avatarKucica{
+		margin-left: 50px;
+	}
+}
+
     </style>
 
 
@@ -204,16 +210,128 @@
 					</div>
 					<div style="width: 43.75%">
 						<label>Broj izvršitelja</label><br>
-						<input type="number" id="spremaInput" name="brojIzvr" value="" style="width: 100%">
+						<input type="number" id="spremaInput" name="brojIzvr" value="" max="999" min="1" oninput="validity.valid||(value='');" style="width: 100%">
 					</div>
 				</div>
 
 				<div style="margin-top: 20px; display: flex;" class="multipleFour">
 					<div style="width: 23%; margin-right: 25px">
 						<label>Lokacija</label><br>
-                        {% with var=1 %}
-                        {% include 'gradovi.html' %}
-                        {% endwith %}
+                        <select name="City" id="sjed">
+							<option value="" disabled selected="true">Lokacija</option>
+	                        <option value='Banovići'>Banovići</option>
+							<option value='Banja Luka'>Banja Luka</option>
+							<option value='Berkovići'>Berkovići</option>
+							<option value='Bihać'>Bihać</option>
+							<option value='Bileća'>Bileća</option>
+							<option value='Bijeljina'>Bijeljina</option>
+							<option value='Bosanska Dubica'>Bosanska Dubica</option>
+							<option value='Bosanska Gradiška'>Bosanska Gradiška</option>
+							<option value='Bosansko Grahovo'>Bosansko Grahovo</option>
+							<option value='Bosanska Krupa'>Bosanska Krupa</option>
+							<option value='Bosanska Kostajnica'>Bosanska Kostajnica</option>
+							<option value='Bosanski Brod'>Bosanski Brod</option>
+							<option value='Bosanski Novi'>Bosanski Novi</option>
+							<option value='Bosanski Petrovac'>Bosanski Petrovac</option>
+							<option value='Bosanski Šamac'>Bosanski Šamac</option>
+							<option value='Bratunac'>Bratunac</option>
+							<option value='Brčko'>Brčko</option>
+							<option value='Breza'>Breza</option>
+							<option value='Bugojno'>Bugojno</option>
+							<option value='Busovača'>Busovača</option>
+							<option value='Bužim'>Bužim</option>
+							<option value='Cazin'>Cazin</option>
+							<option value='Čajniče'>Čajniče</option>
+							<option value='Čapljina'>Čapljina</option>
+							<option value='Čelić'>Čelić</option>
+							<option value='Čitluk'>Čitluk</option>
+							<option value='Čelinac'>Čelinac</option>
+							<option value='Doboj'>Doboj</option>
+							<option value='Dobretići'>Dobretići</option>
+							<option value='Domaljevac'>Domaljevac</option>
+							<option value='Donji Vakuf'>Donji Vakuf</option>
+							<option value='Drvar'>Drvar</option>
+							<option value='Derventa'>Derventa</option>
+							<option value='Foča'>Foča</option>
+							<option value='Fojnica'>Fojnica</option>
+							<option value='Gacko'>Gacko</option>
+							<option value='Glamoč'>Glamoč</option>
+							<option value='Gračanica'>Gračanica</option>
+							<option value='Gradačac'>Gradačac</option>
+							<option value='Grude'>Grude</option>
+							<option value='Goražde'>Goražde</option>
+							<option value='Gornji Vakuf - Uskoplje'>Gornji Vakuf - Uskoplje</option>
+							<option value='Jablanica'>Jablanica</option>
+							<option value='Jajce'>Jajce</option>
+							<option value='Kakanj'>Kakanj</option>
+							<option value='Kalesija'>Kalesija</option>
+							<option value='Kalinovik'>Kalinovik</option>
+							<option value='Kiseljak'>Kiseljak</option>
+							<option value='Kladanj'>Kladanj</option>
+							<option value='Ključ'>Ključ</option>
+							<option value='Konjic'>Konjic</option>
+							<option value='Kotor-Varoš'>Kotor-Varoš</option>
+							<option value='Kreševo'>Kreševo</option>
+							<option value='Kupres'>Kupres</option>
+							<option value='Laktaši'>Laktaši</option>
+							<option value='Livno'>Livno</option>
+							<option value='Lukavac'>Lukavac</option>
+							<option value='Lopare'>Lopare</option>
+							<option value='Ljubinje'>Ljubinje</option>
+							<option value='Ljubuški'>Ljubuški</option>
+							<option value='Maglaj'>Maglaj</option>
+							<option value='Milići'>Milići</option>
+							<option value='Modriča'>Modriča</option>
+							<option value='Mostar'>Mostar</option>
+							<option value='Mrkonjić Grad'>Mrkonjić Grad</option>
+							<option value='Neum'>Neum</option>
+							<option value='Nevesinje'>Nevesinje</option>
+							<option value='Novi Travnik'>Novi Travnik</option>
+							<option value='Odžak'>Odžak</option>
+							<option value='Olovo'>Olovo</option>
+							<option value='Orašje'>Orašje</option>
+							<option value='Pale'>Pale</option>
+							<option value='Posušje'>Posušje</option>
+							<option value='Prozor-Rama'>Prozor-Rama</option>
+							<option value='Pale-Prača'>Pale-Prača</option>
+							<option value='Prijedor'>Prijedor</option>
+							<option value='Prnjavor'>Prnjavor</option>
+							<option value='Ravno'>Ravno</option>
+							<option value='Rogatica'>Rogatica</option>
+							<option value='Rudo'>Rudo</option>
+							<option value='Sanski Most'>Sanski Most</option>
+							<option value='Sapna'>Sapna</option>
+							<option value='Sarajevo'>Sarajevo</option>
+							<option value='Skender Vakuf'>Skender Vakuf</option>
+							<option value='Sokolac'>Sokolac</option>
+							<option value='Srbac'>Srbac</option>
+							<option value='Srebrenica'>Srebrenica</option>
+							<option value='Srebrenik'>Srebrenik</option>
+							<option value='Stanari'>Stanari</option>
+							<option value='Stolac'>Stolac</option>
+							<option value='Šipovo'>Šipovo</option>
+							<option value='Široki Brijeg'>Široki Brijeg</option>
+							<option value='Teočak'>Teočak</option>
+							<option value='Teslić'>Teslić</option>
+							<option value='Tešanj'>Tešanj</option>
+							<option value='Tomislavgrad'>Tomislavgrad</option>
+							<option value='Travnik'>Travnik</option>
+							<option value='Trebinje'>Trebinje</option>
+							<option value='Tuzla'>Tuzla</option>
+							<option value='Usora'>Usora</option>
+							<option value='Ustiprača'>Ustiprača</option>
+							<option value='Vareš'>Vareš</option>
+							<option value='Velika Kladuša'>Velika Kladuša</option>
+							<option value='Visoko'>Visoko</option>
+							<option value='Višegrad'>Višegrad</option>
+							<option value='Vitez'>Vitez</option>
+							<option value='Vogošća'>Vogošća</option>
+							<option value='Vlasenica'>Vlasenica</option>
+							<option value='Zavvalueovići'>Zavvalueovići</option>
+							<option value='Zenica'>Zenica</option>
+							<option value='Zvornik'>Zvornik</option>
+							<option value='Žepče'>Žepče</option>
+						</select>
 					</div>
 					<div style="width: 23%; margin-right: 25px">
 						<label>Pozicija</label><br>
@@ -221,7 +339,7 @@
 					</div>
 					<div style="width: 23%; margin-right: 25px">
 						<label>Min. iskustva</label><br>
-						<input type="number" id='godineInput' name="godineIskustva" placeholder="npr. 3 godine" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="width: 100%">
+						<input type="number" id='godineInput' name="godineIskustva" min="0" max="50" laceholder="npr. 3 godine" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="width: 100%">
 					</div>
 					<div style="width: 23%;">
 						<label>Stručna sprema</label><br>
@@ -276,22 +394,22 @@
 		</div>
 		<div class="tabelarni">
 			<div>
-				<h3 id="lokacijaPlace">MOSTAR</h3>
+				<h3 id="lokacijaPlace">N/A</h3>
 				<p>LOKACIJA</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3 id="pozicijaPlace">STROJAR</h3>
+				<h3 id="pozicijaPlace">N/A</h3>
 				<p>POZICIJA</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3 id="iskustvoPlace">3+</h3>
+				<h3 id="iskustvoPlace">N/A</h3>
 				<p>GODINE ISKUSTVA</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3 id="spremaPlace">B</h3>
+				<h3 id="spremaPlace">N/A</h3>
 				<p>BROJ IZVRŠITELJA</p>
 			</div>
 		</div>
@@ -341,6 +459,13 @@
 <script src="../static/sessionstorage.js"></script>
 
 <script>
+
+	$(document).on("change","select",function(){
+	  $("option[value=" + this.value + "]", this).attr("selected", true).siblings().removeAttr("selected");
+	  $('#lokacijaPlace').html(this.value.toUpperCase());
+	  console.log(this.value);
+	});
+
 var form = document.querySelector('#newpostForm');
 form.onsubmit = function() {
   var about = document.querySelector('input[name=opis]');
@@ -366,13 +491,23 @@ $('#aktivirajPregled').click(function(e){
 	$('.detaljniOpis').html($('.ql-editor').html());
 	var naslov = $('#naslovInput').val();
 	$('#nazivOglasa').html('<span>OGLAS /</span> ' + naslov.toUpperCase());
-	var lokacija = $('#lokacijaInput').val();
-	$('#lokacijaPlace').html(lokacija.toUpperCase());
+
 	var pozicija = $('#pozicijaInput').val();
+	if(pozicija == ""){
+		pozicija = "N/A";
+	}
+
 	$('#pozicijaPlace').html(pozicija.toUpperCase());
-	var godine = $('#godineInput').val();
-	$('#iskustvoPlace').html(godine.toUpperCase()+'+');
+
+	var godine = $('#godineInput').val() + '+';
+	if(godine == "+"){
+		godine = "N/A";
+	}
+	$('#iskustvoPlace').html(godine.toUpperCase());
 	var sprema = $('#spremaInput').val();
+	if(sprema == ""){
+		sprema = "N/A";
+	}
 	$('#spremaPlace').html(sprema.toUpperCase());
 });
 $('#goBack').click(function(e){

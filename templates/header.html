@@ -379,7 +379,7 @@ ul {list-style: none}
   .mobile__header{
   	background-color: #181818;
   	width: 100%;
-  	height: 70px;
+  	height: 74px;
   	box-shadow: 0px 20px 80px 0 rgba(31, 31, 31, 0.2);
   	display: flex;
   	justify-content: center;
@@ -653,10 +653,52 @@ ul {list-style: none}
   	display: none;
   }
 
+  .mobSakr2{
+  	display: none;
+  }
+
+  .mobile__header{
+  	height: 74px;
+  }
+
+  @media screen and (max-width: 990px){
+	.mobSakr2{
+		display: block;
+		position: absolute;
+		left: 0;
+	}
+  }
+
+    @media screen and (max-width: 1275px){
+	.ponudaContainer{
+		align-items: center;
+	}
+  }
+
+  @media screen and (min-width: 2500px){
+  	.logotipNavbarMali{
+  		left: 500px !important;
+  	}
+  }
+
 </style>
 <!-- HEADER -->
 
+
 <div class="mobile__header">
+		<div class="header__navigation--dugmad mobSakr2">
+				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
+					<div style="width: 42px; height: 42px; border-radius: 50%; background: url({% if var3.image %}{{var3.image.url }}{% endif %}); background-position: center; background-size: cover"></div>
+					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px;" class="postavke"><div><i class="fas fa-angle-down" style="color: #f89101; margin-left: -5px; display: inline;"></i></div>
+					<div class="postavkeBottom" style="width: 150px">
+					    <ul style="position: relative;">
+					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>Profil</li></a>
+                             <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Postavke</li></a>
+					    </ul>
+					</div>
+				</div>
+				</div>
+			</div>
 		<a href="https://ziza.ba/"><img src="https://ziza.ba/static/images/logoNew.png" height="35px"></a>
 		<div class="burgermenu">
 			<span class="line--single"></span>
@@ -667,11 +709,12 @@ ul {list-style: none}
 			<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
 			    <ul style="position: relative;" class="mainNav">
 			    	<a href="{% url 'home' %}"><li><div class="saStrane"></div>Početna</li></a>
-                    <li class="oglasi--navMen"><div class="saStrane" style="top: 78px !important;"></div>Postavite oglas</li>
-                     <li class="oglasi--navMen2"><div class="saStrane" style="top: 78px !important;"></div>Pregled oglasa</li>
-			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 117px !important;"></div>Konsalting</li></a>
-			    	<a href="/onama"><li><div class="saStrane" style="top: 160px !important;"></div>O nama</li></a>
-			    	<a href="/firme"><li><div class="saStrane" style="top: 200px !important;"></div>Članice</li></a>
+                    <li class="oglasi--navMen"><div class="saStrane" style="top: 33px !important;"></div>Postavite oglas</li>
+                    <li class="oglasi--navMen2"><div class="saStrane" style="top: 75px !important;"></div>Pregled oglasa</li>
+					<a href="{% url 'dodajIzlog' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>Objavi novost</li></a>
+			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 160px !important;"></div>Konsalting</li></a>
+			    	<a href="/onama"><li><div class="saStrane" style="top: 200px !important;"></div>O nama</li></a>
+			    	<a href="/firme"><li><div class="saStrane" style="top: 240px !important;"></div>Članice</li></a>
 			   	</ul>
 			   	<ul style="position: relative;" class="oglasi--extraMen">
 			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Postavite oglas</li>
@@ -784,6 +827,12 @@ ul {list-style: none}
 <script type="text/javascript" src="../static/skripta.js"></script>
 
 <script>
+
+	$('.mobSakr2').click(function(){
+		$('.mobileBottom').css('display', 'none');
+	});
+
+
 	$( ".konsalting" ).mouseover(function() {
 		$('.konsaltingBottom').css('display', 'block');
 	}).mouseout(function() {
@@ -879,6 +928,9 @@ ul {list-style: none}
 
   	}
 </style>
+
+{% if usr == 'comp' or usr == 'comp' %}
+{% else %}
 <script type="text/javascript">
 
 	
@@ -896,3 +948,4 @@ ul {list-style: none}
 
 	modalTinyNoFooter.setContent('<div class="popup_1" style="font-family: Galano Regular; border-radius: 10px"> <p>Ukoliko se prijavite moći ćete postavljati četiri vrste oglasa:</p> <ol> <li style="font-family: Galano SemiBold">Kadrovska potražnja</li> <p>Preko ovog oglasa možete samostalno kreirati konkurs za posao. Prednost postavljanja konkursa za posao preko Žiže je ta Vas naš sistem preko traženih kompetencija automatski spaja sa potencijalnim kandidatima koji su ostavili svoj CV kod nas na stranicu. Dakle, pored onih ljudi koji su konkurisali na posao, dobićete šansu da stupite u kontakt sa ljudima koji imaju kompetencije da zadovolje Vašim zahtjevima a nisu direktno konkurisali iz nekog određenog razloga (npr. Možda su zaposleni pa ne gledaju toliko aktivno konkurse ali samim tim što su ostavili svoj CV postoji šansa da će prihvatiti bolju ponudu) na Vaš konkurs.</p> <li style="font-family: Galano SemiBold">Poslovni oglasi</li> <p>Preko ovog oglasa kompanije mogu postavljati oglase za ponudu, potražnju ili partnerstvu.</p> <p style="font-family: Galano Light">- Primjeri ponude:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Ukoliko imate polovnu proizvodnu liniju koju želite prodati jer ste nabavili drugu i bolju, objavite preko Žiže i usmjerite je direktno na djelatnost koje se tiče ta proizvodna linija, npr. Metalni ili drvni sektor. Sve članice koje su iz tog sektora prijavljene na Žiža poslovnoj platformi će dobiti tu poruku. Na taj način šaljete direktno ponudu potencijalnim kupcima iz poslovnog sektora.</span></li> <li><span style="font-family: Galano Regular">Prodajete svoje posolvne nekretnine, auta ili bilo šta, objavite na Žiža poslovnoj platformi i usmjerite direktno na djelatnost za koju je Vaša ponuda relevantna.</span></li> </ol> <p style="font-family: Galano Light">Primjeri potražnje:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Gradite zgradu, hotel ili bilo šta na određenom mjestu, opišete i objavite potražnju preko Žiža poslovne platforme te je usmjerite ka građevinskom sektoru. Sve građevinske kompanije koje su članica Žiža poslovne platforme dobiće informaciju o Vašim namjerama, te će ukoliko su zainteresovani poslati svoju ponudu. Vi dobijate mogućnost da izaberete najbojlu ponudu a građevinske kompanije dobiju informaciju o mogućnosti angažmana.</span></li> <li><span style="font-family: Galano Regular">Raspišete privatni tender kako bi došli do kompanija koje su u stanju da vrše poslove koje vi ne želite unutar Vaše kompanije. Npr. Raspišete tender za čišćenje ili za montažu vaših štandova na sajmovima itd...</span></li> </ol> <p style="font-family: Galano Light">Primjeri partnerstva:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Ukoliko dobijete šansu za posao u nekoj stranoj zemlji a nemate tehničkih ili ljudskih resursa da količinski, dovljno brzo i kvalitetno zadovoljite kupca, preko Žiža poslovne platforme možete opisati projekat i usmjeriti ga ka djelatnosti koja Vas se tiče i pronaći partnera koji je u tom periodu u mogućnosti zajedno sa Vama proizvesti ono što je potrebno da izađete na strano tržište i zadovoljite rokove, količine i kupca uopšte. Imajte na umu da uvijek ne možete računati na Vaše stalne partnere, jer niko ne garantuje da su njihovi resursi baš u tom momentu slobodni za Vaš projekat.</span></li> </ol><br> <li style="font-family: Galano SemiBold">Bankarske usluge</li> <p>Preko ovog oglasa kompanije mogu tražiti najbolje finansijske mogućnosti. Jednostavno izrazite želju da želite kredit ili lizing i Žiža poslovna platforma Vas spoji sa većinom banaka u BiH. Banke Vas kontaktiraju a Vi izaberete najbolju ponudu. Ovaj vid usluge ostaje poznat samo Vama i bankama koje su došle u kontakt sa Vama.</p> <li style="font-family: Galano SemiBold">Usluge osiguranja</li> <p>Preko ovog oglasa kompanije mogu tražiti usluge osiguranja. Žiža poslovna platforma Vas spoji sa većinom osiguravajućih kuća u BiH. Osiguranja Vas kontaktiraju i Vi izaberete najbolju ponudu. Ovaj vid uslug ostaj poznat samo Vama i osiguravajućim kućama koje su došle u kontakt sa Vama.</p> </ol> </div>');
 </script>
+{% endif %}

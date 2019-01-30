@@ -70,6 +70,8 @@
 		 .desniDio_job__naziv h4 {
 		    text-transform: uppercase;
 		}
+
+
         
     </style>
 
@@ -765,6 +767,13 @@ ul {list-style: none}
 				left: 150px;
 			}
 		}
+
+		 @media screen and (min-width: 2500px){
+  	.logotipNavbarMali{
+  		left: 500px !important;
+  	}
+  }
+
 		
 		@media only screen and (max-width: 1316px){
 			.header__navigation {
@@ -1302,7 +1311,7 @@ ul {list-style: none}
 						<div class="detalji"><p class="zanimanje"> {{ i.sub_title }} </p><p class="vrijemeObjave">{{ i.created_at|date:"d. m .Y." }}</p></div>
 						<!-- Datum ispisati u formatu DD.MM.YYYY. -->
 					</div>
-					<div  style=""> {% if i.image %}<img style="height: 100px; width: 150px;" src="{{ i.image.url }}"> {% endif %} </div>
+					<div class="oglasi__kartica--sadrzaj--slika" style="background-image: url({{ i.image.url }})"></div>
 				</div>
 			</div>
             {% endfor %}
@@ -1508,7 +1517,7 @@ ul {list-style: none}
 		}
 		.oglasi2 .oglasi__kartica--sadrzaj--slika{
 			position: static;
-			width: 150px; height: 100px; background-image: url('https://ziza.ba/media/sales_training.jpeg'); background-size: contain; box-shadow: 0px 1px 20px 0 rgba(38, 38, 38, 0.15); border-radius: 5px;
+			width: 150px; height: 100px; background-image: url('https://ziza.ba/media/sales_training.jpeg'); background-size: cover; box-shadow: 0px 1px 20px 0 rgba(38, 38, 38, 0.15); border-radius: 5px;
 		}
 		.oglasi2 .oglasi__kartica--sadrzaj{
 			align-items: center;
@@ -1521,7 +1530,7 @@ ul {list-style: none}
 			width: 600px;
 		}
 		.ponudaContainer{
-			display: flex; justify-content: center;  margin-top: 80px; align-items: center;
+			display: flex; justify-content: center;  margin-top: 80px;
 		}
 		.oglasi2 > h3{
 			margin-bottom: 50px;

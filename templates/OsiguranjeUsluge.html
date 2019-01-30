@@ -114,170 +114,38 @@
 
 
 	<style type="text/css">
-	.formaBody{
-		height: 1100px;
+			.sadrzaj h1 {
+    font-size: 2em;
+    padding-top: 39px;
+}
+
+@media only screen and (max-width: 400px){
+	.sadrzaj h3{
+	    width: 290px;
+	    margin-left: -30px;
 	}
+	.sadrzaj h1{
+	    width: 290px;
+	    margin-left: 15px;
+	}
+}
 
-	</style>
-
-		</style>
-		<style type="text/css">
-		@media screen and (max-width: 1450px){
-			.tvrtka{
-				max-width: 700px;
-			}
-			.navigacija{
-				max-width: 800px;
-			}
+@media screen and (max-width: 414px){
+	.coverSlika {
+	    height: 400px;
+	}
+	.avatarKucica{
+		margin-left: 50px;
+	}
+	.sadrzaj{
+		margin-top: 130px;
+	}
+	.formaBody{
+			height: 100%;
+			padding-bottom: 50px;
 		}
-		@media screen and (max-width: 1180px){
-			.sadrzaj{
-				width: 760px;
-				margin: 0 auto;
-			}
-			.formaBody{
-				max-width: 960px;
-			}
-			#aktivirajPregled{
-				left: 40%;
-			}
-		}
-		@media screen and (max-width: 1024px){
-			.tvrtka{
-				max-width: 550px;
-			}
-			.navigacija{
-				max-width: 650px;
-			}
-			.footer{
-				display: none;
-			}
-		}
-		@media screen and (max-width: 960px){
-			.sadrzaj{
-				width: 560px;
-				margin: 0 auto;
-			}
-			.formaBody{
-				max-width: 760px;
-			}
-			#aktivirajPregled{
-				left: 35%;
-			}
-			.lokacije{
-				flex-wrap: wrap;
-			}
-			.lokacije div{
-				width: 100% !important;
-				margin-top: 15px;
-			}
-			.lokacije div input{
-				width: 104% !important;
-			}
-			.lokacije div:nth-child(1){
-				margin-top: 0px;
-			}
-			#spremaInput{
-				width: 100% !important;
-			}
-			.formaBody{
-				height: 1130px;
-			}
-		}
-		@media screen and (max-width: 755px){
-			.sadrzaj{
-				width: 360px;
-				margin: 0 auto;
-			}
-			.formaBody{
-				max-width: 560px;
-			}
-			.kontaktiagain{
-				flex-wrap: wrap;
-			}
-			.kontaktiagain div{
-				width: 100% !important;
-			}
-			.kontaktiagain div input{
-				width: 108% !important;
-			}
-			.kontaktiagain div:nth-child(2) input{
-				width: 100% !important;
-				margin-top: 15px;
-			}
-			.lokacije div input{
-				width: 106% !important;
-			}
-			.formaBody{
-				height: 2000px;
-			}
-			#aktivirajPregled{
-				left: 30%;
-			}
-			.podaciT div:nth-child(3){
-				display: none;
-			}
-			.formaBody {
-			    height: 1400px;
-			}
-		}
-		@media screen and (max-width: 400px){
-			.formaBody{
-				border-radius: 5px;
-			}
-			.sadrzaj h1{
-				display: none;
-			}
-			.sadrzaj{
-				padding-top: 3px;
-			}
-			#postForm{
-				margin-top: 30px !important;
-			}
-			.sadrzaj{
-				width: 300px;
-				margin: 0 auto;
-			}
-			.formaBody{
-				max-width: 350px;
-			}
-			.avatarKucica{
-				margin-left: 45px;
-			}
-			.navigacija{
-				max-width: 190px;
-			}
-			.uploadStuff{
-				flex-wrap: wrap;
-				justify-content: center;
-				margin-top: 50px;
-			}
-			.formaBody{
-				height: 1930px;
-			}
-			#aktivirajPregled{
-				left: 23%;
-			}
-			.uploadStuff p{
-				margin-left: 0 !important;
-			}
-			.navigacijaFooter {
-			    margin-left: 15px;
-			}
-			.pregledTraka div:nth-child(1){
-				display: none;
-			}
-			.pregledTraka div:nth-child(2){
-				margin: 0 auto;
-			}
-			.kontaktBrojDiv{
-				margin-top: 15px;
-			}
-			.formaBody {
-			    height: 1230px;
-			}
-		}
-	</style>
+}
+	</style>	
 
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
@@ -364,7 +232,7 @@
 			    		<option value="0">Neograničeno</option>
 					</select>
 				</div>
-				<div style="margin-top: 20px; display: flex;" class="kontaktiagain">
+				<div style="margin-top: 20px; display: flex;" class="kontaktiagain multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Kontakt e-mail adresa</label><br>
 						<input type="email" value="{{ user.email }}" name="email" style="width: 100%" placeholder="npr. ime@adresa.com">
@@ -382,7 +250,7 @@
 				</div>
 
 				<div  style="margin-top: 30px;">
-					<label style="margin-bottom: 8px">Detalji oglasa</label>
+					<label style="margin-bottom: 8px" class="specLab">Detalji oglasa</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
       				<div id="editor-container"></div>

@@ -130,10 +130,20 @@
             body{
             }
         }
+        @media screen and (max-width: 503px){
+            .searchTop h1 {
+                width: 370px;
+                top: -150px;
+            }
+            .searchTop{
+                height: 600px;
+            }
+        }
+
     </style>
 
         <div class="searchTop">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" width="50px" style="position: absolute; top: 90px; right: 30px" class="burgerMenu">
+            
             <h1>ZA VAS IMAMO <u>{{ counter }}</u> PONUDA!</h1>
         </div><!-- searchTop -->
     <form id="pretraga" method="post" action="{% url 'anonimnaPretraga' id=id %}">
