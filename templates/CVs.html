@@ -464,19 +464,22 @@
 </style>
 
 
+        <form id="filtriraj" method="post" action="{% url 'CVs' %}">
+            {% csrf_token %}
+
 				<div style="margin-top: 20px;margin-bottom: 40px; display: flex;">
 					<div>
 					<label style="font-family: Galano Regular; margin-bottom: 5px"></label><br>
 					<div id="ms1" class="tag-ctn"><div id="tag-trigger-0" class="tag-trigger"><div class="tag-trigger-ico"></div></div><div class="tag-helper " style="display: block;"></div><div id="tag-sel-ctn-0" class="tag-sel-ctn"><input name="vjestine" id="tag-input-0" type="text" class="tag-empty-text" value="Počnite unositi..." style="width: 358px; font-family: Galano Regular;"></div></div>
 					</div>
-					<div style="position: relative;">
+					<div id="subm" style="position: relative;">
 						<label for="file-upload" class="custom-file-upload" style="padding: 10px 25px 10px 25px; background-color: #f89101; box-shadow: none; position: absolute; top: 33px; left: 20px">
 						    		FILTRIRAJ
                                             
 							</label>
 					</div>
                 </div>
-
+    </form>
 
             {% for u in userPs %}
 			<a href="{%  url 'profilKorisnika' id=u.userID.pk slug=u.slugifyName %}">
@@ -2044,9 +2047,15 @@
 
 
             var jsonData = [];
-            var fruits = 'Apple,Orange,Banana,Strawberry'.split(',');
-            for(var i=0;i<fruits.length;i++)
-                jsonData.push(fruits[i]);
+           // var fruits = 'Apple,Orange,Banana,Strawberry'.split(',');
+            //for(var i=0;i<fruits.length;i++)
+             //   jsonData.push(fruits[i]);
+
+             {% for c in kat %}
+
+                jsonData.push({id:{{ c.pk }},name:'{{c.name}}'});
+
+            {% endfor %}
 
             var ms1 = $('#ms1').tagSuggest({
                 data: jsonData,
@@ -2057,6 +2066,11 @@
 
 
             });
+        });
+
+        $("#subm").click(function(){
+
+           $("#filtriraj").submit();
         });
 
 </script>

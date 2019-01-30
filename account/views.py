@@ -1121,7 +1121,16 @@ def CVs(request):
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
 
-        employees = Employee.objects.all()
+        vjest = request.POST.get('vjestine', None)
+
+        if vjest is None or vjest == ' ':
+            employees = Employee.objects.all()
+        else:
+            vjest = vjest.replace('[', ' ').replace(']', ' ').split(',')
+            vjestine = UserCategories.objects.filter(categoryID__in=vjest)
+            employees = Employee.objects.filter(userID__usercategories__in=vjestine)
+
+        kat = Category.objects.filter(type=4)
 
         userPrs = UserProfile.objects.filter(userID__employee__in=employees)
 
@@ -1131,7 +1140,7 @@ def CVs(request):
         userPs = paginator.page(page)
 
         return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP,
-                                            'rng': rng, 'page': int(page)})
+                                            'rng': rng, 'page': int(page), 'kat': kat})
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
