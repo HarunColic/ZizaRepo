@@ -228,12 +228,12 @@
 		<!-- MIRSO -->
 		<div style="width: 300px; display: flex;  flex-direction: row; justify-content: space-around; align-items: center; margin-top: 50px">
 			<p style="font-family: Galano Light; margin: 0; margin-bottom: 6px; margin-right: 10px">Podijelite</p>
-			<a href="https://www.linkedin.com/company/ziza-connect-and-improve-your-business/"><img src="https://ziza.ba/static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://ziza.ba/static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://i.imgur.com/ycVn9I1.png" draggable="false" width="16px" height="16px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://i.imgur.com/RaNfutw.png" draggable="false" width="16px" height="16px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://i.imgur.com/3Ts1iHj.png" draggable="false" width="16px" height="16px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://i.imgur.com/UbKdWK3.png" draggable="false" width="16px" height="16px"></a>
+            <a class="shareBtn" data-page="ln" ><img class="shareBtn"  src="https://ziza.ba/static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
+            <a class="shareBtn" data-page="fb" ><img src="https://ziza.ba/static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
+            <a class="shareBtn" data-page="hg" ><img src="https://i.imgur.com/ycVn9I1.png" draggable="false" width="16px" height="16px"></a>
+            <a class="shareBtn" data-page="wa" ><img src="https://i.imgur.com/RaNfutw.png" draggable="false" width="16px" height="16px"></a>
+			<a class="shareBtn" data-page="vb" ><img src="https://i.imgur.com/3Ts1iHj.png" draggable="false" width="16px" height="16px"></a>
+			<a class="shareBtn" data-page="em" ><img src="https://i.imgur.com/UbKdWK3.png" draggable="false" width="16px" height="16px"></a>
 
 			
 		</div>
@@ -303,7 +303,8 @@
         $('#aplikantiForm').submit();
 
     });
-
+    let emailaddress = "{{ post.userID.email}}";
     </script>
+    <script src="{% static 'share.js' %}"> </script>
 
 </html>

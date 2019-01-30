@@ -8,7 +8,10 @@
     <meta name="author" content="META5">
 	<meta charset="utf-8">
     {% load static %}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>  <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 	<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "style-oglas.css" %}">
 	<style type="text/css">
@@ -217,12 +220,12 @@
 		<div class="detaljniOpis" style="align-items: flex-start;">
 		<div style="width: 300px; display: flex;  flex-direction: row; justify-content: space-around; align-items: center; margin-top: 50px">
 			<p style="font-family: Galano Light; margin: 0; margin-bottom: 6px; margin-right: 10px">Podijelite</p>
-			<a href="https://www.linkedin.com/company/ziza-connect-and-improve-your-business/"><img src="https://ziza.ba/static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://ziza.ba/static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://i.imgur.com/ycVn9I1.png" draggable="false" width="16px" height="16px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://i.imgur.com/RaNfutw.png" draggable="false" width="16px" height="16px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://i.imgur.com/3Ts1iHj.png" draggable="false" width="16px" height="16px"></a>
-			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="https://i.imgur.com/UbKdWK3.png" draggable="false" width="16px" height="16px"></a>
+			<a class="shareBtn" data-page="ln" ><img class="shareBtn"  src="https://ziza.ba/static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
+            <a class="shareBtn" data-page="fb" ><img src="https://ziza.ba/static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
+            <a class="shareBtn" data-page="hg" ><img src="https://i.imgur.com/ycVn9I1.png" draggable="false" width="16px" height="16px"></a>
+            <a class="shareBtn" data-page="wa" ><img src="https://i.imgur.com/RaNfutw.png" draggable="false" width="16px" height="16px"></a>
+			<a class="shareBtn" data-page="vb" ><img src="https://i.imgur.com/3Ts1iHj.png" draggable="false" width="16px" height="16px"></a>
+			<a class="shareBtn" data-page="em" ><img src="https://i.imgur.com/UbKdWK3.png" draggable="false" width="16px" height="16px"></a>
 		</div>
 	</div>
 
@@ -265,9 +268,7 @@
     {% load sweetify %}
 {% sweetify %}
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+
 <script type="text/javascript" src="{% static "skripta.js" %}"></script>
 
 <script type="text/javascript">
@@ -284,13 +285,14 @@
 
     </script>
 
+
     <script>
     $('#aplikantiImg').click(function(){
 
         $('#aplikantiForm').submit();
 
     });
-
+    let emailaddress = "{{ post.userID.email}}";
     </script>
-
+    <script src="{% static 'share.js' %}"> </script>
 </html>
