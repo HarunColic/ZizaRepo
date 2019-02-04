@@ -255,7 +255,7 @@ def register(request):
 
                         mailZaAffana.send()
 
-                        sweetify.success(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success", timer=10000)
+                        sweetify.sweetalert(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success", timer=10000)
 
                 return redirect('home')
 
@@ -322,7 +322,7 @@ def register(request):
 
                     mailZaAffana.send()
 
-                    sweetify.success(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success",timer=10000)
+                    sweetify.sweetalert(request, 'Uspješna registracija', text=' molimo verifikujte svoj mail', icon="success",timer=10000)
 
                 return redirect('home')
 
@@ -1143,6 +1143,7 @@ def CVs(request):
                                             'rng': rng, 'page': int(page), 'kat': kat})
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
 
 def pozovi(request, id, sender):
 
