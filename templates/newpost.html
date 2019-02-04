@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.css">
 	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../static/style-dodajOglas.css">
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7"></script>
 	<style type="text/css">
 	.ql-container.ql-snow{
 	height: 300px;
@@ -183,11 +183,11 @@
             <input type="hidden" name="type" value="1">
                 <div>
 					<label>Naslov oglasa</label><br>
-					<input type="text" id='naslovInput' name="naslov" placeholder="npr. Tražimo menadžera za..." style="width: 100%">
+					<input required type="text" id='naslovInput' name="naslov" placeholder="npr. Tražimo menadžera za..." style="width: 100%">
 				</div>
 				<div style="margin-top: 20px">
 					<label>Djelatnost oglasa</label><br>
-					<select name="category">
+					<select required name="category">
 						<option value="" disabled selected>Izaberi djelatnost</option>
                         {% for c in cat %}
 			    		<option value="{{ c.name }}">{{ c.name }}</option>
@@ -199,7 +199,7 @@
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Trajanje oglasa</label><br>
-						<select name="expiration" style="width: 100%">
+						<select required name="expiration" style="width: 100%">
 							<option value="" disabled selected>Izaberi trajanje</option>
 	                        <option value="7">7 dana</option>
 				    		<option value="15">15 dana</option>
@@ -210,14 +210,14 @@
 					</div>
 					<div style="width: 43.75%">
 						<label>Broj izvršitelja</label><br>
-						<input type="number" id="spremaInput" name="brojIzvr" value="" max="999" min="1" oninput="validity.valid||(value='');" style="width: 100%">
+						<input required type="number" id="spremaInput" name="brojIzvr" value="" max="999" min="1" oninput="validity.valid||(value='');" style="width: 100%">
 					</div>
 				</div>
 
 				<div style="margin-top: 20px; display: flex;" class="multipleFour">
 					<div style="width: 23%; margin-right: 25px">
 						<label>Lokacija</label><br>
-                        <select name="City" id="sjed">
+                        <select required name="City" id="sjed">
 							<option value="" disabled selected="true">Lokacija</option>
 	                        <option value='Banovići'>Banovići</option>
 							<option value='Banja Luka'>Banja Luka</option>
@@ -335,25 +335,25 @@
 					</div>
 					<div style="width: 23%; margin-right: 25px">
 						<label>Pozicija</label><br>
-						<input type="text" id='pozicijaInput' name="pozicija" placeholder="npr. kuhar" style="width: 100%">
+						<input required type="text" id='pozicijaInput' name="pozicija" placeholder="npr. kuhar" style="width: 100%">
 					</div>
 					<div style="width: 23%; margin-right: 25px">
 						<label>Min. iskustva</label><br>
-						<input type="number" id='godineInput' name="godineIskustva" min="0" max="50" laceholder="npr. 3 godine" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="width: 100%">
+						<input required type="number" id='godineInput' name="godineIskustva" min="0" max="50" laceholder="npr. 3 godine" oninput="validity.valid||(value='');" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="width: 100%">
 					</div>
 					<div style="width: 23%;">
 						<label>Stručna sprema</label><br>
-						<input type="text" id='sprema2Input' name="strucnasprema" placeholder="npr. SSS" style="width: 100%">
+						<input required type="text" id='sprema2Input' name="strucnasprema" placeholder="npr. SSS" style="width: 100%">
 					</div>
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Kontakt e-mail adresa</label><br>
-						<input type="email" value="{{ user.email }}" name="email" style="width: 100%">
+						<input required type="email" value="{{ user.email }}" name="email" style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
 						<label>Kontakt broj</label><br>
-						<input type="text" name="brojTel" value="{{ userP.brojtelefona }}" style="width: 100%">
+						<input required type="text" name="brojTel" value="{{ userP.brojtelefona }}" style="width: 100%">
 					</div>
 				</div>
 				<div  style="margin-top: 30px;">
@@ -369,7 +369,7 @@
 					<div style="display: flex; align-items: center;">
 						<div>
 							<label for="file-upload"  class="custom-file-upload">
-						    	<input id="file-upload" type="file" name="image_uploads" accept=".pdf, .doc, .docx" multiple>
+						    	<input required id="file-upload" type="file" name="image_uploads" accept=".pdf, .doc, .docx" multiple>
 						    		ODABERI
 							</label>
 						</div>

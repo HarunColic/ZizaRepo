@@ -24,7 +24,7 @@ from django.utils.crypto import get_random_string
 from django.core.urlresolvers import resolve
 from post.models import UserCategories
 from django.db.models.functions import Length
-import  os
+import os
 from threading import Thread
 from itertools import chain
 from django.core.paginator import Paginator
@@ -51,6 +51,8 @@ def validation(request, args):
 
 
 def home(request):
+
+    sweetify.error(request, title="Unesite obavezna polja", text="", icon="error", timer=10000)
 
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
@@ -147,7 +149,7 @@ def profil(request):
             izlozi = exhibPaginator.page(exhibPage)
             exRNG = range(1, exhibPaginator.num_pages +1)
 
-            return render(request, 'profilTvrtka.html',
+            return render(request, 'profil<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7"></script>.html',
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
                               , 'page': int(page), 'rng': rng, 'izlozi': izlozi, 'exhibPage': int(exhibPage), 'exRNG': exRNG
                               , 'userr': user, 'userPP': userP,

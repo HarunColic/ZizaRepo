@@ -2,7 +2,7 @@
 <html lang="ba">
 <head>
     {% if acctype == 'f' %}
-    <title>ŽIŽA.ba | Profil tvrtke</title>
+    <title>ŽIŽA.ba | Profil kompanije</title>
     {% else %}
     <title>ŽIŽA.ba | Profil korisnika</title>
     {% endif %}
@@ -291,7 +291,7 @@
 			<div class="breadcrumb">
 				<a href="{% url 'home' %}">Početna</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
-				<a href="#">Tvrtka</a>
+				<a href="#">Kompanija</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
 				<a href="#">{{ userr.first_name }}</a>
 			</div>
