@@ -7,6 +7,15 @@
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
 	<meta charset="utf-8">
+
+	<meta property="fb:app_id"        content="392299231338007" />
+	<meta property="og:url"           content="https://www.ziza.ba{{ request.path }}" />
+	<meta property="og:type" 		  content="website">
+	<meta property="og:site_name" 	  content="ZIZA">
+	<meta property="og:image"         content="https://www.ziza.ba/media/Artboard_9ziza.png" />
+	<meta property="og:description"   content="{{ izlog.sub_title }}" />
+	<meta property="og:title"         content="{{ izlog.title }}" />
+
     {% load static %}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 	<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
@@ -167,59 +176,7 @@
 		<div class="uvodniDio">
 			<div class="trazimo">
 				<h2 style="font-family: Galano Bold; text-transform: uppercase;"><span></span> {{ izlog.title }}</h2>
-				<!--<p style="display: none;" >Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
-			</div>{% if post.attachment %}
-			<a href="/download?file={{ post.attachment.name }}" ><div class="downloadPDF">
-            <img src="{% static "images/downloadikona.png" %}"> PDF OGLAS
-            </div></a>
-        {% endif %}
-		</div> -->
-
-    	<!--</div>{% if post.userID == user%}
-        <form id="aplikantiForm" method="POST" action="{% url 'aplikanti' postID=post.pk %}">
-        {% csrf_token %}
-			<a ><div id="aplikantiImg" class="downloadPDF">
-            <img src="{% static "images/downloadikona.png" %}"> Aplikanti
-            </div></a>
-        </form>
-        {% endif %}
-		</div> -->
-<!--
-
-        <div style="display: none;" class="tabelarni">
-			<div>
-				<h3 style="text-transform: uppercase;">{% if post.type == 1 %}{{ post.location}} {% else %}{{ post.region }}{% endif %}</h3>
-				<p>LOKACIJA</p>
-			</div>
-			<div class="malaLinija"></div>
-			<div>
-				<h3 style="text-transform: uppercase;">{{ post.categoryID.name }}</h3>
-				<p>DJELATNOST</p>
-			</div>
-            {% if post.type == 1 %}
-			<div class="malaLinija"></div>
-			<div>
-				<h3>{{ post.experience }}+</h3>
-				<p>GODINE ISKUSTVA</p>
-			</div>
-
-			<div class="malaLinija"></div>
-			<div>
-				<h3 id="strucnaSpremChange">{{ post.specialty }}</h3>
-				<p>STRUČNA SPREMA</p>
-			</div>
-
-        {% endif %}
-        {% if post.type == 2 and post.categoryID.name == "Osiguravajuće" or post.categoryID.name == "Finansijske"%}
-
-
-			<div class="malaLinija"></div>
-			<div>
-				<h3>{{ post.contact_phone }}</h3>
-				<p>Kontakt telefon</p>
-			</div>
-        {% endif %}
-		</div> -->
+		
 		<div class="detaljniOpis">
 
             {{ izlog.details|safe }}
@@ -228,43 +185,15 @@
 		<!-- MIRSO -->
 		<div style="width: 300px; display: flex;  flex-direction: row; justify-content: space-around; align-items: center; margin-top: 50px">
 			<p style="font-family: Galano Light; margin: 0; margin-bottom: 6px; margin-right: 10px">Podijelite</p>
-            <a class="shareBtn" data-page="ln" ><img class="shareBtn"  src="https://ziza.ba/static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
-            <a class="shareBtn" data-page="fb" ><img src="https://ziza.ba/static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
-            <a class="shareBtn" data-page="hg" ><img src="https://i.imgur.com/ycVn9I1.png" draggable="false" width="16px" height="16px"></a>
-            <a class="shareBtn" data-page="wa" ><img src="https://i.imgur.com/RaNfutw.png" draggable="false" width="16px" height="16px"></a>
-			<a class="shareBtn" data-page="vb" ><img src="https://i.imgur.com/3Ts1iHj.png" draggable="false" width="16px" height="16px"></a>
-			<a class="shareBtn" data-page="em" ><img src="https://i.imgur.com/UbKdWK3.png" draggable="false" width="16px" height="16px"></a>
+			<button style="background:none;border:none;" class="shareBtn" data-page="ln" ><img class="shareBtn"  src="https://ziza.ba/static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></button>
+            <button style="background:none;border:none;" class="shareBtn" data-page="fb" ><img src="https://ziza.ba/static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></button>
+            <button style="background:none;border:none;" class="shareBtn" data-page="hg" ><img src="https://i.imgur.com/ycVn9I1.png" draggable="false" width="16px" height="16px"></button>
+            <button style="background:none;border:none;" class="shareBtn" data-page="wa" ><img src="https://i.imgur.com/RaNfutw.png" draggable="false" width="16px" height="16px"></button>
+			<button style="background:none;border:none;" class="shareBtn" data-page="vb" ><img src="https://i.imgur.com/3Ts1iHj.png" draggable="false" width="16px" height="16px"></button>
+			<button style="background:none;border:none;" class="shareBtn" data-page="em" ><img src="https://i.imgur.com/UbKdWK3.png" draggable="false" width="16px" height="16px"></button>
 
-			
 		</div>
-		<!--<div style="display: none;" class="navigacijaFooter">
-			<div class="prevTraka">
-                    {% if prevPost %}
 
-				<img onclick="location.href='{% url 'showpost' id=prevPost.userID.first_name slug=prevPost.url %}'" src="{% static "images/lijevoOglas.png" %}" style="cursor: pointer;" class="lijevoEd">
-				<div>
-					<span>PRIJAŠNJI OGLAS</span>
-					<span>{{ prevPost.userID.first_name }}</span>
-				</div>
-                                    {% endif %}
-
-
-			</div>
-
-            <div class="prevTraka" style="justify-content: flex-end;">
-                                    {% if nextPost %}
-
-				<div style="margin-left: 0">
-					<span>SLJEDEĆI OGLAS</span>
-
-					<span style="color: #f89101; text-align: right;">{{ nextPost.userID.first_name }}</span>
-				</div>
-
-				<img onclick="location.href='{% url 'showpost' id=nextPost.userID.first_name slug=nextPost.url %}'"  src="{% static "images/desnoOglas.png" %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
-                    {% endif %}
-
-			</div>
-		</div> -->
 
 	</div>
 
@@ -298,11 +227,7 @@
     </script>
 
     <script>
-    $('#aplikantiImg').click(function(){
-
-        $('#aplikantiForm').submit();
-
-    });
+   
     let emailaddress = "{{ post.userID.email}}";
     </script>
     <script src="{% static 'share.js' %}"> </script>
