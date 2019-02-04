@@ -185,16 +185,16 @@ def createpost(request):
 
 def showpost(request, id, slug):
 
-    if request.user.is_authenticated:
+    # if request.user.is_authenticated:
 
-        userP = UserProfile.objects.get(userID=request.user)
+    #     userP = UserProfile.objects.get(userID=request.user)
 
-        if not userP.editovanProfil:
-            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
-            return redirect('editprofil')
+    #     if not userP.editovanProfil:
+    #         sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+    #         return redirect('editprofil')
 
-    else:
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    # else:
+    #     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
     post = Post.objects.get(url=slug)
     userPP = UserProfile.objects.get(userID=post.userID)
@@ -618,19 +618,21 @@ def createExhibition(request):
 def izlog(request, id, slug):
 
     if request.user.is_authenticated:
-
         userP = UserProfile.objects.get(userID=request.user)
         user = request.user
-
+        auth = True
         if not userP.editovanProfil:
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
+    else:
+        userP = None
+        auth = False
+        user = None
 
-        elements = slug.split('-')
-        pKey = elements[elements.__len__() -1]
+    elements = slug.split('-')
+    pKey = elements[elements.__len__() -1]
 
-        izlog = Exhibition.objects.get(pk=pKey)
+    izlog = Exhibition.objects.get(pk=pKey)
 
-        return render(request, 'Izlog.html', {'user': user, 'userP': userP, 'auth': True, 'izlog': izlog})
+    return render(request, 'Izlog.html', {'user': user, 'userP': userP, 'auth': auth, 'izlog': izlog})
 
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

@@ -2,12 +2,28 @@
 <html lang="ba">
 <head>
 	<title>ŽIŽA.ba | Oglas</title>
+	<meta property="fb:app_id"        content="392299231338007" />
+	<meta property="og:url"           content="https://www.ziza.ba{{ request.path }}" />
+	<meta property="og:type" 		  content="website">
+	<meta property="og:site_name" 	  content="ZIZA">
+	<meta property="og:image"         content="https://www.ziza.ba/media/Artboard_9ziza.png" />
+	<meta property="og:description"   content="Konkurs za posao" />
+	{% if post.type == 2 %} 	
+	<meta property="og:title"         content="{{ post.title }}" />
+	{% else %}
+	<meta property="og:title"         content="{{ post.position }}" />
+	{% endif %}
+
+
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
 	<meta charset="utf-8">
     {% load static %}
+
+  
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -86,6 +102,15 @@
 	</style>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/bs_BA/sdk.js#xfbml=1&autoLogAppEvents=1&version=v3.2&appId=392299231338007';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
     {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
 	 {% include 'header.html' %}
 {% endwith %}
@@ -220,16 +245,16 @@
 		<div class="detaljniOpis" style="align-items: flex-start;">
 		<div style="width: 300px; display: flex;  flex-direction: row; justify-content: space-around; align-items: center; margin-top: 50px">
 			<p style="font-family: Galano Light; margin: 0; margin-bottom: 6px; margin-right: 10px">Podijelite</p>
-			<a class="shareBtn" data-page="ln" ><img class="shareBtn"  src="https://ziza.ba/static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
-            <a class="shareBtn" data-page="fb" ><img src="https://ziza.ba/static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
-            <a class="shareBtn" data-page="hg" ><img src="https://i.imgur.com/ycVn9I1.png" draggable="false" width="16px" height="16px"></a>
-            <a class="shareBtn" data-page="wa" ><img src="https://i.imgur.com/RaNfutw.png" draggable="false" width="16px" height="16px"></a>
-			<a class="shareBtn" data-page="vb" ><img src="https://i.imgur.com/3Ts1iHj.png" draggable="false" width="16px" height="16px"></a>
-			<a class="shareBtn" data-page="em" ><img src="https://i.imgur.com/UbKdWK3.png" draggable="false" width="16px" height="16px"></a>
+			<button style="background:none;border:none;" class="shareBtn" data-page="ln" ><img class="shareBtn"  src="https://ziza.ba/static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></button>
+            <button style="background:none;border:none;" class="shareBtn" data-page="fb" ><img src="https://ziza.ba/static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></button>
+            <button style="background:none;border:none;" class="shareBtn" data-page="hg" ><img src="https://i.imgur.com/ycVn9I1.png" draggable="false" width="16px" height="16px"></button>
+            <button style="background:none;border:none;" class="shareBtn" data-page="wa" ><img src="https://i.imgur.com/RaNfutw.png" draggable="false" width="16px" height="16px"></button>
+			<button style="background:none;border:none;" class="shareBtn" data-page="vb" ><img src="https://i.imgur.com/3Ts1iHj.png" draggable="false" width="16px" height="16px"></button>
+			<button style="background:none;border:none;" class="shareBtn" data-page="em" ><img src="https://i.imgur.com/UbKdWK3.png" draggable="false" width="16px" height="16px"></button>
 		</div>
 	</div>
-
-		<div class="navigacijaFooter">
+	<div class="navigacijaFooter">
+			{% if auth %}
 			<div class="prevTraka">
                     {% if prevPost %}
 
@@ -258,6 +283,7 @@
                     {% endif %}
 
 			</div>
+			{% endif %}
 		</div>
 	</div>
 
@@ -293,6 +319,7 @@
 
     });
     let emailaddress = "{{ post.userID.email}}";
-    </script>
+	</script>
+
     <script src="{% static 'share.js' %}"> </script>
 </html>

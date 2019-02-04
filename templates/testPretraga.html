@@ -184,7 +184,11 @@
     {% endif %}
      {% if data|length >= 1 %}
      {% with obj=data.pop %}
-           <a href="{% url 'showpost' id=obj.slugifyName slug=obj.url %}">
+        {% if auth %}
+            <a href="{% url 'showpost' id=obj.userID.first_name slug=obj.url %}">
+        {% else %}
+            <a class="tLog">
+        {% endif %}
             <div class="kolona firstKol">
                 <div class="single-kucica" style="margin-top: -87px">
 
@@ -219,7 +223,11 @@
 
      {% if data|length >= 2 %}
       {% with obj=data.pop %}
-          <a href="{% url 'showpost' id=obj.slugifyName slug=obj.url %}">
+        {% if auth %}
+            <a href="{% url 'showpost' id=obj.userID.first_name slug=obj.url %}">
+        {% else %}
+            <a class="tLog">
+        {% endif %}
         <div class="kolona srednjaKol">
             <div class="single-kucica" style="margin-top: -87px">
                     {% for u in users %}
@@ -263,7 +271,11 @@
 
      {% if data|length >= 1 %}
         {% with obj=data.pop %}
-        <a href="{% url 'showpost' id=obj.slugifyName slug=obj.url %}">
+        {% if auth %}
+        <a href="{% url 'showpost' id=obj.userID.first_name slug=obj.url %}">
+    {% else %}
+        <a class="tLog">
+    {% endif %}
         <div class="kolona respKol">
             <div class="single-kucica" style="margin-top: -87px">
                         {% for u in users %}
