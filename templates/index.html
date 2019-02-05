@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="ba">
+{% load static %}
 <head>
-    <title>ŽIŽA.ba | Naslovnica</title>
+	<title>ŽIŽA.ba | Naslovnica</title>
 
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7"></script>
-
-    {% load static %}
-
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <style>
 
@@ -47,7 +45,7 @@
         .zadnjiPoslovi__popularno--dots{
         	padding-left: 40px;
         }
-
+        
         @media screen and (max-width: 410px){
         	.header{
         		display: none;
@@ -74,7 +72,7 @@
 		}
 
 
-
+        
     </style>
 
 <script
@@ -441,7 +439,7 @@ ul {list-style: none}
 					.owl-theme .owl-controls{
 						margin-left: -50px;
 					}
-				}
+				}	
 
 			</style>
 
@@ -776,7 +774,7 @@ ul {list-style: none}
   	}
   }
 
-
+		
 		@media only screen and (max-width: 1316px){
 			.header__navigation {
 				border-bottom-left-radius: 0px;
@@ -845,7 +843,7 @@ ul {list-style: none}
      {% else %}
 	<div class="uvod">
 		<div class="uvod__linkovi">
-
+			
 			<a href="https://www.linkedin.com/company/ziza-connect-and-improve-your-business/"><img src="../static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
 			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="../static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
 			<p>Pratite nas</p>
@@ -875,7 +873,7 @@ ul {list-style: none}
 			<div class="uvod__slike--pcelaRegistracija openB2B"></div>
 			<div class="uvod__slike--baloncic openB2B">
 				<p class="animirajKucanje"></p>
-			</div>
+			</div>	
 			<div class="uvod__slike--baloncic openB2C" style="right: 230px; background-image: url({% static 'images/baloncic2.png' %}); bottom:520px; z-index: 1; width: 299px; height: 235px">
 				<p style="margin-right: -10px; margin-bottom: 80px; text-align: center;" class="animirajKucanje2"></p>
 			</div>
@@ -974,6 +972,8 @@ ul {list-style: none}
 				margin-bottom: 50px;
 			}
 
+
+
 		</style>
 		{% endif %}
 	<div class="zadnjiPoslovi__popularno konkursiRes">
@@ -992,6 +992,7 @@ ul {list-style: none}
 				<div class="zadnjiPoslovi__last--navigator--left"></div>
 				<div class="zadnjiPoslovi__last--navigator--right"></div>
 			</div>
+			
 			<div class="zadnjiPoslovi__last--timeline" id="b2c">
                 {% for p in postsbc %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
@@ -1009,7 +1010,7 @@ ul {list-style: none}
 			</div> <!-- zadnjiPoslovi__last--timeline -->
                    <div class="zadnjiPoslovi__last--timeline hidden" id="b2b">
             {% for p in postbb %}
-                <div class="zadnjiPoslovi__last--timeline--stavka">
+                <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
@@ -1054,39 +1055,6 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
 					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
-						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
-						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
-					</div>
-				</div>
-				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-					</div>
-					<div class="desniDio_job">
-						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
-						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
-					</div>
-				</div>
-				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-					</div>
-					<div class="desniDio_job">
-						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
-						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
-					</div>
-				</div>
-				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-					</div>
-					<div class="desniDio_job">
 						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
 					</div>
@@ -1142,7 +1110,7 @@ ul {list-style: none}
 				</div>
                 {% endfor %}
 			</div> <!-- zadnjiPoslovi__last--timeline -->
-                   <div class="zadnjiPoslovi__last--timeline" id="b2b_2">
+                   <div class="zadnjiPoslovi__last--timeline" id="b2b">
             {% for p in postbb %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
@@ -1168,7 +1136,12 @@ ul {list-style: none}
 				<div class="zadnjiPoslovi__last--navigator--left"></div>
 				<div class="zadnjiPoslovi__last--navigator--right"></div>
 			</div>
-			<div class="zadnjiPoslovi__last--timeline" id="b2c">
+			<style type="text/css">
+				.heightRe{
+				height: 750px;
+			}
+			</style>
+			<div class="zadnjiPoslovi__last--timeline heightRe" id="b2c">
                 {% for p in postsbc %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
@@ -1183,7 +1156,7 @@ ul {list-style: none}
 				</div>
                 {% endfor %}
 			</div> <!-- zadnjiPoslovi__last--timeline -->
-                   <div class="zadnjiPoslovi__last--timeline hidden" id="b2b">
+                   <div class="zadnjiPoslovi__last--timeline hidden heightRe" id="b2b">
             {% for p in postbb %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
@@ -1192,39 +1165,6 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
 					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
-						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
-						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
-					</div>
-				</div>
-				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-					</div>
-					<div class="desniDio_job">
-						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
-						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
-					</div>
-				</div>
-				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-					</div>
-					<div class="desniDio_job">
-						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
-						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
-					</div>
-				</div>
-				<div class="zadnjiPoslovi__last--timeline--stavka " style="visibility: hidden;">
-					<div class="lijeviDio_time">
-						<div class="lijeviDio_time__linija"></div>
-						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
-						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
-					</div>
-					<div class="desniDio_job">
 						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
 					</div>
@@ -1440,7 +1380,7 @@ ul {list-style: none}
 	.imeKompanijeIzlog{
 		position: absolute; top: 13px; left: 70px; font-weight: bold; font-family: Galano Black; text-transform: uppercase;
 	}
-	.oglasi2 .oglasi__kartica--sadrzaj h3{
+	.oglasi2 .oglasi__kartica--sadrzaj h3{	
 	}
 		.oglasi2 .oglasi__kartica--sadrzaj{
 			margin-left: 40px;
@@ -1705,24 +1645,17 @@ ul {list-style: none}
           {% with auth=auth %}
 			{% include 'footer.html' %}
             {% endwith %}
-
-
-
- {% load sweetify %}
-    {% sweetify %}
-
 </body>
 <script type="text/javascript" src="../static/skripta.js"></script>
 <script type="text/javascript" src="../static/skripta.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script type="text/javascript" src="https://airbnb.io/infinity/build/infinity.min.js"></script>
 
-
 {% if auth %}
 <script>
 	var $el = $('.oglasi');
 	var listView = new infinity.ListView($el);
-
+	 
 	var $newContent = $('{% for p in sviOglasi %} <div class="oglasi__kartica" onclick="location.href=\'{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}\'" style="cursor: pointer;"> <div class="selectUp"></div> <div class="oglasi__kartica--sadrzaj"> <div class="oglasi__kartica--sadrzaj--tekst"> <div><h3>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h3></div> <div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }}, {{ p.region }}</span></p></div> </div> <div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="height: auto; max-width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div> </div> </div> {% endfor %}');
 	listView.append($newContent);
 </script>
@@ -1937,6 +1870,7 @@ setInterval(function(){
 		});
 	}, 5000);
 }, 6000);
+
 </script>
 </html>
 

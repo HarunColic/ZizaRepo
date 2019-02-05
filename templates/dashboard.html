@@ -1240,7 +1240,7 @@
 	}
        	</style>
 
-		<h1><span>PRILIKE</span></h1>
+		<h1 style="margin-left: 50px; margin-bottom: 0"><span>PRILIKE</span></h1>
 		<h2>Najpopularniji oglasi iz Vaše branše.</h2>
 		<div class="main__filteri">
 			<div id="ponuda" activeCbx="false" class="inactive ponuda" style="margin-right: 36px">
@@ -1258,8 +1258,9 @@
 		</div>
 
 
+	{% if relevantPosts.count > 1 %}
 		<div class="main__oglasi--oglasi main__oglasi--oglasi2" id="preporuke">
-       	{% if relevantPosts.count > 1 %}
+       
 
                                             {% for p in relevantPosts %}
 
@@ -1319,44 +1320,10 @@
 				</div>
             {% endif %}
            {% endfor %}
-            {% endif %}
+           
 
             </div>
-        <!--
-
-
-				<div class="potraznjaBox">
-					<div>
-						<div>
-							Ovlašteni inženjer građevine
-						</div>
-						<div>
-							<div class="imeStruke">GRAĐEVINA</div>
-							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
-						</div>
-					</div>
-					<div style="left: 811px; display: block;">
-						<img class="slGab" src="https://i.imgur.com/vUXO3Xr.png">
-					</div>
-					<div>
-					</div>
-				</div>
-				<div class="suradnjaBox">
-					<div>
-						<div>
-							Ovlašteni inženjer građevine
-						</div>
-						<div>
-							<div class="imeStruke">GRAĐEVINA</div>
-							<div>Prije 6h <span>Mostar, Bosna i Hercegovina</span></div>
-						</div>
-					</div>
-					<div style="left: 811px; display: block;">
-						<img class="slGab" src="https://i.imgur.com/vUXO3Xr.png">
-					</div>
-					<div>
-					</div>
-				</div>-->
+             {% endif %}
 {% if relevantPosts.paginator.count > 1 %}
 		<div class="bg_end">
 			<span>Želite li vidjeti još oglasa?</span>
@@ -1366,7 +1333,7 @@
     	<div class="bg_end">
 			<span>Trenutno nema oglasa iz Vaše branše!</span>
 		</div>
-
+		<button style="cursor: pointer" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'" id="aktivirajPregled">OGLASI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
         {% endif %}
             </div>
 
