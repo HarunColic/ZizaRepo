@@ -149,7 +149,7 @@ def profil(request):
             izlozi = exhibPaginator.page(exhibPage)
             exRNG = range(1, exhibPaginator.num_pages +1)
 
-            return render(request, 'profil<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7"></script>.html',
+            return render(request, 'profilTvrtka.html',
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
                               , 'page': int(page), 'rng': rng, 'izlozi': izlozi, 'exhibPage': int(exhibPage), 'exRNG': exRNG
                               , 'userr': user, 'userPP': userP,
