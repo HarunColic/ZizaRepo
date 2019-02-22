@@ -1263,7 +1263,7 @@ ul {list-style: none}
 		<div class="oglasi2" style="margin-right: 50px;">
 			<h3 style="font-family: Galano Black; font-size: 30px">NOVOSTI</h3>
             {% for i in izlozi %}
-			<div  onclick="location.href='{% url 'izlog' id=i.userID.first_name slug=i.slug %}'" class="oglasi__kartica">
+			<div  onclick="location.href='{% url 'izlog' id=i.userID.userprofile.slugifyName slug=i.slug %}'" class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
 						<div>

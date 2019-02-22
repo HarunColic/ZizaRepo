@@ -480,7 +480,7 @@
 			
             {% for i in izlozi %}
 
-                <a href={% url 'izlog' id='firma' slug=i.slug %}>
+                <a href={% url 'izlog' id=i.userID.userprofile.slugifyName slug=i.slug %}>
 
             <div class="tabelaRasa tabelaRasa2 izlogContent izlogContentTable">
 				<div>
