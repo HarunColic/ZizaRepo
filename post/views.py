@@ -100,9 +100,9 @@ def createpost(request):
             post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis)
 
             if expiration is not '0':
-                post.expires_at = datetime.now()+timedelta(days=int(expiration))
+                post.expires_at = datetime.now() + timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.max
+                post.expires_at = datetime.now() + timedelta(days=365*200)
 
 
                 #post.expires_at = datetime.now()+timedelta(years=999)
@@ -464,10 +464,10 @@ def updatePost(request, id):
             post.contact_phone= brojTel
             post.content=opis
 
-            if trajanje is not '0':
-                post.expires_at = datetime.now() + timedelta(days=int(trajanje))
+            if expiration is not '0':
+                post.expires_at = datetime.now() + timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.max
+                post.expires_at = datetime.now() + timedelta(days=365*200)
 
             post.save()
 

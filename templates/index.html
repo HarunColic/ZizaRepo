@@ -71,6 +71,24 @@
 		    text-transform: uppercase;
 		}
 
+		.zadnjiPoslovi__last--navigator--left{
+				width: 290px;
+			}
+			.zadnjiPoslovi__last--navigator--right{
+				width: 530px;
+			}
+
+			@keyframes prebaciDesno{
+				0% {
+				    margin-left: 140px;
+				}
+
+				100% {
+				    margin-left: 435px;
+				    width: 240px;
+				}
+			}
+
 
         
     </style>
@@ -440,6 +458,8 @@ ul {list-style: none}
 						margin-left: -50px;
 					}
 				}	
+
+
 
 			</style>
 
@@ -974,6 +994,9 @@ ul {list-style: none}
 
 
 
+
+
+
 		</style>
 		{% endif %}
 	<div class="zadnjiPoslovi__popularno konkursiRes">
@@ -985,8 +1008,8 @@ ul {list-style: none}
 			 {% if auth %}
 			 <div class="zadnjiPoslovi__last show2000">
 			<div class="zadnjiPoslovi__last--kategorije">
-				<h3 id="posaoButton">POSAO</h3>
-				<h3 id="biznisButton">BIZNIS</h3>
+				<h3 id="posaoButton">KONKURSI</h3>
+				<h3 id="biznisButton">PONUDE</h3>
 			</div>
 			<div class="zadnjiPoslovi__last--navigator">
 				<div class="zadnjiPoslovi__last--navigator--left"></div>
@@ -1001,7 +1024,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" style="cursor: pointer;">
 						<div class="desniDio_job__naziv"><h4>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
 					</div>
@@ -1016,7 +1039,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" >
 						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
 					</div>
@@ -1039,7 +1062,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" style="cursor: pointer;">
 						<div class="desniDio_job__naziv"><h4>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
 					</div>
@@ -1054,7 +1077,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" >
 						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
 					</div>
@@ -1103,7 +1126,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" style="cursor: pointer;">
 						<div class="desniDio_job__naziv"><h4>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
 					</div>
@@ -1118,7 +1141,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" >
 						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
 					</div>
@@ -1129,8 +1152,8 @@ ul {list-style: none}
 		{% else %}
 		<div class="zadnjiPoslovi__last">
 			<div class="zadnjiPoslovi__last--kategorije">
-				<h3 id="posaoButton">POSAO</h3>
-				<h3 id="biznisButton">BIZNIS</h3>
+				<h3 id="posaoButton">KONKURSI</h3>
+				<h3 id="biznisButton">PONUDE</h3>
 			</div>
 			<div class="zadnjiPoslovi__last--navigator">
 				<div class="zadnjiPoslovi__last--navigator--left"></div>
@@ -1149,7 +1172,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" style="cursor: pointer;">
 						<div class="desniDio_job__naziv"><h4>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.location }} {{ p.region }}</h5></div>
 					</div>
@@ -1164,7 +1187,7 @@ ul {list-style: none}
 						<div class="lijeviDio_time__minuta"><h4 class="lijeviDio_time__minuta--broj">{{p.dateDiff}}</h4></div>
 						<div class="lijeviDio_time__minuta"><h5 class="lijeviDio_time__minuta--tekst">min</h5></div>
 					</div>
-					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" >
+					<div class="desniDio_job" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" >
 						<div class="desniDio_job__naziv"><h4>{{ p.categoryID.name }}</h4></div>
 						<div class="desniDio_job__opis"><h5>{{ p.title }}</h5></div>
 					</div>
@@ -1202,7 +1225,7 @@ ul {list-style: none}
         {% for p in sviOglasi%}
 
                 {% if p.type == 2 %}
-		<div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+		<div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" style="cursor: pointer;">
 			<div class="selectUp"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
@@ -1214,7 +1237,7 @@ ul {list-style: none}
 		</div>
             {% else %}
                 {% if usr == 'wrkr' %}
-                <div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" style="cursor: pointer;">
+                <div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" style="cursor: pointer;">
 			<div class="selectUp"></div>
 			<div class="oglasi__kartica--sadrzaj">
 				<div class="oglasi__kartica--sadrzaj--tekst">
@@ -1297,7 +1320,7 @@ ul {list-style: none}
         {% if auth and usr == "comp" %}
             <h3 style="font-family: Galano Black; font-size: 30px">POSLOVNE PONUDE</h3>
             {% for p in postbb %}
-			<div onclick="location.href='{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}'" class="oglasi__kartica">
+			<div onclick="location.href='{% url 'showpost' id='firma' slug=p.generateSlug %}'" class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
 					<div class="oglasi__kartica--sadrzaj--tekst">
 						<div><h3>{{ p.title }}</h3></div>
@@ -1656,7 +1679,7 @@ ul {list-style: none}
 	var $el = $('.oglasi');
 	var listView = new infinity.ListView($el);
 	 
-	var $newContent = $('{% for p in sviOglasi %} <div class="oglasi__kartica" onclick="location.href=\'{% url 'showpost' id=p.userID.first_name slug=p.generateSlug %}\'" style="cursor: pointer;"> <div class="selectUp"></div> <div class="oglasi__kartica--sadrzaj"> <div class="oglasi__kartica--sadrzaj--tekst"> <div><h3>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h3></div> <div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }}, {{ p.region }}</span></p></div> </div> <div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="height: auto; max-width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div> </div> </div> {% endfor %}');
+	var $newContent = $('{% for p in sviOglasi %} <div class="oglasi__kartica" onclick="location.href=\'{% url 'showpost' id='firma' slug=p.generateSlug %}\'" style="cursor: pointer;"> <div class="selectUp"></div> <div class="oglasi__kartica--sadrzaj"> <div class="oglasi__kartica--sadrzaj--tekst"> <div><h3>{% if p.type == 2 %}{{ p.title }}{% else %}{{ p.position }}{% endif %}</h3></div> <div class="detalji"><p class="zanimanje">{{ p.categoryID.name }}</p><p class="vrijemeObjave">{{ p.created_at.date|date:"d. m. Y." }} <span>{{ p.location }}, {{ p.region }}</span></p></div> </div> <div class="oglasi__kartica--sadrzaj--slika">{% if p.userID.userprofile.image %}<img style="height: auto; max-width: 80px;" src="{{ p.userID.userprofile.image.url }}">{% endif %}</div> </div> </div> {% endfor %}');
 	listView.append($newContent);
 </script>
 {% endif %}
@@ -1841,7 +1864,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').addClass('active');
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "{% url 'showpost' id=oglas1.userID.first_name slug=oglas1.generateSlug %}";
+			location.href = "{% url 'showpost' id='firma' slug=oglas1.generateSlug %}";
 		});
 }, 1000);
 
@@ -1853,7 +1876,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(3)').removeClass('active');
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(1)').addClass('active');
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "{% url 'showpost' id=oglas2.userID.first_name slug=oglas2.generateSlug %}";
+			location.href = "{% url 'showpost' id='firma' slug=oglas2.generateSlug %}";
 		});
 	}, 3000);
 
@@ -1866,7 +1889,7 @@ setInterval(function(){
 		$('.zadnjiPoslovi__popularno--dots div:nth-child(2)').addClass('active');
 		// document.getElementById("biz").style.animation = "slikaChange 0.7s ease-out 0s 1 normal forwards running";
 		$('#traziSe, .zadnjiPoslovi__popularno--slajder__sac').click(function(){
-			location.href = "{% url 'showpost' id=oglas3.userID.first_name slug=oglas3.generateSlug %}";
+			location.href = "{% url 'showpost' id='firma' slug=oglas3.generateSlug %}";
 		});
 	}, 5000);
 }, 6000);

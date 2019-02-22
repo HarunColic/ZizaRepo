@@ -386,7 +386,7 @@
 
             {% for p in posts %}
 
-                <a href={% url 'showpost' id=p.userID.first_name slug=p.url %}>
+                <a href={% url 'showpost' id='firma' slug=p.url %}>
             <div class="tabelaRasa oNamaContent oNamaContentTable">
 				<div>
 					<div>
@@ -480,7 +480,7 @@
 			
             {% for i in izlozi %}
 
-                <a href={% url 'izlog' id=i.userID.first_name slug=i.slug %}>
+                <a href={% url 'izlog' id='firma' slug=i.slug %}>
 
             <div class="tabelaRasa tabelaRasa2 izlogContent izlogContentTable">
 				<div>

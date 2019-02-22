@@ -2,7 +2,7 @@ $(document).ready(()=>{
     $(".shareBtn").click((e)=>{
         e.preventDefault();
         let dataPage = e.target.getAttribute('data-page');
-        let dataHref = e.target.getAttribute('data-href');
+        let dataHref ='';
         if(!dataHref)
             dataHref = window.location.href;
         //facebook
@@ -10,8 +10,6 @@ $(document).ready(()=>{
             let shareurl = "https://www.facebook.com/sharer/sharer.php?app_id=392299231338007&sdk=joey&u="+ encodeURIComponent(dataHref) +"&display=popup&ref=plugin&src=share_button";
             return !window.open(shareurl, 'Facebook', 'width=640,height=580');
         }
-        //instagram - ne dozvoljava ig
-        // else if(dataPage == 'ig'){}
         //whatsapp
         else if(dataPage == 'wa'){
             location.href = 'whatsapp://send?text='+dataHref;
@@ -19,7 +17,7 @@ $(document).ready(()=>{
         //linkedin
         else if(dataPage == 'ln'){
             let shareurl = "https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(dataHref)+"&summary=&source=ZIZA.ba";
-            !window.open(shareurl, 'Facebook', 'width=640,height=580');
+            !window.open(shareurl, 'LinkedIn', 'width=640,height=580');
         }
         //viber
         else if(dataPage == 'vb'){
@@ -27,7 +25,7 @@ $(document).ready(()=>{
         }
         //hangouts
         else if(dataPage == 'hg'){
-            locaiton.href = "https://plus.google.com/share?url="+dataHref;
+            location.href = "https://plus.google.com/share?url="+dataHref;
         }
         //email
         else if(dataPage == 'em'){
