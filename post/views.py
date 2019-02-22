@@ -102,7 +102,7 @@ def createpost(request):
             if expiration is not '0':
                 post.expires_at = datetime.now() + timedelta(days=int(expiration))
             else:
-                post.expires_at = datetime.now() + timedelta(days=365*200)
+                post.expires_at = datetime.now() + timedelta(days=365*100)
 
 
                 #post.expires_at = datetime.now()+timedelta(years=999)

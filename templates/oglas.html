@@ -155,7 +155,7 @@
 		<div class="navigacija">
 			<div class="breadcrumb">
 				<a href="{% url 'home' %}">Početna</a>
-				<img src="{% static "images/arrowDesnoZuto.png" %}">
+				<img src="{% static 'images/arrowDesnoZuto.png' %}">
 				<a href="#">Oglasi</a>
 				<img src="{% static "images/arrowDesnoZuto.png" %}">
 				<a href="#">Industrija</a>
@@ -253,7 +253,7 @@
 			<div class="prevTraka">
                     {% if prevPost %}
 
-				<img onclick="location.href='{% url 'showpost' id='firma' slug=prevPost.url %}'" src="{% static "images/lijevoOglas.png" %}" style="cursor: pointer;" class="lijevoEd">
+				<img onclick="location.href='{% url 'showpost' id=prevPost.userID.userprofile.slugifyName slug=prevPost.url %}'" src="{% static "images/lijevoOglas.png" %}" style="cursor: pointer;" class="lijevoEd">
 				<div>
 					<span>PRIJAŠNJI OGLAS</span>
 					<span>{{ prevPost.userID.first_name }}</span>
@@ -274,7 +274,7 @@
 					<span style="color: #f89101; text-align: right;">{{ nextPost.userID.first_name }}</span>
 				</div>
 
-				<img onclick="location.href='{% url 'showpost' id='firma' slug=nextPost.url %}'"  src="{% static "images/desnoOglas.png" %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
+				<img onclick="location.href='{% url 'showpost' id=nextPost.userID.userprofile.slugifyName slug=nextPost.url %}'"  src="{% static "images/desnoOglas.png" %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
                     {% endif %}
 
 			</div>

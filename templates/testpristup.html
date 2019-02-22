@@ -160,7 +160,7 @@
         {% for d in data %}
 
                 {% if forloop.counter == 0 or forloop.counter0|divisibleby:3 %}
-                    <a href={% url 'showpost' id=p.userID.first_name slug=p.url %}>
+                    <a href={% url 'showpost' id=p.userID.userprofile.slugifyName slug=p.url %}>
 
 
                 <div class="single-kucica">

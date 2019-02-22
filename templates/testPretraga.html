@@ -185,7 +185,7 @@
      {% if data|length >= 1 %}
      {% with obj=data.pop %}
         {% if auth %}
-            <a href="{% url 'showpost' id='firma'  slug=obj.url %}">
+            <a href="{% url 'showpost' id=obj.userID.userprofile.slugifyName slug=obj.url %}">
         {% else %}
             <a class="tLog">
         {% endif %}
@@ -224,7 +224,7 @@
      {% if data|length >= 2 %}
       {% with obj=data.pop %}
         {% if auth %}
-            <a href="{% url 'showpost' id='firma'  slug=obj.url %}">
+            <a href="{% url 'showpost' id=obj.userID.userprofile.slugifyName  slug=obj.url %}">
         {% else %}
             <a class="tLog">
         {% endif %}
@@ -272,7 +272,7 @@
      {% if data|length >= 1 %}
         {% with obj=data.pop %}
         {% if auth %}
-        <a href="{% url 'showpost' id='firma'  slug=obj.url %}">
+        <a href="{% url 'showpost' id=obj.userID.userprofile.slugifyName  slug=obj.url %}">
     {% else %}
         <a class="tLog">
     {% endif %}
