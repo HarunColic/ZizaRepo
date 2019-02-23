@@ -834,6 +834,9 @@ def anonimnaPretraga(request, id):
             postovi = postovi.filter(Q(title__icontains=kljucnaRijec) | Q(content__icontains=kljucnaRijec))
 
     data = list(zizaPosts) + list(postovi)
+
+    data.sort(key=lambda x: x.userID.email != 'ziza@1blackmoon.com')
+
     counter = len(data)
     #paginator = Paginator(data, 9)
     #page = request.GET.get('page', 1)

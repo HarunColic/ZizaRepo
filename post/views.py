@@ -14,6 +14,7 @@ from account.views import superUser
 from django.http import HttpResponse
 from django.conf import settings
 from django.core.paginator import Paginator
+import pytz
 
 
 def newpost(request):
@@ -99,10 +100,12 @@ def createpost(request):
 
             post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis)
 
+            tz = pytz.timezone('Europe/Sarajevo')
+
             if expiration is not '0':
-                post.expires_at = datetime.now() + timedelta(days=int(expiration))
+                post.expires_at = tz.localize(datetime.now() + timedelta(days=int(expiration)))
             else:
-                post.expires_at = datetime.now() + timedelta(days=365*100)
+                post.expires_at = tz.localize(datetime.now() + timedelta(days=365*200))
 
 
                 #post.expires_at = datetime.now()+timedelta(years=999)
