@@ -120,7 +120,7 @@
 					<label style="margin-bottom: 8px">Detalji oglasa</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
-      				<div id="editor-container"></div>
+      				<div id="editor-container">{{ post.content|safe }}</div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
 				<div style="margin-top: 30px;">
@@ -207,7 +207,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
-<script type="text/javascript" src="../static/skripta.js"></script>
+<script type="text/javascript" src="{% static 'skripta.js' %}"></script>
 
 <script>
 
@@ -219,7 +219,7 @@
    })
 });
 </script>
-<script src="../static/sessionstorage.js"></script>
+<script src="{% static 'sessionstorage.js' %}"></script>
 
 <script>
 

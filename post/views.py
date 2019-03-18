@@ -639,3 +639,61 @@ def izlog(request, id, slug):
 
     return render(request, 'Izlog.html', {'user': user, 'userP': userP, 'auth': auth, 'izlog': izlog})
 
+
+def EditIzlog(request, id):
+
+    if request.user.is_authenticated:
+
+        if Company.objects.filter(userID=request.user).exists:
+
+            userP = UserProfile.objects.get(userID=request.user)
+
+            if not userP.editovanProfil:
+                sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+                return redirect('home')
+
+
+            izlog = Exhibition.objects.get(id=id)
+
+            return render(request, 'EditIzlog.html', {'user': request.user, 'userP': userP, 'auth': True, 'izlog': izlog, 'usr': 'comp'})
+
+    return redirect('home')
+
+
+def SaveIzlog(request, id):
+
+    if request.user.is_authenticated:
+
+        userP = UserProfile.objects.get(userID=request.user)
+
+        if not userP.editovanProfil:
+            sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
+            return redirect('editprofil')
+
+        izlog = Exhibition.objects.get(id=id)
+
+        naslov = request.POST.get('naslov', None)
+        podnaslov = request.POST.get('podnaslov', None)
+        sadrzaj = request.POST.get('opis', None)
+        slika = request.FILES.get('izlogSlika', None)
+
+        if slika is None:
+            slika = izlog.image
+
+        args = [naslov, podnaslov, sadrzaj, slika]
+
+        if not validation(request, args):
+            sweetify.sweetalert(request, title="Molimo popunite obavezna polja", icon="error")
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+        izlog.userID=request.user
+        izlog.title=naslov
+        izlog.sub_title=podnaslov
+        izlog.details=sadrzaj
+        izlog.image=slika
+        izlog.save()
+
+        sweetify.sweetalert(request, title="Uspjesno editovan izlog", icon="success")
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

@@ -68,6 +68,8 @@ urlpatterns = [
     url('dodajIzlog/', P_Views.dodajIzlog, name="dodajIzlog"),
     url('createExhibition/', P_Views.createExhibition, name="createExhibition"),
     url('izlog/(?P<id>[a-zA-Z0-9\-]+)/(?P<slug>[a-zA-Z0-9\-]+)', P_Views.izlog, name="izlog"),
+    url('UrediIzlog/(?P<id>[0-9]+)/', P_Views.EditIzlog, name="UrediIzlog"),
+    url('SaveIzlog/(?P<id>[0-9]+)/', P_Views.SaveIzlog, name="SaveIzlog"),
 
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

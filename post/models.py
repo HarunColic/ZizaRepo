@@ -5,6 +5,7 @@ from django.utils import timezone
 import pytz
 from django.template.defaultfilters import slugify
 
+
 class Category(models.Model):
 
     name = models.CharField(max_length=1000)
@@ -82,6 +83,7 @@ class Post(models.Model):
     def slugifyName(self):
 
         return slugify(self.userID.first_name)
+
 
 class Tag(models.Model):
 
