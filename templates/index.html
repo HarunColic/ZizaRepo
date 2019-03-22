@@ -12,6 +12,29 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
+
+
+    <!--
+
+        SWAL
+
+    -->
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+
+    	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.css">
+    	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+
+
+    <!--
+    /SWAL
+    -->
+
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <style>
 
@@ -1664,15 +1687,18 @@ ul {list-style: none}
 
 	{% endif %}
 
+
 {% load sweetify %}
     {% sweetify %}
 
           {% with auth=auth %}
 			{% include 'footer.html' %}
             {% endwith %}
+
+
 </body>
-<script type="text/javascript" src="../static/skripta.js"></script>
-<script type="text/javascript" src="../static/skripta.js"></script>
+<script type="text/javascript" src="{% static 'skripta.js' %}"></script>
+<script type="text/javascript" src="{% static 'skripta.js' %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script type="text/javascript" src="https://airbnb.io/infinity/build/infinity.min.js"></script>
 
@@ -1897,6 +1923,7 @@ setInterval(function(){
 }, 6000);
 
 </script>
-</html>
 
+
+</html>
 
