@@ -516,10 +516,11 @@ ul {list-style: none}
                 <span class="konkurs" id="oglasi_nav">Postavite oglas
 					<div class="konkursBottom">
 					    <ul>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" ></div> Kadrovska potraznja </li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" ></div> Objavi novost </li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 33px !important;"></div> Kadrovska potraznja </li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 75px !important;"></div> Poslovni oglas</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 118px !important;"></div> Bankarske usluge</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 161px !important;"></div> Usluge osiguranja</li>
 					    </ul>
 					</div>
 				</span>
@@ -756,13 +757,14 @@ ul {list-style: none}
                     {% if usr == 'comp' %}
 					<div class="konkursBottom">
 					    <ul>
-                            {% if usr == 'comp' %}
-					    	<a href="{% url 'newpost' %}"><li><div class="saStrane" ></div> Kadrovska potraznja </li></a>
-					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li></a>
-					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li></a>
-					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li></a>
-					    {% else %}
-                                <a href="   "><li><div class="saStrane" ></div> Kadrovska potraznja </li></a>
+							{% if usr == 'comp' %}
+								<a href="{% url 'dodajIzlog' %}"><li><div class="saStrane"></div>Objavi novost</li></a>							
+					    	<a href="{% url 'newpost' %}"><li><div class="saStrane" style="top: 33px !important;"></div> Kadrovska potraznja </li></a>
+					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 75px !important;"></div> Poslovni oglas</li></a>
+					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> Bankarske usluge</li></a>
+					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 161px !important;"></div> Usluge osiguranja</li></a>
+							{% else %}
+								<a href=""><li><div class="saStrane" ></div> Kadrovska potraznja </li></a>
 					    	<a href=""><li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li></a>
 					    	<a href=""><li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li></a>
 					    	<a href=""><li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li></a>
@@ -795,7 +797,6 @@ ul {list-style: none}
 					    <ul style="position: relative;">
 					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>Profil</li></a>
                              <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Postavke</li></a>
-					    	 <a href="{% url 'dodajIzlog' %}"><li class="logoutBtn"><div class="saStrane" style="top: 73px !important;"></div>Objavi novost</li></a>
 					    	 <a href="{% url 'signout' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>Odjava</li></a>
 					    </ul>
 					</div>
