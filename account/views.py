@@ -52,7 +52,6 @@ def validation(request, args):
 
 def home(request):
 
-
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
 
@@ -1000,6 +999,8 @@ def profilKorisnika(request, id, slug):
 
             return render(request, 'ProfilKorisnikaLP.html', {'userP': userP, 'userPP': userPP, 'emp': emp, 'vjestine': vjestine,
                                                               'auth': True, 'usr': usr, 'user': user, 'userr': userr})
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
 def zizaKorisnika(request, id):
