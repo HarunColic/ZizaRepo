@@ -516,7 +516,7 @@
 			<div class="navigacijaTipke izlogContent" style="margin-bottom: 20px">
 				{% for r in exRNG %}
 
-                    {% if r == page %}
+                    {% if r == exhibPage %}
                 <div onclick="location.href='{{ request.path }}?pageI={{ r }}'" class="activTip">{{ r }}</div>
                     {% else %}
                 <div onclick="location.href='{{ request.path }}?pageI={{ r }}'" class="">{{ r }}</div>

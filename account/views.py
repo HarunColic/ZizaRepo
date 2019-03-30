@@ -949,7 +949,6 @@ def profilKorisnika(request, id, slug):
 
         #end loged in
 
-
         if not userP.editovanProfil:
             sweetify.sweetalert(request, title="Molimo popunite svoj CV", icon="error")
             return redirect('editprofil')
