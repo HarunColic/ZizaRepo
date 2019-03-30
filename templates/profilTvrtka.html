@@ -418,9 +418,9 @@
 				{% for r in rng %}
 
                     {% if r == page %}
-                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="activTip">{{ r }}</div>
+                <div onclick="location.href='{{ request.path }}?page={{ r }}&o'" class="activTip">{{ r }}</div>
                     {% else %}
-                <div onclick="location.href='{{ request.path }}?page={{ r }}'" class="">{{ r }}</div>
+                <div onclick="location.href='{{ request.path }}?page={{ r }}&o'" class="">{{ r }}</div>
                     {% endif %}
                 {% endfor %}
 			</div>
@@ -517,9 +517,9 @@
 				{% for r in exRNG %}
 
                     {% if r == exhibPage %}
-                <div onclick="location.href='{{ request.path }}?pageI={{ r }}'" class="activTip">{{ r }}</div>
+                <div onclick="location.href='{{ request.path }}?pageI={{ r }}&i'" class="activTip">{{ r }}</div>
                     {% else %}
-                <div onclick="location.href='{{ request.path }}?pageI={{ r }}'" class="">{{ r }}</div>
+                <div onclick="location.href='{{ request.path }}?pageI={{ r }}&i'" class="">{{ r }}</div>
 
 
                     {% endif %}
@@ -559,27 +559,70 @@
 <script type="text/javascript" src="../static/skripta.js"></script>
 <script src="/node_modules/readmore-js/readmore.min.js"></script>
 <script type="text/javascript">
-	$("#biznisButton").click(function(){
-		if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '0px')
+
+
+
+    function ToggleO(){
+
+        if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '0px')
 			$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciDesno 0.5s ease-out 0s 1 normal forwards running');
 			$('.izlogContent').css('display', 'none');
 			$('.izlogContentTable').css('display', 'none');
 			$('.oNamaContent').css('display', 'flex');
 			$('.oNamaContentTable').css('display', 'table');
 			$('.downloadPDF').css('display', 'flex');
-	});
-	$("#posaoButton").click(function(){
-		if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '150px')
+    }
+
+    function ToggleI(){
+
+        if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '150px')
 			$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciLijevo 0.5s ease-out 0s 1 normal forwards running');
 			$('.izlogContent').css('display', 'flex');
 			$('.izlogContentTable').css('display', 'table');
 			$('.oNamaContent').css('display', 'none');
 			$('.oNamaContentTable').css('display', 'none');
 			$('.downloadPDF').css('display', 'none');
+    }
+
+	$("#biznisButton").click(function(){
+	/*	if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '0px')
+			$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciDesno 0.5s ease-out 0s 1 normal forwards running');
+			$('.izlogContent').css('display', 'none');
+			$('.izlogContentTable').css('display', 'none');
+			$('.oNamaContent').css('display', 'flex');
+			$('.oNamaContentTable').css('display', 'table');
+			$('.downloadPDF').css('display', 'flex');
+*/
+
+	    ToggleO();
+
 	});
+	$("#posaoButton").click(function(){
+	/*	if($('.zadnjiPoslovi__last--navigator--left').css('margin-left') == '150px')
+			$('.zadnjiPoslovi__last--navigator--left').css('animation', 'prebaciLijevo 0.5s ease-out 0s 1 normal forwards running');
+			$('.izlogContent').css('display', 'flex');
+			$('.izlogContentTable').css('display', 'table');
+			$('.oNamaContent').css('display', 'none');
+			$('.oNamaContentTable').css('display', 'none');
+			$('.downloadPDF').css('display', 'none');
+	*/
+
+	ToggleI();
+
+	});
+
 	$('.izlogContent').css('display', 'flex');
 	$('.izlogContentTable').css('display', 'table');
 	$('.downloadPDF').css('display', 'none');
+
+
+	var url  = '{{ request.get_full_path }}'.split('?')[1].replace('amp;','').split('&');
+
+    if(url.find((a)=>{return a == 'o'}))
+        ToggleO();
+    else if(url.find((a)=>{return a == 'i'}))
+        ToggleI();
+
 
 </script>
 <script type="text/javascript">
