@@ -90,8 +90,8 @@ def home(request):
         drugaSlika = None
         trecaSlika = None
 
-    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')[0:4]
-    postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')[0:4]
+    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')
+    postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')
     sviOglasi = Post.objects.all().exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')
     izlozi = Exhibition.objects.all().order_by('-created_at')
 
@@ -335,10 +335,10 @@ def sendZahvanicu(request, recipientMail):
     mail_subject = "Zahvalnica"
     message = render_to_string('zahvalnica.html', {})
 
-    email = EmailMessage(
+    email = EmailMultiAlternatives(
         mail_subject, message, to=[recipientMail]
     )
-
+    email.attach_alternative(message, 'text/html')
     email.send()
 
 
