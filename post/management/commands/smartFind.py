@@ -24,13 +24,14 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        posts = Post.objects.filter(expires_at=datetime.now())
+        posts = Post.objects.filter(expires_at__lt=datetime.now()).filter(soft_delete=False)
 
         for p in posts:
             postCat = p.categoryID
             users = User.objects.filter(userID__usercategories__categoryID=postCat)
             user = User.objects.get(pk=p.userID)
             p.soft_delete = True
+            p.save()
 
             if users.count():
                 sendmail(users, user)
