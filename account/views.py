@@ -30,6 +30,7 @@ from itertools import chain
 from django.core.paginator import Paginator
 from django.core.mail import EmailMultiAlternatives
 from django.template.defaultfilters import slugify
+from django.core.mail import EmailMultiAlternatives
 
 
 def superUser(user):
@@ -375,7 +376,7 @@ def signin(request):
         if User.objects.filter(email=mail).exists():
             user = User.objects.get(email=mail)
         else:
-            sweetify.sweetalert(request, title="Korisnik ne postoji", text="Korisnik sa unesenom email adresom ne postoji", icon="error", timer=10000)
+            sweetify.sweetalert(request, title="Uneseni Email ili lozinka su Pogrešni", text="", icon="error", timer=10000)
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
         if user.check_password(password):
@@ -385,7 +386,7 @@ def signin(request):
                 sweetify.error(request, 'Mail nije verifikovan', text='Molimo potvrdite svoju registraciju klikom na link u mailu', icon="error", timer=10000)
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         else:
-            sweetify.sweetalert(request, title="Pogrešna lozinka", text="", icon="error", timer=1000)
+            sweetify.sweetalert(request, title="Uneseni Email ili lozinka su Pogrešni", text="", icon="error", timer=1000)
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
         if Employee.objects.filter(userID=request.user).exists():
@@ -890,10 +891,10 @@ def sifraMail(request, recipientMail):
         'domain': current_site.domain,
     })
 
-    email = EmailMessage(
+    email = EmailMultiAlternatives(
         mail_subject, message, to=[recipientMail]
     )
-
+    email.attach_alternative(message, "text/html")
     email.send()
 
 
