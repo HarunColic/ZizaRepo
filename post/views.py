@@ -439,6 +439,7 @@ def updatePost(request, id):
             email = request.POST['email']
             brojTel = request.POST['brojTel']
             opis = request.POST['opis']
+            expiration = request.POST.get('expiration', None)
 
             if request.FILES.get('image_uploads', None):
 
