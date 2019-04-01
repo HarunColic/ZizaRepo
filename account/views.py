@@ -97,7 +97,7 @@ def home(request):
         .exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')
 
     sviOglasi = Post.objects.all().exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće")\
-        .exclude(categoryID__name="Finansijske").order_by('-created_at')
+        .exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
 
     izlozi = Exhibition.objects.all().order_by('-created_at')
 

@@ -1053,7 +1053,7 @@ ul {list-style: none}
 			</div>
 			
 			<div class="zadnjiPoslovi__last--timeline" id="b2c">
-                {% for p in postsbc %}
+                {% for p in postsbc|slice:":4" %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
@@ -1068,7 +1068,7 @@ ul {list-style: none}
                 {% endfor %}
 			</div> <!-- zadnjiPoslovi__last--timeline -->
                    <div class="zadnjiPoslovi__last--timeline hidden" id="b2b">
-            {% for p in postbb %}
+            {% for p in postbb|slice:":4" %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
@@ -1091,7 +1091,7 @@ ul {list-style: none}
 				<div class="zadnjiPoslovi__last--navigator--left" style="width: 290px"></div>
 			</div>
 			<div class="zadnjiPoslovi__last--timeline" id="b2c">
-                {% for p in postsbc %}
+                {% for p in postsbc|slice:":4" %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
@@ -1106,7 +1106,7 @@ ul {list-style: none}
                 {% endfor %}
 			</div> <!-- zadnjiPoslovi__last--timeline -->
                    <div class="zadnjiPoslovi__last--timeline hidden" id="b2b">
-            {% for p in postbb %}
+            {% for p in postbb|slice:":4" %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
@@ -1201,7 +1201,7 @@ ul {list-style: none}
 			}
 			</style>
 			<div class="zadnjiPoslovi__last--timeline heightRe" id="b2c">
-                {% for p in postsbc %}
+                {% for p in postsbc|slice:":4" %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
@@ -1216,7 +1216,7 @@ ul {list-style: none}
                 {% endfor %}
 			</div> <!-- zadnjiPoslovi__last--timeline -->
                    <div class="zadnjiPoslovi__last--timeline hidden heightRe" id="b2b">
-            {% for p in postbb %}
+            {% for p in postbb|slice:":4" %}
                 <div class="zadnjiPoslovi__last--timeline--stavka ">
 					<div class="lijeviDio_time">
 						<div class="lijeviDio_time__linija"></div>
