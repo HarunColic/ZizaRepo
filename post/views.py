@@ -235,10 +235,6 @@ def showpost(request, id, slug):
 
     if post.soft_delete:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-    elif post.is_past_due:
-        post.soft_delete = True
-        post.save()
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
     else:
         post.views += 1
         post.save()

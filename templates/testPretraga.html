@@ -360,7 +360,15 @@
 	 $(document).ready(()=>{
         $('#pretragaBTN').click(()=>{
           $('#pretraga').submit();
-        })
+        });
+
+        $(document).on('keypress', function(e){
+
+            if(e.which == 13)
+                $('#pretraga').submit();
+        });
     });
+
+
     </script>
     </html>

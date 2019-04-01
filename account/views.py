@@ -366,7 +366,7 @@ def signin(request):
             return redirect('home')
 
         mail = request.POST['mail']
-        password = request.POST['pswd']
+        password = request.POST['pswd'].strip()
 
         args = [mail, password]
 
