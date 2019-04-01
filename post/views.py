@@ -30,7 +30,9 @@ def newpost(request):
         if Company.objects.filter(userID=request.user).exists():
             categories = Category.objects.filter(type=1).order_by('name')
             userP = UserProfile.objects.get(userID=request.user)
-            return render(request, 'newpost.html', {'auth': True, 'usr': 'comp', 'cat': categories, 'userP': userP, 'user': request.user})
+
+            return render(request, 'newpost.html', {'auth': True, 'usr': 'comp', 'cat': categories, 'userP': userP,
+                                                    'user': request.user})
         else:
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
@@ -50,7 +52,8 @@ def newpotraznja(request):
             comp = Company.objects.get(userID=request.user)
             userP = UserProfile.objects.get(userID=request.user)
 
-            return render(request, 'dodajPotraznju.html', {'auth': True, 'usr': 'comp', 'cat': categories, 'comp': comp, 'user': request.user, 'userP': userP})
+            return render(request, 'dodajPotraznju.html', {'auth': True, 'usr': 'comp', 'cat': categories,
+                                                           'comp': comp, 'user': request.user, 'userP': userP})
         else:
             return redirect('home')
 
@@ -98,7 +101,9 @@ def createpost(request):
 
             cat = Category.objects.get(name=category)
 
-            post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH", location=lokacija, position=pozicija, type=type, specialty=strucnasprema, experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis)
+            post = Post(userID=request.user, brojIzvrsitelja=brojIzv,categoryID=cat, title=title, region="BiH",
+                        location=lokacija, position=pozicija, type=type, specialty=strucnasprema,
+                        experience=godineIskustva, contact_email=email, contact_phone=brojTel, content=opis)
 
             tz = pytz.timezone('Europe/Sarajevo')
 
@@ -136,8 +141,10 @@ def createpost(request):
             if request.FILES.get('image_uploads', None):
                 myfile = request.FILES['image_uploads']
                 if myfile._size > 5242880:
-                    sweetify.sweetalert(request, title="Datoteka prevelika", text="Vaš CV prelazi maksimalnu veličinu od 5 MB",
-                                        icon="error", timer=10000)
+
+                    sweetify.sweetalert(request, title="Datoteka prevelika",
+                                        text="Vaš CV prelazi maksimalnu veličinu od 5 MB", icon="error", timer=10000)
+
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
                 else:
                     fs = FileSystemStorage()
@@ -171,7 +178,11 @@ def createpost(request):
             else:
                 position = ""
 
-            post = Post(attachment=myfile, position=position, title=title, userID=request.user, categoryID=cat, type=int(type), b2b_type=int(btobtype), region=kanton, expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email, contact_phone=brojTel, content=opis)
+            post = Post(attachment=myfile, position=position, title=title, userID=request.user, categoryID=cat,
+                        type=int(type), b2b_type=int(btobtype), region=kanton,
+                        expires_at=datetime.now()+timedelta(days=int(trajanje)), contact_email=email,
+                        contact_phone=brojTel, content=opis)
+
             post.save()
             post.url = post.generateSlug
             post.save()
@@ -204,15 +215,18 @@ def showpost(request, id, slug):
 
     if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
 
-        nextPost = Post.objects.filter(pk__gt=post.pk, type=post.type).exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").first()
+        nextPost = Post.objects.filter(pk__gt=post.pk, type=post.type).exclude(soft_delete=True)\
+            .exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").first()
     else:
         nextPost = Post.objects.filter(pk__gt=post.pk, type=post.type).exclude(soft_delete=True).first()
 
     if post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
 
-        prevPost = Post.objects.filter(pk__lt=post.pk, type=post.type).exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").last()
+        prevPost = Post.objects.filter(pk__lt=post.pk, type=post.type).exclude(soft_delete=True)\
+            .exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").last()
     else:
-        prevPost = Post.objects.filter(pk__lt=post.pk, categoryID__name=post.categoryID.name).exclude(soft_delete=True).last()
+        prevPost = Post.objects.filter(pk__lt=post.pk, categoryID__name=post.categoryID.name)\
+            .exclude(soft_delete=True).last()
 
     if request.user.is_authenticated:
         authorized = Company.objects.filter(userID=request.user).exists()
@@ -238,8 +252,8 @@ def showpost(request, id, slug):
     else:
         post.views += 1
         post.save()
-        return render(request, 'oglas.html', {'auth': authorized, 'post': post, 'userP': userP, 'userPP': userPP, 'b2b': b2b,
-                                              'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
+        return render(request, 'oglas.html', {'auth': authorized, 'post': post, 'userP': userP, 'userPP': userPP,
+                                              'b2b': b2b, 'nextPost': nextPost, 'prevPost': prevPost, 'user': user})
 
 
 def bankUsluge(request):
@@ -255,7 +269,8 @@ def bankUsluge(request):
         user = request.user
         financije = Category.objects.get(name="Finansijske")
         userP = UserProfile.objects.get(userID=request.user)
-        return render(request, 'bankarskeUsluge.html', {'auth': True, 'usr': 'comp', 'user': user, 'userP': userP, 'financije': financije})
+        return render(request, 'bankarskeUsluge.html', {'auth': True, 'usr': 'comp', 'user': user, 'userP': userP,
+                                                        'financije': financije})
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
@@ -273,7 +288,8 @@ def osiguranjeUsluge(request):
     userP = UserProfile.objects.get(userID=user)
     cat = Category.objects.get(name="Osiguravajuće")
 
-    return render(request, 'OsiguranjeUsluge.html', {'auth': True, 'usr': 'comp', 'user': user, 'userP': userP, 'cat': cat})
+    return render(request, 'OsiguranjeUsluge.html', {'auth': True, 'usr': 'comp', 'user': user, 'userP': userP,
+                                                     'cat': cat})
 
 
 def prijaviOglas(request, id):
@@ -326,13 +342,17 @@ def urediPost(request, id):
     cat = Category.objects.filter(type=0)
 
     if post.type == 1:
-        return render(request, 'newpost2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user, 'userP': userP, 'cat': cat})
+        return render(request, 'newpost2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user,
+                                                 'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name != "Finansijske" and post.categoryID.name != "Osiguravajuće":
-        return render(request, 'dodajPotraznju2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user, 'userP': userP, 'cat': cat})
+        return render(request, 'dodajPotraznju2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user,
+                                                        'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name == "Finansijske":
-        return render(request, 'bankarskeUsluge2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user, 'userP': userP, 'cat': cat})
+        return render(request, 'bankarskeUsluge2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user,
+                                                         'userP': userP, 'cat': cat})
     elif post.type == 2 and post.categoryID.name == "Osiguravajuće":
-        return render(request, 'OsiguranjeUsluge2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user, 'userP': userP, 'cat': cat})
+        return render(request, 'OsiguranjeUsluge2.html', {'auth': True, 'usr': 'comp', 'post': post, 'user': user,
+                                                          'userP': userP, 'cat': cat})
     else:
         return redirect('home')
 
@@ -370,7 +390,8 @@ def updatePost(request, id):
             else:
                 myfile = None
 
-            args = [title, category, expiration, lokacija, pozicija, godineIskustva, strucnasprema, email, brojTel, opis, type]
+            args = [title, category, expiration, lokacija, pozicija, godineIskustva, strucnasprema, email, brojTel,
+                    opis, type]
 
             if not validation(request, args):
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
@@ -504,7 +525,12 @@ def obnovi(request, id):
     post = Post.objects.get(pk=id)
     razlika = post.expires_at - post.created_at
     newExpires_at = datetime.now() + timedelta(days=razlika.days)
-    newpost = Post(title=post.title, region=post.region, location=post.location, position=post.position, specialty=post.specialty, type=post.type, b2b_type=post.b2b_type, experience=post.experience, contact_email=post.contact_email, contact_phone=post.contact_phone, attachment=post.attachment, userID=post.userID, soft_delete=False, categoryID=post.categoryID, views=0, expires_at=newExpires_at)
+
+    newpost = Post(title=post.title, region=post.region, location=post.location, position=post.position,
+                   specialty=post.specialty, type=post.type, b2b_type=post.b2b_type, experience=post.experience,
+                   contact_email=post.contact_email, contact_phone=post.contact_phone, attachment=post.attachment,
+                   userID=post.userID, soft_delete=False, categoryID=post.categoryID, views=0, expires_at=newExpires_at)
+
     newpost.save()
     newpost.url = newpost.generateSlug
     newpost.save()
@@ -651,7 +677,8 @@ def EditIzlog(request, id):
 
             izlog = Exhibition.objects.get(id=id)
 
-            return render(request, 'EditIzlog.html', {'user': request.user, 'userP': userP, 'auth': True, 'izlog': izlog, 'usr': 'comp'})
+            return render(request, 'EditIzlog.html', {'user': request.user, 'userP': userP, 'auth': True,
+                                                      'izlog': izlog, 'usr': 'comp'})
 
     return redirect('home')
 

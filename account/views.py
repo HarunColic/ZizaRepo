@@ -90,9 +90,15 @@ def home(request):
         drugaSlika = None
         trecaSlika = None
 
-    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')
-    postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')
-    sviOglasi = Post.objects.all().exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće").exclude(categoryID__name="Finansijske").order_by('-created_at')
+    postsB2C = Post.objects.filter(type=1).exclude(categoryID__name="Osiguravajuće")\
+        .exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')
+
+    postsB2B = Post.objects.filter(type=2).exclude(categoryID__name="Osiguravajuće")\
+        .exclude(categoryID__name="Finansijske").exclude(soft_delete=True).order_by('-created_at')
+
+    sviOglasi = Post.objects.all().exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće")\
+        .exclude(categoryID__name="Finansijske").order_by('-created_at')
+
     izlozi = Exhibition.objects.all().order_by('-created_at')
 
     if request.user.is_authenticated:
@@ -149,8 +155,8 @@ def profil(request):
 
             return render(request, 'profilTvrtka.html',
                           {'usr': 'comp', 'auth': True, 'user': user, 'userP': userP, 'company': company, 'posts': posts
-                              , 'page': int(page), 'rng': rng, 'izlozi': izlozi, 'exhibPage': int(exhibPage), 'exRNG': exRNG
-                              , 'userr': user, 'userPP': userP,
+                              , 'page': int(page), 'rng': rng, 'izlozi': izlozi, 'exhibPage': int(exhibPage),
+                           'exRNG': exRNG, 'userr': user, 'userPP': userP,
                            })
 
         elif Employee.objects.filter(userID=user).exists():
@@ -428,7 +434,9 @@ def editprofil(request):
             for c in cat:
                 catNames.append(c.name)
 
-            return render(request, 'editProfilPL.html', {'catNames': catNames, 'userCats': userCats, 'auth': True, 'usr': 'wrkr', 'user': user, 'gradovi': gradovi, 'userP': userP, 'emp': emp, 'cat': cat})
+            return render(request, 'editProfilPL.html', {'catNames': catNames, 'userCats': userCats, 'auth': True,
+                                                         'usr': 'wrkr', 'user': user, 'gradovi': gradovi,
+                                                         'userP': userP, 'emp': emp, 'cat': cat})
 
     else:
         redirect('home')
@@ -632,11 +640,13 @@ def onama(request):
 
         userP = UserProfile.objects.get(userID=request.user)
         auth = True
-        return render(request, 'onamanew.html', {'usr': usr, 'user': request.user, 'auth': auth, 'userP': userP, 'industries': None})
+        return render(request, 'onamanew.html', {'usr': usr, 'user': request.user, 'auth': auth,
+                                                 'userP': userP, 'industries': None})
     else:
         auth = False
         industries = Category.objects.filter(type=0)
-        return render(request, 'onamanew.html', {'usr': None, 'user': request.user, 'auth': auth, 'industries': industries})
+        return render(request, 'onamanew.html', {'usr': None, 'user': request.user, 'auth': auth,
+                                                 'industries': industries})
 
 
 def konsalting(request):
@@ -656,10 +666,12 @@ def konsalting(request):
 
         user = request.user
         userP = UserProfile.objects.get(userID=user)
-        return render(request, 'konsalting.html', {'usr': usr, 'user': user, 'userP':userP, 'auth': True, 'industries': None})
+        return render(request, 'konsalting.html', {'usr': usr, 'user': user, 'userP':userP, 'auth': True,
+                                                   'industries': None})
     else:
         industries = Category.objects.filter(type=0)
-        return render(request, 'konsalting.html', {'usr': None, 'user': None, 'userP':None, 'auth': False, 'industries': industries})
+        return render(request, 'konsalting.html', {'usr': None, 'user': None, 'userP':None, 'auth': False,
+                                                   'industries': industries})
 
 
 def pretraga(request):
@@ -691,11 +703,15 @@ def pretraga(request):
             if superUser(request.user):
                 posts = Post.objects.all().exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
             elif userComp.categoryID.name == "Finansijske":
-                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Osiguravajuće")\
+                    .exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
             elif userComp.categoryID.name == "Osiguravajuće":
-                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske")\
+                    .exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
             else:
-                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske").exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
+                posts = Post.objects.all().filter(type=2).exclude(categoryID__name="Finansijske")\
+                    .exclude(categoryID__name="Osiguravajuće").exclude(expires_at__lte=datetime.now())\
+                    .exclude(soft_delete=True)
         else:
             posts = Post.objects.filter(type=1).exclude(expires_at__lte=datetime.now()).exclude(soft_delete=True)
 
@@ -705,7 +721,8 @@ def pretraga(request):
             ind = Category.objects.filter(name=kategorija)[0]
             posts = posts.filter(categoryID=ind)
         if kljucnaRijec is not "":
-            posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec) | Q(categoryID__name__contains=kljucnaRijec))
+            posts = posts.filter(Q(title__contains=kljucnaRijec) | Q(content__contains=kljucnaRijec) |
+                                 Q(categoryID__name__contains=kljucnaRijec))
 
     else:
         if Company.objects.filter(userID=user).exists():
@@ -730,7 +747,9 @@ def pretraga(request):
     userPs = UserProfile.objects.all()
     btb = ["Ponuda", "Potražnja", "Partnerstvo"]
     return render(request, 'pretrazi.html',
-                  {'usr': usr, 'iterRange': range(0, counter, 3), 'user': user, 'data': data, 'gradovi': gradovi, 'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs, 'btb': btb})
+                  {'usr': usr, 'iterRange': range(0, counter, 3), 'user': user, 'data': data, 'gradovi': gradovi,
+                   'cat': cat, 'userP': userP, 'auth': auth, 'counter': counter, 'users': users, 'userPs': userPs,
+                   'btb': btb})
 
 
 def dashboard(request):
@@ -755,9 +774,14 @@ def dashboard(request):
             inaktPostovi = Post.objects.filter(userID=request.user).exclude(soft_delete=False).order_by('-created_at')
             company = Company.objects.get(userID=request.user)
 
-            rel1 = Post.objects.filter(type=2).filter(b2b_type=1).exclude(soft_delete=True).exclude(userID=request.user)[:10]
-            rel2 = Post.objects.filter(type=2).filter(b2b_type=2).exclude(soft_delete=True).exclude(userID=request.user)[:10]
-            rel3 = Post.objects.filter(type=2).filter(b2b_type=3).exclude(soft_delete=True).exclude(userID=request.user)[:10]
+            rel1 = Post.objects.filter(type=2).filter(b2b_type=1).exclude(soft_delete=True)\
+                .exclude(userID=request.user)[:10]
+
+            rel2 = Post.objects.filter(type=2).filter(b2b_type=2).exclude(soft_delete=True)\
+                .exclude(userID=request.user)[:10]
+
+            rel3 = Post.objects.filter(type=2).filter(b2b_type=3).exclude(soft_delete=True)\
+                .exclude(userID=request.user)[:10]
 
             relevantPosts = rel1.union(rel2, rel3)
 
@@ -772,9 +796,10 @@ def dashboard(request):
             rng2 = range(1, paginator2.num_pages + 1)
 
             return render(request, 'dashboard.html', {'usr': 'comp', 'super': super, 'user': request.user,
-                                                      'userP': userP, 'auth': True, 'ind': None, 'activePosts': activePosts,
-                                                      'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts,
-                                                      'page': int(page), 'rng': rng, 'page2': int(page2), 'rng2': rng2})
+                                                      'userP': userP, 'auth': True, 'ind': None,
+                                                      'activePosts': activePosts, 'inactivePosts': inactivePosts,
+                                                      'relevantPosts': relevantPosts, 'page': int(page), 'rng': rng,
+                                                      'page2': int(page2), 'rng2': rng2})
         else:
             return HttpResponseRedirect(request.META.get('HTTP_RENDERER', '/'))
 
@@ -849,8 +874,8 @@ def anonimnaPretraga(request, id):
     btb = ["Ponuda", "Potražnja", "Partnerstvo"]
     return render(request, 'testPretraga.html',
                   {'data': data, 'gradovi': gradovi, 'cat': cat, 'auth': auth,
-                   'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange, 'userP': userP,
-                   'usr': usr, 'number_pages': number_pages, 'page': int(1), 'id': id})
+                   'counter': counter, 'users': users, 'btb': btb, 'userPs': userPs, 'iterRange': iterRange,
+                   'userP': userP, 'usr': usr, 'number_pages': number_pages, 'page': int(1), 'id': id})
 
 
 def firme(request):
@@ -869,12 +894,14 @@ def firme(request):
             usr = 'wrkr'
 
         kompanije = Company.objects.all()
-        return render(request, 'firme.html', {'auth': True, 'usr': usr, 'userP': userP, 'user': user, 'kompanije': kompanije})
+        return render(request, 'firme.html', {'auth': True, 'usr': usr, 'userP': userP, 'user': user,
+                                              'kompanije': kompanije})
     else:
         usr = 'wrkr'
 
         kompanije = Company.objects.all()
-        return render(request, 'firme.html', {'auth': False, 'usr': usr, 'userP': None, 'user': None, 'kompanije': kompanije})
+        return render(request, 'firme.html', {'auth': False, 'usr': usr, 'userP': None, 'user': None,
+                                              'kompanije': kompanije})
 
 
 def sifraMail(request, recipientMail):
@@ -983,8 +1010,8 @@ def profilKorisnika(request, id, slug):
             if slug == slugified:
                 return render(request, 'profilTvrtka.html', {'usr': usr, 'auth': True, 'user': user, 'userr': userr,
                                                              'userP': userP, 'userPP': userPP,
-                                                            'company': company, 'posts': posts, 'rng': rng, 'page': int(page),
-                                                             'izlozi': izlozi, 'exRNG': exRNG})
+                                                             'company': company, 'posts': posts, 'rng': rng,
+                                                             'page': int(page), 'izlozi': izlozi, 'exRNG': exRNG})
             else:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
         else:
@@ -997,8 +1024,9 @@ def profilKorisnika(request, id, slug):
             emp = Employee.objects.get(userID=userr)
             vjestine = UserCategories.objects.filter(userID=userr)
 
-            return render(request, 'ProfilKorisnikaLP.html', {'userP': userP, 'userPP': userPP, 'emp': emp, 'vjestine': vjestine,
-                                                              'auth': True, 'usr': usr, 'user': user, 'userr': userr})
+            return render(request, 'ProfilKorisnikaLP.html', {'userP': userP, 'userPP': userPP, 'emp': emp,
+                                                              'vjestine': vjestine, 'auth': True, 'usr': usr,
+                                                              'user': user, 'userr': userr})
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
@@ -1022,9 +1050,12 @@ def zizaKorisnika(request, id):
             inactivePosts = Post.objects.filter(userID=user).exclude(soft_delete=False).order_by('-created_at')
             company = Company.objects.get(userID=user)
             relevantPosts = Post.objects.filter(categoryID=company.categoryID)
+
             return render(request, 'zizaKorisnika.html',
-                          {'usr': usr, 'uProfil': uProfil, 'user': request.user, 'userP': userP, 'auth': True, 'ind': None,
-                           'activepPosts': activePosts,'inactivePosts': inactivePosts, 'relevantPosts': relevantPosts})
+                          {'usr': usr, 'uProfil': uProfil, 'user': request.user, 'userP': userP, 'auth': True,
+                           'ind': None, 'activepPosts': activePosts,'inactivePosts': inactivePosts,
+                           'relevantPosts': relevantPosts})
+
     sweetify.sweetalert(request, title="Akcija nije dozvoljena", icon="error")
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
