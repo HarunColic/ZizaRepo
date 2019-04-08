@@ -98,7 +98,8 @@ def createpost(request):
             keys = ['naslov', 'category', 'expiration',' City','pozicija', 'godineIsku', 'strucnasprema','email','brojTel','opis','type','brojIzvr']
             argErr = ["Naslov", "Kategorija",'Trajanje','Lokacija','Pozicija','Godine iskustva','Sprema','Kontakt Email','Kontakt Telefon','Vrsta','Broj izrsitelja']
 
-            valid = validationWithKeys(request, args,keys,argErr)
+            valid = validationWithKeys(request, args, keys, argErr)
+
             if valid != True:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
 
@@ -158,11 +159,13 @@ def createpost(request):
                 myfile = None
 
             args = [type, btobtype, category, kanton, trajanje, email, brojTel, opis]
-            keys = ['b2btype','category', 'kanton', 'trajanje', 'email', 'brojTel', 'opis']
-            argErr = ["Trazim/Nudim", "Kategorija", 'Kanton', 'Trajanje', 'Email', 'Broj Telefona', 'Opis']
+            keys = ['type', 'b2btype','category', 'kanton', 'trajanje', 'email', 'brojTel', 'opis']
+            argErr = ['', "Trazim/Nudim", "Kategorija", 'Kanton', 'Trajanje', 'Email', 'Broj Telefona', 'Opis']
 
-            if not validationWithKeys(request, args, keys, argErr):
-                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            valid = validationWithKeys(request, args, keys, argErr)
+
+            if valid != True:
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
 
             cat = Category.objects.get(name=category)
 
@@ -402,9 +405,10 @@ def updatePost(request, id):
             argErr = ["Naslov", "Kategorija", 'Trajanje', 'Lokacija', 'Pozicija', 'Godine iskustva', 'Sprema',
                       'Kontakt Email', 'Kontakt Telefon', 'Vrsta', 'Broj izrsitelja']
 
-            if not validationWithKeys(request, args, keys, argErr):
-                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            valid = validationWithKeys(request, args, keys, argErr)
 
+            if valid != True:
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
             cat = Category.objects.get(name=category)
 
             if City.objects.all().filter(name=lokacija).exists():
@@ -460,12 +464,13 @@ def updatePost(request, id):
                 myfile = None
 
             args = [type, btobtype, category, kanton, trajanje, email, brojTel, opis]
-            keys = ['b2btype', 'category', 'kanton', 'trajanje', 'email', 'brojTel', 'opis']
-            argErr = ["Trazim/Nudim", "Kategorija", 'Kanton', 'Trajanje', 'Email', 'Broj Telefona', 'Opis']
+            keys = ['type', 'b2btype', 'category', 'kanton', 'trajanje', 'email', 'brojTel', 'opis']
+            argErr = ['', "Trazim/Nudim", "Kategorija", 'Kanton', 'Trajanje', 'Email', 'Broj Telefona', 'Opis']
 
-            if not validationWithKeys(request, args, keys, argErr):
-                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            valid = validationWithKeys(request, args, keys, argErr)
 
+            if valid != True:
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
             cat = Category.objects.get(name=category)
 
             if category == 'Finansijske' or category == "Osiguravajuće":
@@ -640,9 +645,10 @@ def createExhibition(request):
         keys = ['naslov', 'podnaslov', 'opis', 'izlogSlika']
         argErr = ["Naslov", "Podnaslov", 'Sadrzaj', 'Slika']
 
-        if not validationWithKeys(request, args, keys, argErr):
-            sweetify.sweetalert(request, title="Molimo popunite obavezna polja", icon="error")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        valid = validationWithKeys(request, args, keys, argErr)
+
+        if valid != True:
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
 
         izlog = Exhibition(userID=request.user, title=naslov, sub_title=podnaslov, details=sadrzaj, image=slika)
         izlog.save()
@@ -719,9 +725,10 @@ def SaveIzlog(request, id):
         keys = ['naslov', 'podnaslov', 'opis', 'izlogSlika']
         argErr = ["Naslov", "Podnaslov", 'Sadrzaj', 'Slika']
 
-        if not validationWithKeys(request, args, keys, argErr):
-            sweetify.sweetalert(request, title="Molimo popunite obavezna polja", icon="error")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        valid = validationWithKeys(request, args, keys, argErr)
+
+        if valid != True:
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
 
         izlog.userID=request.user
         izlog.title=naslov

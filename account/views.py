@@ -59,14 +59,15 @@ def validationWithKeys(request, args,keys,argsErr):
     returnStr = '?'
 
     for i in args:
-        if(i is not None):
+
+        if i is not None:
             returnStr += '&'+keys[counter]+'='+i
         if i == "" or i is None:
             errMessage += 'Polje ' + argsErr[counter] + ' je obavezno <br>'
             valid = False
         counter += 1
 
-    if(valid == False):
+    if valid != True:
         sweetify.error(request, title="Obavijest", html=errMessage, icon="error", timer=4000)
         return returnStr
 
@@ -235,9 +236,10 @@ def register(request):
                 keys = ['FirstName', 'LastName', 'mail', 'pswd']
                 argErr = ["Ime", "Prezime", 'mail', 'Lozinka']
 
-                if not validationWithKeys(request, args, keys, argErr):
-                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                valid = validationWithKeys(request, args, keys, argErr)
 
+                if valid != True:
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
                 if len(user.last_name) >= 30:
                     sweetify.sweetalert(request, button=True, title="Prezime mora biti manje od 30 karaktera",
                                         icon="error", timer=10000)
@@ -246,10 +248,10 @@ def register(request):
                 if len(lozinka) < 6:
                     sweetify.sweetalert(request, button=True, title="Lozinka mora biti 6 ili više karaktera", icon="error", timer=10000)
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-                elif not validateMail(user.email):
-                        sweetify.sweetalert(request,button=True, title="Unesite validnu email adresu", icon="error", timer=10000)
-                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                    valid = validationWithKeys(request, args, keys, argErr)
 
+                    if valid != True:
+                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
                 if User.objects.filter(email=user.email).exists():
                     sweetify.sweetalert(request, title="Email adresa već postoji", text="Već postoji korisnik sa ovom email adresom, ako ste zaboravili lozinku molimo kliknite na Forgot password", icon="error", timer=10000)
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
@@ -314,9 +316,10 @@ def register(request):
                 keys = ['FirstName', 'LastName', 'mail', 'pswd', 'Category', 'City']
                 argErr = ["Naziv", "ID Broj", 'Mail', 'Lozinka', 'Djelatnost', 'Lokacija']
 
-                if not validationWithKeys(request, args, keys, argErr):
-                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                valid = validationWithKeys(request, args, keys, argErr)
 
+                if valid != True:
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
                 category = Category.objects.filter(name=categoryname,type=0)[0]
 
                 if User.objects.filter(email=user.email).exists():
@@ -404,9 +407,11 @@ def signin(request):
         keys = ['mail', 'pswd']
         argErr = ['Email', 'Lozinka']
 
-        if not validationWithKeys(request, args, keys, argErr):
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        valid = validationWithKeys(request, args, keys, argErr)
 
+        if valid != True:
+
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
         if User.objects.filter(email=mail).exists():
             user = User.objects.get(email=mail)
         else:
@@ -494,10 +499,10 @@ def submitchange(request):
                 keys = ['naslov', 'email', 'brojTel', 'City', 'category', 'brojuposlenih', 'opis']
                 argErr = ['Naziv', 'Email', 'Broj Telefona', 'Grad', 'Katetegorija', 'Broj Uposlenika', 'Opis']
 
-                if not validationWithKeys(request, args, keys, argErr):
-                    sweetify.sweetalert(request, title="Sva polja obavezna", icon="error")
-                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                valid = validationWithKeys(request, args, keys, argErr)
 
+                if valid != True:
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
                 user = request.user
                 userP = UserProfile.objects.get(userID=user)
                 comp = Company.objects.get(userID=user)
@@ -593,9 +598,10 @@ def submitchange(request):
                 keys = ['naslov', 'email', 'grad', 'opis', 'strucnaSprema', 'obrazovanje']
                 argErr = ['Ime', 'Email', 'Grad', 'Kontakt broj', 'Opis', 'Strucna Sprema', 'Obrazovanje']
 
-                if not validationWithKeys(request, args, keys, argErr):
-                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                valid = validationWithKeys(request, args, keys, argErr)
 
+                if valid != True:
+                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
                 imeiPrezime = name.split()
                 ime = imeiPrezime[0]
                 prezime = imeiPrezime[1]
