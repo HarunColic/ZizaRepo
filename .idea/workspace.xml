@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/static/sessionstorage.js" line="86" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sessionstorage.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/sessionstorage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editProfilPL.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilPL.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="54">
+              <caret line="243" column="86" lean-forward="true" selection-start-line="243" selection-start-column="86" selection-end-line="243" selection-end-column="86" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -32,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="480" column="31" lean-forward="true" selection-start-line="480" selection-start-column="31" selection-end-line="480" selection-end-column="31" />
+            <state relative-caret-position="178">
+              <caret line="729" column="25" lean-forward="true" selection-start-line="729" selection-start-column="25" selection-end-line="729" selection-end-column="25" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -42,58 +47,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post/management/commands/smartFind.py">
+        <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="464" column="36" selection-start-line="464" selection-start-column="36" selection-end-line="464" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/forgotPass.html">
+        <entry file="file://$PROJECT_DIR$/static/sessionstorage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="1649" column="35" selection-start-line="1649" selection-start-column="35" selection-end-line="1649" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="363" lean-forward="true" selection-start-line="363" selection-end-line="363" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="625" lean-forward="true" selection-start-line="625" selection-end-line="625" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="836" column="20" lean-forward="true" selection-start-line="836" selection-start-column="20" selection-end-line="836" selection-end-column="20" />
+            <state relative-caret-position="-3">
+              <caret line="55" column="43" lean-forward="true" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -110,17 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sess</find>
-      <find>ql-ed</find>
-      <find>opis</find>
-      <find>form</find>
-      <find>Nazad</find>
-      <find>get</find>
-      <find>load s</find>
-      <find>LOKACIJA</find>
-      <find>index</find>
-      <find>swee</find>
-      <find>vidi osta</find>
       <find>Profil(</find>
       <find>O NAMA</find>
       <find>Obnovi</find>
@@ -140,6 +95,17 @@
       <find>home</find>
       <find>class=&quot;uvod__slike--registracija tReg&quot;</find>
       <find>Za</find>
+      <find>spremi</find>
+      <find>aktivirajPregled</find>
+      <find>mirsad</find>
+      <find>args</find>
+      <find>https</find>
+      <find>validationwi</find>
+      <find>validation</find>
+      <find>validatio</find>
+      <find>form</find>
+      <find>validationW</find>
+      <find>valida</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -177,17 +143,19 @@
         <option value="$PROJECT_DIR$/templates/forgotPass.html" />
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
         <option value="$PROJECT_DIR$/post/management/commands/smartFind.py" />
-        <option value="$PROJECT_DIR$/account/views.py" />
-        <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/editProfilPL.html" />
+        <option value="$PROJECT_DIR$/static/sessionstorage.js" />
+        <option value="$PROJECT_DIR$/post/views.py" />
+        <option value="$PROJECT_DIR$/account/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1908" />
+    <option name="x" value="229" />
     <option name="y" value="119" />
-    <option name="width" value="1289" />
-    <option name="height" value="555" />
+    <option name="width" value="975" />
+    <option name="height" value="557" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,6 +163,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,9 +190,7 @@
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
@@ -244,11 +211,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Ziza/settings.py" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -319,12 +286,14 @@
       <workItem from="1552942796682" duration="4908000" />
       <workItem from="1553272977053" duration="3910000" />
       <workItem from="1553464327851" duration="1068000" />
-      <workItem from="1553966330531" duration="13321000" />
+      <workItem from="1553966330531" duration="13996000" />
+      <workItem from="1554209827170" duration="544000" />
+      <workItem from="1554742212479" duration="13497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53878000" />
+    <option name="totallyTimeSpent" value="68594000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -336,16 +305,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11953042" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14924182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1954023" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23615634" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3221406" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23615634" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32084692" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295099" />
@@ -355,7 +324,7 @@
       <window_info active="true" anchor="bottom" id="manage.py@untitled" order="10" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.12906611" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.1286645" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -395,8 +364,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/post/views.py</url>
-          <line>359</line>
+          <line>364</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/post/views.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/post/views.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -443,13 +422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="73" selection-start-line="29" selection-start-column="73" selection-end-line="29" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="608" column="3" lean-forward="true" selection-start-line="608" selection-start-column="3" selection-end-line="610" />
         </state>
       </provider>
     </entry>
@@ -595,13 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="836" column="20" lean-forward="true" selection-start-line="836" selection-start-column="20" selection-end-line="836" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/post/management/commands/BozicniMail.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -612,10 +577,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
+    <entry file="file://$PROJECT_DIR$/post/management/commands/smartFind.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="625" lean-forward="true" selection-start-line="625" selection-end-line="625" />
+        <state relative-caret-position="480">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -626,27 +594,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="363" lean-forward="true" selection-start-line="363" selection-end-line="363" />
+        <state relative-caret-position="24885">
+          <caret line="1659" column="22" selection-start-line="1659" selection-start-column="22" selection-end-line="1659" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post/management/commands/smartFind.py">
+    <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="5445">
+          <caret line="363" selection-start-line="363" selection-end-line="363" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9375">
+          <caret line="625" selection-start-line="625" selection-end-line="625" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12540">
+          <caret line="836" column="20" selection-start-line="836" selection-start-column="20" selection-end-line="836" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/psycopg2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1192">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sessionstorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="55" column="43" lean-forward="true" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="464" column="36" selection-start-line="464" selection-start-column="36" selection-end-line="464" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="480" column="31" lean-forward="true" selection-start-line="480" selection-start-column="31" selection-end-line="480" selection-end-column="31" />
+        <state relative-caret-position="178">
+          <caret line="729" column="25" lean-forward="true" selection-start-line="729" selection-start-column="25" selection-end-line="729" selection-end-column="25" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -655,18 +655,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="54">
+          <caret line="243" column="86" lean-forward="true" selection-start-line="243" selection-start-column="86" selection-end-line="243" selection-end-column="86" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="1649" column="35" selection-start-line="1649" selection-start-column="35" selection-end-line="1649" selection-end-column="35" />
         </state>
       </provider>
     </entry>

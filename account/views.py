@@ -45,10 +45,32 @@ def validation(request, args):
 
     for i in args:
         if i == "" or i is None:
-            sweetify.error(request, title="Unesite obavezna polja", text="", icon="error", timer=10000)
+            sweetify.error(request, title="Unesite obavezna polja", text="", icon="error", timer=4000)
             return False
 
     return True
+
+
+def validationWithKeys(request, args,keys,argsErr):
+
+    counter = 0
+    valid = True
+    errMessage = ''
+    returnStr = '?'
+
+    for i in args:
+        if(i is not None):
+            returnStr += '&'+keys[counter]+'='+i
+        if i == "" or i is None:
+            errMessage += 'Polje ' + argsErr[counter] + ' je obavezno <br>'
+            valid = False
+        counter += 1
+
+    if(valid == False):
+        sweetify.error(request, title="Obavijest", html=errMessage, icon="error", timer=4000)
+        return returnStr
+
+    return valid
 
 
 def home(request):
@@ -210,8 +232,10 @@ def register(request):
                 lozinka = request.POST['pswd']
 
                 args = [user.first_name, user.last_name, user.email, lozinka]
+                keys = ['FirstName', 'LastName', 'mail', 'pswd']
+                argErr = ["Ime", "Prezime", 'mail', 'Lozinka']
 
-                if not validation(request, args):
+                if not validationWithKeys(request, args, keys, argErr):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 if len(user.last_name) >= 30:
@@ -286,9 +310,11 @@ def register(request):
                                         icon="error", timer=10000)
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-                args = [user.first_name, user.last_name, user.email, lozinka, categoryname]
+                args = [user.first_name, user.last_name, user.email, lozinka, categoryname, City]
+                keys = ['FirstName', 'LastName', 'mail', 'pswd', 'Category', 'City']
+                argErr = ["Naziv", "ID Broj", 'Mail', 'Lozinka', 'Djelatnost', 'Lokacija']
 
-                if not validation(request, args):
+                if not validationWithKeys(request, args, keys, argErr):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 category = Category.objects.filter(name=categoryname,type=0)[0]
@@ -375,8 +401,10 @@ def signin(request):
         password = request.POST['pswd'].strip()
 
         args = [mail, password]
+        keys = ['mail', 'pswd']
+        argErr = ['Email', 'Lozinka']
 
-        if not validation(request, args):
+        if not validationWithKeys(request, args, keys, argErr):
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
         if User.objects.filter(email=mail).exists():
@@ -461,8 +489,12 @@ def submitchange(request):
                 slika = request.FILES.get('profilePicture', default=None)
                 webStranica = request.POST.get('webStranica', None)
                 izvjestaj = request.FILES.get('finIzvjestaj', None)
+
                 args = [name, mail, brojtel, grad, cat, brojuposlenika, opis]
-                if not validation(request, args):
+                keys = ['naslov', 'email', 'brojTel', 'City', 'category', 'brojuposlenih', 'opis']
+                argErr = ['Naziv', 'Email', 'Broj Telefona', 'Grad', 'Katetegorija', 'Broj Uposlenika', 'Opis']
+
+                if not validationWithKeys(request, args, keys, argErr):
                     sweetify.sweetalert(request, title="Sva polja obavezna", icon="error")
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
@@ -557,9 +589,11 @@ def submitchange(request):
                     filename = fs.save(myfile.name, myfile)
                     uploaded_file_url = fs.url(filename)
 
-                args = [email, name, grad, kontaktBroj, opis, strucnaSprema, obrazovanje]
+                args = [name, email, grad, kontaktBroj, opis, strucnaSprema, obrazovanje]
+                keys = ['naslov', 'email', 'grad', 'opis', 'strucnaSprema', 'obrazovanje']
+                argErr = ['Ime', 'Email', 'Grad', 'Kontakt broj', 'Opis', 'Strucna Sprema', 'Obrazovanje']
 
-                if not validation(request, args):
+                if not validationWithKeys(request, args, keys, argErr):
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                 imeiPrezime = name.split()
@@ -830,11 +864,11 @@ def anonimnaPretraga(request, id):
         usr = None
     if id == '1':
         postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=2).exclude(
-            userID__first_name='Ziza').exclude(soft_delete=True)
+            userID__first_name='Ziza').exclude(soft_delete=True).order_by('-created_at')
         zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=2).exclude(soft_delete=True)
     elif id == '2':
         postovi = Post.objects.all().exclude(soft_delete=True).exclude(type=1).exclude(
-            userID__first_name='Ziza').exclude(soft_delete=True)
+            userID__first_name='Ziza').exclude(soft_delete=True).order_by().order_by('-created_at')
         zizaPosts = Post.objects.filter(userID__first_name='Ziza').exclude(type=1).exclude(soft_delete=True)
     else:
         return redirect('home')

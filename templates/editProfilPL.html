@@ -462,7 +462,7 @@
 
 				<!-- Sacuvaj u bazi i ove spreme, koristit cemo ih na citavoj stranici -->
 				<div style="margin-top: 20px">
-					<label>Stručna sprema</label><br>
+					<label>{{ mirsad }}Stručna sprema</label><br>
 					<select name="strucnaSprema">
 						<option value="" disabled selected>Izaberi spremu</option>
 			    		<option value="I stepen - četiri razreda osnovne">I stepen - četiri razreda osnovne</option>
@@ -618,9 +618,18 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+
 <script  type="text/javascript" src="{% static 'sessionstorage.js' %}" ></script>
+
 <script>
 
+
+
+
+   /* for (let i = 0; i < options.length; i++) {
+
+        options[i].value = localStorage.getItem(options[i].getAttribute('name'));
+    }
 
 /*
   var quill = new Quill('#editor-container', {
