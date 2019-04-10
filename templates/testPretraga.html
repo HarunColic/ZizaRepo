@@ -66,6 +66,7 @@
             }
             .logotipFirme img{
             	max-width: 300px;
+            	max-height: 150px;
             }
             .srce{
             	display: none;
@@ -160,12 +161,21 @@
                 <option value="{{ c.name }}">{{ c.name }}</option>
                 {% endfor %}
             </select>
-            <select class="specBoxSel" name="gradovi">
-                <option value="" disabled selected>Lokacija</option>
+            <select class="specBoxSel" name="gradovi"> <!-- style="width: 250px" -->
+                <option value="" disabled selected>Grad <!-- Regija ili kanton --> </option>
                 {% for g in gradovi %}
                 <option value="{{ g.name }}">{{ g.name }}</option>
                 {% endfor %}
             </select>
+
+            <!--
+	            <select class="specBoxSel" name="gradovi" style="width: 250px">
+	                <option value="" disabled selected>Grad</option>
+	                {% for g in gradovi %}
+	                <option value="{{ g.name }}">{{ g.name }}</option>
+	                {% endfor %}
+	            </select>
+        	-->
 
             <img id="pretragaBTN" src="{% static 'images/Trazi.png' %}">
             </div>
@@ -217,19 +227,19 @@
                     </div>
                 </div>
             </div>
-           </a>
+        	</a>
      {% endwith %}
      {% endif %}
 
      {% if data|length >= 2 %}
       {% with obj=data.pop %}
         {% if auth %}
-            <a href="{% url 'showpost' id=obj.userID.userprofile.slugifyName  slug=obj.url %}">
+           
         {% else %}
-            <a class="tLog">
+           
         {% endif %}
         <div class="kolona srednjaKol">
-            <div class="single-kucica" style="margin-top: -87px">
+            <div class="single-kucica" style="margin-top: -87px; cursor: pointer;" onclick="window.open('{% url 'showpost' id=obj.userID.userprofile.slugifyName  slug=obj.url %}', '_self')">
                     {% for u in users %}
                         {% if obj.userID == u %}
                             {% for up in userPs %}
@@ -252,7 +262,6 @@
                 </div>
             </div>
         </div>
-          </a>
      {% endwith %}
      {% else %}
          <div class="kolona srednjaKol" style="visibility: hidden">
