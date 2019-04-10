@@ -61,7 +61,9 @@ def validationWithKeys(request, args,keys,argsErr):
     for i in args:
 
         if i is not None:
-            returnStr += '&'+keys[counter]+'='+i
+            if type(i) is str:
+                returnStr += '&'+keys[counter]+'='+i
+
         if i == "" or i is None:
             errMessage += 'Polje ' + argsErr[counter] + ' je obavezno <br>'
             valid = False
@@ -169,7 +171,7 @@ def profil(request):
             posts = paginator.page(page)
             rng = range(1, paginator.num_pages + 1)
 
-            exhibs = Exhibition.objects.filter(userID=request.user)
+            exhibs = Exhibition.objects.filter(userID=request.user).order_by('-created_at')
 
             exhibPaginator = Paginator(exhibs, 5)
             exhibPage = request.GET.get('pageI', 1)

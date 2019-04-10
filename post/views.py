@@ -100,7 +100,7 @@ def createpost(request):
 
             valid = validationWithKeys(request, args, keys, argErr)
 
-            if valid != True:
+            if valid is not True:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
 
             cat = Category.objects.get(name=category)
@@ -164,7 +164,7 @@ def createpost(request):
 
             valid = validationWithKeys(request, args, keys, argErr)
 
-            if valid != True:
+            if valid is not True:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
 
             cat = Category.objects.get(name=category)
@@ -407,7 +407,7 @@ def updatePost(request, id):
 
             valid = validationWithKeys(request, args, keys, argErr)
 
-            if valid != True:
+            if valid is not True:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
             cat = Category.objects.get(name=category)
 
@@ -469,7 +469,7 @@ def updatePost(request, id):
 
             valid = validationWithKeys(request, args, keys, argErr)
 
-            if valid != True:
+            if valid is not True:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
             cat = Category.objects.get(name=category)
 
@@ -647,7 +647,7 @@ def createExhibition(request):
 
         valid = validationWithKeys(request, args, keys, argErr)
 
-        if valid != True:
+        if valid is not True:
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
 
         izlog = Exhibition(userID=request.user, title=naslov, sub_title=podnaslov, details=sadrzaj, image=slika)
@@ -727,7 +727,7 @@ def SaveIzlog(request, id):
 
         valid = validationWithKeys(request, args, keys, argErr)
 
-        if valid != True:
+        if valid is not True:
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
 
         izlog.userID=request.user
