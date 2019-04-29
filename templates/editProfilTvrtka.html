@@ -405,16 +405,16 @@
 			<h1>O <span>NAMA</span></h1>
                 <div>
 					<label>Naslov kompanije</label><br>
-					<input value="{{ user.first_name }}" type="text" id='naslovInput' name="naslov" placeholder="Puni naziv Vaše kompanije" style="width: 100%">
+					<input value="{{ user.first_name }}" required type="text" id='naslovInput' name="naslov" placeholder="Puni naziv Vaše kompanije" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Kontakt e-mail adresa</label><br>
-						<input value="{{ user.email }}" type="email" name="email" style="width: 100%">
+						<input value="{{ user.email }}" required type="email" name="email" style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
 						<label>Kontakt broj</label><br>
-						<input  {% if userP.brojtelefona %} value="{{ userP.brojtelefona }}" {% endif %} type="text" name="brojTel" style="width: 100%">
+						<input  {% if userP.brojtelefona %} value="{{ userP.brojtelefona }}" {% endif %} type="text" required name="brojTel" style="width: 100%">
 					</div>
 				</div>
 				<div style="margin-top: 20px">
@@ -426,7 +426,7 @@
 				</div>
 				<div style="margin-top: 20px">
 					<label>Kategorija</label><br>
-					<select name="category">
+					<select name="category" required>
 						<option value="{{ comp.categoryID.name }}" >{{ comp.categoryID.name }}</option>
                         {% for c in cat %}
                             {% if c.name != comp.categoryID.name %}
@@ -440,18 +440,18 @@
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
 						<label>Broj uposlenih</label><br>
-						<input value="{{ comp.brojuposlenih }}" type="number" id='brojUposlenihInput' name="brojuposlenih" style="width: 100%">
+						<input required value="{{ comp.brojuposlenih }}" type="number" id='brojUposlenihInput' name="brojuposlenih" style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
 						<label>Web stranica</label><br>
-						<input value="" type="text" id='webStranica' name="webStranica" style="width: 100%" placeholder="https://www...">
+						<input required value="" type="text" id='webStranica' name="webStranica" style="width: 100%" placeholder="https://www...">
 					</div>
 
 				</div>
 				<div  style="margin-top: 30px;">
 					<label style="margin-bottom: 8px;" class="specLab">O nama</label>
 					<!-- TEXTEDITOR zapocinje -->
-					<input value="" name="opis" type="hidden">
+					<input value="" name="opis" type="hidden" required>
       				<div id="editor-container">{{ comp.opis|safe }}</div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
@@ -470,7 +470,7 @@
 						</div>
 					</div>
 				</div>
-				<button id="aktivirajPregled">SPREMI<img src="{%  static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+				<button type="submit" id="aktivirajPregled">SPREMI<img src="{%  static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
 			</form>
 		</div>
 	</div> <!-- formaBody END -->
@@ -490,7 +490,6 @@
 		$("#aktivirajPregled").click(function(){
 		     var about = document.querySelector('input[name=opis]');
   about.value = $('.ql-editor').html();//JSON.parse(quill.getContents());
-		  form.submit();
 		});
 
 	</script>
@@ -548,13 +547,17 @@ $("#imageUpload").change(function() {
 
     $(document).ready(function(){
    $('#aktivirajPregled').click(function(){
-      $('#editProfil').submit()
    })
 })
 
 </script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript">
+
+	$('.logotipNavbarMali').click(function(){
+		window.open('https://ziza.ba/', '_self');
+	});
+	
 	/**
  * All auto suggestion boxes are fucked up or badly written.
  * This is an attempt to create something that doesn't suck...

@@ -3,7 +3,7 @@
 <head>
 {% load static %}
 
-	<title>ŽIŽA.ba | Kreiraj oglas</title>
+	<title>ŽIŽA.ba | Uredi oglas</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -15,11 +15,133 @@
 	<link rel="stylesheet" href="node_modules/trumbowyg/dist/ui/trumbowyg.css">
 	<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static 'style-dodajOglas.css' %}">
+	<style type="text/css">
+	.ql-container.ql-snow{
+	height: 300px;
+}
+	.detaljniOpis img{
+			max-width: 1000px;
+			height: auto;
+		}
+		@media only screen and (max-width: 1175px){
+			.detaljniOpis img{
+				max-width: 700px;
+			}
+		}
+		@media only screen and (max-width: 840px){
+			.detaljniOpis img{
+				max-width: 450px;
+			}
+		}
+		@media only screen and (max-width: 505px){
+			.detaljniOpis img{
+				max-width: 400px;
+			}
+		}
+		@media only screen and (max-width: 415px){
+			.detaljniOpis img{
+				max-width: 300px;
+			}
+		}
+		input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button { 
+		  -webkit-appearance: none; 
+		  margin: 0; 
+		}
+		@media screen and (max-width: 1210px){
+			.footer{
+				display: none;
+			}
+		}
+		.formaBody{
+			height: 100%;
+			padding-bottom: 40px;
+		}
+		.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+		
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
+
+		@media screen and (max-width: 414px){
+			.coverSlika {
+			    height: 400px;
+			}
+			.navigacija{
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 900px){
+			.sadrzaj h1{
+				padding-right: 35px;
+			}
+		}
+	</style>
 </head>
-<body>
+<body style="position: relative">
+
+
+	<img src="/static/images/logoNew.png" class="logotipNavbarMali">
+
 {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
     {% include 'header.html' %}
     {% endwith %}
+
+    <style type="text/css">
+    	body{
+    		background: #f9f5e5 !important;
+    	}
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+		@media only screen and (max-width: 990px){
+			body{
+				margin-top: -20px !important;
+			}
+		}
+		@media screen and (max-width: 414px){
+	.avatarKucica{
+		margin-left: 50px;
+	}
+}
+
+    </style>
 
 
 
@@ -37,7 +159,7 @@
 		<div class="tvrtka">
 			<div class="avatarKucica">
                 {% if userP.image %}
-				<img style="width: 300px; height: 200px;" src="{{ userP.image.url }}">
+				<img style="max-width: 250px; height: auto;" src="{{ userP.image.url }}">
                 {% endif %}
 			</div>
 			<div class="podaciT">
