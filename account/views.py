@@ -124,7 +124,7 @@ def home(request):
     sviOglasi = Post.objects.all().exclude(soft_delete=True).exclude(categoryID__name="Osiguravajuće")\
         .exclude(categoryID__name="Finansijske").order_by('-created_at')[0:4]
 
-    izlozi = Exhibition.objects.all().order_by('-created_at')
+    izlozi = Exhibition.objects.all().order_by('-created_at').exclude(soft_delete=True)
 
     if request.user.is_authenticated:
 
@@ -171,7 +171,7 @@ def profil(request):
             posts = paginator.page(page)
             rng = range(1, paginator.num_pages + 1)
 
-            exhibs = Exhibition.objects.filter(userID=request.user).order_by('-created_at')
+            exhibs = Exhibition.objects.filter(userID=request.user).order_by('-created_at').exclude(soft_delete=True)
 
             exhibPaginator = Paginator(exhibs, 5)
             exhibPage = request.GET.get('pageI', 1)
@@ -1037,7 +1037,7 @@ def profilKorisnika(request, id, slug):
             userPP = UserProfile.objects.get(userID=userr)
             postovi = Post.objects.filter(soft_delete=False).filter(userID=userr)
 
-            exhibs = Exhibition.objects.filter(userID=userr)
+            exhibs = Exhibition.objects.filter(userID=userr).exclude(soft_delete=True)
 
             exhibPaginator = Paginator(exhibs, 5)
             exhibPage = request.GET.get('pageI', 1)

@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/location/migrations/0012_auto_20190413_1604.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/management/commands/KantoniRegije.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/management/commands/KantoniGradovi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/location/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profilTvrtka.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="878" column="86" selection-start-line="878" selection-start-column="86" selection-end-line="878" selection-end-column="86" />
+            <state relative-caret-position="262">
+              <caret line="173" column="116" selection-start-line="173" selection-start-column="116" selection-end-line="173" selection-end-column="116" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -36,10 +36,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/post/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1298">
+              <caret line="759" column="14" selection-start-line="759" selection-start-column="14" selection-end-line="759" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="506" column="36" lean-forward="true" selection-start-line="506" selection-start-column="36" selection-end-line="506" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#button#1;n#span#2;n#div#1;n#div#0;n#div#0;n#div#0;n#a#0;n#div#3;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+            <state relative-caret-position="263">
+              <caret line="72" column="79" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
               <folding>
                 <element signature="e#628#660#0" expanded="true" />
               </folding>
@@ -48,55 +72,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
+        <entry file="file://$PROJECT_DIR$/post/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="170" column="16" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/location/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            <state relative-caret-position="392">
+              <caret line="141" selection-start-line="141" selection-end-line="141" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post/management/commands/KantoniRegije.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post/management/commands/GenerateTitle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/account/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -113,13 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updat</find>
-      <find>home</find>
-      <find>class=&quot;uvod__slike--registracija tReg&quot;</find>
-      <find>Za</find>
-      <find>spremi</find>
-      <find>aktivirajPregled</find>
-      <find>mirsad</find>
       <find>args</find>
       <find>https</find>
       <find>validationwi</find>
@@ -136,19 +111,27 @@
       <find>if not vali</find>
       <find>!=</find>
       <find>izlog</find>
-      <find>profil(</find>
       <find>specBo</find>
       <find>profil</find>
       <find>class=&quot;specBoxSel&quot;</find>
       <find>anonimna</find>
       <find>anonim</find>
       <find>Grad</find>
+      <find>Foča</find>
+      <find>filter</find>
+      <find>Me</find>
+      <find>Z</find>
+      <find>Srebrenica</find>
+      <find>Exhi</find>
+      <find>uredi</find>
+      <find>profil(</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/sweetalert2@7&quot;&gt;&lt;/script&gt;</replace>
       <replace>Kompanija</replace>
       <replace>kompanije</replace>
+      <replace>get</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/untitled</dir>
@@ -174,20 +157,21 @@
         <option value="$PROJECT_DIR$/templates/newpost2.html" />
         <option value="$PROJECT_DIR$/templates/EditIzlog.html" />
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
-        <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/forgotPass.html" />
         <option value="$PROJECT_DIR$/post/management/commands/smartFind.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/editProfilPL.html" />
         <option value="$PROJECT_DIR$/static/sessionstorage.js" />
-        <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/account/admin.py" />
-        <option value="$PROJECT_DIR$/Ziza/urls.py" />
         <option value="$PROJECT_DIR$/location/models.py" />
         <option value="$PROJECT_DIR$/post/management/commands/KantoniRegije.py" />
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
+        <option value="$PROJECT_DIR$/post/management/commands/KantoniGradovi.py" />
+        <option value="$PROJECT_DIR$/Ziza/urls.py" />
+        <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
       </list>
     </option>
   </component>
@@ -203,6 +187,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,13 +219,6 @@
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -262,7 +240,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,12 +320,14 @@
       <workItem from="1554742212479" duration="15151000" />
       <workItem from="1554920462633" duration="3655000" />
       <workItem from="1555076063882" duration="603000" />
-      <workItem from="1555169548965" duration="3725000" />
+      <workItem from="1555169548965" duration="3825000" />
+      <workItem from="1556564703847" duration="6719000" />
+      <workItem from="1557278861137" duration="939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78231000" />
+    <option name="totallyTimeSpent" value="85989000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -363,14 +342,13 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15642458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16041501" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="manage.py@Ziza" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1954023" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21335505" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32084692" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21335505" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.24429968" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295099" />
@@ -380,7 +358,8 @@
       <window_info active="true" anchor="bottom" id="manage.py@untitled" order="10" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.1791531" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.17752443" />
+      <window_info active="true" anchor="bottom" id="manage.py@Ziza" order="14" visible="true" weight="0.32843652" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -451,16 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post/management/commands/DodajGradove.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="119" selection-end-line="119" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -562,16 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -620,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9375">
-          <caret line="625" selection-start-line="625" selection-end-line="625" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12540">
@@ -647,16 +599,6 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10395">
-          <caret line="709" column="35" selection-start-line="709" selection-start-column="29" selection-end-line="709" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -682,37 +624,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="2880">
+          <caret line="192" column="28" selection-start-line="192" selection-start-column="28" selection-end-line="192" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
+    <entry file="file://$PROJECT_DIR$/post/management/commands/DodajGradove.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        <state>
+          <caret selection-end-line="7" selection-end-column="39" />
           <folding>
-            <element signature="e#628#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post/management/commands/GenerateTitle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/location/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="60">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -721,27 +653,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/post/management/commands/KantoniRegije.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="210">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/testPretraga.html">
+    <entry file="file://$PROJECT_DIR$/post/management/commands/GenerateTitle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="170" column="16" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
+        <state relative-caret-position="90">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/management/commands/KantoniGradovi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="153" column="28" lean-forward="true" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="72" column="79" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
+          <folding>
+            <element signature="e#628#660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1298">
+          <caret line="759" column="14" selection-start-line="759" selection-start-column="14" selection-end-line="759" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="878" column="86" selection-start-line="878" selection-start-column="86" selection-end-line="878" selection-end-column="86" />
+        <state relative-caret-position="262">
+          <caret line="173" column="116" selection-start-line="173" selection-start-column="116" selection-end-line="173" selection-end-column="116" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="506" column="36" lean-forward="true" selection-start-line="506" selection-start-column="36" selection-end-line="506" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#button#1;n#span#2;n#div#1;n#div#0;n#div#0;n#div#0;n#a#0;n#div#3;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

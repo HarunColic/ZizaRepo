@@ -70,6 +70,7 @@ urlpatterns = [
     url('izlog/(?P<id>[a-zA-Z0-9\-]+)/(?P<slug>[a-zA-Z0-9\-]+)', P_Views.izlog, name="izlog"),
     url('UrediIzlog/(?P<id>[0-9]+)/', P_Views.EditIzlog, name="UrediIzlog"),
     url('SaveIzlog/(?P<id>[0-9]+)/', P_Views.SaveIzlog, name="SaveIzlog"),
+    url('removeIzlog/(?P<id>[0-9]+)/', P_Views.removeIzlog, name="removeIzlog"),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

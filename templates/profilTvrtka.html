@@ -496,7 +496,8 @@
 							</span>
 							<span style="color: black">
 								{% if user == i.userID %}
-								<button class="editi" data-url="{% url 'UrediIzlog' id=i.pk %}" style="z-index:30;padding:10px;border-radius: 5px;color:white;background-color: #181818;margin-left:15px;">Uredi</button>
+								<button class="editi" data-url="{% url 'UrediIzlog' id=i.pk %}" style="z-index:30;padding:10px;border-radius: 5px;color:white;background-color: #181818;margin-left:15px; cursor: pointer;">Uredi</button>
+								<button class="editi" data-url="{% url 'removeIzlog' id=i.pk %}" style="z-index:30;padding:10px;border-radius: 5px;color:white;background-color: #181818;margin-left:15px; cursor: pointer;">Izbrisi</button>
 								{% endif %}
 							</span>
 						</div>

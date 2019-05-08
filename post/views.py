@@ -741,3 +741,20 @@ def SaveIzlog(request, id):
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def removeIzlog(request, id):
+
+    user = request.user
+
+    izlog = Exhibition.objects.get(pk=id)
+
+    if not user == izlog.userID:
+
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    else:
+        izlog.soft_delete = True
+        izlog.save()
+
+        sweetify.success(request, title="Uspjesno uklonjen izlog")
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
