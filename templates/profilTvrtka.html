@@ -492,7 +492,12 @@
 						<div>
 							<span style="text-transform: uppercase;">{{ i.sub_title }}</span>
 							<span style="color: black">
-								<span>{{ i.created_at.date|date:"d. m. Y."}}</span>
+								<span>{{ i.created_at.date|date:"d.m.Y."}}</span>
+							</span>
+							<span style="color: black">
+								{% if user == i.userID %}
+								<button class="editi" data-url="{% url 'UrediIzlog' id=i.pk %}" style="z-index:30;padding:10px;border-radius: 5px;color:white;background-color: #181818;margin-left:15px;">Uredi</button>
+								{% endif %}
 							</span>
 						</div>
                         
@@ -677,5 +682,9 @@
 	var sadrzajTeksta = document.getElementsByClassName('detaljniOpis')[0].innerHTML
 	var procisceniSadrzaj = sadrzajTeksta.replace(new RegExp('<p><br></p>', 'g'), "");
 	document.getElementsByClassName('detaljniOpis')[0].innerHTML = procisceniSadrzaj;
+	$('.editi').on('click',(e)=>{
+		e.preventDefault();
+		location.href = e.target.getAttribute('data-url');
+	})
 </script>
 </html>
