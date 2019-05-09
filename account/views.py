@@ -411,7 +411,7 @@ def signin(request):
 
         valid = validationWithKeys(request, args, keys, argErr)
 
-        if valid != True:
+        if valid is not True:
 
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
         if User.objects.filter(email=mail).exists():
@@ -503,7 +503,7 @@ def submitchange(request):
 
                 valid = validationWithKeys(request, args, keys, argErr)
 
-                if valid != True:
+                if valid is not True:
                     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/').split('?')[0] + valid)
                 user = request.user
                 userP = UserProfile.objects.get(userID=user)
