@@ -812,7 +812,7 @@
 					<div>
 						<div>{{ p.count_users}}</div> <!-- ukupni broj aplikanata -->
 						<div onclick="event.stopPropagation();location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
-						<div onclick="event.stopPropagation();location.href='{% url 'zavrsi' id=p.pk %}'">ZAVRŠI</div>
+						<div onclick="event.stopPropagation();location.href='{% url 'zavrsi' id=p.pk %}'">UKLONI</div>
 						<div></div> <!-- broj novih od zadnje posjete -->
 					</div>
 					<div>
@@ -1355,6 +1355,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
 <script type="text/javascript" src="skripta.js"></script>
 <script>
+	
 	$('.singleOglas__pregled').hover(function(){
 		$('div:eq(5)', this).toggleClass('sakrij');
 		$('div:eq(10)', this).toggle();

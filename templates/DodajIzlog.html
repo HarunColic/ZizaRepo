@@ -53,6 +53,9 @@
 			margin-left: -30px;
 		}
 	}
+	.detaljniOpis{
+		padding-bottom: 50px;
+	}
 	@media only screen and (max-width: 445px){
 		.formaBody {
 		    height: 1350px;
@@ -236,7 +239,7 @@
 				</div>
 				<div style="margin-top: 20px">
 				<label>Podnaslov novosti</label><br>
-					<input type="text" id='naslovInput' name="podnaslov" placeholder="npr. Svakog 10. u mjesecu" style="width: 100%">
+					<input type="text" id='podnaslovInput' name="podnaslov" placeholder="npr. Svakog 10. u mjesecu" style="width: 100%">
 
 				</div>
 
@@ -404,24 +407,33 @@ $(document).ready( function() {
 
 $('#aktivirajPregled').click(function(e){
 	e.preventDefault();
-	$('.formaBody').css('display', 'none');
-	$('.glavniDio').css('display', 'block');
-	$('.navNap1').removeClass("navAct");
-	$('.navNap2').addClass("navAct");
-	$('.navNapCr').css('margin-left', '155px');
-	$('.pregledTraka').css('display', 'flex');
-	$("html, body").animate({ scrollTop: 0 }, "slow");
-	$('.detaljniOpis').html($('.ql-editor').html());
-	var naslov = $('#naslovInput').val();
-	$('#nazivOglasa').html('<span>Izlog /</span> ' + naslov.toUpperCase());
-	var lokacija = $('#lokacijaInput').val();
-	$('#lokacijaPlace').html(lokacija.toUpperCase());
-	var pozicija = $('#pozicijaInput').val();
-	$('#pozicijaPlace').html(pozicija.toUpperCase());
-	var godine = $('#godineInput').val();
-	$('#iskustvoPlace').html(godine.toUpperCase()+'+');
-	var sprema = $('#spremaInput').val();
-	$('#spremaPlace').html(sprema.toUpperCase());
+	if($('#naslovInput').val() == ""){
+		Swal.fire('Naslov novosti je obavezno polje!')
+	}
+	else if($('#podnaslovInput').val() == ""){
+		Swal.fire('Podaslov novosti je obavezno polje!')
+	}
+	else if($('.avatarKucica div').css('background-image') == 'url("https://ziza.ba/static/images/defaultImage.jpeg")'){
+		Swal.fire('Naslovna slika je obavezno polje!')
+	}
+	else if($('.ql-editor').text() == false){
+		Swal.fire('Sadržaj novosti je obavezno polje!')
+	}
+	else if($('.ql-editor').text().trim().length < 50){
+		Swal.fire('Sadržaj novosti mora imati najmanje 200 karaktera!')
+	}
+	else{
+		$('.formaBody').css('display', 'none');
+		$('.glavniDio').css('display', 'block');
+		$('.navNap1').removeClass("navAct");
+		$('.navNap2').addClass("navAct");
+		$('.navNapCr').css('margin-left', '155px');
+		$('.pregledTraka').css('display', 'flex');
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+		$('.detaljniOpis').html($('.ql-editor').html());
+		var naslov = $('#naslovInput').val();
+		$('#nazivOglasa').html('<span>Izlog /</span> ' + naslov.toUpperCase());
+	}
 });
 $('#goBack').click(function(e){
 	e.preventDefault();

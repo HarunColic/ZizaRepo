@@ -4,7 +4,7 @@
 <head>
 	<title>ŽIŽA.ba | Naslovnica</title>
 
-	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -1495,7 +1495,7 @@ ul {list-style: none}
    			white-space: nowrap;
     		text-overflow: ellipsis;
     		text-transform: uppercase;
-    		width: 202px;
+    		width: 530px;
 		}
 		.oglasi2 .vrijemeObjave {
 		    font-family: 'Galano Regular';
@@ -1511,6 +1511,11 @@ ul {list-style: none}
 			margin-bottom: 40px;
 			border-radius: 15px;
 		}
+		.oglasi2 .vrijemeObjave{
+				position: absolute;
+			    right: 43px;
+			    top: 3px;
+			}
 		.oglasi3 .oglasi__kartica{
 			border-bottom: 1px solid #e5e5e5;
 		}
@@ -1548,12 +1553,28 @@ ul {list-style: none}
 			    max-width: 500px;
 			}
 		}
-		@media screen and (max-width: 1475px){
+		@media screen and (max-width: 1590px){
 			.oglasi2 .oglasi__kartica--sadrzaj--slika{
-				display: none;
+				position: absolute;
+			}
+			.oglasi2 .oglasi__kartica--sadrzaj--tekst{
+				width: 358px;
+			}
+			.oglasi2 .vrijemeObjave{
+				position: absolute;
+			    right: 53px;
+			    top: 11px;
+			}
+			.oglasi2 .zanimanje{
+				width: 320px;
 			}
 			.oglasi2 .oglasi__kartica{
-				width: 420px;
+				width: 620px;
+			}
+		}
+		@media screen and (max-width: 1530px){
+			.oglasi__kartica{
+				width: 600px;
 			}
 		}
 		@media screen and (max-width: 1275px){
