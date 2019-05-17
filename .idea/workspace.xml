@@ -43,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="1468" lean-forward="true" selection-start-line="1468" selection-end-line="1468" />
+            <state relative-caret-position="331">
+              <caret line="1471" lean-forward="true" selection-start-line="1471" selection-end-line="1471" />
             </state>
           </provider>
         </entry>
@@ -333,12 +333,12 @@
       <workItem from="1557278861137" duration="999000" />
       <workItem from="1557442406368" duration="1396000" />
       <workItem from="1557955007100" duration="8006000" />
-      <workItem from="1558051686392" duration="2985000" />
+      <workItem from="1558051686392" duration="3009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98436000" />
+    <option name="totallyTimeSpent" value="98460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -769,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="1468" lean-forward="true" selection-start-line="1468" selection-end-line="1468" />
+        <state relative-caret-position="331">
+          <caret line="1471" lean-forward="true" selection-start-line="1471" selection-end-line="1471" />
         </state>
       </provider>
     </entry>

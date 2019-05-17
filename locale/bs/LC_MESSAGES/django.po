@@ -1466,7 +1466,3 @@ msgid "Ovako će Vaš izlog izgledati nakon objave!"
 msgstr "Ovako će Vaš izlog izgledati nakon objave!"
 
 
-
-
-
-
