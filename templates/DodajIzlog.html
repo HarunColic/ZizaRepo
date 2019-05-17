@@ -16,7 +16,7 @@
 
 
     {% load static %}
-
+    {% load i18n %}
 
 <style type="text/css">
 	.formaBody{
@@ -151,7 +151,7 @@
 </head>
 <body style="position: relative;">
 
-	<img src="/static/images/logoNew.png" class="logotipNavbarMali">
+	<img src="{% static 'images/logoNew.png' %}" class="logotipNavbarMali">
 
 
 {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
@@ -198,11 +198,11 @@
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="{% url 'home' %}">Početna</a>
+				<a href="{% url 'home' %}">{% trans 'Početna' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
-				<a href="#" style="display: none;">Oglasi</a>
+				<a href="#" style="display: none;">{% trans 'Oglasi' %}</a>
 				<img src="{%  static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
-				<a href="#">Objava</a>
+				<a href="#">{% trans 'Objava' %}</a>
 			</div>
 			<div class="linijaD"></div>
 		</div>
@@ -213,15 +213,15 @@
                 {% endif %}
 			</div>
 			<div class="podaciT">
-				<div>TVRTKA</div>
+				<div>{% trans 'TVRTKA' %}</div>
 				<div>{{ user.first_name }}</div>
 				<div>
 					<div>
-						<span class="navNap navNap1 navAct" id="napraviOglas">Napravi novost</span>
+						<span class="navNap navNap1 navAct" id="napraviOglas">{% trans 'Napravi novost' %}</span>
 						<div class="navNapCr"></div>
 					</div>
 					<div>
-						<span class="navNap navNap2" style="margin-left: 190px; color: white" id="pregledajOglas">Pregled</span>
+						<span class="navNap navNap2" style="margin-left: 190px; color: white" id="pregledajOglas">{% trans 'Pregled' %}</span>
 					</div>
 				</div>
 			</div>
@@ -229,12 +229,12 @@
 	</div> <!-- coverSlika END -->
 	<div class="formaBody" style="position: relative;">
 		<div class="sadrzaj">
-			<h1>KREIRAJ <span>NOVOST</span></h1>
+			<h1>{% trans 'KREIRAJ' %} <span>{% trans 'NOVOST' %}</span></h1>
 			<form id="newpostForm" style="margin-top: 70px"  name="newpostFRM" method="post" action="{% url 'createExhibition' %} " enctype="multipart/form-data">
 				{% csrf_token %}
             <input type="hidden" name="type" value="1">
                 <div>
-					<label>Naslov novosti</label><br>
+					<label>{% trans 'Naslov novosti' %}</label><br>
 					<input type="text" id='naslovInput' name="naslov" placeholder="npr. Akcija" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px">
@@ -274,7 +274,7 @@
 
 				<div style=" display: none; margin-top: 20px; display: flex;" class="multipleFour">
 					<div style=" display: none; width: 23%; margin-right: 25px">
-						<label>Lokacija</label><br>
+						<label>{% trans 'Lokacija' %}</label><br>
                         {% with var=1 %}
                         {% include 'gradovi.html' %}
                         {% endwith %}

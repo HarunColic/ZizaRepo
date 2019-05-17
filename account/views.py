@@ -1217,7 +1217,7 @@ def CVs(request):
         userPs = paginator.page(page)
 
         return render(request, 'CVs.html', {'employees': employees, 'userPs': userPs, 'auth': True, 'userP': userP,
-                                            'rng': rng, 'page': int(page), 'kat': kat})
+                                            'rng': rng, 'page': int(page), 'kat': kat, 'usr': 'comp'})
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 

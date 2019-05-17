@@ -2,7 +2,8 @@
 <html lang="ba">
 <head>
     {% load static %}
-	<title>ŽIŽA.ba | Dashboard</title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'Dashboard' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -762,13 +763,13 @@
     </style>
 
 	<div class="main">
-		<h1><span>MOJI</span> OGLASI</h1>
+		<h1><span>{% trans 'MOJI' %}</span> {% trans 'OGLASI' %}</h1>
 		<div class="main__oglasi" style="margin-bottom: 30px;">
 			<div class="main__oglasi--filter">
 				<div class="main__oglasi--filter-part active" id="aktivniOglasi__button">
 					<div>
-						<span>AKTIVNI</span>
-						<span>OGLASI</span>
+						<span>{% trans 'AKTIVNI' %}</span>
+						<span>{% trans 'OGLASI' %}</span>
 					</div>
 					<div>
 						<div>{{ activePosts.paginator.count }}</div> <!-- ucitaj iz baze broj aktivnih -->
@@ -776,8 +777,8 @@
 				</div>
 				<div class="main__oglasi--filter-part" id="zavrseniOglasi__button">
 					<div>
-						<span>ZAVRŠENI</span>
-						<span>OGLASI</span>
+						<span>{% trans 'ZAVRŠENI' %}</span>
+						<span>{% trans 'OGLASI' %}</span>
 					</div>
 					<div>
 						<div>{{ inactivePosts.paginator.count }}</div>  <!-- ucitaj iz baze broj okončanih -->
@@ -786,7 +787,7 @@
 			</div>
           {% if activePosts.paginator.count == 0 %}
 
-                    <div class="main__oglasi--oglasi" id="aktivniOglasi" style=" display: flex;justify-content: center;align-items: center; background-color: #eeede7; font-family: Galano Bold;">Nemate objavljenih oglasa!
+                    <div class="main__oglasi--oglasi" id="aktivniOglasi" style=" display: flex;justify-content: center;align-items: center; background-color: #eeede7; font-family: Galano Bold;">{% trans 'Nemate objavljenih oglasa!' %}
 
                     {% else %}
 			<div class="main__oglasi--oglasi" id="aktivniOglasi">
@@ -806,17 +807,17 @@
 						</div>
 						<div>
 							<div>{{ p.categoryID.name}}</div>
-							<div>{{ p.created_at.date|date:"d. m. Y." }}  <span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }} {{ p.region }}{% else %} nepoznato{% endif %}</span></div>
+							<div>{{ p.created_at.date|date:"d. m. Y." }}  <span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }} {{ p.region }}{% else %} {% trans 'nepoznato' %}{% endif %}</span></div>
 						</div>
 					</div>
 					<div>
 						<div>{{ p.count_users}}</div> <!-- ukupni broj aplikanata -->
-						<div onclick="event.stopPropagation();location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
-						<div onclick="event.stopPropagation();location.href='{% url 'zavrsi' id=p.pk %}'">UKLONI</div>
+						<div onclick="event.stopPropagation();location.href='{% url 'urediPost' id=p.pk %}'" >{% trans 'UREDI' %}</div>
+						<div onclick="event.stopPropagation();location.href='{% url 'zavrsi' id=p.pk %}'">{% trans 'UKLONI' %}</div>
 						<div></div> <!-- broj novih od zadnje posjete -->
 					</div>
 					<div>
-						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> Aplikanata
+						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> {% trans 'Aplikanata' %}
                     </div>
 				</div>
                 {% endfor %}
@@ -841,7 +842,7 @@
 			</div>
     {% if inactivePosts.paginator.count == 0 %}
 
-            <div class="main__oglasi--oglasi" id="aktivniOglasi" style=" display: flex;justify-content: center;align-items: center; background-color: #eeede7; font-family: Galano Bold;">Nemate završenih oglasa!
+            <div class="main__oglasi--oglasi" id="aktivniOglasi" style=" display: flex;justify-content: center;align-items: center; background-color: #eeede7; font-family: Galano Bold;">{% trans 'Nemate završenih oglasa!' %}
 
                 {% else %}
 
@@ -859,18 +860,18 @@
 						</div>
 						<div>
 							<div>{{ p.categoryID.name }}</div>
-                            <div>{{ p.created_at.date|date:"d. m. Y." }}<span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }}{% else %} nepoznato{% endif %}</span></div>
+                            <div>{{ p.created_at.date|date:"d. m. Y." }}<span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }}{% else %} {% trans 'nepoznato' %}{% endif %}</span></div>
 
 						</div>
 					</div>
 					<div>
 						<div>{{ p.count_users }}</div> <!-- ukupni broj aplikanata -->
-						<div onclick="location.href='{% url 'urediPost' id=p.pk %}'" >UREDI</div>
-						<div onclick="location.href='{% url 'obnovi' id=p.pk %}'" >OBNOVI</div>
+						<div onclick="location.href='{% url 'urediPost' id=p.pk %}'" >{% trans 'UREDI' %}</div>
+						<div onclick="location.href='{% url 'obnovi' id=p.pk %}'" >{% trans 'OBNOVI' %}</div>
 						<div></div> <!-- ostaje prazno -->
 					</div>
 					<div>
-						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> Aplikanata
+						<span>{{ p.views }}</span> {% trans 'Pregleda' %} <span>{{ p.count_users }}</span> {% trans 'Aplikanata' %}
 					</div>
 				</div>
                 {% endfor %}
@@ -1240,20 +1241,20 @@
 	}
        	</style>
 
-		<h1 style="margin-left: 50px; margin-bottom: 0"><span>PRILIKE</span></h1>
-		<h2>Najpopularniji oglasi iz Vaše branše.</h2>
+		<h1 style="margin-left: 50px; margin-bottom: 0"><span>{% trans 'PRILIKE' %}</span></h1>
+		<h2>{% trans 'Najpopularniji oglasi iz Vaše branše.' %}</h2>
 		<div class="main__filteri">
 			<div id="ponuda" activeCbx="false" class="inactive ponuda" style="margin-right: 36px">
 				<div><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
-				<div>PONUDA</div>
+				<div>{% trans 'PONUDA' %}</div>
 			</div>
 			<div id="potraznja" activeCbx="false" class="inactive potraznja" style="margin-right: 36px">
 				<div style="box-shadow: 0px 5px 10px 0 rgba(97, 177, 49, 0.25); background-color: #61b131;"><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
-				<div style="color: #61b131">POTRAŽNJA</div>
+				<div style="color: #61b131">{% trans 'POTRAŽNJA' %}</div>
 			</div>
 			<div id="partnerstvo" activeCbx="false" class="inactive suradnja">
 				<div style="box-shadow: 0px 5px 10px 0 rgba(177, 176, 171, 0.25); background-color: #f11212;"><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
-				<div style="color: #f11212">SURADNJA</div>
+				<div style="color: #f11212">{% trans 'SURADNJA' %}</div>
 			</div>
 		</div>
 
@@ -1326,14 +1327,14 @@
              {% endif %}
 {% if relevantPosts.paginator.count > 1 %}
 		<div class="bg_end">
-			<span>Želite li vidjeti još oglasa?</span>
+			<span>{% trans 'Želite li vidjeti još oglasa?' %}</span>
 		</div>
-		<button style="cursor: pointer" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'" id="aktivirajPregled">OGLASI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+		<button style="cursor: pointer" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'" id="aktivirajPregled">{% trans 'OGLASI' %}<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
 	{% else %}
     	<div class="bg_end">
-			<span>Trenutno nema oglasa iz Vaše branše!</span>
+			<span>{% trans 'Trenutno nema oglasa iz Vaše branše!' %}</span>
 		</div>
-		<button style="cursor: pointer" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'" id="aktivirajPregled">OGLASI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+		<button style="cursor: pointer" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'" id="aktivirajPregled">{% trans 'OGLASI' %}<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
         {% endif %}
             </div>
 
@@ -1342,7 +1343,7 @@
 	<div class="uvod__linkovi">
 			<a href="https://www.linkedin.com/company/ziza-connect-and-improve-your-business/"><img src="../static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
 			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="../static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
-			<p>Pratite nas</p>
+			<p>{% trans 'Pratite nas' %}</p>
 		</div>
 
 
