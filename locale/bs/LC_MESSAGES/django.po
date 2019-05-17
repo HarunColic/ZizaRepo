@@ -1404,84 +1404,68 @@ msgid "Napravi novost"
 msgstr "Napravi novost"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "KREIRAJ"
+msgstr "KREIRAJ"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "NOVOST"
+msgstr "NOVOST"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "Naslov novosti"
+msgstr "Naslov novosti"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "Podnaslov novosti"
+msgstr "Podnaslov novosti"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "Broj izvršitelja"
+msgstr "Broj izvršitelja"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid " Slika za izlog"
+msgstr " Slika za izlog"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "Pozicija"
+msgstr "Pozicija"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "Min. iskustva"
+msgstr "Min. iskustva"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "Stručna sprema"
+msgstr "Stručna sprema"
+
+msgid "Sadržaj"
+msgstr "Sadržaj"
+
+msgid "LOKACIJA"
+msgstr "LOKACIJA"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "POZICIJA"
+msgstr "POZICIJA"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "GODINE ISKUSTVA"
+msgstr "GODINE ISKUSTVA"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "BROJ IZVRŠITELJA"
+msgstr "BROJ IZVRŠITELJA"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "NAZAD"
+msgstr "NAZAD"
 
 
-msgid "Lizing"
-msgstr "Lizing"
+msgid "Ovako će Vaš izlog izgledati nakon objave!"
+msgstr "Ovako će Vaš izlog izgledati nakon objave!"
 
 
-msgid "Lizing"
-msgstr "Lizing"
-
-
-msgid "Lizing"
-msgstr "Lizing"
-
-
-msgid "Lizing"
-msgstr "Lizing"
-
-
-msgid "Lizing"
-msgstr "Lizing"
-
-
-msgid "Lizing"
-msgstr "Lizing"
-
-
-msgid "Lizing"
-msgstr "Lizing"
 
 
 

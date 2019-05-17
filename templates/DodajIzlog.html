@@ -238,7 +238,7 @@
 					<input type="text" id='naslovInput' name="naslov" placeholder="npr. Akcija" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px">
-				<label>Podnaslov novosti</label><br>
+				<label>{% trans 'Podnaslov novosti' %}</label><br>
 					<input type="text" id='podnaslovInput' name="podnaslov" placeholder="npr. Svakog 10. u mjesecu" style="width: 100%">
 
 				</div>
@@ -248,21 +248,21 @@
 					<div style="width: 53.22%; margin-right: 25px">
 						<!--<label>Trajanje oglasa</label><br>-->
 						<select name="expiration" style=" display: none; width: 100%">
-							<option value="" disabled selected>Izaberi trajanje</option>
-	                        <option value="7">7 dana</option>
-				    		<option value="15">15 dana</option>
-				    		<option value="30">30 dana</option>
-				    		<option value="60">60 dana</option>
-				    		<option value="0">Neograničeno</option>
+							<option value="" disabled selected>{% trans 'Izaberi trajanje' %}</option>
+	                        <option value="7">7 {% trans 'dana' %}</option>
+				    		<option value="15">15 {% trans 'dana' %}</option>
+				    		<option value="30">30 {% trans 'dana' %}</option>
+				    		<option value="60">60 {% trans 'dana' %}</option>
+				    		<option value="0">{% trans 'Neograničeno' %}</option>
 						</select>
 					</div>
 					<div style=" display: none; width: 43.75%">
-						<label>Broj izvršitelja</label><br>
+						<label>{% trans 'Broj izvršitelja' %}</label><br>
 						<input type="number" id="spremaInput" name="brojIzvr" value="" style="width: 100%">
 					</div>
 				</div>
 
-                <label for="slika"> Slika za izlog</label>
+                <label for="slika">{% trans 'Slika za izlog' %}</label>
                 <div class="avatarKucica" style=" text-align: center; position: relative;">
 				<div style="width: 99%; height: 100%; background: url('{% static 'images/defaultImage.jpeg' %}'); background-size: contain; background-position: center; background-repeat: no-repeat;" id="imagePreview"></div>
 
@@ -280,30 +280,30 @@
                         {% endwith %}
 					</div>
 					<div style=" display: none; width: 23%; margin-right: 25px">
-						<label>Pozicija</label><br>
+						<label>{% trans 'Pozicija' %}</label><br>
 						<input type="text" id='pozicijaInput' name="pozicija" placeholder="npr. kuhar" style="width: 100%">
 					</div>
 					<div style=" display: none; width: 23%; margin-right: 25px">
-						<label>Min. iskustva</label><br>
+						<label>{% trans 'Min. iskustva' %}</label><br>
 						<input type="number" id='godineInput' name="godineIskustva" placeholder="npr. 3 godine" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="width: 100%">
 					</div>
 					<div style=" display: none; width: 23%;">
-						<label>Stručna sprema</label><br>
+						<label>{% trans 'Stručna sprema' %}</label><br>
 						<input type="text" id='sprema2Input' name="strucnasprema" placeholder="npr. SSS" style="width: 100%">
 					</div>
 				</div>
 				<div style=" display: none; margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style=" display: none; width: 53.22%; margin-right: 25px">
-						<label>Kontakt e-mail adresa</label><br>
+						<label>{% trans 'Kontakt e-mail adresa' %}</label><br>
 						<input type="email" value="{{ user.email }}" name="email" style="width: 100%">
 					</div>
 					<div style=" display: none; width: 43.75%">
-						<label>Kontakt broj</label><br>
+						<label>{% trans 'Kontakt broj' %}</label><br>
 						<input type="text" name="brojTel" value="{{ userP.brojtelefona }}" style="width: 100%">
 					</div>
 				</div>
 				<div  style="margin-top: 30px;">
-					<label style="margin-bottom: 8px" class="specLab">Sadrzaj</label>
+					<label style="margin-bottom: 8px" class="specLab">{% trans 'Sadržaj' %}</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
       				<div id="editor-container"></div>
@@ -311,39 +311,39 @@
 				</div>
 
 
-				<button id="aktivirajPregled" type="button">PREGLED<img src="../static/images/desnoPregled.png" style="margin-left: 11px"></button>
+				<button id="aktivirajPregled" type="button">{% trans 'PREGLED' %}<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
 			</form>
 		</div>
 	</div> <!-- formaBody END -->
 	<div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-                <h2 id="nazivOglasa"><span>OGLAS /</span> TRAŽIMO STROJARA</h2>
+                <h2 id="nazivOglasa"><span>{% trans 'OGLAS' %} /</span> TRAŽIMO STROJARA</h2>
                <!-- <p>Prijavom na oglas {{ user.first_name }} ima uvid u vaš CV!</p> -->
             </div>
 			<div style="display: none;" class="downloadPDF">
-				<img style="display: none;" src="../static/images/downloadikona.png"> PDF OGLAS
+				<img style="display: none;" src="../static/images/downloadikona.png"> PDF {% trans 'OGLAS' %}
 			</div>
 		</div>
 		<div style="display: none;" class="tabelarni">
 			<div>
 				<h3 id="lokacijaPlace">MOSTAR</h3>
-				<p>LOKACIJA</p>
+				<p>{% trans 'LOKACIJA' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3 id="pozicijaPlace">STROJAR</h3>
-				<p>POZICIJA</p>
+				<p>{% trans 'POZICIJA' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3 id="iskustvoPlace">3+</h3>
-				<p>GODINE ISKUSTVA</p>
+				<p>{% trans 'GODINE ISKUSTVA' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3 id="spremaPlace">B</h3>
-				<p>BROJ IZVRŠITELJA</p>
+				<p>{% trans 'BROJ IZVRŠITELJA' %}</p>
 			</div>
 		</div>
 		<div class="detaljniOpis">
@@ -363,11 +363,11 @@
 	<div class="pregledTraka">
 		<div style="font-family: 'Galano Black'; margin-left: 50px;">
 			<img src="../static/images/desnoPregled.png" style="transform: rotate(180deg); margin-right: 11px">
-			<span id="goBack">NAZAD</span>
+			<span id="goBack">{% trans 'NAZAD' %}</span>
 		</div>
 		<div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;">
-			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">Ovako će Vaš izlog izgledati nakon objave!</div>
-			<span id="objaviOglas">OBJAVI</span><img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px">
+			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">{% trans 'Ovako će Vaš izlog izgledati nakon objave!' %}</div>
+			<span id="objaviOglas">{% trans 'OBJAVI' %}</span><img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px">
 		</div>
 	</div>
 

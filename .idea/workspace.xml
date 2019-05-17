@@ -5,81 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dzeva.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/dodajPotraznju.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/index.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/logiran.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/newpost.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/oglas.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/req.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/fonts/README.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/img/README.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/HELP-US-OUT.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/montserrat/OFL.txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/AffanReport.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Aplikanti.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Aplikanti.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Aplikanti.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/BozicniMail.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/CVs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CVs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/CVs.html.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/DodajIzlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/DodajIzlog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/DodajIzlog.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/EditIzlog.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Izlog.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/MailoviBezLogotipa.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/OsiguranjeUsluge.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ProfilKorisnika.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ProfilKorisnikaLP.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/acc_active_email.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bankarskeUsluge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge2.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comingsoon.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/conatctAll.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju2.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editProfilPL.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editProfilTvrtka.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/finansijsko-savjetovanje.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/firme.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/forgotPass.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gradovi.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/interim-menadzment.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/konsalting.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/korisnik.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mojaKarijera.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newpost.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newpost2.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/oglas.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/onamanew.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pozovi.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pravno-savjetovanje.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pretrazi.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profilTvrtka.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shareBtns.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/smartFind.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/testPretraga.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/testclanovi.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/testpristup.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/testprofil.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/treninzi-i-edukacije.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zahvalnica.html.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zizaKorisnika.html.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,20 +40,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="1202" column="14" selection-start-line="1202" selection-start-column="7" selection-end-line="1202" selection-end-column="14" />
+            <state relative-caret-position="286">
+              <caret line="1468" lean-forward="true" selection-start-line="1468" selection-end-line="1468" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/DodajIzlog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="236" column="51" selection-start-line="236" selection-start-column="51" selection-end-line="236" selection-end-column="51" />
+            <state relative-caret-position="-1134">
+              <caret line="368" column="154" selection-start-line="368" selection-start-column="154" selection-end-line="368" selection-end-column="154" />
             </state>
           </provider>
         </entry>
@@ -188,27 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>OBJAVI</find>
-      <find>DJELATNOST</find>
-      <find>BROJ UPOSLENIH</find>
-      <find>KONTAKT</find>
-      <find>FILTRIRAJ</find>
-      <find>CVs</find>
-      <find>PREUZMI CV</find>
-      <find>AKTIVNI</find>
-      <find>ZAVRŠENI</find>
-      <find>nepoznato</find>
-      <find>UKLONI</find>
-      <find>Nemate završenih oglasa!</find>
-      <find>OBNOVI</find>
-      <find>UREDI</find>
-      <find>Pregleda</find>
-      <find>Aplikanata</find>
-      <find>PRILIKE</find>
-      <find>PONUDA</find>
-      <find>POTRAŽNJA</find>
-      <find>SURADNJA</find>
-      <find>OGLASI</find>
       <find>Želite li vidjeti još oglasa?</find>
       <find>Trenutno nema oglasa iz Vaše branše!</find>
       <find>Pratite nas</find>
@@ -218,6 +124,27 @@
       <find>TVRTKA</find>
       <find>Lokacija</find>
       <find>Pregled</find>
+      <find>KREIRAJ</find>
+      <find>NOVOST</find>
+      <find>Podnaslov novosti</find>
+      <find>Izaberi trajanje</find>
+      <find>Broj izvršitelja</find>
+      <find>Slika za izlog</find>
+      <find>Pozicija</find>
+      <find>Min. iskustva</find>
+      <find>Stručna sprema</find>
+      <find>Kontakt e-mail adresa</find>
+      <find>Kontakt broj</find>
+      <find>Ž</find>
+      <find>Sadržaj</find>
+      <find>PREGLED</find>
+      <find>LOKACIJA</find>
+      <find>POZICIJA</find>
+      <find>GODINE ISKUSTVA</find>
+      <find>BROJ IZVRŠITELJA</find>
+      <find>NAZAD</find>
+      <find>OBJAVI</find>
+      <find>Ovako će Vaš izlog izgledati nakon objave!</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -269,8 +196,8 @@
         <option value="$PROJECT_DIR$/templates/CVs.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/templates/DodajIzlog.html" />
+        <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
       </list>
     </option>
   </component>
@@ -406,12 +333,12 @@
       <workItem from="1557278861137" duration="999000" />
       <workItem from="1557442406368" duration="1396000" />
       <workItem from="1557955007100" duration="8006000" />
-      <workItem from="1558051686392" duration="2050000" />
+      <workItem from="1558051686392" duration="2985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97501000" />
+    <option name="totallyTimeSpent" value="98436000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,7 +353,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16759777" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16759777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -442,7 +369,7 @@
       <window_info active="true" anchor="bottom" id="manage.py@untitled" order="10" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.1742671" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.1742671" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="14" weight="0.32736155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -833,17 +760,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
+    <entry file="file://$PROJECT_DIR$/templates/DodajIzlog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="1202" column="14" selection-start-line="1202" selection-start-column="7" selection-end-line="1202" selection-end-column="14" />
+        <state relative-caret-position="-1134">
+          <caret line="368" column="154" selection-start-line="368" selection-start-column="154" selection-end-line="368" selection-end-column="154" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/DodajIzlog.html">
+    <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="236" column="51" selection-start-line="236" selection-start-column="51" selection-end-line="236" selection-end-column="51" />
+        <state relative-caret-position="286">
+          <caret line="1468" lean-forward="true" selection-start-line="1468" selection-end-line="1468" />
         </state>
       </provider>
     </entry>
