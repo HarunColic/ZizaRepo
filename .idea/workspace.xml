@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/EditIzlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/EditIzlog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bankarskeUsluge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bankarskeUsluge2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dodajPotraznju.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dodajPotraznju2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/editProfilPL.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilPL.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="1568" selection-start-line="1568" selection-end-line="1568" />
+            <state relative-caret-position="361">
+              <caret line="1569" column="30" selection-start-line="1569" selection-start-column="30" selection-end-line="1569" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -59,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="477" column="95" selection-start-line="477" selection-start-column="95" selection-end-line="477" selection-end-column="95" />
+            <state relative-caret-position="330">
+              <caret line="481" column="59" selection-start-line="481" selection-start-column="59" selection-end-line="481" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -345,12 +339,12 @@
       <workItem from="1557955007100" duration="8006000" />
       <workItem from="1558051686392" duration="3090000" />
       <workItem from="1558140440403" duration="1047000" />
-      <workItem from="1558193182602" duration="3609000" />
+      <workItem from="1558193182602" duration="3994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103197000" />
+    <option name="totallyTimeSpent" value="103582000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,15 +785,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="477" column="95" selection-start-line="477" selection-start-column="95" selection-end-line="477" selection-end-column="95" />
+        <state relative-caret-position="330">
+          <caret line="481" column="59" selection-start-line="481" selection-start-column="59" selection-end-line="481" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="1568" selection-start-line="1568" selection-end-line="1568" />
+        <state relative-caret-position="361">
+          <caret line="1569" column="30" selection-start-line="1569" selection-start-column="30" selection-end-line="1569" selection-end-column="30" />
         </state>
       </provider>
     </entry>

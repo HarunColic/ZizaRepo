@@ -1566,3 +1566,5 @@ msgstr "VII-2 stepen - magistratura"
 msgid "VIII stepen - doktorat"
 msgstr "VIII stepen - doktorat"
 
+msgid "Posljednje obrazovanje"
+msgstr "Posljednje obrazovanje"
