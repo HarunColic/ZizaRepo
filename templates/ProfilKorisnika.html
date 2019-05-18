@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ba">
 <head>
-    <title>ŽIŽA.ba | Profil</title>
+    {% load i18n %}
+    <title>ŽIŽA.ba | {% trans 'Profil' %}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -25,9 +26,9 @@
 	<div class="coverSlika">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="{% url 'home' %}">Početna</a>
+				<a href="{% url 'home' %}">{% trans 'Početna' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
-				<a href="#">Kompanija</a>
+				<a href="#">{% trans 'Kompanija' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
 				<a href="#">{{ user.first_name }}</a>
 			</div>
@@ -46,7 +47,7 @@
 
 
 			<div class="podaciT">
-				<div>TVRTKA</div>
+				<div>{% trans 'TVRTKA' %}</div>
 				<div>{{ user.first_name }}</div>
 			</div>
 		</div>
@@ -54,29 +55,29 @@
 	<div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-                <h2><span>O NAMA</span></h2>
+                <h2><span>{% trans 'O NAMA' %}</span></h2>
 			</div>
 		</div>
 		<div class="tabelarni">
 			<div>
 				<h3 style="text-transform: uppercase;">{{ userP.location }}</h3>
-				<p>SJEDIŠTE</p>
+				<p>{% trans 'SJEDIŠTE' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3 style="text-transform: uppercase;" id="djelatnost">{{ company.categoryID.name }}</h3>
-				<p>DJELATNOST</p>
+				<p>{% trans 'DJELATNOST' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				{% if company.brojuposlenih < 1 or company.brojuposlenih == None %} <h3 style="text-transform: uppercase;">N/A</h3> {% else %}<h3 style="text-transform: uppercase;">{{ company.brojuposlenih }}</h3>{% endif %}
-				<p>BROJ UPOSLENIH</p>
+				<p>{% trans 'BROJ UPOSLENIH' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<a>
                 <div>
-                <a href="mailto:{{ uProfile.email }}"> <h3>KLIKNI OVDJE</h3></a>
-				<p>KONTAKT</p>
+                <a href="mailto:{{ uProfile.email }}"> <h3>{% trans 'KLIKNI OVDJE' %}</h3></a>
+				<p>{% transw 'KONTAKT' %}</p>
 			</div>
 		</div>
 		<div id="opisProfila" class="detaljniOpis">
@@ -86,7 +87,7 @@
         </div>
 		<div class="uvodniDio tabelarniUvodniDio" style="margin-top: -100px">
 			<div class="trazimo">
-				<h2><span>AKTIVNI</span> OGLASI</h2>
+				<h2><span>{% trans 'AKTIVNI' %}</span> {% trans 'OGLASI' %}</h2>
 			</div>
 		</div>
 
@@ -103,7 +104,7 @@
 
         <div class="uvodniDio tabelarniDio">
 
-        {% if posts.paginator.count == 0 %} <p>{{ user.first_name }} nema aktivnih oglasa</p> {% endif %}
+        {% if posts.paginator.count == 0 %} <p>{{ user.first_name }} {% trans 'nema aktivnih oglasa' %}</p> {% endif %}
 
             {% for p in posts %}
 
@@ -113,7 +114,7 @@
 					<div>
 
 						<div>
-                            {% if p.type == 1 %}{{ p.title }} {% else %} {% if p.b2b_type == 1 %} Ponuda {% elif p.b2b_type == 2 %} Potražnja {% else %} Partnerstvo {% endif %} {% endif %}</div>
+                            {% if p.type == 1 %}{{ p.title }} {% else %} {% if p.b2b_type == 1 %} {% trans 'Ponuda' %} {% elif p.b2b_type == 2 %} {% trans 'Potražnja' %} {% else %} {% trans 'Partnerstvo' %} {% endif %} {% endif %}</div>
 						<div>
 							<span style="text-transform: uppercase;">{{ p.categoryID.name }}</span>
 							<span style="color: black">
@@ -196,12 +197,12 @@
 			<div {% if prev > 0 %} onclick="location.href='{{ request.path }}?page={{ prev }}'" {% endif %}class="prevTraka" style="width:560px;margin-right: 50px">
 				<img src="{% static 'images/lijevoOglas.png' %}" style="cursor: pointer;" class="lijevoEd">
 				<div  >
-					<span>PRIJAŠNJA STRANICA</span>
+					<span>{% trans 'PRIJAŠNJA STRANICA' %}</span>
 				</div>
 			</div>
 			<div {% if next <= rng|last %} onclick="location.href='{{ request.path }}?page={{ next }}'" {% endif %}class="prevTraka" style="justify-content: flex-end; background-color: white">
 				<div style="margin-left: 0">
-					<span>SLJEDEĆA STRANICA</span>
+					<span>{% trans 'SLJEDEĆA STRANICA' %}</span>
 				</div>
 				<img src="{% static 'images/desnoOglas.png' %}" style="margin-right: 39px; cursor: pointer;" class="desnoEd">
 			</div>

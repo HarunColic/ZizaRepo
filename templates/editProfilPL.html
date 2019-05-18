@@ -484,11 +484,11 @@
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
-						<label>Posljednje radno mjesto</label><br>
+						<label>{% trans 'Posljednje radno mjesto' %}</label><br>
 						<input type="text" name="radno" {% if emp.radnoMjesto %}value="{{ emp.radnoMjesto }}{% endif %}"  style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
-						<label>Godina iskustva</label><br>
+						<label>{% trans 'Godina iskustva' %}</label><br>
 						<input type="number" value="{{ emp.iskustvo }}" name="iskustvo" style="width: 100%">
 					</div>
 				</div>
@@ -556,7 +556,7 @@
 
 				<!-- NOVI DIO -->
 				<div style="margin-top: 20px">
-					<label>Vještine</label><br>
+					<label>{% trans 'Vještine' %}</label><br>
 					<div id="ms1" class="tag-ctn"><div id="tag-trigger-0" class="tag-trigger"><div class="tag-trigger-ico"></div></div><div class="tag-helper " style="display: block;"></div><div id="tag-sel-ctn-0" class="tag-sel-ctn"><input name="vjestine" id="tag-input-0" type="text" class="tag-empty-text" value="Počnite unositi..." style="width: 358px;"></div></div>
 
                 </div>
@@ -564,28 +564,28 @@
 
 				<!-- STARI DIO :: DJELATNOSTI IZ BAZE KOJE KORISTIMO PO STRANICI -->
 				<div  style="margin-top: 30px;">
-					<label style="margin-bottom: 8px;" class="specLab">O meni</label>
+					<label style="margin-bottom: 8px;" class="specLab">{% trans 'O meni' %}</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
       				<div id="editor-container">{{ emp.opis|safe }}</div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
 				<div style="margin-top: 30px;" class="dokumentPDF">
-					<label style="margin-bottom: 8px">PDF/Word format CV-a <span>(opcionalno)</span></label><br>
+					<label style="margin-bottom: 8px">PDF/Word {% trans 'format CV-a' %} <span>({% trans 'opcionalno' %})</span></label><br>
 					<div style="margin-top: 24px"></div>
 					<div style="display: flex; align-items: center;">
 						<div>
 							<label for="file-upload"  class="custom-file-upload">
 						    	<input id="file-upload" type="file"  name="image_uploads" accept=".pdf, .doc, .docx" multiple>
-						    		ODABERI
+						    		{% trans 'ODABERI' %}
 							</label>
 						</div>
 						<div>
-							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Maksimalna veličina: 5 MB.</p>
+							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">{% trans 'Maksimalna veličina' %}: 5 MB.</p>
 						</div>
 					</div>
 				</div>
-				<a style="cursor: pointers;" id="aktivirajPregled">SPREMI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></a>
+				<a style="cursor: pointers;" id="aktivirajPregled">{% trans 'SPREMI' %}<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></a>
             <input type="hidden" name="kkk" id="vjest">
 			</form>
 		</div>

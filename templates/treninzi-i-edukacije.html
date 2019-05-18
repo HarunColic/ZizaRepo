@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ba">
 <head>
+    {% load i18n %}
 	<!-- KAD BUDES SVOJ NAVBAR UBACIVAO NE ZBORVI KLASU SELECTED ZA KONSALTING -->
-	<title>ŽIŽA.ba | Konsalting</title>
+	<title>ŽIŽA.ba | {% trans 'Konsalting' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -401,20 +402,20 @@
     <img src="/static/images/logoNew.png" class="logotipNavbarMali">
 
 	<div class="tekst" style="padding-bottom: 20px; margin-top: 50px">
-		<p>Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta. </p>
+		<p>{% trans 'Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta.' %} </p>
 
 		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto; margin-top: 40px" class="linija__down"></div>
 
-		<h3>Treninzi <span>i edukacije</span><img src="https://i.imgur.com/bWoDCFE.png" width="130px" style="margin-left: 480px" class="druDif edukator"></h3>
+		<h3>{% trans 'Treninzi' %} <span>{% trans 'i edukacije' %}</span><img src="https://i.imgur.com/bWoDCFE.png" width="130px" style="margin-left: 480px" class="druDif edukator"></h3>
 
 		<p style="margin-bottom: 50px">
-			U Bosni i Hercegovini postoji jako puno predrasuda i nerazumijevanja kada su u pitanju treninzi zaposlenih u kompanijama. Riječ trening je najčešće olako shvaćena i obično se podrazumijeva kao neka vrsta predavanja kombinovanih sa timskim vježbama. Za razliku od zapada gdje se ovim bave posebne službe, kod nas o treninzima zaposlenih obično odlučuju HR odjeljenja kompanija, odnosno psiholozi kojima se ovaj posao najčešće dodjeljuje. Tako se nažalost trening zaposlenih tretira kao oblast psihologije, a ne kao vitalna poslovna funkcija. Kao rezultat ove zablude, poslovni treninzi su se u našim kompanijama najčešće svodili na čitanje slajdova sa gotovim upustvima, igrajnje besmislenih igara i popunjavanje psiholoških formulara i anketa. Zbog nedostatka prave konkurencije i neprepoznavanja njihovog značaja, treninzi su se kod nas najčešće sprovodili iz kozmetičkih razloga (zato što se to radi na zapadu!). <br><br>
-			Pitaćete se zašto su kompanijama potrebni pravi treninzi zaposlenih, a ne samo obična predavanja i seminari? Naravno nije problem da se u kompanijama održavaju seminari te da se na takav način uvećava opšte znanje zaposlenih. Seminare rado organizujemo za Vas!<br><br>Problem nastaje kod onih vještina gdje je rezultat izuzetno važan, recimo kod prodaje. U prodaji ste ili prodali ili niste, nema ničega između. Zato trening prodaje mora biti pravi trening, a ne samo nekakva mješavina predavanja, izlaganja, seminara, davanja instrukcija, popunjavanja formulara i timskih radionica.
+			{% trans 'U Bosni i Hercegovini postoji jako puno predrasuda i nerazumijevanja kada su u pitanju treninzi zaposlenih u kompanijama. Riječ trening je najčešće olako shvaćena i obično se podrazumijeva kao neka vrsta predavanja kombinovanih sa timskim vježbama. Za razliku od zapada gdje se ovim bave posebne službe, kod nas o treninzima zaposlenih obično odlučuju HR odjeljenja kompanija, odnosno psiholozi kojima se ovaj posao najčešće dodjeljuje. Tako se nažalost trening zaposlenih tretira kao oblast psihologije, a ne kao vitalna poslovna funkcija. Kao rezultat ove zablude, poslovni treninzi su se u našim kompanijama najčešće svodili na čitanje slajdova sa gotovim upustvima, igrajnje besmislenih igara i popunjavanje psiholoških formulara i anketa. Zbog nedostatka prave konkurencije i neprepoznavanja njihovog značaja, treninzi su se kod nas najčešće sprovodili iz kozmetičkih razloga (zato što se to radi na zapadu!).' %} <br><br>
+			{% trans 'Pitaćete se zašto su kompanijama potrebni pravi treninzi zaposlenih, a ne samo obična predavanja i seminari? Naravno nije problem da se u kompanijama održavaju seminari te da se na takav način uvećava opšte znanje zaposlenih. Seminare rado organizujemo za Vas!<br><br>Problem nastaje kod onih vještina gdje je rezultat izuzetno važan, recimo kod prodaje. U prodaji ste ili prodali ili niste, nema ničega između. Zato trening prodaje mora biti pravi trening, a ne samo nekakva mješavina predavanja, izlaganja, seminara, davanja instrukcija, popunjavanja formulara i timskih radionica.' %}
 
 		</p>
 
 
-		<h3><span>Šta je to</span> pravi trening?</h3>
+		<h3><span>{% trans 'Šta je to' %}</span> {% trans 'pravi trening?' %}</h3>
 
 			<style type="text/css">
 		.tekst ol {list-style: none}
@@ -430,14 +431,14 @@
 	</style>
 
 		<p>
-			Da ne bi ulazili u komplikovane definicije, najbolje se napravi usporedba sa sportom.
-Šta mislite koja će od sljedećih aktivnosti imati najveći efekat na kvalitet igre?<br><br>
+			{% trans 'Da ne bi ulazili u komplikovane definicije, najbolje se napravi usporedba sa sportom.' %}
+{% trans 'Šta mislite koja će od sljedećih aktivnosti imati najveći efekat na kvalitet igre?' %}<br><br>
 <ol>
-	<li>Sportisti slušaju predavanje o historiji sporta</li>
-	<li>Sportisti dobijaju istrukcije o pravilima igre</li>
-	<li>Sportisti sprovode timske vježbe popunjavajući formular</li>
-	<li>Sportisti treniraju sport na terenu.</li>
-</ol></p><br><br><p style="margin-bottom: 50px">Kao i u sportu, tako i u poslovanju. Nije dovoljno zaposlene naučiti šta da rade i dati im instrukcije kako to da rade, već je jako važno uvježbati ih da to rade uspješno.<br><br>E to je upravo posao stručnjaka sa kojima Vas Žiža može povezati!<br><br>Njihovo iskustvo i znanje će Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršit potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, privremeno nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje.
+	<li>{% trans 'Sportisti slušaju predavanje o historiji sporta' %}</li>
+	<li>{% trans 'Sportisti dobijaju istrukcije o pravilima igre' %}</li>
+	<li>{% trans 'Sportisti sprovode timske vježbe popunjavajući formular' %}</li>
+	<li>{% trans 'Sportisti treniraju sport na terenu.' %}</li>
+</ol></p><br><br><p style="margin-bottom: 50px">{% trans 'Kao i u sportu, tako i u poslovanju. Nije dovoljno zaposlene naučiti šta da rade i dati im instrukcije kako to da rade, već je jako važno uvježbati ih da to rade uspješno.<br><br>E to je upravo posao stručnjaka sa kojima Vas Žiža može povezati!<br><br>Njihovo iskustvo i znanje će Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršit potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, privremeno nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje.' %}
 		</p>
 
 	</div>

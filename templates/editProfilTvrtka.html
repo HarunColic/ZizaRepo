@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ba">
+{% load i18n %}
 <head>
-	<title>ŽIŽA.ba | Uredi profil</title>
+	<title>ŽIŽA.ba | {% trans 'Uredi profil' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -366,11 +367,11 @@
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="#">Profil</a>
+				<a href="#">{% trans 'Profil' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
-				<a href="#" style="display: none;">Oglasi</a>
+				<a href="#" style="display: none;">{% trans 'Oglasi' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
-				<a href="#">Uredi profil</a>
+				<a href="#">{% trans 'Uredi profil' %}</a>
 			</div>
 			<div class="linijaD"></div>
 		</div>
@@ -388,11 +389,11 @@
 			</div>
 
 			<div class="podaciT">
-				<div>TVRTKA</div>
+				<div>{% trans 'TVRTKA' %}</div>
 				<div>{{ user.first_name }}</div>
 				<div>
 					<div>
-						<span class="navNap navNap1 navAct" id="napraviOglas" style="margin-left: 10px">Uredi profil</span>
+						<span class="navNap navNap1 navAct" id="napraviOglas" style="margin-left: 10px">{% trans 'Uredi profil' %}</span>
 						<div class="navNapCr"></div>
 					</div>
 				</div>
@@ -402,30 +403,30 @@
 
 	<div class="formaBody" style="position: relative;">
 		<div class="sadrzaj">
-			<h1>O <span>NAMA</span></h1>
+			<h1>{% trans 'O' %} <span>{% trans 'NAMA' %}</span></h1>
                 <div>
-					<label>Naslov kompanije</label><br>
+					<label>{% trans 'Naslov kompanije' %}</label><br>
 					<input value="{{ user.first_name }}" required type="text" id='naslovInput' name="naslov" placeholder="Puni naziv Vaše kompanije" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
-						<label>Kontakt e-mail adresa</label><br>
+						<label>{% trans 'Kontakt e-mail adresa' %}</label><br>
 						<input value="{{ user.email }}" required type="email" name="email" style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
-						<label>Kontakt broj</label><br>
+						<label>{% trans 'Kontakt broj' %}</label><br>
 						<input  {% if userP.brojtelefona %} value="{{ userP.brojtelefona }}" {% endif %} type="text" required name="brojTel" style="width: 100%">
 					</div>
 				</div>
 				<div style="margin-top: 20px">
-					<label>Sjedište</label><br>
+					<label>{% trans 'Sjedište' %}</label><br>
 					{% with var=1 %}
                         {% include 'gradovi.html' %}
                     {% endwith %}
                     </select>
 				</div>
 				<div style="margin-top: 20px">
-					<label>Kategorija</label><br>
+					<label>{% trans 'Kategorija' %}</label><br>
 					<select name="category" required>
 						<option value="{{ comp.categoryID.name }}" >{{ comp.categoryID.name }}</option>
                         {% for c in cat %}
@@ -439,38 +440,38 @@
 
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
-						<label>Broj uposlenih</label><br>
+						<label>{% trans 'Broj uposlenih' %}</label><br>
 						<input required value="{{ comp.brojuposlenih }}" type="number" id='brojUposlenihInput' name="brojuposlenih" style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
-						<label>Web stranica</label><br>
+						<label>{% trans 'Web stranica' %}</label><br>
 						<input required value="" type="text" id='webStranica' name="webStranica" style="width: 100%" placeholder="https://www...">
 					</div>
 
 				</div>
 				<div  style="margin-top: 30px;">
-					<label style="margin-bottom: 8px;" class="specLab">O nama</label>
+					<label style="margin-bottom: 8px;" class="specLab">{% trans 'O' %} {% trans 'nama' %}</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input value="" name="opis" type="hidden" required>
       				<div id="editor-container">{{ comp.opis|safe }}</div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
 				<div style="margin-top: 30px;" class="dokumentPDF">
-					<label style="margin-bottom: 8px">PDF/Word financijskog izvještaja <span>(opcionalno)</span></label><br>
+					<label style="margin-bottom: 8px">PDF/Word {% trans 'financijskog izvještaja' %} <span>({% trans 'opcionalno' %})</span></label><br>
 					<div style="margin-top: 24px"></div>
 					<div style="display: flex; align-items: center;">
 						<div>
 							<label for="file-upload"  class="custom-file-upload">
 						    	<input id="file-upload" type="file" name="finIzvjestaj" accept=".pdf, .doc, .docx" multiple>
-						    		ODABERI
+						    		{% trans 'ODABERI' %}
 							</label>
 						</div>
 						<div>
-							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Maksimalna veličina: 5 MB.</p>
+							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">{% trans 'Maksimalna veličina' %}: 5 MB.</p>
 						</div>
 					</div>
 				</div>
-				<button type="submit" id="aktivirajPregled">SPREMI<img src="{%  static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+				<button type="submit" id="aktivirajPregled">{% trans 'SPREMI' %}<img src="{%  static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
 			</form>
 		</div>
 	</div> <!-- formaBody END -->

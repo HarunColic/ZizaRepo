@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ba">
 <head>
+    {% load i18n %}
 	<!-- KAD BUDES SVOJ NAVBAR UBACIVAO NE ZBORVI KLASU SELECTED ZA KONSALTING -->
-	<title>ŽIŽA.ba | Konsalting</title>
+	<title>ŽIŽA.ba | {% trans 'Konsalting' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -403,12 +404,12 @@
 
 
 	<div class="tekst" style="padding-bottom: 20px; margin-top: 50px">
-		<p>Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta. </p>
+		<p>{% trans 'Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta.' %} </p>
 
-		<h3>Finansijsko <span>savjetovanje</span><img src="https://i.imgur.com/8oT8z3N.png" width="100px" style="margin-left: 400px" class="prvaUn"></h3>
+		<h3>{% trans 'Finansijsko' %} <span>{% trans 'savjetovanje' %}</span><img src="https://i.imgur.com/8oT8z3N.png" width="100px" style="margin-left: 400px" class="prvaUn"></h3>
 
 		<p style="margin-bottom: 50px">
-			Naši finansijski stručnjaci djeluju na tri područja: računovodstvo, savjetovanje i edukacije. Pored visokih profesionalnih standarda daje se iznimna važnost etičkim principima uključenih partija.
+			{% trans 'Naši finansijski stručnjaci djeluju na tri područja: računovodstvo, savjetovanje i edukacije. Pored visokih profesionalnih standarda daje se iznimna važnost etičkim principima uključenih partija.' %}
 		</p>
 
 	</div>

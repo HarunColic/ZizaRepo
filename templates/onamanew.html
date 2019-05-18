@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ba">
 <head>
-	<title>ŽIŽA.ba | O nama</title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'O nama' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -479,58 +480,58 @@
 	</div>
 
 	<div class="tekst" style="padding-bottom: 187px">
-		<p>Uzet ćemo sebi za pravo reći kako niste pronašli odgovarajuću stanicu. Nadamo se da ne zamjerate. Naime, u potrazi za odgovorima na Vaša pitanja, gotovo smo sigurni da niste došli do središta traženih rješenja. U ŽIŽU svega. Do nas.</p>
+		<p>{% trans 'Uzet ćemo sebi za pravo reći kako niste pronašli odgovarajuću stanicu. Nadamo se da ne zamjerate. Naime, u potrazi za odgovorima na Vaša pitanja, gotovo smo sigurni da niste došli do središta traženih rješenja. U ŽIŽU svega. Do nas.' %}</p>
 
 		<p style="text-align: left;" class="slova">
-			<span>Ž</span>elite jedinstveno rješenje za višestruke probleme poslovne i tržišne prirode?<br>
-			<span style="margin-left: 2px; line-height: 30px">I</span>mate potrebu za mijenjati radnu sredinu i okušati se u novim i većim izazovima?<br>
-			<span>Ž</span>alite što niste bili u mogućnosti realizirati investicijske ideje zbog nedostatka podrške i pomoći?<br>
-			<span style="line-height: 30px; margin-left: -2px">A</span> pritom ste pokušali sve. <br>
+			<span>{% TRANS 'Ž' %}</span>{% trans 'elite jedinstveno rješenje za višestruke probleme poslovne i tržišne prirode?' %}<br>
+			<span style="margin-left: 2px; line-height: 30px">{% trans 'I' %}</span>{% trans 'mate potrebu za mijenjati radnu sredinu i okušati se u novim i većim izazovima?' %}<br>
+			<span>{% trans 'Ž' %}</span>{% trans 'alite što niste bili u mogućnosti realizirati investicijske ideje zbog nedostatka podrške i pomoći?' %}<br>
+			<span style="line-height: 30px; margin-left: -2px">{% trans 'A' %}</span> {% trans 'pritom ste pokušali sve.' %} <br>
 		</p>
 
 
-		<h3>Kako je sve <span>počelo</span></h3>
+		<h3>{% trans 'Kako je sve' %} <span>{% trans 'počelo' %}</span></h3>
 
 		<p>
-			<strong>Sigurno se pitate ko smo mi i kako je sve počelo</strong>. Prije nego li nam date Vaše povjerenje, utrošite vrijeme u čitanje sljedećih redova, dajemo vlastitu riječ kako neće biti uzaludno. I ne, nećemo Vam naplatiti neisporučeno. Niti obećati nemoguće. <br><br>
+			<strong>{% trans 'Sigurno se pitate ko smo mi i kako je sve počelo' %}</strong>. {% trans 'Prije nego li nam date Vaše povjerenje, utrošite vrijeme u čitanje sljedećih redova, dajemo vlastitu riječ kako neće biti uzaludno. I ne, nećemo Vam naplatiti neisporučeno. Niti obećati nemoguće.' %} <br><br>
 
-			Još uvijek sumnjate? OK. <strong>Razumijemo</strong>. Bili smo tu gdje jeste Vi danas. Hodali smo u Vašim cipelama. Žuljale su nas iste stvari. Spoticali smo se o ista kamenja. Lutali tražeći odgovarajuće putokaze. Odustajali nismo. Kao ni Vi sami. <br><br>
+			{% trans 'Još uvijek sumnjate? OK.' %} <strong>{% trans 'Razumijemo' %}</strong>. {% trans 'Bili smo tu gdje jeste Vi danas. Hodali smo u Vašim cipelama. Žuljale su nas iste stvari. Spoticali smo se o ista kamenja. Lutali tražeći odgovarajuće putokaze. Odustajali nismo. Kao ni Vi sami.' %} <br><br>
 
-			<strong>Ne nastupamo incognito</strong>. Mi smo fuzija inozemnog iskustva koje je otišlo "trbuhom za kruhom" van svoje domovine tražeći odgovore na bezbroj pitanja koje je su nam nametnule stvari van našeg utjecaja i pritom diktirale životne okolnosti. Rat. Nedostatak prilika. Nemilosrdna sudbina. To nas je sustizalo. Profesionalizacija i održive radne vrijednosti. Strateško promišljanje. Europski koncepti održivog poslovanja. Vjerovanje u neostvarivo. To nas je kovalo. <br><br>
+			<strong>{% trans 'Ne nastupamo incognito' %}</strong>. {% trans "Mi smo fuzija inozemnog iskustva koje je otišlo 'trbuhom za kruhom' van svoje domovine tražeći odgovore na bezbroj pitanja koje je su nam nametnule stvari van našeg utjecaja i pritom diktirale životne okolnosti. Rat. Nedostatak prilika. Nemilosrdna sudbina. To nas je sustizalo. Profesionalizacija i održive radne vrijednosti. Strateško promišljanje. Europski koncepti održivog poslovanja. Vjerovanje u neostvarivo. To nas je kovalo." %} <br><br>
 
-			Ako ste možda čitajući prethodno pomislili kako su s druge strane penzionisani brokeri u emigraciji s istrošenim setom grafičkih olovka ubačenih u prednji džep bijele košulje koju drže karirani tregeri, u krivu ste. <strong>Mi smo i mladi</strong>. Trendsetteri. Ne oni modni. Trendovi koje postavljamo nisu prolazne prirode. S tehnologijom liježemo i budimo se. Čitamo toliko da podižemo tiraž tiskarskoj industriji. Energetski konkurišemo nuklearnoj energiji.Testiramo vlastite mogućnosti pomicanjem i stvaranjem novih granica. Istih onih koje želimo nadići. S Vama.
+			{% trans 'Ako ste možda čitajući prethodno pomislili kako su s druge strane penzionisani brokeri u emigraciji s istrošenim setom grafičkih olovka ubačenih u prednji džep bijele košulje koju drže karirani tregeri, u krivu ste. <strong>Mi smo i mladi</strong>. Trendsetteri. Ne oni modni. Trendovi koje postavljamo nisu prolazne prirode. S tehnologijom liježemo i budimo se. Čitamo toliko da podižemo tiraž tiskarskoj industriji. Energetski konkurišemo nuklearnoj energiji.Testiramo vlastite mogućnosti pomicanjem i stvaranjem novih granica. Istih onih koje želimo nadići. S Vama.' %}
 		</p>
 
 		<img src="{% static 'images/skakacica.png' %}" class="tekst__skakacica">
 
 		<p class="stefka">
-			Generacijski jaz nam je mlađi od rekorda Štefke Kostadinove. Oslanjamo se na <strong>domaće snage</strong>. Upravljali smo velikim <strong>inostranim projektima</strong> i davali savjete dokazanim evropskim menadžerima. Vjerujući u autohtono, <strong>educirali</strong> smo se na našim fakultetima i posezali za prekograničnim usavršavanjima i obrnuto. Znamo što znači biti pod pritiskom osigurati novac za nama najbliže. <strong>Padali smo</strong>. Učili na vlastitim greškama. Izgradili se u toj mjeri u kojoj se drugi mogu osloniti na nas. <strong>Vi</strong>.
+			{% trans 'Generacijski jaz nam je mlađi od rekorda Štefke Kostadinove. Oslanjamo se na <strong>domaće snage</strong>. Upravljali smo velikim <strong>inostranim projektima</strong> i davali savjete dokazanim evropskim menadžerima. Vjerujući u autohtono, <strong>educirali</strong> smo se na našim fakultetima i posezali za prekograničnim usavršavanjima i obrnuto. Znamo što znači biti pod pritiskom osigurati novac za nama najbliže. <strong>Padali smo</strong>. Učili na vlastitim greškama. Izgradili se u toj mjeri u kojoj se drugi mogu osloniti na nas.' %} <strong>{% trans 'Vi' %}</strong>.
 		</p>
 
-		<h3 style="padding-top: 0; margin-top: -18px; z-index: 1; position: relative;">Što Vam <span>nudimo</span></h3>
+		<h3 style="padding-top: 0; margin-top: -18px; z-index: 1; position: relative;">{% trans 'Što Vam' %} <span>{% trans 'nudimo' %}</span></h3>
+
+        {% trans 'Idemo ovako. Krenućemo s onim što' %} <strong>{% trans 'ne možemo ponuditi' %}</strong>. {% trans 'Gledanje u karte pri odluci o ulasku u novi business roller coaster. Polovična rješenja. Garantni list ispisan na lakmus papiru. Nismo Avengersi i ne možemo spasiti svijet.' %} <strong>{% trans 'Nudimo' %}</strong> {% trans 'Vam razumijevanje. Znanje. Podršku. Adekvatne odgovore na Vaše potrebe. Iskustvo. Rezervirano mjesto za put ka konkurentnijoj i tržišno orijentisanoj Bosni i Hercegovini.' %}
+        </p>
+        <p>
+
+		<h3>{% trans 'Što nas je' %} <span>{% trans 'potaklo' %}</span></h3>
 
 		<p>
-			Idemo ovako. Krenućemo s onim što <strong>ne možemo ponuditi</strong>. Gledanje u karte pri odluci o ulasku u novi business roller coaster. Polovična rješenja. Garantni list ispisan na lakmus papiru. Nismo Avengersi i ne možemo spasiti svijet. <strong>Nudimo</strong> Vam razumijevanje. Znanje. Podršku. Adekvatne odgovore na Vaše potrebe. Iskustvo. Rezervirano mjesto za put ka konkurentnijoj i tržišno orijentisanoj Bosni i Hercegovini.
-		</p>
-
-		<h3>Što nas je <span>potaklo</span></h3>
-
-		<p>
-			<strong>Aleksa Šantić</strong>. Tako je, dobro ste pročitali. Istini na volju ne osobno on, ali njegova "za bukvara" jeste. <i>Sunce tuđeg neba, neće vas grijat kô što ovo grije</i>. Vratili smo se i odlučili kreirati nešto što do sada pod našim nebom nije bilo. <strong>Jedinstvenu platformu</strong> koja nudi poslovna, konsultantska, finansijska i ostala business rješenja. Dali smo si za pravo Šantićevom suncu pridružiti prekogranični solarni backup. Umrežavamo Vas sa inostranim partnerima i investitorima. Odgovaramo na međunarodna pravna pitanja. Rješavamo papire. Ne one vizne. Administrativne za ostati ovdje čineći Vas vidljivijima na međunarodnim poslovnim radarima.
+			<strong>Aleksa Šantić</strong>. {% trans "Tako je, dobro ste pročitali. Istini na volju ne osobno on, ali njegova 'za bukvara' jeste."%} <i> {%trans 'Sunce tuđeg neba, neće vas grijat kô što ovo grije.'%}</i> {%trans 'Vratili smo se i odlučili kreirati nešto što do sada pod našim nebom nije bilo.' %} <strong>{%trans 'Jedinstvenu platformu'%}</strong> {% trans 'koja nudi poslovna, konsultantska, finansijska i ostala business rješenja. Dali smo si za pravo Šantićevom suncu pridružiti prekogranični solarni backup. Umrežavamo Vas sa inostranim partnerima i investitorima. Odgovaramo na međunarodna pravna pitanja. Rješavamo papire. Ne one vizne. Administrativne za ostati ovdje čineći Vas vidljivijima na međunarodnim poslovnim radarima.' %}
 		</p>
 <div style="padding-left: 221px; padding-top: 94px; padding-bottom: 60px;" class="aleksaC">
 			<div style="font-family: 'Galano Black'; font-size: 200px; color: #f0ede2; position: absolute; left: 168px; margin-top: -115px; z-index: 0" class="doubM">“</div>
-			<div style="font-family: 'Galano Regular'; color: #010101; font-size: 26px; font-weight: normal; z-index: 1; position: relative;" class="sunceT">Sunce tuđeg neba, neće vas grijat kô što ovo grije. </div>
+			<div style="font-family: 'Galano Regular'; color: #010101; font-size: 26px; font-weight: normal; z-index: 1; position: relative;" class="sunceT">{% trans 'Sunce tuđeg neba, neće vas grijat kô što ovo grije.' %} </div>
 
 			<div style="color: #fecd35; font-family: 'Galano Black'; font-size: 16px; padding-top: 20px">Aleksa Šantić</div>
-			<div style="color: #b5b4af; font-family: 'Galano Regular'; font-size: 12px; padding-top: 5px">Pjesnik</div>
+			<div style="color: #b5b4af; font-family: 'Galano Regular'; font-size: 12px; padding-top: 5px">{% trans 'Pjesnik' %}</div>
 		</div>
 
 		<p>
-			<strong>Vi</strong>. Nije samo Aleksa. Gledajući Vašu volju za radom, imamo dugoročni motiv. Upornost i predanost koja prkosi beznađu. Mladi ljudi koji ne žele robovati ranije usvojenim principima koji ne donose rezultate. <strong>Sudbina</strong> koju dijelimo. Vaša ambicija i znanje koju ne čuvate samo za sebe. <strong>Potencijal koji nosite</strong>. Radna snaga koja zaslužuje dostojan tretman i svijetla pozornosti.
+			<strong>{% trans 'Vi' %}</strong>. {% trans 'Nije samo Aleksa. Gledajući Vašu volju za radom, imamo dugoročni motiv. Upornost i predanost koja prkosi beznađu. Mladi ljudi koji ne žele robovati ranije usvojenim principima koji ne donose rezultate.' %} <strong>{% trans 'Sudbina' %}</strong> {% trans 'koju dijelimo. Vaša ambicija i znanje koju ne čuvate samo za sebe.' %} <strong>{% trans 'Potencijal koji nosite' %}</strong>. {% trans 'Radna snaga koja zaslužuje dostojan tretman i svijetla pozornosti.' %}
 		</p>
 
-		<h3>Naš <span>cilj</span></h3>
+		<h3>{% trans 'Naš' %} <span>{% trans 'cilj' %}</span></h3>
 		<style type="text/css">
 			.tekst ol {list-style: none}
 	.tekst li::before {
@@ -693,21 +694,21 @@
 
 
 		<ol>
-			<li>Podignuti konkuretnost bosanskohercegovačkog tržišta koristeći raspoložive resurse i &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vodeći se dokazanim studijama</li>
-			<li style="margin-top: 30px; margin-bottom: 30px">Raditi na izgradnji Vašeg karijernog puta</li>
-			<li>Biti Vaš "joker iz rukava" ukoliko Vam trebaju odgovori na pitanja legislativne i bankarske &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prirode.</li>
-			<li>Slijediti put onih koji su ga utabali za nas - Connecting people. Business people.</li>
+			<li>{% trans 'Podignuti konkuretnost bosanskohercegovačkog tržišta koristeći raspoložive resurse i' %} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% trans 'vodeći se dokazanim studijama' %}</li>
+			<li style="margin-top: 30px; margin-bottom: 30px">{% trans 'Raditi na izgradnji Vašeg karijernog puta' %}</li>
+			<li>{% trans "Biti Vaš 'joker iz rukava' ukoliko Vam trebaju odgovori na pitanja legislativne i bankarske" %} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% trans 'prirode.' %}</li>
+			<li>{% trans 'Slijediti put onih koji su ga utabali za nas - Connecting people. Business people.' %}</li>
 		</ol>
 
 		<p style="padding-top: 70px">
-			Dvije su stvari koje trebate napraviti. Vjerovati i postati članom naše familije u osnutku. Nije potrebno ispunjavati komplicirane formulare. Jedan "klik" Vas dijeli od mnogobrojnih mogućnosti: članstva, bliskog susreta s prilikama koje je teško propustiti, novog poslovnog i životnog partnerstva i ostvarenja Vaših poslovnih ciljeva.
+			{% trans "Dvije su stvari koje trebate napraviti. Vjerovati i postati članom naše familije u osnutku. Nije potrebno ispunjavati komplicirane formulare. Jedan 'klik' Vas dijeli od mnogobrojnih mogućnosti: članstva, bliskog susreta s prilikama koje je teško propustiti, novog poslovnog i životnog partnerstva i ostvarenja Vaših poslovnih ciljeva." %}
 		</p>
 
 		<p style="padding-top: 40px; padding-bottom: 70px">
-			Tu smo za Vas.  Nudimo. Tražimo. Realiziramo. Gradimo.  Imamo na umu prepreke koje trebamo prevazići, a koje su sinonim za birokratske barijere, nejasne poslovne smjernice te disbalans između ponude i potražnje. Svjesni smo prilika koje nam se pružaju. Horizonata koji se otvaraju. Misije koju možemo ispuniti. Vjerujemo u vlastite kapacitete. Vašu ideju. Zajedničku sinergiju. Čak kao što ste primijetili razumijemo se na sva tri jezika. Može četiri ili pet (crnski ili gorski). Znamo zbog čega smo tu gdje jesmo. U žiži zbivanja. U središtu pronalaska rješenja. 
+			{% trans 'Tu smo za Vas.  Nudimo. Tražimo. Realiziramo. Gradimo.  Imamo na umu prepreke koje trebamo prevazići, a koje su sinonim za birokratske barijere, nejasne poslovne smjernice te disbalans između ponude i potražnje. Svjesni smo prilika koje nam se pružaju. Horizonata koji se otvaraju. Misije koju možemo ispuniti. Vjerujemo u vlastite kapacitete. Vašu ideju. Zajedničku sinergiju. Čak kao što ste primijetili razumijemo se na sva tri jezika. Može četiri ili pet (crnski ili gorski). Znamo zbog čega smo tu gdje jesmo. U žiži zbivanja. U središtu pronalaska rješenja.' %}
 		</p>
 
-		<p style="color: #010101; font-weight: 600; padding-bottom: 117px">Dobro nam došli. Hvala na povjerenju</p>
+		<p style="color: #010101; font-weight: 600; padding-bottom: 117px">{% trans 'Dobro nam došli. Hvala na povjerenju' %}</p>
 
 		<div style="width: 960px; height: 2px; border-radius: 1px; background-color: #f0efeb; margin: 0 auto" class="sakrLin"></div>
 	</div>
