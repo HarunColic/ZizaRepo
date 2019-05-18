@@ -6,7 +6,7 @@
     {% else %}
     <title>ŽIŽA.ba | Profil korisnika</title>
     {% endif %}
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
     <meta name="author" content="META5">
@@ -84,6 +84,41 @@
 
 		.tabelaRasa2 div:nth-child(1) div:nth-child(1) div:nth-child(1){
 			max-width: 90%;
+		}
+
+		@media screen and (max-width: 500px) {
+			.tabelaRasa div:nth-child(1) {
+				width: 340px;
+				flex-direction: column;
+   			 	display: flex;
+   			 	height: auto !important;
+    			padding: 10px 0px 20px 10px;
+			}
+			.tabelaRasa2 div:nth-child(1) div:nth-child(1) div:nth-child(1) {
+				min-width: auto !important;
+				padding-left: 0px !important;
+			}
+			.tabelaRasa div:nth-child(1) div:nth-child(1) div:nth-child(1) {
+				min-width: auto !important;
+				padding-left: 0px !important;
+			}
+			.srce2 {
+				display: flex !important;
+				margin-right: 0px !important;
+				width: 300px !important;
+    			height: 200px !important;
+    			background-size: cover !important;
+    			background: url(/media/1.jpg);
+    			box-shadow: 0px 1px 20px 0 rgba(38, 38, 38, 0.15) !important;
+    			margin-left: -10px;
+    			margin-bottom: 30px;
+			}
+			.srce2 > img {
+				display: none !important;
+			}
+			.tabelaRasa2 div:nth-child(1) {
+				padding-bottom: 0px !important;
+			}
 		}
 
 	</style>
