@@ -188,7 +188,7 @@
 	<div class="formaBody" style="position: relative;">
 		<div class="sadrzaj">
 			<h1><span>{% trans 'BANKARSKE' %}</span> {% trans 'USLUGE' %}</h1>
-			<h3 style="font-family: 'Galano Regular'; font-size: 14px"><span style="font-family: 'Galano Regular'; color: #f89101">{% trans 'NAPOMENA' %}: </span>Žiža putem svoje platforme samo spaja tražioce bankarskih usluga sa bankama. Tražioci bankarskih usluga i banke su odgovorne za dalje procedure i poslovne saradnje. </h3>
+			<h3 style="font-family: 'Galano Regular'; font-size: 14px"><span style="font-family: 'Galano Regular'; color: #f89101">{% trans 'NAPOMENA' %}: </span>{% trans 'Žiža putem svoje platforme samo spaja tražioce bankarskih usluga sa bankama. Tražioci bankarskih usluga i banke su odgovorne za dalje procedure i poslovne saradnje.' %} </h3>
             <form  action="{% url 'createpost' %}" style="margin-top: 50px" id="postForm" method="POST" enctype="multipart/form-data">
                 <input type="hidden" value="2" name="type">
                 <input type="hidden" value="2" name="b2btype">
@@ -308,7 +308,7 @@
 			<span id="goBack">{% trans 'NAZAD' %}</span>
 		</div>
 		<div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;">
-			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">Ovako će Vaš oglas izgledati nakon objave!</div>
+			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">{% trans 'Ovako će Vaš oglas izgledati nakon objave!' %}</div>
 			<span id="objaviOglas">{% trans 'OBJAVI' %}</span><img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px">
 		</div>
 	</div>

@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/DodajIzlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/DodajIzlog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/EditIzlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/EditIzlog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bankarskeUsluge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bankarskeUsluge2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bankarskeUsluge2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dodajPotraznju.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dodajPotraznju2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dodajPotraznju2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editProfilPL.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilPL.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17805">
+            <state>
               <caret line="1219" column="86" selection-start-line="1219" selection-start-column="86" selection-end-line="1219" selection-end-column="86" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -43,17 +50,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="1471" lean-forward="true" selection-start-line="1471" selection-end-line="1471" />
+            <state relative-caret-position="346">
+              <caret line="1568" selection-start-line="1568" selection-end-line="1568" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/DodajIzlog.html">
+        <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1134">
-              <caret line="368" column="154" selection-start-line="368" selection-start-column="154" selection-end-line="368" selection-end-column="154" />
+            <state relative-caret-position="360">
+              <caret line="477" column="95" selection-start-line="477" selection-start-column="95" selection-end-line="477" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -115,36 +122,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Želite li vidjeti još oglasa?</find>
-      <find>Trenutno nema oglasa iz Vaše branše!</find>
-      <find>Pratite nas</find>
-      <find>Početna</find>
-      <find>Oglasi</find>
-      <find>Objava</find>
+      <find>za Kategoriju</find>
+      <find>dokument oglasa</find>
+      <find>za kategoriju</find>
+      <find>ODABERI</find>
+      <find>Poslovni oglas</find>
+      <find>ima uvid u vaš CV</find>
+      <find>Nazad</find>
+      <find>NAZAD</find>
+      <find>Ovako će Vaš oglas izgledati nakon objave!</find>
       <find>TVRTKA</find>
-      <find>Lokacija</find>
+      <find>Napravi novost</find>
       <find>Pregled</find>
       <find>KREIRAJ</find>
       <find>NOVOST</find>
-      <find>Podnaslov novosti</find>
-      <find>Izaberi trajanje</find>
-      <find>Broj izvršitelja</find>
-      <find>Slika za izlog</find>
+      <find>Lokacija</find>
       <find>Pozicija</find>
       <find>Min. iskustva</find>
-      <find>Stručna sprema</find>
-      <find>Kontakt e-mail adresa</find>
-      <find>Kontakt broj</find>
-      <find>Ž</find>
-      <find>Sadržaj</find>
+      <find>OGLAS</find>
+      <find>Lizing</find>
+      <find>FILTRIRAJ</find>
+      <find>SJEDIŠTE</find>
       <find>PREGLED</find>
-      <find>LOKACIJA</find>
-      <find>POZICIJA</find>
-      <find>GODINE ISKUSTVA</find>
-      <find>BROJ IZVRŠITELJA</find>
-      <find>NAZAD</find>
-      <find>OBJAVI</find>
-      <find>Ovako će Vaš izlog izgledati nakon objave!</find>
+      <find>Profil</find>
+      <find>Uredi profil</find>
+      <find>FIZIČKO LICE</find>
+      <find>Ime i prezime</find>
+      <find>Kontakt broj</find>
+      <find>Kontakt e-mail adresa</find>
+      <find>Stručna sprema</find>
+      <find>I stepen - četiri razreda osnovne</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -174,11 +181,9 @@
         <option value="$PROJECT_DIR$/templates/testpristup.html" />
         <option value="$PROJECT_DIR$/post/models.py" />
         <option value="$PROJECT_DIR$/templates/newpost2.html" />
-        <option value="$PROJECT_DIR$/templates/EditIzlog.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/forgotPass.html" />
         <option value="$PROJECT_DIR$/post/management/commands/smartFind.py" />
-        <option value="$PROJECT_DIR$/templates/editProfilPL.html" />
         <option value="$PROJECT_DIR$/static/sessionstorage.js" />
         <option value="$PROJECT_DIR$/account/admin.py" />
         <option value="$PROJECT_DIR$/location/models.py" />
@@ -192,11 +197,16 @@
         <option value="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
         <option value="$PROJECT_DIR$/templates/Aplikanti.html" />
-        <option value="$PROJECT_DIR$/templates/bankarskeUsluge.html" />
         <option value="$PROJECT_DIR$/templates/CVs.html" />
         <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/DodajIzlog.html" />
+        <option value="$PROJECT_DIR$/templates/bankarskeUsluge2.html" />
+        <option value="$PROJECT_DIR$/templates/bankarskeUsluge.html" />
+        <option value="$PROJECT_DIR$/templates/dodajPotraznju2.html" />
+        <option value="$PROJECT_DIR$/templates/dodajPotraznju.html" />
+        <option value="$PROJECT_DIR$/templates/EditIzlog.html" />
+        <option value="$PROJECT_DIR$/templates/editProfilPL.html" />
         <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
       </list>
     </option>
@@ -333,12 +343,14 @@
       <workItem from="1557278861137" duration="999000" />
       <workItem from="1557442406368" duration="1396000" />
       <workItem from="1557955007100" duration="8006000" />
-      <workItem from="1558051686392" duration="3009000" />
+      <workItem from="1558051686392" duration="3090000" />
+      <workItem from="1558140440403" duration="1047000" />
+      <workItem from="1558193182602" duration="3609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98460000" />
+    <option name="totallyTimeSpent" value="103197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -353,7 +365,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16759777" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17238627" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -493,20 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="142" column="37" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/EditIzlog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5610">
-          <caret line="374" column="14" selection-start-line="374" selection-start-column="14" selection-end-line="374" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/newpost2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
@@ -576,13 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
           <caret line="87" column="34" selection-start-line="87" selection-start-column="15" selection-end-line="87" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6960">
-          <caret line="464" column="36" selection-start-line="464" selection-start-column="36" selection-end-line="464" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -685,23 +676,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge.html">
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        <state relative-caret-position="398">
+          <caret line="1489" column="9" lean-forward="true" selection-start-line="1489" selection-start-column="9" selection-end-line="1489" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/CVs.html">
+    <entry file="file://$PROJECT_DIR$/templates/DodajIzlog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="-9">
+          <caret line="443" column="32" lean-forward="true" selection-start-line="443" selection-start-column="32" selection-end-line="443" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17805">
+        <state>
           <caret line="1219" column="86" selection-start-line="1219" selection-start-column="86" selection-end-line="1219" selection-end-column="86" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -753,24 +747,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="1489" column="9" lean-forward="true" selection-start-line="1489" selection-start-column="9" selection-end-line="1489" selection-end-column="9" />
+        <state relative-caret-position="-954">
+          <caret line="308" column="14" lean-forward="true" selection-start-line="308" selection-start-column="14" selection-end-line="308" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/DodajIzlog.html">
+    <entry file="file://$PROJECT_DIR$/templates/bankarskeUsluge2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1134">
-          <caret line="368" column="154" selection-start-line="368" selection-start-column="154" selection-end-line="368" selection-end-column="154" />
+        <state relative-caret-position="245">
+          <caret line="429" column="40" lean-forward="true" selection-start-line="429" selection-start-column="40" selection-end-line="429" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/CVs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="303" column="45" selection-start-line="303" selection-start-column="40" selection-end-line="303" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dodajPotraznju2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-744">
+          <caret line="214" column="25" lean-forward="true" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/EditIzlog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="461" column="18" lean-forward="true" selection-start-line="461" selection-start-column="18" selection-end-line="461" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/editProfilPL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="477" column="95" selection-start-line="477" selection-start-column="95" selection-end-line="477" selection-end-column="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="1471" lean-forward="true" selection-start-line="1471" selection-end-line="1471" />
+        <state relative-caret-position="346">
+          <caret line="1568" selection-start-line="1568" selection-end-line="1568" />
         </state>
       </provider>
     </entry>

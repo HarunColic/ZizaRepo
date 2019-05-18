@@ -1269,9 +1269,6 @@ msgstr "BANKARSTVO"
 msgid "Potreban"
 msgstr "Potreban"
 
-msgid "Lizing"
-msgstr "Lizing"
-
 msgid "Žiža putem svoje platforme samo spaja tražioce bankarskih usluga sa bankama. Tražioci bankarskih usluga i banke su odgovorne za dalje procedure i poslovne saradnje."
 msgstr "Žiža putem svoje platforme samo spaja tražioce bankarskih usluga sa bankama. Tražioci bankarskih usluga i banke su odgovorne za dalje procedure i poslovne saradnje."
 
@@ -1300,9 +1297,6 @@ msgstr "FIZIČKA LICA"
 
 msgid "POPIS FIZIČKIH LICA"
 msgstr "POPIS FIZIČKIH LICA"
-
-msgid "SJEDIŠTE"
-msgstr "SJEDIŠTE"
 
 msgid "FILTRIRAJ"
 msgstr "FILTRIRAJ"
@@ -1351,10 +1345,6 @@ msgstr "Nemate završenih oglasa!"
 
 msgid "OBNOVI"
 msgstr "OBNOVI"
-
-
-msgid "Pregleda"
-msgstr "Pregleda"
 
 
 msgid "PRILIKE"
@@ -1465,4 +1455,114 @@ msgstr "NAZAD"
 msgid "Ovako će Vaš izlog izgledati nakon objave!"
 msgstr "Ovako će Vaš izlog izgledati nakon objave!"
 
+##                 DodajIzlog.html
+
+##                 dodajPotraznju.html
+
+
+
+msgid "NOVI"
+msgstr "NOVI"
+
+msgid "OGLAS"
+msgstr "OGLAS"
+
+msgid "Tražim/nudim"
+msgstr "Tražim/nudim"
+
+msgid "Izaberi vrstu"
+msgstr "Izaberi vrstu"
+
+msgid "Ponuda"
+msgstr "Ponuda"
+
+msgid "Potražnja"
+msgstr "Potražnja"
+
+msgid "Partnerstvo"
+msgstr "Partnerstvo"
+
+msgid "za kategoriju"
+msgstr "za kategoriju"
+
+msgid "Izaberi kategoriju"
+msgstr "Izaberi kategoriju"
+
+msgid "dokument oglasa"
+msgstr "dokument oglasa"
+
+msgid "ODABERI"
+msgstr "ODABERI"
+
+msgid "opcionalno"
+msgstr "opcionalno"
+
+msgid "Maksimalna veličina"
+msgstr "Maksimalna veličina"
+
+msgid " Poslovni oglas"
+msgstr " Poslovni oglas"
+
+msgid "Prijavom na oglas"
+msgstr "Prijavom na oglas"
+
+msgid "ima uvid u vaš CV"
+msgstr "ima uvid u vaš CV"
+
+msgid "SEKTOR"
+msgstr "SEKTOR"
+
+msgid "NAPOMENA"
+msgstr "NAPOMENA"
+
+msgid "Ovako će Vaš oglas izgledati nakon objave!"
+msgstr "Ovako će Vaš oglas izgledati nakon objave!"
+
+msgid "Uredi profil"
+msgstr "Uredi profil"
+
+msgid "Profil"
+msgstr "Profil"
+
+msgid "FIZIČKO LICE"
+msgstr "FIZIČKO LICE"
+
+msgid "MOJ"
+msgstr "MOJ"
+
+msgid "Ime i prezime"
+msgstr "Ime i prezime"
+
+msgid "Mjesto prebivališta"
+msgstr "Mjesto prebivališta"
+
+msgid "I stepen - četiri razreda osnovne"
+msgstr "I stepen - četiri razreda osnovne"
+
+msgid "II stepen - osnovna škola"
+msgstr "II stepen - osnovna škola"
+
+msgid "III stepen - SSS 3-godišnja"
+msgstr "III stepen - SSS 3-godišnja"
+
+msgid "IV stepen - SSS 4-godišnja"
+msgstr "IV stepen - SSS 4-godišnja"
+
+msgid "V stepen - VKV"
+msgstr "V stepen - VKV"
+
+msgid "VI stepen - VŠS"
+msgstr "VI stepen - VŠS"
+
+msgid "VII stepen - VSS"
+msgstr "VII stepen - VSS"
+
+msgid "VII-1 stepen - specijalista"
+msgstr "VII-1 stepen - specijalista"
+
+msgid "VII-2 stepen - magistratura"
+msgstr "VII-2 stepen - magistratura"
+
+msgid "VIII stepen - doktorat"
+msgstr "VIII stepen - doktorat"
 

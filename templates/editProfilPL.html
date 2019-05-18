@@ -2,7 +2,8 @@
 <html lang="ba">
 <head>
     {% load static %}
-	<title>ŽIŽA.ba | Uredi profil</title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'Uredi profil' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -401,11 +402,11 @@
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="#">Profil</a>
+				<a href="#">{% trans 'Profil' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
-				<a href="#" style="display: none;">Oglasi</a>
+				<a href="#" style="display: none;">{% trans 'Oglasi' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
-				<a href="#">Uredi profil</a>
+				<a href="#">{% trans 'Uredi profil' %}</a>
 			</div>
 			<div class="linijaD"></div>
 		</div>
@@ -424,11 +425,11 @@
 			</div>
 
 			<div class="podaciT">
-				<div>FIZIČKO LICE</div>
+				<div>{% trans 'FIZIČKO LICE' %}</div>
 				<div>{{ user.first_name }} {{ user.last_name }}</div>
 				<div>
 					<div>
-						<span class="navNap navNap1 navAct" id="napraviOglas" style="margin-left: 10px">Uredi profil</span>
+						<span class="navNap navNap1 navAct" id="napraviOglas" style="margin-left: 10px">{% trans 'Uredi profil' %}</span>
 						<div class="navNapCr"></div>
 					</div>
 				</div>
@@ -437,44 +438,44 @@
 	</div> <!-- coverSlika END -->
 	<div class="formaBody" style="position: relative;">
 		<div class="sadrzaj">
-			<h1>MOJ <span>CV</span></h1>
+			<h1>{% trans 'MOJ' %} <span>CV</span></h1>
 				<div>
-					<label>Ime i prezime</label><br>
+					<label>{% trans 'Ime i prezime' %}</label><br>
 					<input value="{{ user.first_name }} {{ user.last_name }}" type="text" id='naslovInput' name="naslov" placeholder="" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
-						<label>Kontakt e-mail adresa</label><br>
+						<label>{% trans 'Kontakt e-mail adresa' %}</label><br>
 						<input value="{{ user.email }}" type="email" name="email" style="width: 100%" placeholder="">
 					</div>
 					<div style="width: 43.75%">
-						<label>Kontakt broj</label><br>
+						<label>{% trans 'Kontakt broj' %}</label><br>
 						<input type="text" {% if userP.brojtelefona %}value="{{ userP.brojtelefona }}{% endif %}" name="brojTel" style="width: 100%">
 					</div>
 				</div>
 
 				<!-- Iskoristi ovaj popis gradova i za ostatak stranice tj. spremi u tabelu 'Gradovi' i sl. -->
 				<div style="margin-top: 20px">
-                        <label>Mjesto prebivališta</label><br>
+                        <label>{% trans 'Mjesto prebivališta' %}</label><br>
 					{% include 'gradovi.html' %}
 				</div>
 
 
 				<!-- Sacuvaj u bazi i ove spreme, koristit cemo ih na citavoj stranici -->
 				<div style="margin-top: 20px">
-					<label>{{ mirsad }}Stručna sprema</label><br>
+					<label>{{ mirsad }}{% trans 'Stručna sprema' %}</label><br>
 					<select name="strucnaSprema">
-						<option value="" disabled selected>Izaberi spremu</option>
-			    		<option value="I stepen - četiri razreda osnovne">I stepen - četiri razreda osnovne</option>
-			    		<option value="II stepen - osnovna škola">II stepen - osnovna škola</option>
-			    		<option value="III stepen - SSS 3-godišnja">III stepen - SSS 3-godišnja</option>
-			    		<option value="IV stepen - SSS 4-godišnja">IV stepen - SSS 4-godišnja</option>
-			    		<option value="V stepen - VKV">V stepen - VKV</option>
-			    		<option value="VI stepen - VŠS">VI stepen - VŠS</option>
-			    		<option value="VII stepen - VSS">VII stepen - VSS</option>
-			    		<option value="VII-1 stepen - specijalista">VII-1 stepen - specijalista</option>
-			    		<option value="VII-2 stepen - magistratura">VII-2 stepen - magistratura</option>
-			    		<option value="VIII stepen - doktorat">VIII stepen - doktorat</option>
+						<option value="" disabled selected>{% trans 'Izaberi spremu' %}</option>
+			    		<option value="I stepen - četiri razreda osnovne">{% trans 'I stepen - četiri razreda osnovne' %}</option>
+			    		<option value="II stepen - osnovna škola">{% trans 'II stepen - osnovna škola' %}</option>
+			    		<option value="III stepen - SSS 3-godišnja">{% trans 'III stepen - SSS 3-godišnja' %}</option>
+			    		<option value="IV stepen - SSS 4-godišnja">{% trans 'IV stepen - SSS 4-godišnja' %}</option>
+			    		<option value="V stepen - VKV">{% trans 'V stepen - VKV' %}</option>
+			    		<option value="VI stepen - VŠS">{% trans 'VI stepen - VŠS' %}</option>
+			    		<option value="VII stepen - VSS">{% trans 'VII stepen - VSS' %}</option>
+			    		<option value="VII-1 stepen - specijalista">{% trans 'VII-1 stepen - specijalista' %}</option>
+			    		<option value="VII-2 stepen - magistratura">{% trans 'VII-2 stepen - magistratura' %}</option>
+			    		<option value="VIII stepen - doktorat">{% trans 'VIII stepen - doktorat' %}</option>
 					</select>
 				</div>
 				<div style="margin-top: 20px">
