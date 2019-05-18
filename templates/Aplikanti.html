@@ -2,7 +2,8 @@
 <html lang="ba">
 <head>
     {% load static %}
-	<title>ŽIŽA.ba | FIZIČKA LICA </title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'Aplikanti' %} </title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -119,28 +120,28 @@
 <div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-				<h2><span>POPIS APLIKANATA</h2>
+				<h2><span>{% trans 'POPIS APLIKANATA' %}</h2>
 			</div>
 		</div>
 		<div class="tabelarni" style="display: none;">
 			<div>
 				<h3>SARAJEVO</h3>
-				<p>SJEDIŠTE</p>
+				<p>{% trans 'SJEDIŠTE' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3>INDUSTRIJA</h3>
-				<p>DJELATNOST</p>
+				<p>{% trans 'DJELATNOST'%} </p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3>13.000</h3>
-				<p>BROJ UPOSLENIH</p>
+				<p>{% trans 'BROJ UPOSLENIH' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3>KLIKNI OVDJE</h3>
-				<p>KONTAKT</p>
+				<p>{% trans 'KONTAKT' %}</p>
 			</div>
 		</div>
 		<div class="detaljniOpis" style="display: none;">
@@ -193,7 +194,7 @@
 
 		<div class="uvodniDio tabelarniUvodniDio" style="margin-top: -100px">
 			<div class="trazimo">
-				<h2 style="display: none;"><span>AKTIVNI</span> OGLASI</h2>
+				<h2 style="display: none;"><span>{% trans 'AKTIVNI' %}</span> {% trans 'OGLASI' %}</h2>
 			</div>
 		</div>
 		<div class="uvodniDio tabelarniDio">
@@ -214,7 +215,7 @@
 
         {% if userPs.count == 0 %}
 
-            <p>Ovaj oglas josuvijek nema aplikanata</p>
+            <p>{% trans 'Ovaj oglas josuvijek nema aplikanata' %}</p>
 
         {% endif %}
 
