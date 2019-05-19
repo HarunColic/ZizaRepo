@@ -846,11 +846,9 @@ ul {list-style: none}
 <body>
 
 	<img src="/static/images/logoNew.png" class="logotipNavbarMali">
-
     {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
     {% include 'header.html' %}
     {% endwith %}
-
     <style type="text/css">
     	.navigacija, .header__navigation--call{
     		visibility: hidden !important;
@@ -1725,11 +1723,9 @@ ul {list-style: none}
 
 {% load sweetify %}
     {% sweetify %}
-
           {% with auth=auth %}
 			{% include 'footer.html' %}
             {% endwith %}
-
 
 </body>
 <script type="text/javascript" src="{% static 'skripta.js' %}"></script>

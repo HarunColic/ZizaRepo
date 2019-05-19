@@ -1,5 +1,4 @@
 {% load static %}
-{% load i18n %}
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
@@ -152,6 +151,8 @@
 
 	.header__language p, .header__language img{ visibility: hidden; }
 </style>
+{% load i18n %}
+
 <form method="post" action="{% url 'register' %}" id="formaReg">
     {% csrf_token %}
     <input id="vrsta" type="hidden" value="radnik" name="vrsta" autocomplete="off">
@@ -202,30 +203,24 @@
 
 					    </div>
 					    <div class="form-group" style="margin-left: 40px">
+
 					     {% with var=1 %}
 
 			    		{%include 'gradovi.html' %}
                             {% endwith %}
+
 						</select>
 					    </div>
 					</div>
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" class="boxHolder">
 						<div class="form-group">
-<<<<<<< HEAD
-					      <label class="form-label" for="ema">E-mail adresa</label>
-					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
-					    </div>
-					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="pas">Lozinka</label>
-					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
-=======
+
 					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
 					      <input name="mail" id="ema" class="form-input neaktivan" autocomplete="anyrandomstring" type="email" spellcheck="false">
 					    </div>
 					    <div class="form-group" style="margin-left: 40px">
 					      <label class="form-label" for="pas">{% trans 'Lozinka' %}</label>
 					      <input name="pswd" id="pass" class="form-input neaktivan" autocomplete="anyrandomstring" type="password" spellcheck="false">
->>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 					    </div>
 					</div>
 				</div>
@@ -257,15 +252,7 @@
 			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0; margin-top: -23px">
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
 					<div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 70px; flex-direction: column;" class="grupField">
-<<<<<<< HEAD
-						<div class="form-group">
-					      <label class="form-label" for="ema">E-mail adresa</label>
-					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
-					    </div>
-					    <div class="form-group" style="margin-left: 0px; margin-top: 50px;">
-					      <label class="form-label" for="pas">Lozinka</label>
-					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
-=======
+
 						<div class="form-group focused">
 					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
 					      <input name="mail" id="ema" class="form-input neaktivan" autocomplete="false" type="email" spellcheck="false">
@@ -273,7 +260,6 @@
 					    <div class="form-group focused" style="margin-left: 0px; margin-top: 50px;">
 					      <label class="form-label" for="pas">{% trans 'Lozinka' %}</label>
 					      <input name="pswd" id="pass" class="form-input neaktivan" autocomplete="false" type="password" spellcheck="false">
->>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 					    </div>
 					</div>
 				</div>
@@ -305,15 +291,10 @@
 			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 30px">
-<<<<<<< HEAD
-						<div class="form-group">
-					      <label class="form-label" for="ema">E-mail adresa</label>
-					      <input name="mailres" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
-=======
+
 						<div class="form-group focused">
 					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
 					      <input name="mailres" id="ema" class="form-input neaktivan" type="email" spellcheck="false" autocomplete="false">
->>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 					    </div>
 					</div>
 				</div>

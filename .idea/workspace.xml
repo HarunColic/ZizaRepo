@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gradovi.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gradovi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            <state relative-caret-position="143">
+              <caret line="848" column="3" selection-start-line="848" selection-start-column="3" selection-end-line="850" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -65,17 +64,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/gradovi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            <state relative-caret-position="90">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/footer.html">
+        <entry file="file://$PROJECT_DIR$/templates/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="268">
+              <caret line="297" selection-start-line="297" selection-end-line="297" />
             </state>
           </provider>
         </entry>
@@ -125,9 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Treninzi</find>
-      <find>i edukacije</find>
-      <find>U Bosni i Hercegovini postoji jako puno predrasuda i nerazumijevanja kada su u pitanju treninzi zaposlenih u kompanijama. Riječ trening je najčešće olako shvaćena i obično se podrazumijeva kao neka vrsta predavanja kombinovanih sa timskim vježbama. Za razliku od zapada gdje se ovim bave posebne službe, kod nas o treninzima zaposlenih obično odlučuju HR odjeljenja kompanija, odnosno psiholozi kojima se ovaj posao najčešće dodjeljuje. Tako se nažalost trening zaposlenih tretira kao oblast psihologije, a ne kao vitalna poslovna funkcija. Kao rezultat ove zablude, poslovni treninzi su se u našim kompanijama najčešće svodili na čitanje slajdova sa gotovim upustvima, igrajnje besmislenih igara i popunjavanje psiholoških formulara i anketa. Zbog nedostatka prave konkurencije i neprepoznavanja njihovog značaja, treninzi su se kod nas najčešće sprovodili iz kozmetičkih razloga (zato što se to radi na zapadu!).</find>
       <find>Pitaćete se zašto su kompanijama potrebni pravi treninzi zaposlenih, a ne samo obična predavanja i seminari? Naravno nije problem da se u kompanijama održavaju seminari te da se na takav način uvećava opšte znanje zaposlenih. Seminare rado organizujemo za Vas!&lt;br&gt;&lt;br&gt;Problem nastaje kod onih vještina gdje je rezultat izuzetno važan, recimo kod prodaje. U prodaji ste ili prodali ili niste, nema ničega između. Zato trening prodaje mora biti pravi trening, a ne samo nekakva mješavina predavanja, izlaganja, seminara, davanja instrukcija, popunjavanja formulara i timskih radionica.</find>
       <find>Šta je to</find>
       <find>Da ne bi ulazili u komplikovane definicije, najbolje se napravi usporedba sa sportom.</find>
@@ -155,6 +160,9 @@
       <find>TRANS</find>
       <find>Lokacija</find>
       <find>{% load i18n %}</find>
+      <find>inclu</find>
+      <find>includ</find>
+      <find>trans</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -200,7 +208,6 @@
         <option value="$PROJECT_DIR$/templates/editProfilTvrtka.html" />
         <option value="$PROJECT_DIR$/templates/finansijsko-savjetovanje.html" />
         <option value="$PROJECT_DIR$/templates/firme.html" />
-        <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/interim-menadzment.html" />
         <option value="$PROJECT_DIR$/templates/Izlog.html" />
         <option value="$PROJECT_DIR$/templates/konsalting.html" />
@@ -221,10 +228,11 @@
         <option value="$PROJECT_DIR$/templates/treninzi-i-edukacije.html" />
         <option value="$PROJECT_DIR$/templates/zizaKorisnika.html" />
         <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/onamanew.html" />
         <option value="$PROJECT_DIR$/templates/gradovi.html" />
         <option value="$PROJECT_DIR$/templates/footer.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/header.html" />
       </list>
     </option>
   </component>
@@ -367,12 +375,12 @@
       <workItem from="1557955007100" duration="8006000" />
       <workItem from="1558051686392" duration="3090000" />
       <workItem from="1558140440403" duration="1047000" />
-      <workItem from="1558193182602" duration="22441000" />
+      <workItem from="1558193182602" duration="23228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122029000" />
+    <option name="totallyTimeSpent" value="122816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,7 +400,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1954023" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21335505" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21335505" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.24429968" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -403,7 +411,7 @@
       <window_info active="true" anchor="bottom" id="manage.py@untitled" order="10" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.16449511" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.16449511" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="14" weight="0.32736155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -606,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/interim-menadzment.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -809,27 +810,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/gradovi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        <state relative-caret-position="143">
+          <caret line="848" column="3" selection-start-line="848" selection-start-column="3" selection-end-line="850" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#2;n#div#1;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/footer.html">
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="268">
+          <caret line="297" selection-start-line="297" selection-end-line="297" />
         </state>
       </provider>
     </entry>
