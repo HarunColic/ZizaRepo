@@ -2,7 +2,8 @@
 <html lang="ba">
 <head>
     {% load static %}
-	<title>ŽIŽA.ba | Dashboard</title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'Dashboard' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -656,13 +657,13 @@
 {% endwith %}
 
 	<div class="main">
-		<h1><span>MOJI</span> OGLASI</h1>
+		<h1><span>{% trans 'MOJI' %}</span> {% trans 'OGLASI' %}</h1>
 		<div class="main__oglasi">
 			<div class="main__oglasi--filter">
 				<div class="main__oglasi--filter-part active" id="aktivniOglasi__button">
 					<div>
-						<span>AKTIVNI</span>
-						<span>OGLASI</span>
+						<span>{% trans 'AKTIVNI' %}</span>
+						<span>{% trans 'OGLASI' %}</span>
 					</div>
 					<div>
 						<div>{{ activepPosts.count }}</div> <!-- ucitaj iz baze broj aktivnih -->
@@ -670,8 +671,8 @@
 				</div>
 				<div class="main__oglasi--filter-part" id="zavrseniOglasi__button">
 					<div>
-						<span>ZAVRŠENI</span>
-						<span>OGLASI</span>
+						<span>{% trans 'ZAVRŠENI' %}</span>
+						<span>{% trans 'OGLASI' %}</span>
 					</div>
 					<div>
 						<div>{{ inactivePosts.count }}</div>  <!-- ucitaj iz baze broj okončanih -->
@@ -687,7 +688,7 @@
 						</div>
 						<div>
 							<div>{{ p.categoryID.name}}</div>
-							<div>{{ p.created_at.date|date:"d. m. Y." }}  <span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }} {{ p.region }}{% else %} nepoznato{% endif %}</span></div>
+							<div>{{ p.created_at.date|date:"d. m. Y." }}  <span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }} {{ p.region }}{% else %} {% trans 'nepoznato' %}{% endif %}</span></div>
 						</div>
 					</div>
 					<div>
@@ -697,7 +698,7 @@
 						<div></div> <!-- broj novih od zadnje posjete -->
 					</div>
 					<div>
-						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> Aplikanata
+						<span>{{ p.views }}</span> {% trans 'Pregleda' %} <span>{{ p.count_users }}</span> {% trans 'Aplikanata' %}
                     </div>
 				</div>
                 {% endfor %}
@@ -711,7 +712,7 @@
 						</div>
 						<div>
 							<div>{{ p.categoryID.name }}</div>
-                            <div>{{ p.created_at.date|date:"d. m. Y." }}<span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }}{% else %} nepoznato{% endif %}</span></div>
+                            <div>{{ p.created_at.date|date:"d. m. Y." }}<span {% if not p.location %} style="visibility: hidden"{% endif %} >{% if p.location %}{{ p.location }}{% else %} {% trans 'nepoznato' %}{% endif %}</span></div>
 
 						</div>
 					</div>
@@ -722,7 +723,7 @@
 						<div></div> <!-- ostaje prazno -->
 					</div>
 					<div>
-						<span>{{ p.views }}</span> Pregleda <span>{{ p.count_users }}</span> Aplikanata
+						<span>{{ p.views }}</span> {% trans 'Pregleda' %} <span>{{ p.count_users }}</span> {% trans 'Aplikanata' %}
 					</div>
 				</div>
                 {% endfor %}
@@ -769,20 +770,20 @@
 				</div> -->
 			</div>
 		</div>
-		<h1><span>PREPORUKE</span></h1>
+		<h1><span>{% trans 'PREPORUKE' %}</span></h1>
 		<h2>Najpopularniji oglasi iz Vaše branše.</h2>
 		<div class="main__filteri">
 			<div class="inactive ponuda" style="margin-right: 36px">
 				<div><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
-				<div>PONUDA</div>
+				<div>{% trans 'PONUDA' %}</div>
 			</div>
 			<div class="inactive potraznja" style="margin-right: 36px">
 				<div style="box-shadow: 0px 5px 10px 0 rgba(97, 177, 49, 0.25); background-color: #61b131;"><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
-				<div style="color: #61b131">POTRAŽNJA</div>
+				<div style="color: #61b131">{% trans 'POTRAŽNJA' %}</div>
 			</div>
 			<div class="inactive suradnja">
 				<div style="box-shadow: 0px 5px 10px 0 rgba(177, 176, 171, 0.25); background-color: #f11212;"><img src="https://i.imgur.com/FanIwdF.png" width="11px" height="8px"></div>
-				<div style="color: #f11212">SURADNJA</div>
+				<div style="color: #f11212">{% trans 'SURADNJA' %}</div>
 			</div>
 		</div>
 		<div class="main__oglasi--oglasi" id="preporuke">
@@ -839,16 +840,16 @@
 				</div>-->
 		</div>
 		<div class="bg_end">
-			<span>Želite li vidjeti još oglasa?</span>
+			<span>{% trans 'Želite li vidjeti još oglasa?' %}</span>
 		</div>
-		<button id="aktivirajPregled">OGLASI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+		<button id="aktivirajPregled">{% trans 'OGLASI' %}<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
 	</div>
 	<div class="uvod__linkovi">
 		<img src="{% static 'images/optimised/rss-min.png' %}" draggable="false" width="16px" height="16px">
 		<img src="{% static 'images/optimised/linkedin-min.png' %}" draggable="false" width="16px" height="15px">
 		<img src="{% static 'images/optimised/twitter-min.png' %}" draggable="false" width="16px" height="13px">
 		<img src="{% static 'images/optimised/facebook-min.png' %}" draggable="false" width="16px" height="16px">
-		<p>Pratite nas</p>
+		<p>{% trans 'Pratite nas' %}</p>
 	</div>
 
   {% with auth=auth %}

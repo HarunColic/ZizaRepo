@@ -8,11 +8,11 @@
 
                         {% if var == 1 %}
                         <select name="City" id="sjed">
-						<option value="" disabled selected>Lokacija</option>
+						<option value="" disabled selected>{% trans 'Lokacija' %}</option>
 						<option value="" >Bosna i Hercegovina</option>
                         {% else %}
                          <select name="grad">
-						<option value="" disabled selected>Mjesto prebivalista</option>
+						<option value="" disabled selected>{% trans 'Mjesto prebivalista' %}</option>
                             {% endif %}
                         <option value='Banovići'>Banovići</option>
 						<option value='Banja Luka'>Banja Luka</option>

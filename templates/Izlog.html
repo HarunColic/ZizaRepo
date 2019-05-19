@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ba">
 <head>
-	<title>ŽIŽA.ba | Izlog</title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'Izlog' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -160,11 +161,11 @@
 	<div class="coverSlika">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="{% url 'home' %}">Početna</a>
+				<a href="{% url 'home' %}">{% trans 'Početna' %}</a>
 				<img src="{% static "images/arrowDesnoZuto.png" %}">
-				<a href="#">Oglasi</a>
+				<a href="#">{% trans 'Oglasi' %}</a>
 				<img src="{% static "images/arrowDesnoZuto.png" %}">
-				<a href="#">Industrija</a>
+				<a href="#">{% trans 'Industrija' %}</a>
 			</div>
 			<div class="linijaD"></div>
 		</div>
@@ -175,11 +176,11 @@
                 {% endif %}
             </div>
 			<div class="podaciT">
-				<div>TVRTKA</div>
+				<div>{% trans 'TVRTKA' %}</div>
 				<div>{{ izlog.userID.first_name }}</div>
 				<div>
 					<span></span>
-					<span style="cursor: pointer" onclick="location.href='{% url 'profilKorisnika' id=izlog.userID.pk slug=izlog.userID.userprofile.slugifyName %}'" >Vidi ostale {{ post.userID.first_name }} Izloge</span>
+					<span style="cursor: pointer" onclick="location.href='{% url 'profilKorisnika' id=izlog.userID.pk slug=izlog.userID.userprofile.slugifyName %}'" >{% trans 'Vidi ostale' %} {{ post.userID.first_name }} {% trans 'Izloge' %}</span>
 				</div>
 			</div>
 		</div>

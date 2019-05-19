@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
@@ -162,29 +163,29 @@
 		<div class="regBox__lijevo">
 			<div class="regBox__lijevo--box active" id="osobaSector">
 				<img src="{% static 'images/pcelaobicna.png' %}">
-				<p>Prijava<br>kao fizičko lice</p>
+				<p>{% trans 'Prijava' %}<br>{% trans 'kao fizičko lice' %}</p>
 			</div>
 			<div class="regBox__lijevo--box" id="firmaSector">
 				<img src="{% static 'images/pcelafirma.png' %}" style="margin-top: 5px">
-				<p style="margin-top: 4px">Prijava<br>kao pravno lice</p>
+				<p style="margin-top: 4px">{% trans 'Prijava' %}<br>{% trans 'kao pravno lice' %}</p>
 			</div>
 		</div>
 		<div class="regBox__desno">
 			<div class="linijaActive" style="position: absolute; left: 0; top: 70px;"></div>
 			<div>
-				<h1 id="naslovTekst">REGISTRACIJA OSOBE</h1>
-				<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">Sva polja potrebna</p>
+				<h1 id="naslovTekst">{% trans 'REGISTRACIJA OSOBE' %}</h1>
+				<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">{% trans 'Sva polja potrebna' %}</p>
 			</div>
 			<div class="regBox__desno--input" style="display: flex; flex-direction: column;" >
 
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 33px">
 						<div class="form-group">
-					      <label class="form-label" for="first" id="prviInput">Vaše ime</label>
+					      <label class="form-label" for="first" id="prviInput">{% trans 'Vaše ime' %}</label>
 					      <input name="FirstName" id="first" class="form-input neaktivan" type="text" spellcheck="false">
 					    </div>
 					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="last" id="drugiInput">Prezime</label>
+					      <label class="form-label" for="last" id="drugiInput">{% trans 'Prezime' %}</label>
 					      <input name="LastName" id="last" class="form-input neaktivan" type="text" spellcheck="false">
 					    </div>
 					</div>
@@ -193,7 +194,7 @@
 					      <label class="form-label" for="djel" id="Djelatnost"></label>
 
                     <select name="Category" id="djel">
-						<option value="" disabled selected>Izaberite djelatnost</option>
+						<option value="" disabled selected>{% trans 'Izaberite djelatnost' %}</option>
                         {% for i in ind %}
 			    		<option value="{{ i.name }}">{{ i.name }}</option>
                         {% endfor %}
@@ -210,12 +211,21 @@
 					</div>
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" class="boxHolder">
 						<div class="form-group">
+<<<<<<< HEAD
 					      <label class="form-label" for="ema">E-mail adresa</label>
 					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
 					    </div>
 					    <div class="form-group" style="margin-left: 40px">
 					      <label class="form-label" for="pas">Lozinka</label>
 					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+=======
+					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
+					      <input name="mail" id="ema" class="form-input neaktivan" autocomplete="anyrandomstring" type="email" spellcheck="false">
+					    </div>
+					    <div class="form-group" style="margin-left: 40px">
+					      <label class="form-label" for="pas">{% trans 'Lozinka' %}</label>
+					      <input name="pswd" id="pass" class="form-input neaktivan" autocomplete="anyrandomstring" type="password" spellcheck="false">
+>>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 					    </div>
 					</div>
 				</div>
@@ -241,12 +251,13 @@
 	  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close closeReg">
 		<div class="regBox__desno" style="width: 100%">
 			<div style="margin-top: 50px; margin-bottom: 20px" class="headLogin">
-				<h1 id="naslovTekst" style="margin-top: 0; margin-bottom: 0">PRIJAVA ZA KORISNIKE</h1>
-				<p id="myBtn3" style="cursor: pointer;">Zaboravili ste lozinku?</p>
+				<h1 id="naslovTekst" style="margin-top: 0; margin-bottom: 0">{% trans 'PRIJAVA ZA KORISNIKE' %}</h1>
+				<p id="myBtn3" style="cursor: pointer;">{% trans 'Zaboravili ste lozinku?' %}</p>
 			</div>
 			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0; margin-top: -23px">
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
 					<div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 70px; flex-direction: column;" class="grupField">
+<<<<<<< HEAD
 						<div class="form-group">
 					      <label class="form-label" for="ema">E-mail adresa</label>
 					      <input name="mail" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
@@ -254,6 +265,15 @@
 					    <div class="form-group" style="margin-left: 0px; margin-top: 50px;">
 					      <label class="form-label" for="pas">Lozinka</label>
 					      <input name="pswd" id="pass" class="form-input neaktivan" type="password" spellcheck="false">
+=======
+						<div class="form-group focused">
+					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
+					      <input name="mail" id="ema" class="form-input neaktivan" autocomplete="false" type="email" spellcheck="false">
+					    </div>
+					    <div class="form-group focused" style="margin-left: 0px; margin-top: 50px;">
+					      <label class="form-label" for="pas">{% trans 'Lozinka' %}</label>
+					      <input name="pswd" id="pass" class="form-input neaktivan" autocomplete="false" type="password" spellcheck="false">
+>>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 					    </div>
 					</div>
 				</div>
@@ -280,14 +300,20 @@
 	  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
 		<div class="regBox__desno" style="width: 100%">
 			<div>
-				<h1 id="naslovTekst">RESTARTOVANJE LOZINKE</h1>
+				<h1 id="naslovTekst">{% trans 'RESETOVANJE LOZINKE' %}</h1>
 			</div>
 			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
 				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
 					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 30px">
+<<<<<<< HEAD
 						<div class="form-group">
 					      <label class="form-label" for="ema">E-mail adresa</label>
 					      <input name="mailres" id="ema" class="form-input neaktivan" type="email" spellcheck="false">
+=======
+						<div class="form-group focused">
+					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
+					      <input name="mailres" id="ema" class="form-input neaktivan" type="email" spellcheck="false" autocomplete="false">
+>>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 					    </div>
 					</div>
 				</div>
@@ -462,7 +488,7 @@ ul {list-style: none}
 			    	<a href="{% url 'home' %}">
 			    		<li>
 			    			<div class="saStrane"></div>
-			    			Početna
+			    			{% trans 'Početna' %}
 			    		</li>
 			    	</a>
 			    	<style type="text/css">
@@ -473,49 +499,49 @@ ul {list-style: none}
 			    	<!-- prava lokacija -->
 					<li class="oglasi--navMen">
 						<div class="saStrane" style="top: 33px !important;"></div>
-						Postavite oglas
+						{% trans 'Postavite oglas' %}
 					</li>
 					<li class="oglasi--navMen2">
 						<div class="saStrane" style="top: 75px !important;"></div>
-						Pregled oglasa
+						{% trans 'Pregled oglasa' %}
 					</li>
 			    	<a href="{% url 'konsalting' %}">
 			    		<li>
 			    			<div class="saStrane" style="top: 118px !important;"></div>
-			    			Konsalting
+			    			{% trans 'Konsalting' %}
 			    		</li>
 			    	</a>
 			    	<a href="/onama">
 			    		<li>
 			    			<div class="saStrane" style="top: 160px !important;"></div>
-			    			O nama
+			    			{% trans 'Konsalting' %} {% trans 'nama' %}
 			    		</li>
 			    	</a>
 			    	<a href="/firme">
 			    		<li>
 			    			<div class="saStrane" style="top: 200px !important;"></div>
-			    			Članice
+			    			{% trans 'Članice' %}
 			    		</li>
 			    	</a>
 			   	</ul>
 			   	<ul style="position: relative;" class="oglasi--extraMen">
-			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Postavite oglas</li>
-			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 33px !important"></div>Kadrovska potražnja</li>
-			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 75px !important;"></div>Poslovni oglas</li>
-			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 118px !important;"></div>Bankarske usluge</li>
-			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 160px !important;"></div>Usluge osiguranja</li>
+			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Postavite oglas' %}</li>
+			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 33px !important"></div>{% trans 'Kadrovska potražnja' %}</li>
+			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Poslovni oglas' %}</li>
+			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Bankarske usluge' %}</li>
+			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 160px !important;"></div>{% trans 'Usluge osiguranja' %}</li>
 			   	</ul>
 			   	<ul style="position: relative;" class="oglasi--extraMen2">
-			    	<li style="color: #f89101" class="oglasi--reactivate2"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Pregled oglasa</li>
-			    	<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');"><div class="saStrane" style="top: 33px !important;"></div>Pregled poslovnih oglasa</li>
-			    	<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');"><div class="saStrane" style="top: 75px !important;"></div>Pregled konkursa</li>
+			    	<li style="color: #f89101" class="oglasi--reactivate2"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Pregled oglasa' %}</li>
+			    	<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');"><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Pregled poslovnih oglasa' %}</li>
+			    	<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled konkursa' %}</li>
 			   	</ul>
 			   	<div style="height: 1px; width: 100%; background: #f89101;"></div>
 			   	<div style="display: flex; align-items: center; justify-content: center; margin-top: 25px">
 			   		<div style="font-family: Galano Bold; font-size: 10px; color: #ffffff; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;" class="tLogin">PRIJAVA</div>
+			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;" class="tLogin">{% trans 'PRIJAVA' %}</div>
 			   		<div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);" class="tRegister">REGISTRACIJA</div>
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);" class="tRegister">{% trans 'REGISTRACIJA' %}</div>
 			   	</div>
 			</div>
 		</span>
@@ -528,39 +554,39 @@ ul {list-style: none}
 		<div class="header__navigation--undefined"></div>
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
-				<span onclick="location.href='{% url 'home' %}'" class="selected" id="pocetna_nav">Početna</span>
-                <span class="konkurs" id="oglasi_nav">Postavite oglas
+				<span onclick="location.href='{% url 'home' %}'" class="selected" id="pocetna_nav">{% trans 'Početna' %}</span>
+                <span class="konkurs" id="oglasi_nav">{% trans 'Postavite oglas' %}
 					<div class="konkursBottom">
 					    <ul>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" ></div> Objavi novost </li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 33px !important;"></div> Kadrovska potraznja </li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 75px !important;"></div> Poslovni oglas</li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 118px !important;"></div> Bankarske usluge</li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 161px !important;"></div> Usluge osiguranja</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" ></div> {% trans 'Objavi novost' %} </li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 33px !important;"></div> {% trans 'Kadrovska potraznja' %} </li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 75px !important;"></div> {% trans 'Poslovni oglas' %}</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 118px !important;"></div> {% trans 'Bankarske usluge' %}</li>
+					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 161px !important;"></div> {% trans 'Usluge osiguranja' %}</li>
 					    </ul>
 					</div>
 				</span>
-				 <span class="konkurs2" id="oglasi_nav">Pregled oglasa
+				 <span class="konkurs2" id="oglasi_nav">{% trans 'Pregled oglasa' %}
 					<div class="konkurs2Bottom">
 					    <ul>
-                            <li onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');"><div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled poslovnih oglasa</li>
-                            <li  onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');"><div class="saStrane" style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled konkursa</li>
+                            <li onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');"><div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> {% trans 'Pregled poslovnih oglasa' %}</li>
+                            <li  onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');"><div class="saStrane" style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> {% trans 'Pregled konkursa' %}</li>
 					    </ul>
 					</div>
 				</span>
-				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >Konsalting
+				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >{% trans 'Konsalting' %}
 
 				</span>
-				<span onclick="location.href='/onama'" style="width: 80px; margin-right: 20px" id="onama_nav">O nama</span>
-				<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">Članice</span>
+				<span onclick="location.href='/onama'" style="width: 80px; margin-right: 20px" id="onama_nav">{% trans 'O' %} {% trans 'nama' %}</span>
+				<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">{% trans 'Članice' %}</span>
 			</div>
 			<div class="header__navigation--dugmad">
-				<span id="myBtn2" style="cursor: pointer;">Prijava</span>
-				<span id="myBtn" style="cursor: pointer;">Registracija</span>
+				<span id="myBtn2" style="cursor: pointer;">{% trans 'Prijava' %}</span>
+				<span id="myBtn" style="cursor: pointer;">{% trans 'Registracija' %}</span>
 			</div>
 			<div class="header__navigation--call">
 				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
-				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">Pon-Pet 9h-18h</span></p>
+				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">{% trans 'Pon-Pet' %} 9h-18h</span></p>
 			</div>
 		</div> <!-- header__navigation -->
 	</div><!-- header -->
@@ -708,8 +734,8 @@ ul {list-style: none}
 					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px;" class="postavke"><div><i class="fas fa-angle-down" style="color: #f89101; margin-left: -5px; display: inline;"></i></div>
 					<div class="postavkeBottom" style="width: 150px">
 					    <ul style="position: relative;">
-					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>Profil</li></a>
-                             <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Postavke</li></a>
+					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>{% trans 'Profil' %}</li></a>
+                             <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavke' %}</li></a>
 					    </ul>
 					</div>
 				</div>
@@ -724,36 +750,36 @@ ul {list-style: none}
 		<span class="sektor">
 			<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
 			    <ul style="position: relative;" class="mainNav">
-			    	<a href="{% url 'home' %}"><li><div class="saStrane"></div>Početna</li></a>
-                    <li class="oglasi--navMen"><div class="saStrane" style="top: 33px !important;"></div>Postavite oglas</li>
-                    <li class="oglasi--navMen2"><div class="saStrane" style="top: 75px !important;"></div>Pregled oglasa</li>
-					<a href="{% url 'dodajIzlog' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>Objavi novost</li></a>
-			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 160px !important;"></div>Konsalting</li></a>
-			    	<a href="/onama"><li><div class="saStrane" style="top: 200px !important;"></div>O nama</li></a>
-			    	<a href="/firme"><li><div class="saStrane" style="top: 240px !important;"></div>Članice</li></a>
+			    	<a href="{% url 'home' %}"><li><div class="saStrane"></div>{% trans 'Početna' %}</li></a>
+                    <li class="oglasi--navMen"><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavite oglas' %}</li>
+                    <li class="oglasi--navMen2"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled oglasa' %}</li>
+					<a href="{% url 'dodajIzlog' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Objavi novost' %}</li></a>
+			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 160px !important;"></div>{% trans 'Konsalting' %}</li></a>
+			    	<a href="/onama"><li><div class="saStrane" style="top: 200px !important;"></div>{% trans 'O nama' %}</li></a>
+			    	<a href="/firme"><li><div class="saStrane" style="top: 240px !important;"></div>{% trans 'Članice' %}</li></a>
 			   	</ul>
 			   	<ul style="position: relative;" class="oglasi--extraMen">
-			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Postavite oglas</li>
-			    	<a href="{% url 'newpost' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 33px !important"></div>Kadrovska potražnja</li></a>
-			    	<a href="{% url 'newpotraznja' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 75px !important;"></div>Poslovni oglas</li></a>
-			    	<a href="{% url 'bankUsluge' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 118px !important;"></div>Bankarske usluge</li></a>
-			    	<a href="{% url 'osiguranjeUsluge' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 160px !important;"></div>Usluge osiguranja</li></a>
+			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Postavite oglas' %}</li>
+			    	<a href="{% url 'newpost' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 33px !important"></div>{% trans 'Kadrovska potražnja' %}</li></a>
+			    	<a href="{% url 'newpotraznja' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Poslovni oglas' %}</li></a>
+			    	<a href="{% url 'bankUsluge' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Bankarske usluge' %}</li></a>
+			    	<a href="{% url 'osiguranjeUsluge' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 160px !important;"></div>{% trans 'Usluge osiguranja' %}</li></a>
 			   	</ul>
 			   	<ul style="position: relative;" class="oglasi--extraMen2">
-			    	<li style="color: #f89101" class="oglasi--reactivate2"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> Pregled oglasa</li>
-			    	<a href="{% url 'anonimnaPretraga' id=2 %}"><li class="submenu"><div class="saStrane" style="top: 33px !important;"></div>Pregled poslovnih oglasa</li></a>
-			    	<a href="{% url 'anonimnaPretraga' id=1 %}"><li class="submenu"><div class="saStrane" style="top: 75px !important;"></div>Pregled konkursa</li></a>
+			    	<li style="color: #f89101" class="oglasi--reactivate2"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Pregled oglasa' %}</li>
+			    	<a href="{% url 'anonimnaPretraga' id=2 %}"><li class="submenu"><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Pregled poslovnih oglasa' %}</li></a>
+			    	<a href="{% url 'anonimnaPretraga' id=1 %}"><li class="submenu"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled konkursa' %}</li></a>
 			   	</ul>
 			   	<div style="height: 1px; width: 100%; background: #f89101;"></div>
 			   	<div style="display: flex; align-items: center; justify-content: center; margin-top: 25px">
 			   		 <a href="{% url 'signout' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #ffffff; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;">ODJAVA</div></a>
+			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;">{% trans 'ODJAVA' %}</div></a>
                     {% if usr == 'comp' %}
 			   		 <a href="{% url 'dashboard' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">MOJA ŽIŽA</div></a>
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">{% trans 'MOJA ŽIŽA' %}</div></a>
                     {% elif usr == 'wrkr' %}
                      <a href="{% url 'mojaKarijera' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">MOJA KARIJERA</div></a>
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">{% trans 'MOJA KARIJERA' %}</div></a>
                     {% endif %}
 			   	</div>
 			</div>
@@ -768,42 +794,42 @@ ul {list-style: none}
 		<div class="header__navigation--undefined"></div>
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
-				<span onclick="location.href='{% url 'home' %}'" class="pocetNa">Početna</span>
-				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs">Postavite oglas
+				<span onclick="location.href='{% url 'home' %}'" class="pocetNa">{% trans 'Početna' %}</span>
+				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs">{% trans 'Postavite oglas' %}
                     {% if usr == 'comp' %}
 					<div class="konkursBottom">
 					    <ul>
 							{% if usr == 'comp' %}
-								<a href="{% url 'dodajIzlog' %}"><li><div class="saStrane"></div>Objavi novost</li></a>							
-					    	<a href="{% url 'newpost' %}"><li><div class="saStrane" style="top: 33px !important;"></div> Kadrovska potraznja </li></a>
-					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 75px !important;"></div> Poslovni oglas</li></a>
-					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> Bankarske usluge</li></a>
-					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 161px !important;"></div> Usluge osiguranja</li></a>
+								<a href="{% url 'dodajIzlog' %}"><li><div class="saStrane"></div>{% trans 'Objavi novost' %}</li></a>
+					    	<a href="{% url 'newpost' %}"><li><div class="saStrane" style="top: 33px !important;"></div> {% trans 'Kadrovska potraznja' %} </li></a>
+					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 75px !important;"></div> {% trans 'Poslovni oglas' %}</li></a>
+					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> {% trans 'Bankarske usluge' %}</li></a>
+					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 161px !important;"></div> {% trans 'Usluge osiguranja' %}</li></a>
 							{% else %}
-								<a href=""><li><div class="saStrane" ></div> Kadrovska potraznja </li></a>
-					    	<a href=""><li><div class="saStrane" style="top: 33px !important;"></div> Poslovni oglas</li></a>
-					    	<a href=""><li><div class="saStrane" style="top: 75px !important;"></div> Bankarske usluge</li></a>
-					    	<a href=""><li><div class="saStrane" style="top: 118px !important;"></div> Usluge osiguranja</li></a>
+								<a href=""><li><div class="saStrane" ></div> {% trans 'Kadrovska potraznja' %} </li></a>
+					    	<a href=""><li><div class="saStrane" style="top: 33px !important;"></div> {% trans 'Poslovni oglas' %}</li></a>
+					    	<a href=""><li><div class="saStrane" style="top: 75px !important;"></div> {% trans 'Bankarske usluge' %}</li></a>
+					    	<a href=""><li><div class="saStrane" style="top: 118px !important;"></div> {% trans 'Usluge osiguranja' %}</li></a>
                             {% endif %}
                                 </ul>
 					</div>
                         {% endif %}
 				</span>
-				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs2">Pregled oglasa
+				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs2">{% trans 'Pregled oglasa' %}
                     {% if usr == 'comp' %}
 					<div class="konkurs2Bottom">
 					    <ul>
-                            <a href="{% url 'anonimnaPretraga' id=2 %}" ><li><div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled poslovnih oglasa</li></a>
-                            <a href="{% url 'anonimnaPretraga' id=1 %}" ><li><div class="saStrane" style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> Pregled konkursa</li></a>
+                            <a href="{% url 'anonimnaPretraga' id=2 %}" ><li><div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> {% trans 'Pregled poslovnih oglasa' %}</li></a>
+                            <a href="{% url 'anonimnaPretraga' id=1 %}" ><li><div class="saStrane" style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> {% trans 'Pregled konkursa' %}</li></a>
 					    </ul>
 					</div>
                         {% endif %}
 				</span>
-				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >Konsalting
+				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >{% trans 'Konsalting' %}
 
 				</span>
-				<span onclick="location.href='/onama'" style="width: 80px;  margin-right: 20px" id="onama_nav">O nama</span>
-				<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">Članice</span>
+				<span onclick="location.href='/onama'" style="width: 80px;  margin-right: 20px" id="onama_nav">{% trans 'O nama' %}</span>
+				<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">{% trans 'Članice' %}</span>
 			</div>
 			<div class="header__navigation--dugmad">
 				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
@@ -813,23 +839,23 @@ ul {list-style: none}
 					<div class="postavkeBottom">
 					    <ul style="position: relative;">
 					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>Profil</li></a>
-                             <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>Postavke</li></a>
-					    	 <a href="{% url 'signout' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>Odjava</li></a>
+                             <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavke' %}</li></a>
+					    	 <a href="{% url 'signout' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Odjava' %}</li></a>
 					    </ul>
 					</div>
 				</div>
 				</div>
 				 {% if usr == 'comp' %}
 			   		 <a href="{% url 'dashboard' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">MOJA ŽIŽA</div></a>
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">{% trans 'MOJA ŽIŽA' %}</div></a>
                     {% elif usr == 'wrkr' %}
                      <a href="{% url 'mojaKarijera' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">MOJA KARIJERA</div></a>
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">{% trans 'MOJA KARIJERA' %}</div></a>
                     {% endif %}
 			</div>
 			<div class="header__navigation--call">
 				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
-				<p><a href="tel:+387603158565">+387 60 315 8565</a> <br> <span class="gray">Pon-Pet 9h-18h</span></p>
+				<p><a href="tel:+387603158565">+387 60 315 8565</a> <br> <span class="gray">{% trans 'Pon-Pet' %} 9h-18h</span></p>
 			</div>
 		</div> <!-- header__navigation -->
 	</div> <!-- header -->

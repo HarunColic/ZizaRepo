@@ -23,35 +23,35 @@
 		</div>
 		<div class="footer__content">
 			<div class="footer__content--opis">
-				<p>Žiža če Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršiti potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, (privremeno) nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje. <br><br>Biti u ŽIŽI znači: <em>"Vidjeti i biti viđen!"</em></p>
-				<a href="{% url 'onama' %}">Više o nama... <img src="{% static 'images/arrowDesno.png' %}" style="margin-left: 10px"></a>
+				<p>{% trans 'Žiža če Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršiti potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, (privremeno) nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje.' %} <br><br>Biti u ŽIŽI znači: <em>"Vidjeti i biti viđen!"</em></p>
+				<a href="{% url 'onama' %}">{% trans 'Više o nama' %}... <img src="{% static 'images/arrowDesno.png' %}" style="margin-left: 10px"></a>
 			</div>
 			<div class="footer__content--navigacija">
-				<h3>Za poslovni sektor</h3>
+				<h3>{% trans 'Za poslovni sektor' %}</h3>
 				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
-					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Povećajte ponudu i potražnju</div>
-					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Povećajte proizvodne kapacitete</div>
-					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Zaposlite adekvatno osoblje</div>
-					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Poslovno se vežite</div>
-					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Edukujte kadrove</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">{% trans 'Povećajte ponudu i potražnju' %}</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">{% trans 'Povećajte proizvodne kapacitete' %}</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">{% trans 'Zaposlite adekvatno osoblje' %}</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">{% trans 'Poslovno se vežite' %}</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">{% trans 'Edukujte kadrove' %}</div>
 				</div>
 			</div>
 			<div class="footer__content--navigacija">
 				<h3>Za ljudski potencijal</h3>
 				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
-					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Pronađite posao</div>
-					<div class="footer__content--navigacija--item"><img src="{%  static 'images/malaDesno.png' %}">Dopustite a poslodavac<br> pronađe Vas</div>
-					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">Edukujte se</div>
-					<div class="footer__content--navigacija--item"><img src="{%  static 'images/malaDesno.png' %}">Prekvalifikujte se</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">{% trans 'Pronađite posao' %}</div>
+					<div class="footer__content--navigacija--item"><img src="{%  static 'images/malaDesno.png' %}">{% trans 'Dopustite da poslodavac' %}<br> {% trans 'pronađe Vas' %}</div>
+					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">{% trans 'Edukujte se' %}</div>
+					<div class="footer__content--navigacija--item"><img src="{%  static 'images/malaDesno.png' %}">{% trans 'Prekvalifikujte se' %}</div>
 				</div>
 			</div>
 			<div class="footer__content--navigacija">
-				<h3>Kontakt</h3>
+				<h3>{% trans 'Kontakt' %}</h3>
 				<p>Ulica XX 29<br>88104 Mostar<br>Bosna i Hercegovina</p>
 				<div style="display: flex;">
 					{% if not auth %}
                     <div class="sendInput" style="width: 180px; border-radius: 20px; font-family: Galano Bold; color: white; font-size: 13px; background-color: #f89101; margin-left: 50px;">
-						PRIDRUŽI SE
+						{% trans 'PRIDRUŽI SE' %}
 					</div>
                     {% endif %}
 				</div>

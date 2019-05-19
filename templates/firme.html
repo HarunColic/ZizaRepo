@@ -2,7 +2,8 @@
 <html lang="ba">
 <head>
     {% load static %}
-	<title>ŽIŽA.ba | O nama</title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'O' %} {% trans 'nama' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -108,28 +109,28 @@
 <div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-				<h2><span>POPIS KOMPANIJA ČLANICA</h2>
+				<h2><span>{% trns 'POPIS KOMPANIJA ČLANICA' %}</h2>
 			</div>
 		</div>
 		<div class="tabelarni" style="display: none;">
 			<div>
 				<h3>SARAJEVO</h3>
-				<p>SJEDIŠTE</p>
+				<p>{% trans 'SJEDIŠTE' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3>INDUSTRIJA</h3>
-				<p>DJELATNOST</p>
+				<p>{% trans 'DJELATNOST' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3>13.000</h3>
-				<p>BROJ UPOSLENIH</p>
+				<p>{% trans 'BROJ UPOSLENIH' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
-				<h3>KLIKNI OVDJE</h3>
-				<p>KONTAKT</p>
+				<h3>{% trans 'KLIKNI OVDJE' %}</h3>
+				<p>{% trans 'KONTAKT' %}</p>
 			</div>
 		</div>
 		<div class="detaljniOpis" style="display: none;">
@@ -182,7 +183,7 @@
 
 		<div class="uvodniDio tabelarniUvodniDio" style="margin-top: -100px">
 			<div class="trazimo">
-				<h2 style="display: none;"><span>AKTIVNI</span> OGLASI</h2>
+				<h2 style="display: none;"><span>{% trans 'AKTIVNI' %}</span> {% trans 'OGLASI' %}</h2>
 			</div>
 		</div>
 		<div class="uvodniDio tabelarniDio">
@@ -199,7 +200,7 @@
 							<div>{{ f.userID.first_name }}</div> <!-- ime kompanije -->
 							<div>
                                 {% if f.categoryID.name is None %}
-                                    <span>Nije dostupno</span> <!-- djelatnost pod kojom se registrovala -->
+                                    <span>{% trans 'Nije dostupno' %}</span> <!-- djelatnost pod kojom se registrovala -->
                                 {% else %}
                                     <span>{{ f.categoryID.name}}</span> <!-- djelatnost pod kojom se registrovala -->
                                 {% endif %}
@@ -207,7 +208,7 @@
                                 {% if f.categoryID.name is None %}
                                     <span>
 									<span style="visibility: hidden;">Prije 6h</span> <!-- ignorisi !!! -->
-                                    Nije dostupno<!-- sjediste firme -->
+                                    {% trans 'Nije dostupno' %}<!-- sjediste firme -->
 								</span>
                                 {% else %}
                                 <span>

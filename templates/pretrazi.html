@@ -1,7 +1,8 @@
     <!DOCTYPE html>
     <html lang="ba">
     <head>
-        <title>ŽIŽA.ba | Lista poslova</title>
+        {% load i18n %}
+        <title>ŽIŽA.ba | {% trans 'Lista poslova' %}</title>
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
         <meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
         <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -96,7 +97,7 @@
 
     <div class="searchTop">
         
-        <h1>ZA VAS IMAMO <u>{{ counter }}</u> PONUDA!</h1>
+        <h1>{% trans 'ZA VAS IMAMO' %} <u>{{ counter }}</u> {% trans 'PONUDA!' %}</h1>
     </div><!-- searchTop -->
     <form id="pretraga" method="post" action="{% url 'pretraga' %}">
 
@@ -122,8 +123,8 @@
                 <img id="pretragaBTN" src="{% static 'images/Trazi.png' %}">
             </div>
             <div class="napomene">
-                <p>* Traži po ključnoj riječi npr. konobar</p>
-                <p style="margin-left: 30px">* Filtriraj po kategorijama npr. građevina</p>
+                <p>* {% trans 'Traži po ključnoj riječi npr. konobar' %}</p>
+                <p style="margin-left: 30px">* {% trans 'Filtriraj po kategorijama npr. građevina' %}</p>
             </div>
         </div><!-- searchBox -->
     </form>
@@ -211,7 +212,7 @@
                 <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
                 <div class="jobInfo">
                     <span class="struka">{{ cnt }}</span>
-                    <span class="pozicija">Ovlašteni inženjer građevine</span>
+                    <span class="pozicija">{% trans 'Ovlašteni inženjer građevine' %}</span>
                     <span class="vrijeme">{{ obj.created_at|date:"d.m.Y" }}</span>
                     <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
                     <div class="srce"><img src="../static/images/srce.png"></div>
@@ -261,7 +262,7 @@
                 <div class="logotipFirme"><img src="../static/images/hpinvest.png"></div>
                 <div class="jobInfo">
                     <span class="struka">{{ cnt }}</span>
-                    <span class="pozicija">Ovlašteni inženjer građevine</span>
+                    <span class="pozicija">{% trans 'Ovlašteni inženjer građevine' %}</span>
                     <span class="vrijeme">Prije 6h</span>
                     <span class="lokacijarada">Mostar, Bosna i Hercegovina</span>
                     <div class="srce"><img src="../static/images/srce.png"></div>

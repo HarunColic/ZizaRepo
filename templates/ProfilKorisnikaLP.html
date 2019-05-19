@@ -2,7 +2,8 @@
 <html lang="ba">
 <head>
     {% load static %}
-	<title>ŽIŽA.ba | Profil</title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'Profil' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
     <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
@@ -407,11 +408,11 @@
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="#">Profil</a>
+				<a href="#">{% trans 'Profil' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
-				<a href="#" style="display: none;">Oglasi</a>
+				<a href="#" style="display: none;">{% trans 'Oglasi' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px; visibility: hidden;"> <!-- ignorisi -->
-				<a href="#" style="visibility: hidden;">Uredi profil</a> <!-- ignorisi -->
+				<a href="#" style="visibility: hidden;">{% trans 'Uredi profil' %}</a> <!-- ignorisi -->
 			</div>
 			<div class="linijaD"></div>
 		</div>
@@ -429,11 +430,11 @@
 			{% endif %}
 
 			<div class="podaciT">
-				<div>FIZIČKO LICE</div>
+				<div>{% trans 'FIZIČKO LICE' %}</div>
 				<div>{{ userr.first_name }} {{ userr.last_name }}</div>
 				<div>
 					<div style="visibility: hidden;">
-						<span class="navNap navNap1 navAct" id="napraviOglas" style="margin-left: 10px">Uredi profil</span>
+						<span class="navNap navNap1 navAct" id="napraviOglas" style="margin-left: 10px">{% trans 'Uredi profil' %}</span>
 						<div class="navNapCr"></div>
 					</div>
 				</div>
@@ -444,43 +445,43 @@
 		<div class="sadrzaj">
 			<h1>ONLINE <span>CV</span></h1>
 				<div>
-					<label>Ime i prezime</label><br>
+					<label>{% trans 'Ime i prezime' %}</label><br>
 					<input value="{{ userr.first_name }} {{ userr.last_name }}" type="text" disabled id='naslovInput' name="naslov" placeholder="" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
-						<label>Kontakt e-mail adresa</label><br>
+						<label>{% trans 'Kontakt e-mail adresa' %}</label><br>
 						<input value="{{ userr.email }}" type="email" name="email" disabled style="width: 100%" placeholder="">
 					</div>
 					<div style="width: 43.75%">
-						<label>Kontakt broj</label><br>
+						<label>{% trans 'Kontakt broj' %}</label><br>
 						<input type="text" disabled {% if userPP.brojtelefona %}value="{{ userPP.brojtelefona }}{% endif %}" name="brojTel" style="width: 100%">
 					</div>
 				</div>
 
 
 				<div style="margin-top: 20px">
-                        <label>Mjesto prebivališta</label><br>
+                        <label>{% trans 'Mjesto prebivališta' %}</label><br>
 						<input type="text" disabled value="{{ userr.userprofile.location }}" name="grad" style="width: 100%">
 				</div>
 
 
 				<!-- Sacuvaj u bazi i ove spreme, koristit cemo ih na citavoj stranici -->
 				<div style="margin-top: 20px">
-					<label>Stručna sprema</label><br>
+					<label>{% trans 'Stručna sprema' %}</label><br>
 					<input type="text" disabled value="{{ emp.strucnaSprema }}" name="strucnaSprema" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px">
-					<label>Posljednje obrazovanje</label><br>
+					<label>{% trans 'Posljednje obrazovanje' %}</label><br>
 					<input type="text" id='brojUposlenihInput' disabled {% if emp.obrazovanje %}value="{{ emp.obrazovanje }}{% endif %}" name="obrazovanje" style="width: 100%" placeholder="Ustanova, godina, smjer, zvanje...">
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
-						<label>Posljednje radno mjesto</label><br>
+						<label>{% trans 'Posljednje radno mjesto' %}</label><br>
 						<input type="text" name="radno" disabled {% if emp.radnoMjesto %}value="{{ emp.radnoMjesto }}{% endif %}"  style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
-						<label>Godina iskustva</label><br>
+						<label>{% trans 'Godina iskustva' %}</label><br>
 						<input type="number" disabled value="{{ emp.iskustvo }}" name="iskustvo" style="width: 100%">
 					</div>
 				</div>
@@ -554,7 +555,7 @@
 
 				<!-- STARI DIO :: DJELATNOSTI IZ BAZE KOJE KORISTIMO PO STRANICI -->
 				<div  style="margin-top: 30px;">
-					<label style="margin-bottom: 8px;" class="specLab">O meni</label>
+					<label style="margin-bottom: 8px;" class="specLab">{% trans 'O meni' %}</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
       				<div style="background-color: #eeede7; min-height: 60px; border-radius: 5px; padding: 21px; margin-top: 5px; font-family: 'Galano Regular'">
@@ -567,26 +568,26 @@
                                     {% if userPP.cv %}
 
 				<div style="margin-top: 30px;" class="dokumentPDF">
-					<label style="margin-bottom: 8px">PDF/Word format CV-a</label><br>
+					<label style="margin-bottom: 8px">PDF/Word {% trans 'format CV-a' %}</label><br>
 					<div style="margin-top: 24px"></div>
 					<div style="display: flex; align-items: center;">
 						<div>
 							<label for="file-upload"  class="custom-file-upload">
 						    	<a href="/download?file={{ userPP.cv.name }}" >
-                                PREUZMI
+                                {% trans 'PREUZMI' %}
                                 </a>
                             </label>
 						</div>
 						<div>
                             {% if userPP.cv %}
-							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">Zadnje ažuriranje {{ userPP.lastModifiedCV|date:"d. m. Y."}}</p>
+							<p style="margin-left: 31px; font-size: 14px;line-height: 2.86;color: #b9b8b2; font-family: 'Galano Regular'">{% trans 'Zadnje ažuriranje' %} {{ userPP.lastModifiedCV|date:"d. m. Y."}}</p>
                             {% endif %}
 						</div>
 					</div>
 				</div>
                         {% endif %}
 
-            <a style="cursor: pointers;" id="aktivirajPregled">POZOVI<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></a>
+            <a style="cursor: pointers;" id="aktivirajPregled">{% trans 'POZOVI' %}<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></a>
             <input type="hidden" name="kkk" id="vjest">
 		</div>
 	</div> <!-- formaBody END -->

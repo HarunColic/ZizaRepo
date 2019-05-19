@@ -3,7 +3,8 @@
 <html lang="ba">
 <head>
     {% load static %}
-	<title>ŽIŽA.ba | Kreiraj oglas</title>
+    {% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'Kreiraj oglas' %}</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -150,11 +151,11 @@
 	<div class="coverSlika" style="position: relative;">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="{% url 'home' %}">Početna</a>
+				<a href="{% url 'home' %}">{% trans 'Početna' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="display: none;">
-				<a href="#" style="display: none;">Oglasi</a>
+				<a href="#" style="display: none;">{% trans 'Oglasi' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}" style="margin-left: 9px; margin-right: 9px">
-                <a class="logoutBtn" href="#">Objava</a>
+                <a class="logoutBtn" href="#">{% trans 'Objava' %}</a>
 				<form id="logoutForm" style="display:none;visibility:hidden;" action="/logout" method="POST">
 					{% csrf_token %}
 				</form>
@@ -176,15 +177,15 @@
                 {% endif %}
 			</div>
 			<div class="podaciT">
-				<div>TVRTKA</div>
+				<div>{% trans 'TVRTKA' %}</div>
 				<div>{{user.first_name}}</div>
 				<div>
 					<div>
-						<span class="navNap navNap1 navAct" id="napraviOglas">Napravi oglas</span>
+						<span class="navNap navNap1 navAct" id="napraviOglas">{% trans 'Napravi oglas' %}</span>
 						<div class="navNapCr"></div>
 					</div>
 					<div>
-						<span class="navNap navNap2" style="margin-left: 190px; color: white" id="pregledajOglas">Pregled</span>
+						<span class="navNap navNap2" style="margin-left: 190px; color: white" id="pregledajOglas">{% trans 'Pregled' %}</span>
 					</div>
 				</div>
 			</div>
@@ -192,8 +193,8 @@
 	</div> <!-- coverSlika END -->
 	<div class="formaBody" style="position: relative;">
 		<div class="sadrzaj">
-			<h1>USLUGE <span>OSIGURANJA</span></h1>
-			<h3 style="font-family: 'Galano Regular'; font-size: 14px"><span style="font-family: 'Galano Regular'; color: #f89101">NAPOMENA: </span>Žiža putem svoje platforme samo spaja tražioce usluga osiguranja sa osiguravajućim kućama. Tražioci usluga osiguranja i osiguravajuće kuće su odgovorne za dalje procedure i poslovne saradnje.</h3>
+			<h1>{% trans 'USLUGE' %} <span>{% trans 'OSIGURANJA' %}</span></h1>
+			<h3 style="font-family: 'Galano Regular'; font-size: 14px"><span style="font-family: 'Galano Regular'; color: #f89101">{% trans 'NAPOMENA' %}: </span>{% trans 'Žiža putem svoje platforme samo spaja tražioce usluga osiguranja sa osiguravajućim kućama. Tražioci usluga osiguranja i osiguravajuće kuće su odgovorne za dalje procedure i poslovne saradnje.' %}</h3>
             <form  action="{% url 'createpost' %}" style="margin-top: 50px" id="postForm" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <input type="hidden" value="2" name="type">
@@ -202,15 +203,15 @@
                 <input type="hidden" value="Tražim osiguranje" name="naslov">
 
 				<div style="margin-top: 20px">
-					<label>Kanton/regija <span>(na kojoj želite poslovati)</span></label><br>
+					<label>{% trans 'Kanton/regija' %} <span>({% trans 'na kojoj želite poslovati' %})</span></label><br>
 				<select name="kanton" id="lokacijaInput">
-						<option value="" disabled selected>Izaberi kanton/regiju</option>
+						<option value="" disabled selected>{% trans 'Izaberi kanton/regiju' %}</option>
                         <option value="Bosna i Hercegovina" > Bosna i Hercegovina</option>
-						<option value="" disabled selected>Entiteti i distrikti</option>
+						<option value="" disabled selected>{% trans 'Entiteti i distrikti' %}</option>
 			    		<option value="Federacija BiH">Federacija BiH</option>
 			    		<option value="Republika Srpska">Republika Srpska</option>
 			    		<option value="Distrikt Brčko">Distrikt Brčko</option>
-			    		<option value="" disabled selected>Kantoni u FBiH</option>
+			    		<option value="" disabled selected>{% trans 'Kantoni u FBiH' %}</option>
 			    		<option value="Unsko-sanski kanton">Unsko-sanski kanton</option>
 			    		<option value="Posavski kanton">Posavski kanton</option>
 			    		<option value="Tuzlanski kanton">Tuzlanski kanton</option>
@@ -222,65 +223,65 @@
 					</select>
 				</div>
 				<div style="margin-top: 20px">
-					<label>Trajanje oglasa</label><br>
+					<label>{% trans 'Trajanje oglasa' %}</label><br>
 					<select name="expiration">
-						<option value="" disabled selected>Izaberi trajanje</option>
-			    		<option value="7">7 dana</option>
-			    		<option value="15">15 dana</option>
-			    		<option value="30">30 dana</option>
-			    		<option value="60">60 dana</option>
-			    		<option value="0">Neograničeno</option>
+						<option value="" disabled selected>{% trans 'Izaberi trajanje' %}</option>
+			    		<option value="7">7 {% trans 'dana' %}</option>
+			    		<option value="15">15 {% trans 'dana' %}</option>
+			    		<option value="30">30 {% trans 'dana' %}</option>
+			    		<option value="60">60 {% trans 'dana' %}</option>
+			    		<option value="0">{% trans 'Neograničeno' %}</option>
 					</select>
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="kontaktiagain multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
-						<label>Kontakt e-mail adresa</label><br>
+						<label>{% trans 'Kontakt e-mail adresa' %}</label><br>
 						<input type="email" value="{{ user.email }}" name="email" style="width: 100%" placeholder="npr. ime@adresa.com">
 					</div>
 					<div style="width: 43.75%" class="kontaktBrojDiv">
-						<label>Kontakt broj</label><br>
+						<label>{% trans 'Kontakt broj' %}</label><br>
 						<input type="text" name="brojTel" value="{{ userP.brojtelefona }}" id="kontaktBrojInput" style="width: 100%" placeholder="npr. 06...">
 					</div>
 				</div>
 				<div style="margin-top: 20px; display: flex;">
 					<div style="width: 100%">
-						<label>Kontakt osoba</label><br>
+						<label>{% trans 'Kontakt osoba' %}</label><br>
 						<input type="email" name="position" id="kontaktOsobaInput" style="width: 100%" placeholder="npr. direktor">
 					</div>
 				</div>
 
 				<div  style="margin-top: 30px;">
-					<label style="margin-bottom: 8px" class="specLab">Detalji oglasa</label>
+					<label style="margin-bottom: 8px" class="specLab">{% trans 'Detalji oglasa' %}</label>
 					<!-- TEXTEDITOR zapocinje -->
 					<input name="opis" type="hidden">
       				<div id="editor-container"></div>
 					<!-- TEXTEDITOR zavrsava -->
 				</div>
-				<button id="aktivirajPregled">PREGLED<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
+				<button id="aktivirajPregled">{% trans 'PREGLED' %}<img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
 			</form>
 		</div>
 	</div> <!-- formaBody END -->
 	<div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-				<h2 id="nazivOglasa"><span>OSIGURANJE /</span> Potrebno osiguranje</h2>
-				<p>Žiža putem svoje platforme samo spaja tražioce usluga osiguranja sa osiguravajućim kućama. Tražioci usluga osiguranja i osiguravajuće kuće su odgovorne za dalje procedure i poslovne saradnje.</p>
+				<h2 id="nazivOglasa"><span>{% trans 'OSIGURANJE' %} /</span> {% trans 'Potrebno osiguranje' %}</h2>
+				<p>{% trans 'Žiža putem svoje platforme samo spaja tražioce usluga osiguranja sa osiguravajućim kućama. Tražioci usluga osiguranja i osiguravajuće kuće su odgovorne za dalje procedure i poslovne saradnje.' %}</p>
 			</div>
 		</div>
 		<div class="tabelarni">
 			<div>
 				<h3 id="lokacijaPlace">N/A</h3>
-				<p>KANTON/REGIJA</p>
+				<p>{% trans 'KANTON/REGIJA' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3 id="kontaktOsoba">N/A</h3>
-				<p>KONTAKT OSOBA</p>
+				<p>{% trans 'KONTAKT OSOBA' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3 id="kontaktBroj">N/A</h3>
-				<p>KONTAKT BROJ</p>
+				<p>{% trans 'KONTAKT BROJ' %}</p>
 			</div>
 		</div>
 		<div class="detaljniOpis">
@@ -301,11 +302,11 @@
 	<div class="pregledTraka">
 		<div style="font-family: 'Galano Black'; margin-left: 50px;">
 			<img src="../static/images/desnoPregled.png" style="transform: rotate(180deg); margin-right: 11px">
-			<span id="goBack">NAZAD</span>
+			<span id="goBack">{% trans 'NAZAD' %}</span>
 		</div>
 		<div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;">
-			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">Ovako će Vaš oglas izgledati nakon objave!</div>
-			<span id="objaviOglas">OBJAVI</span><img src="../static/images/desnoPregled.png" style="margin-left: 11px">
+			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">{% trans 'Ovako će Vaš oglas izgledati nakon objave!' %}</div>
+			<span id="objaviOglas">{% trans 'OBJAVI' %}</span><img src="../static/images/desnoPregled.png" style="margin-left: 11px">
 		</div>
 	</div>
 

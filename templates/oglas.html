@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ba">
 <head>
-	<title>ŽIŽA.ba | Oglas</title>
+{% load i18n %}
+	<title>ŽIŽA.ba | {% trans 'Oglas' %}</title>
 	<meta property="fb:app_id"        content="392299231338007" />
 	<meta property="og:url"           content="https://www.ziza.ba{{ request.path }}" />
 	<meta property="og:type" 		  content="website">
@@ -154,11 +155,11 @@
 	<div class="coverSlika">
 		<div class="navigacija">
 			<div class="breadcrumb">
-				<a href="{% url 'home' %}">Početna</a>
+				<a href="{% url 'home' %}">{% trans 'Početna' %}</a>
 				<img src="{% static 'images/arrowDesnoZuto.png' %}">
 				<a href="#">Oglasi</a>
 				<img src="{% static "images/arrowDesnoZuto.png" %}">
-				<a href="#">Industrija</a>
+				<a href="#">{% trans 'Industrija' %}</a>
 			</div>
 			<div class="linijaD"></div>
 		</div>
@@ -169,11 +170,11 @@
                 {% endif %}
             </div>
 			<div class="podaciT">
-				<div>TVRTKA</div>
+				<div>{% trans 'TVRTKA' %}</div>
 				<div>{{ post.userID.first_name }}</div>
 				<div>
 					<span></span>
-					<span style="cursor: pointer" onclick="location.href='{% url 'profilKorisnika' id=post.userID.pk slug=post.userID.userprofile.slugifyName %}'" >Vidi ostale {{ post.userID.first_name }} oglase</span>
+					<span style="cursor: pointer" onclick="location.href='{% url 'profilKorisnika' id=post.userID.pk slug=post.userID.userprofile.slugifyName %}'" >{% trans 'Vidi ostale' %} {{ post.userID.first_name }} {% trans 'oglase' %}</span>
 				</div>
 			</div>
 		</div>
@@ -181,8 +182,8 @@
 	<div class="glavniDio">
 		<div class="uvodniDio">
 			<div class="trazimo">
-				<h2><span>OGLAS /</span> {% if post.type == 2 %} {{ post.title }} {% else %}{{ post.position }}{% endif %}</h2>
-				<p>Prijavom na oglas {{ post.userID.first_name }} ima uvid u vaš CV!</p>
+				<h2><span>{% trans 'OGLAS' %} /</span> {% if post.type == 2 %} {{ post.title }} {% else %}{{ post.position }}{% endif %}</h2>
+				<p>{% trans 'Prijavom na oglas' %} {{ post.userID.first_name }} {% trans 'ima uvid u vaš CV!' %}</p>
 				{% include 'shareBtns.html' %}
 
 		<!--	</div>{% if post.attachment %}
@@ -196,7 +197,7 @@
         <form id="aplikantiForm" method="POST" action="{% url 'aplikanti' postID=post.pk %}">
         {% csrf_token %}
 			<a ><div id="aplikantiImg" class="downloadPDF">
-            <img src="{% static "images/downloadikona.png" %}"> Aplikanti
+            <img src="{% static "images/downloadikona.png" %}"> {% trans 'Aplikanti' %}
             </div></a>
         </form>
         {% endif %}
@@ -206,24 +207,24 @@
         <div class="tabelarni">
 			<div>
 				<h3 style="text-transform: uppercase;">{% if post.type == 1 %}{{ post.location}} {% else %}{{ post.region }}{% endif %}</h3>
-				<p>LOKACIJA</p>
+				<p>{% trans 'LOKACIJA' %}</p>
 			</div>
 			<div class="malaLinija"></div>
 			<div>
 				<h3 style="text-transform: uppercase;">{{ post.categoryID.name }}</h3>
-				<p>DJELATNOST</p>
+				<p>{% trans 'DJELATNOST' %}</p>
 			</div>
             {% if post.type == 1 %}
 			<div class="malaLinija"></div>
 			<div>
 				<h3>{{ post.experience }}+</h3>
-				<p>GODINE ISKUSTVA</p>
+				<p>{% trans 'GODINE ISKUSTVA' %}</p>
 			</div>
 
 			<div class="malaLinija"></div>
 			<div>
 				<h3 id="strucnaSpremChange">{{ post.specialty }}</h3>
-				<p>STRUČNA SPREMA</p>
+				<p>{% trans 'STRUČNA SPREMA' %}</p>
 			</div>
 		
         {% endif %}
@@ -233,7 +234,7 @@
 			<div class="malaLinija"></div>
 			<div>
 				<h3>{{ post.contact_phone }}</h3>
-				<p>Kontakt telefon</p>
+				<p>{% trans 'Kontakt telefon' %}</p>
 			</div>
         {% endif %}
 		</div>
@@ -255,7 +256,7 @@
 
 				<img onclick="location.href='{% url 'showpost' id=prevPost.userID.userprofile.slugifyName slug=prevPost.url %}'" src="{% static "images/lijevoOglas.png" %}" style="cursor: pointer;" class="lijevoEd">
 				<div>
-					<span>PRIJAŠNJI OGLAS</span>
+					<span>{% trans 'PRIJAŠNJI OGLAS' %}</span>
 					<span>{{ prevPost.userID.first_name }}</span>
 				</div>
                                     {% endif %}
@@ -269,7 +270,7 @@
                                     {% if nextPost %}
 
 				<div style="margin-left: 0">
-					<span>SLJEDEĆI OGLAS</span>
+					<span>{% trans 'SLJEDEĆI OGLAS' %}</span>
 
 					<span style="color: #f89101; text-align: right;">{{ nextPost.userID.first_name }}</span>
 				</div>

@@ -3,7 +3,7 @@
 {% load static %}
 {% load i18n %}
 <head>
-	<title>ŽIŽA.ba | Naslovnica</title>
+	<title>ŽIŽA.ba | {% trans 'Naslovnica' %}</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -903,13 +903,13 @@ ul {list-style: none}
 			
 			<a href="https://www.linkedin.com/company/ziza-connect-and-improve-your-business/"><img src="../static/images/optimised/linkedin-min.png" draggable="false" width="16px" height="15px"></a>
 			<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="../static/images/optimised/facebook-min.png" draggable="false" width="16px" height="16px"></a>
-			<p>Pratite nas</p>
+			<p>{% trans 'Pratite nas' %}</p>
 		</div>
 		<div class="uvod__tekst">
 			<h1>ŽIŽA</h1>
 			<p>CONNECT AND IMPROVE <br> YOUR BUSINESS</p>
-			<div class="dugme" style="cursor: pointer;">Zašto Žiža?</div>
-			<img src="../static/images/optimised/arrowBig-min.png" class="bounce" draggable="false" width="64px" height="32px">
+			<div class="dugme" style="cursor: pointer;">{% trans 'Zašto Žiža?' %}</div>
+			<img src="{% static 'images/optimised/arrowBig-min.png' %}" class="bounce" draggable="false" width="64px" height="32px">
 		</div>
 		<div class="uvod__slike">
             {% if auth %}
@@ -1039,14 +1039,14 @@ ul {list-style: none}
 	<div class="zadnjiPoslovi__popularno konkursiRes">
 		{% if auth %}
 		{% else %}
-			<h2>POPULARNO</h2>
-			<p>Najpopularniji oglasi za posao u posljednja 24 sata!</p>
+			<h2>{% trans 'POPULARNO' %}</h2>
+			<p>{% trans 'Najpopularniji oglasi za posao u posljednja 24 sata!' %}</p>
 			{% endif %}
 			 {% if auth %}
 			 <div class="zadnjiPoslovi__last show2000">
 			<div class="zadnjiPoslovi__last--kategorije">
-				<h3 id="posaoButton">KONKURSI</h3>
-				<h3 id="biznisButton">PONUDE</h3>
+				<h3 id="posaoButton">{% trans 'KONKURSI' %}</h3>
+				<h3 id="biznisButton">{% trans 'PONUDE' %}</h3>
 			</div>
 			<div class="zadnjiPoslovi__last--navigator">
 				<div class="zadnjiPoslovi__last--navigator--left"></div>
@@ -1086,7 +1086,7 @@ ul {list-style: none}
 		</div> <!-- zadnjiPoslovi__last -->
 			 		<div class="zadnjiPoslovi__last hide2000">
 			<div class="zadnjiPoslovi__last--kategorije">
-				<h3 id="posaoButton">KONKURSI</h3>
+				<h3 id="posaoButton">{% trans 'KONKURSI' %}</h3>
 			</div>
 			<div class="zadnjiPoslovi__last--navigator">
 				<div class="zadnjiPoslovi__last--navigator--left" style="width: 290px"></div>
@@ -1150,7 +1150,7 @@ ul {list-style: none}
 		{% if auth %}
 		<div class="zadnjiPoslovi__last hide2000">
 			<div class="zadnjiPoslovi__last--kategorije">
-				<h3 id="posaoButton">POSLOVNI OGLASI</h3>
+				<h3 id="posaoButton">{% trans 'POSLOVNI OGLASI' %}</h3>
 			</div>
 			<div class="zadnjiPoslovi__last--navigator">
 				<div class="zadnjiPoslovi__last--navigator--left" style="width: 490px"></div>
@@ -1189,8 +1189,8 @@ ul {list-style: none}
 		{% else %}
 		<div class="zadnjiPoslovi__last">
 			<div class="zadnjiPoslovi__last--kategorije">
-				<h3 style="cursor: pointer;" id="posaoButton">KONKURSI</h3>
-				<h3 style="cursor: pointer;" id="biznisButton">PONUDE</h3>
+				<h3 style="cursor: pointer;" id="posaoButton">{% trans 'KONKURSI' %}</h3>
+				<h3 style="cursor: pointer;" id="biznisButton">{% trans 'PONUDE' %}</h3>
 			</div>
 			<div class="zadnjiPoslovi__last--navigator">
 				<div class="zadnjiPoslovi__last--navigator--left"></div>
@@ -1239,17 +1239,17 @@ ul {list-style: none}
     {% else %}
 	<div class="kartice">
 		<div onclick="location.href='{% url 'anonimnaPretraga' id=1 %}'" class="kartice__trazitePosao" style="cursor: pointer;">
-			<h3>Tražite posao?</h3>
-			<p style="font-size: 26.5px">I obratno!</p>
-			<h4>Otvoreni konkursi</h4>
+			<h3>{% trans 'Tražite posao?' %}</h3>
+			<p style="font-size: 26.5px">{% trans 'I obratno!' %}</p>
+			<h4>{% trans 'Otvoreni konkursi' %}</h4>
 			<div class="linijaPosao"></div>
 			<img src="{% static 'images/worker_bee.png' %}">
 		</div>
 		<div style="cursor: pointer;" onclick="location.href='{% url 'anonimnaPretraga' id=2 %}'"  class="kartice__trazitePartnera">
-			<h3>Vidite!</h3>
-			<p style="font-size: 26.5px">I budite viđeni!</p>
-			<h4>Firme spremne za suradnju</h4>
-			<img src="../static/images/money_bee.png">
+			<h3>{% trans 'Vidite!' %}</h3>
+			<p style="font-size: 26.5px">{% trans 'I budite viđeni!' %}</p>
+			<h4>{% trans 'Firme spremne za suradnju' %}</h4>
+			<img src="{% static 'images/money_bee.png' %}">
 		</div>
 	</div> <!-- kartice -->
 	{% endif %}
@@ -1298,7 +1298,7 @@ ul {list-style: none}
 	<div class="ponudaContainer">
 		<!-- 16.1.2019. LIJEVA KOLONA -> NOVOSTI -->
 		<div class="oglasi2" style="margin-right: 50px;">
-			<h3 style="font-family: Galano Black; font-size: 30px">NOVOSTI</h3>
+			<h3 style="font-family: Galano Black; font-size: 30px">{% trans 'NOVOSTI' %}</h3>
             {% for i in izlozi %}
 			<div  onclick="location.href='{% url 'izlog' id=i.userID.userprofile.slugifyName slug=i.slug %}'" class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
@@ -1355,7 +1355,7 @@ ul {list-style: none}
 			 <!-- ili: POSLOVNE PONUDE -->
 			<!-- Ako je logirna firma onda ispiši POSLOVNE PONUDE, a ako je korisnik onda KONKURSI -->
         {% if auth and usr == "comp" %}
-            <h3 style="font-family: Galano Black; font-size: 30px">POSLOVNE PONUDE</h3>
+            <h3 style="font-family: Galano Black; font-size: 30px">{% trans 'POSLOVNE PONUDE' %}</h3>
             {% for p in postbb %}
 			<div onclick="location.href='{% url 'showpost' id=p.userID.userprofile.slugifyName slug=p.generateSlug %}'" class="oglasi__kartica">
 				<div class="oglasi__kartica--sadrzaj">
@@ -1368,7 +1368,7 @@ ul {list-style: none}
 			</div>
             {% endfor %}
             {% elif auth and usr == "wrkr" %}
-            <h3 style="font-family: Galano Black; font-size: 30px">KONKURSI ZA POSAO</h3>
+            <h3 style="font-family: Galano Black; font-size: 30px">{% trans 'KONKURSI ZA POSAO' %}</h3>
                 {% for p in postsbc %}
 			<div class="oglasi__kartica" onclick="location.href='{% url 'showpost' id=p.userID.userprofile.slugifyName slug=p.generateSlug %}'" >
 				<div class="oglasi__kartica--sadrzaj">
@@ -1670,29 +1670,29 @@ ul {list-style: none}
 	<div class="callToRegister mobCall" style="margin-top: -100px; margin-bottom: -200px"><img src="../static/images/registrirajse.png"></div>
 	<div class="testmoniali">
 		<div class="callToRegister tReg"><img src="../static/images/registrirajse.png"></div>
-		<h1>ZAŠTO ŽIŽA?</h1>
+		<h1>{% trans 'ZAŠTO ŽIŽA?' %}</h1>
 		<div class="testmoniali__kucice">
 			<div class="testmoniali__kucice--single">
 				<img src="{%  static 'images/redah.png' %}">
-				<p style="word-break: normal;">Idealno mjesto za povećanje poslovne ponude i potražnje. Olakšava poslovnu komunikaciju (vidljivost) sa potencijalnim (inostranim) partnerima i investitorima. Jednostavno dobar alat za povećanje konkurentnosti bosansko-hercegovačkih kompanija.</p>
+				<p style="word-break: normal;">{% trans 'Idealno mjesto za povećanje poslovne ponude i potražnje. Olakšava poslovnu komunikaciju (vidljivost) sa potencijalnim (inostranim) partnerima i investitorima. Jednostavno dobar alat za povećanje konkurentnosti bosansko-hercegovačkih kompanija.' %}</p>
 				<div>
 					<h4>Redah</h4>
-					<h5>Regionalna razvojna agencija za <br> ekonomski razvoj</h5>
+					<h5>{% trans 'Regionalna razvojna agencija za' %} <br> {% trans 'ekonomski razvoj' %}</h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
 				<img src="{%  static 'images/goran.png' %}">
-				<p style="word-break: normal;">Žižini IT eskperti Vam mogu ponuditi moderna IT rješenja te Vam na taj način umanjiti troškove organizacije i najma skupih stranih IT rješenja.</p>
+				<p style="word-break: normal;">{% trans 'Žižini IT eskperti Vam mogu ponuditi moderna IT rješenja te Vam na taj način umanjiti troškove organizacije i najma skupih stranih IT rješenja.' %}</p>
 				<div>
 					<h4>META5</h4>
-					<h5>Kompanija za razvoj softvera</h5>
+					<h5>{% trans 'Kompanija za razvoj softvera' %}</h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
 			<div class="testmoniali__kucice--single">
 				<img src="{%  static 'images/nedim.png' %}">
-				<p style="word-break: normal;">"Sve banke i osiguranja na jednom mjestu. Postavite Vaše finansijske ili osiguravajuće potrebe i vrlo brzo dobijete ponudu većine banaka i osiguravajućih društava. Na vama je da izaberete najbolje." Ovo je odlična zamisao, štedi vrijeme i povećava konkurenciju a Vama nudi najbolje na tržištu!</p>
+				<p style="word-break: normal;">"{% trans "Sve banke i osiguranja na jednom mjestu. Postavite Vaše finansijske ili osiguravajuće potrebe i vrlo brzo dobijete ponudu većine banaka i osiguravajućih društava. Na vama je da izaberete najbolje. 'Ovo je odlična zamisao, štedi vrijeme i povećava konkurenciju a Vama nudi najbolje na tržištu!'" %}</p>
 				<div>
 					<h4>Nedim Šuta</h4>
 					<h5>FINLAB d.o.o.</h5>
@@ -1701,7 +1701,7 @@ ul {list-style: none}
 			</div>
 			<div class="testmoniali__kucice--single">
 				<img src="{%  static 'images/affan.png' %}">
-				<p style="word-break: normal;">Skup eksperata Vam omogućava obuku, edukaciju Vašeg kadra te interim (privremeni) menadžment koji angažuje uključivanje privremenih (iskusnih) menadžera s kojima možete prevazići period bez adekvatnog kadra. U periodu rada interim menadžeri su u stanju obučiti Vaše talentovane uposlenike kako bi preuzeli te funkcije a vi dobili pouzdanog budućeg menadžera. Pored ovoga Žiža nudi finanskijska i (internacionalna) pravna savjetovanja.</p>
+				<p style="word-break: normal;">{% trans 'Skup eksperata Vam omogućava obuku, edukaciju Vašeg kadra te interim (privremeni) menadžment koji angažuje uključivanje privremenih (iskusnih) menadžera s kojima možete prevazići period bez adekvatnog kadra. U periodu rada interim menadžeri su u stanju obučiti Vaše talentovane uposlenike kako bi preuzeli te funkcije a vi dobili pouzdanog budućeg menadžera. Pored ovoga Žiža nudi finanskijska i (internacionalna) pravna savjetovanja.' %}</p>
 				<div>
 					<h4>Doc. dr. sc. Affan Ćehajić</h4>
 					<h5>Founder ŽIŽA.ba</h5>
@@ -1710,10 +1710,10 @@ ul {list-style: none}
 			</div>
 			<div class="testmoniali__kucice--single">
 				<img src="{%  static 'images/dragan.png' %}">
-				<p style="word-break: normal;">Rješava probleme manjka proizvodnih kapaciteta. Ukoliko imamo preveliku narudžbu preko Žize možemo lakše pronaći partnera s kojim možemo da popunimo nedostatak proizvodnih kapaciteta. Naravno mi već imamo partnere sa kojim sarađujemo, međutim često se desi da je taj partner baš u tom momentu zauzet sa nekom drugom narudžbom, što ga u tom momentu sprjećava da zajednički proizvodimo i zadovoljimo kupca. Žiža olakšava pronalazak više partnera.</p>
+				<p style="word-break: normal;">{% trans 'Rješava probleme manjka proizvodnih kapaciteta. Ukoliko imamo preveliku narudžbu preko Žize možemo lakše pronaći partnera s kojim možemo da popunimo nedostatak proizvodnih kapaciteta. Naravno mi već imamo partnere sa kojim sarađujemo, međutim često se desi da je taj partner baš u tom momentu zauzet sa nekom drugom narudžbom, što ga u tom momentu sprjećava da zajednički proizvodimo i zadovoljimo kupca. Žiža olakšava pronalazak više partnera.' %}</p>
 				<div>
 					<h4>Dragan Rezić</h4>
-					<h5>Predsjednik drvnog klastera <br> Hercegovina</h5>
+					<h5>{% trans 'Predsjednik drvnog klastera' %} <br> Hercegovina</h5>
 					<div class="navodnici">“</div>
 				</div>
 			</div>
