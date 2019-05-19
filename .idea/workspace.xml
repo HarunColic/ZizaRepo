@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/account/templates/oglas.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/oglas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Izlog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Izlog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/OsiguranjeUsluge2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ProfilKorisnika.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ProfilKorisnika.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ProfilKorisnikaLP.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ProfilKorisnikaLP.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editProfilPL.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilPL.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editProfilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilTvrtka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/finansijsko-savjetovanje.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/finansijsko-savjetovanje.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/firme.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/firme.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gradovi.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gradovi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/interim-menadzment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/interim-menadzment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/konsalting.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/konsalting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/korisnik.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/korisnik.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mojaKarijera.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mojaKarijera.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newpost.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newpost2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/oglas.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/oglas.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/onamanew.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/onamanew.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pravno-savjetovanje.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pravno-savjetovanje.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pretrazi.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pretrazi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profilTvrtka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/testPretraga.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testPretraga.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/treninzi-i-edukacije.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/treninzi-i-edukacije.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zizaKorisnika.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/zizaKorisnika.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="1862" column="37" selection-start-line="1862" selection-start-column="37" selection-end-line="1862" selection-end-column="37" />
+            <state relative-caret-position="352">
+              <caret line="2194" lean-forward="true" selection-start-line="2194" selection-end-line="2194" />
             </state>
           </provider>
         </entry>
@@ -89,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/onamanew.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="499" column="511" selection-start-line="499" selection-start-column="511" selection-end-line="499" selection-end-column="511" />
+            <state relative-caret-position="138">
+              <caret line="474" column="12" lean-forward="true" selection-start-line="474" selection-start-column="12" selection-end-line="474" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -231,9 +202,9 @@
         <option value="$PROJECT_DIR$/templates/testPretraga.html" />
         <option value="$PROJECT_DIR$/templates/treninzi-i-edukacije.html" />
         <option value="$PROJECT_DIR$/templates/zizaKorisnika.html" />
-        <option value="$PROJECT_DIR$/templates/onamanew.html" />
         <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/onamanew.html" />
       </list>
     </option>
   </component>
@@ -376,12 +347,12 @@
       <workItem from="1557955007100" duration="8006000" />
       <workItem from="1558051686392" duration="3090000" />
       <workItem from="1558140440403" duration="1047000" />
-      <workItem from="1558193182602" duration="21015000" />
+      <workItem from="1558193182602" duration="21752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120603000" />
+    <option name="totallyTimeSpent" value="121340000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,7 +367,7 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17238627" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17238627" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -412,7 +383,7 @@
       <window_info active="true" anchor="bottom" id="manage.py@untitled" order="10" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.16449511" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.16449511" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="14" weight="0.32736155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -808,13 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/onamanew.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="499" column="511" selection-start-line="499" selection-start-column="511" selection-end-line="499" selection-end-column="511" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -837,8 +801,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="1862" column="37" selection-start-line="1862" selection-start-column="37" selection-end-line="1862" selection-end-column="37" />
+        <state relative-caret-position="352">
+          <caret line="2194" lean-forward="true" selection-start-line="2194" selection-end-line="2194" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/onamanew.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="474" column="12" lean-forward="true" selection-start-line="474" selection-start-column="12" selection-end-line="474" selection-end-column="12" />
         </state>
       </provider>
     </entry>
