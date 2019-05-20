@@ -1141,5 +1141,1091 @@ msgid "Index of %(directory)s"
 msgstr ""
 
 
-msgid "KON"
+msgid "Aplikanti"
+msgstr "Applicants"
+
+msgid "POPIS APLIKANATA"
+msgstr "LIST OF APPLICANTS"
+
+msgid "SJEDIŠTE"
+msgstr "SEAT"
+
+msgid "DJELATNOST"
+msgstr "BUSINESS ACTIVITY"
+
+msgid "BROJ UPOSLENIH"
+msgstr "NUMBER OF EMPLOYEES"
+
+msgid "KONTAKT"
+msgstr "CONTACT"
+
+msgid "AKTIVNI"
+msgstr "ACTIVE"
+
+msgid "OGLASI"
+msgstr "ADVERTISEMENTS"
+
+msgid "Ovaj oglas josuvijek nema aplikanata"
+msgstr "This advertisement has no applicants so far"
+
+msgid "PREUZMI CV"
+msgstr "DOWNLOAD CV"
+
+msgid "NEMA CV"
+msgstr "NO CV"
+
+##             Aplikanti.html
+
+
+
+##             bankarskeUsluge.html
+
+msgid "Kreiraj oglas"
+msgstr "Create advertisement"
+
+msgid "Početna"
+msgstr "Homepage"
+
+msgid "Oglasi"
+msgstr "Advertisements"
+
+msgid "Objava"
+msgstr "Publication"
+
+msgid "TVRTKA"
+msgstr "COMPANY"
+
+msgid "Napravi oglas"
+msgstr "Create an advertisement"
+
+msgid "Pregled"
+msgstr "View"
+
+msgid "BANKARSKE"
+msgstr "BANKING"
+
+msgid "USLUGE"
+msgstr "SERVICES"
+
+msgid "Potreban mi je"
+msgstr "I am in need of"
+
+msgid "Izaberi"
+msgstr "Izaberi"
+
+msgid "na kojoj želite poslovati"
+msgstr "where you want to do business"
+
+msgid "Kanton/regija"
+msgstr "Canton/region"
+
+msgid "Kredit"
+msgstr "Loan"
+
+msgid "Lizing"
+msgstr "Leasing"
+
+msgid "Izaberi kanton/regiju"
+msgstr "Choose Canton/region"
+
+msgid "Entiteti i distrikti"
+msgstr "Entities and districts"
+
+msgid "Kantoni u FBiH"
+msgstr "Cantons in FBiH"
+
+msgid "Trajanje oglasa"
+msgstr "Valid until"
+
+msgid "Izaberi trajanje"
+msgstr "Choose validity period"
+
+msgid "Neograničeno"
+msgstr "Indefinitely"
+
+msgid "dana"
+msgstr "days"
+
+msgid "Kontakt e-mail adresa"
+msgstr "Contact e-mail address"
+
+msgid "Kontakt broj"
+msgstr "Contact number"
+
+msgid "Kontakt osoba"
+msgstr "Contact person"
+
+msgid "Detalji oglasa"
+msgstr "Advertisement details"
+
+msgid "PREGLED"
+msgstr "VIEW"
+
+msgid "BANKARSTVO"
+msgstr "BANKING"
+
+msgid "Potreban"
+msgstr "I need"
+
+msgid "Žiža putem svoje platforme samo spaja tražioce bankarskih usluga sa bankama. Tražioci bankarskih usluga i banke su odgovorne za dalje procedure i poslovne saradnje."
+msgstr "Žiža business platform only connects those who are searching for banking services with banks. Those who are searching for banking services and banks are responsible for subsequent procedures and business cooperation."
+
+msgid "KANTON/REGIJA"
+msgstr "CANTON/REGION"
+
+msgid "KONTAKT OSOBA"
+msgstr "CONTACT PERSON"
+
+msgid "KONTAKT BROJ"
+msgstr "CONTACT NUMBER"
+
+msgid "OBJAVI"
+msgstr "PUBLISH"
+
+
+##                bankarskeUsluge.html
+
+
+
+##                CVs.html
+
+
+msgid "FIZIČKA LICA"
+msgstr "INDIVIDUAL PERSONS"
+
+msgid "POPIS FIZIČKIH LICA"
+msgstr "LIST OF INDIVIDUAL PERSONS"
+
+msgid "FILTRIRAJ"
+msgstr "FILTER"
+##                CVs.html
+
+
+
+##                dashboard.html
+
+
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "MOJI"
+msgstr "MY"
+
+
+msgid "ZAVRŠENI"
+msgstr "EXPIRED"
+
+
+msgid "Nemate objavljenih oglasa!"
+msgstr "You have not published any advertisements!"
+
+
+msgid "nepoznato"
+msgstr "unknown"
+
+
+msgid "UREDI"
+msgstr "EDIT"
+
+
+msgid "UKLONI"
+msgstr "REMOVE"
+
+
+msgid "Aplikanata"
+msgstr "Applicants"
+
+
+msgid "Nemate završenih oglasa!"
+msgstr "You have no finished advertisements"
+
+
+msgid "OBNOVI"
+msgstr "RENEW"
+
+
+msgid "PRILIKE"
+msgstr "OPPORTUNITIES"
+
+
+msgid "Najpopularniji oglasi iz Vaše branše."
+msgstr "Most popular advertisements from your branch"
+
+
+msgid "PONUDA"
+msgstr "OFFER"
+
+
+msgid "POTRAŽNJA"
+msgstr "DEMAND"
+
+
+msgid "SURADNJA"
+msgstr "COOPERATION"
+
+
+msgid "Želite li vidjeti još oglasa?"
+msgstr "Do you want to see more advertisements?"
+
+
+msgid "Trenutno nema oglasa iz Vaše branše!"
+msgstr "Currently there are no advertisements in your branch!"
+
+
+msgid "Pratite nas"
+msgstr "Follow us"
+
+
+##                 dashboard.html
+
+
+##                DodajIzlog.html
+
+
+
+msgid "Lokacija"
+msgstr "Location"
+
+
+msgid "Napravi novost"
+msgstr "Create exhibition"
+
+
+msgid "KREIRAJ"
+msgstr "CREATE"
+
+
+msgid "NOVOST"
+msgstr "NEWS"
+
+
+msgid "Naslov novosti"
+msgstr "News headline"
+
+
+msgid "Podnaslov novosti"
+msgstr "News subheadline"
+
+
+msgid "Broj izvršitelja"
+msgstr "Number of job positions"
+
+
+msgid "Slika za izlog"
+msgstr "Picture for the exhibition"
+
+
+msgid "Pozicija"
+msgstr "Position"
+
+
+msgid "Min. iskustva"
+msgstr "Min. years of experience"
+
+
+msgid "Stručna sprema"
+msgstr "Professional qualifications"
+
+msgid "Sadržaj"
+msgstr "Content"
+
+msgid "LOKACIJA"
+msgstr "LOCATION"
+
+
+msgid "POZICIJA"
+msgstr "POSITION"
+
+
+msgid "GODINE ISKUSTVA"
+msgstr "YEARS OF EXPERIENCE"
+
+
+msgid "BROJ IZVRŠITELJA"
+msgstr "NUMBER OF JOB POSITIONS!"
+
+
+msgid "NAZAD"
+msgstr "BACK"
+
+
+msgid "Ovako će Vaš izlog izgledati nakon objave!"
+msgstr "This is what your exhibition will look like"
+
+##                 DodajIzlog.html
+
+##                 dodajPotraznju.html
+
+
+
+msgid "NOVI"
+msgstr "NEW"
+
+msgid "OGLAS"
+msgstr "ADVERTISEMENT"
+
+msgid "Tražim/nudim"
+msgstr "I am looking for/I am offering"
+
+msgid "Izaberi vrstu"
+msgstr "Chose type"
+
+msgid "Ponuda"
+msgstr "Offer"
+
+msgid "Potražnja"
+msgstr "Demand"
+
+msgid "Partnerstvo"
+msgstr "Cooperation"
+
+msgid "za kategoriju"
+msgstr "for category"
+
+msgid "Izaberi kategoriju"
+msgstr "Choose category"
+
+msgid "dokument oglasa"
+msgstr "advertisement document"
+
+msgid "ODABERI"
+msgstr "CHOOSE"
+
+msgid "opcionalno"
+msgstr "optional"
+
+msgid "Maksimalna veličina"
+msgstr "Maximum size"
+
+msgid "Poslovni oglas"
+msgstr "Business advertisement"
+
+msgid "Prijavom na oglas"
+msgstr "When you apply for a job"
+
+msgid "ima uvid u vaš CV"
+msgstr "gains insight into your CV!"
+
+msgid "SEKTOR"
+msgstr "SECTOR"
+
+msgid "NAPOMENA"
+msgstr "NOTE"
+
+msgid "Ovako će Vaš oglas izgledati nakon objave!"
+msgstr "This is what your advertisement will look like"
+
+msgid "Uredi profil"
+msgstr "Edit profile"
+
+msgid "Profil"
+msgstr "Profile"
+
+msgid "FIZIČKO LICE"
+msgstr "INDIVIDUAL PERSON"
+
+msgid "MOJ"
+msgstr "MY"
+
+msgid "Ime i prezime"
+msgstr "Full name"
+
+msgid "Mjesto prebivališta"
+msgstr "Place of residence"
+
+msgid "I stepen - četiri razreda osnovne"
+msgstr "I stepen - četiri razreda osnovne"
+
+msgid "II stepen - osnovna škola"
+msgstr "II stepen - osnovna škola"
+
+msgid "III stepen - SSS 3-godišnja"
+msgstr "III stepen - SSS 3-godišnja"
+
+msgid "IV stepen - SSS 4-godišnja"
+msgstr "IV stepen - SSS 4-godišnja"
+
+msgid "V stepen - VKV"
+msgstr "V stepen - VKV"
+
+msgid "VI stepen - VŠS"
+msgstr "VI stepen - VŠS"
+
+msgid "VII stepen - VSS"
+msgstr "VII stepen - VSS"
+
+msgid "VII-1 stepen - specijalista"
+msgstr "VII-1 stepen - specijalista"
+
+msgid "VII-2 stepen - magistratura"
+msgstr "VII-2 stepen - magistratura"
+
+msgid "VIII stepen - doktorat"
+msgstr "VIII stepen - doktorat"
+
+msgid "Posljednje obrazovanje"
+msgstr "Last education"
+
+msgid "Posljednje radno mjesto"
+msgstr "Last working place"
+
+msgid "Godina iskustva"
+msgstr "Years of experience"
+
+msgid "Vještine"
+msgstr "Vještine"
+
+msgid "O meni"
+msgstr "O meni"
+
+msgid "format CV-a"
+msgstr "format CV-a"
+
+msgid "SPREMI"
+msgstr "Save"
+
+msgid "NAMA"
+msgstr "US"
+
+msgid "O"
+msgstr "ABOUT"
+
+msgid "Naslov kompanije"
+msgstr "Company name"
+
+msgid "Sjedište"
+msgstr "Seat"
+
+msgid "Kategorija"
+msgstr "Category"
+
+msgid "Broj uposlenih"
+msgstr "Number of employees"
+
+msgid "Web stranica"
+msgstr "Website"
+
+msgid "nama"
+msgstr "us"
+
+msgid "financijskog izvještaja"
+msgstr "financial report"
+
+msgid "Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta."
+msgstr "Žiža business platform will connect you with the providers of advisory services in the field of finance, (international) law, project design, marketing, management, strategy and company development. Some of these services may be provided through interim management."
+
+msgid "Finansijsko"
+msgstr "FINANCIAL"
+
+msgid "savjetovanje"
+msgstr "CONSULTING"
+
+msgid "Naši finansijski stručnjaci djeluju na tri područja: računovodstvo, savjetovanje i edukacije. Pored visokih profesionalnih standarda daje se iznimna važnost etičkim principima uključenih partija."
+msgstr "Our financial experts provide advice in the following three fields: accounting, consulting and education. Apart from high professional standards, particular importance is paid to the ethical principles of the parties involved."
+
+msgid "POPIS KOMPANIJA ČLANICA"
+msgstr "LIST OF MEMBER COMPANIES"
+
+msgid "KLIKNI OVDJE"
+msgstr "CLICK HERE"
+
+msgid "Nije dostupno"
+msgstr "Not available"
+
+msgid "Žiža če Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršiti potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, (privremeno) nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje."
+msgstr "Žiža will save your time, provide you with assistance in crisis situations, implement necessary changes, awaken and stir up your routine business operations, open up new business perspectives, (temporarily) compensate for the lack of competent staff, and improve your business operations."
+
+msgid "Više o nama"
+msgstr "More about us"
+
+msgid "Za poslovni sektor"
+msgstr "For businesses"
+
+msgid "Povećajte ponudu i potražnju"
+msgstr "Increase your supply and demand"
+
+msgid "Povećajte proizvodne kapacitete"
+msgstr "Increase your production capacities"
+
+msgid "Zaposlite adekvatno osoblje"
+msgstr "Employ competent staff"
+
+msgid "Poslovno se vežite"
+msgstr "Network with other businesses"
+
+msgid "Edukujte kadrove"
+msgstr "Educate and train your staff"
+
+msgid "Pronađite posao"
+msgstr "Find a job"
+
+msgid "Dopustite da poslodavac"
+msgstr "Allow employers"
+
+msgid "pronađe Vas"
+msgstr "to find you"
+
+msgid "Edukujte se"
+msgstr "Receive education and training"
+
+msgid "Prekvalifikujte se"
+msgstr "Get retrained"
+
+msgid "Kontakt"
+msgstr "Contact us"
+
+msgid "PRIDRUŽI SE"
+msgstr "JOIN ŽIŽA"
+
+msgid "Mjesto prebivalista"
+msgstr "place of residence"
+
+msgid "Prijava"
+msgstr "Sign in"
+
+msgid "kao pravno lice"
+msgstr "as a legal entity"
+
+msgid "REGISTRACIJA OSOBE"
+msgstr "REGISTER AS AN INDIVIDUAL"
+
+msgid "Sva polja potrebna"
+msgstr "All fields are mandatory."
+
+msgid "Vaše ime"
+msgstr "First name"
+
+msgid "Prezime"
+msgstr "Last name"
+
+msgid "Izaberite djelatnost"
+msgstr "Choose business activity"
+
+msgid "E-mail adresa"
+msgstr "E-mail address"
+
+msgid "Lozinka"
+msgstr "password"
+
+msgid "PRIJAVA ZA KORISNIKE"
+msgstr "SIGN IN"
+
+msgid "Zaboravili ste lozinku?"
+msgstr "Forgot password?"
+
+msgid "RESETOVANJE LOZINKE"
+msgstr "RESET PASSWORD"
+
+msgid "Postavite oglas"
+msgstr "Post advertisements"
+
+msgid "Pregled oglasa"
+msgstr "View advertisements"
+
+msgid "Konsalting"
+msgstr "Consulting"
+
+msgid "Članice"
+msgstr "Members"
+
+msgid "Kadrovska potražnja"
+msgstr "Find staff"
+
+msgid "Bankarske usluge"
+msgstr "Banking services"
+
+msgid "Usluge osiguranja"
+msgstr "Insurance services"
+
+msgid "Pregled poslovnih oglasa"
+msgstr "View business advertisements"
+
+msgid "Pregled konkursa"
+msgstr "View job advertisements"
+
+msgid "PRIJAVA"
+msgstr "SIGN IN"
+
+msgid "REGISTRACIJA"
+msgstr "REGISTER"
+
+msgid "Objavi novost"
+msgstr "Publish news"
+
+msgid "Kadrovska potraznja"
+msgstr "Find staff"
+
+msgid "Registracija"
+msgstr "Register"
+
+msgid "Pon-Pet"
+msgstr "Sat-Fry"
+
+msgid "Postavke"
+msgstr "Settings"
+
+msgid "O nama"
+msgstr "About us"
+
+msgid "ODJAVA"
+msgstr "SIGN OUT"
+
+msgid "MOJA ŽIŽA"
+msgstr "MY ŽIŽA"
+
+msgid "MOJA KARIJERA"
+msgstr "MY CAREER"
+
+msgid "Odjava"
+msgstr "Sign out"
+
+msgid "Naslovnica"
+msgstr "Home page"
+
+msgid "Zašto Žiža?"
+msgstr "Why Žiža?"
+
+msgid "POPULARNO"
+msgstr "POPULAR"
+
+msgid "Najpopularniji oglasi za posao u posljednja 24 sata!"
+msgstr "The most popular job advertisements in the past 24 hours!"
+
+msgid "KONKURSI"
+msgstr "JOB ADVERTISEMENTS"
+
+msgid "PONUDE"
+msgstr "OFFERS"
+
+msgid "POSLOVNI OGLASI"
+msgstr "JOB ADVERTISEMENTS"
+
+msgid "Tražite posao?"
+msgstr "Looking for a job?"
+
+msgid "I obratno!"
+msgstr "Offering a job?"
+
+msgid "Otvoreni konkursi"
+msgstr "Open job advertisements"
+
+msgid "I budite viđeni!"
+msgstr "And be seen!"
+
+msgid "Firme spremne za suradnju"
+msgstr "Companies Ready to cooperate"
+
+msgid "NOVOSTI"
+msgstr "NEWS"
+
+msgid "POSLOVNE PONUDE"
+msgstr "BUSINESS OFFERS"
+
+msgid "KONKURSI ZA POSAO"
+msgstr "Job advertisements!"
+
+msgid "ZAŠTO ŽIŽA?"
+msgstr "WHY ŽIŽA?"
+
+msgid "Idealno mjesto za povećanje poslovne ponude i potražnje. Olakšava poslovnu komunikaciju (vidljivost) sa potencijalnim (inostranim) partnerima i investitorima. Jednostavno dobar alat za povećanje konkurentnosti bosansko-hercegovačkih kompanija."
+msgstr "An ideal place to increase business your supply and demand. Žiža facilitates your business communication (visibility) with your potential (foreign) partners and investors. Simply put, Žiža is a good tool for increasing competitiveness of Bosnian and Herzegovinian companies."
+
+msgid "Regionalna razvojna agencija za"
+msgstr "Regional Development Agency for"
+
+msgid "ekonomski razvoj"
+msgstr "Herzegovina"
+
+msgid "Žižini IT eskperti Vam mogu ponuditi moderna IT rješenja te Vam na taj način umanjiti troškove organizacije i najma skupih stranih IT rješenja."
+msgstr "Žiža’s IT experts can offer you modern IT solutions and allow you to reduce the cost of organising and leasing expensive foreign IT solutions."
+
+msgid "Kompanija za razvoj softvera"
+msgstr "Software development company"
+
+msgid "Sve banke i osiguranja na jednom mjestu. Postavite Vaše finansijske ili osiguravajuće potrebe i vrlo brzo dobijete ponudu većine banaka i osiguravajućih društava. Na vama je da izaberete najbolje. 'Ovo je odlična zamisao, štedi vrijeme i povećava konkurenciju a Vama nudi najbolje na tržištu!'"
+msgstr "“A one-stop source for all banks and insurance companies. Announce your need for financial or insurance needs and receive offers from most of the banks and insurance companies very fast. It is up to you to choose the best offers.” This is a wonderful idea, it saves time and increases competitiveness, and offers you the best market solutions!"
+
+msgid "Skup eksperata Vam omogućava obuku, edukaciju Vašeg kadra te interim (privremeni) menadžment koji angažuje uključivanje privremenih (iskusnih) menadžera s kojima možete prevazići period bez adekvatnog kadra. U periodu rada interim menadžeri su u stanju obučiti Vaše talentovane uposlenike kako bi preuzeli te funkcije a vi dobili pouzdanog budućeg menadžera. Pored ovoga Žiža nudi finanskijska i (internacionalna) pravna savjetovanja."
+msgstr "A group of experts provides training and education for your staff and interim (temporary) management which means hiring experienced interim managers who will help you overcome periods without adequate managers. During the periods they are hired for, interim managers are able to train your talented staff so that they can take over necessary functions at your company and make it possible for you to have a reliable future manager. Furthermore, Žiža also provides financial and (international) legal advisory services"
+
+msgid "Rješava probleme manjka proizvodnih kapaciteta. Ukoliko imamo preveliku narudžbu preko Žize možemo lakše pronaći partnera s kojim možemo da popunimo nedostatak proizvodnih kapaciteta. Naravno mi već imamo partnere sa kojim sarađujemo, međutim često se desi da je taj partner baš u tom momentu zauzet sa nekom drugom narudžbom, što ga u tom momentu sprjećava da zajednički proizvodimo i zadovoljimo kupca. Žiža olakšava pronalazak više partnera."
+msgstr "Solves the problem of insufficient production capacities. If the order is too large, Žiža makes it easier for us to find a partner and thus allows us to overcome the lack of production capacities. Of course, we already have partners we cooperate with, but oftentimes, our partner has other production orders to manage when we need him, which prevents him to work with us and fulfil the needs of our customer. Žiža makes it easier for us to find several partners."
+
+msgid "Predsjednik drvnog klastera"
+msgstr "President of Wood Cluster"
+
+msgid "menadžment"
+msgstr "management"
+
+msgid "Interim/privremeni menadžeri vode organizacije (ili njihove dijelove) u ograničenom vremenskom periodu. U skladu sa ciljevima koje odredi klijent, oni upravljaju projektima, nadgledaju zaposlene, preuzmu odgovornost za troškove i rezultate i samostalno stvaraju svoje nadležnosti ili izvršnu ulogu."
+msgstr "Interim managers manage organisations (or parts of organisations) for a limited period. In line with the aims laid down by the client, they manage projects, oversee staff, take responsibility for expenses and results and they themselves specify their competences or perform an executive role."
+
+msgid "Žiža platforma Vas može povezati sa stručnjacima na polju"
+msgstr "Žiža business platform can connect you with experts in the field of"
+
+msgid "menadžmenta, marketinga, strategije i razvoja preduzeća"
+msgstr "management, marketing, strategy and company development."
+
+msgid "Izlog"
+msgstr "Exhibition"
+
+msgid "Industrija"
+msgstr "Industry"
+
+msgid "Vidi ostale"
+msgstr "View other"
+
+msgid "Izloge"
+msgstr "Exhibitions"
+
+msgid "Pravno"
+msgstr "Legal"
+
+msgid "Treninzi"
+msgstr "TRAINING"
+
+msgid "i edukacije"
+msgstr "AND EDUCATION"
+
+msgid "Kompanija"
+msgstr "Company"
+
+msgid "FIN. IZVJEŠTAJ"
+msgstr "Financial report"
+
+msgid "stranica"
+msgstr "pages"
+
+msgid "PRIJAŠNJA STRANICA"
+msgstr "PREVIOUS PAGE"
+
+msgid "SLJEDEĆA STRANICA"
+msgstr "NEXT PAGE"
+
+msgid "Pregleda"
+msgstr "Views"
+
+msgid "Naslov oglasa"
+msgstr "Advertisement title"
+
+msgid "Djelatnost oglasa"
+msgstr "Advertisement business activity"
+
+msgid "Izaberi djelatnost"
+msgstr "Choose business activity"
+
+msgid "ima uvid u vaš CV!"
+msgstr "gains insight into your CV!"
+
+msgid "Uredi oglas"
+msgstr "Edit advertisements"
+
+msgid "oglase"
+msgstr "advertisements"
+
+msgid "Kontakt telefon"
+msgstr "Contact phone"
+
+msgid "Uzet ćemo sebi za pravo reći kako niste pronašli odgovarajuću stanicu. Nadamo se da ne zamjerate. Naime, u potrazi za odgovorima na Vaša pitanja, gotovo smo sigurni da niste došli do središta traženih rješenja. U ŽIŽU svega. Do nas."
+msgstr "We give ourselves the right to say that you have not found the right place. We hope you do not mind. Namely, we are almost certain that while you were looking for answers to your questions you did not come to the centre of the solutions you wanted, to the focal point of everything (ŽIŽA), to us."
+
+msgid "Kako je sve"
+msgstr "HOW IT AL"
+
+msgid "počelo"
+msgstr "BEGAN"
+
+msgid "Sigurno se pitate ko smo mi i kako je sve počelo"
+msgstr "You must be wondering who we are and how it all began."
+
+msgid "Ž"
 msgstr ""
+
+msgid "I"
+msgstr ""
+
+msgid "A"
+msgstr ""
+
+msgid "elite jedinstveno rješenje za višestruke probleme poslovne i tržišne prirode?"
+msgstr "You want a unique solution for multiple business and market problems?"
+
+msgid "mate potrebu za mijenjati radnu sredinu i okušati se u novim i većim izazovima?"
+msgstr "You feel the need to change your work environment and take on new and greater challenges?"
+
+msgid "alite što niste bili u mogućnosti realizirati investicijske ideje zbog nedostatka podrške i pomoći?"
+msgstr "You regret not having an opportunity to implement your investment ideas for lack of support and assistance?"
+
+msgid "pritom ste pokušali sve."
+msgstr "And you have tried everything in ding so?"
+
+msgid "Prije nego li nam date Vaše povjerenje, utrošite vrijeme u čitanje sljedećih redova, dajemo vlastitu riječ kako neće biti uzaludno. I ne, nećemo Vam naplatiti neisporučeno. Niti obećati nemoguće."
+msgstr "If you spent a little time in reading the following lines before you place your trust in us, we give you our word that it will not be in vain. And, no, we will not charge you what we have not delivered, and we will not promise you something that is not possible."
+
+msgid "Još uvijek sumnjate? OK."
+msgstr "Are you still doubting? All right."
+
+msgid "Razumijemo"
+msgstr "We understand"
+
+msgid "Bili smo tu gdje jeste Vi danas. Hodali smo u Vašim cipelama. Žuljale su nas iste stvari. Spoticali smo se o ista kamenja. Lutali tražeći odgovarajuće putokaze. Odustajali nismo. Kao ni Vi sami."
+msgstr "We have been there. We have been in your shoes. The same shoes have pinched our feet. We stumbled upon the same obstacles. We have wandered around looking for the right road signs. However, we have not given up, just like you."
+
+msgid "Ne nastupamo incognito"
+msgstr "We do not go incognito."
+
+msgid "Mi smo fuzija inozemnog iskustva koje je otišlo 'trbuhom za kruhom' van svoje domovine tražeći odgovore na bezbroj pitanja koje je su nam nametnule stvari van našeg utjecaja i pritom diktirale životne okolnosti. Rat. Nedostatak prilika. Nemilosrdna sudbina. To nas je sustizalo. Profesionalizacija i održive radne vrijednosti. Strateško promišljanje. Europski koncepti održivog poslovanja. Vjerovanje u neostvarivo. To nas je kovalo."
+msgstr "We are a fusion of people who gained experience abroad because they left their country looking for a better life and answers to countless questions brought about by things beyond their influence that dictated their circumstances in doing so. The war, a lack of opportunities, a cruel fate—these have been catching up on us. Professionalism and sustainable work values, strategic thinking, European concepts of sustainable business, trusting in far-fetched ideas—this has forged use to become what we are."
+
+msgid "Ako ste možda čitajući prethodno pomislili kako su s druge strane penzionisani brokeri u emigraciji s istrošenim setom grafičkih olovka ubačenih u prednji džep bijele košulje koju drže karirani tregeri, u krivu ste. <strong>Mi smo i mladi</strong>. Trendsetteri. Ne oni modni. Trendovi koje postavljamo nisu prolazne prirode. S tehnologijom liježemo i budimo se. Čitamo toliko da podižemo tiraž tiskarskoj industriji. Energetski konkurišemo nuklearnoj energiji.Testiramo vlastite mogućnosti pomicanjem i stvaranjem novih granica. Istih onih koje želimo nadići. S Vama."
+msgstr "If you thought that perhaps retired brokers living abroad using a set of pencils stored in the front pocket of a white shirt and checkered suspenders wrote the previous lines while you were reading them, you were mistaken. We are young too. We are trendsetters, but not fashion trendsetters. The trends we set are not transient. We go to sleep and wake up with technology. We read so avidly that we increase printing companies’ circulation. In terms of energy, we compete with nuclear energy. We test our own possibilities by moving and setting new boundaries—the ones we wish to overcome with you. "
+
+msgid "Generacijski jaz nam je mlađi od rekorda Štefke Kostadinove. Oslanjamo se na <strong>domaće snage</strong>. Upravljali smo velikim <strong>inostranim projektima</strong> i davali savjete dokazanim evropskim menadžerima. Vjerujući u autohtono, <strong>educirali</strong> smo se na našim fakultetima i posezali za prekograničnim usavršavanjima i obrnuto. Znamo što znači biti pod pritiskom osigurati novac za nama najbliže. <strong>Padali smo</strong>. Učili na vlastitim greškama. Izgradili se u toj mjeri u kojoj se drugi mogu osloniti na nas."
+msgstr "Our generation gap is younger than the record set by Stefka Kostadinova. We rely on local work force. We managed large foreign projects and provided advisory services to experienced European managers. Believing in the value of local education institutions, we have received our education at our universities, and we have sought training abroad and vice versa. We know what it means to be under pressure to provide for your family. We have stumbled. We have learned from our own mistakes. We have built ourselves up to the extent to which others can rely on us."
+
+msgid "Vi"
+msgstr "You"
+
+msgid "Što Vam"
+msgstr "WHAT WE"
+
+msgid "nudimo"
+msgstr "OFFER YOU"
+
+msgid "Idemo ovako. Krenućemo s onim što"
+msgstr "Let us do it this way. Let us start from what it is that we"
+
+msgid "ne možemo ponuditi"
+msgstr "do not offer you"
+
+msgid "Gledanje u karte pri odluci o ulasku u novi business roller coaster. Polovična rješenja. Garantni list ispisan na lakmus papiru. Nismo Avengersi i ne možemo spasiti svijet."
+msgstr "Relying on fortune-telling when entering into a new business roller coaster, half-solutions and a guarantee list written on the litmus paper. We are not the Avengers and we cannot save the world."
+
+msgid "Nudimo"
+msgstr "We do offer you"
+
+msgid "Vam razumijevanje. Znanje. Podršku. Adekvatne odgovore na Vaše potrebe. Iskustvo. Rezervirano mjesto za put ka konkurentnijoj i tržišno orijentisanoj Bosni i Hercegovini."
+msgstr "our understanding, know-how, support, solutions and the appropriate solutions to your needs, and experience. We offer you a reserved seat on the path to a more competitive and market-oriented Bosnia and Herzegovina."
+
+msgid "Što nas je"
+msgstr "WHAT ENTICED"
+
+msgid "potaklo"
+msgstr "US"
+
+msgid "Tako je, dobro ste pročitali. Istini na volju ne osobno on, ali njegova 'za bukvara' jeste."
+msgstr "That is right, you read it right. Truth be told, it was not actually him personally, it was something he said, a thought you include in a spelling textbook."
+
+msgid "Sunce tuđeg neba, neće vas grijat kô što ovo grije."
+msgstr "'The sun that shines in a foreign place will never warm you like the sun in your own.'"
+
+msgid "Pjesnik"
+msgstr "poet"
+
+msgid "Nije samo Aleksa. Gledajući Vašu volju za radom, imamo dugoročni motiv. Upornost i predanost koja prkosi beznađu. Mladi ljudi koji ne žele robovati ranije usvojenim principima koji ne donose rezultate."
+msgstr "It was not just Aleksa. Seeing your willingness to work, our long-term motivation, persistence and devotion defy hopelessness. Young people unwilling to slave away to principles from long ago that do not bring results."
+
+msgid "koju dijelimo. Vaša ambicija i znanje koju ne čuvate samo za sebe."
+msgstr "The fate we share. Your ambition and know-how that you do not selfishly keep to yourself."
+
+msgid "Potencijal koji nosite"
+msgstr "The potential you carry in you."
+
+msgid "Radna snaga koja zaslužuje dostojan tretman i svijetla pozornosti."
+msgstr "The energy you have for work deserves to be treated with respect and proper attention."
+
+msgid "Naš"
+msgstr "WHAT OUR"
+
+msgid "cilj"
+msgstr "GOAL IS"
+
+msgid "Raditi na izgradnji Vašeg karijernog puta"
+msgstr "Work on developing you career path"
+
+msgid "Podignuti konkuretnost bosanskohercegovačkog tržišta koristeći raspoložive resurse i"
+msgstr "Improve the competitiveness of the Bosnian and Herzegovinian market using the available resources and"
+
+msgid "vodeći se dokazanim studijama"
+msgstr "following reliable research studies."
+
+msgid "Biti Vaš 'joker iz rukava' ukoliko Vam trebaju odgovori na pitanja legislativne i bankarske"
+msgstr "Be your ace in the hole if you need answers in relation to legal and banking"
+
+msgid "prirode."
+msgstr "matters."
+
+msgid "Slijediti put onih koji su ga utabali za nas - Connecting people. Business people."
+msgstr "Follow the footsteps of those who have paved the way for us: connect people, business people."
+
+msgid "Dvije su stvari koje trebate napraviti. Vjerovati i postati članom naše familije u osnutku. Nije potrebno ispunjavati komplicirane formulare. Jedan 'klik' Vas dijeli od mnogobrojnih mogućnosti: članstva, bliskog susreta s prilikama koje je teško propustiti, novog poslovnog i životnog partnerstva i ostvarenja Vaših poslovnih ciljeva."
+msgstr "We are here for you. We offer, look for, implement, and build. We have in mind the obstacles we need to overcome, which are bywords to bureaucratic barriers, vague business guidelines and a mismatch between supply and demand. We are aware of the opportunities that lie ahead of us, the horizons that are opening up to us and the mission we can accomplish. We believe in our capacities, your idea and our synergy. We know why we are here: at the very centre of it all (which is the meaning of “žiža”) and the place where solutions are found."
+
+msgid "Tu smo za Vas.  Nudimo. Tražimo. Realiziramo. Gradimo.  Imamo na umu prepreke koje trebamo prevazići, a koje su sinonim za birokratske barijere, nejasne poslovne smjernice te disbalans između ponude i potražnje. Svjesni smo prilika koje nam se pružaju. Horizonata koji se otvaraju. Misije koju možemo ispuniti. Vjerujemo u vlastite kapacitete. Vašu ideju. Zajedničku sinergiju. Čak kao što ste primijetili razumijemo se na sva tri jezika. Može četiri ili pet (crnski ili gorski). Znamo zbog čega smo tu gdje jesmo. U žiži zbivanja. U središtu pronalaska rješenja."
+msgstr "We are here for you. We offer, look for, implement, and build. We have in mind the obstacles we need to overcome, which are bywords to bureaucratic barriers, vague business guidelines and a mismatch between supply and demand. We are aware of the opportunities that lie ahead of us, the horizons that are opening up to us and the mission we can accomplish. We believe in our capacities, your idea and our synergy. We know why we are here: at the very centre of it all (which is the meaning of “žiža”) and the place where solutions are found."
+
+msgid "Dobro nam došli. Hvala na povjerenju"
+msgstr "Welcome. Thank you for trusting us!"
+
+msgid "OSIGURANJA"
+msgstr "INSURANCES"
+
+msgid "Žiža putem svoje platforme samo spaja tražioce usluga osiguranja sa osiguravajućim kućama. Tražioci usluga osiguranja i osiguravajuće kuće su odgovorne za dalje procedure i poslovne saradnje."
+msgstr "Žiža putem svoje platforme samo spaja tražioce usluga osiguranja sa osiguravajućim kućama. Tražioci usluga osiguranja i osiguravajuće kuće su odgovorne za dalje procedure i poslovne saradnje."
+
+msgid "OSIGURANJE"
+msgstr "INSURANCE"
+
+msgid "Potrebno osiguranje"
+msgstr "Insurance needed"
+
+msgid "Broj izvoznika i privrednika u BiH se svake godine povećava. Ono što je čest problem je doći do iskusnih pravnih stručnjaka na polju poslovnog prava. Žiža platforma će Vam omogućiti saradnju sa iskusnim pravnicima na polju internacionalnog i poslovnog prava uopće."
+msgstr "The number of exporters and business people in Bosnia and Herzegovina increases every year. It is often difficult to find experienced legal experts in the field of business law. Žiža business platform will enable you to cooperate with experienced legal advisors specialised in international and business law in general."
+
+msgid "Lista poslova"
+msgstr "List of jobs"
+
+msgid "WE HAVE"
+msgstr "ZA VAS IMAMO"
+
+msgid "PONUDA!"
+msgstr "WE HAVE 2 OFFERS FOR YOU!"
+
+msgid "Traži po ključnoj riječi npr. konobar"
+msgstr "Search by keyword, e.g. waiter"
+
+msgid "Filtriraj po kategorijama npr. građevina"
+msgstr "Filter by category, e.g. construction"
+
+msgid "Ovlašteni inženjer građevine"
+msgstr "Ovlašteni inženjer građevine"
+
+msgid "nema aktivnih oglasa"
+msgstr "You have not published any advertisements!"
+
+msgid "POZOVI"
+msgstr "CONTACT"
+
+msgid "Profil kompanije"
+msgstr "Company profile"
+
+msgid "Profil korisnika"
+msgstr "User profile"
+
+msgid "PROFIL TVRTKE"
+msgstr "COMPANY PROFILE"
+
+msgid "IZLOG"
+msgstr "EXHIBITION"
+
+msgid "KOMPANIJE"
+msgstr "COMPANIES"
+
+msgid "Izbriši"
+msgstr "Remove"
+
+msgid "Uredi"
+msgstr "Edit"
+
+msgid "U Bosni i Hercegovini postoji jako puno predrasuda i nerazumijevanja kada su u pitanju treninzi zaposlenih u kompanijama. Riječ trening je najčešće olako shvaćena i obično se podrazumijeva kao neka vrsta predavanja kombinovanih sa timskim vježbama. Za razliku od zapada gdje se ovim bave posebne službe, kod nas o treninzima zaposlenih obično odlučuju HR odjeljenja kompanija, odnosno psiholozi kojima se ovaj posao najčešće dodjeljuje. Tako se nažalost trening zaposlenih tretira kao oblast psihologije, a ne kao vitalna poslovna funkcija. Kao rezultat ove zablude, poslovni treninzi su se u našim kompanijama najčešće svodili na čitanje slajdova sa gotovim upustvima, igrajnje besmislenih igara i popunjavanje psiholoških formulara i anketa. Zbog nedostatka prave konkurencije i neprepoznavanja njihovog značaja, treninzi su se kod nas najčešće sprovodili iz kozmetičkih razloga (zato što se to radi na zapadu!)."
+msgstr "There is a lot of prejudice and a lack of understanding in Bosnia and Herzegovina when it comes to employee education and training. The word training is taken lightly, and usually it implies some kind of lectures combined with team exercises. Compared to the Western countries in which special organisational units deal with employee education and training, in Bosnia and Herzegovina it is company human resources (HR) departments that generally make decision about it, i.e. these activities are most frequently assigned to psychologists. This, unfortunately, makes employee education and training an area in psychology while it should be treated as a vital business function. As a result of this misconception, business training in our companies have most frequently been reduced to reading the slides with ready-made instructions, playing senseless games and filling out psychological forms and surveys. Due to a lack of real competition and a failure to recognise their importance, training sessions have chiefly been conducted for cosmetic purposes (because training is something that people in the West do)."
+
+msgid "Pitaćete se zašto su kompanijama potrebni pravi treninzi zaposlenih, a ne samo obična predavanja i seminari? Naravno nije problem da se u kompanijama održavaju seminari te da se na takav način uvećava opšte znanje zaposlenih. Seminare rado organizujemo za Vas!<br><br>Problem nastaje kod onih vještina gdje je rezultat izuzetno važan, recimo kod prodaje. U prodaji ste ili prodali ili niste, nema ničega između. Zato trening prodaje mora biti pravi trening, a ne samo nekakva mješavina predavanja, izlaganja, seminara, davanja instrukcija, popunjavanja formulara i timskih radionica."
+msgstr "You must be wondering why companies need real employee training, and not just simple lectures and seminars. Naturally, it is not a problem to conduct seminars in companies to improve the general knowledge of their employees companies. We are happy to organise seminars for you! The problem arises when it comes to the skills that are essential in achieving great results, such as in sales. In sales, what matters is that you have or have not sold a product or a service, there is nothing in-between. That is why a sales training has to be a real training and not just a mix of lectures, presentations, seminars, instructions, filling out forms and team workshops."
+
+msgid "Šta je to"
+msgstr "WHAT IS THE REAL MEANING OF"
+
+msgid "pravi trening?"
+msgstr "TRAINING?"
+
+msgid "Da ne bi ulazili u komplikovane definicije, najbolje se napravi usporedba sa sportom."
+msgstr "To avoid going into complex definitions, the best option is to make a comparison with sports."
+
+msgid "Šta mislite koja će od sljedećih aktivnosti imati najveći efekat na kvalitet igre?"
+msgstr " Which of the following activities do you think will have the greatest effect on game quality?"
+
+msgid "Sportisti slušaju predavanje o historiji sporta"
+msgstr "Athletes listening to a lecture on the history of sport"
+
+msgid "Sportisti dobijaju istrukcije o pravilima igre"
+msgstr "Athletes getting instructions on the rules of the game"
+
+msgid "Sportisti sprovode timske vježbe popunjavajući formular"
+msgstr "Athletes doing team exercises by billing out a form"
+
+msgid "Sportisti treniraju sport na terenu."
+msgstr "Athletes playing the sport in the field."
+
+msgid "Kao i u sportu, tako i u poslovanju. Nije dovoljno zaposlene naučiti šta da rade i dati im instrukcije kako to da rade, već je jako važno uvježbati ih da to rade uspješno.<br><br>E to je upravo posao stručnjaka sa kojima Vas Žiža može povezati!<br><br>Njihovo iskustvo i znanje će Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršit potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, privremeno nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje."
+msgstr "The same applies both to sports and business activity. It does not suffice to simply teach the employees what to do and instruct them how to do it. It is really important to train them how to do it successfully. This is precisely what the experts Žiža can connect you with do! Their experience and knowledge will save your time, provide with assistance in crisis situations, implement necessary changes, awaken and stir up your routine business operations, open up new business perspectives, (temporarily) compensate for the lack of competent staff, and improve your business operations."
+
+msgid "PREPORUKE"
+msgstr "RECOMMENDATION"
+
+msgid "Vratili smo se i odlučili kreirati nešto što do sada pod našim nebom nije bilo."
+msgstr "We came back to our homeland and decided to create something that has never existed under our sky before."
+
+msgid "Jedinstvenu platformu"
+msgstr "A unique platform"
+
+msgid "koja nudi poslovna, konsultantska, finansijska i ostala business rješenja. Dali smo si za pravo Šantićevom suncu pridružiti prekogranični solarni backup. Umrežavamo Vas sa inostranim partnerima i investitorima. Odgovaramo na međunarodna pravna pitanja. Rješavamo papire. Ne one vizne. Administrativne za ostati ovdje čineći Vas vidljivijima na međunarodnim poslovnim radarima."
+msgstr "offering business, advisory, financial and other types of business solutions. We gave ourselves the right to add a cross-border solar backup to Santić’s sun. We enable you to network with foreign partners and investors. We answer international legal questions. We solve paperwork, but not the ones for obtaining a visa. We solve administrative paperwork that allows you to stay here and we make you become more visible on the international business radars."
+
+msgid "Ponudite!"
+msgstr "Offer!"
+
+msgid "Potražite!"
+msgstr "Search!"
+
+msgid "Sarađujte!"
+msgstr "Cooperate!"
+
+msgid "Pronađite kadar!"
+msgstr "Find staff!"
+
+msgid "Kredit!?"
+msgstr "Loan!?"
+
+msgid "Osiguranje!?"
+msgstr "Insurance!?"
+
+msgid "Edukacija!?"
+msgstr "Education!?"
+
+msgid "Vidite!"
+msgstr "See!"
+
+msgid "CONNECT AND IMPROVE"
+msgstr "CONNECT AND IMPROVE"
+
+msgid "YOUR BUSINESS"
+msgstr "YOUR BUSINESS"
+
+msgid "Biti u ŽIŽI znači"
+msgstr"To be in ŽIŽA means"
+
+msgid "'Vidjeti i biti viđen!'"
+msgstr "'To see and to be seen!'"
+
+msgid "Za ljudski potencijal"
+msgstr "For human potential"
+
+msgid "kao fizičko lice"
+msgstr "Sign in as an individual person"
+
+msgid "Naziv firme"
+msgstr "Company name"
+
+msgid "ID broj"
+msgstr "ID number"
+
+msgid "Postavi sliku"
+msgstr "Add picture"
+
+msgid "Postavi video"
+msgstr "Add video"
+
+msgid "Podijelite"
+msgstr "Share"

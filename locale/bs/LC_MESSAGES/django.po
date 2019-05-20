@@ -1254,7 +1254,7 @@ msgid "Kantoni u FBiH"
 msgstr "Kantoni u FBiH"
 
 msgid "Trajanje oglasa"
-msgstr "Trajanje oglasa"
+msgstr "Oglas otvoren do"
 
 msgid "Izaberi trajanje"
 msgstr "Izaberi trajanje"
@@ -1632,7 +1632,7 @@ msgid "financijskog izvještaja"
 msgstr "financijskog izvještaja"
 
 msgid "Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta."
-msgstr "Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta."
+msgstr "Poslovna platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta."
 
 msgid "Finansijsko"
 msgstr "Finansijsko"
@@ -1644,7 +1644,7 @@ msgid "Naši finansijski stručnjaci djeluju na tri područja: računovodstvo, s
 msgstr "Naši finansijski stručnjaci djeluju na tri područja: računovodstvo, savjetovanje i edukacije. Pored visokih profesionalnih standarda daje se iznimna važnost etičkim principima uključenih partija."
 
 msgid "POPIS KOMPANIJA ČLANICA"
-msgstr "POPIS KOMPANIJA ČLANICA"
+msgstr "SPISAK FIRMI ČLANICA"
 
 msgid "KLIKNI OVDJE"
 msgstr "KLIKNI OVDJE"
@@ -1692,10 +1692,10 @@ msgid "Prekvalifikujte se"
 msgstr "Prekvalifikujte se"
 
 msgid "Kontakt"
-msgstr "Kontakt"
+msgstr "Kontaktirajte nas"
 
 msgid "PRIDRUŽI SE"
-msgstr "PRIDRUŽI SE"
+msgstr "PRIDRUŽITE SE ŽIŽI "
 
 msgid "Mjesto prebivalista"
 msgstr "Mjesto prebivalista"
@@ -1812,7 +1812,7 @@ msgid "Najpopularniji oglasi za posao u posljednja 24 sata!"
 msgstr "Najpopularniji oglasi za posao u posljednja 24 sata!"
 
 msgid "KONKURSI"
-msgstr "KONKURSI"
+msgstr "OGLASI ZA POSAO"
 
 msgid "PONUDE"
 msgstr "PONUDE"
@@ -1824,10 +1824,10 @@ msgid "Tražite posao?"
 msgstr "Tražite posao?"
 
 msgid "I obratno!"
-msgstr "I obratno!"
+msgstr "Nudite posao?"
 
 msgid "Otvoreni konkursi"
-msgstr "Otvoreni konkursi"
+msgstr "Otvoreni oglasi za posao"
 
 msgid "I budite viđeni!"
 msgstr "I budite viđeni!"
@@ -1881,10 +1881,10 @@ msgid "Interim/privremeni menadžeri vode organizacije (ili njihove dijelove) u 
 msgstr "Interim/privremeni menadžeri vode organizacije (ili njihove dijelove) u ograničenom vremenskom periodu. U skladu sa ciljevima koje odredi klijent, oni upravljaju projektima, nadgledaju zaposlene, preuzmu odgovornost za troškove i rezultate i samostalno stvaraju svoje nadležnosti ili izvršnu ulogu."
 
 msgid "Žiža platforma Vas može povezati sa stručnjacima na polju"
-msgstr "Žiža platforma Vas može povezati sa stručnjacima na polju"
+msgstr "Poslovna platforma Žiža može da vas poveže sa stručnjacima na polju"
 
 msgid "menadžmenta, marketinga, strategije i razvoja preduzeća"
-msgstr "menadžmenta, marketinga, strategije i razvoja preduzeća"
+msgstr "menadžmenta, marketinga, strategije i razvoja firmi."
 
 msgid "Izlog"
 msgstr "Izlog"
@@ -1899,7 +1899,7 @@ msgid "Izloge"
 msgstr "Izloge"
 
 msgid "Pravno"
-msgstr "Pravno"
+msgstr "Legal"
 
 msgid "Treninzi"
 msgstr "Treninzi"
@@ -1980,7 +1980,7 @@ msgid "pritom ste pokušali sve."
 msgstr "pritom ste pokušali sve."
 
 msgid "Prije nego li nam date Vaše povjerenje, utrošite vrijeme u čitanje sljedećih redova, dajemo vlastitu riječ kako neće biti uzaludno. I ne, nećemo Vam naplatiti neisporučeno. Niti obećati nemoguće."
-msgstr "Prije nego li nam date Vaše povjerenje, utrošite vrijeme u čitanje sljedećih redova, dajemo vlastitu riječ kako neće biti uzaludno. I ne, nećemo Vam naplatiti neisporučeno. Niti obećati nemoguće."
+msgstr "Ako potrošite malo vremena u čitanje sljedećih redova prije nego što nam ukažete svoje povjerenje, dajemo vam svoju riječ da to neće biti uzalud. I, ne, nećemo vam naplatiti neisporučeno i nećemo vam obećati nemoguće."
 
 msgid "Još uvijek sumnjate? OK."
 msgstr "Još uvijek sumnjate? OK."
@@ -2007,16 +2007,16 @@ msgid "Vi"
 msgstr "Vi"
 
 msgid "Što Vam"
-msgstr "Što Vam"
+msgstr "Šta Vam"
 
 msgid "nudimo"
 msgstr "nudimo"
 
 msgid "Idemo ovako. Krenućemo s onim što"
-msgstr "Idemo ovako. Krenućemo s onim što"
+msgstr "Idemo ovako. Krenimo od onoga što vam"
 
 msgid "ne možemo ponuditi"
-msgstr "ne možemo ponuditi"
+msgstr "ne nudimo"
 
 msgid "Gledanje u karte pri odluci o ulasku u novi business roller coaster. Polovična rješenja. Garantni list ispisan na lakmus papiru. Nismo Avengersi i ne možemo spasiti svijet."
 msgstr "Gledanje u karte pri odluci o ulasku u novi business roller coaster. Polovična rješenja. Garantni list ispisan na lakmus papiru. Nismo Avengersi i ne možemo spasiti svijet."
@@ -2028,7 +2028,7 @@ msgid "Vam razumijevanje. Znanje. Podršku. Adekvatne odgovore na Vaše potrebe.
 msgstr "Vam razumijevanje. Znanje. Podršku. Adekvatne odgovore na Vaše potrebe. Iskustvo. Rezervirano mjesto za put ka konkurentnijoj i tržišno orijentisanoj Bosni i Hercegovini."
 
 msgid "Što nas je"
-msgstr "Što nas je"
+msgstr "Šta nas je"
 
 msgid "potaklo"
 msgstr "potaklo"
@@ -2055,7 +2055,7 @@ msgid "Radna snaga koja zaslužuje dostojan tretman i svijetla pozornosti."
 msgstr "Radna snaga koja zaslužuje dostojan tretman i svijetla pozornosti."
 
 msgid "Naš"
-msgstr "Naš"
+msgstr "ŠTA NAM JE"
 
 msgid "cilj"
 msgstr "cilj"
@@ -2070,7 +2070,7 @@ msgid "vodeći se dokazanim studijama"
 msgstr "vodeći se dokazanim studijama"
 
 msgid "Biti Vaš 'joker iz rukava' ukoliko Vam trebaju odgovori na pitanja legislativne i bankarske"
-msgstr "Biti Vaš 'joker iz rukava' ukoliko Vam trebaju odgovori na pitanja legislativne i bankarske"
+msgstr "Biti Vaš 'as iz rukava' ukoliko Vam trebaju odgovori na pitanja legislativne i bankarske"
 
 msgid "prirode."
 msgstr "prirode."
@@ -2082,7 +2082,7 @@ msgid "Dvije su stvari koje trebate napraviti. Vjerovati i postati članom naše
 msgstr "Dvije su stvari koje trebate napraviti. Vjerovati i postati članom naše familije u osnutku. Nije potrebno ispunjavati komplicirane formulare. Jedan 'klik' Vas dijeli od mnogobrojnih mogućnosti: članstva, bliskog susreta s prilikama koje je teško propustiti, novog poslovnog i životnog partnerstva i ostvarenja Vaših poslovnih ciljeva."
 
 msgid "Tu smo za Vas.  Nudimo. Tražimo. Realiziramo. Gradimo.  Imamo na umu prepreke koje trebamo prevazići, a koje su sinonim za birokratske barijere, nejasne poslovne smjernice te disbalans između ponude i potražnje. Svjesni smo prilika koje nam se pružaju. Horizonata koji se otvaraju. Misije koju možemo ispuniti. Vjerujemo u vlastite kapacitete. Vašu ideju. Zajedničku sinergiju. Čak kao što ste primijetili razumijemo se na sva tri jezika. Može četiri ili pet (crnski ili gorski). Znamo zbog čega smo tu gdje jesmo. U žiži zbivanja. U središtu pronalaska rješenja."
-msgstr "Tu smo za Vas.  Nudimo. Tražimo. Realiziramo. Gradimo.  Imamo na umu prepreke koje trebamo prevazići, a koje su sinonim za birokratske barijere, nejasne poslovne smjernice te disbalans između ponude i potražnje. Svjesni smo prilika koje nam se pružaju. Horizonata koji se otvaraju. Misije koju možemo ispuniti. Vjerujemo u vlastite kapacitete. Vašu ideju. Zajedničku sinergiju. Čak kao što ste primijetili razumijemo se na sva tri jezika. Može četiri ili pet (crnski ili gorski). Znamo zbog čega smo tu gdje jesmo. U žiži zbivanja. U središtu pronalaska rješenja."
+msgstr "Tu smo za vas. Nudimo, tražimo, realizujemo i gradimo. Imamo na umu prepreke koje trebamo da prevaziđemo, a koje su sinonim za birokratske barijere, nejasne poslovne smjernice te nesklad između ponude i potražnje. Svjesni smo prilika koje nam se pružaju, horizonata koji se otvaraju i misije koju možemo da ispunimo. Vjerujemo u vlastite kapacitete, vašu ideju i zajedničku sinergiju. Znamo zbog čega smo tu gdje jesmo: u žiži zbivanja i središtu pronalaska rješenja."
 
 msgid "Dobro nam došli. Hvala na povjerenju"
 msgstr "Dobro nam došli. Hvala na povjerenju"
@@ -2151,7 +2151,7 @@ msgid "U Bosni i Hercegovini postoji jako puno predrasuda i nerazumijevanja kada
 msgstr "U Bosni i Hercegovini postoji jako puno predrasuda i nerazumijevanja kada su u pitanju treninzi zaposlenih u kompanijama. Riječ trening je najčešće olako shvaćena i obično se podrazumijeva kao neka vrsta predavanja kombinovanih sa timskim vježbama. Za razliku od zapada gdje se ovim bave posebne službe, kod nas o treninzima zaposlenih obično odlučuju HR odjeljenja kompanija, odnosno psiholozi kojima se ovaj posao najčešće dodjeljuje. Tako se nažalost trening zaposlenih tretira kao oblast psihologije, a ne kao vitalna poslovna funkcija. Kao rezultat ove zablude, poslovni treninzi su se u našim kompanijama najčešće svodili na čitanje slajdova sa gotovim upustvima, igrajnje besmislenih igara i popunjavanje psiholoških formulara i anketa. Zbog nedostatka prave konkurencije i neprepoznavanja njihovog značaja, treninzi su se kod nas najčešće sprovodili iz kozmetičkih razloga (zato što se to radi na zapadu!)."
 
 msgid "Pitaćete se zašto su kompanijama potrebni pravi treninzi zaposlenih, a ne samo obična predavanja i seminari? Naravno nije problem da se u kompanijama održavaju seminari te da se na takav način uvećava opšte znanje zaposlenih. Seminare rado organizujemo za Vas!<br><br>Problem nastaje kod onih vještina gdje je rezultat izuzetno važan, recimo kod prodaje. U prodaji ste ili prodali ili niste, nema ničega između. Zato trening prodaje mora biti pravi trening, a ne samo nekakva mješavina predavanja, izlaganja, seminara, davanja instrukcija, popunjavanja formulara i timskih radionica."
-msgstr "Pitaćete se zašto su kompanijama potrebni pravi treninzi zaposlenih, a ne samo obična predavanja i seminari? Naravno nije problem da se u kompanijama održavaju seminari te da se na takav način uvećava opšte znanje zaposlenih. Seminare rado organizujemo za Vas!<br><br>Problem nastaje kod onih vještina gdje je rezultat izuzetno važan, recimo kod prodaje. U prodaji ste ili prodali ili niste, nema ničega između. Zato trening prodaje mora biti pravi trening, a ne samo nekakva mješavina predavanja, izlaganja, seminara, davanja instrukcija, popunjavanja formulara i timskih radionica."
+msgstr "Mora da se pitate zašto su kompanijama potrebni pravi treninzi zaposlenih, a ne samo obična predavanja i seminari? Naravno nije problem da se u kompanijama održavaju seminari te da se na takav način uvećava opšte znanje zaposlenih. Seminare rado organizujemo za Vas!<br><br>Problem nastaje kod onih vještina gdje je rezultat izuzetno važan, recimo kod prodaje. U prodaji ste ili prodali ili niste, nema ničega između. Zato trening prodaje mora biti pravi trening, a ne samo nekakva mješavina predavanja, izlaganja, seminara, davanja instrukcija, popunjavanja formulara i timskih radionica."
 
 msgid "Šta je to"
 msgstr "Šta je to"
@@ -2160,7 +2160,7 @@ msgid "pravi trening?"
 msgstr "pravi trening?"
 
 msgid "Da ne bi ulazili u komplikovane definicije, najbolje se napravi usporedba sa sportom."
-msgstr "Da ne bi ulazili u komplikovane definicije, najbolje se napravi usporedba sa sportom."
+msgstr "Da ne bismo ulazili u komplikovane definicije, najbolje se napravi usporedba sa sportom."
 
 msgid "Šta mislite koja će od sljedećih aktivnosti imati najveći efekat na kvalitet igre?"
 msgstr "Šta mislite koja će od sljedećih aktivnosti imati najveći efekat na kvalitet igre?"
@@ -2184,7 +2184,7 @@ msgid "PREPORUKE"
 msgstr "PREPORUKE"
 
 msgid "Vratili smo se i odlučili kreirati nešto što do sada pod našim nebom nije bilo."
-msgstr "Vratili smo se i odlučili kreirati nešto što do sada pod našim nebom nije bilo."
+msgstr " Vratili smo se u domovinu i odlučili kreirati nešto što do sada pod našim nebom nije bilo."
 
 msgid "Jedinstvenu platformu"
 msgstr "Jedinstvenu platformu"
@@ -2192,5 +2192,59 @@ msgstr "Jedinstvenu platformu"
 msgid "koja nudi poslovna, konsultantska, finansijska i ostala business rješenja. Dali smo si za pravo Šantićevom suncu pridružiti prekogranični solarni backup. Umrežavamo Vas sa inostranim partnerima i investitorima. Odgovaramo na međunarodna pravna pitanja. Rješavamo papire. Ne one vizne. Administrativne za ostati ovdje čineći Vas vidljivijima na međunarodnim poslovnim radarima."
 msgstr "koja nudi poslovna, konsultantska, finansijska i ostala business rješenja. Dali smo si za pravo Šantićevom suncu pridružiti prekogranični solarni backup. Umrežavamo Vas sa inostranim partnerima i investitorima. Odgovaramo na međunarodna pravna pitanja. Rješavamo papire. Ne one vizne. Administrativne za ostati ovdje čineći Vas vidljivijima na međunarodnim poslovnim radarima."
 
+msgid "Ponudite!"
+msgstr "Ponudite!"
 
+msgid "Potražite!"
+msgstr "Potražite!"
 
+msgid "Sarađujte!"
+msgstr "Sarađujte!"
+
+msgid "Pronađite kadar!"
+msgstr "Pronađite kadar!"
+
+msgid "Kredit!?"
+msgstr "Kredit!?"
+
+msgid "Osiguranje!?"
+msgstr "Osiguranje!?"
+
+msgid "Edukacija!?"
+msgstr "Edukacija!?"
+
+msgid "Vidite!"
+msgstr "Vidite!"
+
+msgid "CONNECT AND IMPROVE"
+msgstr "POVEŽITE SE I POBLJŠAJTE"
+
+msgid "YOUR BUSINESS"
+msgstr "SVOJE POSLOVANJE"
+
+msgid "Biti u ŽIŽI znači"
+msgstr"Biti u ŽIŽI znači"
+
+msgid "'Vidjeti i biti viđen!'"
+msgstr "'Vidjeti i biti viđen!'"
+
+msgid "Za ljudski potencijal"
+msgstr "Za ljudski potencijal"
+
+msgid "kao fizičko lice"
+msgstr "kao fizičko lice"
+
+msgid "Naziv firme"
+msgstr "test"
+
+msgid "ID broj"
+msgstr "ID broj"
+
+msgid "Postavi sliku"
+msgstr "Postavi sliku"
+
+msgid "Postavi video"
+msgstr "Postavi video"
+
+msgid "Podijelite"
+msgstr "Podijelite"

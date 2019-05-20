@@ -31,6 +31,7 @@ from django.core.paginator import Paginator
 from django.core.mail import EmailMultiAlternatives
 from django.template.defaultfilters import slugify
 from django.core.mail import EmailMultiAlternatives
+from django.utils import translation
 
 
 def superUser(user):
@@ -1246,3 +1247,19 @@ def pozovi(request, id, sender):
             return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
     else:
         return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+def setLang(request):
+
+    current = translation.get_language()
+
+    if current == 'bs':
+        newLang = 'en'
+    else:
+        newLang = 'bs'
+
+    translation.activate(newLang)
+    request.session[translation.LANGUAGE_SESSION_KEY] = newLang
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+

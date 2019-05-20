@@ -17,13 +17,18 @@
 				<a href="https://www.facebook.com/%C5%BDi%C5%BEa-249918849004835/"><img src="{% static 'images/fbg.png' %}" style="margin-right: 14px"></a>
 				<a href="https://www.linkedin.com/company/ziza-connect-and-improve-your-business/"><img src="{% static 'images/lg.png' %}" style="margin-right: 14px"></a>
 				<img onclick="alert('RSS Feed je prazan!')" src="{% static 'images/rg.png' %}" class="bhresp" style="cursor: pointer; visibility: hidden;">
-				<img src="{% static 'images/bosna.png' %}" class="bhresp" style="margin-left: 69px; width: 20px; height: 20px">
-				<img src="{% static 'images/strldl.png' %}" class="bhresp" style="margin-bottom: 7px; margin-left: 8px; visibility: hidden;">
+                    <img id="lang" src="{% static 'images/bosna.png' %}" class="bhresp" style=" cursor: pointer; margin-left: 69px; width: 20px; height: 20px">
+
+                <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
+                    {% csrf_token %}
+				</form>
+
+                    <img src="{% static 'images/strldl.png' %}" class="bhresp" style="margin-bottom: 7px; margin-left: 8px; visibility: hidden;">
 			</div>
 		</div>
 		<div class="footer__content">
 			<div class="footer__content--opis">
-				<p>{% trans 'Žiža če Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršiti potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, (privremeno) nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje.' %} <br><br>Biti u ŽIŽI znači: <em>"Vidjeti i biti viđen!"</em></p>
+				<p>{% trans 'Žiža če Vam uštediti vrijeme, pomoći u kriznim situacijama, izvršiti potrebne promjene, razbuditi i prodrmati ustaljeno poslovanje, otvoriti nove poslovne vidike, (privremeno) nadomjestiti nedostatak adekvatnog kadra i poboljšati poslovanje.' %} <br><br>{% trans 'Biti u ŽIŽI znači' %}: <em>{% trans "'Vidjeti i biti viđen!'" %}</em></p>
 				<a href="{% url 'onama' %}">{% trans 'Više o nama' %}... <img src="{% static 'images/arrowDesno.png' %}" style="margin-left: 10px"></a>
 			</div>
 			<div class="footer__content--navigacija">
@@ -37,7 +42,7 @@
 				</div>
 			</div>
 			<div class="footer__content--navigacija">
-				<h3>Za ljudski potencijal</h3>
+				<h3>{% trans 'Za ljudski potencijal' %}</h3>
 				<div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
 					<div class="footer__content--navigacija--item"><img src="{% static 'images/malaDesno.png' %}">{% trans 'Pronađite posao' %}</div>
 					<div class="footer__content--navigacija--item"><img src="{%  static 'images/malaDesno.png' %}">{% trans 'Dopustite da poslodavac' %}<br> {% trans 'pronađe Vas' %}</div>
@@ -155,6 +160,13 @@
 		$('.registracija.regBox').css('width', '500px');
 		$('.regBox__lijevo').css('width', '500px');
 	});
+
+	$("#lang").click(function(){
+
+	    $("#ChLang").submit();
+
+    });
+
 </script>
 
 

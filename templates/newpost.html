@@ -432,10 +432,10 @@
 	<div class="pregledTraka">
 		<div style="font-family: 'Galano Black'; margin-left: 50px;">
 			<img src="../static/images/desnoPregled.png" style="transform: rotate(180deg); margin-right: 11px">
-			<span id="goBack">{% trans 'NAZAD' %}</span>
+			<span style="cursor: pointer;" id="goBack">{% trans 'NAZAD' %}</span>
 		</div>
 		<div style="font-family: 'Galano Black'; display: flex; align-items: center; align-content: center; margin-right: 50px; cursor: pointer;">
-			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">Ovako će Vaš oglas izgledati nakon objave!</div>
+			<div style="margin-right: 50px; font-family: 'Galano Regular'" class="sakrij__mob__navSt">{% trans 'Ovako će Vaš oglas izgledati nakon objave!' %}</div>
 			<span id="objaviOglas">{% trans 'OBJAVI' %}</span><img src="{% static 'images/desnoPregled.png' %}" style="margin-left: 11px">
 		</div>
 	</div>

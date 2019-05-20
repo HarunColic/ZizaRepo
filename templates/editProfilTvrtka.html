@@ -405,19 +405,7 @@
 		<div class="sadrzaj">
 			<h1>{% trans 'O' %} <span>{% trans 'NAMA' %}</span></h1>
                 <div>
-<<<<<<< HEAD
-					<label>Naslov kompanije</label><br>
-					<input value="{{ user.first_name }}" type="text" id='naslovInput' name="naslov" placeholder="Puni naziv Vaše kompanije" style="width: 100%">
-				</div>
-				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
-					<div style="width: 53.22%; margin-right: 25px">
-						<label>Kontakt e-mail adresa</label><br>
-						<input value="{{ user.email }}" type="email" name="email" style="width: 100%">
-					</div>
-					<div style="width: 43.75%">
-						<label>Kontakt broj</label><br>
-						<input  {% if userP.brojtelefona %} value="{{ userP.brojtelefona }}" {% endif %} type="text" name="brojTel" style="width: 100%">
-=======
+
 					<label>{% trans 'Naslov kompanije' %}</label><br>
 					<input value="{{ user.first_name }}" required type="text" id='naslovInput' name="naslov" placeholder="Puni naziv Vaše kompanije" style="width: 100%">
 				</div>
@@ -429,7 +417,6 @@
 					<div style="width: 43.75%">
 						<label>{% trans 'Kontakt broj' %}</label><br>
 						<input  {% if userP.brojtelefona %} value="{{ userP.brojtelefona }}" {% endif %} type="text" required name="brojTel" style="width: 100%">
->>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 					</div>
 				</div>
 				<div style="margin-top: 20px">
@@ -440,13 +427,9 @@
                     </select>
 				</div>
 				<div style="margin-top: 20px">
-<<<<<<< HEAD
-					<label>Kategorija</label><br>
-					<select name="category">
-=======
+
 					<label>{% trans 'Kategorija' %}</label><br>
 					<select name="category" required>
->>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 						<option value="{{ comp.categoryID.name }}" >{{ comp.categoryID.name }}</option>
                         {% for c in cat %}
                             {% if c.name != comp.categoryID.name %}
@@ -459,21 +442,13 @@
 
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
-<<<<<<< HEAD
-						<label>Broj uposlenih</label><br>
-						<input value="{{ comp.brojuposlenih }}" type="number" id='brojUposlenihInput' name="brojuposlenih" style="width: 100%">
-					</div>
-					<div style="width: 43.75%">
-						<label>Web stranica</label><br>
-						<input value="" type="text" id='webStranica' name="webStranica" style="width: 100%" placeholder="https://www...">
-=======
+
 						<label>{% trans 'Broj uposlenih' %}</label><br>
 						<input required value="{{ comp.brojuposlenih }}" type="number" id='brojUposlenihInput' name="brojuposlenih" style="width: 100%">
 					</div>
 					<div style="width: 43.75%">
 						<label>{% trans 'Web stranica' %}</label><br>
 						<input required value="" type="text" id='webStranica' name="webStranica" style="width: 100%" placeholder="https://www...">
->>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 					</div>
 
 				</div>
@@ -499,11 +474,8 @@
 						</div>
 					</div>
 				</div>
-<<<<<<< HEAD
-				<button id="aktivirajPregled">SPREMI<img src="{%  static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
-=======
+
 				<button type="submit" id="aktivirajPregled">{% trans 'SPREMI' %}<img src="{%  static 'images/desnoPregled.png' %}" style="margin-left: 11px"></button>
->>>>>>> 9202747caddd627916b9d4d275ea9ec4a9a14a3e
 			</form>
 		</div>
 	</div> <!-- formaBody END -->
