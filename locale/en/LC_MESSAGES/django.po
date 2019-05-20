@@ -1940,25 +1940,25 @@ msgid "Sigurno se pitate ko smo mi i kako je sve počelo"
 msgstr "You must be wondering who we are and how it all began."
 
 msgid "Ž"
-msgstr ""
+msgstr "Y"
 
 msgid "I"
-msgstr ""
+msgstr "Y"
 
 msgid "A"
-msgstr ""
+msgstr "A"
 
 msgid "elite jedinstveno rješenje za višestruke probleme poslovne i tržišne prirode?"
-msgstr "You want a unique solution for multiple business and market problems?"
+msgstr "ou want a unique solution for multiple business and market problems?"
 
 msgid "mate potrebu za mijenjati radnu sredinu i okušati se u novim i većim izazovima?"
-msgstr "You feel the need to change your work environment and take on new and greater challenges?"
+msgstr "ou feel the need to change your work environment and take on new and greater challenges?"
 
 msgid "alite što niste bili u mogućnosti realizirati investicijske ideje zbog nedostatka podrške i pomoći?"
-msgstr "You regret not having an opportunity to implement your investment ideas for lack of support and assistance?"
+msgstr "ou regret not having an opportunity to implement your investment ideas for lack of support and assistance?"
 
 msgid "pritom ste pokušali sve."
-msgstr "And you have tried everything in ding so?"
+msgstr "nd you have tried everything in ding so?"
 
 msgid "Prije nego li nam date Vaše povjerenje, utrošite vrijeme u čitanje sljedećih redova, dajemo vlastitu riječ kako neće biti uzaludno. I ne, nećemo Vam naplatiti neisporučeno. Niti obećati nemoguće."
 msgstr "If you spent a little time in reading the following lines before you place your trust in us, we give you our word that it will not be in vain. And, no, we will not charge you what we have not delivered, and we will not promise you something that is not possible."
