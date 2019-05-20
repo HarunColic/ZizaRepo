@@ -61,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="732">
+              <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
             </state>
           </provider>
         </entry>
@@ -137,13 +137,13 @@
       <find>FIN.</find>
       <find>POTRA</find>
       <find>bosna.png</find>
-      <find>bs</find>
       <find>nudimo</find>
       <find>Let us do it this way</find>
       <find>Idemo ov</find>
       <find>Ide</find>
       <find>middl</find>
       <find>I</find>
+      <find>bs</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -392,12 +392,12 @@
       <workItem from="1558140440403" duration="1047000" />
       <workItem from="1558193182602" duration="23879000" />
       <workItem from="1558278995934" duration="22427000" />
-      <workItem from="1558387467910" duration="5037000" />
+      <workItem from="1558387467910" duration="5875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150931000" />
+    <option name="totallyTimeSpent" value="151769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -410,7 +410,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17797287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -847,8 +846,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="732">
+          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
         </state>
       </provider>
     </entry>
