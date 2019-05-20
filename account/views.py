@@ -1251,12 +1251,7 @@ def pozovi(request, id, sender):
 
 def setLang(request):
 
-    current = translation.get_language()
-
-    if current == 'bs':
-        newLang = 'en'
-    else:
-        newLang = 'bs'
+    newLang = request.POST.get('lang', 'bs')
 
     translation.activate(newLang)
     request.session[translation.LANGUAGE_SESSION_KEY] = newLang

@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/dodajPotraznju.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/logiran.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/newpost.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/oglas.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editProfilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editProfilTvrtka.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/firme.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/firme.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newpost.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/onamanew.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/onamanew.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shareBtns.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shareBtns.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zizaKorisnika.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/zizaKorisnika.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="1261" column="63" lean-forward="true" selection-start-line="1261" selection-start-column="63" selection-end-line="1261" selection-end-column="63" />
+            <state relative-caret-position="238">
+              <caret line="1252" selection-start-line="1252" selection-end-line="1252" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -77,22 +58,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="62" column="48" lean-forward="true" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+            <state relative-caret-position="-1038">
+              <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="253">
+              <caret line="167" selection-start-line="167" selection-end-line="167" />
               <folding>
-                <element signature="e#1377#1447#0#HTML" expanded="true" />
+                <element signature="e#1368#1438#0#HTML" expanded="true" />
+                <element signature="e#1537#1607#0#HTML" expanded="true" />
                 <element signature="e#1515#1556#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -228,10 +210,10 @@
         <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/Ziza/urls.py" />
-        <option value="$PROJECT_DIR$/templates/footer.html" />
-        <option value="$PROJECT_DIR$/account/views.py" />
         <option value="$PROJECT_DIR$/templates/onamanew.html" />
         <option value="$PROJECT_DIR$/Ziza/settings.py" />
+        <option value="$PROJECT_DIR$/account/views.py" />
+        <option value="$PROJECT_DIR$/templates/footer.html" />
       </list>
     </option>
   </component>
@@ -294,6 +276,17 @@
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
               <item name="post" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
@@ -399,12 +392,12 @@
       <workItem from="1558140440403" duration="1047000" />
       <workItem from="1558193182602" duration="23879000" />
       <workItem from="1558278995934" duration="22427000" />
-      <workItem from="1558387467910" duration="3596000" />
+      <workItem from="1558387467910" duration="4216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149490000" />
+    <option name="totallyTimeSpent" value="150110000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -424,7 +417,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1954023" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21335505" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21335505" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.24429968" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -435,7 +428,7 @@
       <window_info active="true" anchor="bottom" id="manage.py@untitled" order="10" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.16286644" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.16286644" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="14" weight="0.32736155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -816,17 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#1377#1447#0#HTML" expanded="true" />
-            <element signature="e#1515#1556#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -841,20 +823,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1038">
+          <caret line="67" column="13" lean-forward="true" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="1261" column="63" lean-forward="true" selection-start-line="1261" selection-start-column="63" selection-end-line="1261" selection-end-column="63" />
+        <state relative-caret-position="238">
+          <caret line="1252" selection-start-line="1252" selection-end-line="1252" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/settings.py">
+    <entry file="file://$PROJECT_DIR$/templates/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="62" column="48" lean-forward="true" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+        <state relative-caret-position="253">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
+          <folding>
+            <element signature="e#1368#1438#0#HTML" expanded="true" />
+            <element signature="e#1537#1607#0#HTML" expanded="true" />
+            <element signature="e#1515#1556#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
