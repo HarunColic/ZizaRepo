@@ -193,7 +193,7 @@
 	</div> <!-- coverSlika END -->
 	<div class="formaBody" style="position: relative;">
 		<div class="sadrzaj">
-			<h1>{% trans 'USLUGE' %} <span>{% trans 'OSIGURANJA' %}</span></h1>
+			<h1>{% trans 'USLUGE <span>OSIGURANJA</span>' %}</h1>
 			<h3 style="font-family: 'Galano Regular'; font-size: 14px"><span style="font-family: 'Galano Regular'; color: #f89101">{% trans 'NAPOMENA' %}: </span>{% trans 'Žiža putem svoje platforme samo spaja tražioce usluga osiguranja sa osiguravajućim kućama. Tražioci usluga osiguranja i osiguravajuće kuće su odgovorne za dalje procedure i poslovne saradnje.' %}</h3>
             <form  action="{% url 'createpost' %}" style="margin-top: 50px" id="postForm" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}

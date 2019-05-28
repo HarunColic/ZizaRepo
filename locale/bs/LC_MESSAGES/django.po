@@ -2248,3 +2248,12 @@ msgstr "Postavi video"
 
 msgid "Podijelite"
 msgstr "Podijelite"
+
+msgid "O NAMA"
+msgstr "O NAMA"
+
+msgid "USLUGE <span>OSIGURANJA</span>"
+msgstr "USLUGE <span>OSIGURANJA</span>"
+
+msgid "Zadnje ažuriranje"
+msgstr "Zadnje ažuriranje"
