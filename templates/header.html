@@ -819,7 +819,7 @@ ul {list-style: none}
 					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px; margin-right: 50px" class="postavke"><div>{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px; display: inline;"></i></div>
 					<div class="postavkeBottom">
 					    <ul style="position: relative;">
-					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>Profil</li></a>
+					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>{% trans 'Profil' %}</li></a>
                              <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavke' %}</li></a>
 					    	 <a href="{% url 'signout' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Odjava' %}</li></a>
 					    </ul>

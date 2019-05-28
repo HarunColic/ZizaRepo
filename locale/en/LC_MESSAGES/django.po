@@ -1163,10 +1163,10 @@ msgid "AKTIVNI"
 msgstr "ACTIVE"
 
 msgid "OGLASI"
-msgstr "ADVERTISEMENTS"
+msgstr "ADS"
 
 msgid "Ovaj oglas josuvijek nema aplikanata"
-msgstr "This advertisement has no applicants so far"
+msgstr "This ad has no applicants so far"
 
 msgid "PREUZMI CV"
 msgstr "DOWNLOAD CV"
@@ -1181,13 +1181,13 @@ msgstr "NO CV"
 ##             bankarskeUsluge.html
 
 msgid "Kreiraj oglas"
-msgstr "Create advertisement"
+msgstr "Create ad"
 
 msgid "Početna"
 msgstr "Homepage"
 
 msgid "Oglasi"
-msgstr "Advertisements"
+msgstr "ads"
 
 msgid "Objava"
 msgstr "Publication"
@@ -1196,7 +1196,7 @@ msgid "TVRTKA"
 msgstr "COMPANY"
 
 msgid "Napravi oglas"
-msgstr "Create an advertisement"
+msgstr "Create an ad"
 
 msgid "Pregled"
 msgstr "View"
@@ -1256,7 +1256,7 @@ msgid "Kontakt osoba"
 msgstr "Contact person"
 
 msgid "Detalji oglasa"
-msgstr "Advertisement details"
+msgstr "Ad details"
 
 msgid "PREGLED"
 msgstr "VIEW"
@@ -1318,7 +1318,7 @@ msgstr "EXPIRED"
 
 
 msgid "Nemate objavljenih oglasa!"
-msgstr "You have not published any advertisements!"
+msgstr "You have not published any ads!"
 
 
 msgid "nepoznato"
@@ -1338,7 +1338,7 @@ msgstr "Applicants"
 
 
 msgid "Nemate završenih oglasa!"
-msgstr "You have no finished advertisements"
+msgstr "You have no finished ads"
 
 
 msgid "OBNOVI"
@@ -1350,7 +1350,7 @@ msgstr "OPPORTUNITIES"
 
 
 msgid "Najpopularniji oglasi iz Vaše branše."
-msgstr "Most popular advertisements from your branch"
+msgstr "Most popular ads from your branch"
 
 
 msgid "PONUDA"
@@ -1366,11 +1366,11 @@ msgstr "COOPERATION"
 
 
 msgid "Želite li vidjeti još oglasa?"
-msgstr "Do you want to see more advertisements?"
+msgstr "Do you want to see more ads?"
 
 
 msgid "Trenutno nema oglasa iz Vaše branše!"
-msgstr "Currently there are no advertisements in your branch!"
+msgstr "Currently there are no ads in your branch!"
 
 
 msgid "Pratite nas"
@@ -1463,7 +1463,7 @@ msgid "NOVI"
 msgstr "NEW"
 
 msgid "OGLAS"
-msgstr "ADVERTISEMENT"
+msgstr "ADS"
 
 msgid "Tražim/nudim"
 msgstr "I am looking for/I am offering"
@@ -1487,7 +1487,7 @@ msgid "Izaberi kategoriju"
 msgstr "Choose category"
 
 msgid "dokument oglasa"
-msgstr "advertisement document"
+msgstr "ads document"
 
 msgid "ODABERI"
 msgstr "CHOOSE"
@@ -1499,7 +1499,7 @@ msgid "Maksimalna veličina"
 msgstr "Maximum size"
 
 msgid "Poslovni oglas"
-msgstr "Business advertisement"
+msgstr "Business ads"
 
 msgid "Prijavom na oglas"
 msgstr "When you apply for a job"
@@ -1514,7 +1514,7 @@ msgid "NAPOMENA"
 msgstr "NOTE"
 
 msgid "Ovako će Vaš oglas izgledati nakon objave!"
-msgstr "This is what your advertisement will look like"
+msgstr "This is what your ads will look like"
 
 msgid "Uredi profil"
 msgstr "Edit profile"
@@ -1580,7 +1580,7 @@ msgid "O meni"
 msgstr "O meni"
 
 msgid "format CV-a"
-msgstr "format CV-a"
+msgstr "CV format"
 
 msgid "SPREMI"
 msgstr "Save"
@@ -1589,7 +1589,7 @@ msgid "NAMA"
 msgstr "US"
 
 msgid "O"
-msgstr "ABOUT"
+msgstr "About"
 
 msgid "Naslov kompanije"
 msgstr "Company name"
@@ -1718,10 +1718,10 @@ msgid "RESETOVANJE LOZINKE"
 msgstr "RESET PASSWORD"
 
 msgid "Postavite oglas"
-msgstr "Post advertisements"
+msgstr "Post ads"
 
 msgid "Pregled oglasa"
-msgstr "View advertisements"
+msgstr "View ads"
 
 msgid "Konsalting"
 msgstr "Consulting"
@@ -1739,10 +1739,10 @@ msgid "Usluge osiguranja"
 msgstr "Insurance services"
 
 msgid "Pregled poslovnih oglasa"
-msgstr "View business advertisements"
+msgstr "View business ads"
 
 msgid "Pregled konkursa"
-msgstr "View job advertisements"
+msgstr "View job ads"
 
 msgid "PRIJAVA"
 msgstr "SIGN IN"
@@ -1790,16 +1790,16 @@ msgid "POPULARNO"
 msgstr "POPULAR"
 
 msgid "Najpopularniji oglasi za posao u posljednja 24 sata!"
-msgstr "The most popular job advertisements in the past 24 hours!"
+msgstr "The most popular job ads in the past 24 hours!"
 
 msgid "KONKURSI"
-msgstr "JOB ADVERTISEMENTS"
+msgstr "JOB ADS"
 
 msgid "PONUDE"
 msgstr "OFFERS"
 
 msgid "POSLOVNI OGLASI"
-msgstr "JOB ADVERTISEMENTS"
+msgstr "JOB ADS"
 
 msgid "Tražite posao?"
 msgstr "Looking for a job?"
@@ -1808,7 +1808,7 @@ msgid "I obratno!"
 msgstr "Offering a job?"
 
 msgid "Otvoreni konkursi"
-msgstr "Open job advertisements"
+msgstr "Open job ads"
 
 msgid "I budite viđeni!"
 msgstr "And be seen!"
@@ -1823,7 +1823,7 @@ msgid "POSLOVNE PONUDE"
 msgstr "BUSINESS OFFERS"
 
 msgid "KONKURSI ZA POSAO"
-msgstr "Job advertisements!"
+msgstr "Job ads!"
 
 msgid "ZAŠTO ŽIŽA?"
 msgstr "WHY ŽIŽA?"
@@ -1907,10 +1907,10 @@ msgid "Pregleda"
 msgstr "Views"
 
 msgid "Naslov oglasa"
-msgstr "Advertisement title"
+msgstr "Ad title"
 
 msgid "Djelatnost oglasa"
-msgstr "Advertisement business activity"
+msgstr "Ad business activity"
 
 msgid "Izaberi djelatnost"
 msgstr "Choose business activity"
@@ -1919,10 +1919,10 @@ msgid "ima uvid u vaš CV!"
 msgstr "gains insight into your CV!"
 
 msgid "Uredi oglas"
-msgstr "Edit advertisements"
+msgstr "Edit ads"
 
 msgid "oglase"
-msgstr "advertisements"
+msgstr "ads"
 
 msgid "Kontakt telefon"
 msgstr "Contact phone"
@@ -2086,11 +2086,11 @@ msgstr "The number of exporters and business people in Bosnia and Herzegovina in
 msgid "Lista poslova"
 msgstr "List of jobs"
 
-msgid "WE HAVE"
-msgstr "ZA VAS IMAMO"
+msgid "ZA VAS IMAMO"
+msgstr "WE HAVE"
 
 msgid "PONUDA!"
-msgstr "WE HAVE 2 OFFERS FOR YOU!"
+msgstr "OFFER!"
 
 msgid "Traži po ključnoj riječi npr. konobar"
 msgstr "Search by keyword, e.g. waiter"
@@ -2102,7 +2102,7 @@ msgid "Ovlašteni inženjer građevine"
 msgstr "Ovlašteni inženjer građevine"
 
 msgid "nema aktivnih oglasa"
-msgstr "You have not published any advertisements!"
+msgstr "You have not published any ads!"
 
 msgid "POZOVI"
 msgstr "CONTACT"
@@ -2213,7 +2213,7 @@ msgid "Za ljudski potencijal"
 msgstr "For human potential"
 
 msgid "kao fizičko lice"
-msgstr "Sign in as an individual person"
+msgstr "as an individual person"
 
 msgid "Naziv firme"
 msgstr "Company name"
@@ -2229,3 +2229,12 @@ msgstr "Add video"
 
 msgid "Podijelite"
 msgstr "Share"
+
+msgid "O NAMA"
+msgstr "ABOUT US"
+
+msgid "USLUGE <span>OSIGURANJA</span>"
+msgstr "INSURANCE <span>SERVICES</span>"
+
+msgid "Zadnje ažuriranje"
+msgstr "Last update"
