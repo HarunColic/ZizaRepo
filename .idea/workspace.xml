@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style-oglas.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style-oglas.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/testprofil.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testprofil.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,16 +40,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/testprofil.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="569" column="56" lean-forward="true" selection-start-line="569" selection-start-column="56" selection-end-line="569" selection-end-column="56" />
+            <state relative-caret-position="218">
+              <caret line="574" column="63" selection-start-line="574" selection-start-column="52" selection-end-line="574" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#8;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#8;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/style-oglas.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="153" column="24" lean-forward="true" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -99,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mjesto pre</find>
       <find>prijava za korisnike</find>
       <find>POSLOVNE PONUDE</find>
       <find>FIN.</find>
@@ -127,8 +129,9 @@
       <find>format CV-a</find>
       <find>Zadnje ažuriranje</find>
       <find>mjesto</find>
-      <find>O meni</find>
       <find>PREUZMI</find>
+      <find>.downloadPDF</find>
+      <find>O meni</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -148,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/location/models.py" />
         <option value="$PROJECT_DIR$/post/management/commands/KantoniRegije.py" />
         <option value="$PROJECT_DIR$/post/management/commands/KantoniGradovi.py" />
         <option value="$PROJECT_DIR$/post/views.py" />
@@ -199,6 +201,7 @@
         <option value="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/templates/testprofil.html" />
+        <option value="$PROJECT_DIR$/static/style-oglas.css" />
       </list>
     </option>
   </component>
@@ -368,12 +371,12 @@
       <workItem from="1558278995934" duration="22427000" />
       <workItem from="1558387467910" duration="6216000" />
       <workItem from="1559084423534" duration="1261000" />
-      <workItem from="1559085716319" duration="1444000" />
+      <workItem from="1559085716319" duration="1586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154815000" />
+    <option name="totallyTimeSpent" value="154957000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -459,13 +462,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/Aplikanti.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
@@ -824,13 +820,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/testprofil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="569" column="56" lean-forward="true" selection-start-line="569" selection-start-column="56" selection-end-line="569" selection-end-column="56" />
+        <state relative-caret-position="218">
+          <caret line="574" column="63" selection-start-line="574" selection-start-column="52" selection-end-line="574" selection-end-column="63" />
           <folding>
             <element signature="n#style#0;n#label#0;n#div#8;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#8;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#8;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/style-oglas.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="153" column="24" lean-forward="true" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
         </state>
       </provider>
     </entry>
