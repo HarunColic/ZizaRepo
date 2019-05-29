@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profilTvrtka.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profilTvrtka.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="2230" column="14" lean-forward="true" selection-start-line="2230" selection-start-column="14" selection-end-line="2230" selection-end-column="14" />
+            <state relative-caret-position="152">
+              <caret line="1882" column="13" selection-start-line="1882" selection-start-column="8" selection-end-line="1882" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="391" column="86" selection-start-line="391" selection-start-column="86" selection-end-line="391" selection-end-column="86" />
+            <state relative-caret-position="188">
+              <caret line="394" column="14" selection-start-line="394" selection-start-column="14" selection-end-line="394" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -63,29 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnika.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnikaLP.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26355">
-              <caret line="2195" selection-start-line="2195" selection-end-line="2195" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="1552" column="7" selection-start-line="1552" selection-start-column="7" selection-end-line="1552" selection-end-column="26" />
+            <state relative-caret-position="167">
+              <caret line="1901" column="14" selection-start-line="1901" selection-start-column="14" selection-end-line="1901" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -120,12 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FIN.</find>
-      <find>POTRA</find>
-      <find>bosna.png</find>
-      <find>nudimo</find>
-      <find>Let us do it this way</find>
-      <find>Idemo ov</find>
       <find>Ide</find>
       <find>middl</find>
       <find>I</find>
@@ -149,7 +125,13 @@
       <find>O meni</find>
       <find>profilKo</find>
       <find>biznisButton</find>
+      <find>KLIKNI</find>
+      <find>Business ads</find>
+      <find>msgid &quot;Poslovni oglas&quot;</find>
       <find>O NAMA</find>
+      <find>Savje</find>
+      <find>Legal</find>
+      <find>Pravno</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -216,10 +198,10 @@
         <option value="$PROJECT_DIR$/templates/header.html" />
         <option value="$PROJECT_DIR$/templates/OsiguranjeUsluge.html" />
         <option value="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" />
-        <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/templates/testprofil.html" />
         <option value="$PROJECT_DIR$/static/style-oglas.css" />
         <option value="$PROJECT_DIR$/templates/profilTvrtka.html" />
+        <option value="$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po" />
       </list>
     </option>
   </component>
@@ -389,12 +371,12 @@
       <workItem from="1558278995934" duration="22427000" />
       <workItem from="1558387467910" duration="6216000" />
       <workItem from="1559084423534" duration="1261000" />
-      <workItem from="1559085716319" duration="2745000" />
+      <workItem from="1559085716319" duration="3972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156116000" />
+    <option name="totallyTimeSpent" value="157343000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="1552" column="7" selection-start-line="1552" selection-start-column="7" selection-end-line="1552" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/testprofil.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -841,17 +816,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po">
+    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="2230" column="14" lean-forward="true" selection-start-line="2230" selection-start-column="14" selection-end-line="2230" selection-end-column="14" />
+        <state relative-caret-position="188">
+          <caret line="394" column="14" selection-start-line="394" selection-start-column="14" selection-end-line="394" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/profilTvrtka.html">
+    <entry file="file://$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="391" column="86" selection-start-line="391" selection-start-column="86" selection-end-line="391" selection-end-column="86" />
+        <state relative-caret-position="152">
+          <caret line="1882" column="13" selection-start-line="1882" selection-start-column="8" selection-end-line="1882" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locale/bs/LC_MESSAGES/django.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="1901" column="14" selection-start-line="1901" selection-start-column="14" selection-end-line="1901" selection-end-column="14" />
         </state>
       </provider>
     </entry>

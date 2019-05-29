@@ -1899,7 +1899,7 @@ msgid "Izloge"
 msgstr "Izloge"
 
 msgid "Pravno"
-msgstr "Legal"
+msgstr "Pravno"
 
 msgid "Treninzi"
 msgstr "Treninzi"
@@ -2257,3 +2257,6 @@ msgstr "USLUGE <span>OSIGURANJA</span>"
 
 msgid "Zadnje ažuriranje"
 msgstr "Zadnje ažuriranje"
+
+msgid "Poslovni oglas"
+msgstr "Poslovni oglas"
