@@ -809,7 +809,20 @@ ul {list-style: none}
 	<div class="header">
 		<div class="header__language">
 			<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
-		</div>
+
+        </div>
+       <!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
+            {% if LANGUAGE_CODE == "en" %}
+            <img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px">
+            {% else %}
+                <img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang" style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px">
+            {% endif %}
+
+              <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
+                {% csrf_token %}
+                <input type="hidden" name="lang" id="lang" value="bs" >
+            </form>
+
 		<div class="header__navigation--undefined"></div>
 		<div class="header__navigation">
 			<div class="header__navigation--linkovi">
