@@ -108,7 +108,7 @@
 	  bottom: 0px;
 	  text-align: center;
 	  margin: auto;
-	  content: 'Promijeni';
+	  content: '{% trans "Promijeni" %}';
 	  font-family: 'Galano Regular';
 	  color: white;
 	  background-color: #a6a397;
@@ -407,7 +407,7 @@
                 <div>
 
 					<label>{% trans 'Naslov kompanije' %}</label><br>
-					<input value="{{ user.first_name }}" required type="text" id='naslovInput' name="naslov" placeholder="Puni naziv Vaše kompanije" style="width: 100%">
+					<input value="{{ user.first_name }}" required type="text" id='naslovInput' name="naslov" placeholder="{% trans 'Puni naziv Vaše kompanije' %}" style="width: 100%">
 				</div>
 				<div style="margin-top: 20px; display: flex;" class="multipleTwo">
 					<div style="width: 53.22%; margin-right: 25px">
@@ -509,7 +509,7 @@ var quill = new Quill('#editor-container', {
       [{ list: 'ordered' }, { list: 'bullet' }]
     ]
   },
-  placeholder: 'Unesite detaljan opis Vaše kompanije...',
+  placeholder: '{% trans "Unesite detaljan opis Vaše kompanije..." %}',
   theme: 'snow',
 });
 

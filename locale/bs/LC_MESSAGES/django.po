@@ -2260,3 +2260,15 @@ msgstr "Zadnje ažuriranje"
 
 msgid "Poslovni oglas"
 msgstr "Poslovni oglas"
+
+msgid "Promijeni"
+msgstr "Promijeni"
+
+msgid "Dodaj"
+msgstr "Dodaj"
+
+msgid "Puni naziv Vaše kompanije"
+msgstr "Puni naziv Vaše kompanije"
+
+msgid "Unesite detaljan opis Vaše kompanije..."
+msgstr "Unesite detaljan opis Vaše kompanije..."

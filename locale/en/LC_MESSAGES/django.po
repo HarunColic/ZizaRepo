@@ -2238,3 +2238,15 @@ msgstr "INSURANCE <span>SERVICES</span>"
 
 msgid "Zadnje ažuriranje"
 msgstr "Last update"
+
+msgid "Promijeni"
+msgstr "Change"
+
+msgid "Dodaj"
+msgstr "Add"
+
+msgid "Puni naziv Vaše kompanije"
+msgstr "Full company name"
+
+msgid "Unesite detaljan opis Vaše kompanije..."
+msgstr "Enter a detailed description of your company..."
