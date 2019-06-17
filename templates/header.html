@@ -449,6 +449,11 @@ ul {list-style: none}
   	}
   }
 
+
+  @media screen and (max-width: 525px){
+	.bhresp { display: block}
+   }
+
 .header__navigation--call{
 	margin-left: 30px;
 }
@@ -457,6 +462,19 @@ ul {list-style: none}
 
 <!-- NOVA NAVIGACIJA START -->
 <div class="mobile__header">
+	
+		<!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
+
+ 		<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" ursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px">
+        <!-- <img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang" style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px"> --> 
+
+         <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
+            {% csrf_token %}
+            <input type="hidden" name="lang" id="lang" value="bs" >
+		</form>
+
+        <!-- lang. sel. kraj -->
+
 		<a href="https://ziza.ba/"><img src="https://ziza.ba/static/images/logoNew.png" height="35px"></a>
 		<div class="burgermenu">
 			<span class="line--single"></span>
@@ -584,6 +602,11 @@ ul {list-style: none}
     $(".tRegister").click(function(){
         var modal = document.getElementById('myModal');
         modal.style.display = "block";
+    });
+
+	$(".lang").click(function(e){
+	    document.querySelector("#lang").value = e.target.getAttribute("data-lng");
+	    $("#ChLang").submit();
     });
 
     </script>
