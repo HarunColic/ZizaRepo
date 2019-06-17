@@ -42,12 +42,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="823" column="19" selection-start-line="823" selection-start-column="19" selection-end-line="823" selection-end-column="19" />
+            <state relative-caret-position="326">
+              <caret line="762" selection-start-line="762" selection-end-line="762" />
               <folding>
                 <element signature="e#14685#14785#0#HTML" expanded="true" />
                 <element signature="e#19188#19288#0#HTML" expanded="true" />
                 <element signature="e#19377#19477#0#HTML" expanded="true" />
+                <element signature="e#26132#26232#0#HTML" expanded="true" />
                 <element signature="e#31270#31371#0#HTML" expanded="true" />
                 <element signature="e#31491#31591#0#HTML" expanded="true" />
               </folding>
@@ -346,12 +347,12 @@
       <workItem from="1558387467910" duration="6216000" />
       <workItem from="1559084423534" duration="1261000" />
       <workItem from="1559085716319" duration="6640000" />
-      <workItem from="1560800356041" duration="3703000" />
+      <workItem from="1560800356041" duration="4377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163714000" />
+    <option name="totallyTimeSpent" value="164388000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -802,12 +803,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="823" column="19" selection-start-line="823" selection-start-column="19" selection-end-line="823" selection-end-column="19" />
+        <state relative-caret-position="326">
+          <caret line="762" selection-start-line="762" selection-end-line="762" />
           <folding>
             <element signature="e#14685#14785#0#HTML" expanded="true" />
             <element signature="e#19188#19288#0#HTML" expanded="true" />
             <element signature="e#19377#19477#0#HTML" expanded="true" />
+            <element signature="e#26132#26232#0#HTML" expanded="true" />
             <element signature="e#31270#31371#0#HTML" expanded="true" />
             <element signature="e#31491#31591#0#HTML" expanded="true" />
           </folding>

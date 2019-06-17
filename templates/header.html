@@ -747,9 +747,23 @@ ul {list-style: none}
 
 
 <div class="mobile__header">
+
+	<!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
+        {% if LANGUAGE_CODE == "en" %}
+ 		<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" ursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px">
+        {% else %}
+            <img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang" style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px">
+{% endif %}
+         <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
+            {% csrf_token %}
+            <input type="hidden" name="lang" id="lang" value="bs" >
+		</form>
+
+        <!-- lang. sel. kraj -->
+
 		<div class="header__navigation--dugmad mobSakr2">
 				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
-					<
+
 					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px;" class="postavke"><div><i class="fas fa-angle-down" style="color: #f89101; margin-left: -5px; display: inline;"></i></div>
 					<div class="postavkeBottom" style="width: 150px">
 					    <ul style="position: relative;">
