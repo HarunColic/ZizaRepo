@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,18 +19,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33765">
-              <caret line="2251" column="52" selection-start-line="2251" selection-start-column="52" selection-end-line="2251" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/account/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14700">
+            <state relative-caret-position="15">
               <caret line="1013" selection-start-line="1013" selection-end-line="1013" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -41,19 +31,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/header.html">
+        <entry file="file://$PROJECT_DIR$/post/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+            <state relative-caret-position="338">
+              <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/footer.html">
+        <entry file="file://$PROJECT_DIR$/templates/oglas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="263">
+              <caret line="262" lean-forward="true" selection-start-line="262" selection-end-line="262" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnika.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="110" column="39" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/post/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1176">
+              <caret line="141" selection-start-line="141" selection-end-line="141" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="681">
+              <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+              <folding>
+                <element signature="e#628#660#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,11 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>languag</find>
-      <find>O</find>
-      <find>Advertisement</find>
-      <find>kao</find>
-      <find>Profil</find>
       <find>Usluge osiguranja</find>
       <find>Usluge</find>
       <find>Usluge osi</find>
@@ -100,6 +121,11 @@
       <find>bosna</find>
       <find>first_</find>
       <find>lang</find>
+      <find>ako je aktiv</find>
+      <find>showpost(</find>
+      <find>&lt;form</find>
+      <find>slug</find>
+      <find>showpos</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -121,7 +147,6 @@
       <list>
         <option value="$PROJECT_DIR$/post/management/commands/KantoniRegije.py" />
         <option value="$PROJECT_DIR$/post/management/commands/KantoniGradovi.py" />
-        <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/templates/Aplikanti.html" />
         <option value="$PROJECT_DIR$/templates/CVs.html" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
@@ -170,6 +195,7 @@
         <option value="$PROJECT_DIR$/templates/editProfilTvrtka.html" />
         <option value="$PROJECT_DIR$/templates/footer.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
+        <option value="$PROJECT_DIR$/post/views.py" />
       </list>
     </option>
   </component>
@@ -197,37 +223,6 @@
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ziza" type="462c0819:PsiDirectoryNode" />
               <item name="account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-              <item name="bs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-              <item name="bs" type="462c0819:PsiDirectoryNode" />
-              <item name="LC_MESSAGES" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Ziza" type="462c0819:PsiDirectoryNode" />
-              <item name="locale" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-              <item name="LC_MESSAGES" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ziza" type="b2602c69:ProjectViewProjectNode" />
@@ -341,12 +336,12 @@
       <workItem from="1559084423534" duration="1261000" />
       <workItem from="1559085716319" duration="6640000" />
       <workItem from="1560800356041" duration="5283000" />
-      <workItem from="1560866563907" duration="906000" />
+      <workItem from="1560866563907" duration="1935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166200000" />
+    <option name="totallyTimeSpent" value="167229000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -361,12 +356,12 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19074222" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19074222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1954023" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21335505" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21335505" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.24429968" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -377,7 +372,7 @@
       <window_info active="true" anchor="bottom" id="manage.py@untitled" order="10" visible="true" weight="0.3291536" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3291536" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.16449511" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.16449511" />
       <window_info anchor="bottom" id="manage.py@Ziza" order="14" weight="0.32736155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -609,16 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/templates/newpost.html" />
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -641,23 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/newpost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="181" column="30" selection-start-line="181" selection-start-column="26" selection-end-line="181" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret line="207" column="13" selection-start-line="207" selection-start-column="4" selection-end-line="207" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/shareBtns.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -669,23 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7725">
           <caret line="515" selection-start-line="515" selection-end-line="515" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2775">
-          <caret line="185" column="107" selection-start-line="185" selection-start-column="105" selection-end-line="185" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
-          <folding>
-            <element signature="e#628#660#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,13 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26355">
           <caret line="2195" selection-start-line="2195" selection-end-line="2195" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnika.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -771,23 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33765">
-          <caret line="2251" column="52" selection-start-line="2251" selection-start-column="52" selection-end-line="2251" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14700">
-          <caret line="1013" selection-start-line="1013" selection-end-line="1013" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -799,6 +726,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="2251" column="52" selection-start-line="2251" selection-start-column="52" selection-end-line="2251" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1013" selection-start-line="1013" selection-end-line="1013" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/newpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="182" column="17" selection-start-line="182" selection-start-column="12" selection-end-line="182" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/oglas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="262" lean-forward="true" selection-start-line="262" selection-end-line="262" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ziza/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+          <folding>
+            <element signature="e#628#660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ProfilKorisnika.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="110" column="39" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
