@@ -1,5 +1,6 @@
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -459,8 +460,7 @@ ul {list-style: none}
 }
 </style>
 <!-- NOVA NAVIGACIJA CSS END-->
-{% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
+
 <!-- NOVA NAVIGACIJA START -->
 <div class="mobile__header">
 	
@@ -753,7 +753,7 @@ ul {list-style: none}
  		<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" ursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px">
         {% else %}
             <img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang" style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px">
-{% endif %}
+        {% endif %}
          <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
             {% csrf_token %}
             <input type="hidden" name="lang" id="lang" value="bs" >
@@ -825,7 +825,7 @@ ul {list-style: none}
 			<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
 
         </div>
-       <!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
+      <!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
             {% if LANGUAGE_CODE == "en" %}
             <img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px">
             {% else %}
