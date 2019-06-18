@@ -681,7 +681,7 @@
 			</div>
 			<div class="main__oglasi--oglasi" id="aktivniOglasi">
                 {% for p in activepPosts %}
-               <div class="rdiv"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.userID.first_name slug=p.url %}'">
+               <div class="rdiv"  onclick="event.stopPropagation();location.href='{% url 'showpost' id=p.slugifyName slug=p.url %}'">
 					<div>
 						<div>
 							{{ p.title }}

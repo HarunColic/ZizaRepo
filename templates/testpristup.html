@@ -239,7 +239,7 @@
 {% for d in data %}
                 {% if forloop.counter|divisibleby:3 %}
 
-                <a href={% url 'showpost' id=p.userID.first_name slug=p.url %}>
+                <a href={% url 'showpost' id=p.slugifyName slug=p.url %}>
                     <div class="single-kucica">
 
 
@@ -308,7 +308,7 @@
             <div class="kolona respKol">
             {% for d in data %}
                 {% if forloop.counter0 == 1 or forloop.revcounter0|divisibleby:3 %}
-                <a href={% url 'showpost' id=p.userID.first_name slug=p.url %}>
+                <a href={% url 'showpost' id=p.slugifyName slug=p.url %}>
                 <div class="single-kucica">
 
                     {% for u in users %}

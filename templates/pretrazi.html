@@ -139,7 +139,7 @@
      {% if data|length >= 1 %}
      {% with obj=data.pop %}
      {% if auth %}
-        <a href="{% url 'showpost' id=obj.userID.first_name slug=obj.url %}">
+        <a href="{% url 'showpost' id=obj.slugifyName slug=obj.url %}">
     {% else %}
         <a class="tLog">
     {% endif %}

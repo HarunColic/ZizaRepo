@@ -130,7 +130,7 @@ def createpost(request):
 
             sweetify.success(request, title="Uspješno kreiran oglas", text="", icon="success", timer=8000)
 
-            return redirect('showpost', request.user.first_name, post.url)
+            return redirect('showpost', post.slugifyName, post.url)
         else:
 
             type = request.POST['type']
