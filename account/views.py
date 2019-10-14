@@ -32,7 +32,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.defaultfilters import slugify
 from django.core.mail import EmailMultiAlternatives
 from django.utils import translation
-
+from Ziza import settings
 
 def superUser(user):
 
@@ -1250,7 +1250,7 @@ def pozovi(request, id, sender):
 
 def setLang(request):
 
-    newLang = request.POST.get('lang', 'bs')
+    newLang = request.POST.get('lang', settings.LANGUAGE_CODE)
 
     translation.activate(newLang)
     request.session[translation.LANGUAGE_SESSION_KEY] = newLang
