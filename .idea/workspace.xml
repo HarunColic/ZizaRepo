@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Ziza.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ziza.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/force_default_language_middleware.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ziza/static/media/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/static/media/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +124,7 @@
       <workItem from="1571083552558" duration="234000" />
       <workItem from="1571083809915" duration="139000" />
       <workItem from="1571084123274" duration="169000" />
-      <workItem from="1571084488359" duration="2120000" />
+      <workItem from="1571084488359" duration="6239000" />
     </task>
     <servers />
   </component>
