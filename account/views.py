@@ -78,7 +78,6 @@ def validationWithKeys(request, args,keys,argsErr):
 
 
 def home(request):
-
     if request.user.is_authenticated:
         userP = UserProfile.objects.get(userID=request.user)
 
