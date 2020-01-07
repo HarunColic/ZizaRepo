@@ -529,9 +529,9 @@ def submitchange(request):
                         uploaded_file_url = fs.url(filename)
 
                     if izvjestaj is not None:
-                        if izvjestaj._size > 5242880:
-                            sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaša datoteka prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
-                            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                       # if izvjestaj._size > 5242880:
+                        #    sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaša datoteka prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
+                         #   return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
                     user.first_name = name
                     user.email = mail
@@ -622,9 +622,9 @@ def submitchange(request):
                 userP = UserProfile.objects.get(userID=request.user)
 
                 if myfile is not None:
-                    if myfile._size > 5242880:
-                        sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaš CV prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
-                        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                    #if myfile._size > 5242880:
+                     #   sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaš CV prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
+                      #  return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
                     userP.cv = myfile
 
                 userP.location = grad

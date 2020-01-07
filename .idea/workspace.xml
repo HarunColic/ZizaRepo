@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/force_default_language_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/force_default_language_middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/newpost2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +133,7 @@
       <workItem from="1571754847761" duration="246000" />
       <workItem from="1571755370374" duration="42000" />
       <workItem from="1572890090711" duration="686000" />
-      <workItem from="1578402883161" duration="2462000" />
+      <workItem from="1578402883161" duration="3972000" />
     </task>
     <servers />
   </component>
@@ -175,6 +174,10 @@
       <screen x="53" y="27" width="1547" height="873" />
     </state>
     <state x="315" y="98" width="1022" height="743" key="SettingsEditor/53.27.1547.873/1600.0.1366.768@53.27.1547.873" timestamp="1578403781809" />
+    <state x="473" y="199" width="707" height="528" key="find.popup" timestamp="1578410369358">
+      <screen x="53" y="27" width="1547" height="873" />
+    </state>
+    <state x="473" y="199" width="707" height="528" key="find.popup/53.27.1547.873/1600.0.1366.768@53.27.1547.873" timestamp="1578410369358" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
