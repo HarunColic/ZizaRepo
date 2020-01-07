@@ -86,11 +86,11 @@ def createpost(request):
                 #if myfile._size > 5242880:
                 #    sweetify.sweetalert(request, title="Datoteka prevelika", text="Vaša datoteka prelazi maksimalnu veličinu od 5 MB", icon="error", timer=10000)
                 #    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-                else:
-                    fs = FileSystemStorage()
-                    myfile.name.encode('utf-8')
-                    filename = fs.save(myfile.name, myfile)
-                    uploaded_file_url = fs.url(filename)
+                #else:
+                fs = FileSystemStorage()
+                myfile.name.encode('utf-8')
+                filename = fs.save(myfile.name, myfile)
+                uploaded_file_url = fs.url(filename)
             else:
                 myfile = None
 
@@ -149,11 +149,11 @@ def createpost(request):
                  #   sweetify.sweetalert(request, title="Datoteka prevelika",
                   #                      text="Vaš CV prelazi maksimalnu veličinu od 5 MB", icon="error", timer=10000)
 
-                    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-                else:
-                    fs = FileSystemStorage()
-                    filename = fs.save(myfile.name, myfile)
-                    uploaded_file_url = fs.url(filename)
+                    #return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+                #else:
+                fs = FileSystemStorage()
+                filename = fs.save(myfile.name, myfile)
+                uploaded_file_url = fs.url(filename)
 
             else:
                 myfile = None

@@ -528,7 +528,7 @@ def submitchange(request):
                         filename = fs.save(izvjestaj.name, izvjestaj)
                         uploaded_file_url = fs.url(filename)
 
-                    if izvjestaj is not None:
+                    #if izvjestaj is not None:
                        # if izvjestaj._size > 5242880:
                         #    sweetify.sweetalert(request, title="Datoteka prevelika",text="Vaša datoteka prelazi maksimalnu veličinu od 5 MB", icon="error",timer=10000)
                          #   return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
