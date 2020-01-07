@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/account/force_default_language_middleware.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/force_default_language_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/force_default_language_middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/newpost2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/newpost2.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +28,11 @@
   </component>
   <component name="ProjectId" id="1SCxTQXK5Tlmg6Jb4w9GF6cwoXg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -42,18 +48,6 @@
       <recent name="$PROJECT_DIR$/untitled" />
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Ziza" type="Python.DjangoServer" factoryName="Django server">
@@ -80,6 +74,18 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -124,7 +130,11 @@
       <workItem from="1571083552558" duration="234000" />
       <workItem from="1571083809915" duration="139000" />
       <workItem from="1571084123274" duration="169000" />
-      <workItem from="1571084488359" duration="6239000" />
+      <workItem from="1571084488359" duration="6927000" />
+      <workItem from="1571754847761" duration="246000" />
+      <workItem from="1571755370374" duration="42000" />
+      <workItem from="1572890090711" duration="686000" />
+      <workItem from="1578402883161" duration="2462000" />
     </task>
     <servers />
   </component>
@@ -143,6 +153,28 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1501" height="128" key="GridCell.Tab.0.bottom" timestamp="1578404468181">
+      <screen x="53" y="27" width="1547" height="873" />
+    </state>
+    <state width="1501" height="128" key="GridCell.Tab.0.bottom/53.27.1547.873/1600.0.1366.768@53.27.1547.873" timestamp="1578404468181" />
+    <state width="1501" height="128" key="GridCell.Tab.0.center" timestamp="1578404468181">
+      <screen x="53" y="27" width="1547" height="873" />
+    </state>
+    <state width="1501" height="128" key="GridCell.Tab.0.center/53.27.1547.873/1600.0.1366.768@53.27.1547.873" timestamp="1578404468181" />
+    <state width="1501" height="128" key="GridCell.Tab.0.left" timestamp="1578404468181">
+      <screen x="53" y="27" width="1547" height="873" />
+    </state>
+    <state width="1501" height="128" key="GridCell.Tab.0.left/53.27.1547.873/1600.0.1366.768@53.27.1547.873" timestamp="1578404468181" />
+    <state width="1501" height="128" key="GridCell.Tab.0.right" timestamp="1578404468181">
+      <screen x="53" y="27" width="1547" height="873" />
+    </state>
+    <state width="1501" height="128" key="GridCell.Tab.0.right/53.27.1547.873/1600.0.1366.768@53.27.1547.873" timestamp="1578404468181" />
+    <state x="315" y="98" width="1022" height="743" key="SettingsEditor" timestamp="1578403781809">
+      <screen x="53" y="27" width="1547" height="873" />
+    </state>
+    <state x="315" y="98" width="1022" height="743" key="SettingsEditor/53.27.1547.873/1600.0.1366.768@53.27.1547.873" timestamp="1578403781809" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
