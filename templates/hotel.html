@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ba">
+<head>
+    {% load i18n %}
+	<!-- KAD BUDES SVOJ NAVBAR UBACIVAO NE ZBORVI KLASU SELECTED ZA KONSALTING -->
+	<title>ŽIŽA.ba | {% trans 'Konsalting' %}</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="description" content="Platforma za poslovne ponude, B2B suradnje i pronalazak ljudskih resursa.">
+    <meta name="keywords" content="žiža, posao, B2B suradnja, ponuda, potražnja, oglasi za posao">
+    <meta name="author" content="META5">
+    <meta charset="utf-8">
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+	<style type="text/css">
+	.footer{
+		margin-top: 100px;
+	}
+	.konsaltingBottom{
+		background-color: #262626;
+		width: 250px;
+		height: 170px;
+		position: absolute;
+		top: 70px;
+		color: white;
+		z-index: 999999999999999;
+		text-align: left;
+		font-family: 'Galano Regular';
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		box-shadow:0px 2px 2px black;
+		display: none;
+	}
+	.header__navigation--linkovi span{
+		cursor: pointer;
+	}
+	body{
+		background: white;
+		/* background-image: url(images/background.png); */
+	}
+	.oNama{
+		font-family: 'Galano Regular';
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.oNama p:nth-child(1){
+		text-align: left;
+		font-size: 16px;
+		width: 920px;
+		margin: 0 auto;
+	}
+	.oNama p:nth-child(1) span{
+		font-family: 'Galano Bold';
+		font-size: 16px;
+		color: #333;
+	}
+	.oNama p:nth-child(2){
+		width: 920px;
+		margin: 0 auto;
+		margin-top: 80px;
+	}
+	.oNama p:nth-child(2) strong{
+		font-family: 'Galano Bold';
+	}
+	.oNama p:nth-child(2) i{
+		font-family: 'Galano Italic';
+	}
+	h1 {
+	    font-size: 46px;
+	    font-family: 'Galano Black';
+	    text-align: center;
+	    margin-top: 100px;
+	}
+</style>
+<style type="text/css">
+	body{
+		background-color: #f9f5e5;
+	}
+	p{
+		margin: 0;
+	}
+	.video{
+		max-width: 1160px;
+ 		height: 620px;
+  		background-image: linear-gradient(236deg, #fee552, #f7ba1d);
+  		margin: 0 auto;
+  		margin-top: 50px;
+  		border-top-left-radius: 10px;
+  		border-top-right-radius: 10px;
+  		position: relative;
+	}
+	.video h1{
+		font-size: 80.5px;
+		font-family: 'Galano Black';
+		padding-left: 66px;
+		padding-top: 58px;
+		margin-bottom: 0;
+	}
+	.video p{
+		padding: 0; margin: 0;
+		font-family: 'Galano Regular';
+		font-size: 24px;
+		padding-left: 66px;
+	}
+	.video__circle{
+		width: 70px;
+  		height: 70px;
+  		background-color: #f9f5e5;
+ 		box-shadow: 0px 10px 30px 0 rgba(0, 0, 0, 0.5);
+ 		border-radius: 50%;
+ 		position: absolute;
+ 		left: 545px;
+ 		top: 310px;
+ 		display: flex;
+ 		justify-content: center;
+ 		align-items: center;
+	}
+	.tekst{
+		max-width: 1160px;
+		height: auto;
+		background: #fff;
+		margin: 0 auto;
+		margin-top: 0;
+		position: relative;
+	}
+	.tekst p{
+		max-width: 959px;
+		margin-left: 99px;
+		line-height: 1.88;
+		font-family: 'Galano Regular';
+		word-wrap: break-word;
+		color: #7c7a71;
+	}
+	.tekst strong{
+		color: #000;
+	}
+	.tekst p:nth-child(1){
+		font-family: 'Galano Bold';
+		padding-top: 96px;
+	}
+	.tekst h3{
+		font-size: 28px;
+		font-family: 'Galano Black';
+		text-transform: uppercase;
+		font-weight: 900;
+		padding-left: 99px;
+		padding-top: 54px;
+		padding-bottom: 63px;
+		margin: 0;
+	}
+	.tekst h3 > span{
+		font-family: 'Galano Regular';
+		font-weight: normal;
+	}
+	.tekst p:nth-child(3){
+		font-family: 'Galano Regular';
+		font-size: 16px;
+		width: 959px;
+		color: #7c7a71;
+	}
+	.tekst p:nth-child(5){
+		font-family: 'Galano Regular';
+		font-size: 16px;
+		color: #7c7a71;
+		padding-top: 93px;
+		width: 603px;
+		margin: 0;
+		padding-left: 469px;
+		padding-bottom: 105px;
+		z-index: 1;
+		position: relative;
+	}
+	.tekst__skakacica{
+		position: absolute;
+		z-index: 0;
+		left: 60px;
+		margin-top: 67px;
+	}
+
+	ol{
+		width: 717px;
+		margin: 0 auto;
+		font-family: 'Galano Medium';
+		color: #000000;
+		line-height: 1.88;
+		font-size: 16px;
+		font-weight: 500;
+	}
+	ol {list-style: none}
+	li::before {
+		content: "✔";
+		font-size: 20px;
+		color: #fecd35;
+  		display: inline-block;
+  		width: 1em;
+  		margin-left: -1em;
+  		padding-right: 26px;
+  	}
+  	h1{
+  		text-align: left;
+  	}
+  	.header__language{
+  		background: #f9f5e5;
+  	}
+
+  	@media screen and (max-width: 1170px){
+  		.tekst {
+    		max-width: 900px;
+		}
+		.tekst p {
+			max-width: 719px;
+		}
+		.prvaUn{
+			margin-left: 150px !important;
+		}
+		.druDif{
+			margin-left: 220px !important;
+		}
+  	}
+
+  	@media screen and (max-width: 900px){
+  		.tekst {
+    		max-width: 700px;
+		}
+		.tekst p {
+			max-width: 519px;
+		}
+		.prvaUn{
+			margin-left: 20px !important;
+			width: 90px;
+		}
+		.druDif{
+			margin-left: 90px !important;
+			width: 90px;
+		}
+		.tekst ol{
+			margin-left: 100px;
+		}
+  	}
+
+  		@media screen and (max-width: 710px){
+	  		.tekst {
+	    		max-width: 500px;
+			}
+			.tekst p {
+				max-width: 319px;
+			}
+			.prvaUn{
+				display: none;
+			}
+			.druDif{
+				display: none;
+			}
+			.tekst ol{
+				margin-left: 100px;
+				width: 257px;
+			}
+			.linija__down{
+				width: 500px !important;
+			}
+			.tekst h3 > span {
+				display: block;
+			}
+			.interim__slika{
+				width: 350px !important;
+			}
+			.tekst li::before{
+				padding-right: 5px !important;
+			}
+			.tekst{
+				padding-bottom: 50px !important;
+			}
+  		}
+
+  		@media screen and (max-width: 500px){
+  			body{
+  				overflow-x: hidden;
+  			}
+  					*:not(li, .mobile__header){
+			overflow-x: hidden;
+		}
+  			.header, .footer{
+  				display: none;
+  			}
+	  		.tekst {
+	    		max-width: 340px;
+	    		border-radius: 10px;
+			}
+			.tekst p {
+				max-width: 300px;
+				margin-left: 30px !important;
+				font-size: 15px !important;
+			}
+			.tekst h3{
+				padding-left: 35px;
+			}
+			.tekst ol{
+				margin-left: 20px;
+			}
+			.linija__down{
+				width: 300px !important;
+			}
+			.interim__slika{
+				width: 350px !important;
+			}
+			.tekst li::before{
+				padding-right: 5px !important;
+			}
+			.tekst{
+				padding-bottom: 30px !important;
+			}
+			.prvaUn, .pravnik, .edukator{
+				display: block;
+				position: absolute;
+				opacity: 0.05;
+				top: 370px;
+				width: 150px !important;
+    			left: 190px;
+			}
+			.pravnik{
+				top: 720px;
+    			left: 100px;
+			}
+			.edukator{
+				top: 2220px;
+    			left: 80px;
+    			opacity: 0.1;
+			}
+			.tekst p:nth-child(1){
+				padding-top: 46px;
+			}
+			.interim__slika {
+			    width: 300px !important;
+			}
+  		}
+</style>
+
+   <style type="text/css">
+		.logotipNavbarMali{
+			position: absolute;
+			top: 17px;
+			width: 85px;
+			left: 292px;
+			z-index: 999;
+		}
+		@media only screen and (max-width: 1700px){
+			.logotipNavbarMali{
+				left: 200px;
+			}
+		}
+		@media only screen and (max-width: 1485px){
+			.logotipNavbarMali{
+				left: 150px;
+			}
+		}
+
+		@media only screen and (max-width: 1316px){
+			.header__navigation {
+				border-bottom-left-radius: 0px;
+				box-shadow: none !important;
+			}
+			.logotipNavbarMali{
+				display: none !important;
+			}
+		}
+
+	</style>
+
+    {% with var1=user var2=auth var3=userP ind=industries usr=usr %}
+    {% include 'header.html' %}
+    {% endwith %}
+
+    <style type="text/css">
+    	body{
+    		background: #f9f5e5 !important;
+    	}
+    	.navigacija, .header__navigation--call{
+    		visibility: hidden !important;
+    	}
+    	.header__navigation--undefined{
+    		background-color: #181818 !important;
+    		border-bottom-left-radius: 0px;
+    	}
+    	.header__navigation{
+    		box-shadow: none;
+    	}
+    	.header__language{
+    		background-color: #181818 !important;
+    	}
+    	.header__language p, .header__language img{
+    		display: none;
+    	}
+    	.mobile__header{
+			border-bottom-left-radius: 0px !important;
+		}
+		@media only screen and (max-width: 990px){
+			body{
+				margin-top: -20px !important;
+			}
+		}
+    </style>
+    <img src="/static/images/logoNew.png" class="logotipNavbarMali">
+
+
+	<div class="tekst" style="padding-bottom: 20px; margin-top: 50px">
+		<p>{% trans 'Platforma Žiža će Vas povezati sa isporučiocima profesionalnih konsultantskih usluga na polju finansija, (internacionalnog) prava, izrade projekata, marketinga, menadžmenta, strategije i razvoja preduzeća. Neke od ovih usluga se mogu davati putem interim menadžmenta.' %} </p>
+
+		<h3>{% trans 'Pravno' %} <span>{% trans 'savjetovanje' %}</span><img src="https://i.imgur.com/omBpv7t.png" width="100px" style="margin-left: 480px" class="druDif pravnik"></h3>
+
+		<p style="margin-bottom: 50px">
+			{% trans 'Broj izvoznika i privrednika u BiH se svake godine povećava. Ono što je čest problem je doći do iskusnih pravnih stručnjaka na polju poslovnog prava. Žiža platforma će Vam omogućiti saradnju sa iskusnim pravnicima na polju internacionalnog i poslovnog prava uopće.' %} 
+		</p>
+
+
+
+	</div>
+
+{% with auth=auth %}
+			{% include 'footer.html' %}
+            {% endwith %}
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script type="text/javascript" src="skripta.js"></script>
+<script>
+		        $(document).ready(function (){
+		            $(".dugme").click(function (){
+		                $('html, body').animate({
+		                    scrollTop: $(".testmoniali").offset().top
+		                }, 2000);
+		            });
+		        });
+
+
+		        $( ".konsalting" ).mouseover(function() {
+				    $('.konsaltingBottom').css('display', 'block');
+				  }).mouseout(function() {
+				    $('.konsaltingBottom').css('display', 'none');
+				});
+
+				$( ".sektor" ).mouseover(function() {
+				  	$('.sektorBottom').css('display', 'block');
+				  }).mouseout(function() {
+				    $('.sektorBottom').css('display', 'none');
+				});
+
+				$( ".konkurs" ).mouseover(function() {
+				  	$('.konkursBottom').css('display', 'block');
+				  }).mouseout(function() {
+				    $('.konkursBottom').css('display', 'none');
+				});
+
+				$( ".postavke" ).mouseover(function() {
+				  	$('.postavkeBottom').css('display', 'block');
+				  }).mouseout(function() {
+				    $('.postavkeBottom').css('display', 'none');
+				});
+		    </script>
+
+		     <script type="text/javascript">
+					$('#pocetna_nav').removeClass('selected');
+					$('#konsalting_nav').addClass('selected');
+				</script>
+</html>
