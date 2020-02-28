@@ -73,7 +73,7 @@ urlpatterns = [
     url('removeIzlog/(?P<id>[0-9]+)/', P_Views.removeIzlog, name="removeIzlog"),
     url('setLang/', AC_Views.setLang, name="setLang"),
     url('edu/', AC_Views.hotel_original, name="edu"),
-    url('edu/details/', AC_Views.hotel, name="edu_details"),
+    url('details/', AC_Views.hotel, name="edu_details"),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
