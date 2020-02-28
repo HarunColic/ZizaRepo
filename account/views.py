@@ -1258,9 +1258,11 @@ def setLang(request):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
-def hotel_original(request):
-    return render(request, 'hotel_original.html')
+def hotel_original(request, slug):
 
-
-def hotel(request):
-    return render(request, 'hotel.html')
+    if slug is None or slug == "":
+        return render(request, 'hotel_original.html')
+    elif slug == "details":
+        return render(request, 'hotel.html')
+    else:
+        return redirect('home')
