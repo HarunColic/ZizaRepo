@@ -1260,9 +1260,9 @@ def setLang(request):
 
 def hotel_original(request, slug):
 
-    if slug is None or slug == "":
-        return render(request, 'hotel_original.html')
-    elif slug == "details":
-        return render(request, 'hotel.html')
-    else:
-        return redirect('home')
+    return render(request, 'hotel_original.html')
+
+
+def hotel(request):
+
+    return render(request, 'hotel.html')
