@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e5286d-7618-4d15-982c-094aef118fd2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ziza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ziza/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +35,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/av2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/templates/oglas.html" />
@@ -139,7 +138,7 @@
       <workItem from="1578579081090" duration="147000" />
       <workItem from="1578665107761" duration="759000" />
       <workItem from="1581093673609" duration="458000" />
-      <workItem from="1582894702364" duration="3468000" />
+      <workItem from="1582894702364" duration="3582000" />
     </task>
     <servers />
   </component>
@@ -160,10 +159,11 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="775" y="318" width="424" height="497" key="FileChooserDialogImpl" timestamp="1578579226468">
+    <state x="775" y="318" width="424" height="497" key="FileChooserDialogImpl" timestamp="1582898802186">
       <screen x="53" y="27" width="1867" height="1053" />
     </state>
     <state x="2343" y="298" width="424" height="497" key="FileChooserDialogImpl/53.27.1547.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1578484978460" />
+    <state x="775" y="318" key="FileChooserDialogImpl/53.27.1867.1053/1920.264.1366.768@53.27.1867.1053" timestamp="1582898802186" />
     <state x="775" y="318" key="FileChooserDialogImpl/53.27.1867.1053/1920.312.1366.768@53.27.1867.1053" timestamp="1578579226468" />
     <state width="1821" height="166" key="GridCell.Tab.0.bottom" timestamp="1582894837418">
       <screen x="53" y="27" width="1867" height="1053" />
