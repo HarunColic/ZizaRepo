@@ -72,8 +72,8 @@ urlpatterns = [
     url('SaveIzlog/(?P<id>[0-9]+)/', P_Views.SaveIzlog, name="SaveIzlog"),
     url('removeIzlog/(?P<id>[0-9]+)/', P_Views.removeIzlog, name="removeIzlog"),
     url('setLang/', AC_Views.setLang, name="setLang"),
-    url('edu/', AC_Views.hotel_original, name="edu"),
-    url('edu_details/', AC_Views.hotel, name="edu/details"),
+    url('edu', AC_Views.hotel_original, name="edu"),
+    url('edu/details/', AC_Views.hotel, name="edu/details"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
