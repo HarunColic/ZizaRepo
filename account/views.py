@@ -1258,5 +1258,9 @@ def setLang(request):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
+def hotel_original(request):
+    return render(request, 'hotel_original.html')
+
+
 def hotel(request):
     return render(request, 'hotel.html')
