@@ -1,324 +1,402 @@
 {% load static %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128194280-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-128194280-1');
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-128194280-1');
 </script>
 
 
 <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '566542797172142');
-  fbq('track', 'PageView');
+	! function (f, b, e, v, n, t, s) {
+		if (f.fbq) return;
+		n = f.fbq = function () {
+			n.callMethod ?
+				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+		};
+		if (!f._fbq) f._fbq = n;
+		n.push = n;
+		n.loaded = !0;
+		n.version = '2.0';
+		n.queue = [];
+		t = b.createElement(e);
+		t.async = !0;
+		t.src = v;
+		s = b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t, s)
+	}(window, document, 'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '566542797172142');
+	fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=566542797172142&ev=PageView&noscript=1"
-/></noscript>
+		src="https://www.facebook.com/tr?id=566542797172142&ev=PageView&noscript=1" /></noscript>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128194280-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-128194280-1');
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-128194280-1');
 </script>
 
-	<link rel="stylesheet" href="https://ziza.ba/static/tingle.min.css">
-	<script src="https://ziza.ba/static/tingle.min.js"></script>
+<link rel="stylesheet" href="https://ziza.ba/static/tingle.min.css">
+<script src="https://ziza.ba/static/tingle.min.js"></script>
 
-	<style type="text/css">
-		.tingle-modal-box__content{
-			background-image: linear-gradient(236deg, #fee552, #f7ba1d);
-			border-radius: 10px;
-			margin-right: -1px; 
-			z-index: 999999;
-		}
-		.tingle-modal-box{
-			border-radius: 10px;
-			z-index: 999999;
-		}
-		.popup_1 li:hover{
-			color: #000;
-		}
-	</style>
+<style type="text/css">
+	.tingle-modal-box__content {
+		background-image: linear-gradient(236deg, #fee552, #f7ba1d);
+		border-radius: 10px;
+		margin-right: -1px;
+		z-index: 999999;
+	}
+
+	.tingle-modal-box {
+		border-radius: 10px;
+		z-index: 999999;
+	}
+
+	.popup_1 li:hover {
+		color: #000;
+	}
+</style>
 
 <style>
-
-.header__navigation--call{
-	margin-left: 30px !important;
-}
-
-.logotipNavbarMali{
-	  		cursor: pointer !important;
-	  	}
-
-    a{
-        text-decoration: none;
-        color: inherit;
-    }
-
-  .swal2-header{
-  	font-family: 'Galano Bold';
-  }
-  .swal2-content{
-  	font-family: 'Galano Regular';
-  }
-
-			.regBox__lijevo--box.active p {
-    color: black;
-}
-	.registracija.regBox{
-		width: 200px;
-		-webkit-transition:300ms linear;
-	-moz-transition:300ms linear;
-	-o-transition:300ms linear;
-	-ms-transition:300ms linear;
-	transition:300ms linear;
+	.header__navigation--call {
+		margin-left: 30px !important;
 	}
-	.registracija.regBox, .regBox__lijevo{
+
+	.logotipNavbarMali {
+		cursor: pointer !important;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.swal2-header {
+		font-family: 'Galano Bold';
+	}
+
+	.swal2-content {
+		font-family: 'Galano Regular';
+	}
+
+	.regBox__lijevo--box.active p {
+		color: black;
+	}
+
+	.registracija.regBox {
+		width: 200px;
+		-webkit-transition: 300ms linear;
+		-moz-transition: 300ms linear;
+		-o-transition: 300ms linear;
+		-ms-transition: 300ms linear;
+		transition: 300ms linear;
+	}
+
+	.registracija.regBox,
+	.regBox__lijevo {
 		width: 500px;
 	}
-	.registracija .regBox__desno{
+
+	.registracija .regBox__desno {
 		display: none;
 		opacity: 0;
-		-webkit-transition:1000ms linear;
-	-moz-transition:300ms linear;
-	-o-transition:1000ms linear;
-	-ms-transition:1000ms linear;
-	transition:1000ms linear;
+		-webkit-transition: 1000ms linear;
+		-moz-transition: 300ms linear;
+		-o-transition: 1000ms linear;
+		-ms-transition: 1000ms linear;
+		transition: 1000ms linear;
 	}
-	.regBox__lijevo--box:nth-child(1){
+
+	.regBox__lijevo--box:nth-child(1) {
 		border-top-right-radius: 10px;
 	}
-	.regBox__lijevo--box:nth-child(2){
+
+	.regBox__lijevo--box:nth-child(2) {
 		border-bottom-right-radius: 10px;
 	}
-	@media screen and (max-width: 610px){
-		.logBox{
+
+	@media screen and (max-width: 610px) {
+		.logBox {
 			width: 330px !important;
 		}
-		.headLogin{
+
+		.headLogin {
 			flex-direction: column;
 		}
-		.logBox #naslovTekst{
+
+		.logBox #naslovTekst {
 			text-align: center;
 			margin-left: 0;
 		}
-		#myBtn3{
+
+		#myBtn3 {
 			font-size: 13px;
 		}
-		.logBox input, .logBox select{
+
+		.logBox input,
+		.logBox select {
 			width: 231px;
 		}
-		.logBox #submitLog{
+
+		.logBox #submitLog {
 			width: 200px !important;
 		}
-		.logBox label{
+
+		.logBox label {
 			font-size: 15px;
 		}
-		.boxHolder{
+
+		.boxHolder {
 			margin-top: 40px !important;
 		}
-		.logBox label{
+
+		.logBox label {
 			margin-top: 3px !important;
 		}
-		.focused .form-label{
+
+		.focused .form-label {
 			margin-top: -17px !important;
 		}
-		.grupField{
+
+		.grupField {
 			margin-top: 40px !important;
 		}
-		.registracija.regBox{
+
+		.registracija.regBox {
 			width: 300px;
 		}
 	}
 
-	.header__language p, .header__language img{ visibility: hidden; }
+	.header__language p,
+	.header__language img {
+		visibility: hidden;
+	}
 </style>
 {% load i18n %}
 
 <form method="post" action="{% url 'register' %}" id="formaReg">
-    {% csrf_token %}
-    <input id="vrsta" type="hidden" value="radnik" name="vrsta" autocomplete="off">
+	{% csrf_token %}
+	<input id="vrsta" type="hidden" value="radnik" name="vrsta" autocomplete="off">
 
 	<div id="myModal" class="modal" style="z-index: 9999999">
 
-	  <div class="regBox registracija">
-	  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
-		<div class="regBox__lijevo">
-			<div class="regBox__lijevo--box active" id="osobaSector">
-				<img src="{% static 'images/pcelaobicna.png' %}">
-				<p>{% trans 'Prijava' %}<br>{% trans 'kao fizičko lice' %}</p>
-			</div>
-			<div class="regBox__lijevo--box" id="firmaSector">
-				<img src="{% static 'images/pcelafirma.png' %}" style="margin-top: 5px">
-				<p style="margin-top: 4px">{% trans 'Prijava' %}<br>{% trans 'kao pravno lice' %}</p>
-			</div>
-		</div>
-		<div class="regBox__desno">
-			<div class="linijaActive" style="position: absolute; left: 0; top: 70px;"></div>
-			<div>
-				<h1 id="naslovTekst">{% trans 'REGISTRACIJA OSOBE' %}</h1>
-				<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">{% trans 'Sva polja potrebna' %}</p>
-			</div>
-			<div class="regBox__desno--input" style="display: flex; flex-direction: column;" >
-
-				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 33px">
-						<div class="form-group">
-					      <label class="form-label" for="first" id="prviInput">{% trans 'Vaše ime' %}</label>
-					      <input name="FirstName" id="first" class="form-input neaktivan" type="text" spellcheck="false">
-					    </div>
-					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="last" id="drugiInput">{% trans 'Prezime' %}</label>
-					      <input name="LastName" id="last" class="form-input neaktivan" type="text" spellcheck="false">
-					    </div>
-					</div>
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" id="srednjiElement">
-						<div class="form-group">
-					      <label class="form-label" for="djel" id="Djelatnost"></label>
-
-                    <select name="Category" id="djel">
-						<option value="" disabled selected>{% trans 'Izaberite djelatnost' %}</option>
-                        {% for i in ind %}
-			    		<option value="{{ i.name }}">{{ i.name }}</option>
-                        {% endfor %}
-					</select>
-
-					    </div>
-					    <div class="form-group" style="margin-left: 40px">
-
-					     {% with var=1 %}
-
-			    		{%include 'gradovi.html' %}
-                            {% endwith %}
-
-						</select>
-					    </div>
-					</div>
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px" class="boxHolder">
-						<div class="form-group">
-
-					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
-					      <input name="mail" id="ema" class="form-input neaktivan" autocomplete="anyrandomstring" type="email" spellcheck="false">
-					    </div>
-					    <div class="form-group" style="margin-left: 40px">
-					      <label class="form-label" for="pas">{% trans 'Lozinka' %}</label>
-					      <input name="pswd" id="pass" class="form-input neaktivan" autocomplete="anyrandomstring" type="password" spellcheck="false">
-					    </div>
-					</div>
+		<div class="regBox registracija">
+			<img src="{% static 'images/close.png' %}" width="22px" height="22px"
+				style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+			<div class="regBox__lijevo">
+				<div class="regBox__lijevo--box active" id="osobaSector">
+					<img src="{% static 'images/pcelaobicna.png' %}">
+					<p>{% trans 'Prijava' %}<br>{% trans 'kao fizičko lice' %}</p>
 				</div>
-				<img id="submitSlika" src="{% static 'images/send.png' %}" style="margin-top: 60px; cursor: pointer;">
+				<div class="regBox__lijevo--box" id="firmaSector">
+					<img src="{% static 'images/pcelafirma.png' %}" style="margin-top: 5px">
+					<p style="margin-top: 4px">{% trans 'Prijava' %}<br>{% trans 'kao pravno lice' %}</p>
+				</div>
+			</div>
+			<div class="regBox__desno">
+				<div class="linijaActive" style="position: absolute; left: 0; top: 70px;"></div>
+				<div>
+					<h1 id="naslovTekst">{% trans 'REGISTRACIJA OSOBE' %}</h1>
+					<p style="align-self: flex-end; margin-bottom: 27px; margin-left: 16px">{% trans 'Sva polja potrebna' %}</p>
+				</div>
+				<div class="regBox__desno--input" style="display: flex; flex-direction: column;">
+
+					<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+						<div
+							style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 33px">
+							<div class="form-group">
+								<label class="form-label" for="first" id="prviInput">{% trans 'Vaše ime' %}</label>
+								<input name="FirstName" id="first" class="form-input neaktivan" type="text" spellcheck="false">
+							</div>
+							<div class="form-group" style="margin-left: 40px">
+								<label class="form-label" for="last" id="drugiInput">{% trans 'Prezime' %}</label>
+								<input name="LastName" id="last" class="form-input neaktivan" type="text" spellcheck="false">
+							</div>
+						</div>
+						<div
+							style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px"
+							id="srednjiElement">
+							<div class="form-group">
+								<label class="form-label" for="djel" id="Djelatnost"></label>
+
+								<select name="Category" id="djel">
+									<option value="" disabled selected>{% trans 'Izaberite djelatnost' %}</option>
+									{% for i in ind %}
+									<option value="{{ i.name }}">{{ i.name }}</option>
+									{% endfor %}
+								</select>
+
+							</div>
+							<div class="form-group" style="margin-left: 40px">
+
+								{% with var=1 %}
+
+								{%include 'gradovi.html' %}
+								{% endwith %}
+
+								</select>
+							</div>
+						</div>
+						<div
+							style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 70px"
+							class="boxHolder">
+							<div class="form-group">
+
+								<label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
+								<input name="mail" id="ema" class="form-input neaktivan" autocomplete="anyrandomstring" type="email"
+									spellcheck="false">
+							</div>
+							<div class="form-group" style="margin-left: 40px">
+								<label class="form-label" for="pas">{% trans 'Lozinka' %}</label>
+								<input name="pswd" id="pass" class="form-input neaktivan" autocomplete="anyrandomstring" type="password"
+									spellcheck="false">
+							</div>
+						</div>
+					</div>
+					<img id="submitSlika" src="{% static 'images/send.png' %}" style="margin-top: 60px; cursor: pointer;">
+				</div>
 			</div>
 		</div>
 	</div>
-        </div>
 </form>
 
 <style type="text/css">
-	.logBox{
+	.logBox {
 		width: 600px;
 	}
 </style>
 
 <form id="formaLog" method="post" action="{% url 'signin' %}">
-     {% csrf_token %}
+	{% csrf_token %}
 
-		<div id="myModal2" class="modal" style="z-index: 9999999">
+	<div id="myModal2" class="modal" style="z-index: 9999999">
 
-	  <div class="regBox logBox" style="height: 501px">
-	  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close closeReg">
-		<div class="regBox__desno" style="width: 100%">
-			<div style="margin-top: 50px; margin-bottom: 20px" class="headLogin">
-				<h1 id="naslovTekst" style="margin-top: 0; margin-bottom: 0">{% trans 'PRIJAVA ZA KORISNIKE' %}</h1>
-				<p id="myBtn3" style="cursor: pointer;">{% trans 'Zaboravili ste lozinku?' %}</p>
-			</div>
-			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0; margin-top: -23px">
-				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
-					<div style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 70px; flex-direction: column;" class="grupField">
-
-						<div class="form-group focused">
-					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
-					      <input name="mail" id="ema" class="form-input neaktivan" autocomplete="false" type="email" spellcheck="false">
-					    </div>
-					    <div class="form-group focused" style="margin-left: 0px; margin-top: 50px;">
-					      <label class="form-label" for="pas">{% trans 'Lozinka' %}</label>
-					      <input name="pswd" id="pass" class="form-input neaktivan" autocomplete="false" type="password" spellcheck="false">
-					    </div>
-					</div>
+		<div class="regBox logBox" style="height: 501px">
+			<img src="{% static 'images/close.png' %}" width="22px" height="22px"
+				style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close closeReg">
+			<div class="regBox__desno" style="width: 100%">
+				<div style="margin-top: 50px; margin-bottom: 20px" class="headLogin">
+					<h1 id="naslovTekst" style="margin-top: 0; margin-bottom: 0">{% trans 'PRIJAVA ZA KORISNIKE' %}</h1>
+					<p id="myBtn3" style="cursor: pointer;">{% trans 'Zaboravili ste lozinku?' %}</p>
 				</div>
-				<img  onclick="" id="submitLog" src="{% static 'images/send.png' %}" style="margin-top: 30px; cursor: pointer;">
+				<div class="regBox__desno--input"
+					style="display: flex; flex-direction: column; margin-left: 0; margin-top: -23px">
+					<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+						<div
+							style="display: flex; justify-content: center; align-items: center; position: relative; margin-top: 70px; flex-direction: column;"
+							class="grupField">
+
+							<div class="form-group focused">
+								<label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
+								<input name="mail" id="ema" class="form-input neaktivan" autocomplete="false" type="email"
+									spellcheck="false">
+							</div>
+							<div class="form-group focused" style="margin-left: 0px; margin-top: 50px;">
+								<label class="form-label" for="pas">{% trans 'Lozinka' %}</label>
+								<input name="pswd" id="pass" class="form-input neaktivan" autocomplete="false" type="password"
+									spellcheck="false">
+							</div>
+						</div>
+					</div>
+					<img onclick="" id="submitLog" src="{% static 'images/send.png' %}"
+						style="margin-top: 30px; cursor: pointer;">
+				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 </form>
 
 <style type="text/css">
-	.restBox{
+	.restBox {
 		width: 600px;
 	}
 </style>
 
 <form id="formaRes" method="post" action="{% url 'forgotPassword' %}">
 
-    {% csrf_token %}
+	{% csrf_token %}
 
-		<div id="myModal3" class="modal" style="z-index: 9999999">
+	<div id="myModal3" class="modal" style="z-index: 9999999">
 
-	  <div class="regBox restBox" style="height: 421px">
-	  	<img src="{% static 'images/close.png' %}" width="22px" height="22px" style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
-		<div class="regBox__desno" style="width: 100%">
-			<div>
-				<h1 id="naslovTekst">{% trans 'RESETOVANJE LOZINKE' %}</h1>
-			</div>
-			<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
-				<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
-					<div style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 30px">
-
-						<div class="form-group focused">
-					      <label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
-					      <input name="mailres" id="ema" class="form-input neaktivan" type="email" spellcheck="false" autocomplete="false">
-					    </div>
-					</div>
+		<div class="regBox restBox" style="height: 421px">
+			<img src="{% static 'images/close.png' %}" width="22px" height="22px"
+				style="position: absolute; right: 20px; top: 20px; cursor: pointer;" class="close">
+			<div class="regBox__desno" style="width: 100%">
+				<div>
+					<h1 id="naslovTekst">{% trans 'RESETOVANJE LOZINKE' %}</h1>
 				</div>
-				<img onclick="document.getElementById('formaRes').submit()" id="submitLog" src="{% static 'images/send.png' %}" style="margin-top: 60px; cursor: pointer;">
+				<div class="regBox__desno--input" style="display: flex; flex-direction: column; margin-left: 0">
+					<div class="regBox__desno--input--prviRed" style="display: flex; flex-direction: column;" id="appendTo">
+						<div
+							style="display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin-top: 30px">
+
+							<div class="form-group focused">
+								<label class="form-label" for="ema">{% trans 'E-mail adresa' %}</label>
+								<input name="mailres" id="ema" class="form-input neaktivan" type="email" spellcheck="false"
+									autocomplete="false">
+							</div>
+						</div>
+					</div>
+					<img onclick="document.getElementById('formaRes').submit()" id="submitLog"
+						src="{% static 'images/send.png' %}" style="margin-top: 60px; cursor: pointer;">
+				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 </form>
 
 <style type="text/css">
-ul {list-style: none}
-	li::before {content: "•"; color: #f6b81b;
-  display: inline-block; width: 1em;
-  margin-left: -1em}
-  .konsaltingBottom{
-  	background-color: #262626; width: 250px; height: 170px; position: absolute;
-    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano Regular'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none;
-  }
-  .header__navigation--linkovi span{
-  	cursor: pointer;
-  }
+	ul {
+		list-style: none
+	}
 
+	li::before {
+		content: "•";
+		color: #f6b81b;
+		display: inline-block;
+		width: 1em;
+		margin-left: -1em
+	}
+
+	.konsaltingBottom {
+		background-color: #262626;
+		width: 250px;
+		height: 170px;
+		position: absolute;
+		top: 70px;
+		color: white;
+		z-index: 999999999999999;
+		text-align: left;
+		font-family: 'Galano Regular';
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		box-shadow: 0px 2px 2px black;
+		display: none;
+	}
+
+	.header__navigation--linkovi span {
+		cursor: pointer;
+	}
 </style>
 
 {% if not var2  %}
@@ -330,418 +408,568 @@ ul {list-style: none}
 
 
 <style type="text/css">
+	regBox input,
+	.regBox select {
+		width: 331px;
+		height: 50px;
+		mix-blend-mode: undefined;
+		border-radius: 5px;
+		background-color: #ffffff;
+		box-shadow: 0px 10px 40px 0 rgba(34, 34, 34, 0.1);
+		padding: 0;
+		margin: 0;
+		border: 0;
+		padding-left: 29px;
+		font-size: 18px;
+		line-height: 2.22;
+		color: #7c7a71;
+		font-family: 'Galano Regular';
+		background-color: #eeede7;
+	}
 
-regBox input, .regBox select{
-			width: 331px;
-			height: 50px;
-			mix-blend-mode: undefined;
-			border-radius: 5px;
-			background-color: #ffffff;
-			box-shadow: 0px 10px 40px 0 rgba(34, 34, 34, 0.1);
-			padding: 0;
-			margin: 0;
-			border: 0;
-			padding-left: 29px;
-			font-size: 18px;
-			line-height: 2.22;
-			color: #7c7a71;
-			font-family: 'Galano Regular';
-			background-color: #eeede7;
+	.regBox select {
+		width: 360px;
+	}
+
+	@media screen and (max-width: 1160px) {
+		.regBox select {
+			width: 250px;
+		}
+	}
+
+
+	ul {
+		list-style: none
+	}
+
+	li::before {
+		content: "";
+		color: #f6b81b;
+		display: inline-block;
+		width: 1em;
+		margin-left: -1em
+	}
+
+	li:nth-child(1) {
+		margin-top: 20px;
+	}
+
+	li {
+		margin-bottom: 20px;
+	}
+
+	ul {
+		position: relative;
+	}
+
+	.saStrane {
+		position: absolute;
+		height: 40px;
+		width: 4px;
+		background: #f89101;
+		left: 0px;
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+		top: -6px;
+		visibility: hidden;
+	}
+
+	ul .saStrane:nth-child(2) {
+		top: 33px !important;
+	}
+
+	ul .saStrane:nth-child(3) {
+		top: 73px !important;
+	}
+
+	li:hover {
+		color: #f89101;
+	}
+
+	li:hover .saStrane {
+		visibility: visible !important;
+	}
+
+	.konsaltingBottom,
+	.sektorBottom,
+	.konkursBottom,
+	.konkurs2Bottom {
+		background-color: #181818;
+		width: 250px;
+		height: auto;
+		position: absolute;
+		top: 70px;
+		color: white;
+		z-index: 999999999999999;
+		text-align: left;
+		font-family: 'Galano SemiBold';
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		box-shadow: 0px 2px 2px black;
+		display: none;
+		margin-left: 90px;
+		font-size: 14px;
+		color: #7c7a71;
+	}
+
+	.header__navigation--linkovi span {
+		cursor: pointer;
+	}
+
+	.uvod {
+		background: white;
+		z-index: 2;
+	}
+
+	.mobile__header {
+		background-color: #181818;
+		width: 100%;
+		height: 74px;
+		box-shadow: 0px 20px 80px 0 rgba(31, 31, 31, 0.2);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		z-index: 9999999999999999;
+	}
+
+	.line--single {
+		min-width: 35px;
+		min-height: 5.5px;
+		border-radius: 5px;
+		background-color: #f6b81b;
+	}
+
+	.burgermenu {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 30px;
+		position: absolute;
+		right: 25px;
+		top: 23px;
+	}
+
+	.mobileBottom {
+		margin-left: 0;
+		right: 0px;
+		border-bottom-right-radius: 0;
+	}
+
+	.submenu {
+		margin-left: 20px !important;
+	}
+
+	.mojaZiza--extraMen,
+	.oglasi--extraMen,
+	.oglasi--extraMen2 {
+		display: none;
+	}
+
+	.mobile__header {
+		display: none;
+	}
+
+	@media screen and (max-width: 990px) {
+		.header {
+			display: none !important;
 		}
 
-.regBox select{
-    width: 360px;
-}
-
-@media screen and (max-width: 1160px){
-		.regBox select{
-    		width: 250px;
+		.mobile__header {
+			display: flex !important;
 		}
-}
+	}
 
 
-ul {list-style: none}
-	li::before {content: ""; color: #f6b81b;
-  display: inline-block; width: 1em;
-  margin-left: -1em}
-  li:nth-child(1){
-  	margin-top: 20px;
-  }
-  li{
-  	margin-bottom: 20px;
-  }
-  ul{
-  	position: relative;
-  }
-  .saStrane{
-  	position: absolute; height: 40px; width: 4px; background: #f89101; left: 0px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; top:-6px; visibility: hidden;
-  }
-  ul .saStrane:nth-child(2){
-  	top: 33px !important;
-  }
-  ul .saStrane:nth-child(3){
-  	top: 73px !important;
-  }
-  li:hover{
-  	color: #f89101;
-  }
-  li:hover .saStrane{
-  	visibility: visible !important;
-  }
-  .konsaltingBottom, .sektorBottom, .konkursBottom, .konkurs2Bottom{
-  	background-color: #181818; width: 250px; height: auto; position: absolute;
-    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano SemiBold'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none; margin-left: 90px; font-size: 14px; color: #7c7a71;
-  }
-  .header__navigation--linkovi span{
-  	cursor: pointer;
-  }
-  .uvod { 
-  	background: white; 
-  	z-index: 2;
-  }
-  .mobile__header{
-  	background-color: #181818;
-  	width: 100%;
-  	height: 74px;
-  	box-shadow: 0px 20px 80px 0 rgba(31, 31, 31, 0.2);
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	align-content: center;
-  	z-index: 9999999999999999;
-  }
-  .line--single{
-  	min-width: 35px; 
-  	min-height: 5.5px; 
-  	border-radius: 5px;
-  	background-color: #f6b81b;
-  }
-  .burgermenu{
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: space-around;
-  	height: 30px;
-  	position: absolute;
-  	right: 25px;
-  	top: 23px;
-  }
-  .mobileBottom{
-  	margin-left: 0;
-  	right: 0px;
-  	border-bottom-right-radius: 0;
-  }
-  .submenu{
-  	margin-left: 20px !important;
-  }
-  .mojaZiza--extraMen, .oglasi--extraMen, .oglasi--extraMen2{
-  	display: none;
-  }
+	@media screen and (max-width: 525px) {
+		.bhresp {
+			display: block
+		}
+	}
 
-  .mobile__header{
-  	display: none;
-  }
-
-  @media screen and (max-width: 990px){
-  	.header{
-  		display: none !important;
-  	}
-  	.mobile__header{
-  		display: flex !important;
-  	}
-  }
-
-
-  @media screen and (max-width: 525px){
-	.bhresp { display: block}
-   }
-
-.header__navigation--call{
-	margin-left: 30px;
-}
+	.header__navigation--call {
+		margin-left: 30px;
+	}
 </style>
 <!-- NOVA NAVIGACIJA CSS END-->
 
 <!-- NOVA NAVIGACIJA START -->
 <div class="mobile__header">
-	
-		<!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
-        {% if LANGUAGE_CODE == "en" %}
- 		<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" ursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 57px; top: 27px" >
-        {% else %}
-            <img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang" style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 57px; top: 27px" >
-{% endif %}
-         <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
-            {% csrf_token %}
-            <input type="hidden" name="lang" id="lang" value="bs" >
-		</form>
 
-        <!-- lang. sel. kraj -->
+	<!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
+	{% if LANGUAGE_CODE == "en" %}
+	<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang"
+		style=" ursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 57px; top: 27px">
+	{% else %}
+	<img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang"
+		style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 57px; top: 27px">
+	{% endif %}
+	<form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden">
+		{% csrf_token %}
+		<input type="hidden" name="lang" id="lang" value="bs">
+	</form>
 
-		<a href="https://ziza.ba/"><img src="https://ziza.ba/static/images/logoNew.png" height="35px"></a>
-		<div class="burgermenu">
-			<span class="line--single"></span>
-			<span class="line--single"></span>
-			<span class="line--single"></span>
-		</div>
-		<span class="sektor">
-			<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
-			    <ul style="position: relative;" class="mainNav">
-			    	<a href="{% url 'home' %}">
-			    		<li>
-			    			<div class="saStrane"></div>
-			    			{% trans 'Početna' %}
-			    		</li>
-			    	</a>
-			    	<style type="text/css">
-			    		.oglasi--navMen, .oglasi--navMen2{
-			    			cursor: pointer;
-			    		}
-			    	</style>
-			    	<!-- prava lokacija -->
-					<li class="oglasi--navMen">
-						<div class="saStrane" style="top: 33px !important;"></div>
-						{% trans 'Postavite oglas' %}
+	<!-- lang. sel. kraj -->
+
+	<a href="https://ziza.ba/"><img src="https://ziza.ba/static/images/logoNew.png" height="35px"></a>
+	<div class="burgermenu">
+		<span class="line--single"></span>
+		<span class="line--single"></span>
+		<span class="line--single"></span>
+	</div>
+	<span class="sektor">
+		<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
+			<ul style="position: relative;" class="mainNav">
+				<a href="{% url 'home' %}">
+					<li>
+						<div class="saStrane"></div>
+						{% trans 'Početna' %}
 					</li>
-					<li class="oglasi--navMen2">
-						<div class="saStrane" style="top: 75px !important;"></div>
-						{% trans 'Pregled oglasa' %}
+				</a>
+				<style type="text/css">
+					.oglasi--navMen,
+					.oglasi--navMen2 {
+						cursor: pointer;
+					}
+				</style>
+				<!-- prava lokacija -->
+				<li class="oglasi--navMen">
+					<div class="saStrane" style="top: 33px !important;"></div>
+					{% trans 'Postavite oglas' %}
+				</li>
+				<li class="oglasi--navMen2">
+					<div class="saStrane" style="top: 75px !important;"></div>
+					{% trans 'Pregled oglasa' %}
+				</li>
+				<a href="{% url 'edu' %}">
+					<li>
+						<div class="saStrane" style="top: 118px !important;"></div>
+						Learning Hotel
 					</li>
-			    	<a href="{% url 'konsalting' %}">
-			    		<li>
-			    			<div class="saStrane" style="top: 118px !important;"></div>
-			    			{% trans 'Konsalting' %}
-			    		</li>
-			    	</a>
-			    	<a href="/onama">
-			    		<li>
-			    			<div class="saStrane" style="top: 160px !important;"></div>
-			    			{% trans 'Konsalting' %} {% trans 'nama' %}
-			    		</li>
-			    	</a>
-			    	<a href="/firme">
-			    		<li>
-			    			<div class="saStrane" style="top: 200px !important;"></div>
-			    			{% trans 'Članice' %}
-			    		</li>
-			    	</a>
-			   	</ul>
-			   	<ul style="position: relative;" class="oglasi--extraMen">
-			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Postavite oglas' %}</li>
-			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 33px !important"></div>{% trans 'Kadrovska potražnja' %}</li>
-			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Poslovni oglas' %}</li>
-			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Bankarske usluge' %}</li>
-			    	<li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 160px !important;"></div>{% trans 'Usluge osiguranja' %}</li>
-			   	</ul>
-			   	<ul style="position: relative;" class="oglasi--extraMen2">
-			    	<li style="color: #f89101" class="oglasi--reactivate2"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Pregled oglasa' %}</li>
-			    	<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');"><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Pregled poslovnih oglasa' %}</li>
-			    	<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled konkursa' %}</li>
-			   	</ul>
-			   	<div style="height: 1px; width: 100%; background: #f89101;"></div>
-			   	<div style="display: flex; align-items: center; justify-content: center; margin-top: 25px">
-			   		<div style="font-family: Galano Bold; font-size: 10px; color: #ffffff; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;" class="tLogin">{% trans 'PRIJAVA' %}</div>
-			   		<div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);" class="tRegister">{% trans 'REGISTRACIJA' %}</div>
-			   	</div>
+				</a>
+				<a href="/onama">
+					<li>
+						<div class="saStrane" style="top: 160px !important;"></div>
+						{% trans 'Konsalting' %} {% trans 'nama' %}
+					</li>
+				</a>
+				<a href="/firme">
+					<li>
+						<div class="saStrane" style="top: 200px !important;"></div>
+						{% trans 'Članice' %}
+					</li>
+				</a>
+			</ul>
+			<ul style="position: relative;" class="oglasi--extraMen">
+				<li style="color: #f89101" class="oglasi--reactivate">
+					<div class="saStrane"></div><i class="fas fa-chevron-circle-left"
+						style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Postavite oglas' %}
+				</li>
+				<li class="submenu js-tingle-modal-1">
+					<div class="saStrane" style="top: 33px !important"></div>{% trans 'Kadrovska potražnja' %}
+				</li>
+				<li class="submenu js-tingle-modal-1">
+					<div class="saStrane" style="top: 75px !important;"></div>{% trans 'Poslovni oglas' %}
+				</li>
+				<li class="submenu js-tingle-modal-1">
+					<div class="saStrane" style="top: 118px !important;"></div>{% trans 'Bankarske usluge' %}
+				</li>
+				<li class="submenu js-tingle-modal-1">
+					<div class="saStrane" style="top: 160px !important;"></div>{% trans 'Usluge osiguranja' %}
+				</li>
+			</ul>
+			<ul style="position: relative;" class="oglasi--extraMen2">
+				<li style="color: #f89101" class="oglasi--reactivate2">
+					<div class="saStrane"></div><i class="fas fa-chevron-circle-left"
+						style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Pregled oglasa' %}
+				</li>
+				<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');">
+					<div class="saStrane" style="top: 33px !important;"></div>{% trans 'Pregled poslovnih oglasa' %}
+				</li>
+				<li class="submenu" onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');">
+					<div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled konkursa' %}
+				</li>
+			</ul>
+			<div style="height: 1px; width: 100%; background: #f89101;"></div>
+			<div style="display: flex; align-items: center; justify-content: center; margin-top: 25px">
+				<div
+					style="font-family: Galano Bold; font-size: 10px; color: #ffffff; display: flex;
+			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;"
+					class="tLogin">{% trans 'PRIJAVA' %}</div>
+				<div
+					style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);"
+					class="tRegister">{% trans 'REGISTRACIJA' %}</div>
 			</div>
-		</span>
+		</div>
+	</span>
+</div>
+
+<div class="header">
+	<div class="header__language">
+		<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
 	</div>
 
-	<div class="header">
-		<div class="header__language">
-				<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
-        </div>
+	<!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
+	{% if LANGUAGE_CODE == "en" %}
+	<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang"
+		style=" cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px; top: 20px">
+	{% else %}
+	<img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang"
+		style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px; top: 20px">
+	{% endif %}
 
-            <!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
-            {% if LANGUAGE_CODE == "en" %}
-            <img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px; top: 20px">
-            {% else %}
-                <img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang" style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px; top: 20px">
-            {% endif %}
+	<form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden">
+		{% csrf_token %}
+		<input type="hidden" name="lang" id="lang" value="bs">
+	</form>
 
-              <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
-                {% csrf_token %}
-                <input type="hidden" name="lang" id="lang" value="bs" >
-            </form>
+	<div class="header__navigation--undefined"></div>
+	<div class="header__navigation">
+		<div class="header__navigation--linkovi">
+			<span onclick="location.href='{% url 'home' %}'" class="selected" id="pocetna_nav">{% trans 'Početna' %}</span>
+			<span class="konkurs" id="oglasi_nav">{% trans 'Postavite oglas' %}
+				<div class="konkursBottom">
+					<ul>
+						<li class="js-tingle-modal-1">
+							<div class="saStrane"></div> {% trans 'Objavi novost' %}
+						</li>
+						<li class="js-tingle-modal-1">
+							<div class="saStrane" style="top: 33px !important;"></div> {% trans 'Kadrovska potraznja' %}
+						</li>
+						<li class="js-tingle-modal-1">
+							<div class="saStrane" style="top: 75px !important;"></div> {% trans 'Poslovni oglas' %}
+						</li>
+						<li class="js-tingle-modal-1">
+							<div class="saStrane" style="top: 118px !important;"></div> {% trans 'Bankarske usluge' %}
+						</li>
+						<li class="js-tingle-modal-1">
+							<div class="saStrane" style="top: 161px !important;"></div> {% trans 'Usluge osiguranja' %}
+						</li>
+					</ul>
+				</div>
+			</span>
+			<span class="konkurs2" id="oglasi_nav">{% trans 'Pregled oglasa' %}
+				<div class="konkurs2Bottom">
+					<ul>
+						<li onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');">
+							<div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div>
+							{% trans 'Pregled poslovnih oglasa' %}
+						</li>
+						<li onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');">
+							<div class="saStrane"
+								style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div>
+							{% trans 'Pregled konkursa' %}
+						</li>
+					</ul>
+				</div>
+			</span>
+			<span class="konsalting" id="konsalting_nav"
+				onclick=" location.href='{% url 'konsalting' %}'">{% trans 'Konsalting' %}
 
-		<div class="header__navigation--undefined"></div>
-		<div class="header__navigation">
-			<div class="header__navigation--linkovi">
-				<span onclick="location.href='{% url 'home' %}'" class="selected" id="pocetna_nav">{% trans 'Početna' %}</span>
-                <span class="konkurs" id="oglasi_nav">{% trans 'Postavite oglas' %}
-					<div class="konkursBottom">
-					    <ul>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" ></div> {% trans 'Objavi novost' %} </li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 33px !important;"></div> {% trans 'Kadrovska potraznja' %} </li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 75px !important;"></div> {% trans 'Poslovni oglas' %}</li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 118px !important;"></div> {% trans 'Bankarske usluge' %}</li>
-					    	<li class="js-tingle-modal-1" ><div class="saStrane" style="top: 161px !important;"></div> {% trans 'Usluge osiguranja' %}</li>
-					    </ul>
-					</div>
-				</span>
-				 <span class="konkurs2" id="oglasi_nav">{% trans 'Pregled oglasa' %}
-					<div class="konkurs2Bottom">
-					    <ul>
-                            <li onclick="window.open('https://ziza.ba/anonimnaPretraga/2/', '_self');"><div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> {% trans 'Pregled poslovnih oglasa' %}</li>
-                            <li  onclick="window.open('https://ziza.ba/anonimnaPretraga/1/', '_self');"><div class="saStrane" style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> {% trans 'Pregled konkursa' %}</li>
-					    </ul>
-					</div>
-				</span>
-				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >{% trans 'Konsalting' %}
-
-				</span>
-				<span onclick="location.href='/onama'" style="width: 80px; margin-right: 20px" id="onama_nav">{% trans 'O' %} {% trans 'nama' %}</span>
-				<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">{% trans 'Članice' %}</span>
-			</div>
-			<div class="header__navigation--dugmad">
-				<span id="myBtn2" style="cursor: pointer;">{% trans 'Prijava' %}</span>
-				<span id="myBtn" style="cursor: pointer;">{% trans 'Registracija' %}</span>
-			</div>
-			<div class="header__navigation--call">
-				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
-				<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">{% trans 'Pon-Pet' %} 9h-18h</span></p>
-			</div>
-		</div> <!-- header__navigation -->
-	</div><!-- header -->
+			</span>
+			<span onclick="location.href='/onama'" style="width: 80px; margin-right: 20px" id="onama_nav">{% trans 'O' %}
+				{% trans 'nama' %}</span>
+			<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">{% trans 'Članice' %}</span>
+		</div>
+		<div class="header__navigation--dugmad">
+			<span id="myBtn2" style="cursor: pointer;">{% trans 'Prijava' %}</span>
+			<span id="myBtn" style="cursor: pointer;">{% trans 'Registracija' %}</span>
+		</div>
+		<div class="header__navigation--call">
+			<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
+			<p><a href="tel:+387603158565">+387 60 315 8565</a> <span class="gray">{% trans 'Pon-Pet' %} 9h-18h</span></p>
+		</div>
+	</div> <!-- header__navigation -->
+</div><!-- header -->
 
 <!-- NOVA NAVIGACIJA END -->
 
-    <script>
+<script>
+	$(".tLogin").click(function () {
+		var modal2 = document.getElementById('myModal2');
+		modal2.style.display = "block";
+	});
 
-    $(".tLogin").click(function(){
-        var modal2 = document.getElementById('myModal2');
-        modal2.style.display = "block";
-    });
+	$(".tRegister").click(function () {
+		var modal = document.getElementById('myModal');
+		modal.style.display = "block";
+	});
 
-    $(".tRegister").click(function(){
-        var modal = document.getElementById('myModal');
-        modal.style.display = "block";
-    });
-
-	$(".lang").click(function(e){
-	    document.querySelector("#lang").value = e.target.getAttribute("data-lng");
-	    $("#ChLang").submit();
-    });
-
-    </script>
+	$(".lang").click(function (e) {
+		document.querySelector("#lang").value = e.target.getAttribute("data-lng");
+		$("#ChLang").submit();
+	});
+</script>
 {% endif %}
 
 {% if var2 %}
 <!-- NAVIGACIJA KADA JE KORISNIK LOGIRAN TJ. FIRMA -->
 
 <style type="text/css">
-ul {list-style: none}
-	li::before {content: ""; color: #f6b81b;
-  display: inline-block; width: 1em;
-  margin-left: -1em}
-  li:nth-child(1){
-  	margin-top: 20px;
-  }
-  li{
-  	margin-bottom: 20px;
-  }
-  ul{
-  	position: relative;
-  }
-  .saStrane{
-  	position: absolute; height: 40px; width: 4px; background: #f89101; left: 0px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; top:-6px; visibility: hidden;
-  }
-  ul .saStrane:nth-child(2){
-  	top: 33px !important;
-  }
-  ul .saStrane:nth-child(3){
-  	top: 73px !important;
-  }
-  li:hover{
-  	color: #f89101;
-  }
-  li:hover .saStrane{
-  	visibility: visible !important;
-  }
-  .konsaltingBottom, .sektorBottom, .konkursBottom, .konkurs2Bottom, .postavkeBottom{
-  	background-color: #181818; width: 250px; height: auto; position: absolute;
-    top: 70px; color: white; z-index: 999999999999999; text-align: left; font-family: 'Galano SemiBold'; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; box-shadow:0px 2px 2px black; display: none; margin-left: 90px; font-size: 14px; color: #7c7a71;
-  }
-  .postavkeBottom{
-  	margin-left: -65px !important;
-  }
-  .header__navigation--linkovi span{
-  	cursor: pointer;
-  }
+	ul {
+		list-style: none
+	}
 
-    body { 
-  	background: white; 
-  }
-  .uvod { 
-  	background: initial; 
-  }
-  .mobile__header{
-  	background-color: #181818;
-  	width: 100%;
-  	height: 70px;
-  	border-bottom-left-radius: 10px;
-  	box-shadow: 0px 20px 80px 0 rgba(31, 31, 31, 0.2);
-  	display: none;
-  	justify-content: center;
-  	align-items: center;
-  	align-content: center;
-  }
-  .line--single{
-  	min-width: 35px; 
-  	min-height: 5.5px; 
-  	border-radius: 5px;
-  	background-color: #f6b81b;
-  }
-  .burgermenu{
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: space-around;
-  	height: 30px;
-  	position: absolute;
-  	right: 25px;
-  	top: 23px;
-  }
-  .mobileBottom{
-  	margin-left: 0;
-  	right: 0px;
-  	border-bottom-right-radius: 0;
-  }
-  .submenu{
-  	margin-left: 20px !important;
-  }
-  .mojaZiza--extraMen, .oglasi--extraMen, .oglasi--extraMen2{
-  	display: none;
-  }
+	li::before {
+		content: "";
+		color: #f6b81b;
+		display: inline-block;
+		width: 1em;
+		margin-left: -1em
+	}
 
-  .mobSakr2{
-  	display: none;
-  }
+	li:nth-child(1) {
+		margin-top: 20px;
+	}
 
-  .mobile__header{
-  	height: 74px;
-  }
+	li {
+		margin-bottom: 20px;
+	}
 
-  @media screen and (max-width: 990px){
-	.mobSakr2{
-		display: block;
+	ul {
+		position: relative;
+	}
+
+	.saStrane {
 		position: absolute;
-		left: 0;
+		height: 40px;
+		width: 4px;
+		background: #f89101;
+		left: 0px;
+		border-top-right-radius: 2px;
+		border-bottom-right-radius: 2px;
+		top: -6px;
+		visibility: hidden;
 	}
-  }
 
-    @media screen and (max-width: 1275px){
-	.ponudaContainer{
+	ul .saStrane:nth-child(2) {
+		top: 33px !important;
+	}
+
+	ul .saStrane:nth-child(3) {
+		top: 73px !important;
+	}
+
+	li:hover {
+		color: #f89101;
+	}
+
+	li:hover .saStrane {
+		visibility: visible !important;
+	}
+
+	.konsaltingBottom,
+	.sektorBottom,
+	.konkursBottom,
+	.konkurs2Bottom,
+	.postavkeBottom {
+		background-color: #181818;
+		width: 250px;
+		height: auto;
+		position: absolute;
+		top: 70px;
+		color: white;
+		z-index: 999999999999999;
+		text-align: left;
+		font-family: 'Galano SemiBold';
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		box-shadow: 0px 2px 2px black;
+		display: none;
+		margin-left: 90px;
+		font-size: 14px;
+		color: #7c7a71;
+	}
+
+	.postavkeBottom {
+		margin-left: -65px !important;
+	}
+
+	.header__navigation--linkovi span {
+		cursor: pointer;
+	}
+
+	body {
+		background: white;
+	}
+
+	.uvod {
+		background: initial;
+	}
+
+	.mobile__header {
+		background-color: #181818;
+		width: 100%;
+		height: 70px;
+		border-bottom-left-radius: 10px;
+		box-shadow: 0px 20px 80px 0 rgba(31, 31, 31, 0.2);
+		display: none;
+		justify-content: center;
 		align-items: center;
+		align-content: center;
 	}
-  }
 
-  @media screen and (min-width: 2500px){
-  	.logotipNavbarMali{
-  		left: 500px !important;
-  	}
-  }
+	.line--single {
+		min-width: 35px;
+		min-height: 5.5px;
+		border-radius: 5px;
+		background-color: #f6b81b;
+	}
 
+	.burgermenu {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 30px;
+		position: absolute;
+		right: 25px;
+		top: 23px;
+	}
+
+	.mobileBottom {
+		margin-left: 0;
+		right: 0px;
+		border-bottom-right-radius: 0;
+	}
+
+	.submenu {
+		margin-left: 20px !important;
+	}
+
+	.mojaZiza--extraMen,
+	.oglasi--extraMen,
+	.oglasi--extraMen2 {
+		display: none;
+	}
+
+	.mobSakr2 {
+		display: none;
+	}
+
+	.mobile__header {
+		height: 74px;
+	}
+
+	@media screen and (max-width: 990px) {
+		.mobSakr2 {
+			display: block;
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	@media screen and (max-width: 1275px) {
+		.ponudaContainer {
+			align-items: center;
+		}
+	}
+
+	@media screen and (min-width: 2500px) {
+		.logotipNavbarMali {
+			left: 500px !important;
+		}
+	}
 </style>
 <!-- HEADER -->
 
@@ -749,292 +977,451 @@ ul {list-style: none}
 <div class="mobile__header">
 
 	<!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
-        {% if LANGUAGE_CODE == "en" %}
- 		<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" ursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 57px;top: 27px">
-        {% else %}
-            <img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang" style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 57px; top: 27px">
-        {% endif %}
-         <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
-            {% csrf_token %}
-            <input type="hidden" name="lang" id="lang" value="bs" >
-		</form>
+	{% if LANGUAGE_CODE == "en" %}
+	<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang"
+		style=" ursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 57px;top: 27px">
+	{% else %}
+	<img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang"
+		style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 57px; top: 27px">
+	{% endif %}
+	<form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden">
+		{% csrf_token %}
+		<input type="hidden" name="lang" id="lang" value="bs">
+	</form>
 
-        <!-- lang. sel. kraj -->
+	<!-- lang. sel. kraj -->
 
-		<div class="header__navigation--dugmad mobSakr2">
-				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
+	<div class="header__navigation--dugmad mobSakr2">
+		<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
 
-					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px;" class="postavke"><div><i class="fas fa-angle-down" style="color: #f89101; margin-left: -5px; display: inline;"></i></div>
-					<div class="postavkeBottom" style="width: 150px">
-					    <ul style="position: relative;">
-					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>{% trans 'Profil' %}</li></a>
-                             <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavke' %}</li></a>
-					    </ul>
-					</div>
-				</div>
+			<div
+				style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px;"
+				class="postavke">
+				<div><i class="fas fa-angle-down" style="color: #f89101; margin-left: -5px; display: inline;"></i></div>
+				<div class="postavkeBottom" style="width: 150px">
+					<ul style="position: relative;">
+						<a href="{% url 'profil' %}">
+							<li>
+								<div class="saStrane"></div>{% trans 'Profil' %}
+							</li>
+						</a>
+						<a href="{% url 'editprofil' %}">
+							<li>
+								<div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavke' %}
+							</li>
+						</a>
+					</ul>
 				</div>
 			</div>
-		<a href="https://ziza.ba/"><img src="https://ziza.ba/static/images/logoNew.png" height="35px"></a>
-		<div class="burgermenu">
-			<span class="line--single"></span>
-			<span class="line--single"></span>
-			<span class="line--single"></span>
 		</div>
-		<span class="sektor">
-			<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
-			    <ul style="position: relative;" class="mainNav">
-			    	<a href="{% url 'home' %}"><li><div class="saStrane"></div>{% trans 'Početna' %}</li></a>
-                    <li class="oglasi--navMen"><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavite oglas' %}</li>
-                    <li class="oglasi--navMen2"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled oglasa' %}</li>
-					<a href="{% url 'dodajIzlog' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Objavi novost' %}</li></a>
-			    	<a href="{% url 'konsalting' %}"><li><div class="saStrane" style="top: 160px !important;"></div>{% trans 'Konsalting' %}</li></a>
-			    	<a href="/onama"><li><div class="saStrane" style="top: 200px !important;"></div>{% trans 'O nama' %}</li></a>
-			    	<a href="/firme"><li><div class="saStrane" style="top: 240px !important;"></div>{% trans 'Članice' %}</li></a>
-			   	</ul>
-			   	<ul style="position: relative;" class="oglasi--extraMen">
-			    	<li style="color: #f89101" class="oglasi--reactivate"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Postavite oglas' %}</li>
-			    	<a href="{% url 'newpost' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 33px !important"></div>{% trans 'Kadrovska potražnja' %}</li></a>
-			    	<a href="{% url 'newpotraznja' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Poslovni oglas' %}</li></a>
-			    	<a href="{% url 'bankUsluge' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Bankarske usluge' %}</li></a>
-			    	<a href="{% url 'osiguranjeUsluge' %}"><li class="submenu js-tingle-modal-1"><div class="saStrane" style="top: 160px !important;"></div>{% trans 'Usluge osiguranja' %}</li></a>
-			   	</ul>
-			   	<ul style="position: relative;" class="oglasi--extraMen2">
-			    	<li style="color: #f89101" class="oglasi--reactivate2"><div class="saStrane"></div><i class="fas fa-chevron-circle-left" style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Pregled oglasa' %}</li>
-			    	<a href="{% url 'anonimnaPretraga' id=2 %}"><li class="submenu"><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Pregled poslovnih oglasa' %}</li></a>
-			    	<a href="{% url 'anonimnaPretraga' id=1 %}"><li class="submenu"><div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled konkursa' %}</li></a>
-			   	</ul>
-			   	<div style="height: 1px; width: 100%; background: #f89101;"></div>
-			   	<div style="display: flex; align-items: center; justify-content: center; margin-top: 25px">
-			   		 <a href="{% url 'signout' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #ffffff; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;">{% trans 'ODJAVA' %}</div></a>
-                    {% if usr == 'comp' %}
-			   		 <a href="{% url 'dashboard' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">{% trans 'MOJA ŽIŽA' %}</div></a>
-                    {% elif usr == 'wrkr' %}
-                     <a href="{% url 'mojaKarijera' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">{% trans 'MOJA KARIJERA' %}</div></a>
-                    {% endif %}
-			   	</div>
-			</div>
-		</span>
 	</div>
-
-
-	<div class="header">
-		<div class="header__language">
-			<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
-
-        </div>
-      <!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
-            {% if LANGUAGE_CODE == "en" %}
-            <img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang" style=" cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px; top: 20px">
-            {% else %}
-                <img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang" style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px; top: 20px">
-            {% endif %}
-
-              <form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden" >
-                {% csrf_token %}
-                <input type="hidden" name="lang" id="lang" value="bs" >
-            </form>
-
-		<div class="header__navigation--undefined"></div>
-		<div class="header__navigation">
-			<div class="header__navigation--linkovi">
-				<span onclick="location.href='{% url 'home' %}'" class="pocetNa">{% trans 'Početna' %}</span>
-				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs">{% trans 'Postavite oglas' %}
-                    {% if usr == 'comp' %}
-					<div class="konkursBottom">
-					    <ul>
-							{% if usr == 'comp' %}
-								<a href="{% url 'dodajIzlog' %}"><li><div class="saStrane"></div>{% trans 'Objavi novost' %}</li></a>
-					    	<a href="{% url 'newpost' %}"><li><div class="saStrane" style="top: 33px !important;"></div> {% trans 'Kadrovska potraznja' %} </li></a>
-					    	<a href="{% url 'newpotraznja' %}"><li><div class="saStrane" style="top: 75px !important;"></div> {% trans 'Poslovni oglas' %}</li></a>
-					    	<a href="{% url 'bankUsluge' %}"><li><div class="saStrane" style="top: 118px !important;"></div> {% trans 'Bankarske usluge' %}</li></a>
-					    	<a href="{% url 'osiguranjeUsluge' %}"><li><div class="saStrane" style="top: 161px !important;"></div> {% trans 'Usluge osiguranja' %}</li></a>
-							{% else %}
-								<a href=""><li><div class="saStrane" ></div> {% trans 'Kadrovska potraznja' %} </li></a>
-					    	<a href=""><li><div class="saStrane" style="top: 33px !important;"></div> {% trans 'Poslovni oglas' %}</li></a>
-					    	<a href=""><li><div class="saStrane" style="top: 75px !important;"></div> {% trans 'Bankarske usluge' %}</li></a>
-					    	<a href=""><li><div class="saStrane" style="top: 118px !important;"></div> {% trans 'Usluge osiguranja' %}</li></a>
-                            {% endif %}
-                                </ul>
-					</div>
-                        {% endif %}
-				</span>
-				<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}  class="konkurs2">{% trans 'Pregled oglasa' %}
-                    {% if usr == 'comp' %}
-					<div class="konkurs2Bottom">
-					    <ul>
-                            <a href="{% url 'anonimnaPretraga' id=2 %}" ><li><div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> {% trans 'Pregled poslovnih oglasa' %}</li></a>
-                            <a href="{% url 'anonimnaPretraga' id=1 %}" ><li><div class="saStrane" style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div> {% trans 'Pregled konkursa' %}</li></a>
-					    </ul>
-					</div>
-                        {% endif %}
-				</span>
-				<span class="konsalting" id="konsalting_nav" onclick=" location.href='{% url 'konsalting' %}'" >{% trans 'Konsalting' %}
-
-				</span>
-				<span onclick="location.href='/onama'" style="width: 80px;  margin-right: 20px" id="onama_nav">{% trans 'O nama' %}</span>
-				<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">{% trans 'Članice' %}</span>
+	<a href="https://ziza.ba/"><img src="https://ziza.ba/static/images/logoNew.png" height="35px"></a>
+	<div class="burgermenu">
+		<span class="line--single"></span>
+		<span class="line--single"></span>
+		<span class="line--single"></span>
+	</div>
+	<span class="sektor">
+		<div class="sektorBottom mobileBottom" style="padding-bottom: 30px">
+			<ul style="position: relative;" class="mainNav">
+				<a href="{% url 'home' %}">
+					<li>
+						<div class="saStrane"></div>{% trans 'Početna' %}
+					</li>
+				</a>
+				<li class="oglasi--navMen">
+					<div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavite oglas' %}
+				</li>
+				<li class="oglasi--navMen2">
+					<div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled oglasa' %}
+				</li>
+				<a href="{% url 'dodajIzlog' %}">
+					<li class="logoutBtn">
+						<div class="saStrane" style="top: 118px !important;"></div>{% trans 'Objavi novost' %}
+					</li>
+				</a>
+				<a href="{% url 'konsalting' %}">
+					<li>
+						<div class="saStrane" style="top: 160px !important;"></div>{% trans 'Konsalting' %}
+					</li>
+				</a>
+				<a href="/onama">
+					<li>
+						<div class="saStrane" style="top: 200px !important;"></div>{% trans 'O nama' %}
+					</li>
+				</a>
+				<a href="/firme">
+					<li>
+						<div class="saStrane" style="top: 240px !important;"></div>{% trans 'Članice' %}
+					</li>
+				</a>
+			</ul>
+			<ul style="position: relative;" class="oglasi--extraMen">
+				<li style="color: #f89101" class="oglasi--reactivate">
+					<div class="saStrane"></div><i class="fas fa-chevron-circle-left"
+						style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Postavite oglas' %}
+				</li>
+				<a href="{% url 'newpost' %}">
+					<li class="submenu js-tingle-modal-1">
+						<div class="saStrane" style="top: 33px !important"></div>{% trans 'Kadrovska potražnja' %}
+					</li>
+				</a>
+				<a href="{% url 'newpotraznja' %}">
+					<li class="submenu js-tingle-modal-1">
+						<div class="saStrane" style="top: 75px !important;"></div>{% trans 'Poslovni oglas' %}
+					</li>
+				</a>
+				<a href="{% url 'bankUsluge' %}">
+					<li class="submenu js-tingle-modal-1">
+						<div class="saStrane" style="top: 118px !important;"></div>{% trans 'Bankarske usluge' %}
+					</li>
+				</a>
+				<a href="{% url 'osiguranjeUsluge' %}">
+					<li class="submenu js-tingle-modal-1">
+						<div class="saStrane" style="top: 160px !important;"></div>{% trans 'Usluge osiguranja' %}
+					</li>
+				</a>
+			</ul>
+			<ul style="position: relative;" class="oglasi--extraMen2">
+				<li style="color: #f89101" class="oglasi--reactivate2">
+					<div class="saStrane"></div><i class="fas fa-chevron-circle-left"
+						style="margin-left: -20px; margin-right: 5px"></i> {% trans 'Pregled oglasa' %}
+				</li>
+				<a href="{% url 'anonimnaPretraga' id=2 %}">
+					<li class="submenu">
+						<div class="saStrane" style="top: 33px !important;"></div>{% trans 'Pregled poslovnih oglasa' %}
+					</li>
+				</a>
+				<a href="{% url 'anonimnaPretraga' id=1 %}">
+					<li class="submenu">
+						<div class="saStrane" style="top: 75px !important;"></div>{% trans 'Pregled konkursa' %}
+					</li>
+				</a>
+			</ul>
+			<div style="height: 1px; width: 100%; background: #f89101;"></div>
+			<div style="display: flex; align-items: center; justify-content: center; margin-top: 25px">
+				<a href="{% url 'signout' %}">
+					<div
+						style="font-family: Galano Bold; font-size: 10px; color: #ffffff; display: flex;
+			   		justify-content: center; align-items: center; border-radius: 10px; border: solid 1px #f6b81b; width: 90px; height: 35px;">
+						{% trans 'ODJAVA' %}</div>
+				</a>
+				{% if usr == 'comp' %}
+				<a href="{% url 'dashboard' %}">
+					<div
+						style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">
+						{% trans 'MOJA ŽIŽA' %}</div>
+				</a>
+				{% elif usr == 'wrkr' %}
+				<a href="{% url 'mojaKarijera' %}">
+					<div
+						style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">
+						{% trans 'MOJA KARIJERA' %}</div>
+				</a>
+				{% endif %}
 			</div>
-			<div class="header__navigation--dugmad">
-				<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
-				
-				
-					<div style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px; margin-right: 50px" class="postavke"><div>{{var1.first_name }}<i class="fas fa-angle-down" style="color: #f89101; margin-left: 5px; display: inline;"></i></div>
+		</div>
+	</span>
+</div>
+
+
+<div class="header">
+	<div class="header__language">
+		<p>BHS</p><img src="{% static 'images/arrow.png' %}" width="10px" height="5px">
+
+	</div>
+	<!-- ako je aktivna Amerika, onda prikazi Bosnu - i obratno -->
+	{% if LANGUAGE_CODE == "en" %}
+	<img data-lng="bs" src="{% static 'images/bosna.png' %}" class="bhresp lang"
+		style=" cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px; top: 20px">
+	{% else %}
+	<img data-lng="en" src="{% static 'images/amerika.png' %}" class="bhresp lang"
+		style="cursor: pointer; margin-left: 0px; width: 20px; height: 20px; position: absolute; left: 20px; top: 20px">
+	{% endif %}
+
+	<form id="ChLang" action="{% url 'setLang' %}" method="post" style="display: none; visibility: hidden">
+		{% csrf_token %}
+		<input type="hidden" name="lang" id="lang" value="bs">
+	</form>
+
+	<div class="header__navigation--undefined"></div>
+	<div class="header__navigation">
+		<div class="header__navigation--linkovi">
+			<span onclick="location.href='{% url 'home' %}'" class="pocetNa">{% trans 'Početna' %}</span>
+			<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}
+				class="konkurs">{% trans 'Postavite oglas' %}
+				{% if usr == 'comp' %}
+				<div class="konkursBottom">
+					<ul>
+						{% if usr == 'comp' %}
+						<a href="{% url 'dodajIzlog' %}">
+							<li>
+								<div class="saStrane"></div>{% trans 'Objavi novost' %}
+							</li>
+						</a>
+						<a href="{% url 'newpost' %}">
+							<li>
+								<div class="saStrane" style="top: 33px !important;"></div> {% trans 'Kadrovska potraznja' %}
+							</li>
+						</a>
+						<a href="{% url 'newpotraznja' %}">
+							<li>
+								<div class="saStrane" style="top: 75px !important;"></div> {% trans 'Poslovni oglas' %}
+							</li>
+						</a>
+						<a href="{% url 'bankUsluge' %}">
+							<li>
+								<div class="saStrane" style="top: 118px !important;"></div> {% trans 'Bankarske usluge' %}
+							</li>
+						</a>
+						<a href="{% url 'osiguranjeUsluge' %}">
+							<li>
+								<div class="saStrane" style="top: 161px !important;"></div> {% trans 'Usluge osiguranja' %}
+							</li>
+						</a>
+						{% else %}
+						<a href="">
+							<li>
+								<div class="saStrane"></div> {% trans 'Kadrovska potraznja' %}
+							</li>
+						</a>
+						<a href="">
+							<li>
+								<div class="saStrane" style="top: 33px !important;"></div> {% trans 'Poslovni oglas' %}
+							</li>
+						</a>
+						<a href="">
+							<li>
+								<div class="saStrane" style="top: 75px !important;"></div> {% trans 'Bankarske usluge' %}
+							</li>
+						</a>
+						<a href="">
+							<li>
+								<div class="saStrane" style="top: 118px !important;"></div> {% trans 'Usluge osiguranja' %}
+							</li>
+						</a>
+						{% endif %}
+					</ul>
+				</div>
+				{% endif %}
+			</span>
+			<span {% if usr != 'comp' %} onclick="location.href='{%  url 'anonimnaPretraga' id=1 %}'" {% endif %}
+				class="konkurs2">{% trans 'Pregled oglasa' %}
+				{% if usr == 'comp' %}
+				<div class="konkurs2Bottom">
+					<ul>
+						<a href="{% url 'anonimnaPretraga' id=2 %}">
+							<li>
+								<div class="saStrane" style="border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div>
+								{% trans 'Pregled poslovnih oglasa' %}
+							</li>
+						</a>
+						<a href="{% url 'anonimnaPretraga' id=1 %}">
+							<li>
+								<div class="saStrane"
+									style="top: 33px !important; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px"></div>
+								{% trans 'Pregled konkursa' %}
+							</li>
+						</a>
+					</ul>
+				</div>
+				{% endif %}
+			</span>
+			<span class="konsalting" id="konsalting_nav"
+				onclick=" location.href='{% url 'konsalting' %}'">{% trans 'Konsalting' %}
+
+			</span>
+			<span onclick="location.href='/onama'" style="width: 80px;  margin-right: 20px"
+				id="onama_nav">{% trans 'O nama' %}</span>
+			<span onclick="location.href='/firme'" style="width: 80px" id="clanice_nav">{% trans 'Članice' %}</span>
+		</div>
+		<div class="header__navigation--dugmad">
+			<div style="display: flex; justify-content: center; align-items:  center; align-content: center;">
+
+
+				<div
+					style="cursor: pointer; color: #fecd35; font-family: Myriad; padding-bottom: 30px; padding-top: 30px; font-size: 12px; margin-left: 16px; margin-right: 50px"
+					class="postavke">
+					<div>{{var1.first_name }}<i class="fas fa-angle-down"
+							style="color: #f89101; margin-left: 5px; display: inline;"></i></div>
 					<div class="postavkeBottom">
-					    <ul style="position: relative;">
-					    	 <a href="{% url 'profil' %}"><li><div class="saStrane"></div>{% trans 'Profil' %}</li></a>
-                             <a href="{% url 'editprofil' %}"><li><div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavke' %}</li></a>
-					    	 <a href="{% url 'signout' %}"><li class="logoutBtn"><div class="saStrane" style="top: 118px !important;"></div>{% trans 'Odjava' %}</li></a>
-					    </ul>
+						<ul style="position: relative;">
+							<a href="{% url 'profil' %}">
+								<li>
+									<div class="saStrane"></div>{% trans 'Profil' %}
+								</li>
+							</a>
+							<a href="{% url 'editprofil' %}">
+								<li>
+									<div class="saStrane" style="top: 33px !important;"></div>{% trans 'Postavke' %}
+								</li>
+							</a>
+							<a href="{% url 'signout' %}">
+								<li class="logoutBtn">
+									<div class="saStrane" style="top: 118px !important;"></div>{% trans 'Odjava' %}
+								</li>
+							</a>
+						</ul>
 					</div>
 				</div>
-				</div>
-				 {% if usr == 'comp' %}
-			   		 <a href="{% url 'dashboard' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">{% trans 'MOJA ŽIŽA' %}</div></a>
-                    {% elif usr == 'wrkr' %}
-                     <a href="{% url 'mojaKarijera' %}"><div style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
-			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">{% trans 'MOJA KARIJERA' %}</div></a>
-                    {% endif %}
 			</div>
-			<div class="header__navigation--call">
-				<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
-				<p><a href="tel:+387603158565">+387 60 315 8565</a> <br> <span class="gray">{% trans 'Pon-Pet' %} 9h-18h</span></p>
-			</div>
-		</div> <!-- header__navigation -->
-	</div> <!-- header -->
+			{% if usr == 'comp' %}
+			<a href="{% url 'dashboard' %}">
+				<div
+					style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 0px 20px 0 rgba(246, 184, 27, 0.5)">
+					{% trans 'MOJA ŽIŽA' %}</div>
+			</a>
+			{% elif usr == 'wrkr' %}
+			<a href="{% url 'mojaKarijera' %}">
+				<div
+					style="font-family: Galano Bold; font-size: 10px; color: #000000; display: flex;
+			   		justify-content: center; align-items: center; border-radius: 10px; background: #f6b81b; width: 100px; height: 35px; margin-left: 10px; box-shadow: 0px 5px 40px 0 rgba(246, 184, 27, 0.5);">
+					{% trans 'MOJA KARIJERA' %}</div>
+			</a>
+			{% endif %}
+		</div>
+		<div class="header__navigation--call">
+			<img src="{% static 'images/optimised/dial-min.png' %}" draggable="false" width="11px" height="16px">
+			<p><a href="tel:+387603158565">+387 60 315 8565</a> <br> <span class="gray">{% trans 'Pon-Pet' %} 9h-18h</span>
+			</p>
+		</div>
+	</div> <!-- header__navigation -->
+</div> <!-- header -->
 {% endif %}
 
- {% load sweetify %}
-    {% sweetify %}
+{% load sweetify %}
+{% sweetify %}
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
 <script type="text/javascript" src="{% static 'skripta.js' %}"></script>
 
 <script>
-
-	$('.mobSakr2').click(function(){
+	$('.mobSakr2').click(function () {
 		$('.mobileBottom').css('display', 'none');
 	});
 
 
-	$( ".konsalting" ).mouseover(function() {
+	$(".konsalting").mouseover(function () {
 		$('.konsaltingBottom').css('display', 'block');
-	}).mouseout(function() {
+	}).mouseout(function () {
 		$('.konsaltingBottom').css('display', 'none');
 	});
 
-	$( ".sektor" ).mouseover(function() {
+	$(".sektor").mouseover(function () {
 		$('.sektorBottom').css('display', 'block');
-	}).mouseout(function() {
+	}).mouseout(function () {
 		$('.sektorBottom').css('display', 'none');
 	});
 
-	$( ".konkurs" ).mouseover(function() {
+	$(".konkurs").mouseover(function () {
 		$('.konkursBottom').css('display', 'block');
-	}).mouseout(function() {
+	}).mouseout(function () {
 		$('.konkursBottom').css('display', 'none');
 	});
 
-	$( ".konkurs2" ).mouseover(function() {
+	$(".konkurs2").mouseover(function () {
 		$('.konkurs2Bottom').css('display', 'block');
-	}).mouseout(function() {
+	}).mouseout(function () {
 		$('.konkurs2Bottom').css('display', 'none');
 	});
 
-	$( ".postavke" ).mouseover(function() {
+	$(".postavke").mouseover(function () {
 		$('.postavkeBottom').css('display', 'block');
-	}).mouseout(function() {
+	}).mouseout(function () {
 		$('.postavkeBottom').css('display', 'none');
 	});
 </script>
 <script type="text/javascript">
-		$('.burgermenu').click(function(){
-			$('.mobileBottom').toggle();
-		});
+	$('.burgermenu').click(function () {
+		$('.mobileBottom').toggle();
+	});
 </script>
 <script type="text/javascript">
-	$('.mojaZiza--navMen, .mojaZiza--reactivate').click(function(){
+	$('.mojaZiza--navMen, .mojaZiza--reactivate').click(function () {
 		$('.mojaZiza--extraMen').toggle();
 		$('.mainNav').toggle();
 	});
-	$('.oglasi--navMen, .oglasi--reactivate').click(function(){
+	$('.oglasi--navMen, .oglasi--reactivate').click(function () {
 		$('.oglasi--extraMen').toggle();
 		$('.mainNav').toggle();
 	});
-	$('.oglasi--navMen2, .oglasi--reactivate2').click(function(){
+	$('.oglasi--navMen2, .oglasi--reactivate2').click(function () {
 		$('.oglasi--extraMen2').toggle();
 		$('.mainNav').toggle();
 	});
-	$('.tLogin, .tRegister').click(function(){
+	$('.tLogin, .tRegister').click(function () {
 		$('.mobileBottom').toggle();
 	});
 
-	$('.logotipNavbarMali').click(function(){
+	$('.logotipNavbarMali').click(function () {
 		window.open('https://ziza.ba/');
 	});
 
-		var max_chars = 25;
-		var max_chars_em = 50;
+	var max_chars = 25;
+	var max_chars_em = 50;
 
 
-	$('#first, #last').keydown( function(e){
-	    if ($(this).val().length >= max_chars) { 
-	        $(this).val($(this).val().substr(0, max_chars));
-	    }
+	$('#first, #last').keydown(function (e) {
+		if ($(this).val().length >= max_chars) {
+			$(this).val($(this).val().substr(0, max_chars));
+		}
 	});
 
-	$('#first, #last').keyup( function(e){
-	    if ($(this).val().length >= max_chars) { 
-	        $(this).val($(this).val().substr(0, max_chars));
-	    }
+	$('#first, #last').keyup(function (e) {
+		if ($(this).val().length >= max_chars) {
+			$(this).val($(this).val().substr(0, max_chars));
+		}
 	});
 
-	$('#ema').keydown( function(e){
-	    if ($(this).val().length >= max_chars_em) { 
-	        $(this).val($(this).val().substr(0, max_chars_em));
-	    }
+	$('#ema').keydown(function (e) {
+		if ($(this).val().length >= max_chars_em) {
+			$(this).val($(this).val().substr(0, max_chars_em));
+		}
 	});
 
-	$('#ema').keyup( function(e){
-	    if ($(this).val().length >= max_chars_em) { 
-	        $(this).val($(this).val().substr(0, max_chars_em));
-	    }
+	$('#ema').keyup(function (e) {
+		if ($(this).val().length >= max_chars_em) {
+			$(this).val($(this).val().substr(0, max_chars_em));
+		}
 	});
 </script>
 <style type="text/css">
-	@media screen and (max-width: 990px){
-	  	.header{
-	  		display: none !important;
-	  	}
-	  	.mobile__header{
-	  		display: flex !important;
-	  	}
+	@media screen and (max-width: 990px) {
+		.header {
+			display: none !important;
+		}
 
-  	}
+		.mobile__header {
+			display: flex !important;
+		}
+
+	}
 </style>
 
 {% if usr == 'comp' or usr == 'comp' %}
 {% else %}
 <script type="text/javascript">
-
-	
 	var modalTinyNoFooter = new tingle.modal({
-	    beforeOpen: function() {
-	    	$('.konkursBottom, .mobileBottom').css('display', 'none');
-	    }
+		beforeOpen: function () {
+			$('.konkursBottom, .mobileBottom').css('display', 'none');
+		}
 	});
 
-	$('.js-tingle-modal-1').click(function(){
+	$('.js-tingle-modal-1').click(function () {
 		modalTinyNoFooter.open();
 	});
 
 
 
-	modalTinyNoFooter.setContent('<div class="popup_1" style="font-family: Galano Regular; border-radius: 10px"> <p>Ukoliko se prijavite moći ćete postavljati četiri vrste oglasa:</p> <ol> <li style="font-family: Galano SemiBold">Kadrovska potražnja</li> <p>Preko ovog oglasa možete samostalno kreirati konkurs za posao. Prednost postavljanja konkursa za posao preko Žiže je ta Vas naš sistem preko traženih kompetencija automatski spaja sa potencijalnim kandidatima koji su ostavili svoj CV kod nas na stranicu. Dakle, pored onih ljudi koji su konkurisali na posao, dobićete šansu da stupite u kontakt sa ljudima koji imaju kompetencije da zadovolje Vašim zahtjevima a nisu direktno konkurisali iz nekog određenog razloga (npr. Možda su zaposleni pa ne gledaju toliko aktivno konkurse ali samim tim što su ostavili svoj CV postoji šansa da će prihvatiti bolju ponudu) na Vaš konkurs.</p> <li style="font-family: Galano SemiBold">Poslovni oglasi</li> <p>Preko ovog oglasa kompanije mogu postavljati oglase za ponudu, potražnju ili partnerstvu.</p> <p style="font-family: Galano Light">- Primjeri ponude:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Ukoliko imate polovnu proizvodnu liniju koju želite prodati jer ste nabavili drugu i bolju, objavite preko Žiže i usmjerite je direktno na djelatnost koje se tiče ta proizvodna linija, npr. Metalni ili drvni sektor. Sve članice koje su iz tog sektora prijavljene na Žiža poslovnoj platformi će dobiti tu poruku. Na taj način šaljete direktno ponudu potencijalnim kupcima iz poslovnog sektora.</span></li> <li><span style="font-family: Galano Regular">Prodajete svoje posolvne nekretnine, auta ili bilo šta, objavite na Žiža poslovnoj platformi i usmjerite direktno na djelatnost za koju je Vaša ponuda relevantna.</span></li> </ol> <p style="font-family: Galano Light">Primjeri potražnje:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Gradite zgradu, hotel ili bilo šta na određenom mjestu, opišete i objavite potražnju preko Žiža poslovne platforme te je usmjerite ka građevinskom sektoru. Sve građevinske kompanije koje su članica Žiža poslovne platforme dobiće informaciju o Vašim namjerama, te će ukoliko su zainteresovani poslati svoju ponudu. Vi dobijate mogućnost da izaberete najbojlu ponudu a građevinske kompanije dobiju informaciju o mogućnosti angažmana.</span></li> <li><span style="font-family: Galano Regular">Raspišete privatni tender kako bi došli do kompanija koje su u stanju da vrše poslove koje vi ne želite unutar Vaše kompanije. Npr. Raspišete tender za čišćenje ili za montažu vaših štandova na sajmovima itd...</span></li> </ol> <p style="font-family: Galano Light">Primjeri partnerstva:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Ukoliko dobijete šansu za posao u nekoj stranoj zemlji a nemate tehničkih ili ljudskih resursa da količinski, dovljno brzo i kvalitetno zadovoljite kupca, preko Žiža poslovne platforme možete opisati projekat i usmjeriti ga ka djelatnosti koja Vas se tiče i pronaći partnera koji je u tom periodu u mogućnosti zajedno sa Vama proizvesti ono što je potrebno da izađete na strano tržište i zadovoljite rokove, količine i kupca uopšte. Imajte na umu da uvijek ne možete računati na Vaše stalne partnere, jer niko ne garantuje da su njihovi resursi baš u tom momentu slobodni za Vaš projekat.</span></li> </ol><br> <li style="font-family: Galano SemiBold">Bankarske usluge</li> <p>Preko ovog oglasa kompanije mogu tražiti najbolje finansijske mogućnosti. Jednostavno izrazite želju da želite kredit ili lizing i Žiža poslovna platforma Vas spoji sa većinom banaka u BiH. Banke Vas kontaktiraju a Vi izaberete najbolju ponudu. Ovaj vid usluge ostaje poznat samo Vama i bankama koje su došle u kontakt sa Vama.</p> <li style="font-family: Galano SemiBold">Usluge osiguranja</li> <p>Preko ovog oglasa kompanije mogu tražiti usluge osiguranja. Žiža poslovna platforma Vas spoji sa većinom osiguravajućih kuća u BiH. Osiguranja Vas kontaktiraju i Vi izaberete najbolju ponudu. Ovaj vid uslug ostaj poznat samo Vama i osiguravajućim kućama koje su došle u kontakt sa Vama.</p> </ol> </div>');
+	modalTinyNoFooter.setContent(
+		'<div class="popup_1" style="font-family: Galano Regular; border-radius: 10px"> <p>Ukoliko se prijavite moći ćete postavljati četiri vrste oglasa:</p> <ol> <li style="font-family: Galano SemiBold">Kadrovska potražnja</li> <p>Preko ovog oglasa možete samostalno kreirati konkurs za posao. Prednost postavljanja konkursa za posao preko Žiže je ta Vas naš sistem preko traženih kompetencija automatski spaja sa potencijalnim kandidatima koji su ostavili svoj CV kod nas na stranicu. Dakle, pored onih ljudi koji su konkurisali na posao, dobićete šansu da stupite u kontakt sa ljudima koji imaju kompetencije da zadovolje Vašim zahtjevima a nisu direktno konkurisali iz nekog određenog razloga (npr. Možda su zaposleni pa ne gledaju toliko aktivno konkurse ali samim tim što su ostavili svoj CV postoji šansa da će prihvatiti bolju ponudu) na Vaš konkurs.</p> <li style="font-family: Galano SemiBold">Poslovni oglasi</li> <p>Preko ovog oglasa kompanije mogu postavljati oglase za ponudu, potražnju ili partnerstvu.</p> <p style="font-family: Galano Light">- Primjeri ponude:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Ukoliko imate polovnu proizvodnu liniju koju želite prodati jer ste nabavili drugu i bolju, objavite preko Žiže i usmjerite je direktno na djelatnost koje se tiče ta proizvodna linija, npr. Metalni ili drvni sektor. Sve članice koje su iz tog sektora prijavljene na Žiža poslovnoj platformi će dobiti tu poruku. Na taj način šaljete direktno ponudu potencijalnim kupcima iz poslovnog sektora.</span></li> <li><span style="font-family: Galano Regular">Prodajete svoje posolvne nekretnine, auta ili bilo šta, objavite na Žiža poslovnoj platformi i usmjerite direktno na djelatnost za koju je Vaša ponuda relevantna.</span></li> </ol> <p style="font-family: Galano Light">Primjeri potražnje:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Gradite zgradu, hotel ili bilo šta na određenom mjestu, opišete i objavite potražnju preko Žiža poslovne platforme te je usmjerite ka građevinskom sektoru. Sve građevinske kompanije koje su članica Žiža poslovne platforme dobiće informaciju o Vašim namjerama, te će ukoliko su zainteresovani poslati svoju ponudu. Vi dobijate mogućnost da izaberete najbojlu ponudu a građevinske kompanije dobiju informaciju o mogućnosti angažmana.</span></li> <li><span style="font-family: Galano Regular">Raspišete privatni tender kako bi došli do kompanija koje su u stanju da vrše poslove koje vi ne želite unutar Vaše kompanije. Npr. Raspišete tender za čišćenje ili za montažu vaših štandova na sajmovima itd...</span></li> </ol> <p style="font-family: Galano Light">Primjeri partnerstva:</p> <ol type="a" style="font-family: Galano SemiBold"> <li><span style="font-family: Galano Regular">Ukoliko dobijete šansu za posao u nekoj stranoj zemlji a nemate tehničkih ili ljudskih resursa da količinski, dovljno brzo i kvalitetno zadovoljite kupca, preko Žiža poslovne platforme možete opisati projekat i usmjeriti ga ka djelatnosti koja Vas se tiče i pronaći partnera koji je u tom periodu u mogućnosti zajedno sa Vama proizvesti ono što je potrebno da izađete na strano tržište i zadovoljite rokove, količine i kupca uopšte. Imajte na umu da uvijek ne možete računati na Vaše stalne partnere, jer niko ne garantuje da su njihovi resursi baš u tom momentu slobodni za Vaš projekat.</span></li> </ol><br> <li style="font-family: Galano SemiBold">Bankarske usluge</li> <p>Preko ovog oglasa kompanije mogu tražiti najbolje finansijske mogućnosti. Jednostavno izrazite želju da želite kredit ili lizing i Žiža poslovna platforma Vas spoji sa većinom banaka u BiH. Banke Vas kontaktiraju a Vi izaberete najbolju ponudu. Ovaj vid usluge ostaje poznat samo Vama i bankama koje su došle u kontakt sa Vama.</p> <li style="font-family: Galano SemiBold">Usluge osiguranja</li> <p>Preko ovog oglasa kompanije mogu tražiti usluge osiguranja. Žiža poslovna platforma Vas spoji sa većinom osiguravajućih kuća u BiH. Osiguranja Vas kontaktiraju i Vi izaberete najbolju ponudu. Ovaj vid uslug ostaj poznat samo Vama i osiguravajućim kućama koje su došle u kontakt sa Vama.</p> </ol> </div>'
+	);
 </script>
 {% endif %}
